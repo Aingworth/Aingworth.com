@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aingworth — AI decides who gets found. We decide what it finds.</title>
+<meta name="description" content="Lucy Aingworth helps founders, CMOs, and executives build brand authority that AI search actually cites. Author of Become the Answer. Founder of Aingworth and HER-Worth.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Aingworth — AI decides who gets found. We decide what it finds.">
+<meta property="og:description" content="Stop chasing visibility. Start building recognition. The brands that win the AI era don't chase attention — they become the answer.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aingworth.com">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://aingworth.com/#lucy",
+      "name": "Lucy Aingworth",
+      "givenName": "Lucy",
+      "familyName": "Aingworth",
+      "jobTitle": "Founder and CEO",
+      "worksFor": { "@id": "https://aingworth.com/#organization" },
+      "knowsAbout": ["Generative Engine Optimization","AI Authority Strategy","Brand Recognition","SEO","Recognition Economy","AI Search Visibility"],
+      "url": "https://aingworth.com",
+      "sameAs": ["https://www.linkedin.com/in/lucyaingworth"]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://aingworth.com/#organization",
+      "name": "Aingworth",
+      "url": "https://aingworth.com",
+      "founder": { "@id": "https://aingworth.com/#lucy" },
+      "description": "Brand authority and AI visibility consulting for founders, CMOs, and executives."
+    },
+    {
+      "@type": "Book",
+      "@id": "https://aingworth.com/#book",
+      "name": "Become the Answer",
+      "author": { "@id": "https://aingworth.com/#lucy" },
+      "url": "https://www.amazon.com/Become-Answer-Brands-Build-Authority/dp/B0H14GDQMH"
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* =============================================
+   TOKENS
+============================================= */
+:root {
+  --charcoal:       #1a1a1a;
+  --charcoal-mid:   #242424;
+  --charcoal-light: #2e2e2e;
+  --teal:           #4a9e8e;
+  --teal-light:     #6bbfb0;
+  --teal-dim:       rgba(107,191,176,0.12);
+  --platinum:       #E2E2E2;
+  --seasalt:        #FAFAFA;
+  --mid-grey:       #888880;
+  --light-grey:     #d4d0c8;
+  --french-grey:    #bbbac6;
+  --lavender:       #c4a7e4;
+  --border-dark:    rgba(183,206,206,0.1);
+  --border-light:   rgba(28,15,19,0.1);
+  --muted-dark:     rgba(226,226,226,0.6);
+  --muted-light:    rgba(26,26,26,0.6);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'DM Sans', system-ui, sans-serif;
+  --mono:  'DM Mono', monospace;
+  --max-w: 1160px;
+  --px: clamp(20px, 4vw, 56px);
+  --ease: cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); font-size: 16px; background: var(--seasalt); color: var(--charcoal); -webkit-font-smoothing: antialiased; line-height: 1.7; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.skip { position:absolute; top:-52px; left:24px; background:var(--teal-light); color:var(--charcoal); padding:10px 18px; font-size:13px; font-weight:500; z-index:999; transition:top .2s; }
+.skip:focus { top:8px; }
+:focus-visible { outline:2px solid var(--teal-light); outline-offset:3px; }
+
+/* =============================================
+   NAV
+============================================= */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  height: 68px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--px);
+  background: rgba(26,26,26,.97); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-dark);
+  transition: background .3s var(--ease);
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; height: 40px; }
+.nav-logo img { height: 32px; width: auto; }
+.nav-logo-text { font-family: var(--sans); font-size: 15px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--seasalt); }
+.nav-menu { display: flex; align-items: center; gap: 2px; list-style: none; }
+.nav-menu a { display: block; padding: 7px 12px; color: rgba(250,250,250,.6); font-size: 13px; font-weight: 400; letter-spacing: .06em; text-transform: uppercase; transition: color .2s; }
+.nav-menu a:hover, .nav-menu a[aria-current="page"] { color: var(--teal-light); }
+.nav-menu .ncta a { background: var(--teal-light); color: var(--charcoal); padding: 8px 20px; font-weight: 500; border-radius: 2px; transition: all .2s; }
+.nav-menu .ncta a:hover { background: var(--teal); color: var(--seasalt); }
+.nav-burger { display: none; flex-direction: column; gap: 5px; padding: 8px; background: none; border: none; cursor: pointer; }
+.nav-burger span { display: block; width: 22px; height: 1.5px; background: var(--seasalt); transition: all .3s var(--ease); transform-origin: center; }
+.nav-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav-drawer { display: none; position: fixed; top: 68px; left: 0; right: 0; bottom: 0; background: var(--charcoal); padding: 28px var(--px); z-index: 199; flex-direction: column; }
+.nav-drawer.open { display: flex; }
+.nav-drawer a { display: block; padding: 16px 0; color: rgba(250,250,250,.65); font-size: 18px; border-bottom: 1px solid var(--border-dark); transition: color .2s; }
+.nav-drawer a:hover { color: var(--teal-light); }
+.drawer-cta { margin-top: 24px; display: inline-block; padding: 16px 28px; background: var(--teal-light); color: var(--charcoal) !important; font-size: 14px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; text-align: center; border-bottom: none !important; border-radius: 2px; }
+
+/* =============================================
+   SHARED UTILITIES
+============================================= */
+.sec-eye { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.sec-rule { width: 26px; height: 1px; background: var(--teal-light); flex-shrink: 0; }
+.sec-lbl { font-family: var(--mono); font-size: 11px; color: var(--teal-light); letter-spacing: .14em; text-transform: uppercase; }
+.sec-h2 { font-family: var(--serif); font-size: clamp(32px,3vw,48px); font-weight: 500; line-height: 1.1; color: var(--charcoal); letter-spacing: -.01em; margin-bottom: 18px; }
+.sec-h2-light { color: var(--seasalt); }
+.sec-body { font-size: 16px; line-height: 1.78; color: var(--muted-light); }
+.sec-body-dark { color: var(--muted-dark); }
+.sec-body p + p { margin-top: 16px; }
+.cta-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--teal-light); color: var(--charcoal); font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; padding: 14px 26px; border-radius: 2px; transition: all .2s var(--ease); }
+.cta-primary:hover { background: var(--teal); color: var(--seasalt); transform: translateY(-1px); }
+.cta-ghost { display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(107,191,176,.35); color: var(--teal-light); font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; padding: 13px 26px; border-radius: 2px; transition: all .2s var(--ease); }
+.cta-ghost:hover { border-color: var(--teal-light); background: rgba(107,191,176,.06); }
+.tlink { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: var(--teal-light); letter-spacing: .07em; text-transform: uppercase; transition: gap .25s var(--ease), color .2s; }
+.tlink:hover { gap: 16px; color: var(--teal); }
+.arr { width: 22px; height: 1px; background: currentColor; position: relative; transition: width .25s var(--ease); }
+.arr::after { content: ''; position: absolute; right: 0; top: -3px; width: 6px; height: 6px; border-right: 1px solid currentColor; border-top: 1px solid currentColor; transform: rotate(45deg); }
+.tlink:hover .arr { width: 34px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .anim { opacity: 0; transform: translateY(20px); transition: opacity .65s var(--ease), transform .65s var(--ease); }
+  .anim.vis { opacity: 1; transform: translateY(0); }
+  .d1 { transition-delay: .1s; } .d2 { transition-delay: .2s; } .d3 { transition-delay: .3s; } .d4 { transition-delay: .4s; }
+}
+
+/* =============================================
+   HERO
+============================================= */
+.hero {
+  background: var(--charcoal);
+  padding: 120px var(--px) 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 92vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Ambient glow */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(74,158,142,.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--teal-light), transparent);
+  opacity: .2;
+}
+
+/* Subtle grid texture */
+.hero-texture {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(107,191,176,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107,191,176,.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: var(--max-w);
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 80px;
+  align-items: flex-end;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 0;
+}
+
+.hero-content { padding-bottom: 80px; }
+
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 28px;
+}
+.hero-eyebrow-rule { width: 32px; height: 1px; background: var(--teal-light); }
+.hero-eyebrow-label {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--teal-light); letter-spacing: .16em; text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(48px, 5.5vw, 82px);
+  font-weight: 500;
+  line-height: 1.04;
+  color: var(--seasalt);
+  letter-spacing: -.015em;
+  margin-bottom: 10px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--teal-light);
+}
+
+.hero-sub {
+  font-family: var(--serif);
+  font-size: clamp(18px, 1.9vw, 24px);
+  font-style: italic;
+  color: rgba(250,250,250,.5);
+  line-height: 1.5;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+.hero-sub strong {
+  font-style: normal;
+  font-weight: 500;
+  color: rgba(250,250,250,.75);
+}
+
+.hero-ctas { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+/* Portrait column */
+.hero-portrait {
+  position: relative;
+  align-self: flex-end;
+}
+.portrait-frame {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--charcoal-mid);
+  overflow: hidden;
+  position: relative;
+}
+.portrait-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: contrast(1.02) brightness(0.96);
+}
+/* Fade at bottom to blend into next section */
+.portrait-frame::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 30%;
+  background: linear-gradient(transparent, var(--charcoal));
+}
+.portrait-caption {
+  position: absolute;
+  bottom: 20px; left: 20px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(107,191,176,.5);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* =============================================
+   RECOGNITION STRIP (below hero, light band)
+============================================= */
+.rec-strip {
+  background: var(--charcoal-mid);
+  border-bottom: 1px solid var(--border-dark);
+  padding: 18px var(--px);
+}
+.rec-strip-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.rec-strip-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(107,191,176,.45);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.rec-strip-rule { width: 1px; height: 18px; background: var(--border-dark); flex-shrink: 0; }
+.rec-strip-items {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.rec-item {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(226,226,226,.35);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color .2s;
+}
+.rec-item:hover { color: rgba(226,226,226,.6); }
+
+/* =============================================
+   PROBLEM STATEMENT
+============================================= */
+.problem-sec {
+  background: var(--seasalt);
+  padding: 100px var(--px);
+  border-bottom: 1px solid var(--border-light);
+}
+.problem-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.problem-pull {
+  position: sticky;
+  top: 90px;
+}
+.pull-quote {
+  font-family: var(--serif);
+  font-size: clamp(26px, 2.6vw, 38px);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--charcoal);
+  margin-bottom: 28px;
+}
+.pull-quote em { font-style: italic; color: var(--teal); }
+.pull-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 28px;
+}
+.stat-item {}
+.stat-num {
+  font-family: var(--serif);
+  font-size: 44px;
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-num span { color: var(--teal); }
+.stat-desc {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--mid-grey);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.problem-body {}
+.problem-body .sec-body p { font-size: 17px; }
+.problem-body .sec-body p + p { margin-top: 20px; }
+
+/* =============================================
+   ENTRY POINTS (Bento grid)
+============================================= */
+.bento-sec {
+  background: var(--charcoal);
+  padding: 100px var(--px);
+}
+.bento-inner { max-width: var(--max-w); margin: 0 auto; }
+.bento-head { margin-bottom: 48px; }
+.bento-head .sec-h2 { color: var(--seasalt); }
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2px;
+}
+
+.bento-card {
+  background: var(--charcoal-mid);
+  padding: 40px 36px;
+  position: relative;
+  overflow: hidden;
+  transition: background .3s var(--ease);
+  cursor: default;
+}
+.bento-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--teal-light);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .4s var(--ease);
+}
+.bento-card:hover { background: var(--charcoal-light); }
+.bento-card:hover::before { transform: scaleX(1); }
+
+/* Featured card spans 2 cols */
+.bento-card-featured {
+  grid-column: span 2;
+  background: linear-gradient(135deg, var(--charcoal-light) 0%, rgba(74,158,142,.08) 100%);
+}
+.bento-card-featured:hover { background: linear-gradient(135deg, var(--charcoal-light) 0%, rgba(74,158,142,.14) 100%); }
+
+/* HER-Worth card accent */
+.bento-card-herworth {
+  border-top: 2px solid rgba(196,167,228,.3);
+}
+.bento-card-herworth::before { background: var(--lavender); }
+
+.bento-card-num {
+  font-family: var(--serif);
+  font-size: 64px;
+  font-weight: 400;
+  color: var(--teal-light);
+  opacity: .12;
+  line-height: 1;
+  position: absolute;
+  top: 24px; right: 28px;
+}
+.bento-card-herworth .bento-card-num { color: var(--lavender); }
+
+.bento-card-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--teal-light);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.bento-card-herworth .bento-card-tag { color: var(--lavender); }
+
+.bento-card-title {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.2vw, 30px);
+  font-weight: 500;
+  color: var(--seasalt);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.bento-card-body {
+  font-size: 15px;
+  line-height: 1.72;
+  color: var(--muted-dark);
+  margin-bottom: 28px;
+}
+.bento-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--teal-light);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  transition: gap .25s var(--ease), color .2s;
+}
+.bento-card-link:hover { gap: 16px; color: var(--teal); }
+.bento-card-herworth .bento-card-link { color: var(--lavender); }
+.bento-card-herworth .bento-card-link:hover { color: rgba(196,167,228,.8); }
+.bento-arr { width: 20px; height: 1px; background: currentColor; position: relative; transition: width .25s var(--ease); }
+.bento-arr::after { content: ''; position: absolute; right: 0; top: -3px; width: 6px; height: 6px; border-right: 1px solid currentColor; border-top: 1px solid currentColor; transform: rotate(45deg); }
+.bento-card-link:hover .bento-arr { width: 32px; }
+
+/* =============================================
+   BOOK SECTION
+============================================= */
+.book-sec {
+  background: var(--platinum);
+  padding: 100px var(--px);
+  border-top: 1px solid var(--border-light);
+}
+.book-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.book-cover {
+  position: relative;
+}
+.book-cover-frame {
+  width: 100%;
+  aspect-ratio: 2/3;
+  background: var(--charcoal);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 24px 24px 60px rgba(26,26,26,.22), 4px 4px 12px rgba(26,26,26,.12);
+}
+.book-cover-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* Book cover placeholder */
+.book-cover-placeholder {
+  width: 100%; height: 100%;
+  min-height: 400px;
+  background: var(--charcoal);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 16px;
+  padding: 32px;
+  text-align: center;
+}
+.book-cover-placeholder-title {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--teal-light);
+  line-height: 1.2;
+}
+.book-cover-placeholder-author {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--mid-grey);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.book-cover-placeholder-rule {
+  width: 40px; height: 1px;
+  background: var(--teal-light);
+  opacity: .4;
+}
+
+.book-content {}
+.book-frameworks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+.book-framework-item {
+  padding: 18px 20px;
+  border: 1px solid var(--border-light);
+  background: var(--seasalt);
+  transition: border-color .2s, background .2s;
+}
+.book-framework-item:hover { border-color: rgba(74,158,142,.3); background: #fff; }
+.book-fw-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+.book-fw-desc {
+  font-size: 12px;
+  color: var(--mid-grey);
+  line-height: 1.55;
+}
+.book-ctas { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.cta-dark { display: inline-flex; align-items: center; gap: 10px; background: var(--charcoal); color: var(--seasalt); font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; padding: 14px 26px; border-radius: 2px; transition: all .2s var(--ease); }
+.cta-dark:hover { background: var(--charcoal-light); transform: translateY(-1px); }
+
+/* =============================================
+   LEAD CAPTURE
+============================================= */
+.capture-sec {
+  background: var(--charcoal);
+  padding: 100px var(--px);
+  position: relative;
+  overflow: hidden;
+}
+.capture-sec::before {
+  content: '';
+  position: absolute;
+  top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(74,158,142,.05) 0%, transparent 65%);
+  pointer-events: none;
+}
+.capture-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.capture-inner .sec-eye { justify-content: center; }
+.capture-inner .sec-h2 { color: var(--seasalt); }
+.capture-subtext {
+  font-size: 16px;
+  line-height: 1.72;
+  color: var(--muted-dark);
+  margin-bottom: 40px;
+}
+
+.capture-form {
+  display: flex;
+  gap: 0;
+  max-width: 480px;
+  margin: 0 auto 16px;
+}
+.capture-input {
+  flex: 1;
+  padding: 14px 18px;
+  background: rgba(250,250,250,.06);
+  border: 1px solid rgba(107,191,176,.2);
+  border-right: none;
+  color: var(--seasalt);
+  font-family: var(--sans);
+  font-size: 15px;
+  outline: none;
+  border-radius: 2px 0 0 2px;
+  transition: border-color .2s, background .2s;
+}
+.capture-input::placeholder { color: rgba(250,250,250,.3); }
+.capture-input:focus { border-color: rgba(107,191,176,.5); background: rgba(250,250,250,.08); }
+.capture-submit {
+  padding: 14px 24px;
+  background: var(--teal-light);
+  color: var(--charcoal);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+  transition: background .2s;
+  white-space: nowrap;
+}
+.capture-submit:hover { background: var(--teal); color: var(--seasalt); }
+.capture-disclaimer {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(226,226,226,.3);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.capture-offer-tag {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding: 6px 14px;
+  border: 1px solid rgba(107,191,176,.25);
+  border-radius: 2px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--teal-light);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* =============================================
+   DIAGNOSTIC CTA
+============================================= */
+.diag-sec {
+  background: var(--seasalt);
+  padding: 100px var(--px);
+  border-top: 1px solid var(--border-light);
+}
+.diag-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.diag-content {}
+.diag-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 32px;
+}
+.diag-step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.diag-step:last-child { border-bottom: none; padding-bottom: 0; }
+.diag-step:first-child { padding-top: 0; }
+.diag-step-n {
+  font-family: var(--serif);
+  font-size: 34px;
+  font-weight: 400;
+  color: var(--teal-light);
+  opacity: .3;
+  line-height: 1;
+}
+.diag-step h3 { font-size: 14px; font-weight: 500; color: var(--charcoal); margin-bottom: 5px; letter-spacing: .02em; text-transform: uppercase; }
+.diag-step p { font-size: 14px; color: var(--muted-light); line-height: 1.65; }
+
+.diag-panel {
+  background: var(--charcoal);
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.diag-panel::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(107,191,176,.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.diag-panel-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--teal-light);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.diag-panel-title {
+  font-family: var(--serif);
+  font-size: clamp(26px,2.5vw,36px);
+  font-weight: 500;
+  color: var(--seasalt);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.diag-panel-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted-dark);
+  margin-bottom: 32px;
+}
+
+/* Triangle visual */
+.triangle-vis {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.triangle-svg { width: 160px; height: 140px; }
+
+/* =============================================
+   SOCIAL PROOF (built to fill)
+============================================= */
+.proof-sec {
+  background: var(--charcoal-mid);
+  padding: 80px var(--px);
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+}
+.proof-inner { max-width: var(--max-w); margin: 0 auto; }
+.proof-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.proof-invite {
+  font-size: 14px;
+  color: var(--muted-dark);
+  max-width: 360px;
+  line-height: 1.6;
+}
+.proof-invite a {
+  color: var(--teal-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color .2s;
+}
+.proof-invite a:hover { color: var(--teal); }
+.proof-slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.proof-slot {
+  background: var(--charcoal-light);
+  padding: 32px 28px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+.proof-slot-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 100%;
+  min-height: 180px;
+}
+.proof-slot-ring {
+  width: 48px; height: 48px;
+  border: 1px dashed rgba(107,191,176,.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.proof-slot-ring svg { color: rgba(107,191,176,.3); }
+.proof-slot-empty-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(226,226,226,.2);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* =============================================
+   MAIN CTA BANNER
+============================================= */
+.cta-banner {
+  background: var(--teal-light);
+  padding: 80px var(--px);
+}
+.cta-banner-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.cta-banner-text h2 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1.12;
+  margin-bottom: 10px;
+}
+.cta-banner-text p {
+  font-size: 16px;
+  color: rgba(26,26,26,.65);
+  max-width: 480px;
+  line-height: 1.65;
+}
+.cta-banner-btns { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.cta-banner-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--charcoal); color: var(--seasalt);
+  font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
+  padding: 16px 30px; border-radius: 2px;
+  transition: all .2s var(--ease);
+}
+.cta-banner-primary:hover { background: var(--charcoal-light); transform: translateY(-1px); }
+.cta-banner-ghost {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--charcoal);
+  font-size: 13px; font-weight: 500; letter-spacing: .07em; text-transform: uppercase;
+  transition: gap .2s;
+}
+.cta-banner-ghost:hover { gap: 16px; }
+
+/* =============================================
+   FOOTER
+============================================= */
+.footer {
+  background: var(--charcoal);
+  padding: 72px var(--px) 36px;
+  border-top: 1px solid var(--border-dark);
+}
+.footer-inner { max-width: var(--max-w); margin: 0 auto; }
+.fgrid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+.fbrand { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+.fbrand img { height: 28px; width: auto; }
+.fbrand-name { font-family: var(--sans); font-size: 13px; font-weight: 500; color: var(--seasalt); letter-spacing: .1em; text-transform: uppercase; }
+.fdesc { font-size: 14px; line-height: 1.7; color: var(--mid-grey); margin-bottom: 24px; max-width: 300px; }
+.fsocials { display: flex; gap: 8px; flex-wrap: wrap; }
+.fsoc {
+  width: 34px; height: 34px;
+  border: 1px solid var(--border-dark);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-size: 11px; color: var(--mid-grey);
+  letter-spacing: 0;
+  transition: all .2s;
+  border-radius: 2px;
+}
+.fsoc:hover { border-color: var(--teal-light); color: var(--teal-light); }
+.fcol-h {
+  font-family: var(--mono); font-size: 10px;
+  color: rgba(226,226,226,.3); letter-spacing: .14em;
+  text-transform: uppercase; margin-bottom: 18px;
+}
+.fcol ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.fcol ul li a { font-size: 14px; color: var(--mid-grey); transition: color .2s; }
+.fcol ul li a:hover { color: var(--teal-light); }
+.fbase {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 28px;
+  border-top: 1px solid var(--border-dark);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.fcopy { font-family: var(--mono); font-size: 11px; color: rgba(226,226,226,.25); letter-spacing: .06em; }
+.flegal { display: flex; gap: 20px; }
+.flegal a { font-family: var(--mono); font-size: 11px; color: rgba(226,226,226,.25); letter-spacing: .06em; transition: color .2s; }
+.flegal a:hover { color: var(--teal-light); }
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 0; }
+  .hero-portrait { display: none; }
+  .hero-content { padding-bottom: 72px; }
+  .problem-inner { grid-template-columns: 1fr; gap: 48px; }
+  .problem-pull { position: static; }
+  .bento-grid { grid-template-columns: 1fr; }
+  .bento-card-featured { grid-column: span 1; }
+  .book-inner { grid-template-columns: 1fr; gap: 48px; }
+  .book-cover { max-width: 240px; margin: 0 auto; }
+  .diag-inner { grid-template-columns: 1fr; gap: 48px; }
+  .proof-slots { grid-template-columns: 1fr; }
+  .fgrid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .cta-banner-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+  .nav-menu { display: none; }
+  .nav-burger { display: flex; }
+}
+@media (max-width: 600px) {
+  .fgrid { grid-template-columns: 1fr; gap: 32px; }
+  .bento-card { padding: 28px 24px; }
+  .capture-form { flex-direction: column; }
+  .capture-input { border-right: 1px solid rgba(107,191,176,.2); border-bottom: none; border-radius: 2px 2px 0 0; }
+  .capture-submit { border-radius: 0 0 2px 2px; }
+  .rec-strip-items { gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip">Skip to content</a>
+
+<!-- NAV -->
+<header role="banner">
+  <nav class="nav" aria-label="Primary navigation">
+    <a href="/" class="nav-logo" aria-label="Aingworth home">
+      <!-- Replace src with actual logo path when deploying -->
+      <span class="nav-logo-text">Aingworth</span>
+    </a>
+    <ul class="nav-menu" role="list">
+      <li><a href="services.html">Work With Me</a></li>
+      <li><a href="her-worth.html">HER-Worth</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="diagnostic.html">Diagnostic</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="ncta"><a href="#contact">Let's Talk</a></li>
+    </ul>
+    <button class="nav-burger" aria-expanded="false" aria-controls="ndrawer" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav id="ndrawer" class="nav-drawer" aria-label="Mobile navigation">
+    <a href="services.html">Work With Me</a>
+    <a href="her-worth.html">HER-Worth</a>
+    <a href="book.html">The Book</a>
+    <a href="diagnostic.html">Diagnostic</a>
+    <a href="about.html">About</a>
+    <a href="#contact" class="drawer-cta">Let's Talk</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- =============================================
+     HERO
+============================================= -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-texture" aria-hidden="true"></div>
+  <div class="hero-inner">
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-rule" aria-hidden="true"></div>
+        <span class="hero-eyebrow-label">Brand Authority for the AI Era</span>
+      </div>
+
+      <h1 id="hero-h">
+        AI decides<br>
+        who gets found.<br>
+        <em>We decide</em><br>
+        what it finds.
+      </h1>
+
+      <p class="hero-sub">
+        The brands that win the AI era don't chase attention.<br>
+        <strong>They become the answer.</strong>
+      </p>
+
+      <div class="hero-ctas">
+        <a href="services.html" class="cta-primary">
+          Work With Me
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="diagnostic.html" class="cta-ghost">Take the Diagnostic</a>
+      </div>
+    </div>
+
+    <div class="hero-portrait" aria-hidden="false">
+      <div class="portrait-frame">
+        <img
+          src="Lucy_Studio_Image.png"
+          alt="Lucy Aingworth, founder of Aingworth and author of Become the Answer"
+          loading="eager"
+        >
+      </div>
+      <p class="portrait-caption">Lucy Aingworth &mdash; Founder, Aingworth</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Recognition strip -->
+<div class="rec-strip" aria-hidden="true">
+  <div class="rec-strip-inner">
+    <span class="rec-strip-label">Frameworks</span>
+    <div class="rec-strip-rule"></div>
+    <div class="rec-strip-items">
+      <span class="rec-item">Recognition Triangle</span>
+      <span class="rec-item">Recognition Economy</span>
+      <span class="rec-item">Machine Gatekeeper</span>
+      <span class="rec-item">Authority Debt</span>
+      <span class="rec-item">Earned Authority</span>
+      <span class="rec-item">Brand Hallucination</span>
+    </div>
+  </div>
+</div>
+
+<!-- =============================================
+     PROBLEM STATEMENT
+============================================= -->
+<section class="problem-sec" aria-labelledby="prob-h">
+  <div class="problem-inner">
+
+    <div class="problem-pull anim">
+      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">The Shift</span></div>
+      <p class="pull-quote">
+        The old game was visibility.<br>
+        <em>The new game is recognition.</em>
+      </p>
+      <div class="pull-stat">
+        <div class="stat-item">
+          <div class="stat-num">88<span>%</span></div>
+          <p class="stat-desc">of AI search citations go to pages outside the organic top 10 &mdash; Moz, 2026</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">86<span>%</span></div>
+          <p class="stat-desc">of AI citations come from sources brands can directly control &mdash; Yext, 2026</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="problem-body anim d1">
+      <div class="sec-body">
+        <p>Search has changed in a way that most brands have not caught up with. When someone asks ChatGPT, Perplexity, or Google AI which consultant to hire, which book to read, or which brand to trust, they get an answer. Not a list of ten links. An answer.</p>
+        <p>Whether your brand is in that answer depends entirely on the authority signals you have built over time. Not your ad spend. Not your follower count. Not your position on page one of last year's search results.</p>
+        <p>The brands that built genuine, structured authority are the ones getting cited. The ones that chased metrics are invisible in the new system.</p>
+        <p>That is what <em>Become the Answer</em> is about. And that is what we help you build.</p>
+      </div>
+      <a href="book.html" class="tlink" style="margin-top: 28px">
+        Read about the book <span class="arr"></span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- =============================================
+     ENTRY POINTS (Bento)
+============================================= -->
+<section class="bento-sec" aria-labelledby="bento-h">
+  <div class="bento-inner">
+    <div class="bento-head anim">
+      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Where to Start</span></div>
+      <h2 class="sec-h2 sec-h2-light" id="bento-h">Three ways in.</h2>
+    </div>
+
+    <div class="bento-grid">
+
+      <!-- Card 1: Featured - Work With Me -->
+      <div class="bento-card bento-card-featured anim" role="article">
+        <div class="bento-card-num" aria-hidden="true">01</div>
+        <div class="bento-card-tag">Consulting &amp; Strategy</div>
+        <h3 class="bento-card-title">Build the authority<br>that AI actually cites.</h3>
+        <p class="bento-card-body">One-to-one strategy work for founders and CMOs who need their brand to show up in AI-generated answers, not just search results. We audit where you stand, map the gaps, and build the structural signals that matter.</p>
+        <a href="services.html" class="bento-card-link">Explore the work <span class="bento-arr"></span></a>
+      </div>
+
+      <!-- Card 2: The Book -->
+      <div class="bento-card anim d1" role="article">
+        <div class="bento-card-num" aria-hidden="true">02</div>
+        <div class="bento-card-tag">The Book</div>
+        <h3 class="bento-card-title">Become the Answer</h3>
+        <p class="bento-card-body">The framework that maps the shift from visibility to recognition. Six brand patterns. The Recognition Triangle. A practical system for building authority that holds up.</p>
+        <a href="book.html" class="bento-card-link">About the book <span class="bento-arr"></span></a>
+      </div>
+
+      <!-- Card 3: Diagnostic -->
+      <div class="bento-card anim d2" role="article">
+        <div class="bento-card-num" aria-hidden="true">03</div>
+        <div class="bento-card-tag">Free Tool</div>
+        <h3 class="bento-card-title">Where does your brand sit on the Recognition Triangle?</h3>
+        <p class="bento-card-body">15 questions. Three dimensions. A clear result and a starting point. Take the diagnostic before we talk.</p>
+        <a href="diagnostic.html" class="bento-card-link">Take the diagnostic <span class="bento-arr"></span></a>
+      </div>
+
+      <!-- Card 4: HER-Worth -->
+      <div class="bento-card bento-card-herworth anim d3" role="article">
+        <div class="bento-card-num" aria-hidden="true">04</div>
+        <div class="bento-card-tag">HER-Worth</div>
+        <h3 class="bento-card-title">For women who are worth more than their metrics.</h3>
+        <p class="bento-card-body">Consulting and coaching for women founders and executives building on their own terms. A separate programme. The same framework. A different conversation.</p>
+        <a href="her-worth.html" class="bento-card-link">Learn about HER-Worth <span class="bento-arr"></span></a>
+      </div>
+
+      <!-- Card 5: Speaking -->
+      <div class="bento-card anim d1" role="article">
+        <div class="bento-card-num" aria-hidden="true">05</div>
+        <div class="bento-card-tag">Speaking &amp; Workshops</div>
+        <h3 class="bento-card-title">Bring the framework into your team.</h3>
+        <p class="bento-card-body">Keynotes and workshops on the recognition economy, AI search visibility, and brand authority for marketing teams, leadership groups, and conferences.</p>
+        <a href="services.html#speaking" class="bento-card-link">Book a session <span class="bento-arr"></span></a>
+      </div>
+
+      <!-- Card 6: Newsletter -->
+      <div class="bento-card anim d2" role="article">
+        <div class="bento-card-num" aria-hidden="true">06</div>
+        <div class="bento-card-tag">LinkedIn Newsletter</div>
+        <h3 class="bento-card-title">The recognition economy, explained weekly.</h3>
+        <p class="bento-card-body">Practical thinking on AI search, brand authority, and what is actually changing in how brands get found. No noise.</p>
+        <a href="https://www.linkedin.com/in/lucyaingworth" target="_blank" rel="noopener" class="bento-card-link">Follow on LinkedIn <span class="bento-arr"></span></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     BOOK SECTION
+============================================= -->
+<section class="book-sec" aria-labelledby="book-h">
+  <div class="book-inner">
+
+    <div class="book-cover anim">
+      <div class="book-cover-frame">
+        <div class="book-cover-placeholder">
+          <div class="book-cover-placeholder-rule"></div>
+          <div class="book-cover-placeholder-title">Become<br>the Answer</div>
+          <div class="book-cover-placeholder-author">Lisinda Lucy Aingworth</div>
+          <div class="book-cover-placeholder-rule"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="book-content anim d1">
+      <div class="sec-eye"><div class="sec-rule" style="background:var(--teal)"></div><span class="sec-lbl">The Book</span></div>
+      <h2 class="sec-h2" id="book-h">Become the Answer:<br>How Brands Build Authority in the Age of AI Search</h2>
+      <div class="sec-body">
+        <p>The rules of brand visibility have changed. AI-mediated discovery has replaced the search engine as the first stop for buyers, decision-makers, and researchers. The brands that get cited are not the loudest. They are the most recognized.</p>
+        <p>This book maps the shift from the visibility economy to the recognition economy, and gives founders, CMOs, and strategists a practical system for building the kind of authority that holds up.</p>
+      </div>
+      <div class="book-frameworks">
+        <div class="book-framework-item">
+          <div class="book-fw-name">The Recognition Triangle</div>
+          <p class="book-fw-desc">Three dimensions: Clarity, Credibility, Earned Authority</p>
+        </div>
+        <div class="book-framework-item">
+          <div class="book-fw-name">Six Brand Patterns</div>
+          <p class="book-fw-desc">From The Promising Claim to The Recognized Authority</p>
+        </div>
+        <div class="book-framework-item">
+          <div class="book-fw-name">The Machine Gatekeeper</div>
+          <p class="book-fw-desc">How AI decides what gets cited and why</p>
+        </div>
+        <div class="book-framework-item">
+          <div class="book-fw-name">Authority Debt</div>
+          <p class="book-fw-desc">The cost of shortcuts and how to start paying it down</p>
+        </div>
+      </div>
+      <div class="book-ctas">
+        <a href="https://www.amazon.com/Become-Answer-Brands-Build-Authority/dp/B0H14GDQMH" target="_blank" rel="noopener" class="cta-primary">
+          Get the Book on Amazon
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="book.html" class="tlink">About the book <span class="arr"></span></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =============================================
+     DIAGNOSTIC
+============================================= -->
+<section class="diag-sec" aria-labelledby="diag-h">
+  <div class="diag-inner">
+
+    <div class="diag-content anim">
+      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">The Recognition Diagnostic</span></div>
+      <h2 class="sec-h2" id="diag-h">Know where you stand<br>before you move.</h2>
+      <div class="sec-body">
+        <p>Most brands don't have a visibility problem. They have a recognition problem. The diagnostic is designed to show you which of the six brand patterns applies to you right now, and what that means for how AI systems see you.</p>
+      </div>
+      <div class="diag-steps" role="list">
+        <div class="diag-step" role="listitem">
+          <span class="diag-step-n">01</span>
+          <div>
+            <h3>15 Questions</h3>
+            <p>Across three dimensions: Clarity, Credibility, and Earned Authority.</p>
+          </div>
+        </div>
+        <div class="diag-step" role="listitem">
+          <span class="diag-step-n">02</span>
+          <div>
+            <h3>One of Six Results</h3>
+            <p>Your brand pattern explained, with the specific signals that are working for or against you.</p>
+          </div>
+        </div>
+        <div class="diag-step" role="listitem">
+          <span class="diag-step-n">03</span>
+          <div>
+            <h3>A Starting Point</h3>
+            <p>Not a report. A direction. Use it to start the conversation or apply it yourself.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="diag-panel anim d2">
+      <!-- Recognition Triangle visualization -->
+      <div class="triangle-vis" aria-hidden="true">
+        <svg class="triangle-svg" viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="80,10 150,130 10,130" stroke="rgba(107,191,176,0.25)" stroke-width="1.5" fill="rgba(107,191,176,0.04)"/>
+          <polygon points="80,36 128,120 32,120" stroke="rgba(107,191,176,0.15)" stroke-width="1" fill="rgba(107,191,176,0.03)"/>
+          <circle cx="80" cy="10" r="3" fill="var(--teal-light)" opacity="0.7"/>
+          <circle cx="150" cy="130" r="3" fill="var(--teal-light)" opacity="0.7"/>
+          <circle cx="10" cy="130" r="3" fill="var(--teal-light)" opacity="0.7"/>
+          <text x="80" y="5" text-anchor="middle" font-family="'DM Mono', monospace" font-size="8" fill="rgba(107,191,176,0.6)" letter-spacing="1">CLARITY</text>
+          <text x="158" y="134" text-anchor="start" font-family="'DM Mono', monospace" font-size="8" fill="rgba(107,191,176,0.6)" letter-spacing="1">CREDIBILITY</text>
+          <text x="2" y="134" text-anchor="start" font-family="'DM Mono', monospace" font-size="7" fill="rgba(107,191,176,0.6)" letter-spacing="0.5">AUTHORITY</text>
+        </svg>
+      </div>
+
+      <p class="diag-panel-label">The Recognition Triangle</p>
+      <h3 class="diag-panel-title">Where does your brand sit?</h3>
+      <p class="diag-panel-body">The diagnostic takes about 5 minutes. Your result will tell you which of the six patterns describes your current position and what to do about it.</p>
+      <a href="diagnostic.html" class="cta-primary">
+        Start the Diagnostic
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- =============================================
+     LEAD CAPTURE
+============================================= -->
+<section class="capture-sec" aria-labelledby="capture-h">
+  <div class="capture-inner">
+    <div class="anim">
+      <span class="capture-offer-tag">Free Resource</span>
+      <div class="sec-eye" style="justify-content:center"><div class="sec-rule"></div><span class="sec-lbl">The AI Visibility Checklist</span></div>
+      <h2 class="sec-h2 sec-h2-light" id="capture-h">12 signals AI models<br>use to decide whether<br>to cite your brand.</h2>
+      <p class="capture-subtext">A practical one-page reference. No fluff. Straight from the Become the Answer framework. Enter your email and it comes straight to your inbox.</p>
+
+      <form class="capture-form" action="https://formspree.io/f/REPLACE_WITH_LIVE_ID" method="POST" aria-label="Checklist download form">
+        <label for="capture-email" class="sr-only">Your email address</label>
+        <input
+          type="email"
+          id="capture-email"
+          name="email"
+          class="capture-input"
+          placeholder="your@email.com"
+          required
+          autocomplete="email"
+        >
+        <input type="hidden" name="_subject" value="AI Visibility Checklist Request">
+        <input type="hidden" name="source" value="homepage-capture">
+        <button type="submit" class="capture-submit">Send It</button>
+      </form>
+      <p class="capture-disclaimer">No spam. One email. Unsubscribe any time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     SOCIAL PROOF (ready to fill over time)
+============================================= -->
+<section class="proof-sec" aria-labelledby="proof-h">
+  <div class="proof-inner">
+    <div class="proof-head anim">
+      <div>
+        <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">What People Say</span></div>
+        <h2 class="sec-h2 sec-h2-light" id="proof-h">This is where your<br>story goes.</h2>
+      </div>
+      <p class="proof-invite">
+        Worked with Lucy or read the book? She would love to hear from you.
+        <a href="mailto:info@aingworth.com?subject=Testimonial">Share your experience &rarr;</a>
+      </p>
+    </div>
+    <div class="proof-slots" role="list">
+      <div class="proof-slot anim" role="listitem">
+        <div class="proof-slot-empty">
+          <div class="proof-slot-ring">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M4 14V9a5 5 0 0 1 10 0v5M2 14h14"/></svg>
+          </div>
+          <p class="proof-slot-empty-label">Client story<br>coming soon</p>
+        </div>
+      </div>
+      <div class="proof-slot anim d1" role="listitem">
+        <div class="proof-slot-empty">
+          <div class="proof-slot-ring">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M4 14V9a5 5 0 0 1 10 0v5M2 14h14"/></svg>
+          </div>
+          <p class="proof-slot-empty-label">Client story<br>coming soon</p>
+        </div>
+      </div>
+      <div class="proof-slot anim d2" role="listitem">
+        <div class="proof-slot-empty">
+          <div class="proof-slot-ring">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M4 14V9a5 5 0 0 1 10 0v5M2 14h14"/></svg>
+          </div>
+          <p class="proof-slot-empty-label">Client story<br>coming soon</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     MAIN CTA BANNER
+============================================= -->
+<section class="cta-banner" id="contact" aria-labelledby="cta-ban-h">
+  <div class="cta-banner-inner">
+    <div class="cta-banner-text anim">
+      <h2 id="cta-ban-h">If this resonates,<br>let's talk.</h2>
+      <p>Every engagement starts with a conversation. Tell me where you are and what you are trying to build. No pitch. No agenda. Just an honest conversation.</p>
+    </div>
+    <div class="cta-banner-btns anim d1">
+      <a href="mailto:info@aingworth.com?subject=Let's Talk" class="cta-banner-primary">
+        Start a Conversation
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="services.html" class="cta-banner-ghost">
+        See how we work
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <span class="fbrand-name">Aingworth</span>
+        </div>
+        <p class="fdesc">Brand authority and AI visibility consulting. Built on the Become the Answer framework. For founders, CMOs, and executives who need to be found for the right reasons.</p>
+        <nav class="fsocials" aria-label="Social media">
+          <a href="https://www.linkedin.com/in/lucyaingworth" class="fsoc" aria-label="LinkedIn" rel="noopener">in</a>
+          <a href="https://www.youtube.com/@aingworth" class="fsoc" aria-label="YouTube" rel="noopener">yt</a>
+          <a href="https://www.instagram.com/aingworth" class="fsoc" aria-label="Instagram" rel="noopener">ig</a>
+          <a href="https://www.tiktok.com/@aingworth" class="fsoc" aria-label="TikTok" rel="noopener">tt</a>
+          <a href="https://bsky.app/profile/aingworth.com" class="fsoc" aria-label="Bluesky" rel="noopener">bs</a>
+        </nav>
+      </div>
+      <div class="fcol">
+        <p class="fcol-h">Work</p>
+        <ul>
+          <li><a href="services.html">All Services</a></li>
+          <li><a href="services.html#consulting">AI Visibility Consulting</a></li>
+          <li><a href="services.html#workshops">Workshops &amp; Speaking</a></li>
+          <li><a href="her-worth.html">HER-Worth</a></li>
+          <li><a href="diagnostic.html">The Diagnostic</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <p class="fcol-h">Resources</p>
+        <ul>
+          <li><a href="book.html">Become the Answer</a></li>
+          <li><a href="https://www.amazon.com/Become-Answer-Brands-Build-Authority/dp/B0H14GDQMH" target="_blank" rel="noopener">Buy on Amazon</a></li>
+          <li><a href="https://www.linkedin.com/in/lucyaingworth" target="_blank" rel="noopener">LinkedIn Newsletter</a></li>
+          <li><a href="diagnostic.html">Free Diagnostic</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <p class="fcol-h">Company</p>
+        <ul>
+          <li><a href="about.html">About Lucy</a></li>
+          <li><a href="mailto:info@aingworth.com">Contact</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbase">
+      <p class="fcopy">&copy; 2026 Aingworth. All rights reserved.</p>
+      <nav class="flegal" aria-label="Legal">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile nav
+const burger = document.querySelector('.nav-burger');
+const drawer = document.getElementById('ndrawer');
+burger.addEventListener('click', () => {
+  const open = drawer.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  drawer.classList.remove('open');
+  burger.setAttribute('aria-expanded','false');
+  document.body.style.overflow = '';
+}));
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && drawer.classList.contains('open')) {
+    drawer.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+    burger.focus();
+  }
+});
+
+// Scroll nav
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', () => {
+  nav.style.background = scrollY > 10 ? 'rgba(26,26,26,.99)' : 'rgba(26,26,26,.97)';
+}, {passive:true});
+
+// Scroll animations
+if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); }
+    });
+  }, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.anim').forEach(el => obs.observe(el));
+}
+
+// Form feedback
+const form = document.querySelector('.capture-form');
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.capture-submit');
+    const originalText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        btn.textContent = 'Sent!';
+        form.querySelector('input[type="email"]').value = '';
+        setTimeout(() => { btn.textContent = originalText; btn.disabled = false; }, 3000);
+      } else {
+        btn.textContent = 'Try Again';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Try Again';
+      btn.disabled = false;
+    }
+  });
+}
+</script>
+</body>
+</html>
