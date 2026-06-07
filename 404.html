@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found - Aingworth</title>
+<meta name="description" content="The page you are looking for does not exist. Find your way back to Aingworth.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --charcoal:       #1a1a1a;
+  --charcoal-mid:   #242424;
+  --charcoal-light: #2e2e2e;
+  --teal:           #4a9e8e;
+  --teal-light:     #6bbfb0;
+  --seasalt:        #FAFAFA;
+  --mid-grey:       #888880;
+  --lavender:       #c4a7e4;
+  --border-dark:    rgba(183,206,206,0.1);
+  --muted-dark:     rgba(226,226,226,0.6);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'DM Sans', system-ui, sans-serif;
+  --mono:  'DM Mono', monospace;
+  --px: clamp(20px, 4vw, 56px);
+  --ease: cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html,body { height:100%; }
+body { font-family:var(--sans); font-size:16px; background:var(--charcoal); color:var(--seasalt); -webkit-font-smoothing:antialiased; line-height:1.7; display:flex; flex-direction:column; }
+a { color:inherit; text-decoration:none; }
+:focus-visible { outline:2px solid var(--teal-light); outline-offset:3px; }
+
+/* NAV */
+.nav { height:68px; display:flex; align-items:center; justify-content:space-between; padding:0 var(--px); border-bottom:1px solid var(--border-dark); flex-shrink:0; }
+.nav-logo { display:flex; align-items:center; gap:10px; }
+.nav-logo img { height:28px; width:auto; }
+.nav-logo-text { font-family:var(--sans); font-size:15px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--seasalt); }
+
+/* MAIN */
+.main { flex:1; display:flex; align-items:center; justify-content:center; padding:60px var(--px); position:relative; overflow:hidden; }
+
+/* Ambient background */
+.main::before {
+  content:'';
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  width:800px; height:800px;
+  background:radial-gradient(circle, rgba(74,158,142,.05) 0%, transparent 60%);
+  pointer-events:none;
+}
+.main-texture {
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(107,191,176,.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107,191,176,.02) 1px, transparent 1px);
+  background-size:60px 60px;
+  pointer-events:none;
+}
+
+.content { max-width:640px; width:100%; text-align:center; position:relative; z-index:1; }
+
+/* Big 404 */
+.error-num {
+  font-family:var(--serif);
+  font-size:clamp(120px,20vw,200px);
+  font-weight:400;
+  line-height:.9;
+  color:var(--charcoal-light);
+  letter-spacing:-.02em;
+  margin-bottom:0;
+  position:relative;
+  display:inline-block;
+  user-select:none;
+}
+/* Teal glow on the 0 */
+.error-num .zero {
+  color:rgba(107,191,176,.15);
+  position:relative;
+}
+.error-num .zero::after {
+  content:'0';
+  position:absolute;
+  inset:0;
+  color:rgba(107,191,176,.08);
+  filter:blur(20px);
+}
+
+.error-eyebrow { display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:20px; margin-top:16px; }
+.error-rule { width:26px; height:1px; background:var(--teal-light); }
+.error-lbl { font-family:var(--mono); font-size:11px; color:var(--teal-light); letter-spacing:.16em; text-transform:uppercase; }
+
+.error-title { font-family:var(--serif); font-size:clamp(28px,3.5vw,46px); font-weight:500; line-height:1.1; color:var(--seasalt); letter-spacing:-.01em; margin-bottom:16px; }
+.error-title em { font-style:italic; color:var(--teal-light); }
+
+.error-body { font-size:16px; line-height:1.72; color:var(--muted-dark); margin-bottom:40px; max-width:440px; margin-left:auto; margin-right:auto; }
+
+/* Navigation options */
+.error-nav { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:40px; }
+.error-nav-item {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 18px;
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--border-dark);
+  transition:all .2s var(--ease);
+  text-align:left;
+}
+.error-nav-item:hover { background:rgba(107,191,176,.06); border-color:rgba(107,191,176,.25); }
+.eni-left { display:flex; flex-direction:column; gap:3px; }
+.eni-name { font-size:14px; font-weight:500; color:var(--seasalt); transition:color .2s; }
+.error-nav-item:hover .eni-name { color:var(--teal-light); }
+.eni-desc { font-size:12px; color:var(--mid-grey); }
+.eni-arr { width:14px; height:1px; background:var(--mid-grey); position:relative; flex-shrink:0; transition:all .2s; }
+.eni-arr::after { content:''; position:absolute; right:0; top:-3px; width:5px; height:5px; border-right:1px solid var(--mid-grey); border-top:1px solid var(--mid-grey); transform:rotate(45deg); }
+.error-nav-item:hover .eni-arr { background:var(--teal-light); width:20px; }
+.error-nav-item:hover .eni-arr::after { border-color:var(--teal-light); }
+
+/* Primary CTA */
+.error-cta {
+  display:inline-flex; align-items:center; gap:10px;
+  background:var(--teal-light); color:var(--charcoal);
+  font-size:13px; font-weight:500; letter-spacing:.08em; text-transform:uppercase;
+  padding:14px 28px; border-radius:2px;
+  transition:all .2s var(--ease);
+}
+.error-cta:hover { background:var(--teal); color:var(--seasalt); transform:translateY(-1px); }
+
+/* Diagnostic nudge */
+.error-nudge {
+  margin-top:40px;
+  padding:20px 24px;
+  background:rgba(107,191,176,.05);
+  border:1px solid rgba(107,191,176,.12);
+  text-align:left;
+}
+.nudge-label { font-family:var(--mono); font-size:10px; color:var(--teal-light); letter-spacing:.12em; text-transform:uppercase; margin-bottom:8px; }
+.nudge-text { font-size:14px; color:var(--muted-dark); line-height:1.65; }
+.nudge-text a { color:var(--teal-light); text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px; transition:color .2s; }
+.nudge-text a:hover { color:var(--teal); }
+
+/* Footer */
+.footer-404 { padding:24px var(--px); border-top:1px solid var(--border-dark); flex-shrink:0; }
+.footer-404-inner { max-width:640px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+.f4-copy { font-family:var(--mono); font-size:11px; color:rgba(226,226,226,.25); letter-spacing:.06em; }
+.f4-links { display:flex; gap:16px; }
+.f4-links a { font-family:var(--mono); font-size:11px; color:rgba(226,226,226,.25); letter-spacing:.06em; transition:color .2s; }
+.f4-links a:hover { color:var(--teal-light); }
+
+@media (max-width: 600px) {
+  .error-nav { grid-template-columns:1fr; }
+  .error-num { font-size:clamp(80px,25vw,120px); }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary navigation">
+  <a href="index.html" class="nav-logo" aria-label="Aingworth home">
+    <img src="images/Aingworth_graphic_logo.png" alt="Aingworth" height="28" style="filter:brightness(0) invert(1)">
+    <span class="nav-logo-text">Aingworth</span>
+  </a>
+</nav>
+
+<main class="main" id="main">
+  <div class="main-texture" aria-hidden="true"></div>
+  <div class="content">
+
+    <div class="error-num" aria-hidden="true">4<span class="zero">0</span>4</div>
+
+    <div class="error-eyebrow">
+      <div class="error-rule" aria-hidden="true"></div>
+      <span class="error-lbl">Page Not Found</span>
+      <div class="error-rule" aria-hidden="true"></div>
+    </div>
+
+    <h1 class="error-title">
+      This page is<br>
+      <em>invisible to everyone.</em>
+    </h1>
+
+    <p class="error-body">The page you were looking for does not exist. It may have moved, been renamed, or never existed at all. Here are some places that do exist.</p>
+
+    <nav class="error-nav" aria-label="Site navigation shortcuts">
+      <a href="index.html" class="error-nav-item">
+        <div class="eni-left">
+          <span class="eni-name">Home</span>
+          <span class="eni-desc">Back to the start</span>
+        </div>
+        <span class="eni-arr" aria-hidden="true"></span>
+      </a>
+      <a href="services.html" class="error-nav-item">
+        <div class="eni-left">
+          <span class="eni-name">Work With Me</span>
+          <span class="eni-desc">Consulting and services</span>
+        </div>
+        <span class="eni-arr" aria-hidden="true"></span>
+      </a>
+      <a href="book.html" class="error-nav-item">
+        <div class="eni-left">
+          <span class="eni-name">The Book</span>
+          <span class="eni-desc">Become the Answer</span>
+        </div>
+        <span class="eni-arr" aria-hidden="true"></span>
+      </a>
+      <a href="her-worth.html" class="error-nav-item">
+        <div class="eni-left">
+          <span class="eni-name">HER-Worth</span>
+          <span class="eni-desc">For women founders</span>
+        </div>
+        <span class="eni-arr" aria-hidden="true"></span>
+      </a>
+      <a href="about.html" class="error-nav-item">
+        <div class="eni-left">
+          <span class="eni-name">About Lucy</span>
+          <span class="eni-desc">The story behind this</span>
+        </div>
+        <span class="eni-arr" aria-hidden="true"></span>
+      </a>
+      <a href="contact.html" class="error-nav-item">
+        <div class="eni-left">
+          <span class="eni-name">Contact</span>
+          <span class="eni-desc">Get in touch directly</span>
+        </div>
+        <span class="eni-arr" aria-hidden="true"></span>
+      </a>
+    </nav>
+
+    <a href="index.html" class="error-cta">
+      Take Me Home
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <div class="error-nudge" role="complementary" aria-label="Diagnostic suggestion">
+      <div class="nudge-label">While you are here</div>
+      <p class="nudge-text">If you landed here looking for something about AI visibility or brand authority, the <a href="diagnostic.html">Recognition Diagnostic</a> is free and takes five minutes. It will tell you exactly where your brand sits on the Recognition Triangle.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer-404" role="contentinfo">
+  <div class="footer-404-inner">
+    <p class="f4-copy">&copy; 2026 Aingworth. All rights reserved.</p>
+    <nav class="f4-links" aria-label="Legal">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
