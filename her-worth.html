@@ -394,6 +394,15 @@ a { color:inherit; text-decoration:none; }
 .offer-inc-list li { display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--muted-dark); line-height:1.5; }
 .oil-dot { width:5px; height:5px; border-radius:50%; background:var(--lavender); opacity:.6; flex-shrink:0; margin-top:8px; }
 
+/* Currency bar */
+.currency-bar { background:var(--charcoal-mid); border-bottom:1px solid var(--border-dark); padding:14px var(--px); position:sticky; top:68px; z-index:100; }
+.currency-bar-inner { max-width:var(--max-w); margin:0 auto; display:flex; align-items:center; gap:16px; }
+.currency-label { font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; }
+.currency-toggle { display:flex; background:var(--charcoal-light); border:1px solid var(--border-dark); border-radius:2px; overflow:hidden; }
+.currency-btn { padding:7px 20px; font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; border:none; background:none; color:var(--mid-grey); cursor:pointer; transition:all .2s; }
+.currency-btn.active { background:var(--lavender); color:var(--charcoal); font-weight:500; }
+.currency-note { font-family:var(--mono); font-size:10px; color:rgba(226,226,226,.25); letter-spacing:.06em; margin-left:auto; }
+
 /* Coming soon badge */
 .coming-soon-badge {
   display: inline-flex;
@@ -818,6 +827,18 @@ a { color:inherit; text-decoration:none; }
   </div>
 </section>
 
+<!-- CURRENCY TOGGLE -->
+<div class="currency-bar" role="region" aria-label="Currency selector">
+  <div class="currency-bar-inner">
+    <span class="currency-label">View prices in</span>
+    <div class="currency-toggle" role="group" aria-label="Select currency">
+      <button class="currency-btn active" id="btn-zar" onclick="setCurrency('zar')" aria-pressed="true">ZAR (R)</button>
+      <button class="currency-btn" id="btn-usd" onclick="setCurrency('usd')" aria-pressed="false">USD ($)</button>
+    </div>
+    <span class="currency-note">Starting rates. Final scope confirmed after initial conversation.</span>
+  </div>
+</div>
+
 <!-- NAME MEANING -->
 <div class="name-sec" aria-label="The HER-Worth name explained">
   <div class="name-inner">
@@ -925,7 +946,7 @@ a { color:inherit; text-decoration:none; }
     <div class="offers-head anim">
       <div class="sec-eye"><div class="sec-rule-lav"></div><span class="sec-lbl-lav">The Programme</span></div>
       <h2 class="sec-h2 sec-h2-light" id="offers-h">Three ways to work together.</h2>
-      <p class="sec-body sec-body-dark" style="max-width:520px; margin-top:4px;">Each offer can stand alone or connect into a broader engagement. All pricing is available in ZAR and USD. Contact for details.</p>
+      <p class="sec-body sec-body-dark" style="max-width:520px; margin-top:4px;">Each offer can stand alone or connect into a broader engagement. Use the currency toggle above to view prices in ZAR or USD.</p>
     </div>
 
     <div class="offers-grid">
@@ -945,8 +966,8 @@ a { color:inherit; text-decoration:none; }
           <div>
             <div class="offer-price-block">
               <div class="offer-price-from">Starting from</div>
-              <div class="offer-price-amt">R15,000</div>
-              <div class="offer-price-period">Per month &bull; USD pricing on request</div>
+              <div class="offer-price-amt price-display" data-zar="R15,000" data-usd="$1,150">R15,000</div>
+              <div class="offer-price-period">Per month</div>
             </div>
             <div class="offer-includes">
               <div class="offer-inc-label">Includes</div>
@@ -981,8 +1002,8 @@ a { color:inherit; text-decoration:none; }
           <div>
             <div class="offer-price-block">
               <div class="offer-price-from">Starting from</div>
-              <div class="offer-price-amt">R2,500</div>
-              <div class="offer-price-period">Per session &bull; USD pricing on request</div>
+              <div class="offer-price-amt price-display" data-zar="R2,500" data-usd="$175">R2,500</div>
+              <div class="offer-price-period">Per session</div>
             </div>
             <div class="offer-includes">
               <div class="offer-inc-label">Session focus areas</div>
@@ -1262,6 +1283,19 @@ a { color:inherit; text-decoration:none; }
 </footer>
 
 <script>
+// Currency toggle
+var activeCurrency = 'zar';
+function setCurrency(c) {
+  activeCurrency = c;
+  document.getElementById('btn-zar').classList.toggle('active', c === 'zar');
+  document.getElementById('btn-zar').setAttribute('aria-pressed', c === 'zar');
+  document.getElementById('btn-usd').classList.toggle('active', c === 'usd');
+  document.getElementById('btn-usd').setAttribute('aria-pressed', c === 'usd');
+  document.querySelectorAll('.price-display').forEach(function(el) {
+    el.textContent = c === 'usd' ? el.dataset.usd : el.dataset.zar;
+  });
+}
+
 // Nav
 var burger = document.querySelector('.nav-burger');
 var drawer = document.getElementById('ndrawer');
