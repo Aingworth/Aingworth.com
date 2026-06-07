@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Aingworth</title>
+<meta name="description" content="Privacy Policy for Aingworth. How we collect, use, and protect your personal information.">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --charcoal:       #1a1a1a;
+  --charcoal-mid:   #242424;
+  --charcoal-light: #2e2e2e;
+  --teal:           #4a9e8e;
+  --teal-light:     #6bbfb0;
+  --platinum:       #E2E2E2;
+  --seasalt:        #FAFAFA;
+  --mid-grey:       #888880;
+  --border-dark:    rgba(183,206,206,0.1);
+  --border-light:   rgba(28,15,19,0.1);
+  --muted-light:    rgba(26,26,26,0.6);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'DM Sans', system-ui, sans-serif;
+  --mono:  'DM Mono', monospace;
+  --max-w: 760px;
+  --px: clamp(20px, 4vw, 56px);
+  --ease: cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body { font-family:var(--sans); font-size:16px; background:var(--seasalt); color:var(--charcoal); -webkit-font-smoothing:antialiased; line-height:1.7; }
+a { color:var(--teal); text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px; }
+a:hover { color:var(--teal-light); }
+.skip { position:absolute; top:-52px; left:24px; background:var(--teal-light); color:var(--charcoal); padding:10px 18px; font-size:13px; font-weight:500; z-index:999; transition:top .2s; }
+.skip:focus { top:8px; }
+:focus-visible { outline:2px solid var(--teal-light); outline-offset:3px; }
+
+.nav { position:fixed; top:0; left:0; right:0; z-index:200; height:68px; display:flex; align-items:center; justify-content:space-between; padding:0 var(--px); background:rgba(26,26,26,.97); backdrop-filter:blur(20px); border-bottom:1px solid var(--border-dark); }
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo img { height:28px; width:auto; }
+.nav-logo-text { font-family:var(--sans); font-size:15px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--seasalt); }
+.nav-back { display:flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; text-decoration:none; transition:color .2s; }
+.nav-back:hover { color:var(--teal-light); }
+
+.page-wrap { max-width:var(--max-w); margin:0 auto; padding:120px var(--px) 100px; }
+
+.page-eyebrow { display:flex; align-items:center; gap:12px; margin-bottom:20px; }
+.page-rule { width:26px; height:1px; background:var(--teal-light); }
+.page-lbl { font-family:var(--mono); font-size:11px; color:var(--teal-light); letter-spacing:.14em; text-transform:uppercase; }
+
+.page-title { font-family:var(--serif); font-size:clamp(36px,4vw,56px); font-weight:500; line-height:1.08; color:var(--charcoal); letter-spacing:-.01em; margin-bottom:12px; }
+.page-date { font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; margin-bottom:48px; padding-bottom:48px; border-bottom:1px solid var(--border-light); }
+
+.doc-body { font-size:16px; line-height:1.78; color:var(--muted-light); }
+.doc-body h2 { font-family:var(--serif); font-size:clamp(22px,2.5vw,30px); font-weight:500; color:var(--charcoal); line-height:1.2; margin-top:48px; margin-bottom:14px; }
+.doc-body h3 { font-size:16px; font-weight:500; color:var(--charcoal); margin-top:28px; margin-bottom:10px; }
+.doc-body p { margin-bottom:16px; }
+.doc-body p:last-child { margin-bottom:0; }
+.doc-body ul, .doc-body ol { margin:16px 0 16px 24px; display:flex; flex-direction:column; gap:8px; }
+.doc-body li { font-size:16px; line-height:1.7; color:var(--muted-light); }
+.doc-body strong { color:var(--charcoal); font-weight:500; }
+.doc-body a { color:var(--teal); }
+.doc-callout { background:rgba(107,191,176,.06); border:1px solid rgba(107,191,176,.2); border-left:3px solid var(--teal-light); padding:20px 24px; margin:28px 0; }
+.doc-callout p { margin-bottom:0; font-size:15px; }
+
+.footer-legal { background:var(--charcoal); padding:48px var(--px) 32px; margin-top:80px; }
+.fl-inner { max-width:var(--max-w); margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+.fl-brand { font-family:var(--sans); font-size:13px; font-weight:500; color:var(--seasalt); letter-spacing:.08em; text-transform:uppercase; }
+.fl-links { display:flex; gap:20px; }
+.fl-links a { font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.06em; text-decoration:none; transition:color .2s; }
+.fl-links a:hover { color:var(--teal-light); }
+.fl-copy { font-family:var(--mono); font-size:11px; color:rgba(226,226,226,.25); letter-spacing:.06em; width:100%; margin-top:8px; }
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<nav class="nav" aria-label="Primary navigation">
+  <a href="index.html" class="nav-logo" aria-label="Aingworth home">
+    <img src="images/Aingworth_graphic_logo.png" alt="Aingworth" height="28" style="filter:brightness(0) invert(1)">
+    <span class="nav-logo-text">Aingworth</span>
+  </a>
+  <a href="index.html" class="nav-back">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 3L5 7l4 4"/></svg>
+    Back to site
+  </a>
+</nav>
+
+<main id="main">
+<div class="page-wrap">
+  <div class="page-eyebrow"><div class="page-rule"></div><span class="page-lbl">Legal</span></div>
+  <h1 class="page-title">Privacy Policy</h1>
+  <p class="page-date">Last updated: June 2026</p>
+
+  <div class="doc-body">
+
+    <div class="doc-callout">
+      <p>This policy explains how Aingworth (operated by Lucy Aingworth) collects, uses, and protects your personal information when you use this website or engage with our services. We take your privacy seriously and we do not sell your data.</p>
+    </div>
+
+    <h2>1. Who We Are</h2>
+    <p>This website is operated by Lucy Aingworth, trading as Aingworth. References to "we", "us", or "our" in this policy refer to Aingworth and Lucy Aingworth personally.</p>
+    <p>Contact: <a href="mailto:info@aingworth.com">info@aingworth.com</a></p>
+    <p>We are based in South Africa and operate internationally. This policy is designed to comply with the Protection of Personal Information Act (POPIA) applicable in South Africa, as well as the General Data Protection Regulation (GDPR) where applicable to users in the European Economic Area and United Kingdom.</p>
+
+    <h2>2. What Information We Collect</h2>
+    <h3>Information you give us directly</h3>
+    <p>When you use our contact form, email capture forms, or diagnostic quiz, we may collect:</p>
+    <ul>
+      <li>Your name and email address</li>
+      <li>Your company name and country</li>
+      <li>Information about your business and budget range</li>
+      <li>Your responses to the Recognition Diagnostic quiz</li>
+      <li>Any messages or enquiries you send us</li>
+    </ul>
+
+    <h3>Information collected automatically</h3>
+    <p>When you visit this website, standard web server logs may collect basic technical information such as your IP address, browser type, and pages visited. This website is hosted on GitHub Pages. We do not currently use analytics tracking scripts or advertising cookies.</p>
+
+    <h3>Information from third-party services</h3>
+    <p>We use Formspree to process form submissions. When you submit a form, your data is transmitted to Formspree's servers in accordance with their privacy policy, available at formspree.io/legal/privacy-policy.</p>
+
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the information you provide to:</p>
+    <ul>
+      <li>Respond to your enquiries and messages</li>
+      <li>Send you requested resources such as the AI Visibility Checklist</li>
+      <li>Provide your diagnostic results and follow-up information</li>
+      <li>Send you the personalised proposal or breakdown you requested</li>
+      <li>Communicate about consulting, coaching, or speaking engagements</li>
+    </ul>
+    <p>We do not use your information for automated decision-making, profiling, or advertising. We do not add you to any marketing list without your explicit consent at the point of submission.</p>
+
+    <h2>4. Legal Basis for Processing</h2>
+    <p>We process your personal information on the following bases:</p>
+    <ul>
+      <li><strong>Your consent</strong> - when you submit a form, you consent to us using your details to respond</li>
+      <li><strong>Legitimate interests</strong> - to respond to business enquiries and manage our consulting relationships</li>
+      <li><strong>Contract performance</strong> - when processing information as part of delivering services you have engaged</li>
+    </ul>
+
+    <h2>5. Who We Share Your Information With</h2>
+    <p>We do not sell, rent, or trade your personal information to any third party.</p>
+    <p>We share information only with:</p>
+    <ul>
+      <li><strong>Formspree</strong> - our form processing provider, which handles form submissions on our behalf</li>
+      <li><strong>GitHub Pages</strong> - our website hosting provider, which processes standard server logs</li>
+    </ul>
+    <p>Both services are established platforms with their own published privacy policies. We do not share your information with any other third parties without your explicit consent, except where required by law.</p>
+
+    <h2>6. How Long We Keep Your Information</h2>
+    <p>We retain your contact information and enquiry details for as long as is necessary to respond to your enquiry and manage any resulting business relationship, or for a maximum of three years from last contact, whichever is sooner.</p>
+    <p>You can request deletion of your information at any time by emailing <a href="mailto:info@aingworth.com">info@aingworth.com</a>.</p>
+
+    <h2>7. Your Rights</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+    <ul>
+      <li>The right to access the information we hold about you</li>
+      <li>The right to correct inaccurate information</li>
+      <li>The right to request deletion of your information</li>
+      <li>The right to object to processing or request restriction of processing</li>
+      <li>The right to data portability (where applicable)</li>
+      <li>The right to withdraw consent at any time (where processing is based on consent)</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us at <a href="mailto:info@aingworth.com">info@aingworth.com</a>. We will respond within 30 days.</p>
+    <p>If you are based in South Africa, you also have the right to lodge a complaint with the Information Regulator at <a href="https://inforegulator.org.za" target="_blank" rel="noopener">inforegulator.org.za</a>. If you are based in the UK or EU, you have the right to complain to your local data protection authority.</p>
+
+    <h2>8. Cookies</h2>
+    <p>This website does not currently use cookies for analytics, advertising, or tracking purposes. The only cookies that may be set are those required for basic website functionality by our hosting provider, GitHub Pages.</p>
+    <p>If we introduce analytics or other cookie-based tools in future, this policy will be updated and a cookie notice will be displayed.</p>
+
+    <h2>9. Security</h2>
+    <p>We take reasonable technical and organisational measures to protect your personal information. All form submissions are processed via HTTPS. We do not store sensitive personal or financial information beyond what is necessary for normal business correspondence.</p>
+
+    <h2>10. International Transfers</h2>
+    <p>Our form processing provider, Formspree, may store and process data in the United States. By submitting a form on this website, you acknowledge that your information may be transferred internationally. We have selected providers with appropriate data protection standards.</p>
+
+    <h2>11. Children</h2>
+    <p>This website is not directed at children under the age of 18. We do not knowingly collect personal information from anyone under 18. If you believe a child has submitted information through this website, please contact us and we will delete it promptly.</p>
+
+    <h2>12. Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. The date at the top of this page reflects the most recent update. Continued use of this website after any update constitutes acceptance of the revised policy.</p>
+
+    <h2>13. Contact Us</h2>
+    <p>For any questions about this privacy policy or how we handle your personal information, please contact:</p>
+    <ul>
+      <li>Email: <a href="mailto:info@aingworth.com">info@aingworth.com</a></li>
+      <li>Contact form: <a href="contact.html">aingworth.com/contact</a></li>
+    </ul>
+
+  </div>
+</div>
+</main>
+
+<footer class="footer-legal" role="contentinfo">
+  <div class="fl-inner">
+    <span class="fl-brand">Aingworth</span>
+    <nav class="fl-links" aria-label="Legal navigation">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="fl-copy">&copy; 2026 Aingworth. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
