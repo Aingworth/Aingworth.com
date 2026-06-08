@@ -91,7 +91,7 @@ a { color: inherit; text-decoration: none; }
   transition: background .3s var(--ease);
 }
 .nav-logo { display: flex; align-items: center; height: 68px; }
-.nav-logo img { height: 56px; width: auto; display: block; }
+.nav-logo img { height: 60px; width: auto; display: block; }
 .nav-logo-text { display: none; }
 .nav-menu { display: flex; align-items: center; gap: 2px; list-style: none; }
 .nav-menu a { display: block; padding: 7px 12px; color: rgba(250,250,250,.6); font-size: 13px; font-weight: 400; letter-spacing: .06em; text-transform: uppercase; transition: color .2s; }
@@ -137,12 +137,9 @@ a { color: inherit; text-decoration: none; }
 /* HERO */
 .hero {
   background: var(--charcoal);
-  padding: 120px var(--px) 0;
+  padding: 120px var(--px) 80px;
   position: relative;
   overflow: hidden;
-  min-height: 92vh;
-  display: flex;
-  align-items: flex-end;
 }
 .hero::before {
   content: '';
@@ -359,7 +356,7 @@ a { color: inherit; text-decoration: none; }
 <header role="banner">
   <nav class="nav" aria-label="Primary navigation">
     <a href="index.html" class="nav-logo" aria-label="Aingworth home">
-      <img src="images/Aingworth_Main_Logo_White.png" alt="Aingworth" style="height:56px;width:auto;display:block;">
+      <img src="images/Aingworth_Main_Logo_White.png" alt="Aingworth" style="height:60px;width:auto;display:block;filter:brightness(10);">
     </a>
     <ul class="nav-menu" role="list">
       <li><a href="services.html">Work With Me</a></li>
@@ -413,12 +410,12 @@ a { color: inherit; text-decoration: none; }
       </div>
     </div>
 
-    <div class="hero-portrait" aria-hidden="false">
+    <div class="hero-portrait">
       <img
         src="images/Recognition_Trianlge.png"
-        alt="The Recognition Triangle showing Earned Authority, Clarity and Credibility with Recognition at the centre"
+        alt="The Recognition Triangle"
         loading="eager"
-        style="width:100%; height:auto; display:block;"
+        style="width:100%; height:auto; display:block; min-width:480px;"
       >
     </div>
 
@@ -660,7 +657,7 @@ a { color: inherit; text-decoration: none; }
     <div class="fgrid">
       <div>
         <div class="fbrand">
-          <img src="images/Aingworth_Main_Logo2.png.png" alt="Aingworth" style="height:56px;width:auto;display:block;filter:brightness(0) invert(1);">
+          <img src="images/Aingworth_Main_Logo2.png.png" alt="Aingworth" style="height:60px;width:auto;display:block;filter:brightness(10);">
         </div>
         <p class="fdesc">Brand authority and AI visibility consulting for founders, CMOs, and executives who need to be found for the right reasons.</p>
         <nav class="fsocials" aria-label="Social media">
