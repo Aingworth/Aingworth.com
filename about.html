@@ -269,6 +269,82 @@ a { color:inherit; text-decoration:none; }
 .conv-title { font-size:16px; font-weight:500; color:var(--charcoal); margin-bottom:8px; }
 .conv-text { font-size:15px; color:var(--muted-light); line-height:1.72; }
 
+/* Skills grid */
+.skills-wrap {
+  border: 1px solid rgba(255,255,255,.07);
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: rgba(255,255,255,.07);
+}
+.skill-card {
+  background: #f0f0ee;
+  padding: 28px 26px;
+  position: relative;
+  transition: background .2s var(--ease), border-top-color .2s;
+  border-top: 3px solid transparent;
+}
+.skill-card:hover { background: #f7f7f5; border-top-color: var(--teal); }
+.skill-num {
+  font-family: var(--serif);
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--teal);
+  opacity: .5;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.skill-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.skill-desc {
+  font-size: 13px;
+  color: var(--muted-light);
+  line-height: 1.68;
+}
+.skill-card-dark {
+  background: #f0f0ee;
+}
+.skill-card-dark:hover { background: #f7f7f5; border-top-color: var(--teal); }
+
+/* Read more button */
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--teal-light);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color .2s, gap .2s;
+}
+.read-more-btn:hover { color: var(--teal); gap: 12px; }
+.rmb-icon { transition: transform .3s var(--ease); flex-shrink: 0; }
+.read-more-btn[aria-expanded="true"] .rmb-icon { transform: rotate(180deg); }
+.story-expand p + p { margin-top: 16px; }
+.story-expand { animation: fadeIn .35s var(--ease); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.skills-last-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: rgba(255,255,255,.07);
+  margin-top: 2px;
+}
+
 /* =============================================
    CONNECT
 ============================================= */
@@ -343,12 +419,15 @@ a { color:inherit; text-decoration:none; }
   .hero-content { padding-bottom:60px; }
   .story-inner { grid-template-columns:1fr; gap:48px; }
   .story-pull { position:static; }
-  .connect-inner { grid-template-columns:1fr; gap:48px; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .skills-last-row { grid-template-columns: 1fr; }
   .fgrid { grid-template-columns:1fr 1fr; gap:32px; }
   .nav-menu { display:none; }
   .nav-burger { display:flex; }
 }
 @media (max-width: 600px) {
+  .skills-grid { grid-template-columns: 1fr; }
+  .skills-last-row { grid-template-columns: 1fr; }
   .fgrid { grid-template-columns:1fr; }
   .cred-strip { flex-wrap:wrap; }
   .cred-item:nth-child(2) { border-right:1px solid var(--border-dark); }
@@ -454,10 +533,19 @@ a { color:inherit; text-decoration:none; }
     <div class="anim d1">
       <div class="story-body-text">
         <p>I started my career in digital marketing before it had the weight it carries now. Back when SEO was still treated as a technical afterthought, when paid media was mostly guesswork dressed up as strategy, and when brand authority meant having a decent logo and a thick press kit.</p>
-        <p>Over the years I built growth systems for businesses across the UK, USA, Europe, South Africa, Australia, and Asia. Legal firms trying to compete online without compromising their professionalism. Healthcare and medical education businesses navigating compliance and visibility at the same time. Luxury travel brands that needed to justify their price point in search before a customer even clicked. Retail businesses scaling paid media past the point where the numbers stopped making intuitive sense. B2B SaaS companies trying to explain complex products to buyers who already thought they knew what they needed.</p>
-        <p>Each client taught me something the previous one had not. The work was never the same twice, which was the point. Generic strategy produces generic results. I was never interested in generic results.</p>
-        <p>What I kept seeing, across every market and industry, was the same gap: the best brands were not always the ones getting found. The loudest, the most optimized, the ones with the biggest budgets, yes. But the best? Not consistently. That gap frustrated me for years before I understood it well enough to name it and build a practice around closing it.</p>
-        <p>Aingworth is the result of that. A consulting practice built on a decade of real work, in real markets, with real clients whose results I can point to. Not a theory. A track record.</p>
+        <p>Over the years I built growth systems for businesses across the UK, USA, Europe, South Africa, Australia, and Asia. Legal firms trying to compete online without compromising their professionalism.</p>
+
+        <div class="story-expand" id="story-more" aria-hidden="true" style="display:none;">
+          <p>Healthcare and medical education businesses navigating compliance and visibility at the same time. Luxury travel brands that needed to justify their price point in search before a customer even clicked. Retail businesses scaling paid media past the point where the numbers stopped making intuitive sense. B2B SaaS companies trying to explain complex products to buyers who already thought they knew what they needed.</p>
+          <p>Each client taught me something the previous one had not. The work was never the same twice, which was the point. Generic strategy produces generic results. I was never interested in generic results.</p>
+          <p>What I kept seeing, across every market and industry, was the same gap: the best brands were not always the ones getting found. The loudest, the most optimized, the ones with the biggest budgets, yes. But the best? Not consistently. That gap frustrated me for years before I understood it well enough to name it and build a practice around closing it.</p>
+          <p>Aingworth is the result of that. A consulting practice built on a decade of real work, in real markets, with real clients whose results I can point to. Not a theory. A track record.</p>
+        </div>
+
+        <button class="read-more-btn" id="story-toggle" onclick="toggleStory()" aria-expanded="false" aria-controls="story-more">
+          <span class="rmb-text">Read more</span>
+          <svg class="rmb-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
     </div>
 
@@ -465,111 +553,92 @@ a { color:inherit; text-decoration:none; }
 </section>
 
 <!-- SKILLS -->
-<section class="conv-sec" aria-labelledby="skills-h">
+<section class="conv-sec" style="background:var(--charcoal);" aria-labelledby="skills-h">
   <div class="conv-inner">
     <div class="conv-head anim">
       <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Skills and Expertise</span></div>
-      <h2 id="skills-h">What I actually know how to do.</h2>
-      <p>Not a list of buzzwords. These are the areas where I have done the work long enough and deeply enough to have an honest opinion about what works and what does not.</p>
+      <h2 id="skills-h" style="color:var(--seasalt);">A decade of depth across the full system.</h2>
+      <p style="color:var(--muted-dark);">Not a generalist who learned everything at surface level. These are the disciplines where the work has been real, sustained, and measurable.</p>
     </div>
-    <div class="conv-list" role="list">
 
-      <div class="conv-item anim" role="listitem">
-        <div class="conv-n" aria-hidden="true">01</div>
-        <div class="conv-body">
-          <div class="conv-title">AI Visibility and Authority Strategy</div>
-          <p class="conv-text">Building the structural brand signals that AI search systems use to form confident answers. Entity clarity, credibility architecture, earned authority ecosystems, AI citation analysis. This is the core of everything at Aingworth and the subject of the book.</p>
+    <div class="skills-wrap">
+      <div class="skills-grid" role="list">
+        <div class="skill-card anim" role="listitem">
+          <div class="skill-num" aria-hidden="true">01</div>
+          <div class="skill-name">AI Visibility and Authority Strategy</div>
+          <p class="skill-desc">Building the structural brand signals that AI systems use to decide who to cite. Entity clarity, credibility architecture, earned authority, and AI citation analysis across ChatGPT, Perplexity, and Google AI.</p>
+        </div>
+        <div class="skill-card anim d1" role="listitem">
+          <div class="skill-num" aria-hidden="true">02</div>
+          <div class="skill-name">Search Engine Optimisation</div>
+          <p class="skill-desc">Technical SEO, content strategy, information architecture, link building, site migrations, and organic growth systems. Across enterprises, startups, and everything in between.</p>
+        </div>
+        <div class="skill-card anim d2" role="listitem">
+          <div class="skill-num" aria-hidden="true">03</div>
+          <div class="skill-name">Conversion Rate Optimisation</div>
+          <p class="skill-desc">A/B testing, user journey analysis, landing page design, and form optimisation. Getting traffic to convert is a different discipline from getting traffic.</p>
+        </div>
+        <div class="skill-card anim" role="listitem">
+          <div class="skill-num" aria-hidden="true">04</div>
+          <div class="skill-name">Paid Media Strategy</div>
+          <p class="skill-desc">Google Ads, Meta, LinkedIn, and programmatic. Campaign architecture, audience strategy, attribution modelling, and the honest conversation about what paid media can and cannot do.</p>
+        </div>
+        <div class="skill-card anim d1" role="listitem">
+          <div class="skill-num" aria-hidden="true">05</div>
+          <div class="skill-name">Analytics and Data Strategy</div>
+          <p class="skill-desc">GA4, Google Tag Manager, Search Console, and Looker Studio. Building measurement systems that actually inform decisions rather than produce reports nobody reads.</p>
+        </div>
+        <div class="skill-card anim d2" role="listitem">
+          <div class="skill-num" aria-hidden="true">06</div>
+          <div class="skill-name">Brand Positioning and Messaging</div>
+          <p class="skill-desc">Helping founders and leadership teams get specific about what they stand for and who they are for. The work that makes everything else more effective.</p>
         </div>
       </div>
-
-      <div class="conv-item anim d1" role="listitem">
-        <div class="conv-n" aria-hidden="true">02</div>
-        <div class="conv-body">
-          <div class="conv-title">Search Engine Optimisation</div>
-          <p class="conv-text">Technical SEO, content strategy, information architecture, link building strategy, site migrations, Core Web Vitals, and organic growth systems built to compound over time rather than require constant maintenance. I have done this for enterprises, startups, and everything in between, across platforms including WordPress, Shopify, and custom stacks.</p>
+      <div class="skills-last-row" role="list">
+        <div class="skill-card skill-card-dark anim d1" role="listitem">
+          <div class="skill-num" aria-hidden="true">07</div>
+          <div class="skill-name">Digital Strategy and Growth Advisory</div>
+          <p class="skill-desc">Channel strategy, budget planning, team structure, and the sequencing decisions that determine whether a growth programme compounds or burns money.</p>
+        </div>
+        <div class="skill-card skill-card-dark anim d2" role="listitem">
+          <div class="skill-num" aria-hidden="true">08</div>
+          <div class="skill-name">Training, Facilitation, and Speaking</div>
+          <p class="skill-desc">Workshops, team training, and keynote speaking on AI visibility, digital strategy, and growth leadership. Delivered across multiple countries, in person and virtually.</p>
         </div>
       </div>
-
-      <div class="conv-item anim" role="listitem">
-        <div class="conv-n" aria-hidden="true">03</div>
-        <div class="conv-body">
-          <div class="conv-title">Conversion Rate Optimisation</div>
-          <p class="conv-text">A/B testing, multivariate testing, user journey analysis, heatmapping, form optimisation, landing page design, and the thinking behind all of it. Getting traffic to convert is a different discipline from getting traffic. I have run hundreds of tests and the most important lesson is that the hypothesis matters more than the tool.</p>
-        </div>
-      </div>
-
-      <div class="conv-item anim d1" role="listitem">
-        <div class="conv-n" aria-hidden="true">04</div>
-        <div class="conv-body">
-          <div class="conv-title">Paid Media Strategy</div>
-          <p class="conv-text">Google Ads, Meta, LinkedIn, and programmatic. Campaign architecture, audience strategy, attribution modelling, budget allocation, and the often-uncomfortable conversation about what paid media can and cannot do for a brand without an organic foundation underneath it.</p>
-        </div>
-      </div>
-
-      <div class="conv-item anim" role="listitem">
-        <div class="conv-n" aria-hidden="true">05</div>
-        <div class="conv-body">
-          <div class="conv-title">Analytics and Data Strategy</div>
-          <p class="conv-text">GA4, Google Tag Manager, Google Search Console, Looker Studio, and custom reporting. Building measurement systems that actually inform decisions rather than produce reports nobody reads. Data is only useful if it changes what you do next.</p>
-        </div>
-      </div>
-
-      <div class="conv-item anim d1" role="listitem">
-        <div class="conv-n" aria-hidden="true">06</div>
-        <div class="conv-body">
-          <div class="conv-title">Brand Positioning and Messaging</div>
-          <p class="conv-text">Helping founders and leadership teams get specific about what they stand for, who they are for, and how to express that consistently across every channel. This is the work that makes everything else more effective. Most businesses skip it and then wonder why their marketing does not compound.</p>
-        </div>
-      </div>
-
-      <div class="conv-item anim" role="listitem">
-        <div class="conv-n" aria-hidden="true">07</div>
-        <div class="conv-body">
-          <div class="conv-title">Digital Strategy and Growth Advisory</div>
-          <p class="conv-text">Channel strategy, budget planning, team structure, vendor selection, and the sequencing decisions that determine whether a growth programme works or burns money. I have sat in rooms where large budgets were being allocated to the wrong things, and I have sat in rooms where small budgets produced outsized results because the thinking was right.</p>
-        </div>
-      </div>
-
-      <div class="conv-item anim d1" role="listitem">
-        <div class="conv-n" aria-hidden="true">08</div>
-        <div class="conv-body">
-          <div class="conv-title">Training, Facilitation, and Capability Building</div>
-          <p class="conv-text">Workshops, team training, and keynote speaking on AI visibility, digital strategy, brand authority, and growth leadership. I have designed and delivered programmes for marketing teams, leadership groups, and conferences across multiple countries. The goal is always the same: leave people more capable than they were before, not more dependent on me.</p>
-        </div>
-      </div>
-
     </div>
+
   </div>
 </section>
 
-<!-- WHAT I BELIEVE -->
+<!-- WHAT DRIVES THIS -->
 <section class="conv-sec" style="background:#fff; border-top:1px solid var(--border-light);" aria-labelledby="conv-h">
   <div class="conv-inner">
     <div class="conv-head anim">
-      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">What I Believe</span></div>
-      <h2 id="conv-h">A few things I will not negotiate on.</h2>
-      <p>These are not aspirational values. They show up in every conversation and every piece of work.</p>
+      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">What Drives This</span></div>
+      <h2 id="conv-h">Three things that show up in every engagement.</h2>
+      <p>Not values written for a website. Convictions that shape every conversation, every recommendation, and every decision about what Aingworth does and does not do.</p>
     </div>
     <div class="conv-list" role="list">
       <div class="conv-item anim" role="listitem">
         <div class="conv-n" aria-hidden="true">01</div>
         <div class="conv-body">
-          <div class="conv-title">Honest advice before flattering advice.</div>
-          <p class="conv-text">If your strategy has a problem, I will tell you. If the brief is wrong, I will say so. I am not trying to win engagements by agreeing with everything. I am trying to produce results that actually hold up. Those two things are sometimes in tension and I always choose the second one.</p>
+          <div class="conv-title">The right brands deserve to be found.</div>
+          <p class="conv-text">There is a structural unfairness in how visibility works - where loudness and optimization have historically outperformed depth and genuine expertise. The shift to AI-mediated discovery is, in some ways, a correction. Aingworth exists to help the organizations ready to build that way.</p>
         </div>
       </div>
       <div class="conv-item anim d1" role="listitem">
         <div class="conv-n" aria-hidden="true">02</div>
         <div class="conv-body">
-          <div class="conv-title">Clarity is not a nice-to-have. It is the work.</div>
-          <p class="conv-text">Ambiguous positioning produces ambiguous results. Before anything gets built or spent, I need to know exactly what a business stands for, who it is for, and why that matters. Most of the problems I am brought in to fix trace back to a lack of clarity at the foundation.</p>
+          <div class="conv-title">Growth should support people, not pressure them.</div>
+          <p class="conv-text">Clarity reduces pressure. Structure creates freedom. That is not a compromise on ambition. It is how ambition becomes durable. Every system I design is built with the people running it in mind, not just the metrics it produces.</p>
         </div>
       </div>
       <div class="conv-item anim d2" role="listitem">
         <div class="conv-n" aria-hidden="true">03</div>
         <div class="conv-body">
-          <div class="conv-title">The goal is capability, not dependency.</div>
-          <p class="conv-text">I am not trying to make myself indispensable. I want every client to understand the strategy well enough to own it, challenge it, and evolve it without me. The engagements I am most proud of are the ones where the client ended up needing me less, not more.</p>
+          <div class="conv-title">Building this alongside you, not ahead of you.</div>
+          <p class="conv-text">Aingworth is being built in real time, using exactly the methods it recommends. When I tell you the framework works, I am saying it from inside the implementation. Not from a distance. Not from a finished product. From here, right now, doing the same work I am asking you to do.</p>
         </div>
       </div>
     </div>
@@ -577,53 +646,6 @@ a { color:inherit; text-decoration:none; }
 </section>
 
 <!-- CONNECT -->
-<section class="connect-sec" aria-labelledby="connect-h">
-  <div class="connect-inner">
-    <div class="connect-head anim">
-      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Connect</span></div>
-      <h2 id="connect-h">Follow the work<br>as it happens.</h2>
-      <p>The LinkedIn newsletter covers the recognition economy, AI search, and brand authority every week. No fluff. If it is not useful it does not go out.</p>
-    </div>
-    <div class="connect-links anim d1">
-      <a href="https://www.linkedin.com/in/lisinda-lucy/" target="_blank" rel="noopener" class="connect-link" aria-label="Follow Lucy on LinkedIn">
-        <div class="cl-left">
-          <span class="cl-name">LinkedIn &amp; Newsletter</span>
-          <span class="cl-desc">Weekly thinking on AI search and brand authority</span>
-        </div>
-        <span class="cl-arr" aria-hidden="true"></span>
-      </a>
-      <a href="https://www.youtube.com/@aingworth" target="_blank" rel="noopener" class="connect-link" aria-label="Watch on YouTube">
-        <div class="cl-left">
-          <span class="cl-name">YouTube</span>
-          <span class="cl-desc">Video content and framework explainers</span>
-        </div>
-        <span class="cl-arr" aria-hidden="true"></span>
-      </a>
-      <a href="https://www.instagram.com/aingworth" target="_blank" rel="noopener" class="connect-link" aria-label="Follow on Instagram">
-        <div class="cl-left">
-          <span class="cl-name">Instagram</span>
-          <span class="cl-desc">Behind the build and short-form content</span>
-        </div>
-        <span class="cl-arr" aria-hidden="true"></span>
-      </a>
-      <a href="https://www.tiktok.com/@aingworth" target="_blank" rel="noopener" class="connect-link" aria-label="Follow on TikTok">
-        <div class="cl-left">
-          <span class="cl-name">TikTok</span>
-          <span class="cl-desc">Short-form takes on AI search and recognition</span>
-        </div>
-        <span class="cl-arr" aria-hidden="true"></span>
-      </a>
-      <a href="mailto:info@aingworth.com" class="connect-link" aria-label="Email Lucy">
-        <div class="cl-left">
-          <span class="cl-name">Email</span>
-          <span class="cl-desc">info@aingworth.com - always read personally</span>
-        </div>
-        <span class="cl-arr" aria-hidden="true"></span>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- CTA -->
 <section class="cta-banner" aria-labelledby="cta-h">
   <div class="cta-banner-inner">
@@ -689,6 +711,23 @@ a { color:inherit; text-decoration:none; }
 </footer>
 
 <script>
+function toggleStory() {
+  var more = document.getElementById('story-more');
+  var btn = document.getElementById('story-toggle');
+  var expanded = btn.getAttribute('aria-expanded') === 'true';
+  if (expanded) {
+    more.style.display = 'none';
+    more.setAttribute('aria-hidden', 'true');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.querySelector('.rmb-text').textContent = 'Read more';
+  } else {
+    more.style.display = 'block';
+    more.setAttribute('aria-hidden', 'false');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.querySelector('.rmb-text').textContent = 'Read less';
+  }
+}
+
 var burger = document.querySelector('.nav-burger');
 var drawer = document.getElementById('ndrawer');
 burger.addEventListener('click', function() {
