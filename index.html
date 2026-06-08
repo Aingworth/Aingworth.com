@@ -173,9 +173,9 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 80px;
-  align-items: flex-end;
+  grid-template-columns: 1fr 480px;
+  gap: 60px;
+  align-items: center;
   position: relative;
   z-index: 1;
   padding-bottom: 0;
@@ -192,8 +192,8 @@ a { color: inherit; text-decoration: none; }
 
 /* Portrait */
 .hero-portrait { position: relative; align-self: center; }
-.portrait-frame { width: 100%; background: transparent; overflow: hidden; position: relative; }
-.portrait-frame img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.portrait-frame { width: 100%; background: transparent; position: relative; }
+.portrait-frame img { width: 100%; height: auto; display: block; }
 .portrait-frame::after { display: none; }
 .portrait-caption { position: absolute; bottom: 20px; left: 20px; font-family: var(--mono); font-size: 10px; color: rgba(107,191,176,.5); letter-spacing: .12em; text-transform: uppercase; }
 
@@ -359,7 +359,7 @@ a { color: inherit; text-decoration: none; }
 <header role="banner">
   <nav class="nav" aria-label="Primary navigation">
     <a href="index.html" class="nav-logo" aria-label="Aingworth home">
-      <img src="images/Aingworth_Main_Logo.png" alt="Aingworth" style="height:44px;width:auto;max-width:220px;filter:brightness(0) invert(1);display:block;">
+      <img src="images/Aingworth_Main_Logo_White.png" alt="Aingworth" style="height:40px;width:auto;display:block;">
     </a>
     <ul class="nav-menu" role="list">
       <li><a href="services.html">Work With Me</a></li>
@@ -414,12 +414,12 @@ a { color: inherit; text-decoration: none; }
     </div>
 
     <div class="hero-portrait" aria-hidden="false">
-      <div class="portrait-frame" style="aspect-ratio:4/3; background:transparent;">
+      <div class="portrait-frame" style="aspect-ratio:4/3; background:transparent; overflow:visible;">
         <img
-          src="images/The_recognition_triangle.png"
-          alt="The Recognition Triangle - Earned Authority, Clarity and Credibility with Recognition at the centre"
+          src="images/Recognition_Trianlge.png"
+          alt="The Recognition Triangle showing Earned Authority, Clarity and Credibility with Recognition at the centre"
           loading="eager"
-          style="width:100%; height:100%; object-fit:contain; object-position:center; filter:none;"
+          style="width:100%; height:auto; display:block; object-fit:contain; filter:none;"
         >
       </div>
     </div>
@@ -565,10 +565,10 @@ a { color: inherit; text-decoration: none; }
     <div class="diag-panel anim d2">
       <div class="triangle-vis">
         <img
-          src="images/6_Recognition_Triangle_Patterns.png"
+          src="images/6_Recognition_Traingle_Patterns.png"
           alt="The six Recognition Triangle patterns: Promising Claim, Hidden Expert, Validated Generalist, Strong Foundation, Recognized Authority, and Decaying Authority"
           loading="lazy"
-          style="width:100%; display:block; border-radius:2px;"
+          style="width:100%; height:auto; display:block;"
         >
       </div>
       <p class="diag-panel-label">The Recognition Triangle</p>
