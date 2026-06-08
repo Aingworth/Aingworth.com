@@ -140,16 +140,15 @@ a { color:inherit; text-decoration:none; }
 /* Triangle intro graphic */
 .intro-triangle {
   display: flex;
-  align-items: center;
-  gap: 32px;
+  flex-direction: column;
+  align-items: stretch;
   padding: 28px 32px;
   background: rgba(255,255,255,.03);
   border: 1px solid var(--border-dark);
   margin-bottom: 40px;
-  flex-wrap: wrap;
 }
 .tri-mini { flex-shrink: 0; }
-.tri-dims { display:flex; flex-direction:column; gap:8px; }
+.tri-dims { display:flex; flex-direction:column; gap:10px; width:100%; margin-top:4px; }
 .tri-dim { display:flex; align-items:center; gap:10px; font-size:14px; color:var(--muted-dark); line-height:1.4; }
 .tri-dim-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
 .tri-dim-dot.clarity { background:var(--teal-light); }
@@ -464,7 +463,7 @@ a { color:inherit; text-decoration:none; }
 <header role="banner">
   <nav class="nav" aria-label="Primary navigation">
     <a href="index.html" aria-label="Aingworth home">
-      <img src="images/Aingworth_graphic_logo.png" alt="Aingworth" height="32" style="height:32px;width:auto;filter:brightness(0) invert(1)"><span class="nav-logo-text" style="display:none">Aingworth</span>
+      <img src="images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth" style="width:200px;height:auto;display:block;filter:brightness(100) contrast(2);">
     </a>
     <a href="index.html" class="nav-back" aria-label="Back to home">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 3L5 7l4 4"/></svg>
@@ -502,18 +501,17 @@ a { color:inherit; text-decoration:none; }
     </div>
 
     <div class="intro-triangle" aria-label="The three dimensions you will be assessed on">
-      <div class="tri-mini" aria-hidden="true">
-        <svg width="100" height="90" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="50,6 94,82 6,82" stroke="rgba(107,191,176,0.3)" stroke-width="1.5" fill="rgba(107,191,176,0.04)"/>
-          <circle cx="50" cy="6" r="3" fill="var(--teal-light)" opacity="0.7"/>
-          <circle cx="94" cy="82" r="3" fill="var(--lavender)" opacity="0.7"/>
-          <circle cx="6" cy="82" r="3" fill="rgba(226,226,226,0.5)"/>
-        </svg>
+      <div class="tri-mini" style="width:100%; max-width:280px; margin:0 auto 28px;">
+        <img
+          src="images/Recognition_Diagnostic.png"
+          alt="The Recognition Triangle"
+          style="width:100%; height:auto; display:block;"
+        >
       </div>
       <div class="tri-dims">
-        <div class="tri-dim"><span class="tri-dim-dot clarity" aria-hidden="true"></span><span><strong>Clarity</strong> - how clearly your brand communicates what you stand for</span></div>
-        <div class="tri-dim"><span class="tri-dim-dot credibility" aria-hidden="true"></span><span><strong>Credibility</strong> - the external signals that verify your expertise</span></div>
-        <div class="tri-dim"><span class="tri-dim-dot authority" aria-hidden="true"></span><span><strong>Earned Authority</strong> - the independent ecosystem validation that makes you impossible to overlook</span></div>
+        <div class="tri-dim"><span class="tri-dim-dot clarity" aria-hidden="true"></span><span><strong>Clarity:</strong> how clearly your brand communicates what you stand for</span></div>
+        <div class="tri-dim"><span class="tri-dim-dot credibility" aria-hidden="true"></span><span><strong>Credibility:</strong> the external signals that verify your expertise</span></div>
+        <div class="tri-dim"><span class="tri-dim-dot authority" aria-hidden="true"></span><span><strong>Earned Authority:</strong> the independent ecosystem validation that makes you impossible to overlook</span></div>
       </div>
     </div>
 
