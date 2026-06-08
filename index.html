@@ -91,7 +91,7 @@ a { color: inherit; text-decoration: none; }
   transition: background .3s var(--ease);
 }
 .nav-logo { display: flex; align-items: center; height: 68px; }
-.nav-logo img { height: 60px; width: auto; display: block; }
+.nav-logo img { width: 200px; height: auto; display: block; }
 .nav-logo-text { display: none; }
 .nav-menu { display: flex; align-items: center; gap: 2px; list-style: none; }
 .nav-menu a { display: block; padding: 7px 12px; color: rgba(250,250,250,.6); font-size: 13px; font-weight: 400; letter-spacing: .06em; text-transform: uppercase; transition: color .2s; }
@@ -137,9 +137,10 @@ a { color: inherit; text-decoration: none; }
 /* HERO */
 .hero {
   background: var(--charcoal);
-  padding: 120px var(--px) 80px;
+  padding: 100px var(--px) 0;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 .hero::before {
   content: '';
@@ -170,25 +171,37 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+  grid-template-columns: 500px 1fr;
+  gap: 0;
+  align-items: start;
   position: relative;
   z-index: 1;
-  padding-bottom: 0;
 }
-.hero-content { padding-bottom: 80px; }
+.hero-content { padding: 40px 0 80px; }
 .hero-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
 .hero-eyebrow-rule { width: 32px; height: 1px; background: var(--teal-light); }
 .hero-eyebrow-label { font-family: var(--mono); font-size: 11px; color: var(--teal-light); letter-spacing: .16em; text-transform: uppercase; }
 .hero h1 { font-family: var(--serif); font-size: clamp(48px, 5.5vw, 82px); font-weight: 500; line-height: 1.04; color: var(--seasalt); letter-spacing: -.015em; margin-bottom: 10px; }
 .hero h1 em { font-style: italic; color: var(--teal-light); }
-.hero-sub { font-family: var(--serif); font-size: clamp(18px, 1.9vw, 24px); font-style: italic; color: rgba(250,250,250,.5); line-height: 1.5; margin-bottom: 40px; max-width: 520px; }
+.hero-sub { font-family: var(--serif); font-size: clamp(18px, 1.9vw, 24px); font-style: italic; color: rgba(250,250,250,.5); line-height: 1.5; margin-bottom: 40px; max-width: 420px; }
 .hero-sub strong { font-style: normal; font-weight: 500; color: rgba(250,250,250,.75); }
 .hero-ctas { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 
+/* Portrait - triangle fills the right column completely */
+.hero-portrait {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+.hero-portrait img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: none;
+}
+
 /* Portrait */
-.hero-portrait { position: relative; align-self: center; }
 .portrait-frame { width: 100%; background: transparent; position: relative; }
 .portrait-frame img { width: 100%; height: auto; display: block; }
 .portrait-frame::after { display: none; }
@@ -356,7 +369,7 @@ a { color: inherit; text-decoration: none; }
 <header role="banner">
   <nav class="nav" aria-label="Primary navigation">
     <a href="index.html" class="nav-logo" aria-label="Aingworth home">
-      <img src="images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth" style="height:60px;width:auto;display:block;filter:brightness(100) contrast(2);">
+      <img src="images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth" style="width:200px;height:auto;display:block;filter:brightness(100) contrast(2);">
     </a>
     <ul class="nav-menu" role="list">
       <li><a href="services.html">Work With Me</a></li>
@@ -415,7 +428,6 @@ a { color: inherit; text-decoration: none; }
         src="images/Recognition_Trianlge.png"
         alt="The Recognition Triangle"
         loading="eager"
-        style="width:100%; height:auto; display:block; min-width:480px;"
       >
     </div>
 
