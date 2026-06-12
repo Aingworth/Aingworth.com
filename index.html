@@ -299,9 +299,11 @@ a { color: inherit; text-decoration: none; }
 .pd-s { fill: var(--teal-light); }
 .pd-w { fill: rgba(107,191,176,.28); }
 .pd-m { fill: rgba(226,226,226,.1); }
-.pd-f { fill: var(--teal-light); animation: fadePulse 2.2s ease-in-out infinite; }
-@keyframes fadePulse { 0%, 100% { opacity: .75; } 50% { opacity: .12; } }
-@media (prefers-reduced-motion: reduce) { .pd-f { animation: none; opacity: .4; } }
+.pd-f { fill: var(--teal-light); animation: fadePulse 2.6s ease-in-out infinite; }
+.pd-core { fill: var(--seasalt); }
+.pd-cf { fill: rgba(250,250,250,.55); animation: fadePulse 2.6s ease-in-out infinite; }
+@keyframes fadePulse { 0%, 100% { opacity: .7; } 50% { opacity: .15; } }
+@media (prefers-reduced-motion: reduce) { .pd-f, .pd-cf { animation: none; opacity: .4; } }
 .pat-cell-name { font-family: var(--mono); font-size: 9px; letter-spacing: .07em; text-transform: uppercase; color: rgba(226,226,226,.5); line-height: 1.4; transition: color .25s; }
 .pat-cell.active .pat-cell-name, .pat-cell:hover .pat-cell-name { color: var(--teal-light); }
 .pat-detail { border-top: 1px solid rgba(250,250,250,.08); padding-top: 14px; margin-bottom: 24px; min-height: 62px; }
@@ -351,7 +353,9 @@ a { color: inherit; text-decoration: none; }
 /* FOOTER */
 .footer { background: var(--charcoal); padding: 72px var(--px) 36px; border-top: 1px solid var(--border-dark); }
 .footer-inner { max-width: var(--max-w); margin: 0 auto; }
-.fgrid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
+.fgrid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.fmail { display: inline-block; font-family: var(--mono); font-size: 12px; letter-spacing: .04em; color: var(--teal-light); margin-bottom: 20px; transition: color .2s; }
+.fmail:hover { color: var(--teal); }
 .fbrand { display: flex; align-items: center; margin-bottom: 18px; }
 .fbrand img { height: 40px; width: auto; }
 .fdesc { font-size: 14px; line-height: 1.7; color: var(--mid-grey); margin-bottom: 24px; max-width: 300px; }
@@ -832,6 +836,7 @@ a { color: inherit; text-decoration: none; }
       <div>
         <img src="images/Aingworth_Main_Logo2.png.png" alt="Aingworth" style="width:56px;height:auto;display:block;filter:brightness(100) contrast(2);margin-bottom:18px;">
         <p class="fdesc">Brand authority and AI visibility consulting for founders, CMOs, and executives who need to be found for the right reasons.</p>
+        <a href="mailto:info@aingworth.com" class="fmail">info@aingworth.com</a>
         <nav class="fsocials" aria-label="Social media">
           <a href="https://www.linkedin.com/in/lisinda-lucy/" class="fsoc" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
           <a href="https://www.instagram.com/lucy_aingworth/" class="fsoc" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
@@ -844,30 +849,18 @@ a { color: inherit; text-decoration: none; }
       <div class="fcol">
         <p class="fcol-h">Work</p>
         <ul>
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="services.html#consulting">AI Visibility Consulting</a></li>
-          <li><a href="services.html#workshop">Brand Workshop</a></li>
-          <li><a href="services.html#coaching">Coaching</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="her-worth.html">HER-Worth</a></li>
           <li><a href="diagnostic.html">Free Diagnostic</a></li>
         </ul>
       </div>
       <div class="fcol">
-        <p class="fcol-h">Resources</p>
+        <p class="fcol-h">Explore</p>
         <ul>
           <li><a href="book.html">The Book</a></li>
-          <li><a href="https://www.amazon.com/Become-Answer-Brands-Build-Authority/dp/B0H14GDQMH" target="_blank" rel="noopener">Buy on Amazon</a></li>
           <li><a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener">The Authority Signal</a></li>
-        </ul>
-      </div>
-      <div class="fcol">
-        <p class="fcol-h">Company</p>
-        <ul>
-          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Lucy</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Use</a></li>
         </ul>
       </div>
     </div>
