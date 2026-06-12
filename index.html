@@ -719,27 +719,27 @@ a { color: inherit; text-decoration: none; }
       <h3 class="diag-panel-title">Where does your brand sit?</h3>
       <div class="pat-grid" id="patgrid" role="tablist" aria-label="The six Recognition Triangle patterns">
         <button type="button" class="pat-cell" data-i="0">
-          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-m" cx="30" cy="5" r="4"/><circle class="pd pd-s" cx="5" cy="47" r="4"/><circle class="pd pd-w" cx="55" cy="47" r="4"/></svg>
+          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-m" cx="30" cy="5" r="4"/><circle class="pd pd-s" cx="5" cy="47" r="4"/><circle class="pd pd-m" cx="55" cy="47" r="4"/></svg>
           <span class="pat-cell-name">Promising<br>Claim</span>
         </button>
         <button type="button" class="pat-cell" data-i="1">
-          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-m" cx="30" cy="5" r="4"/><circle class="pd pd-w" cx="5" cy="47" r="4"/><circle class="pd pd-s" cx="55" cy="47" r="4"/></svg>
+          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-s" cx="30" cy="5" r="4"/><circle class="pd pd-m" cx="5" cy="47" r="4"/><circle class="pd pd-m" cx="55" cy="47" r="4"/></svg>
           <span class="pat-cell-name">Hidden<br>Expert</span>
         </button>
         <button type="button" class="pat-cell" data-i="2">
-          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-s" cx="30" cy="5" r="4"/><circle class="pd pd-w" cx="5" cy="47" r="4"/><circle class="pd pd-s" cx="55" cy="47" r="4"/></svg>
+          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-s" cx="30" cy="5" r="4"/><circle class="pd pd-m" cx="5" cy="47" r="4"/><circle class="pd pd-m" cx="55" cy="47" r="4"/></svg>
           <span class="pat-cell-name">Validated<br>Generalist</span>
         </button>
         <button type="button" class="pat-cell" data-i="3">
-          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-w" cx="30" cy="5" r="4"/><circle class="pd pd-s" cx="5" cy="47" r="4"/><circle class="pd pd-s" cx="55" cy="47" r="4"/></svg>
+          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-m" cx="30" cy="5" r="4"/><circle class="pd pd-s" cx="5" cy="47" r="4"/><circle class="pd pd-s" cx="55" cy="47" r="4"/></svg>
           <span class="pat-cell-name">Strong<br>Foundation</span>
         </button>
         <button type="button" class="pat-cell" data-i="4">
-          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-s" cx="30" cy="5" r="4"/><circle class="pd pd-s" cx="5" cy="47" r="4"/><circle class="pd pd-s" cx="55" cy="47" r="4"/></svg>
+          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-s" cx="30" cy="5" r="4"/><circle class="pd pd-s" cx="5" cy="47" r="4"/><circle class="pd pd-s" cx="55" cy="47" r="4"/><circle class="pd pd-core" cx="30" cy="33" r="3.5"/></svg>
           <span class="pat-cell-name">Recognized<br>Authority</span>
         </button>
         <button type="button" class="pat-cell" data-i="5">
-          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-f" cx="30" cy="5" r="4"/><circle class="pd pd-w" cx="5" cy="47" r="4"/><circle class="pd pd-w" cx="55" cy="47" r="4"/></svg>
+          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-f" cx="30" cy="5" r="4"/><circle class="pd pd-f" cx="5" cy="47" r="4"/><circle class="pd pd-f" cx="55" cy="47" r="4"/><circle class="pd pd-cf" cx="30" cy="33" r="3.5"/></svg>
           <span class="pat-cell-name">Decaying<br>Authority</span>
         </button>
       </div>
@@ -1011,12 +1011,12 @@ window.addEventListener('scroll', function() {
   var descEl = document.getElementById('patdesc');
   var cells = grid.querySelectorAll('.pat-cell');
   var PATTERNS = [
-    { name: 'Promising Claim', desc: 'A clear claim, not yet proven or recognised.' },
-    { name: 'Hidden Expert', desc: 'Deep proof and expertise the market cannot yet see.' },
-    { name: 'Validated Generalist', desc: 'Trusted and recognised, but not for one clear thing.' },
-    { name: 'Strong Foundation', desc: 'Clear and credible. Earned recognition is the next step.' },
-    { name: 'Recognized Authority', desc: 'All three conditions hold. You are the answer.' },
-    { name: 'Decaying Authority', desc: 'Recognition built once, now quietly eroding.' }
+    { name: 'Promising Claim', desc: 'Strong clarity. Weak credibility and earned authority.' },
+    { name: 'Hidden Expert', desc: 'Strong credibility. Weak clarity and earned authority.' },
+    { name: 'Validated Generalist', desc: 'Some earned authority. Weak clarity and credibility.' },
+    { name: 'Strong Foundation', desc: 'Strong clarity and credibility, weak earned authority. The most common pattern.' },
+    { name: 'Recognized Authority', desc: 'All three corners strong and aligned. Recognition forms. The destination.' },
+    { name: 'Decaying Authority', desc: 'All three corners weakening over time from neglect. Requires renewal.' }
   ];
   var current = 4, cycleTimer = null, paused = false;
 
