@@ -3,264 +3,323 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Work With Me - Aingworth</title>
-<meta name="description" content="AI visibility audits, authority strategy consulting, brand clarity workshops, one-to-one coaching, and keynote speaking.">
+<title>Work With Me - Aingworth | AI Visibility Consulting, Strategy, Workshops, Coaching</title>
+<meta name="description" content="Work with Lucy Aingworth: AI Visibility Audits, Authority Strategy Consulting, Brand Clarity Workshops, One-to-One Coaching, Speaking and HER-Worth. Every engagement is built on the Become the Answer framework.">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Work With Me - Aingworth">
-<meta property="og:description" content="Strategy and consulting for founders and executives who need to be found in the AI era.">
+<meta property="og:description" content="Strategy built for the recognition era. No generic packages. Work that holds up as the search landscape keeps shifting.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://aingworth.com/services">
+<meta property="og:url" content="https://aingworth.com/services.html">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"AI Visibility Audit","provider":{"@type":"Person","name":"Lucy Aingworth","url":"https://aingworth.com"},"offers":{"@type":"Offer","priceCurrency":"ZAR","price":"12500"}},{"@type":"Service","name":"Authority Strategy Consulting","provider":{"@type":"Person","name":"Lucy Aingworth","url":"https://aingworth.com"},"offers":{"@type":"Offer","priceCurrency":"ZAR","price":"15000"}},{"@type":"Service","name":"Brand Clarity Workshop","provider":{"@type":"Person","name":"Lucy Aingworth","url":"https://aingworth.com"}},{"@type":"Service","name":"One-to-One Coaching","provider":{"@type":"Person","name":"Lucy Aingworth","url":"https://aingworth.com"}}]}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://aingworth.com/#organization",
+      "name": "Aingworth",
+      "url": "https://aingworth.com",
+      "description": "Brand authority and AI visibility consulting for founders, CMOs, and executives."
+    },
+    {
+      "@type": "Service",
+      "name": "AI Visibility Audit",
+      "provider": { "@id": "https://aingworth.com/#organization" },
+      "description": "A structured review across all three dimensions of the Recognition Triangle: Clarity, Credibility, and Earned Authority.",
+      "offers": { "@type": "Offer", "price": "12500", "priceCurrency": "ZAR" }
+    },
+    {
+      "@type": "Service",
+      "name": "Authority Strategy Consulting",
+      "provider": { "@id": "https://aingworth.com/#organization" },
+      "description": "Monthly retainer strategy work building the structural authority signals AI models use to decide who to cite.",
+      "offers": { "@type": "Offer", "price": "15000", "priceCurrency": "ZAR" }
+    },
+    {
+      "@type": "Service",
+      "name": "Brand Clarity Workshop",
+      "provider": { "@id": "https://aingworth.com/#organization" },
+      "description": "A facilitated group session applying the Recognition Triangle to your brand's positioning and messaging.",
+      "offers": { "@type": "Offer", "price": "18000", "priceCurrency": "ZAR" }
+    },
+    {
+      "@type": "Service",
+      "name": "One-to-One Coaching",
+      "provider": { "@id": "https://aingworth.com/#organization" },
+      "description": "Virtual coaching sessions covering positioning, AI visibility, and growth leadership.",
+      "offers": { "@type": "Offer", "price": "2500", "priceCurrency": "ZAR" }
+    },
+    {
+      "@type": "Service",
+      "name": "Speaking and Keynotes",
+      "provider": { "@id": "https://aingworth.com/#organization" },
+      "description": "Keynotes and workshops on AI search, brand authority and the recognition economy.",
+      "offers": { "@type": "Offer", "price": "15000", "priceCurrency": "ZAR" }
+    }
+  ]
+}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --charcoal:#1a1a1a; --charcoal-mid:#242424; --charcoal-light:#2e2e2e;
-  --teal:#4a9e8e; --teal-light:#6bbfb0;
-  --platinum:#E2E2E2; --seasalt:#FAFAFA; --mid-grey:#888880;
-  --lavender:#c4a7e4;
-  --border-dark:rgba(183,206,206,0.1); --border-light:rgba(28,15,19,0.1);
-  --muted-dark:rgba(226,226,226,0.6); --muted-light:rgba(26,26,26,0.6);
-  --serif:'Cormorant Garamond',Georgia,serif;
-  --sans:'DM Sans',system-ui,sans-serif;
-  --mono:'DM Mono',monospace;
-  --max-w:1160px; --px:clamp(20px,4vw,56px); --ease:cubic-bezier(0.4,0,0.2,1);
+  --charcoal:       #1a1a1a;
+  --charcoal-mid:   #242424;
+  --charcoal-light: #2e2e2e;
+  --teal:           #4a9e8e;
+  --teal-light:     #6bbfb0;
+  --platinum:       #E2E2E2;
+  --seasalt:        #FAFAFA;
+  --mid-grey:       #888880;
+  --lavender:       #c4a7e4;
+  --border-dark:    rgba(183,206,206,0.1);
+  --border-light:   rgba(28,15,19,0.1);
+  --muted-dark:     rgba(226,226,226,0.6);
+  --muted-light:    rgba(26,26,26,0.6);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'DM Sans', system-ui, sans-serif;
+  --mono:  'DM Mono', monospace;
+  --max-w: 1160px;
+  --px: clamp(20px, 4vw, 56px);
+  --ease: cubic-bezier(0.4,0,0.2,1);
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:var(--sans);font-size:16px;background:var(--seasalt);color:var(--charcoal);-webkit-font-smoothing:antialiased;line-height:1.7;overflow-x:hidden;}
-img{max-width:100%;display:block;}
-a{color:inherit;text-decoration:none;}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-.skip{position:absolute;top:-52px;left:24px;background:var(--teal-light);color:var(--charcoal);padding:10px 18px;font-size:13px;font-weight:500;z-index:999;transition:top .2s;}
-.skip:focus{top:8px;}
-:focus-visible{outline:2px solid var(--teal-light);outline-offset:3px;}
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); font-size: 16px; background: var(--seasalt); color: var(--charcoal); -webkit-font-smoothing: antialiased; line-height: 1.7; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.skip { position:absolute; top:-52px; left:24px; background:var(--teal-light); color:var(--charcoal); padding:10px 18px; font-size:13px; font-weight:500; z-index:999; transition:top .2s; }
+.skip:focus { top:8px; }
+:focus-visible { outline: 2px solid var(--teal-light); outline-offset: 3px; }
+::selection { background: var(--teal-light); color: var(--charcoal); }
 
 /* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--px);background:rgba(26,26,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-dark);transition:background .3s var(--ease);}
-.nav-logo{display:flex;align-items:center;height:68px;}
-.nav-logo img{width:200px;height:auto;display:block;}
-.nav-logo-text{display:none;}
-.nav-menu{display:flex;align-items:center;gap:2px;list-style:none;}
-.nav-menu a{display:block;padding:7px 12px;color:rgba(250,250,250,.6);font-size:13px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
-.nav-menu a:hover,.nav-menu a[aria-current="page"]{color:var(--teal-light);}
-.nav-menu .ncta a{background:var(--teal-light);color:var(--charcoal);padding:8px 20px;font-weight:500;border-radius:2px;transition:all .2s;}
-.nav-menu .ncta a:hover{background:var(--teal);color:var(--seasalt);}
-.nav-burger{display:none;flex-direction:column;gap:5px;padding:8px;background:none;border:none;cursor:pointer;}
-.nav-burger span{display:block;width:22px;height:1.5px;background:var(--seasalt);transition:all .3s var(--ease);transform-origin:center;}
-.nav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
-.nav-burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
-.nav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
-.nav-drawer{display:none;position:fixed;top:68px;left:0;right:0;bottom:0;background:var(--charcoal);padding:28px var(--px);z-index:199;flex-direction:column;}
-.nav-drawer.open{display:flex;}
-.nav-drawer a{display:block;padding:16px 0;color:rgba(250,250,250,.65);font-size:18px;border-bottom:1px solid var(--border-dark);transition:color .2s;}
-.nav-drawer a:hover{color:var(--teal-light);}
-.drawer-cta{margin-top:24px;display:inline-block;padding:16px 28px;background:var(--teal-light);color:var(--charcoal) !important;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;text-align:center;border-bottom:none !important;border-radius:2px;}
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 var(--px); background: rgba(26,26,26,.97); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-dark); transition: background .3s var(--ease); }
+.nav-logo { display: flex; align-items: center; height: 68px; }
+.nav-logo img { width: 200px; height: auto; display: block; }
+.nav-menu { display: flex; align-items: center; gap: 2px; list-style: none; }
+.nav-menu a { display: block; padding: 7px 12px; color: rgba(250,250,250,.6); font-size: 13px; font-weight: 400; letter-spacing: .06em; text-transform: uppercase; transition: color .2s; }
+.nav-menu a:hover, .nav-menu a[aria-current="page"] { color: var(--teal-light); }
+.nav-menu .ncta a { background: var(--teal-light); color: var(--charcoal); padding: 8px 20px; font-weight: 500; border-radius: 2px; transition: all .2s; }
+.nav-menu .ncta a:hover { background: var(--teal); color: var(--seasalt); }
+.nav-burger { display: none; flex-direction: column; gap: 5px; padding: 8px; background: none; border: none; cursor: pointer; }
+.nav-burger span { display: block; width: 22px; height: 1.5px; background: var(--seasalt); transition: all .3s var(--ease); transform-origin: center; }
+.nav-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.nav-drawer { display: none; position: fixed; top: 68px; left: 0; right: 0; bottom: 0; background: var(--charcoal); padding: 28px var(--px); z-index: 199; flex-direction: column; }
+.nav-drawer.open { display: flex; }
+.nav-drawer a { display: block; padding: 16px 0; color: rgba(250,250,250,.65); font-size: 18px; border-bottom: 1px solid var(--border-dark); transition: color .2s; }
+.nav-drawer a:hover { color: var(--teal-light); }
+.drawer-cta { margin-top: 24px; display: inline-block; padding: 16px 28px; background: var(--teal-light); color: var(--charcoal) !important; font-size: 14px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; text-align: center; border-bottom: none !important; border-radius: 2px; }
 
 /* SHARED */
-.sec-eye{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
-.sec-rule{width:26px;height:1px;background:var(--teal-light);flex-shrink:0;}
-.sec-lbl{font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.14em;text-transform:uppercase;}
-.sec-h2{font-family:var(--serif);font-size:clamp(32px,3vw,48px);font-weight:500;line-height:1.1;color:var(--charcoal);letter-spacing:-.01em;margin-bottom:18px;}
-.sec-h2-light{color:var(--seasalt);}
-.sec-body{font-size:16px;line-height:1.78;color:var(--muted-light);}
-.sec-body-dark{color:var(--muted-dark);}
-.cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--teal-light);color:var(--charcoal);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:14px 26px;border-radius:2px;transition:all .2s var(--ease);}
-.cta-primary:hover{background:var(--teal);color:var(--seasalt);transform:translateY(-1px);}
+.sec-eye { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.sec-rule { width: 26px; height: 1px; background: var(--teal-light); flex-shrink: 0; }
+.sec-lbl { font-family: var(--mono); font-size: 11px; color: var(--teal-light); letter-spacing: .14em; text-transform: uppercase; }
+.sec-h2 { font-family: var(--serif); font-size: clamp(32px,3vw,48px); font-weight: 500; line-height: 1.1; color: var(--charcoal); letter-spacing: -.01em; margin-bottom: 18px; }
+.sec-h2-light { color: var(--seasalt); }
+.sec-body { font-size: 16px; line-height: 1.78; color: var(--muted-light); }
+.cta-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--teal-light); color: var(--charcoal); font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; padding: 14px 26px; border-radius: 2px; transition: background .2s var(--ease), color .2s var(--ease), box-shadow .3s var(--ease); border: none; cursor: pointer; font-family: var(--sans); }
+.cta-primary:hover { background: var(--teal); color: var(--seasalt); box-shadow: 0 0 32px rgba(107,191,176,.35); }
+.tlink { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: var(--teal); letter-spacing: .07em; text-transform: uppercase; transition: gap .25s var(--ease), color .2s; }
+.tlink:hover { gap: 16px; color: var(--charcoal); }
+.arr { width: 22px; height: 1px; background: currentColor; position: relative; transition: width .25s var(--ease); }
+.arr::after { content: ''; position: absolute; right: 0; top: -3px; width: 6px; height: 6px; border-right: 1px solid currentColor; border-top: 1px solid currentColor; transform: rotate(45deg); }
+.tlink:hover .arr { width: 34px; }
 
-@media(prefers-reduced-motion:no-preference){
-  .anim{opacity:0;transform:translateY(20px);transition:opacity .65s var(--ease),transform .65s var(--ease);}
-  .anim.vis{opacity:1;transform:translateY(0);}
-  .d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
+#progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; background: var(--teal-light); z-index: 300; box-shadow: 0 0 10px rgba(107,191,176,.55); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .anim { opacity: 0; transform: translateY(20px); transition: opacity .65s var(--ease), transform .65s var(--ease); }
+  .anim.vis { opacity: 1; transform: translateY(0); }
+  .d1 { transition-delay: .1s; } .d2 { transition-delay: .2s; } .d3 { transition-delay: .3s; }
 }
 
 /* HERO */
-.hero{background:var(--charcoal);padding:140px var(--px) 80px;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(74,158,142,.06) 0%,transparent 65%);pointer-events:none;}
-.hero-texture{position:absolute;inset:0;background-image:linear-gradient(rgba(107,191,176,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(107,191,176,.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
-.hero-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;position:relative;z-index:1;}
-.hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px;}
-.hero-eyebrow-rule{width:32px;height:1px;background:var(--teal-light);}
-.hero-eyebrow-label{font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.16em;text-transform:uppercase;}
-.hero h1{font-family:var(--serif);font-size:clamp(44px,5vw,72px);font-weight:500;line-height:1.06;color:var(--seasalt);letter-spacing:-.015em;margin-bottom:24px;}
-.hero h1 em{font-style:italic;color:var(--teal-light);}
-.hero-sub{font-size:17px;line-height:1.72;color:var(--muted-dark);}
+.svc-hero { background: radial-gradient(900px 600px at 80% 30%, rgba(107,191,176,.07), transparent 65%), var(--charcoal); padding: 150px var(--px) 70px; position: relative; }
+.svc-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--teal-light), transparent); opacity: .2; }
+.svc-hero-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.svc-hero h1 { font-family: var(--serif); font-size: clamp(42px, 4.6vw, 68px); font-weight: 500; line-height: 1.06; color: var(--seasalt); letter-spacing: -.01em; }
+.hline { display: block; overflow: hidden; }
+.hline span { display: inline-block; transform: translateY(110%); animation: riseUp 1s cubic-bezier(0.22,1,0.36,1) forwards; }
+.hline:nth-child(1) span { animation-delay: .35s; }
+.hline:nth-child(2) span { animation-delay: .5s; }
+.hline:nth-child(3) span { animation-delay: .65s; }
+@keyframes riseUp { to { transform: translateY(0); } }
+.svc-hero h1 em { font-style: italic; color: var(--teal-light); }
+.svc-hero-sub { margin-top: 26px; font-size: 16px; line-height: 1.75; color: var(--muted-dark); max-width: 46ch; opacity: 0; animation: fadeUp .9s ease .95s forwards; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+.hero-eyebrow { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; opacity: 0; animation: fadeUp .9s ease .25s forwards; }
+.hero-eyebrow-rule { width: 40px; height: 1px; background: var(--teal-light); }
+.hero-eyebrow-label { font-family: var(--mono); font-size: 12px; color: var(--teal-light); letter-spacing: .28em; text-transform: uppercase; }
 
-/* Quick links in hero */
-.hero-quick-links{display:flex;flex-direction:column;gap:1px;}
-.hql-item{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:rgba(250,250,250,.04);border:1px solid var(--border-dark);font-size:14px;color:rgba(250,250,250,.65);transition:all .2s;text-decoration:none;}
-.hql-item:hover{background:rgba(107,191,176,.07);border-color:rgba(107,191,176,.2);color:var(--seasalt);}
-.hql-name{font-weight:500;}
-.hql-price{font-family:var(--mono);font-size:11px;letter-spacing:.06em;}
-.hql-arr{width:14px;height:1px;background:currentColor;position:relative;flex-shrink:0;}
-.hql-arr::after{content:'';position:absolute;right:0;top:-3px;width:5px;height:5px;border-right:1px solid currentColor;border-top:1px solid currentColor;transform:rotate(45deg);}
+/* rate card */
+.rate-card { border: 1px solid var(--border-dark); border-radius: 3px; overflow: hidden; opacity: 0; animation: fadeUp .9s ease .8s forwards; }
+.rate-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 17px 22px; border-bottom: 1px solid var(--border-dark); transition: background .25s, padding-left .25s; cursor: pointer; }
+.rate-row:last-child { border-bottom: none; }
+.rate-row:hover { background: rgba(107,191,176,.06); padding-left: 28px; }
+.rate-name { font-size: 14px; color: var(--platinum); }
+.rate-right { display: flex; align-items: center; gap: 14px; }
+.rate-price { font-family: var(--mono); font-size: 12px; color: var(--teal-light); letter-spacing: .04em; white-space: nowrap; }
+.rate-arr { width: 16px; height: 1px; background: rgba(226,226,226,.4); position: relative; transition: background .25s, width .25s; }
+.rate-arr::after { content: ''; position: absolute; right: 0; top: -2.5px; width: 5px; height: 5px; border-right: 1px solid rgba(226,226,226,.4); border-top: 1px solid rgba(226,226,226,.4); transform: rotate(45deg); transition: border-color .25s; }
+.rate-row:hover .rate-arr { background: var(--teal-light); width: 24px; }
+.rate-row:hover .rate-arr::after { border-color: var(--teal-light); }
 
-/* CURRENCY BAR */
-.currency-bar{background:var(--charcoal-mid);border-bottom:1px solid var(--border-dark);padding:14px var(--px);position:sticky;top:68px;z-index:100;}
-.currency-bar-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:16px;}
-.currency-label{font-family:var(--mono);font-size:11px;color:var(--mid-grey);letter-spacing:.1em;text-transform:uppercase;}
-.currency-toggle{display:flex;background:var(--charcoal-light);border:1px solid var(--border-dark);border-radius:2px;overflow:hidden;}
-.currency-btn{padding:7px 20px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:none;background:none;color:var(--mid-grey);cursor:pointer;transition:all .2s;}
-.currency-btn.active{background:var(--teal-light);color:var(--charcoal);font-weight:500;}
-.currency-note{font-family:var(--mono);font-size:10px;color:rgba(226,226,226,.25);letter-spacing:.06em;margin-left:auto;}
+/* currency strip */
+.cur-strip { background: var(--charcoal-mid); border-bottom: 1px solid var(--border-dark); padding: 14px var(--px); }
+.cur-strip-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.cur-left { display: flex; align-items: center; gap: 16px; }
+.cur-lbl { font-family: var(--mono); font-size: 10px; color: rgba(107,191,176,.5); letter-spacing: .14em; text-transform: uppercase; }
+.cur-toggle { display: flex; gap: 4px; }
+.cur-btn { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; padding: 6px 14px; border: 1px solid var(--border-dark); background: none; color: rgba(226,226,226,.45); border-radius: 2px; cursor: pointer; transition: all .2s; }
+.cur-btn.active { border-color: var(--teal-light); color: var(--teal-light); background: rgba(107,191,176,.07); }
+.cur-note { font-family: var(--mono); font-size: 10px; color: rgba(226,226,226,.3); letter-spacing: .1em; text-transform: uppercase; }
 
-/* CALCULATOR */
-.calc-sec{background:var(--charcoal-mid);padding:80px var(--px);border-bottom:1px solid var(--border-dark);}
-.calc-sec-inner{max-width:760px;margin:0 auto;}
-.calc-sec-head{text-align:center;margin-bottom:48px;}
-.calc-sec-head .sec-eye{justify-content:center;}
-.calc-progress-wrap{margin-bottom:36px;}
-.calc-progress-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
-.calc-progress-label{font-family:var(--mono);font-size:11px;color:var(--mid-grey);letter-spacing:.1em;text-transform:uppercase;}
-.calc-progress-count{font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.08em;}
-.calc-progress-bar{height:2px;background:var(--charcoal-light);border-radius:1px;overflow:hidden;}
-.calc-progress-fill{height:100%;background:linear-gradient(90deg,var(--teal-light),var(--teal));border-radius:1px;transition:width .4s var(--ease);width:0%;}
-.q-card{background:var(--charcoal);border:1px solid var(--border-dark);padding:36px 40px;animation:fadeUp .35s var(--ease) both;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
-.q-num{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
-.q-text{font-family:var(--serif);font-size:clamp(20px,2.5vw,28px);font-weight:500;color:var(--seasalt);line-height:1.28;margin-bottom:8px;}
-.q-hint{font-size:14px;color:var(--mid-grey);line-height:1.6;margin-bottom:24px;}
-.opts-grid{display:flex;flex-direction:column;gap:8px;}
-.opts-grid.two-col{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-.opt{display:flex;align-items:flex-start;gap:14px;padding:14px 16px;background:rgba(255,255,255,.03);border:1px solid var(--border-dark);color:var(--muted-dark);font-family:var(--sans);font-size:14px;line-height:1.4;text-align:left;cursor:pointer;transition:all .2s var(--ease);border-radius:2px;width:100%;}
-.opt:hover{border-color:rgba(107,191,176,.35);color:var(--seasalt);background:rgba(107,191,176,.05);}
-.opt.sel{border-color:var(--teal-light);background:rgba(107,191,176,.09);color:var(--seasalt);}
-.opt-chk{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--mid-grey);flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;transition:all .2s;}
-.opt.sel .opt-chk{background:var(--teal-light);border-color:var(--teal-light);}
-.opt.sel .opt-chk::after{content:'';width:5px;height:5px;border-radius:50%;background:var(--charcoal);}
-.opt-lbl{display:block;font-weight:500;color:inherit;line-height:1.3;}
-.opt-sub{display:block;font-size:13px;color:var(--mid-grey);margin-top:3px;line-height:1.45;}
-.opt.sel .opt-sub{color:rgba(107,191,176,.55);}
-.q-nav{display:flex;align-items:center;justify-content:space-between;margin-top:20px;}
-.btn-back{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--mid-grey);letter-spacing:.1em;text-transform:uppercase;background:none;border:none;cursor:pointer;transition:color .2s;padding:0;}
-.btn-back:hover{color:var(--teal-light);}
-.btn-next{display:inline-flex;align-items:center;gap:10px;background:var(--teal-light);color:var(--charcoal);font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:12px 22px;border:none;border-radius:2px;cursor:pointer;transition:all .2s var(--ease);}
-.btn-next:hover:not(:disabled){background:var(--teal);color:var(--seasalt);}
-.btn-next:disabled{opacity:.3;cursor:not-allowed;}
-.results-panel{display:none;animation:fadeUp .5s var(--ease) both;}
-.results-panel.visible{display:block;}
-.result-card{background:var(--charcoal);border:1px solid var(--border-dark);padding:40px 44px;position:relative;overflow:hidden;margin-bottom:2px;}
-.result-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal-light),var(--lavender));}
-.result-eyebrow{font-family:var(--mono);font-size:11px;color:var(--mid-grey);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;}
-.result-pkg-name{font-family:var(--serif);font-size:clamp(44px,7vw,72px);font-weight:500;color:var(--teal-light);line-height:1;margin-bottom:8px;letter-spacing:-.01em;}
-.result-pkg-tag{font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;background:rgba(107,191,176,.1);border:1px solid rgba(107,191,176,.2);display:inline-block;padding:5px 14px;margin-bottom:32px;}
-.result-summary{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border-dark);border:1px solid var(--border-dark);margin-bottom:28px;}
-.rs-item{background:var(--charcoal);padding:14px 18px;}
-.rs-label{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;}
-.rs-value{font-size:14px;font-weight:500;color:var(--seasalt);}
-.result-price-reveal{background:rgba(107,191,176,.06);border:1px solid rgba(107,191,176,.15);padding:24px 28px;margin-bottom:24px;}
-.rpr-label{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;}
-.rpr-amount{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:500;color:var(--teal-light);line-height:1;margin-bottom:6px;}
-.rpr-desc{font-size:14px;color:var(--muted-dark);line-height:1.65;}
-.proposal-box{background:rgba(255,255,255,.03);border:1px solid var(--border-dark);padding:24px 28px;margin-bottom:16px;}
-.proposal-box-label{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
-.proposal-box-desc{font-size:14px;color:var(--muted-dark);line-height:1.65;margin-bottom:18px;}
-.proposal-form-row{display:flex;gap:0;}
-.proposal-input{flex:1;padding:12px 16px;background:rgba(255,255,255,.05);border:1px solid var(--border-dark);border-right:none;color:var(--seasalt);font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s;border-radius:2px 0 0 2px;}
-.proposal-input::placeholder{color:rgba(250,250,250,.25);}
-.proposal-input:focus{border-color:var(--teal-light);}
-.proposal-btn{padding:12px 18px;background:var(--teal-light);color:var(--charcoal);font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border:none;cursor:pointer;transition:all .2s;white-space:nowrap;border-radius:0 2px 2px 0;}
-.proposal-btn:hover{background:var(--teal);color:var(--seasalt);}
-.proposal-success{display:flex;align-items:flex-start;gap:12px;padding:16px;background:rgba(107,191,176,.1);border:1px solid rgba(107,191,176,.2);}
-.ps-icon{width:32px;height:32px;border-radius:50%;background:rgba(107,191,176,.15);border:1px solid rgba(107,191,176,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--teal-light);}
-.ps-text{font-size:14px;color:var(--muted-dark);line-height:1.65;}
-.proposal-fine{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.06em;margin-top:10px;}
-.result-restart{display:block;width:100%;padding:14px;background:transparent;color:var(--mid-grey);font-family:var(--sans);font-size:14px;border:1px solid var(--border-dark);cursor:pointer;transition:all .2s;margin-top:16px;}
-.result-restart:hover{border-color:var(--teal-light);color:var(--seasalt);}
-.calc-disclaimer{text-align:center;padding:24px 0;font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.05em;line-height:1.8;max-width:500px;margin:0 auto;}
+/* MATCHER */
+.match-sec { background: var(--charcoal); padding: 90px var(--px); position: relative; overflow: hidden; }
+.match-sec::before { content: ''; position: absolute; top: -120px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(74,158,142,.05) 0%, transparent 65%); pointer-events: none; }
+.match-head { max-width: 640px; margin: 0 auto 40px; text-align: center; position: relative; z-index: 1; }
+.match-head .sec-eye { justify-content: center; }
+.match-head p { font-size: 15px; color: var(--muted-dark); line-height: 1.7; }
+.match-panel { max-width: 720px; margin: 0 auto; background: var(--charcoal-mid); border: 1px solid var(--border-dark); border-radius: 3px; position: relative; z-index: 1; overflow: hidden; }
+.match-top { display: flex; align-items: center; justify-content: space-between; padding: 16px 26px; border-bottom: 1px solid var(--border-dark); }
+.match-top span { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: rgba(226,226,226,.4); }
+.match-top .match-count { color: var(--teal-light); }
+.match-bar { height: 2px; background: rgba(250,250,250,.06); }
+.match-bar-fill { height: 100%; width: 0; background: var(--teal-light); transition: width .45s var(--ease); box-shadow: 0 0 8px rgba(107,191,176,.5); }
+.match-body { padding: 34px 26px 30px; }
+.match-qn { font-family: var(--mono); font-size: 10px; color: var(--teal-light); letter-spacing: .16em; text-transform: uppercase; margin-bottom: 12px; }
+.match-q { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 32px); font-weight: 500; color: var(--seasalt); line-height: 1.2; margin-bottom: 6px; }
+.match-help { font-size: 13px; color: rgba(226,226,226,.45); margin-bottom: 24px; }
+.match-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.match-opt { text-align: left; background: rgba(250,250,250,.03); border: 1px solid var(--border-dark); border-radius: 2px; padding: 15px 16px; cursor: pointer; transition: border-color .2s, background .2s; font-family: var(--sans); color: inherit; }
+.match-opt:hover { border-color: rgba(107,191,176,.45); background: rgba(107,191,176,.05); }
+.match-opt.sel { border-color: var(--teal-light); background: rgba(107,191,176,.1); }
+.match-opt-t { display: block; font-size: 14px; font-weight: 500; color: var(--seasalt); margin-bottom: 3px; }
+.match-opt-d { display: block; font-size: 12px; color: rgba(226,226,226,.45); line-height: 1.5; }
+.match-ctrl { display: flex; align-items: center; justify-content: space-between; margin-top: 26px; }
+.match-back { background: none; border: none; font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: rgba(226,226,226,.4); cursor: pointer; padding: 8px 0; transition: color .2s; }
+.match-back:hover { color: var(--teal-light); }
+.match-back[disabled] { opacity: 0; pointer-events: none; }
+.match-next[disabled] { opacity: .35; pointer-events: none; }
+/* result */
+.match-result { text-align: left; }
+.match-result-lbl { font-family: var(--mono); font-size: 10px; color: var(--teal-light); letter-spacing: .18em; text-transform: uppercase; margin-bottom: 14px; }
+.match-result h3 { font-family: var(--serif); font-size: clamp(28px, 3vw, 40px); font-weight: 500; color: var(--seasalt); line-height: 1.15; margin-bottom: 10px; }
+.match-result-why { font-size: 14px; color: var(--muted-dark); line-height: 1.7; margin-bottom: 18px; max-width: 56ch; }
+.match-result-price { font-family: var(--mono); font-size: 13px; color: var(--teal-light); letter-spacing: .06em; margin-bottom: 26px; }
+.match-result-ctas { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 28px; }
+.match-form { display: flex; gap: 0; max-width: 440px; border-top: 1px solid var(--border-dark); padding-top: 24px; }
+.match-form-wrap p { font-size: 13px; color: rgba(226,226,226,.5); margin-bottom: 12px; border-top: 1px solid var(--border-dark); padding-top: 20px; }
+.match-form { border-top: none; padding-top: 0; }
+.match-input { flex: 1; padding: 12px 16px; background: rgba(250,250,250,.06); border: 1px solid rgba(107,191,176,.2); border-right: none; color: var(--seasalt); font-family: var(--sans); font-size: 14px; outline: none; border-radius: 2px 0 0 2px; }
+.match-input:focus { border-color: rgba(107,191,176,.5); }
+.match-submit { padding: 12px 18px; background: var(--teal-light); color: var(--charcoal); font-family: var(--sans); font-size: 12px; font-weight: 500; letter-spacing: .07em; text-transform: uppercase; border: none; cursor: pointer; border-radius: 0 2px 2px 0; transition: background .2s; white-space: nowrap; }
+.match-submit:hover { background: var(--teal); color: var(--seasalt); }
+.match-restart { margin-top: 18px; }
 
 /* SERVICES GRID */
-.services-sec{background:var(--seasalt);padding:80px var(--px);}
-.services-inner{max-width:var(--max-w);margin:0 auto;}
-.services-intro{max-width:640px;margin-bottom:48px;}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border-light);border:1px solid var(--border-light);}
-.svc-card{background:#fff;padding:32px 28px;position:relative;transition:background .2s var(--ease);border-top:3px solid transparent;display:flex;flex-direction:column;gap:0;}
-.svc-card:hover{background:var(--seasalt);border-top-color:var(--teal-light);}
-.svc-card-herworth{border-top:3px solid rgba(196,167,228,.4);}
-.svc-card-herworth:hover{border-top-color:var(--lavender);}
-.svc-num{font-family:var(--serif);font-size:48px;font-weight:400;color:var(--teal-light);opacity:.15;line-height:1;margin-bottom:14px;}
-.svc-card-herworth .svc-num{color:var(--lavender);}
-.svc-tag{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;}
-.svc-card-herworth .svc-tag{color:var(--lavender);}
-.svc-name{font-family:var(--serif);font-size:clamp(20px,2vw,26px);font-weight:500;color:var(--charcoal);line-height:1.2;margin-bottom:10px;}
-.svc-desc{font-size:14px;line-height:1.68;color:var(--muted-light);margin-bottom:20px;flex:1;}
-.svc-price-from{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;}
-.svc-price{font-family:var(--serif);font-size:28px;font-weight:500;color:var(--charcoal);line-height:1;margin-bottom:4px;}
-.svc-period{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;margin-bottom:20px;}
-.svc-format{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px;padding-top:14px;border-top:1px solid var(--border-light);}
-.svc-cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.1em;text-transform:uppercase;transition:gap .2s,color .2s;margin-top:auto;}
-.svc-cta:hover{gap:14px;color:var(--teal);}
-.svc-card-herworth .svc-cta{color:var(--lavender);}
-.svc-cta-arr{width:18px;height:1px;background:currentColor;position:relative;}
-.svc-cta-arr::after{content:'';position:absolute;right:0;top:-3px;width:5px;height:5px;border-right:1px solid currentColor;border-top:1px solid currentColor;transform:rotate(45deg);}
+.svc-sec { background: var(--seasalt); padding: 90px var(--px); }
+.svc-inner { max-width: var(--max-w); margin: 0 auto; }
+.svc-head { max-width: 720px; margin-bottom: 48px; }
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.svc-card { background: #fff; border: 1px solid var(--border-light); padding: 36px 32px; position: relative; overflow: hidden; transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
+.svc-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--teal-light); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+.svc-card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px rgba(26,26,26,.08); }
+.svc-card:hover::before { transform: scaleX(1); }
+.svc-card-hw::before { background: var(--lavender); }
+.svc-num { font-family: var(--serif); font-size: 56px; font-weight: 400; color: var(--teal-light); opacity: .18; line-height: 1; position: absolute; top: 20px; right: 24px; }
+.svc-card-hw .svc-num { color: var(--lavender); opacity: .35; }
+.svc-tag { font-family: var(--mono); font-size: 10px; color: var(--teal); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 16px; }
+.svc-card-hw .svc-tag { color: #9a77c4; }
+.svc-title { font-family: var(--serif); font-size: clamp(21px, 2vw, 26px); font-weight: 500; color: var(--charcoal); line-height: 1.2; margin-bottom: 13px; }
+.svc-body { font-size: 14px; line-height: 1.7; color: var(--muted-light); margin-bottom: 22px; }
+.svc-price-lbl { font-family: var(--mono); font-size: 9px; color: var(--mid-grey); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 2px; }
+.svc-price { font-family: var(--serif); font-size: 28px; font-weight: 500; color: var(--charcoal); line-height: 1.1; }
+.svc-price-unit { font-family: var(--mono); font-size: 10px; color: var(--mid-grey); letter-spacing: .08em; text-transform: uppercase; margin-top: 2px; margin-bottom: 16px; }
+.svc-meta { font-family: var(--mono); font-size: 9.5px; color: var(--mid-grey); letter-spacing: .1em; text-transform: uppercase; border-top: 1px solid var(--border-light); padding-top: 14px; margin-bottom: 18px; line-height: 1.7; }
+.svc-link { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 11px; color: var(--teal); letter-spacing: .1em; text-transform: uppercase; transition: gap .25s var(--ease); }
+.svc-link:hover { gap: 16px; }
+.svc-card-hw .svc-link { color: #9a77c4; }
 
 /* SPEAKING */
-.speaking-sec{background:var(--charcoal);padding:80px var(--px);border-top:1px solid var(--border-dark);}
-.speaking-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
-.speaking-formats{display:flex;flex-direction:column;gap:2px;margin-top:32px;}
-.speaking-format{padding:22px 26px;background:var(--charcoal-mid);border:1px solid var(--border-dark);display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;}
-.sf-name{font-size:15px;font-weight:500;color:var(--seasalt);margin-bottom:4px;}
-.sf-desc{font-size:13px;color:var(--mid-grey);line-height:1.6;}
-.sf-price{font-family:var(--mono);font-size:12px;color:var(--teal-light);letter-spacing:.06em;white-space:nowrap;margin-top:4px;}
-.topic-pill-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;}
-.topic-pill{padding:7px 14px;border:1px solid var(--border-dark);font-family:var(--mono);font-size:11px;color:var(--muted-dark);letter-spacing:.08em;text-transform:uppercase;transition:all .2s;}
-.topic-pill:hover{border-color:rgba(107,191,176,.3);color:var(--teal-light);}
+.speak-sec { background: var(--charcoal); padding: 90px var(--px); position: relative; overflow: hidden; }
+.speak-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1.05fr; gap: 64px; align-items: start; }
+.speak-copy .sec-body { color: var(--muted-dark); margin-bottom: 30px; }
+.speak-rates { display: flex; flex-direction: column; gap: 2px; }
+.speak-rate { background: var(--charcoal-mid); padding: 22px 26px; transition: background .25s; }
+.speak-rate:hover { background: var(--charcoal-light); }
+.speak-rate-top { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 5px; }
+.speak-rate-name { font-family: var(--serif); font-size: 21px; font-weight: 500; color: var(--seasalt); }
+.speak-rate-price { font-family: var(--mono); font-size: 12px; color: var(--teal-light); letter-spacing: .04em; white-space: nowrap; }
+.speak-rate p { font-size: 13px; color: var(--muted-dark); line-height: 1.6; }
+.speak-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+.speak-tags span { font-family: var(--mono); font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: rgba(226,226,226,.45); border: 1px solid var(--border-dark); padding: 7px 12px; border-radius: 2px; transition: color .2s, border-color .2s; }
+.speak-tags span:hover { color: var(--teal-light); border-color: rgba(107,191,176,.4); }
 
 /* CTA BANNER */
-.cta-banner{background:var(--teal-light);padding:80px var(--px);}
-.cta-banner-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap;}
-.cta-banner-text h2{font-family:var(--serif);font-size:clamp(28px,3vw,44px);font-weight:500;color:var(--charcoal);line-height:1.12;margin-bottom:10px;}
-.cta-banner-text p{font-size:16px;color:rgba(26,26,26,.65);max-width:480px;line-height:1.65;}
-.cta-banner-primary{display:inline-flex;align-items:center;gap:10px;background:var(--charcoal);color:var(--seasalt);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:16px 30px;border-radius:2px;transition:all .2s var(--ease);}
-.cta-banner-primary:hover{background:var(--charcoal-light);}
+.cta-banner { background: var(--teal-light); padding: 72px var(--px); }
+.cta-banner-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 48px; flex-wrap: wrap; }
+.cta-banner-text h2 { font-family: var(--serif); font-size: clamp(28px, 3vw, 44px); font-weight: 500; color: var(--charcoal); line-height: 1.12; margin-bottom: 10px; }
+.cta-banner-text p { font-size: 16px; color: rgba(26,26,26,.65); max-width: 520px; line-height: 1.65; }
+.cta-banner-btns { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.cta-banner-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--charcoal); color: var(--seasalt); font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; padding: 16px 30px; border-radius: 2px; transition: all .2s var(--ease); }
+.cta-banner-primary:hover { background: var(--charcoal-light); transform: translateY(-1px); }
+.cta-banner-ghost { display: inline-flex; align-items: center; gap: 10px; color: var(--charcoal); font-size: 13px; font-weight: 500; letter-spacing: .07em; text-transform: uppercase; transition: gap .2s; }
+.cta-banner-ghost:hover { gap: 16px; }
 
 /* FOOTER */
-.footer{background:var(--charcoal);padding:60px var(--px) 32px;border-top:1px solid var(--border-dark);}
-.footer-inner{max-width:var(--max-w);margin:0 auto;}
-.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
-.fdesc{font-size:14px;line-height:1.7;color:var(--mid-grey);margin-bottom:20px;max-width:300px;}
-.fsocials{display:flex;gap:8px;flex-wrap:wrap;}
-.fsoc{width:34px;height:34px;border:1px solid var(--border-dark);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--mid-grey);transition:all .2s;border-radius:2px;}
-.fsoc:hover{border-color:var(--teal-light);color:var(--teal-light);}
-.fcol-h{font-family:var(--mono);font-size:10px;color:rgba(226,226,226,.3);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;}
-.fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.fcol ul li a{font-size:14px;color:var(--mid-grey);transition:color .2s;}
-.fcol ul li a:hover{color:var(--teal-light);}
-.fbase{display:flex;align-items:center;justify-content:space-between;padding-top:24px;border-top:1px solid var(--border-dark);flex-wrap:wrap;gap:16px;}
-.fcopy{font-family:var(--mono);font-size:11px;color:rgba(226,226,226,.25);letter-spacing:.06em;}
-.flegal{display:flex;gap:20px;}
-.flegal a{font-family:var(--mono);font-size:11px;color:rgba(226,226,226,.25);letter-spacing:.06em;transition:color .2s;}
-.flegal a:hover{color:var(--teal-light);}
+.footer { background: var(--charcoal); padding: 72px var(--px) 36px; border-top: 1px solid var(--border-dark); }
+.footer-inner { max-width: var(--max-w); margin: 0 auto; }
+.fgrid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+.fmail { display: inline-block; font-family: var(--mono); font-size: 12px; letter-spacing: .04em; color: var(--teal-light); margin-bottom: 20px; transition: color .2s; }
+.fmail:hover { color: var(--teal); }
+.fdesc { font-size: 14px; line-height: 1.7; color: var(--mid-grey); margin-bottom: 24px; max-width: 300px; }
+.fsocials { display: flex; gap: 8px; flex-wrap: wrap; }
+.fsoc { width: 34px; height: 34px; border: 1px solid var(--border-dark); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; color: var(--mid-grey); letter-spacing: 0; transition: all .2s; border-radius: 2px; }
+.fsoc:hover { border-color: var(--teal-light); color: var(--teal-light); }
+.fcol-h { font-family: var(--mono); font-size: 10px; color: rgba(226,226,226,.3); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 18px; }
+.fcol ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.fcol ul li a { font-size: 14px; color: var(--mid-grey); transition: color .2s; }
+.fcol ul li a:hover { color: var(--teal-light); }
+.fbase { display: flex; align-items: center; justify-content: space-between; padding-top: 28px; border-top: 1px solid var(--border-dark); flex-wrap: wrap; gap: 16px; }
+.fcopy { font-family: var(--mono); font-size: 11px; color: rgba(226,226,226,.25); letter-spacing: .06em; }
+.flegal { display: flex; gap: 20px; }
+.flegal a { font-family: var(--mono); font-size: 11px; color: rgba(226,226,226,.25); letter-spacing: .06em; transition: color .2s; }
+.flegal a:hover { color: var(--teal-light); }
 
 /* RESPONSIVE */
-@media(max-width:960px){
-  .hero-inner{grid-template-columns:1fr;gap:40px;}
-  .services-grid{grid-template-columns:1fr 1fr;}
-  .speaking-inner{grid-template-columns:1fr;gap:48px;}
-  .fgrid{grid-template-columns:1fr 1fr;gap:32px;}
-  .cta-banner-inner{flex-direction:column;align-items:flex-start;gap:28px;}
-  .nav-menu{display:none;}
-  .nav-burger{display:flex;}
-  .opts-grid.two-col{grid-template-columns:1fr;}
-  .result-summary{grid-template-columns:1fr;}
+@media (max-width: 900px) {
+  .svc-hero { padding: 120px var(--px) 56px; }
+  .svc-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .svc-grid { grid-template-columns: 1fr; }
+  .speak-inner { grid-template-columns: 1fr; gap: 40px; }
+  .match-opts { grid-template-columns: 1fr; }
+  .fgrid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .cta-banner-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
+  .nav-menu { display: none; }
+  .nav-burger { display: flex; }
 }
-@media(max-width:600px){
-  .services-grid{grid-template-columns:1fr;}
-  .fgrid{grid-template-columns:1fr;}
-  .proposal-form-row{flex-direction:column;}
-  .proposal-input{border-right:1px solid var(--border-dark);border-bottom:none;border-radius:2px 2px 0 0;}
-  .proposal-btn{border-radius:0 0 2px 2px;}
-  .q-card{padding:24px 20px;}
-  .result-card{padding:28px 22px;}
+@media (max-width: 600px) {
+  .fgrid { grid-template-columns: 1fr; gap: 32px; }
+  .match-form { flex-direction: column; }
+  .match-input { border-right: 1px solid rgba(107,191,176,.2); border-radius: 2px 2px 0 0; }
+  .match-submit { border-radius: 0 0 2px 2px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow, .svc-hero-sub, .rate-card { animation: none; opacity: 1; }
+  .hline span { animation: none; transform: none; }
 }
 </style>
 </head>
 <body>
 
 <a href="#main" class="skip">Skip to content</a>
+<div id="progress" aria-hidden="true"></div>
 
 <header role="banner">
   <nav class="nav" aria-label="Primary navigation">
@@ -291,346 +350,217 @@ a{color:inherit;text-decoration:none;}
 
 <main id="main">
 
-<!-- HERO -->
-<section class="hero" aria-labelledby="hero-h">
-  <div class="hero-texture" aria-hidden="true"></div>
-  <div class="hero-inner">
+<section class="svc-hero" aria-labelledby="svc-h">
+  <div class="svc-hero-inner">
     <div>
       <div class="hero-eyebrow">
         <div class="hero-eyebrow-rule" aria-hidden="true"></div>
         <span class="hero-eyebrow-label">Work With Me</span>
       </div>
-      <h1 id="hero-h">Strategy built<br>for the<br><em>recognition era.</em></h1>
-      <p class="hero-sub">Every engagement is built on the Become the Answer framework. No generic packages. No spray-and-pray tactics. Work that holds up as the search landscape keeps shifting.</p>
+      <h1 id="svc-h">
+        <span class="hline"><span>Strategy built</span></span>
+        <span class="hline"><span>for the</span></span>
+        <span class="hline"><span><em>recognition era.</em></span></span>
+      </h1>
+      <p class="svc-hero-sub">Every engagement is built on the Become the Answer framework. No generic packages. No spray-and-pray tactics. Work that holds up as the search landscape keeps shifting.</p>
     </div>
-    <div class="anim d1">
-      <div class="hero-quick-links" role="list" aria-label="Services overview">
-        <a href="#audit" class="hql-item" role="listitem">
-          <span class="hql-name">AI Visibility Audit</span>
-          <span class="hql-price" data-zar="From R12,500" data-usd="From $900">From R12,500</span>
-          <span class="hql-arr" aria-hidden="true"></span>
-        </a>
-        <a href="#consulting" class="hql-item" role="listitem">
-          <span class="hql-name">Authority Strategy Consulting</span>
-          <span class="hql-price" data-zar="From R15,000/mo" data-usd="From $1,150/mo">From R15,000/mo</span>
-          <span class="hql-arr" aria-hidden="true"></span>
-        </a>
-        <a href="#workshop" class="hql-item" role="listitem">
-          <span class="hql-name">Brand Clarity Workshop</span>
-          <span class="hql-price" data-zar="From R18,000" data-usd="From $1,300">From R18,000</span>
-          <span class="hql-arr" aria-hidden="true"></span>
-        </a>
-        <a href="#coaching" class="hql-item" role="listitem">
-          <span class="hql-name">One-to-One Coaching</span>
-          <span class="hql-price" data-zar="From R2,500/session" data-usd="From $175/session">From R2,500/session</span>
-          <span class="hql-arr" aria-hidden="true"></span>
-        </a>
-        <a href="#speaking" class="hql-item" role="listitem">
-          <span class="hql-name">Speaking and Keynotes</span>
-          <span class="hql-price" data-zar="From R15,000" data-usd="From $950">From R15,000</span>
-          <span class="hql-arr" aria-hidden="true"></span>
-        </a>
-        <a href="her-worth.html" class="hql-item" role="listitem">
-          <span class="hql-name">HER-Worth</span>
-          <span class="hql-price" style="color:var(--lavender)">Programme page</span>
-          <span class="hql-arr" aria-hidden="true"></span>
-        </a>
-      </div>
-    </div>
+    <nav class="rate-card" aria-label="Services and starting rates">
+      <a class="rate-row" href="#audit">
+        <span class="rate-name">AI Visibility Audit</span>
+        <span class="rate-right"><span class="rate-price">From <span data-zar="R12,500" data-usd="$900">R12,500</span></span><span class="rate-arr" aria-hidden="true"></span></span>
+      </a>
+      <a class="rate-row" href="#consulting">
+        <span class="rate-name">Authority Strategy Consulting</span>
+        <span class="rate-right"><span class="rate-price">From <span data-zar="R15,000/mo" data-usd="$1,150/mo">R15,000/mo</span></span><span class="rate-arr" aria-hidden="true"></span></span>
+      </a>
+      <a class="rate-row" href="#workshop">
+        <span class="rate-name">Brand Clarity Workshop</span>
+        <span class="rate-right"><span class="rate-price">From <span data-zar="R18,000" data-usd="$1,300">R18,000</span></span><span class="rate-arr" aria-hidden="true"></span></span>
+      </a>
+      <a class="rate-row" href="#coaching">
+        <span class="rate-name">One-to-One Coaching</span>
+        <span class="rate-right"><span class="rate-price">From <span data-zar="R2,500/session" data-usd="$175/session">R2,500/session</span></span><span class="rate-arr" aria-hidden="true"></span></span>
+      </a>
+      <a class="rate-row" href="#speaking">
+        <span class="rate-name">Speaking and Keynotes</span>
+        <span class="rate-right"><span class="rate-price">From <span data-zar="R15,000" data-usd="$950">R15,000</span></span><span class="rate-arr" aria-hidden="true"></span></span>
+      </a>
+      <a class="rate-row" href="her-worth.html">
+        <span class="rate-name">HER-Worth</span>
+        <span class="rate-right"><span class="rate-price" style="color:var(--lavender)">Programme page</span><span class="rate-arr" aria-hidden="true"></span></span>
+      </a>
+    </nav>
   </div>
 </section>
 
-<!-- CURRENCY BAR -->
-<div class="currency-bar" role="region" aria-label="Currency selector">
-  <div class="currency-bar-inner">
-    <span class="currency-label">View prices in</span>
-    <div class="currency-toggle" role="group" aria-label="Select currency">
-      <button class="currency-btn active" id="btn-zar" onclick="setCurrency('zar')" aria-pressed="true">ZAR (R)</button>
-      <button class="currency-btn" id="btn-usd" onclick="setCurrency('usd')" aria-pressed="false">USD ($)</button>
+<div class="cur-strip">
+  <div class="cur-strip-inner">
+    <div class="cur-left">
+      <span class="cur-lbl">View prices in</span>
+      <div class="cur-toggle" role="group" aria-label="Currency">
+        <button type="button" class="cur-btn active" data-cur="zar">ZAR (R)</button>
+        <button type="button" class="cur-btn" data-cur="usd">USD ($)</button>
+      </div>
     </div>
-    <span class="currency-note">Starting rates. Final scope confirmed after initial conversation.</span>
+    <span class="cur-note">Starting rates. Final scope confirmed after initial conversation.</span>
   </div>
 </div>
 
-<!-- CALCULATOR -->
-<section class="calc-sec" aria-labelledby="calc-h">
-  <div class="calc-sec-inner">
-    <div class="calc-sec-head anim">
-      <div class="sec-eye" style="justify-content:center"><div class="sec-rule"></div><span class="sec-lbl">Not Sure Where to Start?</span></div>
-      <h2 class="sec-h2 sec-h2-light" id="calc-h">Find your matched service<br>in 7 questions.</h2>
-      <p class="sec-body sec-body-dark" style="max-width:500px;margin:0 auto;">Answer honestly. The calculator uses your situation to recommend the right starting point and sends you a personalised proposal to your inbox.</p>
+<section class="match-sec" aria-labelledby="match-h">
+  <div class="match-head anim">
+    <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Not sure where to start?</span></div>
+    <h2 class="sec-h2 sec-h2-light" id="match-h">Find your matched service in 7 questions.</h2>
+    <p>Answer honestly. The matcher uses your situation to recommend the right starting point and can send a personalised proposal to your inbox.</p>
+  </div>
+  <div class="match-panel anim d1" id="matchpanel">
+    <div class="match-top">
+      <span>Your progress</span>
+      <span class="match-count" id="matchcount">Question 1 of 7</span>
     </div>
-
-    <div class="calc-progress-wrap" id="cpwrap">
-      <div class="calc-progress-header">
-        <span class="calc-progress-label">Your progress</span>
-        <span class="calc-progress-count" id="cpcount">Question 1 of 7</span>
-      </div>
-      <div class="calc-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-        <div class="calc-progress-fill" id="cpfill"></div>
-      </div>
-    </div>
-
-    <div id="cqwrap">
-      <div class="q-card" id="cq1">
-        <div class="q-num">Question 01 / 07</div>
-        <div class="q-text">How would you describe your business right now?</div>
-        <p class="q-hint">This helps match you to the right scope and starting point.</p>
-        <div class="opts-grid two-col" role="group" aria-label="Business stage">
-          <button class="opt" data-q="1" data-v="new" data-label="New or early-stage" data-score='{"geo":10,"opp":20}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">New or early-stage</span><span class="opt-sub">Still building market presence</span></span></button>
-          <button class="opt" data-q="1" data-v="growing" data-label="Established and growing" data-score='{"geo":20,"opp":35}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Established and growing</span><span class="opt-sub">Trading for a few years, actively scaling</span></span></button>
-          <button class="opt" data-q="1" data-v="scaled" data-label="Scaled business" data-score='{"geo":30,"opp":50}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Scaled business</span><span class="opt-sub">Strong revenue, complex operations</span></span></button>
-          <button class="opt" data-q="1" data-v="large" data-label="Large organisation" data-score='{"geo":40,"opp":70}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Large organisation</span><span class="opt-sub">Multiple teams and stakeholders</span></span></button>
-        </div>
-        <div class="q-nav"><span></span><button class="btn-next" id="cq1n" disabled onclick="cNext(1)">Continue <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
-      </div>
-      <div class="q-card" id="cq2" style="display:none">
-        <div class="q-num">Question 02 / 07</div>
-        <div class="q-text">What is your biggest growth challenge right now?</div>
-        <p class="q-hint">Pick the one that feels most urgent.</p>
-        <div class="opts-grid" role="group" aria-label="Growth challenge">
-          <button class="opt" data-q="2" data-v="visibility" data-label="Not being found" data-score='{"geo":40,"opp":45}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">We are not being found</span><span class="opt-sub">Invisible in search and AI results</span></span></button>
-          <button class="opt" data-q="2" data-v="authority" data-label="Not recognised as experts" data-score='{"geo":45,"opp":50}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">We are not recognised as the experts we are</span><span class="opt-sub">Losing ground to louder competitors who are not actually better</span></span></button>
-          <button class="opt" data-q="2" data-v="strategy" data-label="Strategy feels scattered" data-score='{"geo":20,"opp":35}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Our strategy feels scattered or unclear</span><span class="opt-sub">No clear direction, effort spread too thin</span></span></button>
-          <button class="opt" data-q="2" data-v="conversion" data-label="Traffic not converting" data-score='{"geo":15,"opp":40}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">People visit but do not enquire or buy</span><span class="opt-sub">Traffic exists but leads are not following</span></span></button>
-        </div>
-        <div class="q-nav"><button class="btn-back" onclick="cPrev(2)">Back</button><button class="btn-next" id="cq2n" disabled onclick="cNext(2)">Continue <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
-      </div>
-      <div class="q-card" id="cq3" style="display:none">
-        <div class="q-num">Question 03 / 07</div>
-        <div class="q-text">When someone searches for what you do in an AI tool, do you come up?</div>
-        <p class="q-hint">Try asking ChatGPT or Perplexity. What actually happens?</p>
-        <div class="opts-grid" role="group" aria-label="AI visibility status">
-          <button class="opt" data-q="3" data-v="invisible" data-label="Not at all" data-score='{"geo":5,"opp":55}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">We do not appear at all</span><span class="opt-sub">Checked and found nothing</span></span></button>
-          <button class="opt" data-q="3" data-v="inconsistent" data-label="Sometimes, not consistently" data-score='{"geo":20,"opp":40}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Sometimes yes, sometimes no</span><span class="opt-sub">No reliable presence in AI results</span></span></button>
-          <button class="opt" data-q="3" data-v="partial" data-label="Appear but description is wrong" data-score='{"geo":40,"opp":25}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">We appear but the description is weak or wrong</span><span class="opt-sub">Present but not positioned correctly</span></span></button>
-          <button class="opt" data-q="3" data-v="havent" data-label="Never checked" data-score='{"geo":10,"opp":45}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">I have never checked</span><span class="opt-sub">First time AI visibility has come up for me</span></span></button>
-        </div>
-        <div class="q-nav"><button class="btn-back" onclick="cPrev(3)">Back</button><button class="btn-next" id="cq3n" disabled onclick="cNext(3)">Continue <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
-      </div>
-      <div class="q-card" id="cq4" style="display:none">
-        <div class="q-num">Question 04 / 07</div>
-        <div class="q-text">How clearly does your brand communicate what you stand for?</div>
-        <p class="q-hint">Not internally. Externally. Could a stranger describe you accurately after one visit?</p>
-        <div class="opts-grid" role="group" aria-label="Brand clarity">
-          <button class="opt" data-q="4" data-v="unclear" data-label="Not clearly" data-score='{"geo":5,"opp":45}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Not clearly - people struggle to explain us</span><span class="opt-sub">Inconsistent messaging, no single idea we are known for</span></span></button>
-          <button class="opt" data-q="4" data-v="internal" data-label="Clear inside, not outside" data-score='{"geo":20,"opp":35}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Clear to us, not yet visible externally</span><span class="opt-sub">We know what we stand for - the market does not reflect it</span></span></button>
-          <button class="opt" data-q="4" data-v="partial" data-label="Fairly clear, could be sharper" data-score='{"geo":35,"opp":25}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Fairly clear but could be much sharper</span><span class="opt-sub">Good positioning but not owning one idea distinctly</span></span></button>
-          <button class="opt" data-q="4" data-v="strong" data-label="Very clear" data-score='{"geo":50,"opp":15}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Very clear - people know exactly what we stand for</span><span class="opt-sub">Strong, distinct positioning the market recognises</span></span></button>
-        </div>
-        <div class="q-nav"><button class="btn-back" onclick="cPrev(4)">Back</button><button class="btn-next" id="cq4n" disabled onclick="cNext(4)">Continue <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
-      </div>
-      <div class="q-card" id="cq5" style="display:none">
-        <div class="q-num">Question 05 / 07</div>
-        <div class="q-text">How much are you currently investing in authority-building content or SEO?</div>
-        <p class="q-hint">Be honest. This gives you the most useful result.</p>
-        <div class="opts-grid" role="group" aria-label="Current investment">
-          <button class="opt" data-q="5" data-v="none" data-label="Nothing currently" data-score='{"geo":5,"opp":50}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Nothing currently</span><span class="opt-sub">No dedicated budget or strategy</span></span></button>
-          <button class="opt" data-q="5" data-v="basic" data-label="Some content or occasional SEO" data-score='{"geo":15,"opp":40}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">A little - some content or occasional SEO</span><span class="opt-sub">Publishing sometimes but without a clear plan</span></span></button>
-          <button class="opt" data-q="5" data-v="active" data-label="Actively investing but results are patchy" data-score='{"geo":30,"opp":30}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Actively investing but results feel inconsistent</span><span class="opt-sub">Regular effort going in but not compounding</span></span></button>
-          <button class="opt" data-q="5" data-v="strong" data-label="Strong SEO - AI visibility is the gap" data-score='{"geo":45,"opp":20}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Strong - SEO is a core channel, AI visibility is the gap</span><span class="opt-sub">Dedicated resource exists but AI presence is missing</span></span></button>
-        </div>
-        <div class="q-nav"><button class="btn-back" onclick="cPrev(5)">Back</button><button class="btn-next" id="cq5n" disabled onclick="cNext(5)">Continue <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
-      </div>
-      <div class="q-card" id="cq6" style="display:none">
-        <div class="q-num">Question 06 / 07</div>
-        <div class="q-text">Where do most of your clients or customers come from today?</div>
-        <p class="q-hint">Pick the channel that brings in the most business right now.</p>
-        <div class="opts-grid two-col" role="group" aria-label="Lead source">
-          <button class="opt" data-q="6" data-v="referral" data-label="Word of mouth or referrals" data-score='{"geo":25,"opp":40}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Word of mouth or referrals</span></span></button>
-          <button class="opt" data-q="6" data-v="organic" data-label="Google or organic search" data-score='{"geo":35,"opp":30}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Google or organic search</span></span></button>
-          <button class="opt" data-q="6" data-v="paid" data-label="Paid advertising" data-score='{"geo":15,"opp":35}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Paid advertising</span></span></button>
-          <button class="opt" data-q="6" data-v="social" data-label="Social media" data-score='{"geo":20,"opp":38}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Social media</span></span></button>
-          <button class="opt" data-q="6" data-v="outbound" data-label="Direct outreach" data-score='{"geo":15,"opp":42}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Direct outreach or sales</span></span></button>
-          <button class="opt" data-q="6" data-v="mixed" data-label="No single dominant channel" data-score='{"geo":30,"opp":32}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">No single dominant channel</span></span></button>
-        </div>
-        <div class="q-nav"><button class="btn-back" onclick="cPrev(6)">Back</button><button class="btn-next" id="cq6n" disabled onclick="cNext(6)">Continue <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
-      </div>
-      <div class="q-card" id="cq7" style="display:none">
-        <div class="q-num">Question 07 / 07</div>
-        <div class="q-text">What scope of support are you looking for?</div>
-        <p class="q-hint">This matches you to the right service. No commitment required.</p>
-        <div class="opts-grid" role="group" aria-label="Scope">
-          <button class="opt" data-q="7" data-v="audit" data-label="A focused audit first" data-pkg="AI Visibility Audit" data-score='{"geo":0,"opp":0}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">A focused audit first</span><span class="opt-sub">Understand where I stand before committing to more</span></span></button>
-          <button class="opt" data-q="7" data-v="consulting" data-label="Ongoing strategic consulting" data-pkg="Authority Strategy Consulting" data-score='{"geo":0,"opp":0}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Ongoing strategic consulting</span><span class="opt-sub">A monthly partner to build authority over time</span></span></button>
-          <button class="opt" data-q="7" data-v="workshop" data-label="A workshop for my team" data-pkg="Brand Clarity Workshop" data-score='{"geo":0,"opp":0}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">A workshop for my team</span><span class="opt-sub">Get us aligned and clear on positioning together</span></span></button>
-          <button class="opt" data-q="7" data-v="coaching" data-label="Personal coaching" data-pkg="One-to-One Coaching" data-score='{"geo":0,"opp":0}' onclick="cOpt(this)"><span class="opt-chk" aria-hidden="true"></span><span><span class="opt-lbl">Personal coaching sessions</span><span class="opt-sub">A thinking partner for my own clarity and direction</span></span></button>
-        </div>
-        <div class="q-nav"><button class="btn-back" onclick="cPrev(7)">Back</button><button class="btn-next" id="cq7n" disabled onclick="cShowResults()">See My Match <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
-      </div>
-    </div>
-
-    <div class="results-panel" id="cresults" aria-live="polite">
-      <div class="result-card">
-        <div class="result-eyebrow">Your matched service</div>
-        <div class="result-pkg-name" id="res-pkg">Audit</div>
-        <div class="result-pkg-tag" id="res-tag">AI Visibility Audit</div>
-        <div class="result-summary" id="res-summary"></div>
-        <div class="result-price-reveal">
-          <div class="rpr-label">Starting investment</div>
-          <div class="rpr-amount" id="res-price">R12,500</div>
-          <p class="rpr-desc" id="res-price-desc">One-time project. Final scope confirmed after an initial conversation.</p>
-        </div>
-        <div class="proposal-box">
-          <div class="proposal-box-label">Get a personalised proposal</div>
-          <p class="proposal-box-desc">Enter your email and Lucy will send you a proposal tailored to your location, scope, and situation within one business day.</p>
-          <form class="proposal-form-row" id="cpform" onsubmit="return cSubmit(event)" action="https://formspree.io/f/REPLACE_WITH_LIVE_ID" method="POST">
-            <input type="hidden" name="_subject" id="cp-subject" value="Calculator Proposal Request">
-            <input type="hidden" name="source" value="services-calculator">
-            <input type="hidden" name="matched_service" id="cp-service" value="">
-            <label for="cp-email" class="sr-only">Your email address</label>
-            <input type="email" id="cp-email" name="email" class="proposal-input" placeholder="your@email.com" required autocomplete="email">
-            <button type="submit" class="proposal-btn">Send Proposal <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          </form>
-          <div class="proposal-success" id="cp-success" style="display:none" aria-live="polite">
-            <div class="ps-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <p class="ps-text">On its way. You will hear from Lucy within one business day with pricing tailored to your market and a clear next step.</p>
-          </div>
-          <p class="proposal-fine">No spam. No automated sequences. One real email from Lucy.</p>
-        </div>
-        <button class="result-restart" onclick="cRestart()">Start Over</button>
-      </div>
-      <p class="calc-disclaimer">Results are indicative. Final scope and investment confirmed after an initial conversation. All prices are starting rates.</p>
-    </div>
+    <div class="match-bar"><div class="match-bar-fill" id="matchbar"></div></div>
+    <div class="match-body" id="matchbody"></div>
   </div>
 </section>
 
-<!-- FIVE WAYS -->
-<section class="services-sec" aria-labelledby="services-h">
-  <div class="services-inner">
-    <div class="services-intro anim">
+<section class="svc-sec" aria-labelledby="svcgrid-h">
+  <div class="svc-inner">
+    <div class="svc-head anim">
       <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Services</span></div>
-      <h2 class="sec-h2" id="services-h">Five ways to work together.</h2>
+      <h2 class="sec-h2" id="svcgrid-h">Five ways to work together.</h2>
       <p class="sec-body">All work is built on the Become the Answer framework. Each service can stand alone or connect into a broader strategy depending on where you are and what you need.</p>
     </div>
-
-    <div class="services-grid">
-
-      <article class="svc-card anim" id="audit" aria-labelledby="audit-h">
-        <div class="svc-num" aria-hidden="true">01</div>
-        <div class="svc-tag">AI Visibility Audit</div>
-        <h3 class="svc-name" id="audit-h">Know exactly where you stand in AI search.</h3>
-        <p class="svc-desc">A structured review across all three dimensions of the Recognition Triangle. You get a clear picture of what is working, what is leaking, and where the highest-impact fixes are.</p>
-        <div class="svc-price-from">Starting from</div>
-        <div class="svc-price price-display" data-zar="R12,500" data-usd="$900">R12,500</div>
-        <div class="svc-period">One-time project</div>
-        <div class="svc-format">One-time &bull; Remote &bull; 5-10 business days</div>
-        <a href="contact.html" class="svc-cta">Enquire <span class="svc-cta-arr" aria-hidden="true"></span></a>
+    <div class="svc-grid">
+      <article class="svc-card anim" id="audit">
+        <span class="svc-num" aria-hidden="true">01</span>
+        <p class="svc-tag">AI Visibility Audit</p>
+        <h3 class="svc-title">Know exactly where you stand in AI search.</h3>
+        <p class="svc-body">A structured review across all three dimensions of the Recognition Triangle. You get a clear picture of what is working, what is leaking, and where the highest-impact fixes are.</p>
+        <p class="svc-price-lbl">Starting from</p>
+        <p class="svc-price" data-zar="R12,500" data-usd="$900">R12,500</p>
+        <p class="svc-price-unit">One-time audit</p>
+        <p class="svc-meta">One-time &middot; Remote &middot; 5 to 10 business days</p>
+        <a href="contact.html" class="svc-link">Enquire <span class="arr"></span></a>
       </article>
-
-      <article class="svc-card anim d1" id="consulting" aria-labelledby="consulting-h">
-        <div class="svc-num" aria-hidden="true">02</div>
-        <div class="svc-tag">Authority Strategy Consulting</div>
-        <h3 class="svc-name" id="consulting-h">Ongoing strategy for brands building durable authority.</h3>
-        <p class="svc-desc">Monthly retainer work for founders and CMOs who need a long-term partner. We build the structural authority signals that AI models actually use to decide who to cite.</p>
-        <div class="svc-price-from">Starting from</div>
-        <div class="svc-price price-display" data-zar="R15,000" data-usd="$1,150">R15,000</div>
-        <div class="svc-period">Per month</div>
-        <div class="svc-format">Monthly retainer &bull; Virtual &bull; Min. 3 months</div>
-        <a href="contact.html" class="svc-cta">Enquire <span class="svc-cta-arr" aria-hidden="true"></span></a>
+      <article class="svc-card anim d1" id="consulting">
+        <span class="svc-num" aria-hidden="true">02</span>
+        <p class="svc-tag">Authority Strategy Consulting</p>
+        <h3 class="svc-title">Ongoing strategy for brands building durable authority.</h3>
+        <p class="svc-body">Monthly retainer work for founders and CMOs who need a long-term partner. We build the structural authority signals that AI models actually use to decide who to cite.</p>
+        <p class="svc-price-lbl">Starting from</p>
+        <p class="svc-price" data-zar="R15,000" data-usd="$1,150">R15,000</p>
+        <p class="svc-price-unit">Per month</p>
+        <p class="svc-meta">Monthly retainer &middot; Virtual &middot; Minimum 3 months</p>
+        <a href="contact.html" class="svc-link">Enquire <span class="arr"></span></a>
       </article>
-
-      <article class="svc-card anim d2" id="workshop" aria-labelledby="workshop-h">
-        <div class="svc-num" aria-hidden="true">03</div>
-        <div class="svc-tag">Brand Clarity Workshop</div>
-        <h3 class="svc-name" id="workshop-h">Get your team aligned on what you stand for.</h3>
-        <p class="svc-desc">A structured, facilitated group session applying the Recognition Triangle to your brand's positioning and messaging. Produces a working document your team can act on immediately.</p>
-        <div class="svc-price-from">Starting from</div>
-        <div class="svc-price price-display" data-zar="R18,000" data-usd="$1,300">R18,000</div>
-        <div class="svc-period">Per workshop</div>
-        <div class="svc-format">In-person &bull; Half or full day &bull; 4-30 people</div>
-        <a href="contact.html" class="svc-cta">Enquire <span class="svc-cta-arr" aria-hidden="true"></span></a>
+      <article class="svc-card anim d2" id="workshop">
+        <span class="svc-num" aria-hidden="true">03</span>
+        <p class="svc-tag">Brand Clarity Workshop</p>
+        <h3 class="svc-title">Get your team aligned on what you stand for.</h3>
+        <p class="svc-body">A structured, facilitated group session applying the Recognition Triangle to your brand's positioning and messaging. Produces a working document your team can act on immediately.</p>
+        <p class="svc-price-lbl">Starting from</p>
+        <p class="svc-price" data-zar="R18,000" data-usd="$1,300">R18,000</p>
+        <p class="svc-price-unit">Per workshop</p>
+        <p class="svc-meta">In-person &middot; Half or full day &middot; 4 to 30 people</p>
+        <a href="contact.html" class="svc-link">Enquire <span class="arr"></span></a>
       </article>
-
-      <article class="svc-card anim" id="coaching" aria-labelledby="coaching-h">
-        <div class="svc-num" aria-hidden="true">04</div>
-        <div class="svc-tag">One-to-One Coaching</div>
-        <h3 class="svc-name" id="coaching-h">Clarity, direction, and a real thinking partner.</h3>
-        <p class="svc-desc">Virtual sessions for founders, executives, and marketing leaders who need space to think clearly and make better decisions. Covers positioning, AI visibility, growth leadership, and more.</p>
-        <div class="svc-price-from">Starting from</div>
-        <div class="svc-price price-display" data-zar="R2,500" data-usd="$175">R2,500</div>
-        <div class="svc-period">Per session</div>
-        <div class="svc-format">Virtual &bull; 60-minute sessions &bull; Packages available</div>
-        <a href="contact.html" class="svc-cta">Enquire <span class="svc-cta-arr" aria-hidden="true"></span></a>
+      <article class="svc-card anim" id="coaching">
+        <span class="svc-num" aria-hidden="true">04</span>
+        <p class="svc-tag">One-to-One Coaching</p>
+        <h3 class="svc-title">Clarity, direction, and a real thinking partner.</h3>
+        <p class="svc-body">Virtual sessions for founders, executives, and marketing leaders who need space to think clearly and make better decisions. Covers positioning, AI visibility, growth leadership, and more.</p>
+        <p class="svc-price-lbl">Starting from</p>
+        <p class="svc-price" data-zar="R2,500" data-usd="$175">R2,500</p>
+        <p class="svc-price-unit">Per session</p>
+        <p class="svc-meta">Virtual &middot; 90-minute sessions &middot; Packages available</p>
+        <a href="contact.html" class="svc-link">Enquire <span class="arr"></span></a>
       </article>
-
-      <article class="svc-card svc-card-herworth anim d1" aria-labelledby="herworth-card-h">
-        <div class="svc-num" aria-hidden="true">05</div>
-        <div class="svc-tag">HER-Worth</div>
-        <h3 class="svc-name" id="herworth-card-h">For women building on their own terms.</h3>
-        <p class="svc-desc">Consulting and coaching for women founders and executives. Same rigour as every other engagement. A different conversation. See the HER-Worth page for full programme details.</p>
-        <div style="margin-top:auto; padding-top:20px; border-top:1px solid var(--border-light);">
-          <div style="font-family:var(--sans);font-size:14px;color:var(--muted-light);margin-bottom:4px;">Multiple participation options available.</div>
-        </div>
-        <a href="her-worth.html" class="svc-cta" style="margin-top:16px;">Visit HER-Worth <span class="svc-cta-arr" aria-hidden="true"></span></a>
+      <article class="svc-card svc-card-hw anim d1" id="herworth">
+        <span class="svc-num" aria-hidden="true">05</span>
+        <p class="svc-tag">HER-Worth</p>
+        <h3 class="svc-title">For women building on their own terms.</h3>
+        <p class="svc-body">Consulting and coaching for women founders and executives. Same rigour as every other engagement. A different conversation. See the HER-Worth page for full programme details.</p>
+        <p class="svc-meta" style="border-top:none;padding-top:0">Multiple participation options available</p>
+        <a href="her-worth.html" class="svc-link">Start HER-Worth <span class="arr"></span></a>
       </article>
-
-      <article class="svc-card anim d2" id="speaking" aria-labelledby="speaking-card-h">
-        <div class="svc-num" aria-hidden="true">06</div>
-        <div class="svc-tag">Speaking and Keynotes</div>
-        <h3 class="svc-name" id="speaking-card-h">Keynotes and workshops on AI search and brand authority.</h3>
-        <p class="svc-desc">For marketing teams, leadership groups, and conferences. Keynotes from 30 minutes. Full-day facilitated workshops for corporate teams. In-person and virtual.</p>
-        <div class="svc-price-from">Starting from</div>
-        <div class="svc-price price-display" data-zar="R15,000" data-usd="$950">R15,000</div>
-        <div class="svc-period">Per engagement</div>
-        <div class="svc-format">In-person and virtual &bull; 30 min to full day</div>
-        <a href="contact.html" class="svc-cta">Book Lucy <span class="svc-cta-arr" aria-hidden="true"></span></a>
+      <article class="svc-card anim d2">
+        <span class="svc-num" aria-hidden="true">06</span>
+        <p class="svc-tag">Speaking and Keynotes</p>
+        <h3 class="svc-title">Keynotes and workshops on AI search and brand authority.</h3>
+        <p class="svc-body">For marketing teams, leadership groups, and conferences. Keynotes from 30 minutes. Full-day facilitated workshops for corporate teams. In-person and virtual.</p>
+        <p class="svc-price-lbl">Starting from</p>
+        <p class="svc-price" data-zar="R15,000" data-usd="$950">R15,000</p>
+        <p class="svc-price-unit">Per engagement</p>
+        <p class="svc-meta">Keynotes and virtual &middot; 30 minutes to full day</p>
+        <a href="#speaking" class="svc-link">Book Lucy <span class="arr"></span></a>
       </article>
-
     </div>
   </div>
 </section>
 
-<!-- SPEAKING DETAIL -->
-<section class="speaking-sec" aria-labelledby="speaking-h">
-  <div class="speaking-inner">
-    <div class="anim">
+<section class="speak-sec" id="speaking" aria-labelledby="speak-h">
+  <div class="speak-inner">
+    <div class="speak-copy anim">
       <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Speaking and Keynotes</span></div>
-      <h2 class="sec-h2 sec-h2-light" id="speaking-h">Bring the recognition economy into your event or team.</h2>
-      <p class="sec-body sec-body-dark">Lucy speaks on AI search visibility, brand authority, the recognition economy, and the human side of growth leadership. Sessions range from 30-minute keynotes to full-day facilitated workshops.</p>
-      <div style="margin-top:32px;">
-        <a href="contact.html" class="cta-primary">Book Lucy to Speak <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
+      <h2 class="sec-h2 sec-h2-light" id="speak-h">Bring the recognition economy into your event or team.</h2>
+      <p class="sec-body">Lucy speaks on AI search visibility, brand authority, the recognition economy, and the human side of growth leadership. Sessions range from 30-minute keynotes to full-day facilitated workshops.</p>
+      <a href="contact.html" class="cta-primary">
+        Book Lucy to Speak
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
     <div class="anim d1">
-      <div class="speaking-formats" role="list">
-        <div class="speaking-format anim" role="listitem">
-          <div><div class="sf-name">Keynote Address</div><div class="sf-desc">30 to 60 minutes. Conference, summit, or leadership event. In-person or virtual.</div></div>
-          <div class="sf-price price-display" data-zar="From R15,000" data-usd="From $950">From R15,000</div>
+      <div class="speak-rates">
+        <div class="speak-rate">
+          <div class="speak-rate-top">
+            <span class="speak-rate-name">Keynote Address</span>
+            <span class="speak-rate-price">From <span data-zar="R15,000" data-usd="$950">R15,000</span></span>
+          </div>
+          <p>30 to 60 minutes. Conference, summit, or leadership event. In-person or virtual.</p>
         </div>
-        <div class="speaking-format anim d1" role="listitem">
-          <div><div class="sf-name">Corporate Workshop</div><div class="sf-desc">Half or full day. In-person. Teams of 4 to 30. Applied framework, not theory.</div></div>
-          <div class="sf-price price-display" data-zar="From R25,000" data-usd="From $1,500">From R25,000</div>
+        <div class="speak-rate">
+          <div class="speak-rate-top">
+            <span class="speak-rate-name">Corporate Workshop</span>
+            <span class="speak-rate-price">From <span data-zar="R25,000" data-usd="$1,600">R25,000</span></span>
+          </div>
+          <p>Half or full day. In-person. Teams of 4 to 30. Applied framework, not theory.</p>
         </div>
-        <div class="speaking-format anim d2" role="listitem">
-          <div><div class="sf-name">Panel or Fireside</div><div class="sf-desc">90 minutes. Guided conversation format. In-person or virtual.</div></div>
-          <div class="sf-price price-display" data-zar="From R12,000" data-usd="From $800">From R12,000</div>
+        <div class="speak-rate">
+          <div class="speak-rate-top">
+            <span class="speak-rate-name">Panel or Fireside</span>
+            <span class="speak-rate-price">From <span data-zar="R12,000" data-usd="$775">R12,000</span></span>
+          </div>
+          <p>90 minutes. Guided conversation format. In-person or virtual.</p>
         </div>
       </div>
-      <div class="topic-pill-wrap" aria-label="Speaking topics">
-        <span class="topic-pill">AI Search Visibility</span>
-        <span class="topic-pill">The Recognition Economy</span>
-        <span class="topic-pill">Brand Authority</span>
-        <span class="topic-pill">GEO and AI Search</span>
-        <span class="topic-pill">Women in Growth</span>
-        <span class="topic-pill">Marketing Leadership</span>
-        <span class="topic-pill">The Machine Gatekeeper</span>
-        <span class="topic-pill">Authority Debt</span>
+      <div class="speak-tags" aria-label="Speaking topics">
+        <span>AI Search Visibility</span>
+        <span>The Recognition Economy</span>
+        <span>Brand Authority</span>
+        <span>GEO and AI Search</span>
+        <span>Women in Growth</span>
+        <span>Marketing Leadership</span>
+        <span>The Machine Gatekeeper</span>
+        <span>Authority Debt</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA BANNER -->
-<section class="cta-banner" aria-labelledby="cta-h">
+<section class="cta-banner" aria-labelledby="cta-ban-h">
   <div class="cta-banner-inner">
     <div class="cta-banner-text anim">
-      <h2 id="cta-h">Still not sure where to start?</h2>
+      <h2 id="cta-ban-h">Still not sure where to start?</h2>
       <p>Take the Recognition Diagnostic first. 15 questions, 5 minutes, and a clear picture of where your brand sits. Then we talk.</p>
     </div>
-    <div class="anim d1" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
-      <a href="diagnostic.html" class="cta-banner-primary">Take the Diagnostic <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="contact.html" style="color:var(--charcoal);font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;">Or contact Lucy directly <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="cta-banner-btns anim d1">
+      <a href="diagnostic.html" class="cta-banner-primary">
+        Take the Diagnostic
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="contact.html" class="cta-banner-ghost">
+        Or contact Lucy directly
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -643,40 +573,31 @@ a{color:inherit;text-decoration:none;}
       <div>
         <img src="images/Aingworth_Main_Logo2.png.png" alt="Aingworth" style="width:56px;height:auto;display:block;filter:brightness(100) contrast(2);margin-bottom:18px;">
         <p class="fdesc">Brand authority and AI visibility consulting for founders, CMOs, and executives who need to be found for the right reasons.</p>
+        <a href="mailto:info@aingworth.com" class="fmail">info@aingworth.com</a>
         <nav class="fsocials" aria-label="Social media">
-          <a href="https://www.linkedin.com/in/lisinda-lucy/" class="fsoc" aria-label="LinkedIn" rel="noopener">in</a>
-          <a href="https://www.youtube.com/@aingworth" class="fsoc" aria-label="YouTube" rel="noopener">yt</a>
-          <a href="https://www.instagram.com/lucy_aingworth/" class="fsoc" aria-label="Instagram" rel="noopener">ig</a>
-          <a href="https://www.tiktok.com/@aingworth" class="fsoc" aria-label="TikTok" rel="noopener">tt</a>
-          <a href="https://bsky.app/profile/lucyaingworth.bsky.social" class="fsoc" aria-label="Bluesky" rel="noopener">bs</a>
+          <a href="https://www.linkedin.com/in/lisinda-lucy/" class="fsoc" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+          <a href="https://www.instagram.com/lucy_aingworth/" class="fsoc" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+          <a href="https://www.tiktok.com/@aingworth" class="fsoc" aria-label="TikTok" target="_blank" rel="noopener">tt</a>
+          <a href="https://x.com/lucy_aingworth" class="fsoc" aria-label="X (Twitter)" target="_blank" rel="noopener">x</a>
+          <a href="https://www.threads.net/@lucy_aingworth" class="fsoc" aria-label="Threads" target="_blank" rel="noopener">th</a>
+          <a href="https://bsky.app/profile/lucyaingworth.bsky.social" class="fsoc" aria-label="Bluesky" target="_blank" rel="noopener">bs</a>
         </nav>
       </div>
       <div class="fcol">
-        <p class="fcol-h">Services</p>
+        <p class="fcol-h">Work</p>
         <ul>
-          <li><a href="#audit">AI Visibility Audit</a></li>
-          <li><a href="#consulting">Authority Consulting</a></li>
-          <li><a href="#workshop">Brand Workshop</a></li>
-          <li><a href="#coaching">Coaching</a></li>
-          <li><a href="#speaking">Speaking</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="her-worth.html">HER-Worth</a></li>
+          <li><a href="diagnostic.html">Free Diagnostic</a></li>
         </ul>
       </div>
       <div class="fcol">
-        <p class="fcol-h">Resources</p>
+        <p class="fcol-h">Explore</p>
         <ul>
           <li><a href="book.html">The Book</a></li>
-          <li><a href="diagnostic.html">Free Diagnostic</a></li>
-          <li><a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener">LinkedIn Newsletter</a></li>
-        </ul>
-      </div>
-      <div class="fcol">
-        <p class="fcol-h">Company</p>
-        <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener">The Authority Signal</a></li>
           <li><a href="about.html">About Lucy</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
@@ -688,24 +609,7 @@ a{color:inherit;text-decoration:none;}
 </footer>
 
 <script>
-'use strict';
-
-var activeCurrency = 'zar';
-function setCurrency(c) {
-  activeCurrency = c;
-  document.getElementById('btn-zar').classList.toggle('active', c === 'zar');
-  document.getElementById('btn-zar').setAttribute('aria-pressed', c === 'zar');
-  document.getElementById('btn-usd').classList.toggle('active', c === 'usd');
-  document.getElementById('btn-usd').setAttribute('aria-pressed', c === 'usd');
-  document.querySelectorAll('.price-display').forEach(function(el) {
-    el.textContent = c === 'usd' ? el.dataset.usd : el.dataset.zar;
-  });
-  document.querySelectorAll('.hql-price[data-zar]').forEach(function(el) {
-    el.textContent = c === 'usd' ? el.dataset.usd : el.dataset.zar;
-  });
-  updateResultPrice();
-}
-
+/* ===== Nav drawer ===== */
 var burger = document.querySelector('.nav-burger');
 var drawer = document.getElementById('ndrawer');
 burger.addEventListener('click', function() {
@@ -716,22 +620,25 @@ burger.addEventListener('click', function() {
 drawer.querySelectorAll('a').forEach(function(a) {
   a.addEventListener('click', function() {
     drawer.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-expanded','false');
     document.body.style.overflow = '';
   });
 });
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape' && drawer.classList.contains('open')) {
     drawer.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-expanded','false');
     document.body.style.overflow = '';
     burger.focus();
   }
 });
-var nav = document.querySelector('.nav');
+
+/* ===== Scroll progress + reveals ===== */
+var progressBar = document.getElementById('progress');
 window.addEventListener('scroll', function() {
-  nav.style.background = scrollY > 10 ? 'rgba(26,26,26,.99)' : 'rgba(26,26,26,.97)';
-}, { passive: true });
+  var max = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + '%';
+}, {passive:true});
 
 if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
   var obs = new IntersectionObserver(function(entries) {
@@ -742,111 +649,189 @@ if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
   document.querySelectorAll('.anim').forEach(function(el) { obs.observe(el); });
 }
 
-var state = { current: 1, total: 7, answers: {}, scores: { geo: 0, opp: 0 } };
-var servicePrices = {
-  'AI Visibility Audit': { zar: 'R12,500', usd: '$900', period: 'One-time project', desc: 'One-time engagement. Final scope confirmed after an initial conversation.' },
-  'Authority Strategy Consulting': { zar: 'R15,000', usd: '$1,150', period: 'Per month', desc: 'Monthly retainer. Minimum 3 months.' },
-  'Brand Clarity Workshop': { zar: 'R18,000', usd: '$1,300', period: 'Per workshop', desc: 'In-person. Half or full day.' },
-  'One-to-One Coaching': { zar: 'R2,500', usd: '$175', period: 'Per session', desc: 'Virtual 60-minute sessions. Packages available.' }
-};
-function cOpt(btn) {
-  var q = btn.dataset.q;
-  btn.closest('.opts-grid').querySelectorAll('.opt').forEach(function(b) { b.classList.remove('sel'); });
-  btn.classList.add('sel');
-  state.answers[q] = { v: btn.dataset.v, label: btn.dataset.label, score: JSON.parse(btn.dataset.score), pkg: btn.dataset.pkg || null };
-  var nb = document.getElementById('cq' + q + 'n');
-  if (nb) nb.disabled = false;
+/* ===== Currency toggle ===== */
+var curBtns = document.querySelectorAll('.cur-btn');
+function setCurrency(cur) {
+  document.querySelectorAll('[data-zar]').forEach(function(el) {
+    el.textContent = el.getAttribute('data-' + cur);
+  });
+  curBtns.forEach(function(b) { b.classList.toggle('active', b.dataset.cur === cur); });
+  window.__cur = cur;
 }
-function cNext(current) {
-  if (!state.answers[current]) return;
-  var s = state.answers[current].score;
-  state.scores.geo += s.geo; state.scores.opp += s.opp;
-  var next = current + 1;
-  document.getElementById('cq' + current).style.display = 'none';
-  document.getElementById('cq' + next).style.display = 'block';
-  state.current = next;
-  cUpdateProgress(next);
-  document.getElementById('cqwrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-function cPrev(current) {
-  if (state.answers[current]) { var s = state.answers[current].score; state.scores.geo -= s.geo; state.scores.opp -= s.opp; }
-  var prev = current - 1;
-  document.getElementById('cq' + current).style.display = 'none';
-  document.getElementById('cq' + prev).style.display = 'block';
-  state.current = prev;
-  cUpdateProgress(prev);
-}
-function cUpdateProgress(q) {
-  var pct = Math.round(((q - 1) / state.total) * 100);
-  document.getElementById('cpfill').style.width = pct + '%';
-  document.getElementById('cpcount').textContent = 'Question ' + q + ' of ' + state.total;
-  document.getElementById('cpfill').closest('[role="progressbar"]').setAttribute('aria-valuenow', pct);
-}
-function cShowResults() {
-  if (!state.answers[7]) return;
-  var pkg = state.answers[7].pkg || 'AI Visibility Audit';
-  document.getElementById('cqwrap').style.display = 'none';
-  document.getElementById('cpwrap').style.display = 'none';
-  var rp = document.getElementById('cresults');
-  rp.classList.add('visible');
-  document.getElementById('res-pkg').textContent = pkg.split(' ')[0];
-  document.getElementById('res-tag').textContent = pkg;
-  document.getElementById('cp-service').value = pkg;
-  document.getElementById('cp-subject').value = 'Calculator Match: ' + pkg;
-  var summary = document.getElementById('res-summary');
-  var rows = [
-    { label: 'Business stage', val: state.answers[1] ? state.answers[1].label : '' },
-    { label: 'Biggest challenge', val: state.answers[2] ? state.answers[2].label : '' },
-    { label: 'AI visibility', val: state.answers[3] ? state.answers[3].label : '' },
-    { label: 'Matched service', val: pkg }
+curBtns.forEach(function(b) {
+  b.addEventListener('click', function() { setCurrency(b.dataset.cur); });
+});
+window.__cur = 'zar';
+
+/* ===== Service matcher ===== */
+(function () {
+  var body = document.getElementById('matchbody');
+  var bar = document.getElementById('matchbar');
+  var count = document.getElementById('matchcount');
+  if (!body) return;
+
+  var SERVICES = {
+    audit:      { name: 'AI Visibility Audit', zar: 'R12,500 one-time', usd: '$900 one-time', href: '#audit',
+                  why: 'You need a clear picture before committing to a direction. The audit maps your Recognition Triangle and shows where the highest-impact fixes are.' },
+    consulting: { name: 'Authority Strategy Consulting', zar: 'R15,000 per month', usd: '$1,150 per month', href: '#consulting',
+                  why: 'You are building for the long term and need a strategic partner. The retainer builds the structural authority signals AI models actually cite.' },
+    workshop:   { name: 'Brand Clarity Workshop', zar: 'R18,000 per workshop', usd: '$1,300 per workshop', href: '#workshop',
+                  why: 'Your team needs to align on what you stand for. One facilitated session produces a working positioning document you can act on immediately.' },
+    coaching:   { name: 'One-to-One Coaching', zar: 'R2,500 per session', usd: '$175 per session', href: '#coaching',
+                  why: 'You need space to think clearly and a real thinking partner. Virtual sessions covering positioning, AI visibility and growth leadership.' },
+    speaking:   { name: 'Speaking and Keynotes', zar: 'From R15,000 per engagement', usd: 'From $950 per engagement', href: '#speaking',
+                  why: 'Your team or event needs to understand the shift to the recognition economy. From 30-minute keynotes to full-day applied workshops.' },
+    herworth:   { name: 'HER-Worth', zar: 'Multiple participation options', usd: 'Multiple participation options', href: 'her-worth.html',
+                  why: 'Built for women founders and executives. The same rigour as every other engagement, and a different conversation.' }
+  };
+
+  var QUESTIONS = [
+    { q: 'How would you describe your business right now?', help: 'This helps match you to the right scope and starting point.',
+      opts: [
+        { t: 'New or early-stage', d: 'Still building market presence', w: { audit: 1, coaching: 1 } },
+        { t: 'Established and growing', d: 'Trading for a few years, actively scaling', w: { audit: 1, consulting: 1 } },
+        { t: 'Scaled business', d: 'Strong revenue, complex operations', w: { consulting: 2 } },
+        { t: 'Large organisation', d: 'Multiple teams and stakeholders', w: { workshop: 1, speaking: 1 } }
+      ] },
+    { q: 'What is the problem you most need solved?', help: 'Pick the one that stings the most.',
+      opts: [
+        { t: 'We are invisible in AI search', d: 'AI assistants never mention us', w: { audit: 2, consulting: 1 } },
+        { t: 'Our positioning is unclear', d: 'Even we describe it differently', w: { workshop: 2 } },
+        { t: 'We need a long-term strategy partner', d: 'Someone in it with us, month after month', w: { consulting: 2 } },
+        { t: 'I need a thinking partner', d: 'Space to think and decide better', w: { coaching: 2 } }
+      ] },
+    { q: 'Who is this for?', help: 'The right format depends on who is in the room.',
+      opts: [
+        { t: 'Just me', d: 'My own positioning and decisions', w: { coaching: 2 } },
+        { t: 'My leadership team', d: 'Founders, partners, executives', w: { workshop: 1, consulting: 1 } },
+        { t: 'My marketing team', d: 'The people doing the daily work', w: { consulting: 1, speaking: 1 } },
+        { t: 'A whole event or organisation', d: 'Conference, summit, company-wide', w: { speaking: 2 } }
+      ] },
+    { q: 'What pace suits you?', help: 'Honest answer. There is no wrong one.',
+      opts: [
+        { t: 'Diagnose first, then decide', d: 'Show me where I stand before I commit', w: { audit: 2 } },
+        { t: 'A focused one-off intervention', d: 'One strong session or engagement', w: { workshop: 1, speaking: 1 } },
+        { t: 'A sustained build over months', d: 'Compounding work, reviewed monthly', w: { consulting: 2, coaching: 1 } }
+      ] },
+    { q: 'What budget range are you working with?', help: 'Starting rates, so the recommendation is realistic.',
+      opts: [
+        { t: 'Under R5,000 / $350', d: 'Start small, prove the value', w: { coaching: 2 } },
+        { t: 'R10,000 to R20,000 / $700 to $1,400', d: 'A meaningful once-off investment', w: { audit: 1, workshop: 1, speaking: 1 } },
+        { t: 'R15,000+ / $1,100+ per month', d: 'An ongoing strategic line item', w: { consulting: 2 } },
+        { t: 'Flexible for the right work', d: 'Scope matters more than price', w: { consulting: 1, audit: 1 } }
+      ] },
+    { q: 'What format works best?', help: 'Most engagements are remote-friendly.',
+      opts: [
+        { t: 'Remote', d: 'Virtual sessions suit us', w: { coaching: 1, consulting: 1, audit: 1 } },
+        { t: 'In-person', d: 'Same room, real energy', w: { workshop: 1, speaking: 1 } },
+        { t: 'Either', d: 'Whatever the work needs', w: {} }
+      ] },
+    { q: 'Is HER-Worth relevant to you?', help: 'Consulting and coaching for women founders and executives.',
+      opts: [
+        { t: 'Yes, that sounds like me', d: 'Tell me about HER-Worth', w: { herworth: 6 } },
+        { t: 'The standard track is right', d: 'Match me on my answers so far', w: {} }
+      ] }
   ];
-  summary.innerHTML = rows.map(function(r) {
-    return '<div class="rs-item"><div class="rs-label">' + r.label + '</div><div class="rs-value">' + r.val + '</div></div>';
-  }).join('');
-  updateResultPrice();
-  rp.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-function updateResultPrice() {
-  var pkg = state.answers[7] ? (state.answers[7].pkg || 'AI Visibility Audit') : null;
-  if (!pkg) return;
-  var data = servicePrices[pkg];
-  if (!data) return;
-  var amount = activeCurrency === 'usd' ? data.usd : data.zar;
-  var el = document.getElementById('res-price');
-  var desc = document.getElementById('res-price-desc');
-  if (el) el.textContent = amount;
-  if (desc) desc.textContent = data.period + '. ' + data.desc;
-}
-function cRestart() {
-  state = { current: 1, total: 7, answers: {}, scores: { geo: 0, opp: 0 } };
-  document.getElementById('cresults').classList.remove('visible');
-  document.getElementById('cp-success').style.display = 'none';
-  document.getElementById('cpform').style.display = 'flex';
-  for (var i = 1; i <= 7; i++) {
-    var el = document.getElementById('cq' + i);
-    if (el) { el.style.display = i === 1 ? 'block' : 'none'; el.querySelectorAll('.opt').forEach(function(b) { b.classList.remove('sel'); }); }
-    var nb = document.getElementById('cq' + i + 'n');
-    if (nb) nb.disabled = true;
+
+  var idx = 0;
+  var picks = new Array(QUESTIONS.length).fill(null);
+
+  function render() {
+    var Q = QUESTIONS[idx];
+    count.textContent = 'Question ' + (idx + 1) + ' of ' + QUESTIONS.length;
+    bar.style.width = ((idx) / QUESTIONS.length * 100) + '%';
+    var html = '<p class="match-qn">Question ' + String(idx + 1).padStart(2, '0') + ' / ' + String(QUESTIONS.length).padStart(2, '0') + '</p>';
+    html += '<h3 class="match-q">' + Q.q + '</h3>';
+    html += '<p class="match-help">' + Q.help + '</p>';
+    html += '<div class="match-opts">';
+    Q.opts.forEach(function (o, oi) {
+      html += '<button type="button" class="match-opt' + (picks[idx] === oi ? ' sel' : '') + '" data-oi="' + oi + '">' +
+              '<span class="match-opt-t">' + o.t + '</span><span class="match-opt-d">' + o.d + '</span></button>';
+    });
+    html += '</div>';
+    html += '<div class="match-ctrl">' +
+            '<button type="button" class="match-back" id="mback"' + (idx === 0 ? ' disabled' : '') + '>&larr; Back</button>' +
+            '<button type="button" class="cta-primary match-next" id="mnext"' + (picks[idx] === null ? ' disabled' : '') + '>' +
+            (idx === QUESTIONS.length - 1 ? 'See my match' : 'Continue') + '</button></div>';
+    body.innerHTML = html;
+
+    body.querySelectorAll('.match-opt').forEach(function (b) {
+      b.addEventListener('click', function () {
+        picks[idx] = parseInt(b.dataset.oi, 10);
+        body.querySelectorAll('.match-opt').forEach(function (x) { x.classList.remove('sel'); });
+        b.classList.add('sel');
+        document.getElementById('mnext').removeAttribute('disabled');
+      });
+    });
+    document.getElementById('mback').addEventListener('click', function () { if (idx > 0) { idx--; render(); } });
+    document.getElementById('mnext').addEventListener('click', function () {
+      if (picks[idx] === null) return;
+      if (idx < QUESTIONS.length - 1) { idx++; render(); } else { result(); }
+    });
   }
-  document.getElementById('cqwrap').style.display = 'block';
-  document.getElementById('cpwrap').style.display = 'block';
-  cUpdateProgress(1);
-}
-async function cSubmit(e) {
-  e.preventDefault();
-  var btn = document.querySelector('.proposal-btn');
-  var orig = btn.textContent;
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-  try {
-    var res = await fetch(e.target.action, { method: 'POST', body: new FormData(e.target), headers: { 'Accept': 'application/json' } });
-    if (res.ok) {
-      document.getElementById('cpform').style.display = 'none';
-      document.getElementById('cp-success').style.display = 'flex';
-    } else { btn.textContent = 'Try Again'; btn.disabled = false; }
-  } catch { btn.textContent = 'Try Again'; btn.disabled = false; }
-  return false;
-}
+
+  function result() {
+    var scores = { audit: 0, consulting: 0, workshop: 0, coaching: 0, speaking: 0, herworth: 0 };
+    var summary = [];
+    QUESTIONS.forEach(function (Q, qi) {
+      var o = Q.opts[picks[qi]];
+      summary.push(Q.q + ' ' + o.t);
+      Object.keys(o.w).forEach(function (k) { scores[k] += o.w[k]; });
+    });
+    var order = ['herworth', 'consulting', 'audit', 'workshop', 'coaching', 'speaking'];
+    var winner = order[0];
+    order.forEach(function (k) { if (scores[k] > scores[winner]) winner = k; });
+    var S = SERVICES[winner];
+    var cur = window.__cur || 'zar';
+
+    count.textContent = 'Your match';
+    bar.style.width = '100%';
+    body.innerHTML =
+      '<div class="match-result">' +
+      '<p class="match-result-lbl">Your matched starting point</p>' +
+      '<h3>' + S.name + '</h3>' +
+      '<p class="match-result-why">' + S.why + '</p>' +
+      '<p class="match-result-price" data-zar="' + S.zar + '" data-usd="' + S.usd + '">' + S[cur] + '</p>' +
+      '<div class="match-result-ctas">' +
+      '<a href="' + S.href + '" class="cta-primary">See the service</a>' +
+      '<a href="contact.html" class="match-back" style="opacity:1">Or talk to Lucy &rarr;</a>' +
+      '</div>' +
+      '<div class="match-form-wrap"><p>Want this as a personalised proposal? Enter your email and it comes straight to your inbox.</p>' +
+      '<form class="match-form" action="https://formspree.io/f/REPLACE_WITH_LIVE_ID" method="POST">' +
+      '<label for="match-email" class="sr-only">Your email address</label>' +
+      '<input type="email" id="match-email" name="email" class="match-input" placeholder="your@email.com" required autocomplete="email">' +
+      '<input type="hidden" name="_subject" value="Service Matcher Proposal Request">' +
+      '<input type="hidden" name="recommended_service" value="' + S.name + '">' +
+      '<input type="hidden" name="answers" value="' + summary.join(' | ').replace(/"/g, '&quot;') + '">' +
+      '<button type="submit" class="match-submit">Send my proposal</button>' +
+      '</form>' +
+      '<button type="button" class="match-back match-restart" style="opacity:1" id="mrestart">&#8635; Start over</button></div>' +
+      '</div>';
+
+    document.getElementById('mrestart').addEventListener('click', function () {
+      idx = 0; picks = new Array(QUESTIONS.length).fill(null); render();
+    });
+
+    var mf = body.querySelector('.match-form');
+    mf.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var btn = mf.querySelector('.match-submit');
+      var orig = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        var res = await fetch(mf.action, { method: 'POST', body: new FormData(mf), headers: { 'Accept': 'application/json' } });
+        if (res.ok) {
+          btn.textContent = 'Sent!';
+          mf.querySelector('input[type="email"]').value = '';
+          setTimeout(function () { btn.textContent = orig; btn.disabled = false; }, 3000);
+        } else { btn.textContent = 'Try Again'; btn.disabled = false; }
+      } catch { btn.textContent = 'Try Again'; btn.disabled = false; }
+    });
+  }
+
+  render();
+})();
 </script>
 </body>
 </html>
