@@ -276,22 +276,37 @@ a { color: inherit; text-decoration: none; }
 .bento-card-link:hover .bento-arr { width: 32px; }
 
 /* DIAGNOSTIC CTA */
-.diag-sec { background: var(--seasalt); padding: 100px var(--px); border-top: 1px solid var(--border-light); }
-.diag-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.diag-steps { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
-.diag-step { display: grid; grid-template-columns: 48px 1fr; gap: 16px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--border-light); }
+.diag-sec { background: var(--seasalt); padding: 80px var(--px); border-top: 1px solid var(--border-light); }
+.diag-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: start; }
+.diag-steps { display: flex; flex-direction: column; gap: 0; margin-top: 24px; }
+.diag-step { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: baseline; padding: 13px 0; border-bottom: 1px solid var(--border-light); }
 .diag-step:last-child { border-bottom: none; padding-bottom: 0; }
 .diag-step:first-child { padding-top: 0; }
-.diag-step-n { font-family: var(--serif); font-size: 34px; font-weight: 400; color: var(--teal-light); opacity: .3; line-height: 1; }
-.diag-step h3 { font-size: 14px; font-weight: 500; color: var(--charcoal); margin-bottom: 5px; letter-spacing: .02em; text-transform: uppercase; }
-.diag-step p { font-size: 14px; color: var(--muted-light); line-height: 1.65; }
-.diag-panel { background: var(--charcoal); padding: 48px 40px; position: relative; overflow: hidden; }
+.diag-step-n { font-family: var(--serif); font-size: 28px; font-weight: 400; color: var(--teal-light); opacity: .35; line-height: 1; }
+.diag-step h3 { display: inline; font-size: 13px; font-weight: 500; color: var(--charcoal); letter-spacing: .02em; text-transform: uppercase; margin-right: 8px; }
+.diag-step p { display: inline; font-size: 13px; color: var(--muted-light); line-height: 1.6; }
+.diag-panel { background: var(--charcoal); padding: 36px 34px; position: relative; overflow: hidden; border-radius: 3px; }
 .diag-panel::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(107,191,176,.08) 0%, transparent 70%); pointer-events: none; }
-.diag-panel-label { font-family: var(--mono); font-size: 10px; color: var(--teal-light); letter-spacing: .16em; text-transform: uppercase; margin-bottom: 20px; }
-.diag-panel-title { font-family: var(--serif); font-size: clamp(26px,2.5vw,36px); font-weight: 500; color: var(--seasalt); line-height: 1.2; margin-bottom: 16px; }
-.diag-panel-body { font-size: 15px; line-height: 1.7; color: var(--muted-dark); margin-bottom: 32px; }
-.triangle-vis { width: 100%; margin-bottom: 32px; }
-.triangle-vis img { width: 100%; height: auto; display: block; image-rendering: auto; }
+.diag-panel-label { font-family: var(--mono); font-size: 10px; color: var(--teal-light); letter-spacing: .16em; text-transform: uppercase; margin-bottom: 12px; }
+.diag-panel-title { font-family: var(--serif); font-size: clamp(24px,2.2vw,30px); font-weight: 500; color: var(--seasalt); line-height: 1.2; margin-bottom: 20px; }
+
+/* six patterns explorer */
+.pat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-bottom: 18px; }
+.pat-cell { background: rgba(250,250,250,.04); border: 1px solid transparent; border-radius: 2px; padding: 13px 6px 11px; cursor: pointer; text-align: center; transition: background .25s, border-color .25s; font: inherit; color: inherit; }
+.pat-cell:hover, .pat-cell.active { background: rgba(107,191,176,.09); border-color: rgba(107,191,176,.4); }
+.pat-cell svg { margin: 0 auto 9px; display: block; overflow: visible; }
+.pat-tri { stroke: rgba(226,226,226,.22); fill: none; stroke-width: 1; }
+.pd-s { fill: var(--teal-light); }
+.pd-w { fill: rgba(107,191,176,.28); }
+.pd-m { fill: rgba(226,226,226,.1); }
+.pd-f { fill: var(--teal-light); animation: fadePulse 2.2s ease-in-out infinite; }
+@keyframes fadePulse { 0%, 100% { opacity: .75; } 50% { opacity: .12; } }
+@media (prefers-reduced-motion: reduce) { .pd-f { animation: none; opacity: .4; } }
+.pat-cell-name { font-family: var(--mono); font-size: 9px; letter-spacing: .07em; text-transform: uppercase; color: rgba(226,226,226,.5); line-height: 1.4; transition: color .25s; }
+.pat-cell.active .pat-cell-name, .pat-cell:hover .pat-cell-name { color: var(--teal-light); }
+.pat-detail { border-top: 1px solid rgba(250,250,250,.08); padding-top: 14px; margin-bottom: 24px; min-height: 62px; }
+.pat-detail-name { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--teal-light); line-height: 1.25; }
+.pat-detail-desc { font-size: 13px; color: var(--muted-dark); line-height: 1.55; margin-top: 3px; }
 
 /* LEAD CAPTURE */
 .capture-sec { background: var(--charcoal); padding: 100px var(--px); position: relative; overflow: hidden; }
@@ -676,46 +691,58 @@ a { color: inherit; text-decoration: none; }
   <div class="diag-inner">
     <div class="anim">
       <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">The Recognition Diagnostic</span></div>
-      <h2 class="sec-h2" id="diag-h">Know where you stand<br>before you move.</h2>
+      <h2 class="sec-h2" id="diag-h">Know where you stand before you move.</h2>
       <div class="sec-body">
-        <p>Most brands don't have a visibility problem. They have a recognition problem. The diagnostic is designed to show you which of the six brand patterns applies to you right now, and what that means for how AI systems see you.</p>
+        <p>Most brands don't have a visibility problem. They have a recognition problem. The diagnostic shows you which of the six brand patterns applies to you right now, and what that means for how AI systems see you.</p>
       </div>
       <div class="diag-steps" role="list">
         <div class="diag-step" role="listitem">
           <span class="diag-step-n">01</span>
-          <div>
-            <h3>15 Questions</h3>
-            <p>Across three dimensions: Clarity, Credibility, and Earned Authority.</p>
-          </div>
+          <div><h3>15 Questions</h3><p>Across Clarity, Credibility, and Earned Authority. About 5 minutes.</p></div>
         </div>
         <div class="diag-step" role="listitem">
           <span class="diag-step-n">02</span>
-          <div>
-            <h3>One of Six Results</h3>
-            <p>Your brand pattern explained, with the specific signals that are working for or against you.</p>
-          </div>
+          <div><h3>One of Six Results</h3><p>Your pattern, with the signals working for or against you.</p></div>
         </div>
         <div class="diag-step" role="listitem">
           <span class="diag-step-n">03</span>
-          <div>
-            <h3>A Starting Point</h3>
-            <p>Not a report. A direction. Use it to start the conversation or apply it yourself.</p>
-          </div>
+          <div><h3>A Starting Point</h3><p>Not a report. A direction. Free, no obligation.</p></div>
         </div>
       </div>
     </div>
     <div class="diag-panel anim d2">
-      <div class="triangle-vis">
-        <img
-          src="images/6_Recognition_Traingle_Patterns.png"
-          alt="The six Recognition Triangle patterns: Promising Claim, Hidden Expert, Validated Generalist, Strong Foundation, Recognized Authority, and Decaying Authority"
-          loading="lazy"
-          style="width:100%; max-width:360px; height:auto; display:block; margin:0 auto;"
-        >
-      </div>
-      <p class="diag-panel-label">The Recognition Triangle</p>
+      <p class="diag-panel-label">The Six Patterns</p>
       <h3 class="diag-panel-title">Where does your brand sit?</h3>
-      <p class="diag-panel-body">The diagnostic takes about 5 minutes. Your result will tell you which of the six patterns describes your current position and what to do about it.</p>
+      <div class="pat-grid" id="patgrid" role="tablist" aria-label="The six Recognition Triangle patterns">
+        <button type="button" class="pat-cell" data-i="0">
+          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-m" cx="30" cy="5" r="4"/><circle class="pd pd-s" cx="5" cy="47" r="4"/><circle class="pd pd-w" cx="55" cy="47" r="4"/></svg>
+          <span class="pat-cell-name">Promising<br>Claim</span>
+        </button>
+        <button type="button" class="pat-cell" data-i="1">
+          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-m" cx="30" cy="5" r="4"/><circle class="pd pd-w" cx="5" cy="47" r="4"/><circle class="pd pd-s" cx="55" cy="47" r="4"/></svg>
+          <span class="pat-cell-name">Hidden<br>Expert</span>
+        </button>
+        <button type="button" class="pat-cell" data-i="2">
+          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-s" cx="30" cy="5" r="4"/><circle class="pd pd-w" cx="5" cy="47" r="4"/><circle class="pd pd-s" cx="55" cy="47" r="4"/></svg>
+          <span class="pat-cell-name">Validated<br>Generalist</span>
+        </button>
+        <button type="button" class="pat-cell" data-i="3">
+          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-w" cx="30" cy="5" r="4"/><circle class="pd pd-s" cx="5" cy="47" r="4"/><circle class="pd pd-s" cx="55" cy="47" r="4"/></svg>
+          <span class="pat-cell-name">Strong<br>Foundation</span>
+        </button>
+        <button type="button" class="pat-cell" data-i="4">
+          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-s" cx="30" cy="5" r="4"/><circle class="pd pd-s" cx="5" cy="47" r="4"/><circle class="pd pd-s" cx="55" cy="47" r="4"/></svg>
+          <span class="pat-cell-name">Recognized<br>Authority</span>
+        </button>
+        <button type="button" class="pat-cell" data-i="5">
+          <svg width="56" height="48" viewBox="0 0 60 52" aria-hidden="true"><path class="pat-tri" d="M30 5 L5 47 L55 47 Z"/><circle class="pd pd-f" cx="30" cy="5" r="4"/><circle class="pd pd-w" cx="5" cy="47" r="4"/><circle class="pd pd-w" cx="55" cy="47" r="4"/></svg>
+          <span class="pat-cell-name">Decaying<br>Authority</span>
+        </button>
+      </div>
+      <div class="pat-detail">
+        <p class="pat-detail-name" id="patname">Recognized Authority</p>
+        <p class="pat-detail-desc" id="patdesc">All three conditions hold. You are the answer.</p>
+      </div>
       <a href="diagnostic.html" class="cta-primary">
         Start the Diagnostic
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -979,6 +1006,49 @@ window.addEventListener('scroll', function() {
       });
     }, { threshold: 0.4 });
     demoObs.observe(document.getElementById('aidemo'));
+  }
+})();
+
+/* ===== Six patterns explorer ===== */
+(function () {
+  var grid = document.getElementById('patgrid');
+  if (!grid) return;
+  var reducedPat = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nameEl = document.getElementById('patname');
+  var descEl = document.getElementById('patdesc');
+  var cells = grid.querySelectorAll('.pat-cell');
+  var PATTERNS = [
+    { name: 'Promising Claim', desc: 'A clear claim, not yet proven or recognised.' },
+    { name: 'Hidden Expert', desc: 'Deep proof and expertise the market cannot yet see.' },
+    { name: 'Validated Generalist', desc: 'Trusted and recognised, but not for one clear thing.' },
+    { name: 'Strong Foundation', desc: 'Clear and credible. Earned recognition is the next step.' },
+    { name: 'Recognized Authority', desc: 'All three conditions hold. You are the answer.' },
+    { name: 'Decaying Authority', desc: 'Recognition built once, now quietly eroding.' }
+  ];
+  var current = 4, cycleTimer = null, paused = false;
+
+  function select(i) {
+    current = i;
+    cells.forEach(function (c, ci) { c.classList.toggle('active', ci === i); });
+    nameEl.textContent = PATTERNS[i].name;
+    descEl.textContent = PATTERNS[i].desc;
+  }
+
+  cells.forEach(function (c) {
+    c.addEventListener('mouseenter', function () { select(parseInt(c.dataset.i, 10)); });
+    c.addEventListener('focus', function () { select(parseInt(c.dataset.i, 10)); });
+    c.addEventListener('click', function () { select(parseInt(c.dataset.i, 10)); });
+  });
+
+  var panel = grid.closest('.diag-panel');
+  panel.addEventListener('mouseenter', function () { paused = true; });
+  panel.addEventListener('mouseleave', function () { paused = false; });
+
+  select(4);
+  if (!reducedPat) {
+    cycleTimer = setInterval(function () {
+      if (!paused) select((current + 1) % PATTERNS.length);
+    }, 2800);
   }
 })();
 
