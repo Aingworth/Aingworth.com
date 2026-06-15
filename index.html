@@ -6,6 +6,7 @@
 <title>Aingworth - AI is already answering. Make sure it answers with you.</title>
 <meta name="description" content="Lucy Aingworth helps founders, CMOs, and executives build brand authority that AI search actually cites. Author of Become the Answer. Founder of Aingworth and HER-Worth.">
 <meta name="robots" content="index, follow">
+<link rel="icon" href="images/Aingworth_Main_Logo2.png.png" type="image/png">
 <meta property="og:title" content="Aingworth - AI is already answering. Make sure it answers with you.">
 <meta property="og:description" content="Stop chasing visibility. Start building recognition. The brands that win the AI era don't chase attention. They become the answer.">
 <meta property="og:type" content="website">
@@ -43,6 +44,14 @@
     }
   ]
 }
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5K6TKZTK1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C5K6TKZTK1');
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -257,7 +266,7 @@ a { color: inherit; text-decoration: none; }
 .bento-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--teal-light); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
 .bento-card:hover { background: var(--charcoal-light); }
 .bento-card:hover::before { transform: scaleX(1); }
-.bento-card-featured { grid-column: span 2; background: linear-gradient(135deg, var(--charcoal-light) 0%, rgba(74,158,142,.08) 100%); }
+.bento-card-featured { background: linear-gradient(135deg, var(--charcoal-light) 0%, rgba(74,158,142,.08) 100%); }
 .bento-card-featured:hover { background: linear-gradient(135deg, var(--charcoal-light) 0%, rgba(74,158,142,.14) 100%); }
 .bento-card-herworth { border-top: 2px solid rgba(196,167,228,.3); }
 .bento-card-herworth::before { background: var(--lavender); }
@@ -334,10 +343,16 @@ a { color: inherit; text-decoration: none; }
 .proof-invite a { color: var(--teal-light); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; transition: color .2s; }
 .proof-invite a:hover { color: var(--teal); }
 .proof-slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+/* filled testimonial card */
+.proof-card { background: var(--charcoal-light); padding: 36px 32px; display: flex; flex-direction: column; gap: 24px; }
+.proof-card-icon { flex-shrink: 0; }
+.proof-quote { font-family: var(--serif); font-size: 17px; font-style: italic; line-height: 1.65; color: rgba(250,250,250,.88); flex: 1; }
+.proof-attr { font-family: var(--mono); font-size: 11px; color: var(--teal-light); letter-spacing: .1em; text-transform: uppercase; }
+/* empty placeholder slot */
 .proof-slot { background: var(--charcoal-light); padding: 32px 28px; min-height: 200px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 12px; }
 .proof-slot-ring { width: 48px; height: 48px; border: 1px dashed rgba(107,191,176,.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 .proof-slot-ring svg { color: rgba(107,191,176,.3); }
-.proof-slot-empty-label { font-family: var(--mono); font-size: 10px; color: rgba(226,226,226,.2); letter-spacing: .1em; text-transform: uppercase; text-align: center; line-height: 1.6; }
+.proof-slot-empty-label { font-family: var(--mono); font-size: 10px; color: rgba(226,226,226,.35); letter-spacing: .1em; text-transform: uppercase; text-align: center; line-height: 1.6; }
 
 /* CTA BANNER */
 .cta-banner { background: var(--teal-light); padding: 80px var(--px); }
@@ -422,7 +437,6 @@ a { color: inherit; text-decoration: none; }
   .problem-grid { grid-template-columns: 1fr; gap: 40px; }
   .problem-stats { gap: 28px; }
   .bento-grid { grid-template-columns: 1fr; }
-  .bento-card-featured { grid-column: span 1; }
   .diag-inner { grid-template-columns: 1fr; gap: 48px; }
   .proof-slots { grid-template-columns: 1fr; }
   .fgrid { grid-template-columns: 1fr 1fr; gap: 36px; }
@@ -779,7 +793,7 @@ a { color: inherit; text-decoration: none; }
     <div class="proof-head anim">
       <div>
         <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">What People Say</span></div>
-        <h2 class="sec-h2 sec-h2-light" id="proof-h">This is where your<br>story goes.</h2>
+        <h2 class="sec-h2 sec-h2-light" id="proof-h">What clients say.</h2>
       </div>
       <p class="proof-invite">
         Worked with Lucy or read the book? She would love to hear from you.
@@ -787,22 +801,35 @@ a { color: inherit; text-decoration: none; }
       </p>
     </div>
     <div class="proof-slots" role="list">
-      <div class="proof-slot anim" role="listitem">
-        <div class="proof-slot-ring" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 14V9a5 5 0 0 1 10 0v5M2 14h14"/></svg>
+      <div class="proof-card anim" role="listitem">
+        <div class="proof-card-icon" aria-hidden="true">
+          <svg width="52" height="46" viewBox="0 0 100 88">
+            <path stroke="rgba(107,191,176,0.35)" fill="none" stroke-width="1.5" d="M50 6 L6 82 L94 82 Z"/>
+            <circle fill="#6bbfb0" cx="6" cy="82" r="5"/>
+            <circle fill="rgba(107,191,176,0.4)" cx="94" cy="82" r="5"/>
+            <circle fill="rgba(107,191,176,0.4)" cx="50" cy="6" r="5"/>
+          </svg>
         </div>
-        <p class="proof-slot-empty-label">Client story<br>Lucy is professional and engaging, with a flair for managing lots of different projects and client demands. Her calm and supportive nature makes her a natural pillar of support for those around her.</p>
+        <blockquote class="proof-quote">"Lucy is professional and engaging, with a flair for managing lots of different projects and client demands. Her calm and supportive nature makes her a natural pillar of support for those around her."</blockquote>
+        <p class="proof-attr">— Client</p>
       </div>
-      <div class="proof-slot anim d1" role="listitem">
-        <div class="proof-slot-ring" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 14V9a5 5 0 0 1 10 0v5M2 14h14"/></svg>
+      <div class="proof-card anim d1" role="listitem">
+        <div class="proof-card-icon" aria-hidden="true">
+          <svg width="52" height="46" viewBox="0 0 100 88">
+            <path stroke="rgba(107,191,176,0.35)" fill="none" stroke-width="1.5" d="M50 6 L6 82 L94 82 Z"/>
+            <circle fill="#6bbfb0" cx="50" cy="6" r="5"/>
+            <circle fill="rgba(107,191,176,0.4)" cx="6" cy="82" r="5"/>
+            <circle fill="rgba(107,191,176,0.4)" cx="94" cy="82" r="5"/>
+          </svg>
         </div>
-        <p class="proof-slot-empty-label">Client story<br>Lucy is an incredibly strong SEO with the ability to adapt strategies and recommendations to clients across a number of verticals, especially larger-scale sites that require confident technical SEO. Every client comes out of a meeting with a clear understanding of what they need to do and why.</p>
+        <blockquote class="proof-quote">"Lucy is an incredibly strong SEO with the ability to adapt strategies and recommendations to clients across a number of verticals, especially larger-scale sites that require confident technical SEO. Every client comes out of a meeting with a clear understanding of what they need to do and why."</blockquote>
+        <p class="proof-attr">— Client</p>
       </div>
       <div class="proof-slot anim d2" role="listitem">
         <div class="proof-slot-ring" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 14V9a5 5 0 0 1 10 0v5M2 14h14"/></svg>
         </div>
+        <p class="proof-slot-empty-label">Client story<br>coming soon</p>
       </div>
     </div>
   </div>
