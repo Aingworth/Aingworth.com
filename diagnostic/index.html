@@ -6,10 +6,11 @@
 <title>The Recognition Diagnostic - Aingworth</title>
 <meta name="description" content="15 questions across three dimensions. Find out which of the six Recognition Triangle patterns describes your brand right now - and where to start.">
 <meta name="robots" content="index, follow">
+<link rel="icon" href="/images/Aingworth_Main_favicon.png" type="image/png">
 <meta property="og:title" content="The Recognition Diagnostic - Aingworth">
 <meta property="og:description" content="Where does your brand sit on the Recognition Triangle? 15 questions. One of six results. A clear starting point.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://aingworth.com/diagnostic">
+<meta property="og:url" content="https://aingworth.com/diagnostic/">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -17,10 +18,18 @@
   "name": "The Recognition Diagnostic",
   "description": "A 15-question diagnostic based on the Recognition Triangle framework from Become the Answer by Lucy Aingworth. Identifies which of the six brand patterns applies and where to invest first.",
   "author": { "@type": "Person", "name": "Lucy Aingworth", "url": "https://aingworth.com" },
-  "url": "https://aingworth.com/diagnostic",
+  "url": "https://aingworth.com/diagnostic/",
   "educationalUse": "Self-assessment",
   "about": ["Brand Authority","AI Search Visibility","Recognition Economy","Recognition Triangle"]
 }
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5K6TKZTK1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C5K6TKZTK1');
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,6 +68,7 @@ a { color:inherit; text-decoration:none; }
 
 /* NAV */
 .nav { position:fixed; top:0; left:0; right:0; z-index:200; height:68px; display:flex; align-items:center; justify-content:space-between; padding:0 var(--px); background:rgba(26,26,26,.97); backdrop-filter:blur(20px); border-bottom:1px solid var(--border-dark); }
+.nav-logo { display:flex; align-items:center; height:68px; }
 .nav-logo-text { font-family:var(--sans); font-size:15px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--seasalt); }
 .nav-back { display:flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; transition:color .2s; }
 .nav-back:hover { color:var(--teal-light); }
@@ -264,6 +274,26 @@ a { color:inherit; text-decoration:none; }
 .btn-next:disabled { opacity:.3; cursor:not-allowed; }
 
 /* =============================================
+   LEAD CAPTURE (between quiz and results)
+============================================= */
+.capture-form { display:flex; flex-direction:column; gap:18px; margin-top:8px; }
+.capture-row { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.field-group { display:flex; flex-direction:column; gap:6px; }
+.field-label { font-family:var(--mono); font-size:10px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; }
+.field-input {
+  padding:13px 16px;
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--border-dark);
+  color:var(--seasalt);
+  font-family:var(--sans); font-size:15px;
+  outline:none; border-radius:2px; width:100%;
+  transition:border-color .2s, background .2s;
+}
+.field-input::placeholder { color:rgba(250,250,250,.3); }
+.field-input:focus { border-color:rgba(107,191,176,.5); background:rgba(255,255,255,.06); }
+.capture-error { font-size:13px; color:var(--lavender); margin-top:-4px; }
+
+/* =============================================
    RESULTS SCREEN
 ============================================= */
 .results-screen {
@@ -332,7 +362,29 @@ a { color:inherit; text-decoration:none; }
 .rdb-text { font-size:16px; line-height:1.78; color:var(--muted-dark); }
 .rdb-text p + p { margin-top:14px; }
 
-/* What this means */
+/* All six patterns block (sits between "What this means" and "Where to invest first") */
+.result-patterns-block {
+  background: var(--charcoal-mid);
+  border: 1px solid var(--border-dark);
+  border-top: none;
+  padding: 36px 48px;
+  margin-bottom: 2px;
+}
+.pp-label { font-family:var(--mono); font-size:10px; color:var(--mid-grey); letter-spacing:.14em; text-transform:uppercase; margin-bottom:20px; }
+.pp-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
+.pp-card {
+  background: var(--charcoal);
+  padding: 20px 22px;
+  border: 1px solid var(--border-dark);
+  transition: border-color .2s;
+}
+.pp-card.is-yours { border-color:rgba(107,191,176,.35); background:rgba(107,191,176,.06); }
+.pp-name { font-family:var(--serif); font-size:17px; font-weight:500; color:var(--seasalt); margin-bottom:4px; }
+.pp-card.is-yours .pp-name { color:var(--teal-light); }
+.pp-dims { font-family:var(--mono); font-size:10px; color:var(--mid-grey); letter-spacing:.06em; }
+.pp-yours-tag { font-family:var(--mono); font-size:9px; color:var(--teal-light); letter-spacing:.1em; text-transform:uppercase; background:rgba(107,191,176,.1); border:1px solid rgba(107,191,176,.2); display:inline-block; padding:3px 8px; margin-bottom:8px; }
+
+/* What this means / where to invest next */
 .result-next-block {
   background: var(--charcoal-mid);
   border: 1px solid var(--border-dark);
@@ -409,6 +461,7 @@ a { color:inherit; text-decoration:none; }
   padding:14px 26px; border-radius:2px; transition:all .2s;
 }
 .btn-primary:hover { background:var(--teal); color:var(--seasalt); }
+.btn-primary:disabled { opacity:.5; cursor:not-allowed; }
 .btn-ghost {
   display:inline-flex; align-items:center; gap:10px;
   border:1px solid var(--border-dark); color:var(--mid-grey);
@@ -423,36 +476,17 @@ a { color:inherit; text-decoration:none; }
 }
 .btn-restart:hover { border-color:rgba(107,191,176,.3); color:var(--teal-light); }
 
-/* All six patterns preview */
-.patterns-preview {
-  margin-top: 48px;
-  padding-top: 40px;
-  border-top: 1px solid var(--border-dark);
-}
-.pp-label { font-family:var(--mono); font-size:10px; color:var(--mid-grey); letter-spacing:.14em; text-transform:uppercase; margin-bottom:24px; }
-.pp-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
-.pp-card {
-  background: var(--charcoal-mid);
-  padding: 20px 22px;
-  border: 1px solid var(--border-dark);
-  transition: border-color .2s;
-}
-.pp-card.is-yours { border-color:rgba(107,191,176,.35); background:rgba(107,191,176,.06); }
-.pp-name { font-family:var(--serif); font-size:17px; font-weight:500; color:var(--seasalt); margin-bottom:4px; }
-.pp-card.is-yours .pp-name { color:var(--teal-light); }
-.pp-dims { font-family:var(--mono); font-size:10px; color:var(--mid-grey); letter-spacing:.06em; }
-.pp-yours-tag { font-family:var(--mono); font-size:9px; color:var(--teal-light); letter-spacing:.1em; text-transform:uppercase; background:rgba(107,191,176,.1); border:1px solid rgba(107,191,176,.2); display:inline-block; padding:3px 8px; margin-bottom:8px; }
-
 /* =============================================
    RESPONSIVE
 ============================================= */
 @media (max-width: 600px) {
-  .result-hero, .result-desc-block, .result-next-block, .result-capture, .result-ctas { padding:28px 24px; }
+  .result-hero, .result-desc-block, .result-patterns-block, .result-next-block, .result-capture, .result-ctas { padding:28px 24px; }
   .rc-form { flex-direction:column; }
   .rc-input { border-right:1px solid rgba(107,191,176,.2); border-bottom:none; border-radius:2px 2px 0 0; }
   .rc-submit { border-radius:0 0 2px 2px; }
   .pp-grid { grid-template-columns:1fr; }
   .intro-triangle { flex-direction:column; }
+  .capture-row { grid-template-columns:1fr; }
 }
 </style>
 </head>
@@ -462,10 +496,10 @@ a { color:inherit; text-decoration:none; }
 
 <header role="banner">
   <nav class="nav" aria-label="Primary navigation">
-    <a href="index.html" aria-label="Aingworth home">
-      <img src="images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth" style="width:200px;height:auto;display:block;filter:brightness(100) contrast(2);">
+    <a href="/" class="nav-logo" aria-label="Aingworth home">
+      <img src="/images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth" style="width:200px;height:auto;display:block;filter:brightness(100) contrast(2);">
     </a>
-    <a href="index.html" class="nav-back" aria-label="Back to home">
+    <a href="https://aingworth.com/" class="nav-back" aria-label="Back to home">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 3L5 7l4 4"/></svg>
       Back to site
     </a>
@@ -503,7 +537,7 @@ a { color:inherit; text-decoration:none; }
     <div class="intro-triangle" aria-label="The three dimensions you will be assessed on">
       <div class="tri-mini" style="width:100%; max-width:280px; margin:0 auto 28px;">
         <img
-          src="images/Recognition_Diagnostic.png"
+          src="/images/Recognition_Diagnostic.png"
           alt="The Recognition Triangle"
           style="width:100%; height:auto; display:block;"
         >
@@ -548,6 +582,14 @@ a { color:inherit; text-decoration:none; }
     <div id="q-mount"></div>
 
   </div>
+</div>
+
+<!-- =============================================
+     LEAD CAPTURE SCREEN
+     Shown after the final question, before results are revealed.
+============================================= -->
+<div class="results-screen" id="capture-screen" aria-live="polite">
+  <div class="results-shell" id="capture-mount"></div>
 </div>
 
 <!-- =============================================
@@ -832,17 +874,58 @@ var PATTERNS = {
   }
 };
 
+/* List of the six pattern keys, in the order they should be displayed
+   in the "All six Recognition Triangle patterns" comparison grid. */
+var ALL_PATTERN_KEYS = [
+  'promising_claim',
+  'hidden_expert',
+  'validated_generalist',
+  'strong_foundation',
+  'recognized_authority',
+  'decaying_authority'
+];
+
 /* ============================================================
    STATE
 ============================================================ */
 var state = {
   current: 0,
   answers: {},
-  scores: { c: 0, k: 0, a: 0 }
+  scores: { c: 0, k: 0, a: 0 },
+  lead: { name: '', email: '', company: '' },
+  patternKey: null,
+  cpct: 0,
+  kpct: 0,
+  apct: 0
 };
 
 /* ============================================================
+   HELPERS
+============================================================ */
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+/* Strip the leading "The " from a pattern name for display,
+   e.g. "The Promising Claim" -> "Promising Claim".
+   Using replace() here (rather than the old split(' The ')
+   approach) guarantees a real string is always returned - never undefined. */
+function shortPatternName(name) {
+  return name.replace(/^The\s+/, '');
+}
+
+/* ============================================================
    SCORING - pattern determination
+   This always returns one of the six PATTERNS keys below -
+   recognized_authority, decaying_authority, strong_foundation,
+   promising_claim, hidden_expert, or validated_generalist.
+   The final fallback chain guarantees a valid key is always
+   returned, and the safety check at the bottom guarantees
+   PATTERNS[key] is never undefined.
 ============================================================ */
 function determinePattern(c, k, a) {
   var MAX = 15; // max score per dimension (5 questions x 3)
@@ -851,28 +934,45 @@ function determinePattern(c, k, a) {
   var ap = (a / MAX) * 100;
   var avg = (cp + kp + ap) / 3;
 
-  // Recognized Authority: all dimensions >= 60%
-  if (cp >= 60 && kp >= 60 && ap >= 60) return 'recognized_authority';
+  var key;
 
-  // Decaying Authority: all >=30 but avg < 60, signals general weakness
-  if (cp >= 30 && kp >= 30 && ap >= 30 && avg < 65) return 'decaying_authority';
+  // Recognized Authority: all three dimensions strong
+  if (cp >= 60 && kp >= 60 && ap >= 60) {
+    key = 'recognized_authority';
+  }
+  // Decaying Authority: all three present but all weakening together
+  else if (cp >= 30 && kp >= 30 && ap >= 30 && avg < 65) {
+    key = 'decaying_authority';
+  }
+  // Strong Foundation: clarity + credibility strong, authority weak
+  else if (cp >= 55 && kp >= 55 && ap < 45) {
+    key = 'strong_foundation';
+  }
+  // Promising Claim: clarity strong, credibility + authority weak
+  else if (cp >= 55 && kp < 50 && ap < 50) {
+    key = 'promising_claim';
+  }
+  // Hidden Expert: credibility strong, clarity + authority weak
+  else if (kp >= 55 && cp < 50 && ap < 50) {
+    key = 'hidden_expert';
+  }
+  // Validated Generalist: some earned authority, clarity + credibility weak
+  else if (ap >= 45 && cp < 50 && kp < 50) {
+    key = 'validated_generalist';
+  }
+  // Tiebreak: whichever dimension is relatively strongest decides the pattern
+  else if (cp >= kp && cp >= ap) {
+    key = 'promising_claim';
+  }
+  else if (kp >= cp && kp >= ap) {
+    key = 'hidden_expert';
+  }
+  else {
+    key = 'strong_foundation';
+  }
 
-  // Strong Foundation: good clarity and credibility, weak authority
-  if (cp >= 55 && kp >= 55 && ap < 45) return 'strong_foundation';
-
-  // Promising Claim: strong clarity, weak credibility and authority
-  if (cp >= 55 && kp < 50 && ap < 50) return 'promising_claim';
-
-  // Hidden Expert: strong credibility, weak clarity and authority
-  if (kp >= 55 && cp < 50 && ap < 50) return 'hidden_expert';
-
-  // Validated Generalist: some authority, weak clarity and credibility
-  if (ap >= 45 && cp < 50 && kp < 50) return 'validated_generalist';
-
-  // Tiebreaker - check which is strongest
-  if (cp >= kp && cp >= ap) return 'promising_claim';
-  if (kp >= cp && kp >= ap) return 'hidden_expert';
-  return 'strong_foundation';
+  // Safety net - always return a key that exists in PATTERNS
+  return PATTERNS[key] ? key : 'strong_foundation';
 }
 
 /* ============================================================
@@ -925,7 +1025,7 @@ function renderQuestion(idx) {
     ? '<button class="btn-back" onclick="goBack()" aria-label="Go to previous question">← Back</button>'
     : '<span></span>';
 
-  var nextLabel = idx === QUESTIONS.length - 1 ? 'See My Result' : 'Continue';
+  var nextLabel = 'Continue';
   var nextDisabled = !answered ? 'disabled' : '';
 
   var html = '<div class="q-card" id="current-q">' +
@@ -971,7 +1071,7 @@ function goNext() {
     state.current++;
     renderQuestion(state.current);
   } else {
-    showResults();
+    showCapture();
   }
 }
 
@@ -983,49 +1083,160 @@ function goBack() {
 }
 
 /* ============================================================
+   LEAD CAPTURE
+   Shown after the final question. Captures name, email, and
+   company, plus every answer given, and sends it all to
+   Formspree BEFORE the results are revealed.
+============================================================ */
+function showCapture() {
+  recalcScores();
+  var c = state.scores.c, k = state.scores.k, a = state.scores.a;
+  var MAX = 15;
+
+  state.cpct = Math.round((c / MAX) * 100);
+  state.kpct = Math.round((k / MAX) * 100);
+  state.apct = Math.round((a / MAX) * 100);
+  state.patternKey = determinePattern(c, k, a);
+  var pattern = PATTERNS[state.patternKey];
+
+  document.getElementById('quiz-screen').classList.remove('active');
+
+  // One hidden field per question, capturing the full question
+  // text and the option the person selected.
+  var answerFields = QUESTIONS.map(function(q, i) {
+    var dl = getDimLabel(q.dim);
+    var opt = q.options[state.answers[q.id]];
+    var summary = 'Q' + (i + 1) + ' [' + dl.label + ', score ' + opt.score + '/3] ' + q.text + ' -- Selected: ' + opt.label;
+    return '<input type="hidden" name="q' + String(i + 1).padStart(2, '0') + '" value="' + escapeHtml(summary) + '">';
+  }).join('');
+
+  var html =
+    '<div class="result-hero" id="capture-top">' +
+      '<div class="result-eyebrow">Last step</div>' +
+      '<h2 class="rc-title" style="font-size:clamp(26px,4vw,38px); margin-bottom:14px;">Almost there.</h2>' +
+      '<p class="rc-sub">Before you see your result, tell Lucy a little about you. Your answers and result go straight to her, so if you would like a follow-up later she will already have the context.</p>' +
+      '<form class="capture-form" id="capture-form" action="https://formspree.io/f/xpqebova" method="POST">' +
+        '<input type="hidden" name="_subject" value="Recognition Diagnostic completed - ' + pattern.name + '">' +
+        '<input type="hidden" name="source" value="diagnostic-completed">' +
+        '<input type="hidden" name="pattern" value="' + pattern.name + '">' +
+        '<input type="hidden" name="clarity_score" value="' + state.cpct + '%">' +
+        '<input type="hidden" name="credibility_score" value="' + state.kpct + '%">' +
+        '<input type="hidden" name="authority_score" value="' + state.apct + '%">' +
+        answerFields +
+        '<div class="capture-row">' +
+          '<div class="field-group">' +
+            '<label class="field-label" for="cap-name">Your name <span aria-hidden="true">*</span></label>' +
+            '<input type="text" id="cap-name" name="name" class="field-input" placeholder="First and last name" required autocomplete="name">' +
+          '</div>' +
+          '<div class="field-group">' +
+            '<label class="field-label" for="cap-email">Email address <span aria-hidden="true">*</span></label>' +
+            '<input type="email" id="cap-email" name="email" class="field-input" placeholder="your@email.com" required autocomplete="email">' +
+          '</div>' +
+        '</div>' +
+        '<div class="field-group">' +
+          '<label class="field-label" for="cap-company">Company or brand <span aria-hidden="true">*</span></label>' +
+          '<input type="text" id="cap-company" name="company" class="field-input" placeholder="Your company or brand name" required autocomplete="organization">' +
+        '</div>' +
+        '<button type="submit" class="btn-primary" id="capture-submit">See My Result' +
+          '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+        '</button>' +
+        '<p class="capture-error" id="capture-error" style="display:none;">Something went wrong sending your answers. Please check your details and try again.</p>' +
+      '</form>' +
+    '</div>';
+
+  document.getElementById('capture-mount').innerHTML = html;
+  document.getElementById('capture-screen').classList.add('active');
+  document.getElementById('capture-screen').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  document.getElementById('capture-form').addEventListener('submit', submitCapture);
+}
+
+async function submitCapture(e) {
+  e.preventDefault();
+  var form = e.target;
+  var btn = document.getElementById('capture-submit');
+  var err = document.getElementById('capture-error');
+  err.style.display = 'none';
+
+  var origHtml = btn.innerHTML;
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  try {
+    var res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      state.lead.name = document.getElementById('cap-name').value;
+      state.lead.email = document.getElementById('cap-email').value;
+      state.lead.company = document.getElementById('cap-company').value;
+      document.getElementById('capture-screen').classList.remove('active');
+      showResults();
+    } else {
+      btn.disabled = false;
+      btn.innerHTML = origHtml;
+      err.style.display = 'block';
+    }
+  } catch (ex) {
+    btn.disabled = false;
+    btn.innerHTML = origHtml;
+    err.style.display = 'block';
+  }
+  return false;
+}
+
+/* ============================================================
    RESULTS
 ============================================================ */
 function showResults() {
-  recalcScores();
-  var c = state.scores.c;
-  var k = state.scores.k;
-  var a = state.scores.a;
-  var MAX = 15;
-  var patternKey = determinePattern(c, k, a);
+  // Scores and pattern were already computed in showCapture(),
+  // but recompute defensively in case showResults is ever
+  // called on its own.
+  if (!state.patternKey) {
+    recalcScores();
+    var MAX = 15;
+    state.cpct = Math.round((state.scores.c / MAX) * 100);
+    state.kpct = Math.round((state.scores.k / MAX) * 100);
+    state.apct = Math.round((state.scores.a / MAX) * 100);
+    state.patternKey = determinePattern(state.scores.c, state.scores.k, state.scores.a);
+  }
+
+  var patternKey = state.patternKey;
   var pattern = PATTERNS[patternKey];
+  var cpct = state.cpct, kpct = state.kpct, apct = state.apct;
 
-  document.getElementById('quiz-screen').classList.remove('active');
+  document.getElementById('capture-screen').classList.remove('active');
   document.getElementById('results-screen').classList.add('active');
-
-  var allPatternKeys = ['promising_claim','hidden_expert','validated_generalist','strong_foundation','recognized_authority','decaying_authority'];
 
   var stepsHtml = pattern.steps.map(function(s, i) {
     return '<div class="rnb-step">' +
-      '<span class="rnb-n" aria-hidden="true">0' + (i+1) + '</span>' +
+      '<span class="rnb-n" aria-hidden="true">0' + (i + 1) + '</span>' +
       '<div><div class="rnb-title">' + s.title + '</div><p class="rnb-text">' + s.text + '</p></div>' +
       '</div>';
   }).join('');
 
-  var ppHtml = allPatternKeys.map(function(pk) {
+  var ppHtml = ALL_PATTERN_KEYS.map(function(pk) {
     var p = PATTERNS[pk];
     var isYours = pk === patternKey;
     return '<div class="pp-card' + (isYours ? ' is-yours' : '') + '">' +
       (isYours ? '<div class="pp-yours-tag">Your pattern</div>' : '') +
-      '<div class="pp-name">' + p.name + '</div>' +
+      '<div class="pp-name">' + shortPatternName(p.name) + '</div>' +
       '<div class="pp-dims">' + p.tagline + '</div>' +
       '</div>';
   }).join('');
 
-  var cpct = Math.round((c/MAX)*100);
-  var kpct = Math.round((k/MAX)*100);
-  var apct = Math.round((a/MAX)*100);
-
   var descHtml = pattern.description.map(function(p) { return '<p>' + p + '</p>'; }).join('');
+
+  var leadName = escapeHtml(state.lead.name || '');
+  var leadEmail = escapeHtml(state.lead.email || '');
+  var leadCompany = escapeHtml(state.lead.company || '');
 
   var html =
     '<div class="result-hero" id="result-top">' +
       '<div class="result-eyebrow">Your Recognition Triangle pattern</div>' +
-      '<div class="result-pattern-name" id="res-name">' + pattern.name.split(' The ')[1] + '</div>' +
+      '<div class="result-pattern-name" id="res-name">' + shortPatternName(pattern.name) + '</div>' +
       '<div class="result-pattern-sub">' + pattern.tagline + '</div>' +
       '<div class="score-bars" aria-label="Your dimension scores">' +
         '<div class="score-bar-item">' +
@@ -1048,6 +1259,11 @@ function showResults() {
       '<div class="rdb-text">' + descHtml + '</div>' +
     '</div>' +
 
+    '<div class="result-patterns-block">' +
+      '<div class="pp-label">All six Recognition Triangle patterns</div>' +
+      '<div class="pp-grid">' + ppHtml + '</div>' +
+    '</div>' +
+
     '<div class="result-next-block">' +
       '<div class="rnb-label">Where to invest first - ' + pattern.priority + '</div>' +
       '<div class="rnb-steps">' + stepsHtml + '</div>' +
@@ -1056,16 +1272,18 @@ function showResults() {
     '<div class="result-capture" id="result-capture">' +
       '<div class="rc-label">Go deeper</div>' +
       '<h2 class="rc-title">Get a personalised breakdown sent to your inbox.</h2>' +
-      '<p class="rc-sub">Enter your email and Lucy will send you a fuller explanation of your pattern, a reading list from Become the Answer, and a suggested first action tailored to where you are right now.</p>' +
-      '<form class="rc-form" id="diag-form" onsubmit="return submitResult(event)" action="https://formspree.io/f/REPLACE_WITH_LIVE_ID" method="POST">' +
-        '<input type="hidden" name="_subject" value="Diagnostic Result: ' + pattern.name + '">' +
+      '<p class="rc-sub">Confirm your email and Lucy will send you a fuller explanation of your pattern, a reading list from Become the Answer, and a suggested first action tailored to where you are right now.</p>' +
+      '<form class="rc-form" id="diag-form" onsubmit="return submitResult(event)" action="https://formspree.io/f/xpqebova" method="POST">' +
+        '<input type="hidden" name="_subject" value="Diagnostic Personalised Breakdown Request - ' + pattern.name + '">' +
+        '<input type="hidden" name="source" value="diagnostic-breakdown-request">' +
         '<input type="hidden" name="pattern" value="' + pattern.name + '">' +
         '<input type="hidden" name="clarity_score" value="' + cpct + '%">' +
         '<input type="hidden" name="credibility_score" value="' + kpct + '%">' +
         '<input type="hidden" name="authority_score" value="' + apct + '%">' +
-        '<input type="hidden" name="source" value="diagnostic">' +
+        '<input type="hidden" name="name" value="' + leadName + '">' +
+        '<input type="hidden" name="company" value="' + leadCompany + '">' +
         '<label for="diag-email" class="sr-only">Your email address</label>' +
-        '<input type="email" id="diag-email" name="email" class="rc-input" placeholder="your@email.com" required autocomplete="email">' +
+        '<input type="email" id="diag-email" name="email" class="rc-input" placeholder="your@email.com" value="' + leadEmail + '" required autocomplete="email">' +
         '<button type="submit" class="rc-submit">Send It</button>' +
       '</form>' +
       '<div class="rc-success" id="diag-success" style="display:none" aria-live="polite">' +
@@ -1076,18 +1294,13 @@ function showResults() {
     '</div>' +
 
     '<div class="result-ctas">' +
-      '<a href="services.html" class="btn-primary">Work With Lucy' +
+      '<a href="https://aingworth.com/services/" class="btn-primary">Work With Lucy' +
         '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
       '</a>' +
-      '<a href="book.html" class="btn-ghost">About the Book</a>' +
+      '<a href="https://aingworth.com/book/" class="btn-ghost">About the Book</a>' +
     '</div>' +
 
-    '<button class="btn-restart" onclick="restartQuiz()">Start Over</button>' +
-
-    '<div class="patterns-preview">' +
-      '<div class="pp-label">All six Recognition Triangle patterns</div>' +
-      '<div class="pp-grid">' + ppHtml + '</div>' +
-    '</div>';
+    '<button class="btn-restart" onclick="restartQuiz()">Start Over</button>';
 
   document.getElementById('results-mount').innerHTML = html;
   document.getElementById('result-top').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1140,9 +1353,20 @@ function startQuiz() {
 }
 
 function restartQuiz() {
-  state = { current: 0, answers: {}, scores: { c:0, k:0, a:0 } };
+  state = {
+    current: 0,
+    answers: {},
+    scores: { c: 0, k: 0, a: 0 },
+    lead: { name: '', email: '', company: '' },
+    patternKey: null,
+    cpct: 0,
+    kpct: 0,
+    apct: 0
+  };
   document.getElementById('results-screen').classList.remove('active');
   document.getElementById('results-mount').innerHTML = '';
+  document.getElementById('capture-screen').classList.remove('active');
+  document.getElementById('capture-mount').innerHTML = '';
   document.getElementById('intro-screen').style.display = '';
   document.getElementById('quiz-screen').classList.remove('active');
   document.getElementById('intro-screen').scrollIntoView({ behavior: 'smooth', block: 'start' });
