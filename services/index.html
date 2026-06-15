@@ -6,10 +6,11 @@
 <title>Work With Me - Aingworth | AI Visibility Consulting, Strategy, Workshops, Coaching</title>
 <meta name="description" content="Work with Lucy Aingworth: AI Visibility Audits, Authority Strategy Consulting, Brand Clarity Workshops, One-to-One Coaching, Speaking and HER-Worth. Every engagement is built on the Become the Answer framework.">
 <meta name="robots" content="index, follow">
+<link rel="icon" href="images/Aingworth_Main_favicon.png" type="image/png">
 <meta property="og:title" content="Work With Me - Aingworth">
 <meta property="og:description" content="Strategy built for the recognition era. No generic packages. Work that holds up as the search landscape keeps shifting.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://aingworth.com/services.html">
+<meta property="og:url" content="https://aingworth.com/services">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,6 +60,14 @@
   ]
 }
 </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5K6TKZTK1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C5K6TKZTK1');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -94,7 +103,6 @@ a { color: inherit; text-decoration: none; }
 .skip:focus { top:8px; }
 :focus-visible { outline: 2px solid var(--teal-light); outline-offset: 3px; }
 ::selection { background: var(--teal-light); color: var(--charcoal); }
-
 /* NAV */
 .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 var(--px); background: rgba(26,26,26,.97); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-dark); transition: background .3s var(--ease); }
 .nav-logo { display: flex; align-items: center; height: 68px; }
@@ -114,7 +122,6 @@ a { color: inherit; text-decoration: none; }
 .nav-drawer a { display: block; padding: 16px 0; color: rgba(250,250,250,.65); font-size: 18px; border-bottom: 1px solid var(--border-dark); transition: color .2s; }
 .nav-drawer a:hover { color: var(--teal-light); }
 .drawer-cta { margin-top: 24px; display: inline-block; padding: 16px 28px; background: var(--teal-light); color: var(--charcoal) !important; font-size: 14px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; text-align: center; border-bottom: none !important; border-radius: 2px; }
-
 /* SHARED */
 .sec-eye { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
 .sec-rule { width: 26px; height: 1px; background: var(--teal-light); flex-shrink: 0; }
@@ -129,15 +136,12 @@ a { color: inherit; text-decoration: none; }
 .arr { width: 22px; height: 1px; background: currentColor; position: relative; transition: width .25s var(--ease); }
 .arr::after { content: ''; position: absolute; right: 0; top: -3px; width: 6px; height: 6px; border-right: 1px solid currentColor; border-top: 1px solid currentColor; transform: rotate(45deg); }
 .tlink:hover .arr { width: 34px; }
-
 #progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; background: var(--teal-light); z-index: 300; box-shadow: 0 0 10px rgba(107,191,176,.55); }
-
 @media (prefers-reduced-motion: no-preference) {
   .anim { opacity: 0; transform: translateY(20px); transition: opacity .65s var(--ease), transform .65s var(--ease); }
   .anim.vis { opacity: 1; transform: translateY(0); }
   .d1 { transition-delay: .1s; } .d2 { transition-delay: .2s; } .d3 { transition-delay: .3s; }
 }
-
 /* HERO */
 .svc-hero { background: radial-gradient(900px 600px at 80% 30%, rgba(107,191,176,.07), transparent 65%), var(--charcoal); padding: 150px var(--px) 70px; position: relative; }
 .svc-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--teal-light), transparent); opacity: .2; }
@@ -155,7 +159,6 @@ a { color: inherit; text-decoration: none; }
 .hero-eyebrow { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; opacity: 0; animation: fadeUp .9s ease .25s forwards; }
 .hero-eyebrow-rule { width: 40px; height: 1px; background: var(--teal-light); }
 .hero-eyebrow-label { font-family: var(--mono); font-size: 12px; color: var(--teal-light); letter-spacing: .28em; text-transform: uppercase; }
-
 /* rate card */
 .rate-card { border: 1px solid var(--border-dark); border-radius: 3px; overflow: hidden; opacity: 0; animation: fadeUp .9s ease .8s forwards; }
 .rate-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 17px 22px; border-bottom: 1px solid var(--border-dark); transition: background .25s, padding-left .25s; cursor: pointer; }
@@ -168,7 +171,6 @@ a { color: inherit; text-decoration: none; }
 .rate-arr::after { content: ''; position: absolute; right: 0; top: -2.5px; width: 5px; height: 5px; border-right: 1px solid rgba(226,226,226,.4); border-top: 1px solid rgba(226,226,226,.4); transform: rotate(45deg); transition: border-color .25s; }
 .rate-row:hover .rate-arr { background: var(--teal-light); width: 24px; }
 .rate-row:hover .rate-arr::after { border-color: var(--teal-light); }
-
 /* currency strip */
 .cur-strip { background: var(--charcoal-mid); border-bottom: 1px solid var(--border-dark); padding: 14px var(--px); }
 .cur-strip-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
@@ -178,7 +180,6 @@ a { color: inherit; text-decoration: none; }
 .cur-btn { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; padding: 6px 14px; border: 1px solid var(--border-dark); background: none; color: rgba(226,226,226,.45); border-radius: 2px; cursor: pointer; transition: all .2s; }
 .cur-btn.active { border-color: var(--teal-light); color: var(--teal-light); background: rgba(107,191,176,.07); }
 .cur-note { font-family: var(--mono); font-size: 10px; color: rgba(226,226,226,.3); letter-spacing: .1em; text-transform: uppercase; }
-
 /* MATCHER */
 .match-sec { background: var(--charcoal); padding: 90px var(--px); position: relative; overflow: hidden; }
 .match-sec::before { content: ''; position: absolute; top: -120px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(74,158,142,.05) 0%, transparent 65%); pointer-events: none; }
@@ -221,7 +222,6 @@ a { color: inherit; text-decoration: none; }
 .match-submit { padding: 12px 18px; background: var(--teal-light); color: var(--charcoal); font-family: var(--sans); font-size: 12px; font-weight: 500; letter-spacing: .07em; text-transform: uppercase; border: none; cursor: pointer; border-radius: 0 2px 2px 0; transition: background .2s; white-space: nowrap; }
 .match-submit:hover { background: var(--teal); color: var(--seasalt); }
 .match-restart { margin-top: 18px; }
-
 /* SERVICES GRID */
 .svc-sec { background: var(--seasalt); padding: 90px var(--px); }
 .svc-inner { max-width: var(--max-w); margin: 0 auto; }
@@ -245,7 +245,6 @@ a { color: inherit; text-decoration: none; }
 .svc-link { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 11px; color: var(--teal); letter-spacing: .1em; text-transform: uppercase; transition: gap .25s var(--ease); }
 .svc-link:hover { gap: 16px; }
 .svc-card-hw .svc-link { color: #9a77c4; }
-
 /* SPEAKING */
 .speak-sec { background: var(--charcoal); padding: 90px var(--px); position: relative; overflow: hidden; }
 .speak-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1.05fr; gap: 64px; align-items: start; }
@@ -260,7 +259,6 @@ a { color: inherit; text-decoration: none; }
 .speak-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
 .speak-tags span { font-family: var(--mono); font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: rgba(226,226,226,.45); border: 1px solid var(--border-dark); padding: 7px 12px; border-radius: 2px; transition: color .2s, border-color .2s; }
 .speak-tags span:hover { color: var(--teal-light); border-color: rgba(107,191,176,.4); }
-
 /* CTA BANNER */
 .cta-banner { background: var(--teal-light); padding: 72px var(--px); }
 .cta-banner-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 48px; flex-wrap: wrap; }
@@ -271,7 +269,6 @@ a { color: inherit; text-decoration: none; }
 .cta-banner-primary:hover { background: var(--charcoal-light); transform: translateY(-1px); }
 .cta-banner-ghost { display: inline-flex; align-items: center; gap: 10px; color: var(--charcoal); font-size: 13px; font-weight: 500; letter-spacing: .07em; text-transform: uppercase; transition: gap .2s; }
 .cta-banner-ghost:hover { gap: 16px; }
-
 /* FOOTER */
 .footer { background: var(--charcoal); padding: 72px var(--px) 36px; border-top: 1px solid var(--border-dark); }
 .footer-inner { max-width: var(--max-w); margin: 0 auto; }
@@ -291,7 +288,6 @@ a { color: inherit; text-decoration: none; }
 .flegal { display: flex; gap: 20px; }
 .flegal a { font-family: var(--mono); font-size: 11px; color: rgba(226,226,226,.25); letter-spacing: .06em; transition: color .2s; }
 .flegal a:hover { color: var(--teal-light); }
-
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .svc-hero { padding: 120px var(--px) 56px; }
@@ -317,39 +313,35 @@ a { color: inherit; text-decoration: none; }
 </style>
 </head>
 <body>
-
 <a href="#main" class="skip">Skip to content</a>
 <div id="progress" aria-hidden="true"></div>
-
 <header role="banner">
   <nav class="nav" aria-label="Primary navigation">
-    <a href="index.html" class="nav-logo" aria-label="Aingworth home">
+    <a href="/" class="nav-logo" aria-label="Aingworth home">
       <img src="images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth" style="width:200px;height:auto;display:block;filter:brightness(100) contrast(2);">
     </a>
     <ul class="nav-menu" role="list">
-      <li><a href="services.html" aria-current="page">Work With Me</a></li>
-      <li><a href="her-worth.html">HER-Worth</a></li>
-      <li><a href="book.html">The Book</a></li>
-      <li><a href="diagnostic.html">Diagnostic</a></li>
-      <li><a href="about.html">About</a></li>
-      <li class="ncta"><a href="contact.html">Let's Talk</a></li>
+      <li><a href="/services" aria-current="page">Work With Me</a></li>
+      <li><a href="/her-worth">HER-Worth</a></li>
+      <li><a href="/book">The Book</a></li>
+      <li><a href="/diagnostic">Diagnostic</a></li>
+      <li><a href="/about">About</a></li>
+      <li class="ncta"><a href="/contact">Let's Talk</a></li>
     </ul>
     <button class="nav-burger" aria-expanded="false" aria-controls="ndrawer" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
   <nav id="ndrawer" class="nav-drawer" aria-label="Mobile navigation">
-    <a href="services.html">Work With Me</a>
-    <a href="her-worth.html">HER-Worth</a>
-    <a href="book.html">The Book</a>
-    <a href="diagnostic.html">Diagnostic</a>
-    <a href="about.html">About</a>
-    <a href="contact.html" class="drawer-cta">Let's Talk</a>
+    <a href="/services">Work With Me</a>
+    <a href="/her-worth">HER-Worth</a>
+    <a href="/book">The Book</a>
+    <a href="/diagnostic">Diagnostic</a>
+    <a href="/about">About</a>
+    <a href="/contact" class="drawer-cta">Let's Talk</a>
   </nav>
 </header>
-
 <main id="main">
-
 <section class="svc-hero" aria-labelledby="svc-h">
   <div class="svc-hero-inner">
     <div>
@@ -385,14 +377,13 @@ a { color: inherit; text-decoration: none; }
         <span class="rate-name">Speaking and Keynotes</span>
         <span class="rate-right"><span class="rate-price">From <span data-zar="R15,000" data-usd="$950">R15,000</span></span><span class="rate-arr" aria-hidden="true"></span></span>
       </a>
-      <a class="rate-row" href="her-worth.html">
+      <a class="rate-row" href="/her-worth">
         <span class="rate-name">HER-Worth</span>
         <span class="rate-right"><span class="rate-price" style="color:var(--lavender)">Programme page</span><span class="rate-arr" aria-hidden="true"></span></span>
       </a>
     </nav>
   </div>
 </section>
-
 <div class="cur-strip">
   <div class="cur-strip-inner">
     <div class="cur-left">
@@ -405,7 +396,6 @@ a { color: inherit; text-decoration: none; }
     <span class="cur-note">Starting rates. Final scope confirmed after initial conversation.</span>
   </div>
 </div>
-
 <section class="match-sec" aria-labelledby="match-h">
   <div class="match-head anim">
     <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Not sure where to start?</span></div>
@@ -421,7 +411,6 @@ a { color: inherit; text-decoration: none; }
     <div class="match-body" id="matchbody"></div>
   </div>
 </section>
-
 <section class="svc-sec" aria-labelledby="svcgrid-h">
   <div class="svc-inner">
     <div class="svc-head anim">
@@ -439,7 +428,7 @@ a { color: inherit; text-decoration: none; }
         <p class="svc-price" data-zar="R12,500" data-usd="$900">R12,500</p>
         <p class="svc-price-unit">One-time audit</p>
         <p class="svc-meta">One-time &middot; Remote &middot; 5 to 10 business days</p>
-        <a href="contact.html" class="svc-link">Enquire <span class="arr"></span></a>
+        <a href="/contact" class="svc-link">Enquire <span class="arr"></span></a>
       </article>
       <article class="svc-card anim d1" id="consulting">
         <span class="svc-num" aria-hidden="true">02</span>
@@ -450,7 +439,7 @@ a { color: inherit; text-decoration: none; }
         <p class="svc-price" data-zar="R15,000" data-usd="$1,150">R15,000</p>
         <p class="svc-price-unit">Per month</p>
         <p class="svc-meta">Monthly retainer &middot; Virtual &middot; Minimum 3 months</p>
-        <a href="contact.html" class="svc-link">Enquire <span class="arr"></span></a>
+        <a href="/contact" class="svc-link">Enquire <span class="arr"></span></a>
       </article>
       <article class="svc-card anim d2" id="workshop">
         <span class="svc-num" aria-hidden="true">03</span>
@@ -461,7 +450,7 @@ a { color: inherit; text-decoration: none; }
         <p class="svc-price" data-zar="R18,000" data-usd="$1,300">R18,000</p>
         <p class="svc-price-unit">Per workshop</p>
         <p class="svc-meta">In-person &middot; Half or full day &middot; 4 to 30 people</p>
-        <a href="contact.html" class="svc-link">Enquire <span class="arr"></span></a>
+        <a href="/contact" class="svc-link">Enquire <span class="arr"></span></a>
       </article>
       <article class="svc-card anim" id="coaching">
         <span class="svc-num" aria-hidden="true">04</span>
@@ -472,7 +461,7 @@ a { color: inherit; text-decoration: none; }
         <p class="svc-price" data-zar="R2,500" data-usd="$175">R2,500</p>
         <p class="svc-price-unit">Per session</p>
         <p class="svc-meta">Virtual &middot; 90-minute sessions &middot; Packages available</p>
-        <a href="contact.html" class="svc-link">Enquire <span class="arr"></span></a>
+        <a href="/contact" class="svc-link">Enquire <span class="arr"></span></a>
       </article>
       <article class="svc-card svc-card-hw anim d1" id="herworth">
         <span class="svc-num" aria-hidden="true">05</span>
@@ -480,7 +469,7 @@ a { color: inherit; text-decoration: none; }
         <h3 class="svc-title">For women building on their own terms.</h3>
         <p class="svc-body">Consulting and coaching for women founders and executives. Same rigour as every other engagement. A different conversation. See the HER-Worth page for full programme details.</p>
         <p class="svc-meta" style="border-top:none;padding-top:0">Multiple participation options available</p>
-        <a href="her-worth.html" class="svc-link">Start HER-Worth <span class="arr"></span></a>
+        <a href="/her-worth" class="svc-link">Start HER-Worth <span class="arr"></span></a>
       </article>
       <article class="svc-card anim d2">
         <span class="svc-num" aria-hidden="true">06</span>
@@ -496,14 +485,13 @@ a { color: inherit; text-decoration: none; }
     </div>
   </div>
 </section>
-
 <section class="speak-sec" id="speaking" aria-labelledby="speak-h">
   <div class="speak-inner">
     <div class="speak-copy anim">
       <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Speaking and Keynotes</span></div>
       <h2 class="sec-h2 sec-h2-light" id="speak-h">Bring the recognition economy into your event or team.</h2>
       <p class="sec-body">Lucy speaks on AI search visibility, brand authority, the recognition economy, and the human side of growth leadership. Sessions range from 30-minute keynotes to full-day facilitated workshops.</p>
-      <a href="contact.html" class="cta-primary">
+      <a href="/contact" class="cta-primary">
         Book Lucy to Speak
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
@@ -545,7 +533,6 @@ a { color: inherit; text-decoration: none; }
     </div>
   </div>
 </section>
-
 <section class="cta-banner" aria-labelledby="cta-ban-h">
   <div class="cta-banner-inner">
     <div class="cta-banner-text anim">
@@ -553,20 +540,18 @@ a { color: inherit; text-decoration: none; }
       <p>Take the Recognition Diagnostic first. 15 questions, 5 minutes, and a clear picture of where your brand sits. Then we talk.</p>
     </div>
     <div class="cta-banner-btns anim d1">
-      <a href="diagnostic.html" class="cta-banner-primary">
+      <a href="/diagnostic" class="cta-banner-primary">
         Take the Diagnostic
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="contact.html" class="cta-banner-ghost">
+      <a href="/contact" class="cta-banner-ghost">
         Or contact Lucy directly
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
   </div>
 </section>
-
 </main>
-
 <footer class="footer" role="contentinfo">
   <div class="footer-inner">
     <div class="fgrid">
@@ -586,28 +571,27 @@ a { color: inherit; text-decoration: none; }
       <div class="fcol">
         <p class="fcol-h">Work</p>
         <ul>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="her-worth.html">HER-Worth</a></li>
-          <li><a href="diagnostic.html">Free Diagnostic</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/her-worth">HER-Worth</a></li>
+          <li><a href="/diagnostic">Free Diagnostic</a></li>
         </ul>
       </div>
       <div class="fcol">
         <p class="fcol-h">Explore</p>
         <ul>
-          <li><a href="book.html">The Book</a></li>
+          <li><a href="/book">The Book</a></li>
           <li><a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener">The Authority Signal</a></li>
-          <li><a href="about.html">About Lucy</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/about">About Lucy</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="fbase">
       <p class="fcopy">&copy; 2026 Aingworth. All rights reserved.</p>
-      <nav class="flegal" aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+      <nav class="flegal" aria-label="Legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></nav>
     </div>
   </div>
 </footer>
-
 <script>
 /* ===== Nav drawer ===== */
 var burger = document.querySelector('.nav-burger');
@@ -632,14 +616,12 @@ document.addEventListener('keydown', function(e) {
     burger.focus();
   }
 });
-
 /* ===== Scroll progress + reveals ===== */
 var progressBar = document.getElementById('progress');
 window.addEventListener('scroll', function() {
   var max = document.documentElement.scrollHeight - window.innerHeight;
   progressBar.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + '%';
 }, {passive:true});
-
 if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
   var obs = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
@@ -648,7 +630,6 @@ if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
   }, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.anim').forEach(function(el) { obs.observe(el); });
 }
-
 /* ===== Currency toggle ===== */
 var curBtns = document.querySelectorAll('.cur-btn');
 function setCurrency(cur) {
@@ -662,14 +643,12 @@ curBtns.forEach(function(b) {
   b.addEventListener('click', function() { setCurrency(b.dataset.cur); });
 });
 window.__cur = 'zar';
-
 /* ===== Service matcher ===== */
 (function () {
   var body = document.getElementById('matchbody');
   var bar = document.getElementById('matchbar');
   var count = document.getElementById('matchcount');
   if (!body) return;
-
   var SERVICES = {
     audit:      { name: 'AI Visibility Audit', zar: 'R12,500 one-time', usd: '$900 one-time', href: '#audit',
                   why: 'You need a clear picture before committing to a direction. The audit maps your Recognition Triangle and shows where the highest-impact fixes are.' },
@@ -681,10 +660,9 @@ window.__cur = 'zar';
                   why: 'You need space to think clearly and a real thinking partner. Virtual sessions covering positioning, AI visibility and growth leadership.' },
     speaking:   { name: 'Speaking and Keynotes', zar: 'From R15,000 per engagement', usd: 'From $950 per engagement', href: '#speaking',
                   why: 'Your team or event needs to understand the shift to the recognition economy. From 30-minute keynotes to full-day applied workshops.' },
-    herworth:   { name: 'HER-Worth', zar: 'Multiple participation options', usd: 'Multiple participation options', href: 'her-worth.html',
+    herworth:   { name: 'HER-Worth', zar: 'Multiple participation options', usd: 'Multiple participation options', href: '/her-worth',
                   why: 'Built for women founders and executives. The same rigour as every other engagement, and a different conversation.' }
   };
-
   var QUESTIONS = [
     { q: 'How would you describe your business right now?', help: 'This helps match you to the right scope and starting point.',
       opts: [
@@ -732,10 +710,8 @@ window.__cur = 'zar';
         { t: 'The standard track is right', d: 'Match me on my answers so far', w: {} }
       ] }
   ];
-
   var idx = 0;
   var picks = new Array(QUESTIONS.length).fill(null);
-
   function render() {
     var Q = QUESTIONS[idx];
     count.textContent = 'Question ' + (idx + 1) + ' of ' + QUESTIONS.length;
@@ -754,7 +730,6 @@ window.__cur = 'zar';
             '<button type="button" class="cta-primary match-next" id="mnext"' + (picks[idx] === null ? ' disabled' : '') + '>' +
             (idx === QUESTIONS.length - 1 ? 'See my match' : 'Continue') + '</button></div>';
     body.innerHTML = html;
-
     body.querySelectorAll('.match-opt').forEach(function (b) {
       b.addEventListener('click', function () {
         picks[idx] = parseInt(b.dataset.oi, 10);
@@ -769,7 +744,6 @@ window.__cur = 'zar';
       if (idx < QUESTIONS.length - 1) { idx++; render(); } else { result(); }
     });
   }
-
   function result() {
     var scores = { audit: 0, consulting: 0, workshop: 0, coaching: 0, speaking: 0, herworth: 0 };
     var summary = [];
@@ -783,7 +757,6 @@ window.__cur = 'zar';
     order.forEach(function (k) { if (scores[k] > scores[winner]) winner = k; });
     var S = SERVICES[winner];
     var cur = window.__cur || 'zar';
-
     count.textContent = 'Your match';
     bar.style.width = '100%';
     body.innerHTML =
@@ -794,7 +767,7 @@ window.__cur = 'zar';
       '<p class="match-result-price" data-zar="' + S.zar + '" data-usd="' + S.usd + '">' + S[cur] + '</p>' +
       '<div class="match-result-ctas">' +
       '<a href="' + S.href + '" class="cta-primary">See the service</a>' +
-      '<a href="contact.html" class="match-back" style="opacity:1">Or talk to Lucy &rarr;</a>' +
+      '<a href="/contact" class="match-back" style="opacity:1">Or talk to Lucy &rarr;</a>' +
       '</div>' +
       '<div class="match-form-wrap"><p>Want this as a personalised proposal? Enter your email and it comes straight to your inbox.</p>' +
       '<form class="match-form" action="https://formspree.io/f/REPLACE_WITH_LIVE_ID" method="POST">' +
@@ -807,11 +780,9 @@ window.__cur = 'zar';
       '</form>' +
       '<button type="button" class="match-back match-restart" style="opacity:1" id="mrestart">&#8635; Start over</button></div>' +
       '</div>';
-
     document.getElementById('mrestart').addEventListener('click', function () {
       idx = 0; picks = new Array(QUESTIONS.length).fill(null); render();
     });
-
     var mf = body.querySelector('.match-form');
     mf.addEventListener('submit', async function (e) {
       e.preventDefault();
@@ -829,7 +800,6 @@ window.__cur = 'zar';
       } catch { btn.textContent = 'Try Again'; btn.disabled = false; }
     });
   }
-
   render();
 })();
 </script>
