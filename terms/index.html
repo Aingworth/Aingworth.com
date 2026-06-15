@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Use - Aingworth</title>
+<meta name="description" content="Terms of Use for the Aingworth website, diagnostic tool, and published content.">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --charcoal:       #1a1a1a;
+  --charcoal-mid:   #242424;
+  --teal:           #4a9e8e;
+  --teal-light:     #6bbfb0;
+  --seasalt:        #FAFAFA;
+  --mid-grey:       #888880;
+  --border-dark:    rgba(183,206,206,0.1);
+  --border-light:   rgba(28,15,19,0.1);
+  --muted-light:    rgba(26,26,26,0.6);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'DM Sans', system-ui, sans-serif;
+  --mono:  'DM Mono', monospace;
+  --max-w: 760px;
+  --px: clamp(20px, 4vw, 56px);
+}
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body { font-family:var(--sans); font-size:16px; background:var(--seasalt); color:var(--charcoal); -webkit-font-smoothing:antialiased; line-height:1.7; }
+a { color:var(--teal); text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px; }
+a:hover { color:var(--teal-light); }
+.skip { position:absolute; top:-52px; left:24px; background:var(--teal-light); color:var(--charcoal); padding:10px 18px; font-size:13px; font-weight:500; z-index:999; transition:top .2s; }
+.skip:focus { top:8px; }
+:focus-visible { outline:2px solid var(--teal-light); outline-offset:3px; }
+.nav { position:fixed; top:0; left:0; right:0; z-index:200; height:68px; display:flex; align-items:center; justify-content:space-between; padding:0 var(--px); background:rgba(26,26,26,.97); backdrop-filter:blur(20px); border-bottom:1px solid var(--border-dark); }
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo img { height:28px; width:auto; }
+.nav-logo-text { font-family:var(--sans); font-size:15px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--seasalt); }
+.nav-back { display:flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; text-decoration:none; transition:color .2s; }
+.nav-back:hover { color:var(--teal-light); }
+.page-wrap { max-width:var(--max-w); margin:0 auto; padding:120px var(--px) 100px; }
+.page-eyebrow { display:flex; align-items:center; gap:12px; margin-bottom:20px; }
+.page-rule { width:26px; height:1px; background:var(--teal-light); }
+.page-lbl { font-family:var(--mono); font-size:11px; color:var(--teal-light); letter-spacing:.14em; text-transform:uppercase; }
+.page-title { font-family:var(--serif); font-size:clamp(36px,4vw,56px); font-weight:500; line-height:1.08; color:var(--charcoal); letter-spacing:-.01em; margin-bottom:12px; }
+.page-date { font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; margin-bottom:48px; padding-bottom:48px; border-bottom:1px solid var(--border-light); }
+.doc-body { font-size:16px; line-height:1.78; color:var(--muted-light); }
+.doc-body h2 { font-family:var(--serif); font-size:clamp(22px,2.5vw,30px); font-weight:500; color:var(--charcoal); line-height:1.2; margin-top:48px; margin-bottom:14px; }
+.doc-body h3 { font-size:16px; font-weight:500; color:var(--charcoal); margin-top:28px; margin-bottom:10px; }
+.doc-body p { margin-bottom:16px; }
+.doc-body p:last-child { margin-bottom:0; }
+.doc-body ul, .doc-body ol { margin:16px 0 16px 24px; display:flex; flex-direction:column; gap:8px; }
+.doc-body li { font-size:16px; line-height:1.7; color:var(--muted-light); }
+.doc-body strong { color:var(--charcoal); font-weight:500; }
+.doc-callout { background:rgba(107,191,176,.06); border:1px solid rgba(107,191,176,.2); border-left:3px solid var(--teal-light); padding:20px 24px; margin:28px 0; }
+.doc-callout p { margin-bottom:0; font-size:15px; }
+.footer-legal { background:var(--charcoal); padding:48px var(--px) 32px; margin-top:80px; }
+.fl-inner { max-width:var(--max-w); margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+.fl-brand { font-family:var(--sans); font-size:13px; font-weight:500; color:var(--seasalt); letter-spacing:.08em; text-transform:uppercase; }
+.fl-links { display:flex; gap:20px; }
+.fl-links a { font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.06em; text-decoration:none; transition:color .2s; }
+.fl-links a:hover { color:var(--teal-light); }
+.fl-copy { font-family:var(--mono); font-size:11px; color:rgba(226,226,226,.25); letter-spacing:.06em; width:100%; margin-top:8px; }
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<nav class="nav" aria-label="Primary navigation">
+  <a href="index.html" class="nav-logo" aria-label="Aingworth home">
+    <img src="images/Aingworth_graphic_logo.png" alt="Aingworth" height="28" style="filter:brightness(0) invert(1)">
+    <span class="nav-logo-text">Aingworth</span>
+  </a>
+  <a href="index.html" class="nav-back">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 3L5 7l4 4"/></svg>
+    Back to site
+  </a>
+</nav>
+
+<main id="main">
+<div class="page-wrap">
+  <div class="page-eyebrow"><div class="page-rule"></div><span class="page-lbl">Legal</span></div>
+  <h1 class="page-title">Terms of Use</h1>
+  <p class="page-date">Last updated: June 2026</p>
+
+  <div class="doc-body">
+
+    <div class="doc-callout">
+      <p>By using this website, you agree to these terms. Please read them. They are written in plain language and they are not designed to catch you out. If you have questions, contact us at <a href="mailto:info@aingworth.com">info@aingworth.com</a>.</p>
+    </div>
+
+    <h2>1. About This Website</h2>
+    <p>This website is operated by Lucy Aingworth, trading as Aingworth. The website is located at aingworth.com and includes all pages, tools, and content published under that domain, including the Recognition Diagnostic and all associated resources.</p>
+
+    <h2>2. Using This Website</h2>
+    <p>You may use this website for lawful personal and commercial purposes. You may not:</p>
+    <ul>
+      <li>Use this website in any way that violates applicable laws or regulations</li>
+      <li>Reproduce, copy, or distribute any content from this website without our written permission, except as expressly permitted below</li>
+      <li>Use automated tools to scrape, crawl, or extract content from this website at scale</li>
+      <li>Attempt to gain unauthorized access to any part of this website or its underlying systems</li>
+      <li>Use this website to transmit harmful, offensive, or unsolicited communications</li>
+    </ul>
+
+    <h2>3. Intellectual Property</h2>
+    <h3>Frameworks and named concepts</h3>
+    <p>The following are proprietary frameworks and concepts developed by Lucy Aingworth and published in Become the Answer. All rights are reserved:</p>
+    <ul>
+      <li>The Recognition Triangle</li>
+      <li>The Recognition Economy</li>
+      <li>The Machine Gatekeeper</li>
+      <li>Authority Debt</li>
+      <li>The Authority Method</li>
+      <li>The Composite Picture</li>
+      <li>The six Recognition Triangle patterns (The Promising Claim, The Hidden Expert, The Validated Generalist, The Strong Foundation, The Recognized Authority, The Decaying Authority)</li>
+    </ul>
+    <p>You may reference these frameworks in conversation, writing, and professional practice provided you attribute them to Lucy Aingworth and Become the Answer. You may not reproduce, commercialize, or adapt these frameworks as your own without written permission.</p>
+
+    <h3>Website content</h3>
+    <p>All text, graphics, design, and code on this website are the property of Lucy Aingworth and Aingworth unless otherwise stated. You may not reproduce or republish website content without written permission.</p>
+
+    <h3>The book</h3>
+    <p>Become the Answer: How Brands Build Authority in the Age of AI is copyright Lucy Aingworth, first published 2026 by Aingworth. All rights reserved. Quotation for review, commentary, or educational purposes is permitted in accordance with fair dealing provisions, provided attribution is given.</p>
+
+    <h2>4. The Recognition Diagnostic</h2>
+    <p>The Recognition Diagnostic is a free self-assessment tool provided for informational purposes. It is based on the Recognition Triangle framework from Become the Answer.</p>
+    <p>The results produced by the diagnostic are indicative assessments based on your self-reported answers. They are not a substitute for professional brand or marketing advice. Aingworth makes no warranty as to the accuracy, completeness, or fitness for purpose of any diagnostic result.</p>
+    <p>By submitting your email address at the end of the diagnostic, you consent to receiving a follow-up email from Lucy Aingworth. You will not be added to any marketing list without further consent.</p>
+
+    <h2>5. Services and Engagements</h2>
+    <p>Information on this website about consulting, coaching, speaking, and workshop services is provided for general information only. Prices shown are starting rates and are subject to change. All engagements are subject to a separate written agreement between the client and Aingworth.</p>
+    <p>Nothing on this website constitutes a binding offer or contract for services.</p>
+
+    <h2>6. Accuracy of Information</h2>
+    <p>We make reasonable efforts to ensure that the information on this website is accurate and current. However, we do not warrant that all information is complete, accurate, or up to date at all times. Statistics and research cited on this website reflect sources available at the time of publication and may become outdated.</p>
+
+    <h2>7. External Links</h2>
+    <p>This website contains links to third-party websites including Amazon, LinkedIn, and other platforms. These links are provided for convenience. We have no control over the content of those sites and we accept no responsibility for them or for any loss or damage arising from your use of them.</p>
+
+    <h2>8. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, Aingworth and Lucy Aingworth accept no liability for any direct, indirect, incidental, or consequential loss or damage arising from your use of this website or reliance on any information contained within it.</p>
+    <p>This includes but is not limited to loss of revenue, loss of data, or business interruption, whether arising in contract, tort, or otherwise, even if we have been advised of the possibility of such damage.</p>
+
+    <h2>9. Disclaimer</h2>
+    <p>The content on this website is provided for general information and educational purposes. It does not constitute professional legal, financial, or business advice. You should seek appropriate professional advice before making decisions based on information found on this website.</p>
+
+    <h2>10. Governing Law</h2>
+    <p>These terms are governed by the laws of the Republic of South Africa. Any disputes arising from the use of this website shall be subject to the jurisdiction of the South African courts.</p>
+    <p>If you are accessing this website from outside South Africa, you are responsible for ensuring that your use complies with the laws of your jurisdiction.</p>
+
+    <h2>11. Changes to These Terms</h2>
+    <p>We may update these terms from time to time. The date at the top of this page reflects the most recent update. Continued use of this website after any update constitutes your acceptance of the revised terms.</p>
+
+    <h2>12. Contact</h2>
+    <p>For any questions about these terms, please contact us:</p>
+    <ul>
+      <li>Email: <a href="mailto:info@aingworth.com">info@aingworth.com</a></li>
+      <li>Contact form: <a href="contact.html">aingworth.com/contact</a></li>
+    </ul>
+
+  </div>
+</div>
+</main>
+
+<footer class="footer-legal" role="contentinfo">
+  <div class="fl-inner">
+    <span class="fl-brand">Aingworth</span>
+    <nav class="fl-links" aria-label="Legal navigation">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="fl-copy">&copy; 2026 Aingworth. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
