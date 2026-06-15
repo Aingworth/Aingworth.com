@@ -6,6 +6,7 @@
 <title>About Lucy Aingworth - Founder of Aingworth</title>
 <meta name="description" content="Lucy Aingworth is a digital strategist, brand authority consultant, and founder of Aingworth and HER-Worth. Over a decade of SEO, CRO, paid media, and AI visibility strategy across global markets.">
 <meta name="robots" content="index, follow">
+<link rel="icon" href="images/Aingworth_Main_favicon.png" type="image/png">
 <meta property="og:title" content="About Lucy Aingworth - Founder of Aingworth">
 <meta property="og:description" content="A decade of building growth systems globally. Author of Become the Answer. Founder of Aingworth and HER-Worth.">
 <meta property="og:type" content="profile">
@@ -36,6 +37,14 @@
     }
   ]
 }
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5K6TKZTK1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C5K6TKZTK1');
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -394,11 +403,13 @@ a { color:inherit; text-decoration:none; }
 .cta-outline:hover { background:rgba(26,26,26,.06); }
 
 /* FOOTER */
-.footer { background:var(--charcoal); padding:60px var(--px) 32px; border-top:1px solid var(--border-dark); }
+.footer { background:var(--charcoal); padding:72px var(--px) 36px; border-top:1px solid var(--border-dark); }
 .footer-inner { max-width:var(--max-w); margin:0 auto; }
-.fgrid { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:48px; margin-bottom:48px; }
+.fgrid { display:grid; grid-template-columns:1.6fr 1fr 1fr; gap:48px; margin-bottom:48px; }
 .fbrand-name { font-family:var(--sans); font-size:13px; font-weight:500; color:var(--seasalt); letter-spacing:.1em; text-transform:uppercase; margin-bottom:14px; }
 .fdesc { font-size:14px; line-height:1.7; color:var(--mid-grey); margin-bottom:20px; max-width:300px; }
+.fmail { display:inline-block; font-family:var(--mono); font-size:12px; letter-spacing:.04em; color:var(--teal-light); margin-bottom:20px; transition:color .2s; }
+.fmail:hover { color:var(--teal); }
 .fsocials { display:flex; gap:8px; flex-wrap:wrap; }
 .fsoc { width:34px; height:34px; border:1px solid var(--border-dark); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:11px; color:var(--mid-grey); transition:all .2s; border-radius:2px; }
 .fsoc:hover { border-color:var(--teal-light); color:var(--teal-light); }
@@ -406,7 +417,7 @@ a { color:inherit; text-decoration:none; }
 .fcol ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
 .fcol ul li a { font-size:14px; color:var(--mid-grey); transition:color .2s; }
 .fcol ul li a:hover { color:var(--teal-light); }
-.fbase { display:flex; align-items:center; justify-content:space-between; padding-top:24px; border-top:1px solid var(--border-dark); flex-wrap:wrap; gap:16px; }
+.fbase { display:flex; align-items:center; justify-content:space-between; padding-top:28px; border-top:1px solid var(--border-dark); flex-wrap:wrap; gap:16px; }
 .fcopy { font-family:var(--mono); font-size:11px; color:rgba(226,226,226,.25); letter-spacing:.06em; }
 .flegal { display:flex; gap:20px; }
 .flegal a { font-family:var(--mono); font-size:11px; color:rgba(226,226,226,.25); letter-spacing:.06em; transition:color .2s; }
@@ -442,28 +453,28 @@ a { color:inherit; text-decoration:none; }
 
 <header role="banner">
   <nav class="nav" aria-label="Primary navigation">
-    <a href="index.html" aria-label="Aingworth home">
+    <a href="/" class="nav-logo" aria-label="Aingworth home">
       <img src="images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth" style="width:200px;height:auto;display:block;filter:brightness(100) contrast(2);">
     </a>
     <ul class="nav-menu" role="list">
-      <li><a href="services.html">Work With Me</a></li>
-      <li><a href="her-worth.html">HER-Worth</a></li>
-      <li><a href="book.html">The Book</a></li>
-      <li><a href="diagnostic.html">Diagnostic</a></li>
-      <li><a href="about.html" aria-current="page">About</a></li>
-      <li class="ncta"><a href="contact.html">Let's Talk</a></li>
+      <li><a href="/services">Work With Me</a></li>
+      <li><a href="/her-worth">HER-Worth</a></li>
+      <li><a href="/book">The Book</a></li>
+      <li><a href="/diagnostic">Diagnostic</a></li>
+      <li><a href="/about" aria-current="page">About</a></li>
+      <li class="ncta"><a href="/contact">Let's Talk</a></li>
     </ul>
     <button class="nav-burger" aria-expanded="false" aria-controls="ndrawer" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
   <nav id="ndrawer" class="nav-drawer" aria-label="Mobile navigation">
-    <a href="services.html">Work With Me</a>
-    <a href="her-worth.html">HER-Worth</a>
-    <a href="book.html">The Book</a>
-    <a href="diagnostic.html">Diagnostic</a>
-    <a href="about.html">About</a>
-    <a href="contact.html" class="drawer-cta">Let's Talk</a>
+    <a href="/services">Work With Me</a>
+    <a href="/her-worth">HER-Worth</a>
+    <a href="/book">The Book</a>
+    <a href="/diagnostic">Diagnostic</a>
+    <a href="/about">About</a>
+    <a href="/contact" class="drawer-cta">Let's Talk</a>
   </nav>
 </header>
 
@@ -527,7 +538,7 @@ a { color:inherit; text-decoration:none; }
       <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Background</span></div>
       <h2 class="pull-quote" id="story-h">Over a decade in the room.<br><em>Still in it.</em></h2>
       <p style="font-size:16px; line-height:1.78; color:var(--muted-light); margin-top:20px;">Digital strategy, SEO, CRO, paid media, AI visibility strategy. Across the USA, UK, Europe, South Africa, Australia, and Asia. Across industries that did not always want to be in the same sentence.</p>
-      <a href="contact.html" class="tlink" style="margin-top:28px;">Work with Lucy <span class="arr" aria-hidden="true"></span></a>
+      <a href="/contact" class="tlink" style="margin-top:28px;">Work with Lucy <span class="arr" aria-hidden="true"></span></a>
     </div>
 
     <div class="anim d1">
@@ -645,18 +656,17 @@ a { color:inherit; text-decoration:none; }
   </div>
 </section>
 
-<!-- CONNECT -->
 <!-- CTA -->
 <section class="cta-banner" aria-labelledby="cta-h">
   <div class="cta-banner-inner">
     <h2 id="cta-h">If this resonates,<br>let's talk.</h2>
     <p>Every engagement starts with a conversation, not a pitch. Tell me where you are and what you are trying to build. We will work out the rest from there.</p>
     <div class="cta-btns">
-      <a href="contact.html" class="cta-dark">
+      <a href="https://aingworth.com/contact/" class="cta-dark">
         Start a Conversation
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="services.html" class="cta-outline">See how we work</a>
+      <a href="https://aingworth.com/services/" class="cta-outline">See how we work</a>
     </div>
   </div>
 </section>
@@ -669,50 +679,37 @@ a { color:inherit; text-decoration:none; }
       <div>
         <img src="images/Aingworth_Main_Logo2.png.png" alt="Aingworth" style="width:56px;height:auto;display:block;filter:brightness(100) contrast(2);margin-bottom:18px;">
         <p class="fdesc">Brand authority and AI visibility consulting for founders, CMOs, and executives who need to be found for the right reasons.</p>
+        <a href="mailto:info@aingworth.com" class="fmail">info@aingworth.com</a>
         <nav class="fsocials" aria-label="Social media">
           <a href="https://www.linkedin.com/in/lisinda-lucy/" class="fsoc" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
-          <a href="https://www.youtube.com/@aingworth" class="fsoc" aria-label="YouTube" target="_blank" rel="noopener">yt</a>
           <a href="https://www.instagram.com/lucy_aingworth/" class="fsoc" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
           <a href="https://www.tiktok.com/@aingworth" class="fsoc" aria-label="TikTok" target="_blank" rel="noopener">tt</a>
+          <a href="https://x.com/lucy_aingworth" class="fsoc" aria-label="X (Twitter)" target="_blank" rel="noopener">x</a>
+          <a href="https://www.threads.net/@lucy_aingworth" class="fsoc" aria-label="Threads" target="_blank" rel="noopener">th</a>
           <a href="https://bsky.app/profile/lucyaingworth.bsky.social" class="fsoc" aria-label="Bluesky" target="_blank" rel="noopener">bs</a>
         </nav>
       </div>
       <div class="fcol">
         <p class="fcol-h">Work</p>
         <ul>
-          <li><a href="services.html">All Services</a></li>
-          <li><a href="services.html#consulting">AI Visibility Consulting</a></li>
-          <li><a href="services.html#workshop">Brand Workshop</a></li>
-          <li><a href="services.html#coaching">Coaching</a></li>
-          <li><a href="her-worth.html">HER-Worth</a></li>
-          <li><a href="diagnostic.html">Free Diagnostic</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/her-worth">HER-Worth</a></li>
+          <li><a href="/diagnostic">Free Diagnostic</a></li>
         </ul>
       </div>
       <div class="fcol">
-        <p class="fcol-h">Resources</p>
+        <p class="fcol-h">Explore</p>
         <ul>
-          <li><a href="book.html">The Book</a></li>
-          <li><a href="https://www.amazon.com/Become-Answer-Brands-Build-Authority/dp/B0H14GDQMH" target="_blank" rel="noopener">Buy on Amazon</a></li>
+          <li><a href="/book">The Book</a></li>
           <li><a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener">The Authority Signal</a></li>
-        </ul>
-      </div>
-      <div class="fcol">
-        <p class="fcol-h">Company</p>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Lucy</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="/about">About Lucy</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="fbase">
       <p class="fcopy">&copy; 2026 Aingworth. All rights reserved.</p>
-      <nav class="flegal" aria-label="Legal">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-      </nav>
+      <nav class="flegal" aria-label="Legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></nav>
     </div>
   </div>
 </footer>
