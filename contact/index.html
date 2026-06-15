@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Aingworth</title>
+<meta name="description" content="Get in touch with Lucy Aingworth. Consulting enquiries, speaking bookings, media requests, or anything else. Every message is read personally.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Contact - Aingworth">
+<meta property="og:description" content="Start a conversation with Lucy Aingworth. Consulting, speaking, media, or general enquiries.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aingworth.com/contact">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Aingworth",
+  "url": "https://aingworth.com/contact",
+  "description": "Contact page for Lucy Aingworth, founder of Aingworth and HER-Worth.",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://aingworth.com/#lucy",
+    "name": "Lucy Aingworth",
+    "email": "info@aingworth.com",
+    "telephone": "+27780722185",
+    "url": "https://aingworth.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/lisinda-lucy/",
+      "https://lucyaingworth.medium.com/",
+      "https://lucyaingworth.substack.com/",
+      "https://bsky.app/profile/lucyaingworth.bsky.social"
+    ]
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --charcoal:       #1a1a1a;
+  --charcoal-mid:   #242424;
+  --charcoal-light: #2e2e2e;
+  --teal:           #4a9e8e;
+  --teal-light:     #6bbfb0;
+  --platinum:       #E2E2E2;
+  --seasalt:        #FAFAFA;
+  --mid-grey:       #888880;
+  --lavender:       #c4a7e4;
+  --border-dark:    rgba(183,206,206,0.1);
+  --border-light:   rgba(28,15,19,0.1);
+  --muted-dark:     rgba(226,226,226,0.6);
+  --muted-light:    rgba(26,26,26,0.6);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'DM Sans', system-ui, sans-serif;
+  --mono:  'DM Mono', monospace;
+  --max-w: 1160px;
+  --px: clamp(20px, 4vw, 56px);
+  --ease: cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body { font-family:var(--sans); font-size:16px; background:var(--seasalt); color:var(--charcoal); -webkit-font-smoothing:antialiased; line-height:1.7; overflow-x:hidden; }
+img { max-width:100%; display:block; }
+a { color:inherit; text-decoration:none; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.skip { position:absolute; top:-52px; left:24px; background:var(--teal-light); color:var(--charcoal); padding:10px 18px; font-size:13px; font-weight:500; z-index:999; transition:top .2s; }
+.skip:focus { top:8px; }
+:focus-visible { outline:2px solid var(--teal-light); outline-offset:3px; }
+
+/* NAV */
+.nav { position:fixed; top:0; left:0; right:0; z-index:200; height:68px; display:flex; align-items:center; justify-content:space-between; padding:0 var(--px); background:rgba(26,26,26,.97); backdrop-filter:blur(20px); border-bottom:1px solid var(--border-dark); transition:background .3s var(--ease); }
+.nav-logo { display:flex; align-items:center; height:68px; } .nav-logo img { width:200px; height:auto; display:block; } .nav-logo-text { display:none; }
+.nav-menu { display:flex; align-items:center; gap:2px; list-style:none; }
+.nav-menu a { display:block; padding:7px 12px; color:rgba(250,250,250,.6); font-size:13px; font-weight:400; letter-spacing:.06em; text-transform:uppercase; transition:color .2s; }
+.nav-menu a:hover, .nav-menu a[aria-current="page"] { color:var(--teal-light); }
+.nav-menu .ncta a { background:var(--teal-light); color:var(--charcoal); padding:8px 20px; font-weight:500; border-radius:2px; transition:all .2s; }
+.nav-menu .ncta a:hover { background:var(--teal); color:var(--seasalt); }
+.nav-burger { display:none; flex-direction:column; gap:5px; padding:8px; background:none; border:none; cursor:pointer; }
+.nav-burger span { display:block; width:22px; height:1.5px; background:var(--seasalt); transition:all .3s var(--ease); transform-origin:center; }
+.nav-burger[aria-expanded="true"] span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+.nav-burger[aria-expanded="true"] span:nth-child(2) { opacity:0; }
+.nav-burger[aria-expanded="true"] span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+.nav-drawer { display:none; position:fixed; top:68px; left:0; right:0; bottom:0; background:var(--charcoal); padding:28px var(--px); z-index:199; flex-direction:column; }
+.nav-drawer.open { display:flex; }
+.nav-drawer a { display:block; padding:16px 0; color:rgba(250,250,250,.65); font-size:18px; border-bottom:1px solid var(--border-dark); transition:color .2s; }
+.nav-drawer a:hover { color:var(--teal-light); }
+.drawer-cta { margin-top:24px; display:inline-block; padding:16px 28px; background:var(--teal-light); color:var(--charcoal) !important; font-size:14px; font-weight:500; letter-spacing:.06em; text-transform:uppercase; text-align:center; border-bottom:none !important; border-radius:2px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .anim { opacity:0; transform:translateY(18px); transition:opacity .65s var(--ease), transform .65s var(--ease); }
+  .anim.vis { opacity:1; transform:translateY(0); }
+  .d1 { transition-delay:.1s; } .d2 { transition-delay:.2s; } .d3 { transition-delay:.3s; }
+}
+
+/* =============================================
+   HERO
+============================================= */
+.hero {
+  background: var(--charcoal);
+  padding: 140px var(--px) 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -150px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(74,158,142,.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-texture {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(107,191,176,.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.hero-eyebrow { display:flex; align-items:center; gap:12px; margin-bottom:24px; }
+.hero-eyebrow-rule { width:32px; height:1px; background:var(--teal-light); }
+.hero-eyebrow-label { font-family:var(--mono); font-size:11px; color:var(--teal-light); letter-spacing:.16em; text-transform:uppercase; }
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(48px,5.5vw,80px);
+  font-weight: 500;
+  line-height: 1.04;
+  color: var(--seasalt);
+  letter-spacing: -.015em;
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+.hero h1 em { font-style:italic; color:var(--teal-light); }
+.hero-sub {
+  font-size: 17px;
+  line-height: 1.72;
+  color: var(--muted-dark);
+  max-width: 520px;
+  margin-bottom: 40px;
+}
+.response-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 1px solid var(--border-dark);
+  background: rgba(255,255,255,.03);
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--mid-grey);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.rn-dot { width:6px; height:6px; border-radius:50%; background:var(--teal-light); flex-shrink:0; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:.4;} 50%{opacity:1;} }
+
+/* =============================================
+   MAIN CONTENT
+============================================= */
+.contact-sec {
+  background: var(--seasalt);
+  padding: 80px var(--px) 100px;
+}
+.contact-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 80px;
+  align-items: start;
+}
+
+/* =============================================
+   CONTACT FORM
+============================================= */
+.form-wrap {}
+.form-head { margin-bottom: 36px; }
+.form-head-eye { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+.fhe-rule { width:26px; height:1px; background:var(--teal-light); }
+.fhe-lbl { font-family:var(--mono); font-size:11px; color:var(--teal-light); letter-spacing:.14em; text-transform:uppercase; }
+.form-head h2 { font-family:var(--serif); font-size:clamp(28px,3vw,42px); font-weight:500; line-height:1.1; color:var(--charcoal); letter-spacing:-.01em; margin-bottom:12px; }
+.form-head p { font-size:15px; line-height:1.72; color:var(--muted-light); }
+
+/* Enquiry type selector */
+.enquiry-types {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.eq-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--border-light);
+  background: transparent;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--mid-grey);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .2s;
+  border-radius: 2px;
+}
+.eq-btn:hover { border-color: rgba(74,158,142,.3); color: var(--teal); }
+.eq-btn.active { background: var(--teal-light); border-color: var(--teal-light); color: var(--charcoal); font-weight: 500; }
+
+/* Form fields */
+.contact-form { display:flex; flex-direction:column; gap:20px; }
+
+.field-group { display:flex; flex-direction:column; gap:6px; }
+.field-row { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.field-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--mid-grey);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.field-input,
+.field-select,
+.field-textarea {
+  padding: 13px 16px;
+  background: #fff;
+  border: 1px solid var(--border-light);
+  color: var(--charcoal);
+  font-family: var(--sans);
+  font-size: 15px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+  border-radius: 2px;
+  width: 100%;
+  appearance: none;
+}
+.field-input:focus,
+.field-select:focus,
+.field-textarea:focus {
+  border-color: var(--teal-light);
+  box-shadow: 0 0 0 3px rgba(107,191,176,.1);
+}
+.field-input::placeholder,
+.field-textarea::placeholder { color: rgba(26,26,26,.3); }
+.field-textarea { resize: vertical; min-height: 140px; line-height: 1.6; }
+.field-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888880' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; cursor: pointer; }
+
+.field-note { font-family:var(--mono); font-size:10px; color:var(--mid-grey); letter-spacing:.06em; }
+
+/* Submit */
+.form-submit-row { display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+.btn-submit {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--teal-light); color: var(--charcoal);
+  font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
+  padding: 16px 32px; border: none; border-radius: 2px;
+  cursor: pointer; transition: all .2s var(--ease);
+}
+.btn-submit:hover { background: var(--teal); color: var(--seasalt); transform: translateY(-1px); }
+.btn-submit:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.submit-note { font-family:var(--mono); font-size:10px; color:var(--mid-grey); letter-spacing:.06em; }
+
+/* Success state */
+.form-success {
+  display: none;
+  background: rgba(107,191,176,.08);
+  border: 1px solid rgba(107,191,176,.25);
+  padding: 36px 32px;
+}
+.fs-icon {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: rgba(107,191,176,.15);
+  border: 1px solid rgba(107,191,176,.3);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--teal-light);
+  margin-bottom: 20px;
+}
+.fs-title { font-family:var(--serif); font-size:26px; font-weight:500; color:var(--charcoal); margin-bottom:10px; }
+.fs-text { font-size:15px; color:var(--muted-light); line-height:1.7; }
+
+/* =============================================
+   RIGHT COLUMN
+============================================= */
+.contact-aside {}
+
+/* Direct contact card */
+.direct-card {
+  background: var(--charcoal);
+  padding: 36px 32px;
+  margin-bottom: 2px;
+  position: relative;
+}
+.direct-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--teal-light), rgba(107,191,176,.2));
+}
+.dc-label { font-family:var(--mono); font-size:10px; color:var(--teal-light); letter-spacing:.14em; text-transform:uppercase; margin-bottom:20px; }
+.dc-items { display:flex; flex-direction:column; gap:0; }
+.dc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-dark);
+  text-decoration: none;
+  transition: background .2s;
+}
+.dc-item:last-child { border-bottom: none; padding-bottom: 0; }
+.dc-item:first-child { padding-top: 0; }
+.dc-item:hover .dc-name { color: var(--teal-light); }
+.dc-icon {
+  width: 32px; height: 32px;
+  border: 1px solid var(--border-dark);
+  border-radius: 2px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  color: var(--mid-grey);
+  transition: border-color .2s, color .2s;
+}
+.dc-item:hover .dc-icon { border-color: rgba(107,191,176,.3); color: var(--teal-light); }
+.dc-text {}
+.dc-name { font-size:14px; font-weight:500; color:var(--seasalt); transition:color .2s; display:block; line-height:1.3; }
+.dc-detail { font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.06em; margin-top:2px; display:block; }
+
+/* Phone note */
+.phone-note {
+  background: var(--charcoal-mid);
+  padding: 14px 18px;
+  margin-bottom: 2px;
+  border: 1px solid var(--border-dark);
+  border-top: none;
+}
+.phone-note p { font-family:var(--mono); font-size:10px; color:rgba(226,226,226,.3); letter-spacing:.06em; line-height:1.7; text-transform:uppercase; }
+
+/* Platform links */
+.platforms-card {
+  background: var(--seasalt);
+  border: 1px solid var(--border-light);
+  border-top: none;
+  padding: 28px 32px;
+  margin-bottom: 2px;
+}
+.pl-label { font-family:var(--mono); font-size:10px; color:var(--mid-grey); letter-spacing:.14em; text-transform:uppercase; margin-bottom:18px; }
+.pl-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.pl-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--border-light);
+  background: #fff;
+  font-size: 13px;
+  color: var(--muted-light);
+  transition: all .2s;
+  border-radius: 2px;
+}
+.pl-link:hover { border-color: rgba(74,158,142,.3); color: var(--teal); background: var(--seasalt); }
+.pl-dot { width:5px; height:5px; border-radius:50%; background:var(--teal-light); flex-shrink:0; opacity:.6; }
+.pl-name { font-size:13px; font-weight:500; line-height:1.2; }
+.pl-type { font-family:var(--mono); font-size:9px; color:var(--mid-grey); letter-spacing:.08em; text-transform:uppercase; }
+
+/* HER-Worth contact note */
+.hw-contact-card {
+  background: rgba(196,167,228,.06);
+  border: 1px solid rgba(196,167,228,.2);
+  border-top: none;
+  padding: 24px 32px;
+}
+.hw-contact-card p { font-size:14px; color:var(--muted-light); line-height:1.68; }
+.hw-contact-card a { color:var(--lavender); text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px; }
+.hw-contact-label { font-family:var(--mono); font-size:10px; color:var(--lavender); letter-spacing:.12em; text-transform:uppercase; margin-bottom:10px; }
+
+/* =============================================
+   FAQ STRIP
+============================================= */
+.faq-sec {
+  background: var(--charcoal-mid);
+  padding: 80px var(--px);
+  border-top: 1px solid var(--border-dark);
+}
+.faq-inner { max-width:var(--max-w); margin:0 auto; }
+.faq-head { margin-bottom:44px; }
+.faq-head-eye { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
+.fhe-rule-dark { width:26px; height:1px; background:var(--teal-light); }
+.fhe-lbl-dark { font-family:var(--mono); font-size:11px; color:var(--teal-light); letter-spacing:.14em; text-transform:uppercase; }
+.faq-head h2 { font-family:var(--serif); font-size:clamp(28px,3vw,40px); font-weight:500; color:var(--seasalt); line-height:1.1; letter-spacing:-.01em; }
+.faq-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
+.faq-item {
+  background: var(--charcoal);
+  padding: 28px 32px;
+  border: 1px solid var(--border-dark);
+  transition: border-color .2s;
+}
+.faq-item:hover { border-color: rgba(107,191,176,.2); }
+.faq-q { font-size:15px; font-weight:500; color:var(--seasalt); margin-bottom:10px; line-height:1.4; }
+.faq-a { font-size:14px; color:var(--mid-grey); line-height:1.68; }
+.faq-a a { color:var(--teal-light); text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px; transition:color .2s; }
+.faq-a a:hover { color:var(--teal); }
+
+/* FOOTER */
+.footer { background:var(--charcoal); padding:60px var(--px) 32px; border-top:1px solid var(--border-dark); }
+.footer-inner { max-width:var(--max-w); margin:0 auto; }
+.fgrid { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:48px; margin-bottom:48px; }
+.fbrand-name { font-family:var(--sans); font-size:13px; font-weight:500; color:var(--seasalt); letter-spacing:.1em; text-transform:uppercase; margin-bottom:14px; }
+.fdesc { font-size:14px; line-height:1.7; color:var(--mid-grey); margin-bottom:20px; max-width:300px; }
+.fsocials { display:flex; gap:8px; flex-wrap:wrap; }
+.fsoc { width:34px; height:34px; border:1px solid var(--border-dark); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:11px; color:var(--mid-grey); transition:all .2s; border-radius:2px; }
+.fsoc:hover { border-color:var(--teal-light); color:var(--teal-light); }
+.fcol-h { font-family:var(--mono); font-size:10px; color:rgba(226,226,226,.3); letter-spacing:.14em; text-transform:uppercase; margin-bottom:16px; }
+.fcol ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.fcol ul li a { font-size:14px; color:var(--mid-grey); transition:color .2s; }
+.fcol ul li a:hover { color:var(--teal-light); }
+.fbase { display:flex; align-items:center; justify-content:space-between; padding-top:24px; border-top:1px solid var(--border-dark); flex-wrap:wrap; gap:16px; }
+.fcopy { font-family:var(--mono); font-size:11px; color:rgba(226,226,226,.25); letter-spacing:.06em; }
+.flegal { display:flex; gap:20px; }
+.flegal a { font-family:var(--mono); font-size:11px; color:rgba(226,226,226,.25); letter-spacing:.06em; transition:color .2s; }
+.flegal a:hover { color:var(--teal-light); }
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .contact-inner { grid-template-columns:1fr; gap:56px; }
+  .contact-aside { order:-1; }
+  .faq-grid { grid-template-columns:1fr; }
+  .fgrid { grid-template-columns:1fr 1fr; gap:32px; }
+  .nav-menu { display:none; }
+  .nav-burger { display:flex; }
+}
+@media (max-width: 600px) {
+  .field-row { grid-template-columns:1fr; gap:20px; }
+  .pl-grid { grid-template-columns:1fr; }
+  .fgrid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip">Skip to content</a>
+
+<header role="banner">
+  <nav class="nav" aria-label="Primary navigation">
+    <a href="index.html" aria-label="Aingworth home">
+      <img src="images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth" style="width:200px;height:auto;display:block;filter:brightness(100) contrast(2);">
+    </a>
+    <ul class="nav-menu" role="list">
+      <li><a href="services.html">Work With Me</a></li>
+      <li><a href="her-worth.html">HER-Worth</a></li>
+      <li><a href="book.html">The Book</a></li>
+      <li><a href="diagnostic.html">Diagnostic</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="ncta"><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+    <button class="nav-burger" aria-expanded="false" aria-controls="ndrawer" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav id="ndrawer" class="nav-drawer" aria-label="Mobile navigation">
+    <a href="services.html">Work With Me</a>
+    <a href="her-worth.html">HER-Worth</a>
+    <a href="book.html">The Book</a>
+    <a href="diagnostic.html">Diagnostic</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="contact-h">
+  <div class="hero-texture" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-rule" aria-hidden="true"></div>
+      <span class="hero-eyebrow-label">Get In Touch</span>
+    </div>
+    <h1 id="contact-h">
+      Every message<br>is read <em>personally.</em>
+    </h1>
+    <p class="hero-sub">Whether you are ready to work together, curious about the framework, or want to discuss a speaking opportunity - start here. No gatekeepers, no assistants. Just a real conversation.</p>
+    <div class="response-note" role="status" aria-live="polite">
+      <span class="rn-dot" aria-hidden="true"></span>
+      Typically responds within one business day
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTACT SECTION -->
+<section class="contact-sec" aria-label="Contact form and details">
+  <div class="contact-inner">
+
+    <!-- FORM -->
+    <div class="form-wrap anim">
+      <div class="form-head">
+        <div class="form-head-eye"><div class="fhe-rule"></div><span class="fhe-lbl">Send a Message</span></div>
+        <h2>What are you working on?</h2>
+        <p>Use the form below or reach out directly. Either way, Lucy reads and responds to every message herself.</p>
+      </div>
+
+      <!-- Enquiry type buttons -->
+      <div class="enquiry-types" role="group" aria-label="Select enquiry type">
+        <button class="eq-btn active" onclick="setType(this, 'Consulting Enquiry')" aria-pressed="true">Consulting</button>
+        <button class="eq-btn" onclick="setType(this, 'Speaking Enquiry')" aria-pressed="false">Speaking</button>
+        <button class="eq-btn" onclick="setType(this, 'HER-Worth Enquiry')" aria-pressed="false">HER-Worth</button>
+        <button class="eq-btn" onclick="setType(this, 'Media or Press')" aria-pressed="false">Media</button>
+        <button class="eq-btn" onclick="setType(this, 'General Enquiry')" aria-pressed="false">General</button>
+      </div>
+
+      <form
+        class="contact-form"
+        id="contact-form"
+        action="https://formspree.io/f/REPLACE_WITH_LIVE_ID"
+        method="POST"
+        novalidate
+        aria-label="Contact form"
+      >
+        <input type="hidden" name="_subject" id="form-subject" value="Consulting Enquiry via aingworth.com">
+        <input type="hidden" name="enquiry_type" id="form-type" value="Consulting Enquiry">
+        <input type="hidden" name="source" value="contact-page">
+
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="f-name">Your name <span aria-hidden="true">*</span></label>
+            <input type="text" id="f-name" name="name" class="field-input" placeholder="First and last name" required autocomplete="name">
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="f-email">Email address <span aria-hidden="true">*</span></label>
+            <input type="email" id="f-email" name="email" class="field-input" placeholder="your@email.com" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" for="f-company">Company or brand</label>
+            <input type="text" id="f-company" name="company" class="field-input" placeholder="Optional" autocomplete="organization">
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="f-country">Country</label>
+            <input type="text" id="f-country" name="country" class="field-input" placeholder="Where are you based?" autocomplete="country-name">
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="f-budget">Approximate budget or investment range</label>
+          <select id="f-budget" name="budget" class="field-select">
+            <option value="">Prefer not to say at this stage</option>
+            <option value="Under R15,000 / Under $900">Under R15,000 / Under $900</option>
+            <option value="R15,000–R50,000 / $900–$3,000">R15,000–R50,000 / $900–$3,000</option>
+            <option value="R50,000–R120,000 / $3,000–$7,000">R50,000–R120,000 / $3,000–$7,000</option>
+            <option value="R120,000+ / $7,000+">R120,000+ / $7,000+</option>
+            <option value="Not applicable - speaking or media">Not applicable - speaking or media</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="f-message">What would you like to discuss? <span aria-hidden="true">*</span></label>
+          <textarea id="f-message" name="message" class="field-textarea" placeholder="Tell me what you are working on, what is not working, or what you want to build. The more honest you are here, the more useful the first conversation will be." required></textarea>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="f-heard">How did you hear about Aingworth?</label>
+          <select id="f-heard" name="how_heard" class="field-select">
+            <option value="">Select one</option>
+            <option value="LinkedIn">LinkedIn</option>
+            <option value="The book">The book - Become the Answer</option>
+            <option value="Google or AI search">Google or AI search</option>
+            <option value="Referral">Referral from someone I know</option>
+            <option value="Newsletter">LinkedIn Newsletter - The Authority Signal</option>
+            <option value="Social media">Social media</option>
+            <option value="Speaking event">Speaking event or conference</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-submit-row">
+          <button type="submit" class="btn-submit" id="submit-btn">
+            Send Message
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <span class="submit-note">No spam. Your details are not shared or sold.</span>
+        </div>
+      </form>
+
+      <!-- Success state -->
+      <div class="form-success" id="form-success" aria-live="polite">
+        <div class="fs-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 11l5 5 9-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="fs-title">Message received.</div>
+        <p class="fs-text">Lucy will read this personally and get back to you within one business day. If your message is urgent, you can also reach her directly at <a href="mailto:info@aingworth.com" style="color:var(--teal); text-decoration:underline;">info@aingworth.com</a>.</p>
+      </div>
+    </div>
+
+    <!-- ASIDE -->
+    <div class="contact-aside anim d1">
+
+      <!-- Direct contact -->
+      <div class="direct-card">
+        <div class="dc-label">Direct contact</div>
+        <div class="dc-items">
+
+          <a href="mailto:info@aingworth.com" class="dc-item" aria-label="Email Lucy at info@aingworth.com">
+            <div class="dc-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="3" width="14" height="10" rx="1"/><path d="M1 4l7 5 7-5"/></svg>
+            </div>
+            <div class="dc-text">
+              <span class="dc-name">info@aingworth.com</span>
+              <span class="dc-detail">Email - always read personally</span>
+            </div>
+          </a>
+
+          <a href="tel:+27780722185" class="dc-item" aria-label="Call Lucy on mobile +27 78 072 2185">
+            <div class="dc-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 2h3l1.5 3.5-2 1.5a10 10 0 0 0 3.5 3.5l1.5-2L14 10v3a1 1 0 0 1-1 1A12 12 0 0 1 2 3a1 1 0 0 1 1-1z"/></svg>
+            </div>
+            <div class="dc-text">
+              <span class="dc-name">+27 78 072 2185</span>
+              <span class="dc-detail">Mobile - international</span>
+            </div>
+          </a>
+
+          <a href="tel:0870937182" class="dc-item" aria-label="Call Lucy on VOIP 087 093 7182">
+            <div class="dc-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 2h3l1.5 3.5-2 1.5a10 10 0 0 0 3.5 3.5l1.5-2L14 10v3a1 1 0 0 1-1 1A12 12 0 0 1 2 3a1 1 0 0 1 1-1z"/></svg>
+            </div>
+            <div class="dc-text">
+              <span class="dc-name">087 093 7182</span>
+              <span class="dc-detail">VOIP - South Africa only</span>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/lisinda-lucy/" target="_blank" rel="noopener" class="dc-item" aria-label="Connect on LinkedIn">
+            <div class="dc-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2h3v11H2zm1.5-2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM6 5h2.5v1.5S9 5 11 5c2.5 0 3 1.5 3 4v4h-3V9.5c0-1 0-2-1.5-2S8 8.5 8 9.5V13H6z"/></svg>
+            </div>
+            <div class="dc-text">
+              <span class="dc-name">LinkedIn</span>
+              <span class="dc-detail">linkedin.com/in/lisinda-lucy</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Phone note -->
+      <div class="phone-note">
+        <p>For international callers, use the +27 mobile number. The 087 number works within South Africa only via VOIP.</p>
+      </div>
+
+      <!-- Platforms -->
+      <div class="platforms-card">
+        <div class="pl-label">Find Lucy elsewhere</div>
+        <div class="pl-grid">
+          <a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener" class="pl-link" aria-label="The Authority Signal newsletter on LinkedIn">
+            <span class="pl-dot" aria-hidden="true"></span>
+            <div>
+              <div class="pl-name">The Authority Signal</div>
+              <div class="pl-type">LinkedIn Newsletter</div>
+            </div>
+          </a>
+          <a href="https://lucyaingworth.substack.com/" target="_blank" rel="noopener" class="pl-link" aria-label="Lucy on Substack">
+            <span class="pl-dot" aria-hidden="true"></span>
+            <div>
+              <div class="pl-name">Substack</div>
+              <div class="pl-type">Writing</div>
+            </div>
+          </a>
+          <a href="https://lucyaingworth.medium.com/" target="_blank" rel="noopener" class="pl-link" aria-label="Lucy on Medium">
+            <span class="pl-dot" aria-hidden="true"></span>
+            <div>
+              <div class="pl-name">Medium</div>
+              <div class="pl-type">Articles</div>
+            </div>
+          </a>
+          <a href="https://bsky.app/profile/lucyaingworth.bsky.social" target="_blank" rel="noopener" class="pl-link" aria-label="Lucy on Bluesky">
+            <span class="pl-dot" aria-hidden="true"></span>
+            <div>
+              <div class="pl-name">Bluesky</div>
+              <div class="pl-type">Social</div>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/lucy_aingworth/" target="_blank" rel="noopener" class="pl-link" aria-label="Lucy on Instagram">
+            <span class="pl-dot" aria-hidden="true"></span>
+            <div>
+              <div class="pl-name">Instagram</div>
+              <div class="pl-type">Social</div>
+            </div>
+          </a>
+          <a href="https://www.amazon.co.uk/stores/Lucy-Aingworth/author/B0H1646Q1L" target="_blank" rel="noopener" class="pl-link" aria-label="Lucy's Amazon author page">
+            <span class="pl-dot" aria-hidden="true"></span>
+            <div>
+              <div class="pl-name">Amazon</div>
+              <div class="pl-type">Author page</div>
+            </div>
+          </a>
+          <a href="https://www.goodreads.com/book/show/251127412-become-the-answer" target="_blank" rel="noopener" class="pl-link" aria-label="Become the Answer on Goodreads" style="grid-column:span 2;">
+            <span class="pl-dot" aria-hidden="true"></span>
+            <div>
+              <div class="pl-name">Goodreads</div>
+              <div class="pl-type">Book</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- HER-Worth note -->
+      <div class="hw-contact-card">
+        <div class="hw-contact-label">HER-Worth enquiries</div>
+        <p>For enquiries specifically about the HER-Worth consulting and coaching programme, visit the <a href="her-worth.html">HER-Worth page</a> or select HER-Worth in the form above. Both routes go directly to Lucy.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-sec" aria-labelledby="faq-h">
+  <div class="faq-inner">
+    <div class="faq-head anim">
+      <div class="faq-head-eye"><div class="fhe-rule-dark"></div><span class="fhe-lbl-dark">Before You Write</span></div>
+      <h2 id="faq-h">Questions Lucy gets asked most often.</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item anim" role="article">
+        <div class="faq-q">Do you work with clients outside South Africa?</div>
+        <p class="faq-a">Yes. Most consulting and coaching work happens virtually, so location is not a constraint. Lucy has worked with clients across the USA, UK, Europe, Australia, and Asia. All one-to-one work is conducted in English.</p>
+      </div>
+      <div class="faq-item anim d1" role="article">
+        <div class="faq-q">What is the typical starting point for a new consulting engagement?</div>
+        <p class="faq-a">Most engagements start with an AI Visibility Audit. It gives you and Lucy a shared, honest picture of where your brand currently stands before any strategy is built. From there the scope is defined collaboratively. See the <a href="services.html">services page</a> for starting rates.</p>
+      </div>
+      <div class="faq-item anim" role="article">
+        <div class="faq-q">How far in advance do you need to book a speaking engagement?</div>
+        <p class="faq-a">For keynotes and conference appearances, four to six weeks is the minimum to allow for preparation and brief alignment. Corporate workshops can sometimes be arranged faster. Reach out as early as possible and Lucy will confirm availability.</p>
+      </div>
+      <div class="faq-item anim d1" role="article">
+        <div class="faq-q">Is the diagnostic really free?</div>
+        <p class="faq-a">Yes. The <a href="diagnostic.html">Recognition Diagnostic</a> is completely free with no obligation. You get your pattern result immediately. Email capture at the end is optional and sends a more detailed breakdown to your inbox.</p>
+      </div>
+      <div class="faq-item anim" role="article">
+        <div class="faq-q">I want to get the book. Where can I buy it?</div>
+        <p class="faq-a">Become the Answer is available on Amazon in most major markets - USA, UK, Germany, Australia, and Canada. South Africa is not yet directly available but you can order via Amazon US or UK with international delivery. See the <a href="book.html">book page</a> for all links.</p>
+      </div>
+      <div class="faq-item anim d1" role="article">
+        <div class="faq-q">What is the best way to stay in touch without committing to anything?</div>
+        <p class="faq-a">Subscribe to The Authority Signal, the LinkedIn newsletter covering AI search visibility, brand authority, and the recognition economy. Published weekly. No sales content. <a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener">Subscribe here.</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="fgrid">
+      <div>
+        <img src="images/Aingworth_Main_Logo2.png.png" alt="Aingworth" style="width:56px;height:auto;display:block;filter:brightness(100) contrast(2);margin-bottom:18px;">
+        <p class="fdesc">Brand authority and AI visibility consulting for founders, CMOs, and executives who need to be found for the right reasons.</p>
+        <nav class="fsocials" aria-label="Social media">
+          <a href="https://www.linkedin.com/in/lisinda-lucy/" class="fsoc" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+          <a href="https://www.youtube.com/@aingworth" class="fsoc" aria-label="YouTube" target="_blank" rel="noopener">yt</a>
+          <a href="https://www.instagram.com/lucy_aingworth/" class="fsoc" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+          <a href="https://www.tiktok.com/@aingworth" class="fsoc" aria-label="TikTok" target="_blank" rel="noopener">tt</a>
+          <a href="https://bsky.app/profile/lucyaingworth.bsky.social" class="fsoc" aria-label="Bluesky" target="_blank" rel="noopener">bs</a>
+        </nav>
+      </div>
+      <div class="fcol">
+        <p class="fcol-h">Work</p>
+        <ul>
+          <li><a href="services.html">All Services</a></li>
+          <li><a href="services.html#consulting">AI Visibility Consulting</a></li>
+          <li><a href="services.html#workshop">Brand Workshop</a></li>
+          <li><a href="services.html#coaching">Coaching</a></li>
+          <li><a href="her-worth.html">HER-Worth</a></li>
+          <li><a href="diagnostic.html">Free Diagnostic</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <p class="fcol-h">Resources</p>
+        <ul>
+          <li><a href="book.html">The Book</a></li>
+          <li><a href="https://www.amazon.com/Become-Answer-Brands-Build-Authority/dp/B0H14GDQMH" target="_blank" rel="noopener">Buy on Amazon</a></li>
+          <li><a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener">The Authority Signal</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <p class="fcol-h">Company</p>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Lucy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbase">
+      <p class="fcopy">&copy; 2026 Aingworth. All rights reserved.</p>
+      <nav class="flegal" aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+// Enquiry type selector
+function setType(btn, type) {
+  document.querySelectorAll('.eq-btn').forEach(function(b) {
+    b.classList.remove('active');
+    b.setAttribute('aria-pressed', 'false');
+  });
+  btn.classList.add('active');
+  btn.setAttribute('aria-pressed', 'true');
+  document.getElementById('form-type').value = type;
+  document.getElementById('form-subject').value = type + ' via aingworth.com';
+}
+
+// Form submission
+var form = document.getElementById('contact-form');
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    var res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+      document.getElementById('form-success').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else {
+      btn.textContent = 'Try Again';
+      btn.disabled = false;
+    }
+  } catch {
+    btn.textContent = 'Try Again';
+    btn.disabled = false;
+  }
+});
+
+// Nav
+var burger = document.querySelector('.nav-burger');
+var drawer = document.getElementById('ndrawer');
+burger.addEventListener('click', function() {
+  var open = drawer.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+drawer.querySelectorAll('a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    drawer.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  });
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && drawer.classList.contains('open')) {
+    drawer.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+    burger.focus();
+  }
+});
+var nav = document.querySelector('.nav');
+window.addEventListener('scroll', function() {
+  nav.style.background = scrollY > 10 ? 'rgba(26,26,26,.99)' : 'rgba(26,26,26,.97)';
+}, { passive: true });
+if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); }
+    });
+  }, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.anim').forEach(function(el) { obs.observe(el); });
+}
+</script>
+</body>
+</html>
