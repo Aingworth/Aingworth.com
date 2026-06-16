@@ -3,9 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Use - Aingworth</title>
-<meta name="description" content="Terms of Use for the Aingworth website, diagnostic tool, and published content.">
+<title>Privacy Policy - Aingworth</title>
+<meta name="description" content="Privacy Policy for Aingworth. How we collect, use, and protect your personal information.">
 <meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://aingworth.com/privacy/">
+<link rel="icon" type="image/png" href="/images/Aingworth_Main_favicon.png">
+<link rel="shortcut icon" href="/images/Aingworth_Main_favicon.png">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy",
+  "url": "https://aingworth.com/privacy/",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Aingworth",
+    "url": "https://aingworth.com/"
+  }
+}
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5K6TKZTK1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C5K6TKZTK1');
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,8 +41,10 @@
 :root {
   --charcoal:       #1a1a1a;
   --charcoal-mid:   #242424;
+  --charcoal-light: #2e2e2e;
   --teal:           #4a9e8e;
   --teal-light:     #6bbfb0;
+  --platinum:       #E2E2E2;
   --seasalt:        #FAFAFA;
   --mid-grey:       #888880;
   --border-dark:    rgba(183,206,206,0.1);
@@ -25,6 +55,7 @@
   --mono:  'DM Mono', monospace;
   --max-w: 760px;
   --px: clamp(20px, 4vw, 56px);
+  --ease: cubic-bezier(0.4,0,0.2,1);
 }
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
 html { scroll-behavior:smooth; }
@@ -34,18 +65,23 @@ a:hover { color:var(--teal-light); }
 .skip { position:absolute; top:-52px; left:24px; background:var(--teal-light); color:var(--charcoal); padding:10px 18px; font-size:13px; font-weight:500; z-index:999; transition:top .2s; }
 .skip:focus { top:8px; }
 :focus-visible { outline:2px solid var(--teal-light); outline-offset:3px; }
+
 .nav { position:fixed; top:0; left:0; right:0; z-index:200; height:68px; display:flex; align-items:center; justify-content:space-between; padding:0 var(--px); background:rgba(26,26,26,.97); backdrop-filter:blur(20px); border-bottom:1px solid var(--border-dark); }
 .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
 .nav-logo img { height:28px; width:auto; }
 .nav-logo-text { font-family:var(--sans); font-size:15px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--seasalt); }
 .nav-back { display:flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; text-decoration:none; transition:color .2s; }
 .nav-back:hover { color:var(--teal-light); }
+
 .page-wrap { max-width:var(--max-w); margin:0 auto; padding:120px var(--px) 100px; }
+
 .page-eyebrow { display:flex; align-items:center; gap:12px; margin-bottom:20px; }
 .page-rule { width:26px; height:1px; background:var(--teal-light); }
 .page-lbl { font-family:var(--mono); font-size:11px; color:var(--teal-light); letter-spacing:.14em; text-transform:uppercase; }
+
 .page-title { font-family:var(--serif); font-size:clamp(36px,4vw,56px); font-weight:500; line-height:1.08; color:var(--charcoal); letter-spacing:-.01em; margin-bottom:12px; }
 .page-date { font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; margin-bottom:48px; padding-bottom:48px; border-bottom:1px solid var(--border-light); }
+
 .doc-body { font-size:16px; line-height:1.78; color:var(--muted-light); }
 .doc-body h2 { font-family:var(--serif); font-size:clamp(22px,2.5vw,30px); font-weight:500; color:var(--charcoal); line-height:1.2; margin-top:48px; margin-bottom:14px; }
 .doc-body h3 { font-size:16px; font-weight:500; color:var(--charcoal); margin-top:28px; margin-bottom:10px; }
@@ -54,11 +90,13 @@ a:hover { color:var(--teal-light); }
 .doc-body ul, .doc-body ol { margin:16px 0 16px 24px; display:flex; flex-direction:column; gap:8px; }
 .doc-body li { font-size:16px; line-height:1.7; color:var(--muted-light); }
 .doc-body strong { color:var(--charcoal); font-weight:500; }
+.doc-body a { color:var(--teal); }
 .doc-callout { background:rgba(107,191,176,.06); border:1px solid rgba(107,191,176,.2); border-left:3px solid var(--teal-light); padding:20px 24px; margin:28px 0; }
 .doc-callout p { margin-bottom:0; font-size:15px; }
+
 .footer-legal { background:var(--charcoal); padding:48px var(--px) 32px; margin-top:80px; }
 .fl-inner { max-width:var(--max-w); margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
-.fl-brand { font-family:var(--sans); font-size:13px; font-weight:500; color:var(--seasalt); letter-spacing:.08em; text-transform:uppercase; }
+.fl-logo img { width:44px; height:auto; display:block; filter:brightness(100) contrast(2); }
 .fl-links { display:flex; gap:20px; }
 .fl-links a { font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.06em; text-decoration:none; transition:color .2s; }
 .fl-links a:hover { color:var(--teal-light); }
@@ -68,11 +106,11 @@ a:hover { color:var(--teal-light); }
 <body>
 <a href="#main" class="skip">Skip to content</a>
 <nav class="nav" aria-label="Primary navigation">
-  <a href="index.html" class="nav-logo" aria-label="Aingworth home">
-    <img src="images/Aingworth_graphic_logo.png" alt="Aingworth" height="28" style="filter:brightness(0) invert(1)">
+  <a href="https://aingworth.com/" class="nav-logo" aria-label="Aingworth home">
+    <img src="/images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth" height="28">
     <span class="nav-logo-text">Aingworth</span>
   </a>
-  <a href="index.html" class="nav-back">
+  <a href="https://aingworth.com/" class="nav-back">
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 3L5 7l4 4"/></svg>
     Back to site
   </a>
@@ -81,88 +119,127 @@ a:hover { color:var(--teal-light); }
 <main id="main">
 <div class="page-wrap">
   <div class="page-eyebrow"><div class="page-rule"></div><span class="page-lbl">Legal</span></div>
-  <h1 class="page-title">Terms of Use</h1>
+  <h1 class="page-title">Privacy Policy</h1>
   <p class="page-date">Last updated: June 2026</p>
 
   <div class="doc-body">
 
     <div class="doc-callout">
-      <p>By using this website, you agree to these terms. Please read them. They are written in plain language and they are not designed to catch you out. If you have questions, contact us at <a href="mailto:info@aingworth.com">info@aingworth.com</a>.</p>
+      <p>This policy explains how Aingworth (operated by Lucy Aingworth) collects, uses, and protects your personal information when you use this website or engage with our services. We take your privacy seriously and we do not sell your data.</p>
     </div>
 
-    <h2>1. About This Website</h2>
-    <p>This website is operated by Lucy Aingworth, trading as Aingworth, a South African registered business. The website is located at aingworth.com and includes all pages, tools, and content published under that domain, including the Recognition Diagnostic and all associated resources.</p>
-    <p>Aingworth serves clients globally including in the United States, United Kingdom, Europe, Australia, and Asia. While the business is registered and operated in South Africa, these terms acknowledge the rights of users in other jurisdictions where applicable.</p>
+    <h2>1. Who We Are</h2>
+    <p>This website is operated by Lucy Aingworth, trading as Aingworth, a South African registered business. References to "we", "us", or "our" in this policy refer to Aingworth and Lucy Aingworth personally.</p>
+    <p>Contact: <a href="mailto:info@aingworth.com">info@aingworth.com</a></p>
+    <p>We are based in South Africa and serve clients globally, including in the United States, United Kingdom, Europe, Australia, and Asia. This policy is designed to comply with the Protection of Personal Information Act (POPIA) applicable in South Africa, the General Data Protection Regulation (GDPR) where applicable to users in the European Economic Area and United Kingdom, and the California Consumer Privacy Act (CCPA) where applicable to California residents.</p>
 
-    <h2>2. Using This Website</h2>
-    <p>You may use this website for lawful personal and commercial purposes. You may not:</p>
+    <h2>2. What Information We Collect</h2>
+    <h3>Information you give us directly</h3>
+    <p>When you use our contact form, email capture forms, or diagnostic quiz, we may collect:</p>
     <ul>
-      <li>Use this website in any way that violates applicable laws or regulations</li>
-      <li>Reproduce, copy, or distribute any content from this website without our written permission, except as expressly permitted below</li>
-      <li>Use automated tools to scrape, crawl, or extract content from this website at scale</li>
-      <li>Attempt to gain unauthorized access to any part of this website or its underlying systems</li>
-      <li>Use this website to transmit harmful, offensive, or unsolicited communications</li>
+      <li>Your name and email address</li>
+      <li>Your company name and country</li>
+      <li>Information about your business and budget range</li>
+      <li>Your responses to the Recognition Diagnostic quiz</li>
+      <li>Any messages or enquiries you send us</li>
     </ul>
 
-    <h2>3. Intellectual Property</h2>
-    <h3>Frameworks and named concepts</h3>
-    <p>The following are proprietary frameworks and concepts developed by Lucy Aingworth and published in Become the Answer. All rights are reserved:</p>
+    <h3>Information collected automatically</h3>
+    <p>When you visit this website, we collect anonymous usage data through Google Analytics, including pages visited, time on page, geographic location at country level, device type, browser, and referring source. This information is aggregated and is not personally identifiable. Standard web server logs may also collect basic technical information such as your IP address and browser type through our hosting provider, GitHub Pages.</p>
+
+    <h3>Information from third-party services</h3>
+    <p>We use Formspree to process form submissions. When you submit a form, your data is transmitted to Formspree's servers in accordance with their privacy policy, available at formspree.io/legal/privacy-policy.</p>
+
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the information you provide to:</p>
     <ul>
-      <li>The Recognition Triangle</li>
-      <li>The Recognition Economy</li>
-      <li>The Machine Gatekeeper</li>
-      <li>Authority Debt</li>
-      <li>The Authority Method</li>
-      <li>The Composite Picture</li>
-      <li>The six Recognition Triangle patterns (The Promising Claim, The Hidden Expert, The Validated Generalist, The Strong Foundation, The Recognized Authority, The Decaying Authority)</li>
+      <li>Respond to your enquiries and messages</li>
+      <li>Send you requested resources such as the AI Visibility Checklist</li>
+      <li>Provide your diagnostic results and follow-up information</li>
+      <li>Send you the personalised proposal or breakdown you requested</li>
+      <li>Communicate about consulting, coaching, or speaking engagements</li>
     </ul>
-    <p>You may reference these frameworks in conversation, writing, and professional practice provided you attribute them to Lucy Aingworth and Become the Answer. You may not reproduce, commercialize, or adapt these frameworks as your own without written permission.</p>
+    <p>We do not use your information for automated decision-making, profiling, or advertising. We do not add you to any marketing list without your explicit consent at the point of submission.</p>
 
-    <h3>Website content</h3>
-    <p>All text, graphics, design, and code on this website are the property of Lucy Aingworth and Aingworth unless otherwise stated. You may not reproduce or republish website content without written permission.</p>
+    <h2>4. Legal Basis for Processing</h2>
+    <p>We process your personal information on the following bases:</p>
+    <ul>
+      <li><strong>Your consent</strong> - when you submit a form, you consent to us using your details to respond</li>
+      <li><strong>Legitimate interests</strong> - to respond to business enquiries and manage our consulting relationships</li>
+      <li><strong>Contract performance</strong> - when processing information as part of delivering services you have engaged</li>
+    </ul>
 
-    <h3>The book</h3>
-    <p>Become the Answer: How Brands Build Authority in the Age of AI is copyright Lucy Aingworth, first published 2026 by Aingworth. All rights reserved. Quotation for review, commentary, or educational purposes is permitted in accordance with fair dealing provisions, provided attribution is given.</p>
+    <h2>5. Who We Share Your Information With</h2>
+    <p>We do not sell, rent, or trade your personal information to any third party.</p>
+    <p>We share information only with:</p>
+    <ul>
+      <li><strong>Formspree</strong> - our form processing provider, which handles form submissions on our behalf</li>
+      <li><strong>Google Analytics</strong> - we use Google Analytics (GA4) to understand how visitors use this website. Data is processed in accordance with Google's privacy policy</li>
+      <li><strong>GitHub Pages</strong> - our website hosting provider, which processes standard server logs</li>
+    </ul>
+    <p>Both services are established platforms with their own published privacy policies. We do not share your information with any other third parties without your explicit consent, except where required by law.</p>
 
-    <h2>4. The Recognition Diagnostic</h2>
-    <p>The Recognition Diagnostic is a free self-assessment tool provided for informational purposes. It is based on the Recognition Triangle framework from Become the Answer.</p>
-    <p>The results produced by the diagnostic are indicative assessments based on your self-reported answers. They are not a substitute for professional brand or marketing advice. Aingworth makes no warranty as to the accuracy, completeness, or fitness for purpose of any diagnostic result.</p>
-    <p>By submitting your email address at the end of the diagnostic, you consent to receiving a follow-up email from Lucy Aingworth. You will not be added to any marketing list without further consent.</p>
+    <h2>6. How Long We Keep Your Information</h2>
+    <p>We retain your contact information and enquiry details for as long as is necessary to respond to your enquiry and manage any resulting business relationship, or for a maximum of three years from last contact, whichever is sooner.</p>
+    <p>You can request deletion of your information at any time by emailing <a href="mailto:info@aingworth.com">info@aingworth.com</a>.</p>
 
-    <h2>5. Services and Engagements</h2>
-    <p>Information on this website about consulting, coaching, speaking, and workshop services is provided for general information only. Prices shown are starting rates and are subject to change. All engagements are subject to a separate written agreement between the client and Aingworth.</p>
-    <p>Nothing on this website constitutes a binding offer or contract for services.</p>
+    <h2>7. Your Rights</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+    <ul>
+      <li>The right to access the information we hold about you</li>
+      <li>The right to correct inaccurate information</li>
+      <li>The right to request deletion of your information</li>
+      <li>The right to object to processing or request restriction of processing</li>
+      <li>The right to data portability (where applicable)</li>
+      <li>The right to withdraw consent at any time (where processing is based on consent)</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us at <a href="mailto:info@aingworth.com">info@aingworth.com</a>. We will respond within 30 days.</p>
+    <p>If you are based in South Africa, you also have the right to lodge a complaint with the Information Regulator at <a href="https://inforegulator.org.za" target="_blank" rel="noopener">inforegulator.org.za</a>. If you are based in the UK or EU, you have the right to complain to your local data protection authority.</p>
 
-    <h2>6. Accuracy of Information</h2>
-    <p>We make reasonable efforts to ensure that the information on this website is accurate and current. However, we do not warrant that all information is complete, accurate, or up to date at all times. Statistics and research cited on this website reflect sources available at the time of publication and may become outdated.</p>
+    <h2>8. Cookies and Analytics</h2>
+    <p>This website uses Google Analytics (GA4) to understand how visitors interact with our content. Google Analytics uses cookies to collect anonymous usage data. This data helps us improve the website and understand which content is most useful. No personally identifiable information is shared with Google Analytics.</p>
+    <p>You can opt out of Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>. You can also manage or disable cookies through your browser settings.</p>
+    <p>Beyond analytics, no additional cookies are set for advertising or marketing purposes.</p>
 
-    <h2>7. External Links</h2>
-    <p>This website contains links to third-party websites including Amazon, LinkedIn, and other platforms. These links are provided for convenience. We have no control over the content of those sites and we accept no responsibility for them or for any loss or damage arising from your use of them.</p>
+    <h2>9. Security</h2>
+    <p>We take reasonable technical and organisational measures to protect your personal information. All form submissions are processed via HTTPS. We do not store sensitive personal or financial information beyond what is necessary for normal business correspondence.</p>
 
-    <h2>8. Limitation of Liability</h2>
-    <p>To the fullest extent permitted by law, Aingworth and Lucy Aingworth accept no liability for any direct, indirect, incidental, or consequential loss or damage arising from your use of this website or reliance on any information contained within it.</p>
-    <p>This includes but is not limited to loss of revenue, loss of data, or business interruption, whether arising in contract, tort, or otherwise, even if we have been advised of the possibility of such damage.</p>
+    <h2>10. California Residents - CCPA</h2>
+    <p>If you are a resident of California, the California Consumer Privacy Act (CCPA) gives you specific rights regarding your personal information. This section describes those rights and how to exercise them.</p>
+    <h3>Your rights under the CCPA</h3>
+    <ul>
+      <li><strong>Right to know</strong> - you have the right to request that we disclose what personal information we have collected about you, the categories of sources, the business purpose for collecting it, and any third parties we share it with</li>
+      <li><strong>Right to delete</strong> - you have the right to request that we delete personal information we have collected from you, subject to certain exceptions</li>
+      <li><strong>Right to correct</strong> - you have the right to request that we correct inaccurate personal information we hold about you</li>
+      <li><strong>Right to opt out of sale</strong> - we do not sell your personal information to third parties. You do not need to opt out, but you have this right if our practices change</li>
+      <li><strong>Right to non-discrimination</strong> - we will not discriminate against you for exercising any of your CCPA rights</li>
+    </ul>
+    <h3>Categories of personal information we collect</h3>
+    <p>In the past 12 months we have collected the following categories of personal information from users who have submitted forms on this website:</p>
+    <ul>
+      <li>Identifiers such as name and email address</li>
+      <li>Professional or employment-related information such as company name and country</li>
+      <li>Commercial information such as budget range and service interest</li>
+      <li>Internet or network activity information collected by our hosting provider via standard server logs</li>
+    </ul>
+    <p>We collect this information directly from you when you submit a form, and indirectly through standard web hosting logs. We use this information solely to respond to your enquiries and deliver requested resources. We do not sell this information.</p>
+    <h3>How to exercise your CCPA rights</h3>
+    <p>To submit a CCPA request, email us at <a href="mailto:info@aingworth.com">info@aingworth.com</a> with the subject line "CCPA Request" and describe what you are requesting. We will respond within 45 days. We may need to verify your identity before processing your request.</p>
 
-    <h2>9. Disclaimer</h2>
-    <p>The content on this website is provided for general information and educational purposes. It does not constitute professional legal, financial, or business advice. You should seek appropriate professional advice before making decisions based on information found on this website.</p>
+    <h2>11. International Transfers</h2>
+    <p>Our form processing provider, Formspree, may store and process data in the United States. By submitting a form on this website, you acknowledge that your information may be transferred internationally. We have selected providers with appropriate data protection standards.</p>
 
-    <h2>10. Governing Law and Jurisdiction</h2>
-    <p>These terms are governed by the laws of the Republic of South Africa. Aingworth is a South African registered business and operates under South African law.</p>
-    <p>If you are accessing this website from outside South Africa, you are responsible for ensuring that your use complies with the laws of your jurisdiction. Nothing in these terms limits any rights you may have under the laws of your own country that cannot be excluded by contract.</p>
-    <h3>For users in the United States</h3>
-    <p>If you are a California resident, your privacy rights under the California Consumer Privacy Act (CCPA) are addressed in our Privacy Policy. Other US state privacy laws may also grant you rights regarding your personal information. Please refer to our <a href="privacy.html">Privacy Policy</a> for full details on how we handle personal information and how to exercise your rights.</p>
-    <h3>For users in the European Economic Area and United Kingdom</h3>
-    <p>If you are located in the EEA or UK, your rights under the General Data Protection Regulation (GDPR) or UK GDPR apply to how we process your personal data. Please refer to our <a href="privacy.html">Privacy Policy</a> for details.</p>
-    <p>Any disputes arising from the use of this website shall, to the extent not resolved by the applicable consumer protection laws of your jurisdiction, be subject to the jurisdiction of the South African courts.</p>
+    <h2>12. Children</h2>
+    <p>This website is not directed at children under the age of 18. We do not knowingly collect personal information from anyone under 18. If you believe a child has submitted information through this website, please contact us and we will delete it promptly.</p>
 
-    <h2>11. Changes to These Terms</h2>
-    <p>We may update these terms from time to time. The date at the top of this page reflects the most recent update. Continued use of this website after any update constitutes your acceptance of the revised terms.</p>
+    <h2>13. Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. The date at the top of this page reflects the most recent update. Continued use of this website after any update constitutes acceptance of the revised policy.</p>
 
-    <h2>12. Contact</h2>
-    <p>For any questions about these terms, please contact us:</p>
+    <h2>14. Contact Us</h2>
+    <p>For any questions about this privacy policy or how we handle your personal information, please contact:</p>
     <ul>
       <li>Email: <a href="mailto:info@aingworth.com">info@aingworth.com</a></li>
-      <li>Contact form: <a href="contact.html">aingworth.com/contact</a></li>
+      <li>Contact form: <a href="https://aingworth.com/contact/">aingworth.com/contact</a></li>
     </ul>
 
   </div>
@@ -171,11 +248,13 @@ a:hover { color:var(--teal-light); }
 
 <footer class="footer-legal" role="contentinfo">
   <div class="fl-inner">
-    <span class="fl-brand">Aingworth</span>
+    <a href="https://aingworth.com/" class="fl-logo" aria-label="Aingworth home">
+      <img src="/images/Aingworth_Main_Logo2.png.png" alt="Aingworth">
+    </a>
     <nav class="fl-links" aria-label="Legal navigation">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="contact.html">Contact</a>
+      <a href="https://aingworth.com/privacy/">Privacy Policy</a>
+      <a href="https://aingworth.com/terms/">Terms of Use</a>
+      <a href="https://aingworth.com/contact/">Contact</a>
     </nav>
     <p class="fl-copy">&copy; 2026 Aingworth. All rights reserved.</p>
   </div>
