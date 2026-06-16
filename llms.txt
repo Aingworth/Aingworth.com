@@ -1,0 +1,21 @@
+# Aingworth
+
+> Brand authority and AI visibility consulting from Lucy Aingworth, author of *Become the Answer: How Brands Build Authority in the Age of AI*. Aingworth helps founders, CMOs, and executives build the Clarity, Credibility, and Earned Authority that AI systems use to decide who to cite and recommend - the Recognition Triangle framework at the center of the practice.
+
+Lucy Aingworth has over a decade of experience in SEO, CRO, paid media, and digital strategy across global markets, and now focuses specifically on helping brands become recognized and cited by AI search and answer systems such as ChatGPT, Perplexity, and Google AI. She is based in South Africa and works with clients internationally.
+
+## Core Pages
+
+- [Home](https://aingworth.com/): Overview of Aingworth, the Recognition Triangle framework, and the case for brand authority in AI-mediated search.
+- [Services](https://aingworth.com/services/): Consulting, coaching, speaking, and workshop services, typically starting with an AI Visibility Audit.
+- [The Recognition Diagnostic](https://aingworth.com/diagnostic/): A free 15-question self-assessment that identifies which of six Recognition Triangle patterns - The Promising Claim, The Hidden Expert, The Validated Generalist, The Strong Foundation, The Recognized Authority, or The Decaying Authority - currently describes a brand, with tailored next steps for each.
+- [The Book](https://aingworth.com/book/): Become the Answer: How Brands Build Authority in the Age of AI, by Lucy Aingworth, available on Amazon.
+- [HER-Worth](https://aingworth.com/her-worth/): A separate consulting and coaching programme founded by Lucy Aingworth.
+- [About Lucy Aingworth](https://aingworth.com/about/): Lucy's background, expertise, and the convictions behind Aingworth's practice.
+- [Contact](https://aingworth.com/contact/): Direct contact form for consulting, speaking, media, HER-Worth, or general enquiries.
+
+## Optional
+
+- [The Authority Signal](https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/): Lucy's LinkedIn newsletter on AI search visibility, brand authority, and the recognition economy.
+- [Privacy Policy](https://aingworth.com/privacy/)
+- [Terms of Use](https://aingworth.com/terms/)
