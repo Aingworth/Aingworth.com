@@ -68,7 +68,7 @@ a:hover { color:var(--teal-light); }
 
 .nav { position:fixed; top:0; left:0; right:0; z-index:200; height:68px; display:flex; align-items:center; justify-content:space-between; padding:0 var(--px); background:rgba(26,26,26,.97); backdrop-filter:blur(20px); border-bottom:1px solid var(--border-dark); }
 .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
-.nav-logo img { height:28px; width:auto; }
+.nav-logo img { width:200px; height:auto; display:block; }
 .nav-logo-text { font-family:var(--sans); font-size:15px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; color:var(--seasalt); }
 .nav-back { display:flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; text-decoration:none; transition:color .2s; }
 .nav-back:hover { color:var(--teal-light); }
@@ -107,8 +107,7 @@ a:hover { color:var(--teal-light); }
 <a href="#main" class="skip">Skip to content</a>
 <nav class="nav" aria-label="Primary navigation">
   <a href="https://aingworth.com/" class="nav-logo" aria-label="Aingworth home">
-    <img src="/images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth" height="28">
-    <span class="nav-logo-text">Aingworth</span>
+    <img src="/images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth">
   </a>
   <a href="https://aingworth.com/" class="nav-back">
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 3L5 7l4 4"/></svg>
