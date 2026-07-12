@@ -3,21 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Recognition Diagnostic - Aingworth</title>
-<meta name="description" content="15 questions across three dimensions. Find out which of the six Recognition Triangle patterns describes your brand right now - and where to start.">
+<title>Free AI Brand Visibility Check | The Recognition Diagnostic</title>
+<meta name="description" content="A free AI brand visibility check and GEO audit tool. 15 questions reveal which of the six Recognition Triangle patterns describes your brand, and where to start.">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aingworth.com/diagnostic/">
 <link rel="icon" href="/images/Aingworth_Main_favicon.png" type="image/png">
 <meta property="og:title" content="The Recognition Diagnostic - Aingworth">
 <meta property="og:description" content="Where does your brand sit on the Recognition Triangle? 15 questions. One of six results. A clear starting point.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://aingworth.com/diagnostic/">
+<meta property="og:site_name" content="Aingworth">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aingworth.com/images/Aingworth_Main_Logo_White_bigger.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@lucy_aingworth">
+<meta name="twitter:title" content="Free AI Brand Visibility Check | The Recognition Diagnostic">
+<meta name="twitter:description" content="A free AI brand visibility check. 15 questions, one of six results, a clear starting point.">
+<meta name="twitter:image" content="https://aingworth.com/images/Aingworth_Main_Logo_White_bigger.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Quiz",
   "name": "The Recognition Diagnostic",
   "description": "A 15-question diagnostic based on the Recognition Triangle framework from Become the Answer by Lucy Aingworth. Identifies which of the six brand patterns applies and where to invest first.",
-  "author": { "@type": "Person", "name": "Lucy Aingworth", "url": "https://aingworth.com" },
+  "author": { "@type": "Person", "@id": "https://aingworth.com/#lucy", "name": "Lucy Aingworth", "url": "https://aingworth.com/about/" },
   "url": "https://aingworth.com/diagnostic/",
   "educationalUse": "Self-assessment",
   "about": ["Brand Authority","AI Search Visibility","Recognition Economy","Recognition Triangle"]
@@ -525,7 +534,7 @@ a { color:inherit; text-decoration:none; }
       <em>Recognition Triangle?</em>
     </h1>
 
-    <p class="intro-sub">15 questions across three dimensions. One of six results. A clear picture of where you are right now and where to invest first.</p>
+    <p class="intro-sub">The Recognition Diagnostic is a free GEO audit tool and AI brand visibility check. In 15 questions across three dimensions it gives you a brand authority assessment: one of six results and a clear picture of where you stand and where to invest first. Think of it as an AI search visibility score across the three dimensions that decide whether AI systems cite you.</p>
 
     <div class="intro-badges" aria-label="What to expect">
       <div class="intro-badge"><span class="intro-badge-dot" aria-hidden="true"></span>15 questions</div>
@@ -915,7 +924,7 @@ function escapeHtml(str) {
    Using replace() here (rather than the old split(' The ')
    approach) guarantees a real string is always returned - never undefined. */
 function shortPatternName(name) {
-  return name.replace(/^The\s+/, '');
+  return name.replace(/^The\\s+/, '');
 }
 
 /* ============================================================
