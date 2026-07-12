@@ -25,9 +25,6 @@ Allow: /
 User-agent: Claude-User
 Allow: /
 
-User-agent: anthropic-ai
-Allow: /
-
 # Perplexity
 User-agent: PerplexityBot
 Allow: /
@@ -41,6 +38,18 @@ Allow: /
 
 # Apple AI
 User-agent: Applebot-Extended
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# DuckDuckGo AI (DuckAssist)
+User-agent: DuckAssistBot
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
 Allow: /
 
 # Common Crawl (used as training data by many LLMs)
