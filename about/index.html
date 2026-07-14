@@ -375,6 +375,58 @@ a { color:inherit; text-decoration:none; }
 }
 
 /* =============================================
+   BORAHAE — personal note
+============================================= */
+.borahae-sec {
+  background: var(--charcoal);
+  padding: 96px var(--px);
+  border-top: 1px solid var(--border-dark);
+  position: relative;
+  overflow: hidden;
+}
+.borahae-sec::before {
+  content: '';
+  position: absolute;
+  top: -140px; left: -120px;
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(196,167,228,.09) 0%, transparent 62%);
+  pointer-events: none;
+}
+.borahae-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.borahae-mark {
+  font-family: var(--serif);
+  font-size: clamp(44px, 6vw, 72px);
+  font-weight: 500;
+  color: var(--lavender);
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+.borahae-mark .heart { font-size: .7em; vertical-align: middle; }
+.borahae-lead {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(20px, 2.4vw, 28px);
+  color: var(--seasalt);
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+.borahae-body {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--muted-dark);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.borahae-body p + p { margin-top: 16px; }
+.borahae-body .accent { color: var(--lavender); }
+
+/* =============================================
    CONNECT
 ============================================= */
 .connect-sec {
@@ -433,6 +485,8 @@ a { color:inherit; text-decoration:none; }
 .fsocials { display:flex; gap:8px; flex-wrap:wrap; }
 .fsoc { width:34px; height:34px; border:1px solid var(--border-dark); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:11px; color:var(--mid-grey); transition:all .2s; border-radius:2px; }
 .fsoc:hover { border-color:var(--teal-light); color:var(--teal-light); }
+.fborahae { margin-top:18px; font-family:var(--mono); font-size:12px; letter-spacing:.04em; color:var(--lavender); transition:color .2s; }
+.fborahae:hover { color:var(--teal-light); }
 .fcol-h { font-family:var(--mono); font-size:10px; color:rgba(226,226,226,.3); letter-spacing:.14em; text-transform:uppercase; margin-bottom:16px; }
 .fcol ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
 .fcol ul li a { font-size:14px; color:var(--mid-grey); transition:color .2s; }
@@ -676,6 +730,18 @@ a { color:inherit; text-decoration:none; }
   </div>
 </section>
 
+<!-- BORAHAE -->
+<section class="borahae-sec" aria-labelledby="borahae-h">
+  <div class="borahae-inner anim">
+    <p class="borahae-mark" lang="ko">보라해 <span class="heart" aria-hidden="true">💜</span></p>
+    <h2 class="borahae-lead" id="borahae-h">If you have read the book, you have already met this word.</h2>
+    <div class="borahae-body">
+      <p><span lang="ko">보라해</span> (<em>borahae</em>) means <span class="accent">"I purple you."</span> It was coined by V of BTS, joining the Korean words for purple and love, and it means something closer to "I will trust and love you for a long time." Purple is the last colour of the rainbow, so to purple someone is to say the whole spectrum, all the way through.</p>
+      <p>It lives in <em>Become the Answer</em> because it is the honest shape of what this work is really about. Recognition is not attention. It is being trusted, remembered, and returned to. That is what I want for the brands I work with, and it is what I mean when I sign off this way. I am ARMY, and I carry it into the work on purpose.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-banner" aria-labelledby="cta-h">
   <div class="cta-banner-inner">
@@ -708,6 +774,7 @@ a { color:inherit; text-decoration:none; }
           <a href="https://www.threads.net/@lucy_aingworth" class="fsoc" aria-label="Threads" target="_blank" rel="noopener">th</a>
           <a href="https://bsky.app/profile/lucyaingworth.bsky.social" class="fsoc" aria-label="Bluesky" target="_blank" rel="noopener">bs</a>
         </nav>
+        <p class="fborahae" aria-label="Borahae — I purple you"><span lang="ko">보라해</span> 💜</p>
       </div>
       <div class="fcol">
         <p class="fcol-h">Work</p>
