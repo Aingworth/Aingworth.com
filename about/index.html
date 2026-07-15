@@ -34,14 +34,14 @@
       "worksFor": { "@id": "https://aingworth.com/#organization" },
       "knowsAbout": ["Generative Engine Optimization","AI Authority Strategy","Brand Authority","Recognition Triangle","Authority Method","Recognition Economy","SEO","CRO","Digital Strategy"],
       "homeLocation": { "@type": "Place", "name": "South Africa" },
-      "author": { "@type": "Book", "name": "Become the Answer", "url": "https://www.amazon.com/dp/B0GX2WWBQT" },
+      "author": { "@type": "Book", "name": "Become the Answer", "url": "https://www.amazon.com/dp/B0H14GDQMH" },
       "url": "https://aingworth.com/about/",
       "sameAs": [
         "https://www.linkedin.com/in/lisinda-lucy/",
         "https://www.instagram.com/lucy_aingworth/",
-        "https://www.tiktok.com/@lucy.aingworth",
-        "https://x.com/Lucy_Aingworth",
-        "https://www.threads.com/@lucy_aingworth",
+        "https://www.tiktok.com/@aingworth",
+        "https://x.com/lucy_aingworth",
+        "https://www.threads.net/@lucy_aingworth",
         "https://bsky.app/profile/lucyaingworth.bsky.social",
         "https://lucyaingworth.medium.com/",
         "https://lucyaingworth.substack.com/",
@@ -100,7 +100,6 @@ a { color:inherit; text-decoration:none; }
 .skip { position:absolute; top:-52px; left:24px; background:var(--teal-light); color:var(--charcoal); padding:10px 18px; font-size:13px; font-weight:500; z-index:999; transition:top .2s; }
 .skip:focus { top:8px; }
 :focus-visible { outline:2px solid var(--teal-light); outline-offset:3px; }
-
 /* NAV */
 .nav { position:fixed; top:0; left:0; right:0; z-index:200; height:68px; display:flex; align-items:center; justify-content:space-between; padding:0 var(--px); background:rgba(26,26,26,.97); backdrop-filter:blur(20px); border-bottom:1px solid var(--border-dark); transition:background .3s var(--ease); }
 .nav-logo { display:flex; align-items:center; height:68px; } .nav-logo img { width:200px; height:auto; display:block; } .nav-logo-text { display:none; }
@@ -119,7 +118,6 @@ a { color:inherit; text-decoration:none; }
 .nav-drawer a { display:block; padding:16px 0; color:rgba(250,250,250,.65); font-size:18px; border-bottom:1px solid var(--border-dark); transition:color .2s; }
 .nav-drawer a:hover { color:var(--teal-light); }
 .drawer-cta { margin-top:24px; display:inline-block; padding:16px 28px; background:var(--teal-light); color:var(--charcoal) !important; font-size:14px; font-weight:500; letter-spacing:.06em; text-transform:uppercase; text-align:center; border-bottom:none !important; border-radius:2px; }
-
 /* SHARED */
 .sec-eye { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
 .sec-rule { width:26px; height:1px; background:var(--teal-light); flex-shrink:0; }
@@ -129,13 +127,11 @@ a { color:inherit; text-decoration:none; }
 .arr { width:22px; height:1px; background:currentColor; position:relative; transition:width .25s var(--ease); }
 .arr::after { content:''; position:absolute; right:0; top:-3px; width:6px; height:6px; border-right:1px solid currentColor; border-top:1px solid currentColor; transform:rotate(45deg); }
 .tlink:hover .arr { width:34px; }
-
 @media (prefers-reduced-motion: no-preference) {
   .anim { opacity:0; transform:translateY(18px); transition:opacity .65s var(--ease), transform .65s var(--ease); }
   .anim.vis { opacity:1; transform:translateY(0); }
   .d1 { transition-delay:.1s; } .d2 { transition-delay:.2s; } .d3 { transition-delay:.3s; }
 }
-
 /* =============================================
    HERO
 ============================================= */
@@ -239,7 +235,6 @@ a { color:inherit; text-decoration:none; }
 .cred-item:last-child { border-right:1px solid var(--border-dark); }
 .cred-label { font-family:var(--mono); font-size:9px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; }
 .cred-value { font-family:var(--serif); font-size:16px; font-weight:500; color:var(--seasalt); line-height:1.1; }
-
 /* =============================================
    STORY
 ============================================= */
@@ -268,7 +263,6 @@ a { color:inherit; text-decoration:none; }
 .pull-quote em { font-style:italic; color:var(--teal); }
 .story-body-text { font-size:17px; line-height:1.78; color:var(--muted-light); }
 .story-body-text p + p { margin-top:16px; }
-
 /* =============================================
    CONVICTIONS
 ============================================= */
@@ -297,7 +291,6 @@ a { color:inherit; text-decoration:none; }
 .conv-body {}
 .conv-title { font-size:16px; font-weight:500; color:var(--charcoal); margin-bottom:8px; }
 .conv-text { font-size:15px; color:var(--muted-light); line-height:1.72; }
-
 /* Skills grid */
 .skills-wrap {
   border: 1px solid rgba(255,255,255,.07);
@@ -341,7 +334,6 @@ a { color:inherit; text-decoration:none; }
   background: #f0f0ee;
 }
 .skill-card-dark:hover { background: #f7f7f5; border-top-color: var(--teal); }
-
 /* Read more button */
 .read-more-btn {
   display: inline-flex;
@@ -365,7 +357,6 @@ a { color:inherit; text-decoration:none; }
 .story-expand p + p { margin-top: 16px; }
 .story-expand { animation: fadeIn .35s var(--ease); }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-
 .skills-last-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -373,7 +364,6 @@ a { color:inherit; text-decoration:none; }
   background: rgba(255,255,255,.07);
   margin-top: 2px;
 }
-
 /* =============================================
    BORAHAE — personal note
 ============================================= */
@@ -401,7 +391,7 @@ a { color:inherit; text-decoration:none; }
 }
 .borahae-mark {
   font-family: var(--serif);
-  font-size: clamp(44px, 6vw, 72px);
+  font-size: clamp(38px, 4vw, 54px);
   font-weight: 500;
   color: var(--lavender);
   line-height: 1.1;
@@ -425,7 +415,6 @@ a { color:inherit; text-decoration:none; }
 }
 .borahae-body p + p { margin-top: 16px; }
 .borahae-body .accent { color: var(--lavender); }
-
 /* =============================================
    CONNECT
 ============================================= */
@@ -460,7 +449,6 @@ a { color:inherit; text-decoration:none; }
 .cl-desc { font-size:13px; color:var(--mid-grey); }
 .cl-arr { width:16px; height:1px; background:var(--teal-light); position:relative; flex-shrink:0; opacity:.5; }
 .cl-arr::after { content:''; position:absolute; right:0; top:-3px; width:5px; height:5px; border-right:1px solid var(--teal-light); border-top:1px solid var(--teal-light); transform:rotate(45deg); }
-
 /* =============================================
    CTA
 ============================================= */
@@ -473,7 +461,6 @@ a { color:inherit; text-decoration:none; }
 .cta-dark:hover { background:var(--charcoal-light); transform:translateY(-1px); }
 .cta-outline { display:inline-flex; align-items:center; gap:10px; border:1px solid rgba(26,26,26,.3); color:var(--charcoal); font-size:13px; font-weight:500; letter-spacing:.07em; text-transform:uppercase; padding:15px 28px; border-radius:2px; transition:all .2s; }
 .cta-outline:hover { background:rgba(26,26,26,.06); }
-
 /* FOOTER */
 .footer { background:var(--charcoal); padding:72px var(--px) 36px; border-top:1px solid var(--border-dark); }
 .footer-inner { max-width:var(--max-w); margin:0 auto; }
@@ -496,7 +483,6 @@ a { color:inherit; text-decoration:none; }
 .flegal { display:flex; gap:20px; }
 .flegal a { font-family:var(--mono); font-size:11px; color:rgba(226,226,226,.25); letter-spacing:.06em; transition:color .2s; }
 .flegal a:hover { color:var(--teal-light); }
-
 /* RESPONSIVE */
 @media (max-width: 960px) {
   .hero-inner { grid-template-columns:1fr; gap:48px; }
@@ -522,9 +508,7 @@ a { color:inherit; text-decoration:none; }
 </style>
 </head>
 <body>
-
 <a href="#main" class="skip">Skip to content</a>
-
 <header role="banner">
   <nav class="nav" aria-label="Primary navigation">
     <a href="/" class="nav-logo" aria-label="Aingworth home">
@@ -551,14 +535,11 @@ a { color:inherit; text-decoration:none; }
     <a href="/contact/" class="drawer-cta">Let's Talk</a>
   </nav>
 </header>
-
 <main id="main">
-
 <!-- HERO -->
 <section class="hero" aria-labelledby="about-h1">
   <div class="hero-texture" aria-hidden="true"></div>
   <div class="hero-inner">
-
     <div class="hero-portrait anim">
       <div class="portrait-frame">
         <img
@@ -569,7 +550,6 @@ a { color:inherit; text-decoration:none; }
       </div>
       <p class="portrait-caption">Lucy Aingworth  -  Founder, Aingworth</p>
     </div>
-
     <div class="hero-content anim d1">
       <div class="hero-eyebrow">
         <div class="hero-eyebrow-rule" aria-hidden="true"></div>
@@ -600,43 +580,35 @@ a { color:inherit; text-decoration:none; }
       </div>
       <a href="#story" class="tlink">Read the story <span class="arr" aria-hidden="true"></span></a>
     </div>
-
   </div>
 </section>
-
 <!-- STORY -->
 <section class="story-sec" id="story" aria-labelledby="story-h">
   <div class="story-inner">
-
     <div class="story-pull anim">
       <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Background</span></div>
       <h2 class="pull-quote" id="story-h">Over a decade in the room.<br><em>Still in it.</em></h2>
       <p style="font-size:16px; line-height:1.78; color:var(--muted-light); margin-top:20px;">An AI visibility strategist and GEO strategist based in South Africa, working across the USA, UK, Europe, Australia, and Asia. Digital strategy, SEO, CRO, paid media, and AI visibility strategy, across industries that did not always want to be in the same sentence.</p>
       <a href="/contact/" class="tlink" style="margin-top:28px;">Work with Lucy <span class="arr" aria-hidden="true"></span></a>
     </div>
-
     <div class="anim d1">
       <div class="story-body-text">
         <p>I started my career in digital marketing before it had the weight it carries now. Back when SEO was still treated as a technical afterthought, when paid media was mostly guesswork dressed up as strategy, and when brand authority meant having a decent logo and a thick press kit.</p>
         <p>Over the years I built growth systems for businesses across the UK, USA, Europe, South Africa, Australia, and Asia. Legal firms trying to compete online without compromising their professionalism.</p>
-
         <div class="story-expand" id="story-more" aria-hidden="true" style="display:none;">
           <p>Healthcare and medical education businesses navigating compliance and visibility at the same time. Luxury travel brands that needed to justify their price point in search before a customer even clicked. Retail businesses scaling paid media past the point where the numbers stopped making intuitive sense. B2B SaaS companies trying to explain complex products to buyers who already thought they knew what they needed.</p>
           <p>Each client taught me something the previous one had not. The work was never the same twice, which was the point. Generic strategy produces generic results. I was never interested in generic results.</p>
           <p>What I kept seeing, across every market and industry, was the same gap: the best brands were not always the ones getting found. The loudest, the most optimized, the ones with the biggest budgets, yes. But the best? Not consistently. That gap frustrated me for years before I understood it well enough to name it and build a practice around closing it.</p>
           <p>Aingworth is the result of that. A consulting practice built on a decade of real work, in real markets, with real clients whose results I can point to. Not a theory. A track record.</p>
         </div>
-
         <button class="read-more-btn" id="story-toggle" onclick="toggleStory()" aria-expanded="false" aria-controls="story-more">
           <span class="rmb-text">Read more</span>
           <svg class="rmb-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
       </div>
     </div>
-
   </div>
 </section>
-
 <!-- SKILLS -->
 <section class="conv-sec" style="background:var(--charcoal);" aria-labelledby="skills-h">
   <div class="conv-inner">
@@ -645,7 +617,6 @@ a { color:inherit; text-decoration:none; }
       <h2 id="skills-h" style="color:var(--seasalt);">A decade of depth across the full system.</h2>
       <p style="color:var(--muted-dark);">Not a generalist who learned everything at surface level. These are the disciplines where the work has been real, sustained, and measurable.</p>
     </div>
-
     <div class="skills-wrap">
       <div class="skills-grid" role="list">
         <div class="skill-card anim" role="listitem">
@@ -692,10 +663,8 @@ a { color:inherit; text-decoration:none; }
         </div>
       </div>
     </div>
-
   </div>
 </section>
-
 <!-- WHAT DRIVES THIS -->
 <section class="conv-sec" style="background:#fff; border-top:1px solid var(--border-light);" aria-labelledby="conv-h">
   <div class="conv-inner">
@@ -729,19 +698,17 @@ a { color:inherit; text-decoration:none; }
     </div>
   </div>
 </section>
-
 <!-- BORAHAE -->
 <section class="borahae-sec" aria-labelledby="borahae-h">
   <div class="borahae-inner anim">
     <p class="borahae-mark" lang="ko">보라해 <span class="heart" aria-hidden="true">💜</span></p>
     <h2 class="borahae-lead" id="borahae-h">If you have read the book, you have already met this word.</h2>
     <div class="borahae-body">
-      <p><span lang="ko">보라해</span> (<em>borahae</em>) means <span class="accent">"I purple you."</span> It was coined by V of BTS, joining the Korean words for purple and love, and it means something closer to "I will trust and love you for a long time." Purple is the last colour of the rainbow, so to purple someone is to say the whole spectrum, all the way through.</p>
+      <p><span lang="ko">보라해</span> (<em>borahae</em>) means <span class="accent">"I purple you."</span> Coined by V of BTS from the Korean words for purple and love, it carries something closer to "I will trust and love you for a long time." Purple is the last colour of the rainbow, so to purple someone is to mean the whole spectrum, all the way through.</p>
       <p>It lives in <em>Become the Answer</em> because it is the honest shape of what this work is really about. Recognition is not attention. It is being trusted, remembered, and returned to. That is what I want for the brands I work with, and it is what I mean when I sign off this way. I am ARMY, and I carry it into the work on purpose.</p>
     </div>
   </div>
 </section>
-
 <!-- CTA -->
 <section class="cta-banner" aria-labelledby="cta-h">
   <div class="cta-banner-inner">
@@ -756,9 +723,7 @@ a { color:inherit; text-decoration:none; }
     </div>
   </div>
 </section>
-
 </main>
-
 <footer class="footer" role="contentinfo">
   <div class="footer-inner">
     <div class="fgrid">
@@ -800,7 +765,6 @@ a { color:inherit; text-decoration:none; }
     </div>
   </div>
 </footer>
-
 <script>
 function toggleStory() {
   var more = document.getElementById('story-more');
@@ -818,7 +782,6 @@ function toggleStory() {
     btn.querySelector('.rmb-text').textContent = 'Read less';
   }
 }
-
 var burger = document.querySelector('.nav-burger');
 var drawer = document.getElementById('ndrawer');
 burger.addEventListener('click', function() {
