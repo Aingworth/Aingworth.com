@@ -61,21 +61,35 @@
   "workExample": [
     {
       "@type": "Book",
+      "bookFormat": "https://schema.org/EBook",
+      "inLanguage": "en",
+      "url": "https://www.amazon.com/dp/B0GX2WWBQT",
+      "offers": { "@type": "Offer", "price": "9.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/dp/B0GX2WWBQT" }
+    },
+    {
+      "@type": "Book",
       "bookFormat": "https://schema.org/Paperback",
       "isbn": "979-8186026785",
-      "inLanguage": "en"
+      "inLanguage": "en",
+      "url": "https://www.amazon.com/dp/B0H7XTLQJS",
+      "offers": { "@type": "Offer", "price": "17.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/dp/B0H7XTLQJS" }
     },
     {
       "@type": "Book",
       "bookFormat": "https://schema.org/Hardcover",
       "isbn": "979-8186041788",
-      "inLanguage": "en"
+      "inLanguage": "en",
+      "url": "https://www.amazon.com/dp/B0H82KL416",
+      "offers": { "@type": "Offer", "price": "32.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/dp/B0H82KL416" }
     }
   ],
   "description": "A framework for founders, CMOs, and executives building brand authority in the age of AI search. Introduces the Recognition Triangle, the Recognition Economy, the Machine Gatekeeper, and the Authority Method.",
   "offers": {
-    "@type": "Offer",
-    "url": "https://www.amazon.com/dp/B0GX2WWBQT",
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "9.99",
+    "highPrice": "32.99",
+    "offerCount": "3",
     "availability": "https://schema.org/InStock"
   }
 }
@@ -124,9 +138,7 @@ a { color:inherit; text-decoration:none; }
 .skip:focus { top:8px; }
 :focus-visible { outline:2px solid var(--teal-light); outline-offset:3px; }
 ::selection { background: var(--teal-light); color: var(--charcoal); }
-
 #progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; background: var(--teal-light); z-index: 300; box-shadow: 0 0 10px rgba(107,191,176,.55); }
-
 /* NAV */
 .nav { position:fixed; top:0; left:0; right:0; z-index:200; height:68px; display:flex; align-items:center; justify-content:space-between; padding:0 var(--px); background:rgba(26,26,26,.97); backdrop-filter:blur(20px); border-bottom:1px solid var(--border-dark); }
 .nav-logo { display:flex; align-items:center; gap:10px; }
@@ -146,7 +158,6 @@ a { color:inherit; text-decoration:none; }
 .nav-drawer a { display:block; padding:16px 0; color:rgba(250,250,250,.65); font-size:18px; border-bottom:1px solid var(--border-dark); transition:color .2s; }
 .nav-drawer a:hover { color:var(--teal-light); }
 .drawer-cta { margin-top:24px; display:inline-block; padding:16px 28px; background:var(--teal-light); color:var(--charcoal) !important; font-size:14px; font-weight:500; letter-spacing:.06em; text-transform:uppercase; text-align:center; border-bottom:none !important; border-radius:2px; }
-
 /* SHARED */
 .sec-eye { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
 .sec-rule { width:26px; height:1px; background:var(--teal-light); flex-shrink:0; }
@@ -163,18 +174,15 @@ a { color:inherit; text-decoration:none; }
 .arr { width:22px; height:1px; background:currentColor; position:relative; transition:width .25s var(--ease); }
 .arr::after { content:''; position:absolute; right:0; top:-3px; width:6px; height:6px; border-right:1px solid currentColor; border-top:1px solid currentColor; transform:rotate(45deg); }
 .tlink:hover .arr { width:34px; }
-
 @media (prefers-reduced-motion: no-preference) {
   .anim { opacity:0; transform:translateY(20px); transition:opacity .65s var(--ease), transform .65s var(--ease); }
   .anim.vis { opacity:1; transform:translateY(0); }
   .d1 { transition-delay:.1s; } .d2 { transition-delay:.2s; } .d3 { transition-delay:.3s; } .d4 { transition-delay:.4s; }
 }
-
 /* HERO */
 .hero { background: radial-gradient(700px 500px at 80% 20%, rgba(74,158,142,.07), transparent 65%), var(--charcoal); padding: 140px var(--px) 100px; position: relative; overflow: hidden; }
 .hero-texture { position:absolute; inset:0; background-image: linear-gradient(rgba(107,191,176,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(107,191,176,.02) 1px, transparent 1px); background-size:60px 60px; pointer-events:none; }
 .hero-inner { max-width:var(--max-w); margin:0 auto; display:grid; grid-template-columns:340px 1fr; gap:80px; align-items:center; position:relative; z-index:1; }
-
 /* Interactive book cover */
 .book-mockup { position: relative; perspective: 1100px; }
 .book-cover-3d {
@@ -199,12 +207,10 @@ a { color:inherit; text-decoration:none; }
   transition: opacity .35s;
 }
 .book-mockup:hover .book-glare { opacity: 1; }
-
 .buy-label { font-family:var(--mono); font-size:10px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; margin-bottom:12px; }
 .buy-strip { margin-top:28px; display:flex; flex-direction:column; gap:12px; align-items:flex-start; }
 .buy-all { font-family:var(--mono); font-size:11px; color:rgba(226,226,226,.45); letter-spacing:.1em; text-transform:uppercase; transition:color .2s; }
 .buy-all:hover { color:var(--teal-light); }
-
 /* Hero right content */
 .hero-eyebrow { display:flex; align-items:center; gap:12px; margin-bottom:24px; opacity:0; animation: fadeUp .9s ease .25s forwards; }
 .hero-eyebrow-rule { width:32px; height:1px; background:var(--teal-light); }
@@ -224,7 +230,6 @@ a { color:inherit; text-decoration:none; }
 .hero-meta-item { display:flex; flex-direction:column; gap:4px; }
 .hmi-label { font-family:var(--mono); font-size:10px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; }
 .hmi-value { font-family:var(--serif); font-size:18px; font-weight:500; color:var(--seasalt); }
-
 /* THE ARGUMENT */
 .arg-sec { background:var(--seasalt); padding:100px var(--px); border-bottom:1px solid var(--border-light); }
 .arg-inner { max-width:var(--max-w); margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
@@ -232,7 +237,6 @@ a { color:inherit; text-decoration:none; }
 .arg-quote { font-family:var(--serif); font-size:clamp(24px,2.5vw,34px); font-weight:500; color:var(--charcoal); line-height:1.28; margin-bottom:24px; padding-left:20px; border-left:2px solid var(--teal-light); }
 .arg-quote em { font-style:italic; color:var(--teal); }
 .arg-attribution { font-family:var(--mono); font-size:11px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; padding-left:20px; }
-
 /* FRAMEWORKS */
 .fw-sec { background:var(--charcoal); padding:100px var(--px); }
 .fw-inner { max-width:var(--max-w); margin:0 auto; }
@@ -246,7 +250,6 @@ a { color:inherit; text-decoration:none; }
 .fw-card-tag { font-family:var(--mono); font-size:10px; color:var(--teal-light); letter-spacing:.16em; text-transform:uppercase; margin-bottom:16px; }
 .fw-card-title { font-family:var(--serif); font-size:clamp(22px,2.2vw,30px); font-weight:500; color:var(--seasalt); line-height:1.2; margin-bottom:14px; }
 .fw-card-body { font-size:15px; line-height:1.72; color:var(--muted-dark); }
-
 /* CHAPTERS */
 .chapters-sec { background:var(--platinum); padding:100px var(--px); border-top:1px solid var(--border-light); }
 .chapters-inner { max-width:var(--max-w); margin:0 auto; }
@@ -257,7 +260,6 @@ a { color:inherit; text-decoration:none; }
 .ch-num { font-family:var(--mono); font-size:11px; color:var(--teal-light); letter-spacing:.08em; padding-top:2px; }
 .ch-title { font-size:14px; font-weight:500; color:var(--charcoal); line-height:1.4; margin-bottom:4px; }
 .ch-desc { font-size:13px; color:var(--mid-grey); line-height:1.55; }
-
 /* AUTHOR'S NOTE */
 .note-sec { background:var(--charcoal); padding:100px var(--px); position:relative; overflow:hidden; }
 .note-sec::before { content:''; position:absolute; top:-100px; left:50%; transform:translateX(-50%); width:800px; height:500px; background:radial-gradient(ellipse, rgba(74,158,142,.04) 0%, transparent 65%); pointer-events:none; }
@@ -271,7 +273,6 @@ a { color:inherit; text-decoration:none; }
 .note-borahae { margin-top:36px; padding-top:28px; border-top:1px solid var(--border-dark); font-family:var(--serif); font-style:italic; font-size:clamp(17px,1.8vw,22px); line-height:1.5; color:var(--muted-dark); }
 .note-borahae .word { font-style:normal; color:var(--lavender); font-weight:500; }
 .note-borahae .heart { font-style:normal; }
-
 /* GLOSSARY */
 .glossary-sec { background:var(--seasalt); padding:100px var(--px); border-top:1px solid var(--border-light); }
 .glossary-inner { max-width:var(--max-w); margin:0 auto; }
@@ -291,7 +292,6 @@ a { color:inherit; text-decoration:none; }
 .accordion-def { font-size:14px; color:var(--muted-light); line-height:1.72; margin-bottom:10px; }
 .accordion-chapter { font-family:var(--mono); font-size:10px; color:var(--mid-grey); letter-spacing:.1em; text-transform:uppercase; display:inline-flex; align-items:center; gap:6px; }
 .accordion-chapter::before { content:''; width:16px; height:1px; background:var(--teal-light); display:inline-block; }
-
 /* GET THE BOOK */
 .get-sec { background:var(--teal-light); padding:100px var(--px); }
 .get-inner { max-width:var(--max-w); margin:0 auto; display:grid; grid-template-columns:1fr 400px; gap:80px; align-items:center; }
@@ -312,8 +312,9 @@ a { color:inherit; text-decoration:none; }
 .gbl-flag { font-size:16px; }
 .gbl-arr { width:14px; height:1px; background:currentColor; position:relative; }
 .gbl-arr::after { content:''; position:absolute; right:0; top:-3px; width:5px; height:5px; border-right:1px solid currentColor; border-top:1px solid currentColor; transform:rotate(45deg); }
+.gbl-price { font-family:var(--mono); font-size:12px; color:var(--teal-light); letter-spacing:.04em; }
+.gbl-sub-label { font-family:var(--mono); font-size:10px; color:var(--mid-grey); letter-spacing:.14em; text-transform:uppercase; margin:22px 0 12px; }
 .get-panel-note { font-family:var(--mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase; margin-top:16px; line-height:1.6; }
-
 /* RELATED */
 .related-sec { background:var(--charcoal-mid); padding:80px var(--px); border-top:1px solid var(--border-dark); }
 .related-inner { max-width:var(--max-w); margin:0 auto; }
@@ -328,7 +329,6 @@ a { color:inherit; text-decoration:none; }
 .rc-link:hover { gap:16px; }
 .rc-arr { width:18px; height:1px; background:currentColor; position:relative; }
 .rc-arr::after { content:''; position:absolute; right:0; top:-3px; width:5px; height:5px; border-right:1px solid currentColor; border-top:1px solid currentColor; transform:rotate(45deg); }
-
 /* FOOTER */
 .footer { background:var(--charcoal); padding:72px var(--px) 36px; border-top:1px solid var(--border-dark); }
 .footer-inner { max-width:var(--max-w); margin:0 auto; }
@@ -350,7 +350,6 @@ a { color:inherit; text-decoration:none; }
 .flegal { display:flex; gap:20px; }
 .flegal a { font-family:var(--mono); font-size:11px; color:rgba(226,226,226,.25); letter-spacing:.06em; transition:color .2s; }
 .flegal a:hover { color:var(--teal-light); }
-
 /* RESPONSIVE */
 @media (max-width: 960px) {
   .hero-inner { grid-template-columns:1fr; gap:56px; }
@@ -379,10 +378,8 @@ a { color:inherit; text-decoration:none; }
 </style>
 </head>
 <body>
-
 <a href="#main" class="skip">Skip to content</a>
 <div id="progress" aria-hidden="true"></div>
-
 <header role="banner">
   <nav class="nav" aria-label="Primary navigation">
     <a href="/" class="nav-logo" aria-label="Aingworth home">
@@ -409,14 +406,11 @@ a { color:inherit; text-decoration:none; }
     <a href="/contact/" class="drawer-cta">Let's Talk</a>
   </nav>
 </header>
-
 <main id="main">
-
 <!-- HERO -->
 <section class="hero" aria-labelledby="book-h">
   <div class="hero-texture" aria-hidden="true"></div>
   <div class="hero-inner">
-
     <!-- Interactive book cover -->
     <div class="book-mockup anim" id="bookmock">
       <div class="book-cover-3d" id="bookcover" role="img" aria-label="Become the Answer book cover">
@@ -433,7 +427,6 @@ a { color:inherit; text-decoration:none; }
         <a href="#get" class="buy-all">All Amazon stores &darr;</a>
       </div>
     </div>
-
     <!-- Content -->
     <div class="hero-content">
       <div class="hero-eyebrow">
@@ -469,10 +462,8 @@ a { color:inherit; text-decoration:none; }
         </div>
       </div>
     </div>
-
   </div>
 </section>
-
 <!-- THE ARGUMENT -->
 <section class="arg-sec" aria-labelledby="arg-h">
   <div class="arg-inner">
@@ -499,7 +490,6 @@ a { color:inherit; text-decoration:none; }
     </div>
   </div>
 </section>
-
 <!-- KEY FRAMEWORKS -->
 <section class="fw-sec" aria-labelledby="fw-h">
   <div class="fw-inner">
@@ -509,53 +499,45 @@ a { color:inherit; text-decoration:none; }
       <p class="sec-body sec-body-dark" style="max-width:480px; margin-top:4px;">These are the core concepts developed across the fourteen chapters. Each one has a specific meaning within the framework.</p>
     </div>
     <div class="fw-grid">
-
       <div class="fw-card anim" role="article">
         <div class="fw-card-num" aria-hidden="true">01</div>
         <div class="fw-card-tag">The Core Framework</div>
         <h3 class="fw-card-title">The Recognition Triangle</h3>
         <p class="fw-card-body">Three dimensions that AI systems evaluate when forming a picture of a brand's authority: Clarity, Credibility, and Earned Authority. Each can be assessed independently. All three must work together for the machine to form a confident answer that includes you. Strength in one or two without the third creates a partial picture. Partial pictures don't get cited.</p>
       </div>
-
       <div class="fw-card anim d1" role="article">
         <div class="fw-card-num" aria-hidden="true">02</div>
         <div class="fw-card-tag">The Shift</div>
         <h3 class="fw-card-title">The Recognition Economy</h3>
         <p class="fw-card-body">The economic model that replaces the visibility economy. In the visibility economy, reach and ranking determined commercial outcomes. In the recognition economy, it is the depth and breadth of independent validation of your authority that determines whether you appear in AI-mediated discovery at all. The rules changed. Most organizations are still playing the old game.</p>
       </div>
-
       <div class="fw-card anim" role="article">
         <div class="fw-card-num" aria-hidden="true">03</div>
         <div class="fw-card-tag">The Threat</div>
         <h3 class="fw-card-title">The Machine Gatekeeper</h3>
         <p class="fw-card-body">What happens when an AI system evaluates a category and decides which organizations to include in its answer. Unlike previous gatekeepers, it operates upstream of everything you can measure. When it excludes your brand, no signal fires. No ranking drops. No traffic declines. Opportunities simply never materialize. You cannot respond to a loss you cannot see.</p>
       </div>
-
       <div class="fw-card anim d1" role="article">
         <div class="fw-card-num" aria-hidden="true">04</div>
         <div class="fw-card-tag">The Hidden Cost</div>
         <h3 class="fw-card-title">Authority Debt</h3>
         <p class="fw-card-body">The compounding cost of years of investment in owned content and visibility without equivalent investment in the independent ecosystem signals that give that content its weight. Authority Debt is uncomfortable to acknowledge because it means genuine effort has not produced the recognition it should have. The debt exists. It can be identified. And it can be addressed. But not without first understanding what it costs.</p>
       </div>
-
       <div class="fw-card anim" role="article">
         <div class="fw-card-num" aria-hidden="true">05</div>
         <div class="fw-card-tag">The Method</div>
         <h3 class="fw-card-title">The Authority Method</h3>
         <p class="fw-card-body">A five-stage system for building Earned Authority deliberately: Diagnose, Define, Build, Distribute, and Refine. Each stage has specific activities, specific outcomes, and a specific sequence. Skipping stages produces partial results. The method is designed to produce authority signals that compound over time rather than requiring constant reinvestment to maintain.</p>
       </div>
-
       <div class="fw-card anim d1" role="article">
         <div class="fw-card-num" aria-hidden="true">06</div>
         <div class="fw-card-tag">What AI Reads</div>
         <h3 class="fw-card-title">The Composite Picture</h3>
         <p class="fw-card-body">The aggregate picture an AI system assembles of your brand from independent signals across the digital ecosystem. It is not what you say about yourself. It is what the room says when you are not standing there. Many organizations discover their Composite Picture is either too thin to generate confidence, or actively wrong because of inconsistent signals accumulated over years. Both problems have different solutions.</p>
       </div>
-
     </div>
   </div>
 </section>
-
 <!-- CHAPTER LIST -->
 <section class="chapters-sec" aria-labelledby="chapters-h">
   <div class="chapters-inner">
@@ -627,7 +609,6 @@ a { color:inherit; text-decoration:none; }
     </div>
   </div>
 </section>
-
 <!-- AUTHOR'S NOTE PULL -->
 <section class="note-sec" aria-labelledby="note-h">
   <div class="note-inner">
@@ -640,11 +621,10 @@ a { color:inherit; text-decoration:none; }
       <span class="note-attr-text">Lucy Aingworth, Author's Note, Become the Answer</span>
     </div>
     <p class="note-borahae">
-      And if you have read to the end, you have met the last word in it: <span class="word" lang="ko">보라해</span> <span class="heart" aria-hidden="true">💜</span>. It means "I purple you" — to trust and stay, all the way through. That is what recognition really is, and it is how I sign off.
+      And if you have read to the end, you have met the last word in it: <span class="word" lang="ko">보라해</span> <span class="heart" aria-hidden="true">💜</span>. It means "I purple you," to trust and stay, all the way through. That is what recognition really is, and it is how I sign off.
     </p>
   </div>
 </section>
-
 <!-- GLOSSARY -->
 <section class="glossary-sec" aria-labelledby="glossary-h">
   <div class="glossary-inner">
@@ -653,9 +633,7 @@ a { color:inherit; text-decoration:none; }
       <h2 class="sec-h2" id="glossary-h">The framework has<br>its own vocabulary.</h2>
       <p class="sec-body" style="max-width:480px; margin-top:4px;">These terms carry specific meaning within Become the Answer. Where they appear, they refer to the framework concepts, not their general everyday sense. Click any term to expand.</p>
     </div>
-
     <div class="glossary-cols anim d1">
-
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false" onclick="toggleAcc(this)">
             <span class="accordion-term">Authority Debt</span>
@@ -666,7 +644,6 @@ a { color:inherit; text-decoration:none; }
             <span class="accordion-chapter">Chapter 4</span>
           </div>
         </div>
-
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false" onclick="toggleAcc(this)">
             <span class="accordion-term">Authority Method</span>
@@ -677,7 +654,6 @@ a { color:inherit; text-decoration:none; }
             <span class="accordion-chapter">Chapters 9 to 13</span>
           </div>
         </div>
-
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false" onclick="toggleAcc(this)">
             <span class="accordion-term">Community Layer</span>
@@ -688,7 +664,6 @@ a { color:inherit; text-decoration:none; }
             <span class="accordion-chapter">Chapter 8</span>
           </div>
         </div>
-
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false" onclick="toggleAcc(this)">
             <span class="accordion-term">Composite Picture</span>
@@ -699,7 +674,6 @@ a { color:inherit; text-decoration:none; }
             <span class="accordion-chapter">Chapter 5</span>
           </div>
         </div>
-
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false" onclick="toggleAcc(this)">
             <span class="accordion-term">Earned Authority</span>
@@ -710,7 +684,6 @@ a { color:inherit; text-decoration:none; }
             <span class="accordion-chapter">Chapters 4 and 8</span>
           </div>
         </div>
-
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false" onclick="toggleAcc(this)">
             <span class="accordion-term">Expert Layer</span>
@@ -721,7 +694,6 @@ a { color:inherit; text-decoration:none; }
             <span class="accordion-chapter">Chapter 8</span>
           </div>
         </div>
-
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false" onclick="toggleAcc(this)">
             <span class="accordion-term">GEO</span>
@@ -732,7 +704,6 @@ a { color:inherit; text-decoration:none; }
             <span class="accordion-chapter">Chapter 11</span>
           </div>
         </div>
-
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false" onclick="toggleAcc(this)">
             <span class="accordion-term">Machine Gatekeeper</span>
@@ -743,7 +714,6 @@ a { color:inherit; text-decoration:none; }
             <span class="accordion-chapter">Chapter 3</span>
           </div>
         </div>
-
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false" onclick="toggleAcc(this)">
             <span class="accordion-term">Recognition Economy</span>
@@ -754,7 +724,6 @@ a { color:inherit; text-decoration:none; }
             <span class="accordion-chapter">Chapter 6</span>
           </div>
         </div>
-
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false" onclick="toggleAcc(this)">
             <span class="accordion-term">Recognition Triangle</span>
@@ -765,7 +734,6 @@ a { color:inherit; text-decoration:none; }
             <span class="accordion-chapter">Chapter 8</span>
           </div>
         </div>
-
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false" onclick="toggleAcc(this)">
             <span class="accordion-term">Recognition Triangle Patterns</span>
@@ -776,7 +744,6 @@ a { color:inherit; text-decoration:none; }
             <span class="accordion-chapter">Chapter 8</span>
           </div>
         </div>
-
         <div class="accordion-item">
           <button class="accordion-btn" aria-expanded="false" onclick="toggleAcc(this)">
             <span class="accordion-term">Structural Layer</span>
@@ -787,18 +754,16 @@ a { color:inherit; text-decoration:none; }
             <span class="accordion-chapter">Chapter 8</span>
           </div>
         </div>
-
     </div>
   </div>
 </section>
-
 <!-- GET THE BOOK -->
 <section class="get-sec" id="get" aria-labelledby="get-h">
   <div class="get-inner">
     <div class="get-content anim">
       <div class="sec-eye"><div class="sec-rule" style="background:var(--charcoal); opacity:.3"></div><span class="sec-lbl" style="color:rgba(26,26,26,.5)">Get the Book</span></div>
       <h2 id="get-h">The brands that win the AI era don't chase attention. <em>They become the answer.</em></h2>
-      <p>Available on Amazon in most major markets. Paperback and Kindle editions. South Africa availability is limited on Amazon but the book is accessible via international Amazon stores with delivery options.</p>
+      <p>Available on Amazon in most major markets, in Kindle, paperback, and hardcover editions. South Africa availability is limited on Amazon but the book is accessible via international Amazon stores with delivery options.</p>
       <div class="get-cta-row">
         <a href="https://www.amazon.com/dp/B0GX2WWBQT" target="_blank" rel="noopener" class="cta-dark">
           Buy on Amazon
@@ -809,15 +774,27 @@ a { color:inherit; text-decoration:none; }
         </a>
       </div>
     </div>
-
     <div class="get-panel anim d1">
-      <div class="get-panel-label">Available on Amazon</div>
+      <div class="get-panel-label">Choose your edition</div>
       <div class="get-buy-list">
         <a href="https://www.amazon.com/dp/B0GX2WWBQT" target="_blank" rel="noopener" class="gbl-item">
-          <span class="gbl-flag" aria-hidden="true">🇺🇸</span>
-          <span class="gbl-name">Amazon United States</span>
+          <span class="gbl-name">Kindle eBook</span>
+          <span class="gbl-price">$9.99</span>
           <span class="gbl-arr" aria-hidden="true"></span>
         </a>
+        <a href="https://www.amazon.com/dp/B0H7XTLQJS" target="_blank" rel="noopener" class="gbl-item">
+          <span class="gbl-name">Paperback</span>
+          <span class="gbl-price">$17.99</span>
+          <span class="gbl-arr" aria-hidden="true"></span>
+        </a>
+        <a href="https://www.amazon.com/dp/B0H82KL416" target="_blank" rel="noopener" class="gbl-item">
+          <span class="gbl-name">Hardcover</span>
+          <span class="gbl-price">$32.99</span>
+          <span class="gbl-arr" aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="gbl-sub-label">Other Amazon stores</div>
+      <div class="get-buy-list">
         <a href="https://www.amazon.co.uk/dp/B0GX2WWBQT" target="_blank" rel="noopener" class="gbl-item">
           <span class="gbl-flag" aria-hidden="true">🇬🇧</span>
           <span class="gbl-name">Amazon United Kingdom</span>
@@ -839,11 +816,10 @@ a { color:inherit; text-decoration:none; }
           <span class="gbl-arr" aria-hidden="true"></span>
         </a>
       </div>
-      <p class="get-panel-note" style="color:var(--seasalt);">South Africa not yet available directly. Order via Amazon US or UK with international delivery.</p>
+      <p class="get-panel-note" style="color:var(--seasalt);">Prices shown are Amazon US. International store links open the Kindle edition; paperback and hardcover can be selected on the same Amazon page. South Africa not yet available directly; order via Amazon US or UK with international delivery.</p>
     </div>
   </div>
 </section>
-
 <!-- RELATED -->
 <section class="related-sec" aria-labelledby="related-h">
   <div class="related-inner">
@@ -873,9 +849,7 @@ a { color:inherit; text-decoration:none; }
     </div>
   </div>
 </section>
-
 </main>
-
 <footer class="footer" role="contentinfo">
   <div class="footer-inner">
     <div class="fgrid">
@@ -891,7 +865,7 @@ a { color:inherit; text-decoration:none; }
           <a href="https://www.threads.net/@lucy_aingworth" class="fsoc" aria-label="Threads" target="_blank" rel="noopener">th</a>
           <a href="https://bsky.app/profile/lucyaingworth.bsky.social" class="fsoc" aria-label="Bluesky" target="_blank" rel="noopener">bs</a>
         </nav>
-        <p class="fborahae" aria-label="Borahae — I purple you"><span lang="ko">보라해</span> 💜</p>
+        <p class="fborahae" aria-label="Borahae, I purple you"><span lang="ko">보라해</span> 💜</p>
       </div>
       <div class="fcol">
         <p class="fcol-h">Work</p>
@@ -917,7 +891,6 @@ a { color:inherit; text-decoration:none; }
     </div>
   </div>
 </footer>
-
 <script>
 function toggleAcc(btn) {
   var body = btn.nextElementSibling;
@@ -925,7 +898,6 @@ function toggleAcc(btn) {
   btn.setAttribute('aria-expanded', !isOpen);
   body.classList.toggle('open', !isOpen);
 }
-
 var burger = document.querySelector('.nav-burger');
 var drawer = document.getElementById('ndrawer');
 burger.addEventListener('click', function() {
@@ -948,14 +920,12 @@ document.addEventListener('keydown', function(e) {
     burger.focus();
   }
 });
-
 /* Scroll progress */
 var progressBar = document.getElementById('progress');
 window.addEventListener('scroll', function() {
   var max = document.documentElement.scrollHeight - window.innerHeight;
   progressBar.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + '%';
 }, { passive: true });
-
 /* Scroll reveals */
 if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
   var obs = new IntersectionObserver(function(entries) {
@@ -965,7 +935,6 @@ if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
   }, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.anim').forEach(function(el) { obs.observe(el); });
 }
-
 /* Interactive book cover: tilts toward the cursor with a moving glare */
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -987,7 +956,6 @@ if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
     cover.style.transform = 'rotateY(-8deg) rotateX(2deg)';
   });
 })();
-
 /* Framework card spotlight */
 document.querySelectorAll('.fw-card').forEach(function(card) {
   card.addEventListener('mousemove', function(e) {
