@@ -135,6 +135,8 @@ a{text-decoration:none;color:inherit;}
 .hero-sub{font-size:17px;line-height:1.78;color:var(--muted-dark);max-width:660px;margin-top:22px;}
 .hero-langs{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap;}
 .lang-chip{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-light);border:1px solid rgba(107,191,176,.35);padding:8px 16px;border-radius:2px;}
+a.lang-chip{transition:all .2s;}
+a.lang-chip:hover{background:rgba(107,191,176,.12);border-color:var(--teal-light);color:var(--teal-light);}
 .capsule{margin-top:40px;max-width:820px;background:rgba(107,191,176,.07);border:1px solid rgba(107,191,176,.22);border-left:3px solid var(--teal-light);border-radius:3px;padding:24px 28px;}
 .capsule-lbl{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px;}
 .capsule p:last-child{font-size:15.5px;line-height:1.72;color:rgba(250,250,250,.85);margin:0;}
@@ -297,8 +299,8 @@ a{text-decoration:none;color:inherit;}
     <h1 id="h1">Almal het ChatGPT.<br><em>Byna niemand gebruik dit reg nie.</em></h1>
     <p class="hero-sub">Jy het dit maande gelede oopgemaak. Dalk het jou hele span dit ook. Maar dit herskryf steeds die af en toe e-pos terwyl die werklike werk met die hand bly. Hierdie program sluit daardie gaping: praktiese KI (AI)-implementering, in gewone taal, in Afrikaans of Engels, gebou rondom hoe jou besigheid werklik werk.</p>
     <div class="hero-langs" aria-label="Opleidingstale">
-      <span class="lang-chip">Aangebied in Afrikaans</span>
-      <span class="lang-chip" lang="en">Delivered in English</span>
+      <a href="/suid-afrika/" class="lang-chip" hreflang="af-ZA" lang="af">Aangebied in Afrikaans</a>
+      <a href="/south-africa/" class="lang-chip" hreflang="en-ZA" lang="en">Delivered in English</a>
     </div>
     <div class="capsule">
       <p class="capsule-lbl">In een paragraaf</p>
