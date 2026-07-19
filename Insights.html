@@ -114,6 +114,8 @@ img{max-width:100%;display:block;}
 .card-syn{font-size:14px;color:var(--muted-light);line-height:1.65;flex:1;}
 .card-more{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-family:var(--mono);font-size:10px;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;}
 .card[hidden]{display:none;}
+.hub-empty{max-width:var(--max-w);margin:0 auto;padding:8px var(--px) 120px;font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.2vw,23px);color:var(--muted-light);}
+.hub-empty[hidden]{display:none;}
 @media (max-width:980px){.hub-grid{grid-template-columns:1fr 1fr;}}
 @media (max-width:640px){.hub-grid{grid-template-columns:1fr;}}
 </style>
@@ -155,18 +157,18 @@ img{max-width:100%;display:block;}
 
 <div class="hub-filters" role="group" aria-label="Filter insights by category">
   <button type="button" class="filter-btn active" data-filter="all">All</button>
-  
-  <button type="button" class="filter-btn" data-filter="ai-search">AI Search</button>
-  
   <button type="button" class="filter-btn" data-filter="brand-authority">Brand Authority</button>
-  
-  <button type="button" class="filter-btn" data-filter="geo">GEO</button>
-  
+  <button type="button" class="filter-btn" data-filter="ai-visibility">AI Visibility</button>
+  <button type="button" class="filter-btn" data-filter="ai-in-business">AI in Business</button>
+  <button type="button" class="filter-btn" data-filter="automation-systems">Automation &amp; Systems</button>
+  <button type="button" class="filter-btn" data-filter="her-worth">HER-Worth</button>
+  <button type="button" class="filter-btn" data-filter="south-africa">South Africa</button>
+  <button type="button" class="filter-btn" data-filter="thinking">Thinking</button>
 </div>
 
 <div class="hub-grid" id="hubgrid">
   
-  <a href="/insights/why-ai-gets-your-brand-wrong/" class="card" data-cats="brand-authority ai-search ">
+  <a href="/insights/why-ai-gets-your-brand-wrong/" class="card" data-cats="brand-authority ai-visibility ">
     <div class="card-img">
       
       <img src="/images/insights/brand-hallucination.jpg" alt="A distorted reflection representing an AI system&#39;s inaccurate picture of a brand" width="800" height="450" loading="lazy">
@@ -174,7 +176,7 @@ img{max-width:100%;display:block;}
     </div>
     <div class="card-body">
       <div class="card-meta">
-        <span class="card-cat">Brand Authority</span><span class="card-cat">AI Search</span>
+        <span class="card-cat">Brand Authority</span><span class="card-cat">AI Visibility</span>
         <span class="card-date">14 July 2026</span>
       </div>
       <h2 class="card-title">Why AI Gets Your Brand Wrong, and Whose Fault That Is</h2>
@@ -183,7 +185,7 @@ img{max-width:100%;display:block;}
     </div>
   </a>
   
-  <a href="/insights/what-is-generative-engine-optimisation/" class="card" data-cats="ai-search geo ">
+  <a href="/insights/what-is-generative-engine-optimisation/" class="card" data-cats="ai-visibility ">
     <div class="card-img">
       
       <img src="/images/insights/what-is-geo.jpg" alt="Abstract illustration of an AI system assembling an answer from web sources" width="800" height="450" loading="lazy">
@@ -191,7 +193,7 @@ img{max-width:100%;display:block;}
     </div>
     <div class="card-body">
       <div class="card-meta">
-        <span class="card-cat">AI Search</span><span class="card-cat">GEO</span>
+        <span class="card-cat">AI Visibility</span>
         <span class="card-date">13 July 2026</span>
       </div>
       <h2 class="card-title">What Generative Engine Optimisation Actually Is</h2>
@@ -202,18 +204,23 @@ img{max-width:100%;display:block;}
   
 </div>
 
+<p class="hub-empty" id="hubempty" hidden>First pieces in this category are landing soon.</p>
+
 <script>
 (function(){
-  var btns=document.querySelectorAll('.filter-btn'),cards=document.querySelectorAll('#hubgrid .card');
+  var btns=document.querySelectorAll('.filter-btn'),
+      cards=document.querySelectorAll('#hubgrid .card'),
+      empty=document.getElementById('hubempty');
   btns.forEach(function(b){
     b.addEventListener('click',function(){
       btns.forEach(function(x){x.classList.remove('active');});
       b.classList.add('active');
-      var f=b.dataset.filter;
+      var f=b.dataset.filter,shown=0;
       cards.forEach(function(c){
-        if(f==='all'||(c.dataset.cats||'').split(' ').indexOf(f)>-1){c.removeAttribute('hidden');}
+        if(f==='all'||(c.dataset.cats||'').split(' ').indexOf(f)>-1){c.removeAttribute('hidden');shown++;}
         else{c.setAttribute('hidden','');}
       });
+      if(empty){empty.hidden=shown>0;}
     });
   });
 })();
