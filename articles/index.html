@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insights | Aingworth</title>
-<meta name="description" content="Insights on AI search visibility, generative engine optimisation, and brand authority from Lucy Aingworth. Practical thinking, evidence first.">
+<title>Articles on AI Visibility &amp; Brand Authority | Aingworth</title>
+<meta name="description" content="Articles on AI search visibility, generative engine optimisation, and brand authority from Lucy Aingworth. Practical thinking, evidence first.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://aingworth.com/insights/">
+<link rel="canonical" href="https://aingworth.com/articles/">
 <link rel="icon" href="/images/Aingworth_Main_favicon.png" type="image/png">
-<meta property="og:title" content="Insights | Aingworth">
-<meta property="og:description" content="Insights on AI search visibility, generative engine optimisation, and brand authority from Lucy Aingworth. Practical thinking, evidence first.">
+<meta property="og:title" content="Articles on AI Visibility &amp; Brand Authority | Aingworth">
+<meta property="og:description" content="Articles on AI search visibility, generative engine optimisation, and brand authority from Lucy Aingworth. Practical thinking, evidence first.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://aingworth.com/insights/">
+<meta property="og:url" content="https://aingworth.com/articles/">
 <meta property="og:site_name" content="Aingworth">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://aingworth.com/images/Aingworth_Main_Logo_White_bigger.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@lucy_aingworth">
-<meta name="twitter:title" content="Insights | Aingworth">
-<meta name="twitter:description" content="Insights on AI search visibility, generative engine optimisation, and brand authority from Lucy Aingworth. Practical thinking, evidence first.">
+<meta name="twitter:title" content="Articles on AI Visibility &amp; Brand Authority | Aingworth">
+<meta name="twitter:description" content="Articles on AI search visibility, generative engine optimisation, and brand authority from Lucy Aingworth. Practical thinking, evidence first.">
 <meta name="twitter:image" content="https://aingworth.com/images/Aingworth_Main_Logo_White_bigger.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","@id":"https://aingworth.com/insights/","name":"Aingworth Insights","description":"Insights on AI search visibility, generative engine optimisation, and brand authority.","publisher":{"@type":"Organization","@id":"https://aingworth.com/#organization","name":"Aingworth"},"author":{"@type":"Person","@id":"https://aingworth.com/#lucy","name":"Lucy Aingworth"},"inLanguage":"en"}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","@id":"https://aingworth.com/articles/","url":"https://aingworth.com/articles/","name":"Aingworth Articles","description":"Articles on AI search visibility, generative engine optimisation, and brand authority.","publisher":{"@type":"Organization","@id":"https://aingworth.com/#organization","name":"Aingworth"},"author":{"@type":"Person","@id":"https://aingworth.com/#lucy","name":"Lucy Aingworth"},"inLanguage":"en"}
 </script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5K6TKZTK1"></script>
@@ -52,12 +52,27 @@ img{max-width:100%;display:block;}
 ::selection{background:var(--teal-light);color:var(--charcoal);}
 .nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--px);background:rgba(26,26,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-dark);}
 .nav-logo{display:flex;align-items:center;height:68px;}
-.nav-logo img{width:200px;height:auto;filter:brightness(100) contrast(2);}
+.nav-logo img{width:200px;height:auto;display:block;filter:brightness(100) contrast(2);}
+.nav{transition:background .3s var(--ease);}
 .nav-menu{display:flex;align-items:center;gap:2px;list-style:none;}
 .nav-menu a{display:block;padding:7px 12px;color:rgba(250,250,250,.6);font-size:13px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:color .2s;}
 .nav-menu a:hover,.nav-menu a[aria-current="page"]{color:var(--teal-light);}
 .nav-menu .ncta a{background:var(--teal-light);color:var(--charcoal);padding:8px 20px;font-weight:500;border-radius:2px;}
 .nav-menu .ncta a:hover{background:var(--teal);color:var(--seasalt);}
+.nav-menu a{padding:7px 10px;}
+.nav-has-drop{position:relative;}
+.nav-droptrig{display:flex;align-items:center;gap:6px;padding:7px 10px;background:none;border:none;cursor:pointer;color:rgba(250,250,250,.6);font-family:var(--sans);font-size:13px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
+.nav-droptrig:hover,.nav-has-drop:hover .nav-droptrig,.nav-droptrig[aria-expanded="true"],.nav-droptrig[data-active="true"]{color:var(--teal-light);}
+.nav-caret{transition:transform .25s var(--ease);}
+.nav-has-drop:hover .nav-caret,.nav-droptrig[aria-expanded="true"] .nav-caret{transform:rotate(180deg);}
+.nav-drop{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-6px);min-width:264px;background:var(--charcoal-mid);border:1px solid var(--border-dark);border-radius:4px;padding:8px;box-shadow:0 20px 48px rgba(0,0,0,.4);opacity:0;visibility:hidden;transition:opacity .2s var(--ease),transform .2s var(--ease);z-index:210;}
+.nav-drop::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;}
+.nav-has-drop:hover .nav-drop,.nav-drop.open,.nav-has-drop:focus-within .nav-drop{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+.nav-drop a{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:3px;text-transform:none;letter-spacing:0;transition:background .18s;}
+.nav-drop a:hover{background:rgba(107,191,176,.09);}
+.nav-drop .nd-t{font-size:14px;font-weight:500;color:var(--seasalt);letter-spacing:.01em;transition:color .2s;}
+.nav-drop a:hover .nd-t,.nav-drop a[aria-current="page"] .nd-t{color:var(--teal-light);}
+.nav-drop .nd-d{font-size:12px;color:var(--mid-grey);line-height:1.4;}
 .nav-burger{display:none;flex-direction:column;gap:5px;padding:8px;background:none;border:none;cursor:pointer;}
 .nav-burger span{display:block;width:22px;height:1.5px;background:var(--seasalt);transition:all .3s var(--ease);transform-origin:center;}
 .nav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
@@ -67,6 +82,11 @@ img{max-width:100%;display:block;}
 .nav-drawer.open{display:flex;}
 .nav-drawer a{display:block;padding:16px 0;color:rgba(250,250,250,.65);font-size:18px;text-decoration:none;border-bottom:1px solid var(--border-dark);}
 .nav-drawer a:hover{color:var(--teal-light);}
+.nav-drawer{overflow-y:auto;}
+.drawer-group{border-bottom:1px solid var(--border-dark);padding:8px 0 12px;}
+.drawer-group-h{font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;padding:12px 0 6px;}
+.nav-drawer a.drawer-sub{font-size:16px;padding:12px 0 12px 18px;border-bottom:none;color:rgba(250,250,250,.55);}
+.nav-drawer a.drawer-sub:hover{color:var(--teal-light);}
 .drawer-cta{margin-top:24px;padding:16px 28px;background:var(--teal-light);color:var(--charcoal) !important;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;text-align:center;border-bottom:none !important;border-radius:2px;}
 .sec-eye{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
 .sec-rule{width:26px;height:1px;background:var(--teal-light);flex-shrink:0;}
@@ -94,35 +114,38 @@ img{max-width:100%;display:block;}
 .flegal a{font-family:var(--mono);font-size:11px;color:rgba(226,226,226,.25);letter-spacing:.06em;text-decoration:none;transition:color .2s;}
 .flegal a:hover{color:var(--teal-light);}
 @media (max-width:900px){.fgrid{grid-template-columns:1fr 1fr;gap:36px;}}
-@media (max-width:820px){.nav-menu{display:none;}.nav-burger{display:flex;}}
+@media (max-width:1080px){.nav-menu{display:none;}.nav-burger{display:flex;}}
 @media (max-width:600px){.fgrid{grid-template-columns:1fr;gap:32px;}}
 </style>
-<style>.hub-head{max-width:var(--max-w);margin:0 auto;padding:128px var(--px) 0;}
-.hub-title{font-family:var(--serif);font-size:clamp(40px,5vw,64px);font-weight:500;line-height:1.05;color:var(--charcoal);letter-spacing:-.01em;margin-bottom:14px;}
-.hub-standfirst{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.2vw,24px);line-height:1.4;color:var(--muted-light);max-width:640px;}
+<style>
+/* Articles hub runs dark, matching the rest of the site */
+body{background:var(--charcoal);color:var(--seasalt);}
+.hub-head{max-width:var(--max-w);margin:0 auto;padding:132px var(--px) 0;position:relative;}
+.hub-title{font-family:var(--serif);font-size:clamp(30px,3.6vw,46px);font-weight:500;line-height:1.22;color:var(--seasalt);letter-spacing:-.005em;max-width:900px;margin-bottom:0;}
+.hub-title em{font-style:italic;color:var(--teal-light);}
 .hub-filters{max-width:var(--max-w);margin:0 auto;padding:36px var(--px) 0;display:flex;gap:8px;flex-wrap:wrap;}
-.filter-btn{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid-grey);background:none;border:1px solid var(--border-light);padding:9px 18px;border-radius:2px;cursor:pointer;transition:all .2s var(--ease);}
-.filter-btn:hover{color:var(--teal);border-color:rgba(74,158,142,.4);}
-.filter-btn.active{background:var(--charcoal);color:var(--teal-light);border-color:var(--charcoal);}
+.filter-btn{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid-grey);background:none;border:1px solid var(--border-dark);padding:9px 18px;border-radius:2px;cursor:pointer;transition:all .2s var(--ease);}
+.filter-btn:hover{color:var(--teal-light);border-color:rgba(107,191,176,.45);background:rgba(107,191,176,.06);}
+.filter-btn.active{background:var(--teal-light);color:var(--charcoal);border-color:var(--teal-light);}
 .hub-grid{max-width:var(--max-w);margin:0 auto;padding:36px var(--px) 100px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-radius:3px;overflow:hidden;text-decoration:none;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s;}
-.card:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(26,26,26,.1);border-color:rgba(74,158,142,.35);}
-.card-img{aspect-ratio:1/1;background:linear-gradient(135deg,var(--charcoal-mid),var(--charcoal-light));position:relative;overflow:hidden;}
+.card{display:flex;flex-direction:column;background:var(--charcoal-mid);border:1px solid var(--border-dark);border-radius:3px;overflow:hidden;text-decoration:none;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s,background .25s;}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(0,0,0,.38);border-color:rgba(107,191,176,.4);background:var(--charcoal-light);}
+.card-img{aspect-ratio:1/1;background:linear-gradient(135deg,var(--charcoal-light),#3a3a3a);position:relative;overflow:hidden;}
 .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease);}
 .card:hover .card-img img{transform:scale(1.04);}
 .card-img-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:16px;text-align:center;}
 .card-ph-label{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-light);opacity:.75;}
 .card-body{padding:24px 26px 28px;display:flex;flex-direction:column;flex:1;}
 .card-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px;}
-.card-cat{font-family:var(--mono);font-size:9px;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(74,158,142,.3);padding:4px 9px;border-radius:2px;}
+.card-cat{font-family:var(--mono);font-size:9px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(107,191,176,.32);padding:4px 9px;border-radius:2px;}
 .card-date{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;text-transform:uppercase;}
-.card-title{font-family:var(--serif);font-size:23px;font-weight:500;color:var(--charcoal);line-height:1.22;margin-bottom:10px;}
-.card:hover .card-title{color:var(--teal);}
-.card-syn{font-size:14px;color:var(--muted-light);line-height:1.65;flex:1;}
-.card-more{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-family:var(--mono);font-size:10px;color:var(--teal);letter-spacing:.12em;text-transform:uppercase;}
+.card-title{font-family:var(--serif);font-size:23px;font-weight:500;color:var(--seasalt);line-height:1.22;margin-bottom:10px;transition:color .2s;}
+.card:hover .card-title{color:var(--teal-light);}
+.card-syn{font-size:14px;color:var(--muted-dark);line-height:1.65;flex:1;}
+.card-more{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;}
 .card[hidden]{display:none;}
-.card--placeholder{border-style:dashed;}
-.hub-empty{max-width:var(--max-w);margin:0 auto;padding:8px var(--px) 120px;font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.2vw,23px);color:var(--muted-light);}
+.card--placeholder{border-style:dashed;border-color:rgba(183,206,206,.16);}
+.hub-empty{max-width:var(--max-w);margin:0 auto;padding:8px var(--px) 120px;font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.2vw,23px);color:var(--muted-dark);}
 .hub-empty[hidden]{display:none;}
 @media (max-width:980px){.hub-grid{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:640px){.hub-grid{grid-template-columns:1fr;}}
@@ -131,37 +154,56 @@ img{max-width:100%;display:block;}
 <body>
 <a href="#main" class="skip">Skip to content</a>
 
+<header role="banner">
 <nav class="nav" aria-label="Primary navigation">
   <a href="/" class="nav-logo" aria-label="Aingworth home">
     <img src="/images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth">
   </a>
   <ul class="nav-menu" role="list">
-    <li><a href="/services/">Work With Me</a></li>
+    <li><a href="/services/">Services</a></li>
     <li><a href="/her-worth/">HER-Worth</a></li>
     <li><a href="/book/">The Book</a></li>
     <li><a href="/diagnostic/">Diagnostic</a></li>
+    <li class="nav-has-drop">
+      <button type="button" class="nav-droptrig" data-active="true" aria-expanded="false" aria-haspopup="true" aria-controls="insights-drop">Insights
+        <svg class="nav-caret" width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="nav-drop" id="insights-drop" role="menu">
+        <a href="/articles/" role="menuitem" aria-current="page"><span class="nd-t">Articles</span><span class="nd-d">Practical thinking on AI search and authority</span></a>
+        <a href="/frameworks/" role="menuitem"><span class="nd-t">Frameworks</span><span class="nd-d">The named ideas behind Become the Answer</span></a>
+        <a href="/case-studies/" role="menuitem"><span class="nd-t">Case Studies</span><span class="nd-d">Authority work, in practice</span></a>
+      </div>
+    </li>
     <li><a href="/about/">About</a></li>
+    <li><a href="/south-africa/">South Africa</a></li>
     <li class="ncta"><a href="/contact/">Let's Talk</a></li>
   </ul>
   <button class="nav-burger" aria-expanded="false" aria-controls="ndrawer" aria-label="Open menu"><span></span><span></span><span></span></button>
 </nav>
 <nav id="ndrawer" class="nav-drawer" aria-label="Mobile navigation">
-  <a href="/services/">Work With Me</a>
+  <a href="/services/">Services</a>
   <a href="/her-worth/">HER-Worth</a>
   <a href="/book/">The Book</a>
   <a href="/diagnostic/">Diagnostic</a>
+  <div class="drawer-group">
+    <p class="drawer-group-h">Insights</p>
+    <a href="/articles/" class="drawer-sub" aria-current="page">Articles</a>
+    <a href="/frameworks/" class="drawer-sub">Frameworks</a>
+    <a href="/case-studies/" class="drawer-sub">Case Studies</a>
+  </div>
   <a href="/about/">About</a>
+  <a href="/south-africa/">South Africa</a>
   <a href="/contact/" class="drawer-cta">Let's Talk</a>
 </nav>
+</header>
 
 <main id="main">
 <div class="hub-head">
-  <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Insights</span></div>
-  <h1 class="hub-title">Insights.</h1>
-  <p class="hub-standfirst">Practical thinking on AI search visibility, brand authority, and the recognition economy. Evidence first, hype never.</p>
+  <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Articles</span></div>
+  <h1 class="hub-title">Practical thinking on AI search visibility, brand authority, and the recognition economy. <em>Evidence first, hype never.</em></h1>
 </div>
 
-<div class="hub-filters" role="group" aria-label="Filter insights by category">
+<div class="hub-filters" role="group" aria-label="Filter articles by category">
   <button type="button" class="filter-btn active" data-filter="all">All</button>
   <button type="button" class="filter-btn" data-filter="brand-authority">Brand Authority</button>
   <button type="button" class="filter-btn" data-filter="ai-visibility">AI Visibility</button>
@@ -175,7 +217,7 @@ img{max-width:100%;display:block;}
 <div class="hub-grid" id="hubgrid">
   
   <!-- REAL ARTICLE 1 -->
-  <a href="/insights/why-ai-gets-your-brand-wrong/" class="card" data-cats="brand-authority ai-visibility ">
+  <a href="/articles/why-ai-gets-your-brand-wrong/" class="card" data-cats="brand-authority ai-visibility ">
     <div class="card-img"><div class="card-img-fallback"><span class="card-ph-label">Brand Authority</span></div></div>
     <div class="card-body">
       <div class="card-meta">
@@ -189,7 +231,7 @@ img{max-width:100%;display:block;}
   </a>
   
   <!-- REAL ARTICLE 2 -->
-  <a href="/insights/what-is-generative-engine-optimisation/" class="card" data-cats="ai-visibility ">
+  <a href="/articles/what-is-generative-engine-optimisation/" class="card" data-cats="ai-visibility ">
     <div class="card-img"><div class="card-img-fallback"><span class="card-ph-label">AI Visibility</span></div></div>
     <div class="card-body">
       <div class="card-meta">
@@ -320,6 +362,7 @@ img{max-width:100%;display:block;}
         <ul>
           <li><a href="/services/">Services</a></li>
           <li><a href="/her-worth/">HER-Worth</a></li>
+          <li><a href="/south-africa/">South Africa</a></li>
           <li><a href="/diagnostic/">Free Diagnostic</a></li>
         </ul>
       </div>
@@ -327,7 +370,8 @@ img{max-width:100%;display:block;}
         <p class="fcol-h">Explore</p>
         <ul>
           <li><a href="/book/">The Book</a></li>
-          <li><a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/">The Authority Signal</a></li>
+          <li><a href="/articles/">Articles</a></li>
+          <li><a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener">The Authority Signal</a></li>
           <li><a href="/about/">About Lucy</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
@@ -342,6 +386,14 @@ img{max-width:100%;display:block;}
 
 <script>
 (function(){
+  var navEl=document.querySelector('.nav');
+  if(navEl){window.addEventListener('scroll',function(){navEl.style.background=scrollY>10?'rgba(26,26,26,.99)':'rgba(26,26,26,.97)';},{passive:true});}
+  var trig=document.querySelector('.nav-droptrig'),drop=document.getElementById('insights-drop');
+  if(trig&&drop){
+    trig.addEventListener('click',function(e){e.stopPropagation();var o=drop.classList.toggle('open');trig.setAttribute('aria-expanded',o?'true':'false');});
+    document.addEventListener('click',function(e){if(!drop.contains(e.target)&&e.target!==trig){drop.classList.remove('open');trig.setAttribute('aria-expanded','false');}});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&drop.classList.contains('open')){drop.classList.remove('open');trig.setAttribute('aria-expanded','false');trig.focus();}});
+  }
   var b=document.querySelector('.nav-burger'),d=document.getElementById('ndrawer');
   if(!b||!d)return;
   b.addEventListener('click',function(){var o=d.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');document.body.style.overflow=o?'hidden':'';});
