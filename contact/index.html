@@ -576,12 +576,13 @@ a { color:inherit; text-decoration:none; }
 
       <!-- Enquiry type buttons -->
       <div class="enquiry-types" role="group" aria-label="Select enquiry type">
-        <button class="eq-btn active" onclick="setType(this, 'Consulting Enquiry')" aria-pressed="true">Consulting</button>
-        <button class="eq-btn" onclick="setType(this, 'Speaking Enquiry')" aria-pressed="false">Speaking</button>
-        <button class="eq-btn" onclick="setType(this, 'HER-Worth Enquiry')" aria-pressed="false">HER-Worth</button>
-        <button class="eq-btn" onclick="setType(this, 'Media or Press')" aria-pressed="false">Media</button>
-        <button class="eq-btn" onclick="setType(this, 'Experience or Feedback')" aria-pressed="false">Experience or Feedback</button>
-        <button class="eq-btn" onclick="setType(this, 'General Enquiry')" aria-pressed="false">General</button>
+        <button class="eq-btn active" data-key="consulting" onclick="setType(this, 'Consulting Enquiry')" aria-pressed="true">Consulting</button>
+        <button class="eq-btn" data-key="speaking" onclick="setType(this, 'Speaking Enquiry')" aria-pressed="false">Speaking</button>
+        <button class="eq-btn" data-key="her-worth" onclick="setType(this, 'HER-Worth Enquiry')" aria-pressed="false">HER-Worth</button>
+        <button class="eq-btn" data-key="south-africa" onclick="setType(this, 'South Africa Enquiry')" aria-pressed="false">South Africa</button>
+        <button class="eq-btn" data-key="media" onclick="setType(this, 'Media or Press')" aria-pressed="false">Media</button>
+        <button class="eq-btn" data-key="feedback" onclick="setType(this, 'Experience or Feedback')" aria-pressed="false">Experience or Feedback</button>
+        <button class="eq-btn" data-key="general" onclick="setType(this, 'General Enquiry')" aria-pressed="false">General</button>
       </div>
 
       <!-- Selected enquiry type, shown to the user and submitted with the form -->
@@ -848,9 +849,7 @@ a { color:inherit; text-decoration:none; }
         <p class="fcol-h">Explore</p>
         <ul>
           <li><a href="/book/">The Book</a></li>
-          <li><a href="/frameworks/">Frameworks</a></li>
           <li><a href="/articles/">Articles</a></li>
-          <li><a href="/case-studies/">Case Studies</a></li>
           <li><a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener">The Authority Signal</a></li>
           <li><a href="/about/">About Lucy</a></li>
           <li><a href="/contact/">Contact</a></li>
@@ -877,6 +876,28 @@ function setType(btn, type) {
   document.getElementById('form-subject').value = type + ' via aingworth.com';
   document.getElementById('eq-selected-text').textContent = type;
 }
+
+/* Preselect the enquiry type from ?type= in the URL, so a CTA on another page
+   arrives here with the right option already chosen. Unknown or missing values
+   fall through to the Consulting default. */
+(function () {
+  var TYPES = {
+    'consulting':   { key: 'consulting',    label: 'Consulting Enquiry' },
+    'speaking':     { key: 'speaking',      label: 'Speaking Enquiry' },
+    'her-worth':    { key: 'her-worth',     label: 'HER-Worth Enquiry' },
+    'south-africa': { key: 'south-africa',  label: 'South Africa Enquiry' },
+    'suid-afrika':  { key: 'south-africa',  label: 'South Africa Enquiry (Afrikaans)' },
+    'media':        { key: 'media',         label: 'Media or Press' },
+    'feedback':     { key: 'feedback',      label: 'Experience or Feedback' },
+    'general':      { key: 'general',       label: 'General Enquiry' }
+  };
+  var requested = new URLSearchParams(window.location.search).get('type');
+  if (!requested) return;
+  var match = TYPES[requested.toLowerCase().trim()];
+  if (!match) return;
+  var btn = document.querySelector('.eq-btn[data-key="' + match.key + '"]');
+  if (btn) setType(btn, match.label);
+})();
 
 // Form submission
 var form = document.getElementById('contact-form');
