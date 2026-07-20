@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The GEO Gold Rush: Why Most AI Visibility Advice Is Wrong | Aingworth</title>
+<meta name="description" content="Most AI visibility advice is built on assumption, not evidence. What the research actually shows about llms.txt, schema, content volume, and what really drives AI citations.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Lucy Aingworth">
+<link rel="canonical" href="https://aingworth.com/articles/the-geo-gold-rush/">
+<link rel="icon" href="/images/Aingworth_Main_favicon.png" type="image/png">
+<meta property="og:title" content="The GEO Gold Rush: Why Most AI Visibility Advice Is Already Wrong">
+<meta property="og:description" content="Most AI visibility advice is built on assumption, not evidence. What the research actually shows, and what to do instead.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://aingworth.com/articles/the-geo-gold-rush/">
+<meta property="og:site_name" content="Aingworth">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aingworth.com/images/articles/geo-gold-rush.jpg">
+<meta property="article:published_time" content="2026-07-20">
+<meta property="article:modified_time" content="2026-07-20">
+<meta property="article:author" content="https://aingworth.com/about/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@lucy_aingworth">
+<meta name="twitter:title" content="The GEO Gold Rush">
+<meta name="twitter:description" content="Most AI visibility advice is built on assumption, not evidence. Here is what the research actually shows.">
+<meta name="twitter:image" content="https://aingworth.com/images/articles/geo-gold-rush.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://aingworth.com/articles/the-geo-gold-rush/#article",
+      "headline": "The GEO Gold Rush: Why Most AI Visibility Advice Is Already Wrong",
+      "description": "Most AI visibility advice is built on assumption rather than evidence. What the research actually supports about llms.txt, schema markup, content volume, and off-site brand signals.",
+      "image": "https://aingworth.com/images/articles/geo-gold-rush.jpg",
+      "author": {
+        "@type": "Person",
+        "@id": "https://aingworth.com/#lucy",
+        "name": "Lucy Aingworth",
+        "url": "https://aingworth.com/about/",
+        "jobTitle": "Brand Authority and AI Visibility Consultant"
+      },
+      "publisher": { "@id": "https://aingworth.com/#organization" },
+      "datePublished": "2026-07-20",
+      "dateModified": "2026-07-20",
+      "mainEntityOfPage": "https://aingworth.com/articles/the-geo-gold-rush/",
+      "articleSection": ["AI Visibility", "Thinking"],
+      "keywords": "GEO, generative engine optimization, AI visibility, llms.txt, AI citations, earned authority",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://aingworth.com/articles/" },
+      "about": [
+        { "@type": "Thing", "name": "Generative Engine Optimization" },
+        { "@type": "Thing", "name": "Earned Authority" },
+        { "@type": "Thing", "name": "Recognition Triangle" },
+        { "@type": "Thing", "name": "AI Search Visibility" }
+      ],
+      "citation": [
+        { "@type": "CreativeWork", "name": "SE Ranking llms.txt correlation analysis, 2026" },
+        { "@type": "CreativeWork", "name": "Ahrefs AI Overviews correlation study, 2025-2026" },
+        { "@type": "CreativeWork", "name": "Semrush AI Visibility Index, 2026" },
+        { "@type": "CreativeWork", "name": "Stacker content distribution research, December 2025" },
+        { "@type": "CreativeWork", "name": "SparkToro citation placement analysis, 2026" },
+        { "@type": "Book", "name": "Become the Answer: How Brands Build Authority in the Age of AI", "author": { "@id": "https://aingworth.com/#lucy" } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aingworth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://aingworth.com/articles/" },
+        { "@type": "ListItem", "position": 3, "name": "The GEO Gold Rush", "item": "https://aingworth.com/articles/the-geo-gold-rush/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is GEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GEO stands for Generative Engine Optimization, also called AI Visibility. It refers to the practice of influencing whether and how AI systems, such as ChatGPT, Gemini, Perplexity, and Claude, surface and recommend your business when someone asks them a question. Unlike traditional search, these systems return a synthesised answer naming a few brands rather than a ranked list of links."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is GEO replacing SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. AI visibility does not replace search engine optimisation, and it is not simply an extension of it either. Traditional search still matters, and some signals feed both systems. But the factors that most strongly correlate with AI citations, particularly independent brand mentions and earned authority, are not the same as the backlink-and-ranking signals that drive traditional SEO, so the two require different thinking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does llms.txt improve AI visibility?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The current evidence says no, at least not for being cited or recommended. A study of roughly 300,000 domains found no statistically significant correlation between having an llms.txt file and AI citation frequency, and major AI crawlers rarely fetch the file at all. It has a narrow, legitimate use as a machine-readable surface for AI agents and developer tools, and it is cheap to publish, but it is not the AI search visibility lever it is often sold as."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do AI systems choose which brands to recommend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The strongest available evidence points to off-site, independent signals: how often and how consistently a brand is mentioned across the web, the presence of genuine third-party validation, clear and consistent categorisation of what the business does, and credible independent discussion. AI systems appear to be assembling a composite picture of a brand from many sources and surfacing the ones that picture makes them most confident about, rather than simply rewarding the most heavily optimised pages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between ranking in Google and appearing in AI answers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ranking in Google means placing high in a list of links a user then chooses from. Appearing in an AI answer means being named inside a synthesised response the user usually does not look past. Google ranking leans heavily on page-level and link signals you largely control. AI visibility leans more heavily on brand-level, off-site signals you earn, which is why the two do not always move together."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can small businesses compete in AI search?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and arguably more than they could in paid or traditional search. The businesses that appear in AI answers are not always the biggest or the loudest. They are the ones the system has the most coherent, most independently confirmed picture of. A smaller business with genuinely distinctive thinking, consistently present in the right places, can build recognition that outperforms a larger competitor relying on volume and spend."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5K6TKZTK1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C5K6TKZTK1');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --charcoal:#1a1a1a;--charcoal-mid:#242424;--charcoal-light:#2e2e2e;
+  --teal:#4a9e8e;--teal-light:#6bbfb0;--platinum:#E2E2E2;--seasalt:#FAFAFA;--mid-grey:#888880;
+  --lavender:#c4a7e4;--border-dark:rgba(183,206,206,0.1);
+  --muted-dark:rgba(226,226,226,0.6);
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--mono:'DM Mono',monospace;
+  --max-w:1160px;--article-w:740px;--px:clamp(20px,4vw,56px);--ease:cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);font-size:16px;background:var(--charcoal);color:var(--seasalt);-webkit-font-smoothing:antialiased;line-height:1.75;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.skip{position:absolute;top:-52px;left:24px;background:var(--teal-light);color:var(--charcoal);padding:10px 18px;font-size:13px;font-weight:500;z-index:999;transition:top .2s;}
+.skip:focus{top:8px;}
+:focus-visible{outline:2px solid var(--teal-light);outline-offset:3px;}
+::selection{background:var(--teal-light);color:var(--charcoal);}
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--px);background:rgba(26,26,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-dark);transition:background .3s var(--ease);}
+.nav-logo{display:flex;align-items:center;height:68px;}
+.nav-logo img{width:200px;height:auto;display:block;filter:brightness(100) contrast(2);}
+.nav-menu{display:flex;align-items:center;gap:2px;list-style:none;}
+.nav-menu a{display:block;padding:7px 10px;color:rgba(250,250,250,.6);font-size:13px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
+.nav-menu a:hover,.nav-menu a[aria-current="page"]{color:var(--teal-light);}
+.nav-menu .ncta a{background:var(--teal-light);color:var(--charcoal);padding:8px 20px;font-weight:500;border-radius:2px;transition:all .2s;}
+.nav-menu .ncta a:hover{background:var(--teal);color:var(--seasalt);}
+.nav-has-drop{position:relative;}
+.nav-droptrig{display:flex;align-items:center;gap:6px;padding:7px 10px;background:none;border:none;cursor:pointer;color:rgba(250,250,250,.6);font-family:var(--sans);font-size:13px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
+.nav-droptrig:hover,.nav-has-drop:hover .nav-droptrig,.nav-droptrig[aria-expanded="true"],.nav-droptrig[data-active="true"]{color:var(--teal-light);}
+.nav-caret{transition:transform .25s var(--ease);}
+.nav-has-drop:hover .nav-caret,.nav-droptrig[aria-expanded="true"] .nav-caret{transform:rotate(180deg);}
+.nav-drop{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-6px);min-width:264px;background:var(--charcoal-mid);border:1px solid var(--border-dark);border-radius:4px;padding:8px;box-shadow:0 20px 48px rgba(0,0,0,.4);opacity:0;visibility:hidden;transition:opacity .2s var(--ease),transform .2s var(--ease);z-index:210;}
+.nav-drop::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;}
+.nav-has-drop:hover .nav-drop,.nav-drop.open,.nav-has-drop:focus-within .nav-drop{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+.nav-drop a{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:3px;text-transform:none;letter-spacing:0;transition:background .18s;}
+.nav-drop a:hover{background:rgba(107,191,176,.09);}
+.nav-drop .nd-t{font-size:14px;font-weight:500;color:var(--seasalt);letter-spacing:.01em;transition:color .2s;}
+.nav-drop a:hover .nd-t,.nav-drop a[aria-current="page"] .nd-t{color:var(--teal-light);}
+.nav-drop .nd-d{font-size:12px;color:var(--mid-grey);line-height:1.4;}
+.nav-burger{display:none;flex-direction:column;gap:5px;padding:8px;background:none;border:none;cursor:pointer;}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--seasalt);transition:all .3s var(--ease);transform-origin:center;}
+.nav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.nav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.nav-drawer{display:none;position:fixed;top:68px;left:0;right:0;bottom:0;background:var(--charcoal);padding:28px var(--px);z-index:199;flex-direction:column;overflow-y:auto;}
+.nav-drawer.open{display:flex;}
+.nav-drawer a{display:block;padding:16px 0;color:rgba(250,250,250,.65);font-size:18px;border-bottom:1px solid var(--border-dark);transition:color .2s;}
+.nav-drawer a:hover{color:var(--teal-light);}
+.drawer-group{border-bottom:1px solid var(--border-dark);padding:8px 0 12px;}
+.drawer-group-h{font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;padding:12px 0 6px;}
+.nav-drawer a.drawer-sub{font-size:16px;padding:12px 0 12px 18px;border-bottom:none;color:rgba(250,250,250,.55);}
+.drawer-cta{margin-top:24px;padding:16px 28px;background:var(--teal-light);color:var(--charcoal) !important;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;text-align:center;border-bottom:none !important;border-radius:2px;}
+.read-bar{position:fixed;top:68px;left:0;height:2px;background:linear-gradient(90deg,var(--teal-light),var(--teal));width:0%;z-index:201;transition:width .1s linear;}
+.post-wrap{max-width:var(--article-w);margin:0 auto;padding:118px var(--px) 0;}
+.crumb{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--mid-grey);letter-spacing:.1em;text-transform:uppercase;margin-bottom:28px;transition:color .2s;}
+.crumb:hover{color:var(--teal-light);}
+.post-cats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+.post-cat{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(107,191,176,.3);padding:5px 11px;border-radius:2px;}
+.post-title{font-family:var(--serif);font-size:clamp(36px,5vw,58px);font-weight:500;line-height:1.06;letter-spacing:-.015em;color:var(--seasalt);margin-bottom:20px;}
+.post-title em{font-style:italic;color:var(--teal-light);}
+.post-standfirst{font-size:19px;line-height:1.7;color:var(--muted-dark);margin-bottom:30px;}
+.post-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid var(--border-dark);}
+.byline{display:flex;align-items:center;gap:12px;}
+.byline-avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;border:1px solid var(--border-dark);}
+.byline-name{font-size:14px;font-weight:500;color:var(--seasalt);}
+.byline-role{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;text-transform:uppercase;}
+.metabits{display:flex;gap:14px;margin-left:auto;flex-wrap:wrap;}
+.metabit{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;text-transform:uppercase;}
+.post-hero{margin:36px 0 8px;}
+.post-hero img{width:100%;border-radius:2px;}
+.answer-capsule{margin:40px 0 32px;padding:26px 30px;background:rgba(107,191,176,.06);border-left:2px solid var(--teal-light);border-radius:0 2px 2px 0;}
+.answer-capsule-lbl{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;}
+.answer-capsule p{font-size:17px;line-height:1.72;color:var(--platinum);margin:0;}
+.takeaways{margin:32px 0;padding:26px 30px;background:var(--charcoal-mid);border:1px solid var(--border-dark);border-radius:2px;}
+.takeaways-lbl{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;}
+.takeaways ul{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.takeaways li{position:relative;padding-left:22px;font-size:15px;line-height:1.65;color:var(--muted-dark);}
+.takeaways li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--teal-light);border-radius:50%;}
+.toc{margin:32px 0;padding:22px 26px;border:1px solid var(--border-dark);border-radius:2px;}
+.toc-lbl{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;}
+.toc ol{list-style:none;counter-reset:toc;display:flex;flex-direction:column;gap:8px;}
+.toc li{counter-increment:toc;font-size:14px;}
+.toc li::before{content:counter(toc,decimal-leading-zero);font-family:var(--mono);font-size:10px;color:var(--teal-light);margin-right:10px;}
+.toc a{color:var(--muted-dark);transition:color .2s;}
+.toc a:hover{color:var(--teal-light);}
+.doc-body{max-width:var(--article-w);margin:0 auto;padding:0 var(--px) 0;}
+.doc-body p{font-size:17px;line-height:1.82;color:var(--platinum);margin-bottom:24px;}
+.doc-body h2{font-family:var(--serif);font-size:clamp(27px,3.4vw,38px);font-weight:500;line-height:1.15;color:var(--seasalt);letter-spacing:-.01em;margin:52px 0 18px;scroll-margin-top:90px;}
+.doc-body h3{font-family:var(--serif);font-size:clamp(20px,2.4vw,25px);font-weight:500;color:var(--teal-light);margin:36px 0 12px;scroll-margin-top:90px;}
+.doc-body strong{color:var(--seasalt);font-weight:500;}
+.doc-body em{font-style:italic;}
+.doc-body code{font-family:var(--mono);font-size:.88em;background:rgba(107,191,176,.09);border:1px solid rgba(107,191,176,.16);border-radius:2px;padding:1px 6px;color:var(--teal-light);}
+.doc-body a:not(.btn-teal):not(.btn-ghost){color:var(--teal-light);border-bottom:1px solid rgba(107,191,176,.3);transition:border-color .2s;}
+.doc-body a:not(.btn-teal):not(.btn-ghost):hover{border-color:var(--teal-light);}
+.doc-body table{width:100%;border-collapse:collapse;margin:32px 0;font-size:15px;}
+.doc-body th{text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-light);padding:12px;border-bottom:1px solid var(--border-dark);vertical-align:top;}
+.doc-body td{padding:12px;border-bottom:1px solid var(--border-dark);color:var(--muted-dark);vertical-align:top;}
+.doc-body td strong{color:var(--seasalt);}
+.pullquote{margin:44px 0;padding:8px 0 8px 28px;border-left:2px solid var(--teal-light);}
+.pullquote p{font-family:var(--serif);font-size:clamp(23px,3vw,31px);font-style:italic;line-height:1.3;color:var(--seasalt);margin:0;}
+.defbox{margin:32px 0;padding:24px 28px;background:rgba(107,191,176,.05);border:1px solid rgba(107,191,176,.15);border-radius:2px;}
+.defbox-term{font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
+.defbox p{font-size:15px;line-height:1.7;color:var(--muted-dark);margin:0;}
+.defbox p strong{color:var(--seasalt);}
+.doc-figure{margin:44px 0;}
+.doc-figure img{width:100%;max-width:460px;margin:0 auto;border-radius:2px;}
+.doc-figure figcaption{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;text-transform:uppercase;text-align:center;margin-top:14px;}
+.lead-banner{margin:44px 0;padding:26px 30px;background:var(--charcoal-mid);border:1px solid rgba(107,191,176,.2);border-radius:2px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.lead-banner-txt{flex:1;min-width:240px;}
+.lead-banner-txt p:first-child{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;}
+.lead-banner-txt p:last-child{font-family:var(--serif);font-size:22px;font-style:italic;color:var(--seasalt);line-height:1.3;margin:0;}
+.btn-teal{display:inline-flex;align-items:center;gap:10px;background:var(--teal-light);color:var(--charcoal);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:14px 26px;border-radius:2px;transition:all .2s var(--ease);white-space:nowrap;border-bottom:none !important;}
+.btn-teal:hover{background:var(--teal);color:var(--seasalt);}
+.evidence-note{max-width:var(--article-w);margin:40px auto 0;padding:22px var(--px);}
+.evidence-note p{font-size:14px;line-height:1.7;color:var(--mid-grey);font-style:italic;margin:0;padding:20px 24px;border:1px dashed rgba(183,206,206,.18);border-radius:2px;}
+.sources{max-width:var(--article-w);margin:36px auto 0;padding:26px var(--px) 0;border-top:1px solid var(--border-dark);}
+.sources-lbl{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;}
+.sources ol{list-style:none;counter-reset:src;display:flex;flex-direction:column;gap:10px;}
+.sources li{counter-increment:src;font-size:14px;color:var(--muted-dark);line-height:1.6;padding-left:26px;position:relative;}
+.sources li::before{content:counter(src);position:absolute;left:0;font-family:var(--mono);font-size:10px;color:var(--teal-light);}
+.sources a{color:var(--teal-light);border-bottom:1px solid rgba(107,191,176,.25);}
+.faq{max-width:var(--article-w);margin:56px auto 0;padding:0 var(--px);}
+.faq h2{font-family:var(--serif);font-size:clamp(26px,3.2vw,34px);font-weight:500;color:var(--seasalt);margin-bottom:22px;}
+.faq-item{border-bottom:1px solid var(--border-dark);}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;font-size:16px;font-weight:500;color:var(--seasalt);cursor:pointer;list-style:none;transition:color .2s;}
+.faq-q::-webkit-details-marker{display:none;}
+.faq-q:hover{color:var(--teal-light);}
+.faq-q svg{flex-shrink:0;color:var(--teal-light);transition:transform .25s var(--ease);}
+.faq-item[open] .faq-q svg{transform:rotate(45deg);}
+.faq-a{padding:0 0 20px;font-size:15px;line-height:1.75;color:var(--muted-dark);max-width:640px;}
+.post-author{max-width:var(--article-w);margin:52px auto 0;padding:26px var(--px);display:flex;gap:18px;align-items:flex-start;border-top:1px solid var(--border-dark);}
+.post-author img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1px solid var(--border-dark);}
+.post-author p{font-size:15px;line-height:1.7;color:var(--muted-dark);margin:0;}
+.post-author strong{color:var(--seasalt);}
+.post-author a{color:var(--teal-light);border-bottom:1px solid rgba(107,191,176,.3);}
+.article-cta{max-width:var(--article-w);margin:20px auto 0;padding:40px var(--px) 0;}
+.article-cta-lbl{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;}
+.article-cta h2{font-family:var(--serif);font-size:clamp(28px,3.6vw,40px);font-weight:500;color:var(--seasalt);line-height:1.12;margin-bottom:14px;}
+.article-cta p{font-size:16px;color:var(--muted-dark);line-height:1.7;margin-bottom:24px;}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(107,191,176,.3);color:var(--teal-light);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:13px 26px;border-radius:2px;transition:all .2s var(--ease);}
+.btn-ghost:hover{border-color:var(--teal-light);background:rgba(107,191,176,.06);}
+.related{max-width:var(--article-w);margin:56px auto 0;padding:32px var(--px) 0;border-top:1px solid var(--border-dark);}
+.related-lbl{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.related-card{padding:20px 22px;background:var(--charcoal-mid);border:1px solid var(--border-dark);border-radius:2px;transition:all .25s var(--ease);}
+.related-card:hover{border-color:rgba(107,191,176,.4);background:var(--charcoal-light);}
+.related-card-cat{font-family:var(--mono);font-size:9px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;}
+.related-card-title{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--seasalt);line-height:1.25;transition:color .2s;}
+.related-card:hover .related-card-title{color:var(--teal-light);}
+.footer{background:var(--charcoal);padding:72px var(--px) 36px;border-top:1px solid var(--border-dark);margin-top:80px;}
+.footer-inner{max-width:var(--max-w);margin:0 auto;}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.fdesc{font-size:14px;line-height:1.7;color:var(--mid-grey);margin-bottom:24px;max-width:300px;}
+.fmail{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--teal-light);margin-bottom:20px;transition:color .2s;}
+.fmail:hover{color:var(--teal);}
+.fsocials{display:flex;gap:8px;flex-wrap:wrap;}
+.fsoc{width:34px;height:34px;border:1px solid var(--border-dark);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--mid-grey);transition:all .2s;border-radius:2px;}
+.fsoc:hover{border-color:var(--teal-light);color:var(--teal-light);}
+.fborahae{margin-top:18px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--lavender);transition:color .2s;}
+.fborahae:hover{color:var(--teal-light);}
+.fcol-h{font-family:var(--mono);font-size:10px;color:rgba(226,226,226,.3);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fcol ul li a{font-size:14px;color:var(--mid-grey);transition:color .2s;}
+.fcol ul li a:hover{color:var(--teal-light);}
+.fbase{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid var(--border-dark);flex-wrap:wrap;gap:16px;}
+.fcopy{font-family:var(--mono);font-size:11px;color:rgba(226,226,226,.25);letter-spacing:.06em;}
+.flegal{display:flex;gap:20px;}
+.flegal a{font-family:var(--mono);font-size:11px;color:rgba(226,226,226,.25);letter-spacing:.06em;transition:color .2s;}
+.flegal a:hover{color:var(--teal-light);}
+@media (max-width:1080px){.nav-menu{display:none;}.nav-burger{display:flex;}}
+@media (max-width:900px){.fgrid{grid-template-columns:1fr 1fr;gap:36px;}}
+@media (max-width:640px){.related-grid{grid-template-columns:1fr;}.post-author{flex-direction:column;}.doc-body table{font-size:14px;}}
+@media (max-width:600px){.fgrid{grid-template-columns:1fr;gap:32px;}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.read-bar{transition:none;}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+
+<header role="banner">
+  <nav class="nav" aria-label="Primary navigation">
+    <a href="/" class="nav-logo" aria-label="Aingworth home">
+      <img src="/images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth">
+    </a>
+    <ul class="nav-menu" role="list">
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/her-worth/">HER-Worth</a></li>
+      <li><a href="/book/">The Book</a></li>
+      <li><a href="/diagnostic/">Diagnostic</a></li>
+      <li class="nav-has-drop">
+        <button type="button" class="nav-droptrig" data-active="true" aria-expanded="false" aria-haspopup="true" aria-controls="insights-drop">Insights
+          <svg class="nav-caret" width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-drop" id="insights-drop" role="menu">
+          <a href="/articles/" role="menuitem" aria-current="page"><span class="nd-t">Articles</span><span class="nd-d">Practical thinking on AI search and authority</span></a>
+          <a href="/frameworks/" role="menuitem"><span class="nd-t">Frameworks</span><span class="nd-d">The named ideas behind Become the Answer</span></a>
+          <a href="/case-studies/" role="menuitem"><span class="nd-t">Case Studies</span><span class="nd-d">Authority work, in practice</span></a>
+        </div>
+      </li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/south-africa/">South Africa</a></li>
+      <li class="ncta"><a href="/contact/">Let's Talk</a></li>
+    </ul>
+    <button class="nav-burger" aria-expanded="false" aria-controls="ndrawer" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+  <nav id="ndrawer" class="nav-drawer" aria-label="Mobile navigation">
+    <a href="/services/">Services</a>
+    <a href="/her-worth/">HER-Worth</a>
+    <a href="/book/">The Book</a>
+    <a href="/diagnostic/">Diagnostic</a>
+    <div class="drawer-group">
+      <p class="drawer-group-h">Insights</p>
+      <a href="/articles/" class="drawer-sub" aria-current="page">Articles</a>
+      <a href="/frameworks/" class="drawer-sub">Frameworks</a>
+      <a href="/case-studies/" class="drawer-sub">Case Studies</a>
+    </div>
+    <a href="/about/">About</a>
+    <a href="/south-africa/">South Africa</a>
+    <a href="/contact/" class="drawer-cta">Let's Talk</a>
+  </nav>
+</header>
+
+<div class="read-bar" id="readbar" role="progressbar" aria-label="Reading progress" aria-hidden="true"></div>
+
+<main id="main">
+<article class="post-wrap">
+
+  <a href="/articles/" class="crumb">
+    <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 7H2M6 3L2 7l4 4"/></svg>
+    All articles
+  </a>
+
+  <div class="post-cats">
+    <span class="post-cat">AI Visibility</span>
+    <span class="post-cat">Thinking</span>
+  </div>
+
+  <h1 class="post-title">The GEO gold rush: why most AI visibility advice is <em>already wrong</em></h1>
+
+  <p class="post-standfirst">The rush to optimise for AI has created an industry full of promises, checklists, and supposed shortcuts. Most of it is built on assumptions rather than evidence, and the gap between the two is starting to cost people real money.</p>
+
+  <div class="post-meta">
+    <div class="byline">
+      <img class="byline-avatar" src="/images/Lucy_Studio_Image.png" alt="Lucy Aingworth" width="40" height="40" loading="lazy">
+      <div>
+        <div class="byline-name">Lucy Aingworth</div>
+        <div class="byline-role">AI Visibility Consultant</div>
+      </div>
+    </div>
+    <div class="metabits">
+      <span class="metabit">Published <time datetime="2026-07-20">20 Jul 2026</time></span>
+      <span class="metabit">12 min read</span>
+    </div>
+  </div>
+
+  <figure class="post-hero">
+    <img src="/images/articles/geo-gold-rush.jpg" alt="A prospector's pan holding worthless fragments beside a small amount of real gold, representing the gap between AI visibility tactics and evidence" width="1200" height="675" loading="eager" fetchpriority="high">
+  </figure>
+
+  <div class="answer-capsule">
+    <p class="answer-capsule-lbl">The short answer</p>
+    <p>The GEO gold rush is the wave of AI visibility products, checklists and tactics that arrived faster than the evidence supporting them. Most widely sold tactics, including <code>llms.txt</code> files and high-volume publishing, show little or no measured correlation with AI citation. The signals that correlate most strongly are off-site and earned: independent brand mentions, third-party validation, and consistent categorisation of the business across the web.</p>
+  </div>
+
+  <div class="takeaways">
+    <p class="takeaways-lbl">Key takeaways</p>
+    <ul>
+      <li>An analysis of roughly 300,000 domains found no statistically significant correlation between publishing an <code>llms.txt</code> file and being cited by AI.</li>
+      <li>Off-site brand signals dominate. Branded web mentions correlate with AI visibility at 0.664, against 0.218 for backlinks and domain rating.</li>
+      <li>Distributing content beyond your own site has been found to increase AI citations by as much as 325 percent compared with self-publishing alone.</li>
+      <li>Almost every GEO claim confuses correlation with causation, because businesses adopting these tactics were already investing in credibility across the board.</li>
+      <li>The one thing that decides whether you appear is the one thing no tactic can shortcut: Earned Authority.</li>
+    </ul>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-lbl">In this article</p>
+    <ol>
+      <li><a href="#gold-rush">Why a GEO gold rush has begun</a></li>
+      <li><a href="#bad-advice">Why bad advice spreads so quickly</a></li>
+      <li><a href="#myths">The biggest GEO myths to question</a></li>
+      <li><a href="#evidence">What the evidence actually suggests</a></li>
+      <li><a href="#authority">Why authority matters more than optimisation</a></li>
+      <li><a href="#better-approach">A better approach to GEO</a></li>
+      <li><a href="#future">The future of AI visibility</a></li>
+    </ol>
+  </nav>
+</article>
+
+<div class="doc-body">
+
+  <p>The rush to optimise for AI has created an industry full of promises, checklists, and supposed shortcuts. Most of it is built on assumptions rather than evidence, and the gap between the two is starting to cost people real money. Businesses are pouring budget into tactics that have almost no proven effect on whether an AI system recognises them, while overlooking the handful of things that genuinely shape how they are understood, categorised, and recommended.</p>
+
+  <p>I want to be careful about how I make that argument, because it would be easy to write this as a reaction to the noise of a single week. There is a discussion happening right now in the SEO community, experienced practitioners pushing back hard against the flood of AI search hacks being sold to businesses, and it is worth paying attention to. But a Reddit thread is not the story. It is a symptom. The story is older and more durable than any one argument, and it will still be true in three years, long after this particular round of tactics has been quietly retired.</p>
+
+  <p>So let me lay out what I actually think is going on, what the evidence supports, and what a business should do instead of chasing the next file, tag, or trick that promises to unlock the machines.</p>
+
+  <div class="defbox">
+    <p class="defbox-term">A note on terms</p>
+    <p>Throughout this piece I will talk about <strong>AI Visibility</strong>, sometimes called <strong>Generative Engine Optimization</strong>, or <strong>GEO</strong>. The acronym is still new enough that plenty of smart people have not encountered it yet, so I will use both terms. When I say GEO, I mean the practice of trying to influence whether and how AI systems surface your business when someone asks them a question.</p>
+  </div>
+
+  <h2 id="gold-rush">Why has a GEO gold rush begun?</h2>
+
+  <p>Every major AI platform has changed how people discover businesses. When someone asks ChatGPT, Gemini, Perplexity, or Claude for a recommendation, they are not handed ten blue links to evaluate. They are handed an answer, usually naming three to five brands, and most people never look past it. That shift is enormous, and businesses can feel it. Nobody wants to miss the next SEO, the next channel that quietly became the front door to an entire market while everyone was looking elsewhere.</p>
+
+  <p>That fear is reasonable. What it produces is not.</p>
+
+  <p>Agencies have rushed to build GEO services, often before anyone had a stable understanding of how these systems actually behave. Consultants have packaged tactics into tidy checklists. And a whole category of AI search hacks has appeared, sold with the confidence of established fact. This is what happens whenever a new industry emerges faster than the evidence underneath it. The demand arrives before the knowledge does, and misinformation rushes in to fill the space. The GEO gold rush is real. The problem is that, as in most gold rushes, the people making the most reliable money are the ones selling shovels.</p>
+
+  <h2 id="bad-advice">Why does bad advice spread so quickly?</h2>
+
+  <p>It helps to understand why the bad advice spreads, because the mechanism is not stupidity. It is structural, and knowing the structure makes you much harder to fool.</p>
+
+  <p>The first reason is that there is very little official documentation. The companies building these systems have released far less about how their retrieval and citation behaviour works than Google ever published about search. Into that vacuum, anyone can pour a confident theory, and there is no authoritative source to contradict it.</p>
+
+  <p>The second reason is speed. AI systems change rapidly. A behaviour someone observed and wrote up in January can be obsolete by June, but the article stays online, gets shared, and keeps shaping decisions long after the thing it described stopped being true.</p>
+
+  <p>The third reason is the leap from small experiment to universal rule. Someone runs a test on one site, sees a result, and publishes it as a law. The sample is tiny, the conditions are specific, the result may be noise, but the framing is absolute. And absolute framing travels. Nuance does not.</p>
+
+  <p>Which points to the fourth reason, the one that matters most. Marketing incentives reward certainty over honesty. Saying "do these five things and you will appear in ChatGPT" sells far better than "here is what the evidence weakly suggests, here is what we genuinely do not know."</p>
+
+  <div class="pullquote">
+    <p>Certainty is a product. Nuance is a liability.</p>
+  </div>
+
+  <p>So the market fills with confident claims not because they are true, but because confidence is what people pay for.</p>
+
+  <p>Underneath all of it sits the oldest problem in this entire field: the confusion of correlation with causation. Someone implements a tactic, their AI visibility improves, and they conclude the tactic caused it. But the businesses adopting these tactics tend to be the ones already investing in credibility, authority, and clarity across the board. The tactic and the outcome are correlated because both grow from the same healthier root. Rand Fishkin put the general version of this well when he noted that citations are correlated with brand appearances in AI results, not causal. Almost every GEO claim you will read this year fails to make that distinction, and once you start looking for the failure, you see it everywhere.</p>
+
+  <h2 id="myths">What are the biggest GEO myths?</h2>
+
+  <p>With that lens in place, here are the claims I would treat with the most suspicion.</p>
+
+  <h3>Myth one: an llms.txt file guarantees AI visibility</h3>
+
+  <p>This is the flagship tactic of the current gold rush, and it is the clearest case of confident advice outrunning evidence. The idea is that publishing a structured <code>llms.txt</code> file tells AI systems how to read your site and improves your chances of being cited. The evidence does not support it. SE Ranking analysed roughly 300,000 domains and found no statistically significant correlation between having an <code>llms.txt</code> file and being cited by AI. When they removed the file from their predictive model entirely, the model got <em>more</em> accurate, which means the variable was adding noise, not signal. Among the fifty most AI-cited domains in that study, exactly one had an <code>llms.txt</code> file.</p>
+
+  <p>Independent crawler analysis tells the same story from another angle: OtterlyAI recorded 62,100 AI bot visits to a test domain over ninety days, of which 84 touched the <code>llms.txt</code> file, about a tenth of one percent. Larger monitoring efforts have found the same near-zero fetch rate across hundreds of millions of events. Google has said on the record that it does not support <code>llms.txt</code> and has no plans to, with John Mueller comparing it to the long-discredited keywords meta tag and noting you can see in server logs that the crawlers do not even check for it.</p>
+
+  <p>None of this makes the file worthless. It has a genuine, narrow use as a machine-readable surface for AI agents and developer tools, and it costs almost nothing to ship. But that is a very different thing from the AI search visibility miracle it is being sold as.</p>
+
+  <h3>Myth two: AI crawlers work like Googlebot</h3>
+
+  <p>A lot of GEO advice is really recycled SEO advice, resting on the assumption that these systems crawl, index, and rank the way search engines do. They do not. AI systems draw on information through at least two very different mechanisms. There is training data, the model's long-term memory, absorbed before release and slow to change, over which you have almost no direct control. And there is retrieval, where a system pulls live sources at the moment of answering. Optimising a page as though a single Googlebot-style crawler will read it and rank it fundamentally misunderstands the machine you are trying to influence.</p>
+
+  <h3>Myth three: publishing more content automatically increases citations</h3>
+
+  <p>This is the most expensive myth, because it feels like progress. More content means more things you have said about yourself. It does not change what independent, credible sources say about you, and that second category is doing far more of the work. Volume is not the variable, and I have written separately about why <a href="/articles/every-brand-has-an-ai-biography/">consistency beats volume in your AI biography</a>. I will come back to it here too, because it sits at the centre of everything.</p>
+
+  <h3>Myth four: AI rankings replace SEO</h3>
+
+  <p>They do not replace it, and they do not simply extend it either. Traditional search still matters, technical foundations still matter, and some of the same signals feed both systems. But treating AI visibility as either a straight swap for SEO or a bolt-on to it will leave you optimising the wrong things.</p>
+
+  <h3>Myth five: schema markup alone improves AI recommendations</h3>
+
+  <p>Structured data is useful and worth doing. A controlled experiment by Aiso found roughly a thirty percent improvement in how well AI systems could retrieve information from a page that used schema. But retrieval is not recommendation. Schema helps a machine read what is already there. It does not create the independent evidence and earned authority that determine whether you are the answer worth surfacing in the first place. Broad citation studies consistently rank structured data as a modest factor, nowhere near the decisive lever it is often sold as.</p>
+
+  <p>Each of these deserves to be held up against the evidence rather than accepted on confidence. And when you do that, a much clearer picture of what actually works starts to emerge.</p>
+
+  <div class="lead-banner">
+    <div class="lead-banner-txt">
+      <p>The framework behind this argument</p>
+      <p>Clarity, Credibility and Earned Authority, set out in full.</p>
+    </div>
+    <a href="/frameworks/" class="btn-teal">See the frameworks</a>
+  </div>
+
+  <h2 id="evidence">What does the evidence actually suggest?</h2>
+
+  <p>Here is where it gets genuinely useful, because the same research that dismantles the myths points fairly consistently toward what does correlate with AI visibility. I will flag where the evidence is strong, where it is emerging, and where we are still guessing, because pretending otherwise would make me exactly the kind of source this article is arguing against.</p>
+
+  <p>The strongest and most consistent finding across the major studies is that <strong>off-site brand signals dominate.</strong> Ahrefs analysed around 75,000 brands and found that branded web mentions correlated with AI visibility at 0.664, branded anchor text at 0.527, and brand search volume in the region of 0.39. Backlinks and domain rating, the twin engines of traditional SEO authority, came in at just 0.218, roughly a third as strong. Semrush's 2026 work found an even stronger single signal in YouTube mentions, correlating at around 0.737.</p>
+
+  <!-- Summary table: added for scannability and machine parsing. Delete if you
+       would rather these figures stayed purely in prose. -->
+  <table>
+    <thead>
+      <tr><th>Signal</th><th>Correlation with AI visibility</th><th>Source</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>YouTube mentions</strong></td><td>0.737</td><td>Semrush, 2026</td></tr>
+      <tr><td><strong>Branded web mentions</strong></td><td>0.664</td><td>Ahrefs</td></tr>
+      <tr><td><strong>Branded anchor text</strong></td><td>0.527</td><td>Ahrefs</td></tr>
+      <tr><td><strong>Brand search volume</strong></td><td>~0.39</td><td>Ahrefs</td></tr>
+      <tr><td><strong>Backlinks and domain rating</strong></td><td>0.218</td><td>Ahrefs</td></tr>
+    </tbody>
+  </table>
+
+  <p>The pattern repeats: the things that most strongly track with being cited are the things you do not directly control, the accumulated evidence of how you show up across the web in places you did not publish.</p>
+
+  <p><strong>Third-party validation and distribution matter more than most brands are investing in.</strong> Research from Stacker found that distributing content across a wide range of publications could increase AI citations by as much as 325 percent compared with publishing only on your own site. Domains with heavy, genuine brand presence on platforms like Reddit and Quora have shown citation rates several times higher than those with little independent discussion. This is earned presence, and it behaves nothing like a content calendar you control.</p>
+
+  <p><strong>Entity consistency and clarity are foundational.</strong> For an AI system to recommend you, it first has to categorise you confidently, and it can only do that if the picture it assembles from across the web is coherent. Where a business is described in conflicting ways, positioned three different ways across three different sources, none of them dominant, the machine can identify the business but cannot confidently say what it is. And what cannot be confidently categorised cannot be confidently recommended.</p>
+
+  <p><strong>Technical SEO foundations and structured data still count, at the retrieval layer.</strong> They earn their place. They help a system access and parse what is there. They are necessary. They are simply not sufficient, and treating them as the whole game is the error.</p>
+
+  <p><strong>Content structure has a measurable effect.</strong> Analysis by SparkToro and others found that around 44 percent of AI citations came from the first thirty percent of a page's text. Where you place your most citable claim matters, because a machine that has already synthesised its answer may never reach paragraph nine.</p>
+
+  <p>Where is the evidence weakest? On precise mechanisms. Almost everything above is correlation, observed patterns in how cited brands differ from uncited ones, not a causal map reverse-engineered from inside the black box. Anyone claiming to know exactly why a given system cited a given brand is claiming more than the evidence can support. Hold that honesty onto everything that follows, including my own framework.</p>
+
+  <h2 id="authority">Why does authority matter more than optimisation?</h2>
+
+  <p>Step back from the individual findings and a single shape appears through all of them. AI systems are not simply rewarding the pages that have been optimised hardest. They are trying to identify the most credible answer, and they build that judgment from a much wider picture of a brand than its own website.</p>
+
+  <p>This is the argument at the heart of my book, <em>Become the Answer</em>, and it is why I keep insisting that recognition and visibility are not the same thing, even though the industry spent years treating them as if they were. Visibility is being findable. Recognition is being understood well enough, by enough independent sources, that a system forming a confident answer includes you without hesitation. You can be highly visible and still fail to be recognised. Plenty of well-optimised businesses are.</p>
+
+  <div class="defbox">
+    <p class="defbox-term">Recognition Triangle</p>
+    <p>The <strong>Recognition Triangle</strong> is the framework introduced by Lucy Aingworth in <em>Become the Answer</em>, defining the three conditions required for recognition to form: <strong>Clarity</strong>, whether the ecosystem knows what you stand for; <strong>Credibility</strong>, whether your expertise is independently verifiable; and <strong>Earned Authority</strong>, whether the wider ecosystem has confirmed it. Recognition sits at the centre, held in place by all three at once.</p>
+  </div>
+
+  <p>In the book I describe the three conditions that have to be present for recognition to form, and I call them the Recognition Triangle. The three corners are Clarity, Credibility, and Earned Authority, and Recognition sits in the centre, held in place by all three at once.</p>
+
+  <p>Clarity is whether the digital ecosystem knows what you stand for. Not whether your own website is on-message, most are, but whether the picture the machine assembles from every independent source produces a consistent, unambiguous answer to the question of what your business is.</p>
+
+  <p>Credibility is whether your expertise is genuine and independently verifiable. Not whether you are good at what you do, but whether there is evidence beyond your own voice that you are. The distinction I draw is between content that generates consumption, useful enough to read, and content that generates citation, original enough that independent sources reference it when building their own arguments.</p>
+
+  <p>Earned Authority is whether the broader ecosystem has confirmed the picture, across the formal knowledge systems AI weighs most heavily, the citations of credible independent voices, and the genuine organic discussion of real people. It is the one that decides whether you show up, and it is the one you cannot manufacture. You can work on your Clarity. You can build your Credibility. But Earned Authority either exists out there in the world or it does not, and the machine is very good at telling the difference.</p>
+
+  <figure class="doc-figure">
+    <img src="/images/Recognition_Trianlge.png" alt="The Recognition Triangle: Earned Authority at the top point, Clarity at the bottom left, Credibility at the bottom right, with Recognition held at the centre" width="900" height="700" loading="lazy">
+    <figcaption>The Recognition Triangle</figcaption>
+  </figure>
+
+  <p>The reason this matters for the gold rush is that every one of the strong findings above maps onto the triangle, and almost every debunked tactic maps onto the corner nobody can shortcut. Branded mentions, third-party validation, independent discussion, these are Earned Authority. The tactics being sold, the file, the tag, the volume of self-published content, these are attempts to route around the exact thing that does the deciding.</p>
+
+  <div class="pullquote">
+    <p>You cannot buy your way into the centre of the triangle. There is no file you can upload that produces it.</p>
+  </div>
+
+  <h2 id="better-approach">What is a better approach to GEO?</h2>
+
+  <p>So what should a business actually do? The most useful move is to change the question.</p>
+
+  <p>The question the gold rush trains you to ask is: how do I optimise for ChatGPT? It is the wrong question, because it points you at the machine and its supposed quirks, and those quirks change monthly.</p>
+
+  <p>The better questions point at your position in the world, and they barely change at all. Is my business understood consistently across the web, or does the picture fragment the moment you look beyond my own channels? Do trusted, independent sources mention us, in contexts we did not pay for or manufacture? Can an AI system clearly identify what we do and confidently place us in our category, without our name being fed to it? Are we building evidence, or just publishing content? Because those are not the same activity, and only one of them moves Earned Authority.</p>
+
+  <p>There is a simple diagnostic I recommend for the first of those. Do not read your own website. Instead, ask an AI system about your category without mentioning your name, and see whether you appear and whether the description matches how you intend to be understood. That single test will tell you more about your real AI visibility than any audit of your own pages, because it shows you the picture the machine has assembled, which is the only picture that counts.</p>
+
+  <p>The practical work that follows is unglamorous and durable. Make your entity consistent everywhere you appear. Earn genuine third-party validation rather than manufacturing it. Get your technical and structured-data foundations right so the machine can read you cleanly, then stop mistaking that for the finish line. Produce work original enough to be cited, not just consumed. Distribute it where credible sources actually gather. None of this fits on a checklist that promises results by Friday. All of it compounds.</p>
+
+  <h2 id="future">What does the future of AI visibility look like?</h2>
+
+  <p>The uncomfortable truth for anyone selling shortcuts is that the future of AI visibility looks less like a set of tricks and more like the slow accumulation of trust. The systems are getting better at telling the difference between a brand that has been optimised and a brand that is genuinely, independently recognised. Every improvement in these models tightens that gap, which means every tactic built on gaming the current behaviour has a short shelf life by design.</p>
+
+  <p>South Africa, and honestly most of the world outside a few crowded markets, is still early in all of this. That is an opportunity, but not the one the gold rush is selling. The opportunity is to get the fundamentals right before the misinformation hardens into received wisdom, and to become the clear, credible, consistently understood source in your category while your competitors are still buying shovels.</p>
+
+  <p>If there is one line I would want a business to carry out of this piece, it is this. The brands that win in AI search will not be the ones that chase every new tactic. They will be the ones that become the clearest, most credible, and most consistently understood source on what they do. That is not a hack. It cannot be sold to you in a checklist. And it is the only version of AI visibility I have seen the evidence actually support.</p>
+
+</div>
+
+<div class="evidence-note">
+  <p>A closing note on the evidence in this article: the correlations cited above describe observed patterns in how cited brands differ from uncited ones. They are not proof of causation, and the businesses that adopt good practices tend to be healthier across every dimension at once. Treat every figure here, including my own framework, as the current best reading of an evolving field rather than a settled law. That caution is precisely the discipline the GEO gold rush lacks.</p>
+</div>
+
+<section class="sources" aria-labelledby="sources-h">
+  <p class="sources-lbl" id="sources-h">References and further reading</p>
+  <ol>
+    <li>SE Ranking, analysis of approximately 300,000 domains on <code>llms.txt</code> adoption and correlation with AI citations, 2026.</li>
+    <li>OtterlyAI and other crawler-log studies measuring AI bot fetch rates for <code>llms.txt</code>, 2026.</li>
+    <li>Google Search Central, and public statements from John Mueller and Gary Illyes on <code>llms.txt</code>, July 2025.</li>
+    <li>Ahrefs, AI Overviews correlation study across approximately 75,000 brands, 2025 to 2026.</li>
+    <li>Semrush AI Visibility Index, 2026.</li>
+    <li>Aiso, controlled schema markup retrieval experiment, 2026.</li>
+    <li>Stacker, research on content distribution and AI citation frequency, December 2025.</li>
+    <li>SparkToro and Growth Memo, analysis of citation placement within page text, 2026.</li>
+    <li>OpenAI, Anthropic, and Google published documentation on model behaviour and retrieval, where available.</li>
+    <li>Lucy Aingworth, <a href="/book/">Become the Answer: How Brands Build Authority in the Age of AI</a>, Aingworth, 2026.</li>
+  </ol>
+</section>
+
+<section class="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">Frequently asked questions</h2>
+
+  <details class="faq-item">
+    <summary class="faq-q">What is GEO?
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </summary>
+    <div class="faq-a">GEO stands for Generative Engine Optimization, also called AI Visibility. It refers to the practice of influencing whether and how AI systems, such as ChatGPT, Gemini, Perplexity, and Claude, surface and recommend your business when someone asks them a question. Unlike traditional search, these systems return a synthesised answer naming a few brands rather than a ranked list of links.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">Is GEO replacing SEO?
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </summary>
+    <div class="faq-a">No. AI visibility does not replace search engine optimisation, and it is not simply an extension of it either. Traditional search still matters, and some signals feed both systems. But the factors that most strongly correlate with AI citations, particularly independent brand mentions and earned authority, are not the same as the backlink-and-ranking signals that drive traditional SEO, so the two require different thinking.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">Does llms.txt improve AI visibility?
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </summary>
+    <div class="faq-a">The current evidence says no, at least not for being cited or recommended. A study of roughly 300,000 domains found no statistically significant correlation between having an <code>llms.txt</code> file and AI citation frequency, and major AI crawlers rarely fetch the file at all. It has a narrow, legitimate use as a machine-readable surface for AI agents and developer tools, and it is cheap to publish, but it is not the AI search visibility lever it is often sold as.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">How do AI systems choose which brands to recommend?
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </summary>
+    <div class="faq-a">The strongest available evidence points to off-site, independent signals: how often and how consistently a brand is mentioned across the web, the presence of genuine third-party validation, clear and consistent categorisation of what the business does, and credible independent discussion. AI systems appear to be assembling a composite picture of a brand from many sources and surfacing the ones that picture makes them most confident about, rather than simply rewarding the most heavily optimised pages.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">What is the difference between ranking in Google and appearing in AI answers?
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </summary>
+    <div class="faq-a">Ranking in Google means placing high in a list of links a user then chooses from. Appearing in an AI answer means being named inside a synthesised response the user usually does not look past. Google ranking leans heavily on page-level and link signals you largely control. AI visibility leans more heavily on brand-level, off-site signals you earn, which is why the two do not always move together.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">Can small businesses compete in AI search?
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </summary>
+    <div class="faq-a">Yes, and arguably more than they could in paid or traditional search. The businesses that appear in AI answers are not always the biggest or the loudest. They are the ones the system has the most coherent, most independently confirmed picture of. A smaller business with genuinely distinctive thinking, consistently present in the right places, can build recognition that outperforms a larger competitor relying on volume and spend.</div>
+  </details>
+</section>
+
+<div class="post-author">
+  <img src="/images/Lucy_Studio_Image.png" alt="Lucy Aingworth" width="56" height="56" loading="lazy">
+  <p><strong>Lucy Aingworth</strong> is an AI visibility strategist and brand authority consultant, and the author of <a href="/book/">Become the Answer</a>. She helps founders and CMOs build the authority that AI search actually cites. <a href="/about/">More about Lucy</a></p>
+</div>
+
+<section class="article-cta" aria-labelledby="cta-h">
+  <p class="article-cta-lbl">Where to start</p>
+  <h2 id="cta-h">Skip the shovels.</h2>
+  <p>The Recognition Diagnostic shows you which of the six patterns applies to your brand right now, and which corner of the triangle is actually costing you.</p>
+  <div class="cta-row">
+    <a href="/diagnostic/" class="btn-teal">Run the free diagnostic</a>
+    <a href="/services/" class="btn-ghost">See how we work</a>
+  </div>
+</section>
+
+<section class="related" aria-labelledby="related-h">
+  <p class="related-lbl" id="related-h">Keep reading</p>
+  <div class="related-grid">
+    <a href="/articles/every-brand-has-an-ai-biography/" class="related-card">
+      <p class="related-card-cat">Brand Authority</p>
+      <p class="related-card-title">Every brand has an AI biography</p>
+    </a>
+    <a href="/frameworks/" class="related-card">
+      <p class="related-card-cat">Frameworks</p>
+      <p class="related-card-title">The vocabulary of recognition</p>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="fgrid">
+      <div>
+        <img src="/images/Aingworth_Main_Logo2.png.png" alt="Aingworth" style="width:56px;height:auto;display:block;filter:brightness(100) contrast(2);margin-bottom:18px;">
+        <p class="fdesc">Brand authority and AI visibility consulting for founders, CMOs, and executives who need to be found for the right reasons.</p>
+        <a href="mailto:info@aingworth.com" class="fmail">info@aingworth.com</a>
+        <nav class="fsocials" aria-label="Social media">
+          <a href="https://www.linkedin.com/in/lisinda-lucy/" class="fsoc" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+          <a href="https://www.instagram.com/lucy_aingworth/" class="fsoc" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+          <a href="https://www.tiktok.com/@aingworth" class="fsoc" aria-label="TikTok" target="_blank" rel="noopener">tt</a>
+          <a href="https://x.com/lucy_aingworth" class="fsoc" aria-label="X (Twitter)" target="_blank" rel="noopener">x</a>
+          <a href="https://www.threads.net/@lucy_aingworth" class="fsoc" aria-label="Threads" target="_blank" rel="noopener">th</a>
+          <a href="https://bsky.app/profile/lucyaingworth.bsky.social" class="fsoc" aria-label="Bluesky" target="_blank" rel="noopener">bs</a>
+        </nav>
+        <p class="fborahae" aria-label="Borahae — I purple you"><span lang="ko">보라해</span> 💜</p>
+      </div>
+      <div class="fcol">
+        <p class="fcol-h">Work</p>
+        <ul>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/her-worth/">HER-Worth</a></li>
+          <li><a href="/south-africa/">South Africa</a></li>
+          <li><a href="/diagnostic/">Free Diagnostic</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <p class="fcol-h">Explore</p>
+        <ul>
+          <li><a href="/book/">The Book</a></li>
+          <li><a href="/articles/">Articles</a></li>
+          <li><a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener">The Authority Signal</a></li>
+          <li><a href="/about/">About Lucy</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbase">
+      <p class="fcopy">&copy; 2026 Aingworth. All rights reserved.</p>
+      <nav class="flegal" aria-label="Legal"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var bar = document.getElementById('readbar');
+  if (bar) {
+    window.addEventListener('scroll', function () {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    }, { passive: true });
+  }
+  var navEl = document.querySelector('.nav');
+  if (navEl) {
+    window.addEventListener('scroll', function () {
+      navEl.style.background = scrollY > 10 ? 'rgba(26,26,26,.99)' : 'rgba(26,26,26,.97)';
+    }, { passive: true });
+  }
+  var trig = document.querySelector('.nav-droptrig');
+  var drop = document.getElementById('insights-drop');
+  if (trig && drop) {
+    trig.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var o = drop.classList.toggle('open');
+      trig.setAttribute('aria-expanded', o ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (!drop.contains(e.target) && e.target !== trig) { drop.classList.remove('open'); trig.setAttribute('aria-expanded', 'false'); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drop.classList.contains('open')) { drop.classList.remove('open'); trig.setAttribute('aria-expanded', 'false'); trig.focus(); }
+    });
+  }
+  var b = document.querySelector('.nav-burger'), d = document.getElementById('ndrawer');
+  if (b && d) {
+    b.addEventListener('click', function () {
+      var o = d.classList.toggle('open');
+      b.setAttribute('aria-expanded', o ? 'true' : 'false');
+      document.body.style.overflow = o ? 'hidden' : '';
+    });
+    d.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        d.classList.remove('open');
+        b.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
