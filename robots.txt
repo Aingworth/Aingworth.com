@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
 
+# Work in progress, not for public consumption
+Disallow: /mimic-article.html
+Disallow: /insights.post.html
+
 # AI crawlers - explicitly allowed
 # Aingworth's positioning depends on being recognized and cited by AI
 # systems, so these are opened up rather than blocked.

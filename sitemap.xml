@@ -1,39 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://aingworth.com/</loc>
-    <lastmod>2026-06-16</lastmod>
-  </url>
-  <url>
-    <loc>https://aingworth.com/about/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://aingworth.com/services/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://aingworth.com/her-worth/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://aingworth.com/book/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-07-20</lastmod>
   </url>
   <url>
     <loc>https://aingworth.com/diagnostic/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://aingworth.com/articles/</loc>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://aingworth.com/frameworks/</loc>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://aingworth.com/case-studies/</loc>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://aingworth.com/about/</loc>
+    <lastmod>2026-07-20</lastmod>
+  </url>
+  <url>
+    <loc>https://aingworth.com/south-africa/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-ZA" href="https://aingworth.com/south-africa/"/>
+    <xhtml:link rel="alternate" hreflang="af-ZA" href="https://aingworth.com/suid-afrika/"/>
+  </url>
+  <url>
+    <loc>https://aingworth.com/suid-afrika/</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-ZA" href="https://aingworth.com/south-africa/"/>
+    <xhtml:link rel="alternate" hreflang="af-ZA" href="https://aingworth.com/suid-afrika/"/>
   </url>
   <url>
     <loc>https://aingworth.com/contact/</loc>
-    <lastmod>2026-06-16</lastmod>
-  </url>
-  <url>
-    <loc>https://aingworth.com/privacy/</loc>
-    <lastmod>2026-06-16</lastmod>
-  </url>
-  <url>
-    <loc>https://aingworth.com/terms/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-07-20</lastmod>
   </url>
 </urlset>
