@@ -200,7 +200,7 @@ a{color:inherit;text-decoration:none;}
 .metabit{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;text-transform:uppercase;}
 /* Hero image */
 .post-hero{margin:36px 0 8px;}
-.post-hero img{width:100%;border-radius:2px;}
+.post-hero img{display:block;width:100%;height:auto;border-radius:2px;}
 .post-hero figcaption{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;text-transform:uppercase;margin-top:12px;}
 /* AI CITATION: the single most important block on the page.
    A direct, self-contained answer in the first 60 words, phrased so it can be
@@ -248,9 +248,12 @@ a{color:inherit;text-decoration:none;}
 .defbox p{font-size:15px;line-height:1.7;color:var(--muted-dark);margin:0;}
 .defbox p strong{color:var(--seasalt);}
 /* Figure */
-.doc-figure{margin:44px 0;}
-.doc-figure img{width:100%;border-radius:2px;}
-.doc-figure figcaption{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;text-transform:uppercase;text-align:center;margin-top:14px;}
+.doc-figure{margin:52px 0;}
+/* height:auto is required. Without it the HTML height attribute wins and
+   squashes the image. Always set width/height attributes to the file's real
+   pixel dimensions so the browser reserves the correct space. */
+.doc-figure img{display:block;width:100%;height:auto;max-width:620px;margin:0 auto;border-radius:2px;}
+.doc-figure figcaption{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;text-transform:uppercase;text-align:center;margin-top:16px;}
 /* CRO: one mid-article conversion prompt. Placed after the reader has had
    enough value to be persuaded, not before. */
 .lead-banner{margin:44px 0;padding:26px 30px;background:var(--charcoal-mid);border:1px solid rgba(107,191,176,.2);border-radius:2px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
@@ -509,7 +512,7 @@ a{color:inherit;text-decoration:none;}
   <p>Close with something actionable. The last section should leave the reader with a decision they can make today, not a summary of what they just read.</p>
 
   <figure class="doc-figure">
-    <img src="/images/Recognition_Trianlge.png" alt="The Recognition Triangle: Earned Authority at the top, Clarity at the bottom left, Credibility at the bottom right" width="900" height="700" loading="lazy">
+    <img src="/images/Recognition_Trianlge.png" alt="The Recognition Triangle: Earned Authority at the top, Clarity at the bottom left, Credibility at the bottom right" width="2000" height="1500" loading="lazy" decoding="async">
     <figcaption>The Recognition Triangle</figcaption>
   </figure>
 
