@@ -422,6 +422,21 @@ a { color:inherit; text-decoration:none; }
   padding: 36px 48px;
   margin-bottom: 2px;
 }
+/* Booking block. Sits after the email capture, because someone who has just
+   read their result and asked for a breakdown is the warmest they will be. */
+.result-booking {
+  background: var(--charcoal-mid);
+  border: 1px solid var(--border-dark);
+  border-top: none;
+  padding: 36px 48px;
+  margin-bottom: 2px;
+}
+.rb-label { font-family:var(--mono); font-size:10px; color:var(--teal-light); letter-spacing:.14em; text-transform:uppercase; margin-bottom:10px; }
+.rb-title { font-family:var(--serif); font-size:clamp(20px,2.5vw,28px); font-weight:500; color:var(--seasalt); line-height:1.2; margin-bottom:12px; }
+.rb-sub { font-size:15px; color:var(--muted-dark); line-height:1.68; margin-bottom:24px; max-width:560px; }
+.rb-btn { display:inline-flex; align-items:center; gap:10px; background:var(--teal-light); color:var(--charcoal); font-size:13px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; padding:14px 26px; border-radius:2px; text-decoration:none; transition:all .2s var(--ease); }
+.rb-btn:hover { background:var(--teal); color:var(--seasalt); }
+.rb-note { font-family:var(--mono); font-size:10px; color:rgba(226,226,226,.3); letter-spacing:.06em; margin-top:14px; }
 .rc-label { font-family:var(--mono); font-size:10px; color:var(--teal-light); letter-spacing:.14em; text-transform:uppercase; margin-bottom:10px; }
 .rc-title {
   font-family: var(--serif);
@@ -489,7 +504,7 @@ a { color:inherit; text-decoration:none; }
    RESPONSIVE
 ============================================= */
 @media (max-width: 600px) {
-  .result-hero, .result-desc-block, .result-patterns-block, .result-next-block, .result-capture, .result-ctas { padding:28px 24px; }
+  .result-hero, .result-desc-block, .result-patterns-block, .result-next-block, .result-capture, .result-booking, .result-ctas { padding:28px 24px; }
   .rc-form { flex-direction:column; }
   .rc-input { border-right:1px solid rgba(107,191,176,.2); border-bottom:none; border-radius:2px 2px 0 0; }
   .rc-submit { border-radius:0 0 2px 2px; }
@@ -1300,6 +1315,16 @@ function showResults() {
         '<p class="rc-success-text">On its way. Lucy will follow up within one business day with your personalised breakdown and a clear next step.</p>' +
       '</div>' +
       '<p class="rc-note">No spam. One email. Unsubscribe any time.</p>' +
+    '</div>' +
+
+    '<div class="result-booking">' +
+      '<div class="rb-label">Or talk it through</div>' +
+      '<h2 class="rb-title">Fifteen minutes on what your result actually means.</h2>' +
+      '<p class="rb-sub">If you would rather ask than read, book a short call. Bring your result and Lucy will tell you which of the three conditions to work on first and why. No pitch, no obligation.</p>' +
+      '<a href="https://cal.com/info-36zfhx/15min" class="rb-btn" target="_blank" rel="noopener nofollow">Book 15 minutes' +
+        '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      '</a>' +
+      '<p class="rb-note">Opens in a new tab. Pick a time that suits you.</p>' +
     '</div>' +
 
     '<div class="result-ctas">' +
