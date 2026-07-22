@@ -28,13 +28,31 @@
       "@type": "Person",
       "@id": "https://aingworth.com/#lucy",
       "name": "Lucy Aingworth",
+      "alternateName": "Lisinda Lucy",
       "givenName": "Lucy",
       "familyName": "Aingworth",
       "jobTitle": "AI Visibility Strategist and Brand Authority Consultant",
+      "description": "Lucy Aingworth is a brand authority and AI visibility consultant, and the author of Become the Answer: How Brands Build Authority in the Age of AI. She created the Recognition Triangle, the model defining the three conditions of recognition, and the Authority Method, the five-stage process for meeting them.",
       "worksFor": { "@id": "https://aingworth.com/#organization" },
-      "knowsAbout": ["Generative Engine Optimization","AI Authority Strategy","Brand Authority","Recognition Triangle","Authority Method","Recognition Economy","SEO","CRO","Digital Strategy"],
+      "knowsAbout": [
+        "Generative Engine Optimization",
+        "AI Search Visibility",
+        "Answer Engine Optimization",
+        "Brand Authority",
+        "Earned Authority",
+        "Recognition Triangle",
+        "Authority Method",
+        "Recognition Economy",
+        "Technical SEO",
+        "Search Engine Optimization",
+        "Conversion Rate Optimisation",
+        "Digital Strategy"
+      ],
+      "image": "https://aingworth.com/images/Lucy_Studio_Image.png",
       "homeLocation": { "@type": "Place", "name": "South Africa" },
-      "author": { "@type": "Book", "name": "Become the Answer", "url": "https://www.amazon.com/dp/B0H14GDQMH" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Johannesburg", "addressCountry": "ZA" },
+      "workLocation": { "@type": "Place", "name": "Johannesburg, South Africa" },
+      "workExample": { "@type": "Book", "@id": "https://aingworth.com/book/", "name": "Become the Answer: How Brands Build Authority in the Age of AI", "alternateName": "Become the Answer", "url": "https://www.amazon.com/dp/B0GX2WWBQT" },
       "url": "https://aingworth.com/about/",
       "sameAs": [
         "https://www.linkedin.com/in/lisinda-lucy/",
@@ -45,7 +63,8 @@
         "https://bsky.app/profile/lucyaingworth.bsky.social",
         "https://lucyaingworth.medium.com/",
         "https://lucyaingworth.substack.com/",
-        "https://www.amazon.com/stores/Lucy-Aingworth/author/B0H1646Q1L"
+        "https://www.amazon.com/stores/Lucy-Aingworth/author/B0H1646Q1L",
+        "https://www.goodreads.com/book/show/251127412-become-the-answer"
       ]
     },
     {
@@ -226,9 +245,21 @@ a { color:inherit; text-decoration:none; }
   color: var(--teal-light);
   letter-spacing: .14em;
   text-transform: uppercase;
-  margin-bottom: 32px;
+  margin-bottom: 22px;
   opacity: .7;
 }
+/* Entity-first. A plain definitional sentence, placed ahead of the voice-led
+   line below it, so machines get the unambiguous statement of who this is
+   before the prose starts doing character work. */
+.hero-definition {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted-dark);
+  max-width: 560px;
+  margin-bottom: 30px;
+}
+.hero-definition a { color: var(--teal-light); border-bottom: 1px solid rgba(107,191,176,.3); transition: border-color .2s; }
+.hero-definition a:hover { border-color: var(--teal-light); }
 .hero-opening {
   font-family: var(--serif);
   font-size: clamp(20px,2.2vw,28px);
@@ -591,8 +622,9 @@ a { color:inherit; text-decoration:none; }
       </div>
       <h1 id="about-h1">Lucy Aingworth.</h1>
       <p class="hero-role">AI Visibility Strategist &middot; Brand Authority Consultant &middot; Author</p>
+      <p class="hero-definition">Lucy Aingworth is a brand authority and AI visibility consultant, and the author of <a href="/book/">Become the Answer: How Brands Build Authority in the Age of AI</a>. She created the Recognition Triangle, the model defining the three conditions of recognition, and the Authority Method, the five-stage process for meeting them.</p>
       <p class="hero-opening">
-        Growth that deserves to happen <strong>should not have to fight this hard</strong> to be seen. That conviction is behind everything at Aingworth. Lucy Aingworth is a digital marketing consultant in South Africa turned brand authority consultant.
+        Growth that deserves to happen <strong>should not have to fight this hard</strong> to be seen. That conviction is behind everything at Aingworth.
       </p>
       <div class="cred-strip" role="list" aria-label="Key credentials">
         <div class="cred-item" role="listitem">
