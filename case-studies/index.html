@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Case Studies | Aingworth</title>
-<meta name="description" content="Case studies of brand authority and AI visibility work by Aingworth are in preparation. In the meantime, explore the frameworks, the diagnostic, and the book.">
+<meta name="description" content="Real results across SEO, paid social and conversion, from one consultant reading them as a single system. Named client work by Lucy Aingworth of Aingworth.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://aingworth.com/case-studies/">
 <link rel="icon" href="/images/Aingworth_Main_favicon.png" type="image/png">
 <meta property="og:title" content="Case Studies | Aingworth">
-<meta property="og:description" content="Case studies of AI visibility and brand authority work by Aingworth are in preparation.">
+<meta property="og:description" content="Real results across SEO, paid social and conversion, read as one system. Named client work by Lucy Aingworth.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://aingworth.com/case-studies/">
 <meta property="og:site_name" content="Aingworth">
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@lucy_aingworth">
 <meta name="twitter:title" content="Case Studies | Aingworth">
-<meta name="twitter:description" content="Case studies of AI visibility and brand authority work by Aingworth are in preparation.">
+<meta name="twitter:description" content="Real results across SEO, paid social and conversion, read as one system.">
 <meta name="twitter:image" content="https://aingworth.com/images/Aingworth_Main_Logo_White_bigger.png">
 <script type="application/ld+json">
 {
@@ -29,9 +29,10 @@
       "@id": "https://aingworth.com/case-studies/",
       "url": "https://aingworth.com/case-studies/",
       "name": "Case Studies",
-      "description": "Case studies of brand authority and AI visibility work by Aingworth are in preparation.",
+      "description": "Named client results across SEO, paid social and conversion rate optimisation, delivered by Lucy Aingworth reading the four disciplines as one growth system.",
       "isPartOf": { "@id": "https://aingworth.com/#website" },
       "about": { "@id": "https://aingworth.com/#organization" },
+      "author": { "@id": "https://aingworth.com/#lucy" },
       "inLanguage": "en"
     },
     {
@@ -67,9 +68,7 @@
   --mid-grey:       #888880;
   --lavender:       #c4a7e4;
   --border-dark:    rgba(183,206,206,0.1);
-  --border-light:   rgba(28,15,19,0.1);
   --muted-dark:     rgba(226,226,226,0.6);
-  --muted-light:    rgba(26,26,26,0.6);
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans:  'DM Sans', system-ui, sans-serif;
   --mono:  'DM Mono', monospace;
@@ -79,9 +78,10 @@
 }
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: var(--sans); font-size: 16px; background: var(--seasalt); color: var(--charcoal); -webkit-font-smoothing: antialiased; line-height: 1.7; overflow-x: hidden; }
+body { font-family: var(--sans); font-size: 16px; background: var(--charcoal); color: var(--seasalt); -webkit-font-smoothing: antialiased; line-height: 1.7; overflow-x: hidden; }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 .skip { position:absolute; top:-52px; left:24px; background:var(--teal-light); color:var(--charcoal); padding:10px 18px; font-size:13px; font-weight:500; z-index:999; transition:top .2s; }
 .skip:focus { top:8px; }
 :focus-visible { outline: 2px solid var(--teal-light); outline-offset: 3px; }
@@ -90,14 +90,7 @@ a { color: inherit; text-decoration: none; }
 .sec-rule { width: 26px; height: 1px; background: var(--teal-light); flex-shrink: 0; }
 .sec-lbl { font-family: var(--mono); font-size: 11px; color: var(--teal-light); letter-spacing: .14em; text-transform: uppercase; }
 /* NAV */
-.nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  height: 68px; display: flex; align-items: center; justify-content: space-between;
-  padding: 0 var(--px);
-  background: rgba(26,26,26,.97); backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-dark);
-  transition: background .3s var(--ease);
-}
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 68px; display: flex; align-items: center; justify-content: space-between; padding: 0 var(--px); background: rgba(26,26,26,.97); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-dark); transition: background .3s var(--ease); }
 .nav-logo { display: flex; align-items: center; height: 68px; }
 .nav-logo img { width: 200px; height: auto; display: block; }
 .nav-menu { display: flex; align-items: center; gap: 2px; list-style: none; }
@@ -105,7 +98,6 @@ a { color: inherit; text-decoration: none; }
 .nav-menu a:hover, .nav-menu a[aria-current="page"] { color: var(--teal-light); }
 .nav-menu .ncta a { background: var(--teal-light); color: var(--charcoal); padding: 8px 20px; font-weight: 500; border-radius: 2px; transition: all .2s; }
 .nav-menu .ncta a:hover { background: var(--teal); color: var(--seasalt); }
-/* Insights dropdown */
 .nav-has-drop { position: relative; }
 .nav-droptrig { display: flex; align-items: center; gap: 6px; padding: 7px 10px; background: none; border: none; cursor: pointer; color: rgba(250,250,250,.6); font-family: var(--sans); font-size: 13px; font-weight: 400; letter-spacing: .06em; text-transform: uppercase; transition: color .2s; }
 .nav-droptrig:hover, .nav-has-drop:hover .nav-droptrig, .nav-droptrig[aria-expanded="true"], .nav-droptrig[data-active="true"] { color: var(--teal-light); }
@@ -131,36 +123,82 @@ a { color: inherit; text-decoration: none; }
 .drawer-group { border-bottom: 1px solid var(--border-dark); padding: 8px 0 12px; }
 .drawer-group-h { font-family: var(--mono); font-size: 11px; color: var(--teal-light); letter-spacing: .12em; text-transform: uppercase; padding: 12px 0 6px; }
 .nav-drawer a.drawer-sub { font-size: 16px; padding: 12px 0 12px 18px; border-bottom: none; color: rgba(250,250,250,.55); }
-.nav-drawer a.drawer-sub:hover { color: var(--teal-light); }
 .drawer-cta { margin-top: 24px; display: inline-block; padding: 16px 28px; background: var(--teal-light); color: var(--charcoal) !important; font-size: 14px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; text-align: center; border-bottom: none !important; border-radius: 2px; }
 /* HERO */
 .cs-hero {
-  min-height: calc(100vh - 68px);
   display: flex; align-items: center;
   background:
     radial-gradient(1100px 700px at 74% 32%, rgba(107,191,176,0.08), transparent 65%),
     radial-gradient(900px 700px at 8% 110%, rgba(107,191,176,0.04), transparent 60%),
     var(--charcoal);
-  padding: 130px var(--px) 100px;
-  position: relative;
+  padding: 140px var(--px) 72px;
 }
-.cs-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--teal-light), transparent); opacity: .2; }
 .cs-inner { max-width: var(--max-w); margin: 0 auto; width: 100%; }
-.cs-hero h1 { font-family: var(--serif); font-size: clamp(42px,6vw,80px); font-weight: 500; line-height: 1.03; color: var(--seasalt); letter-spacing: -.01em; max-width: 820px; }
+.cs-hero h1 { font-family: var(--serif); font-size: clamp(38px,5.4vw,68px); font-weight: 500; line-height: 1.04; color: var(--seasalt); letter-spacing: -.01em; max-width: 880px; }
 .cs-hero h1 em { font-style: italic; color: var(--teal-light); }
-.cs-status { display: inline-flex; align-items: center; gap: 10px; margin-top: 26px; font-family: var(--mono); font-size: 11px; color: var(--teal-light); letter-spacing: .12em; text-transform: uppercase; border: 1px solid rgba(107,191,176,.3); padding: 9px 16px; border-radius: 2px; }
-.cs-status .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--teal-light); animation: pulse 2s var(--ease) infinite; }
-@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
-.cs-sub { font-size: 17px; line-height: 1.78; color: var(--muted-dark); max-width: 600px; margin-top: 26px; }
-.cs-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
-.cs-link { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; letter-spacing: .07em; text-transform: uppercase; padding: 14px 24px; border-radius: 2px; transition: all .2s var(--ease); }
-.cs-link.primary { background: var(--teal-light); color: var(--charcoal); }
-.cs-link.primary:hover { background: var(--teal); color: var(--seasalt); box-shadow: 0 0 32px rgba(107,191,176,.35); }
-.cs-link.ghost { color: var(--teal-light); border: 1px solid rgba(107,191,176,.3); }
-.cs-link.ghost:hover { border-color: var(--teal-light); background: rgba(107,191,176,.06); }
-.cs-note { margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--border-dark); max-width: 600px; font-size: 14px; line-height: 1.7; color: var(--mid-grey); }
-.cs-note a { color: var(--teal-light); text-decoration: underline; text-underline-offset: 3px; transition: color .2s; }
-.cs-note a:hover { color: var(--teal); }
+.cs-sub { font-size: 17px; line-height: 1.78; color: var(--muted-dark); max-width: 620px; margin-top: 26px; }
+/* CROSS-DISCIPLINE PROOF */
+.cross-sec { padding: 0 var(--px) 80px; }
+.cross-inner { max-width: var(--max-w); margin: 0 auto; }
+.cross-block { background: linear-gradient(135deg, var(--charcoal-mid), rgba(74,158,142,.08)); border: 1px solid rgba(107,191,176,.2); border-radius: 4px; padding: 44px clamp(28px,4vw,56px); }
+.cross-lbl { font-family: var(--mono); font-size: 10px; color: var(--teal-light); letter-spacing: .16em; text-transform: uppercase; margin-bottom: 16px; }
+.cross-h2 { font-family: var(--serif); font-size: clamp(26px,3vw,38px); font-weight: 500; color: var(--seasalt); line-height: 1.18; max-width: 720px; margin-bottom: 18px; }
+.cross-h2 em { font-style: italic; color: var(--teal-light); }
+.cross-body { font-size: 16px; line-height: 1.78; color: var(--muted-dark); max-width: 680px; }
+.cross-body p + p { margin-top: 14px; }
+.cross-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 32px; }
+.cross-card { background: rgba(26,26,26,.5); padding: 26px 28px; }
+.cross-card-name { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--seasalt); margin-bottom: 4px; }
+.cross-card-sector { font-family: var(--mono); font-size: 10px; color: var(--mid-grey); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 18px; }
+.cross-metrics { display: flex; flex-wrap: wrap; gap: 22px; }
+.cross-metric .cm-num { font-family: var(--serif); font-size: 30px; font-weight: 500; color: var(--teal-light); line-height: 1; }
+.cross-metric .cm-lbl { font-family: var(--mono); font-size: 9px; color: var(--mid-grey); letter-spacing: .08em; text-transform: uppercase; margin-top: 6px; }
+/* FLAGSHIP */
+.flag-sec { padding: 0 var(--px) 40px; }
+.flag-inner { max-width: var(--max-w); margin: 0 auto; }
+.flag-head { margin-bottom: 40px; max-width: 720px; }
+.flag-head .sec-h2 { font-family: var(--serif); font-size: clamp(30px,3.2vw,44px); font-weight: 500; color: var(--seasalt); line-height: 1.1; letter-spacing: -.01em; margin-bottom: 14px; }
+.flag-head p { font-size: 16px; line-height: 1.78; color: var(--muted-dark); }
+.flag-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.flag-card { background: var(--charcoal-mid); padding: 36px 32px 34px; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: background .3s var(--ease); }
+.flag-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--teal-light); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+.flag-card:hover { background: var(--charcoal-light); }
+.flag-card:hover::before { transform: scaleX(1); }
+.flag-disc { font-family: var(--mono); font-size: 10px; color: var(--teal-light); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 22px; }
+.flag-metric { font-family: var(--serif); font-size: clamp(44px,4.4vw,58px); font-weight: 500; color: var(--seasalt); line-height: 1; letter-spacing: -.01em; }
+.flag-metric-lbl { font-size: 14px; color: var(--muted-dark); line-height: 1.5; margin-top: 10px; margin-bottom: 24px; }
+.flag-name { font-family: var(--serif); font-size: 24px; font-weight: 500; color: var(--seasalt); line-height: 1.2; }
+.flag-sector { font-family: var(--mono); font-size: 10px; color: var(--mid-grey); letter-spacing: .1em; text-transform: uppercase; margin-top: 4px; margin-bottom: 16px; }
+.flag-body { font-size: 14px; line-height: 1.72; color: var(--muted-dark); flex: 1; }
+.flag-through { font-size: 13px; font-style: italic; color: rgba(226,226,226,.5); line-height: 1.6; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border-dark); }
+/* DISCIPLINE GRID */
+.disc-sec { padding: 64px var(--px) 0; }
+.disc-inner { max-width: var(--max-w); margin: 0 auto; }
+.disc-block { margin-bottom: 56px; }
+.disc-head { margin-bottom: 24px; }
+.disc-name { font-family: var(--serif); font-size: clamp(24px,2.4vw,32px); font-weight: 500; color: var(--seasalt); margin-bottom: 8px; }
+.disc-frame { font-size: 15px; font-style: italic; color: var(--muted-dark); line-height: 1.7; max-width: 640px; }
+.disc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.csg-card { background: var(--charcoal-mid); padding: 26px 26px 28px; transition: background .25s var(--ease); }
+.csg-card:hover { background: var(--charcoal-light); }
+.csg-metric { font-family: var(--serif); font-size: 34px; font-weight: 500; color: var(--teal-light); line-height: 1; margin-bottom: 4px; }
+.csg-metric-lbl { font-family: var(--mono); font-size: 10px; color: var(--mid-grey); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 18px; }
+.csg-name { font-family: var(--serif); font-size: 20px; font-weight: 500; color: var(--seasalt); line-height: 1.2; }
+.csg-sector { font-family: var(--mono); font-size: 10px; color: var(--mid-grey); letter-spacing: .08em; text-transform: uppercase; margin-top: 4px; }
+.csg-note { font-size: 13px; color: var(--muted-dark); line-height: 1.6; margin-top: 12px; }
+/* NOTE STRIP */
+.honesty { max-width: var(--max-w); margin: 8px auto 0; padding: 0 var(--px); }
+.honesty p { font-size: 13px; line-height: 1.7; color: var(--mid-grey); font-style: italic; padding: 20px 24px; border: 1px dashed rgba(183,206,206,.18); border-radius: 2px; max-width: 760px; }
+/* CTA */
+.cs-cta { padding: 80px var(--px); margin-top: 72px; background: var(--teal-light); }
+.cs-cta-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+.cs-cta-text h2 { font-family: var(--serif); font-size: clamp(28px,3vw,44px); font-weight: 500; color: var(--charcoal); line-height: 1.12; margin-bottom: 10px; }
+.cs-cta-text p { font-size: 16px; color: rgba(26,26,26,.7); max-width: 460px; line-height: 1.6; }
+.cs-cta-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.cs-cta-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--charcoal); color: var(--seasalt); font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; padding: 16px 30px; border-radius: 2px; transition: all .2s var(--ease); }
+.cs-cta-primary:hover { background: var(--charcoal-light); transform: translateY(-1px); }
+.cs-cta-ghost { display: inline-flex; align-items: center; gap: 10px; color: var(--charcoal); font-size: 13px; font-weight: 500; letter-spacing: .07em; text-transform: uppercase; border: 1px solid rgba(26,26,26,.3); padding: 15px 26px; border-radius: 2px; transition: all .2s; }
+.cs-cta-ghost:hover { background: rgba(26,26,26,.06); }
 /* FOOTER */
 .footer { background: var(--charcoal); padding: 72px var(--px) 36px; border-top: 1px solid var(--border-dark); }
 .footer-inner { max-width: var(--max-w); margin: 0 auto; }
@@ -183,13 +221,18 @@ a { color: inherit; text-decoration: none; }
 .flegal { display: flex; gap: 20px; }
 .flegal a { font-family: var(--mono); font-size: 11px; color: rgba(226,226,226,.25); letter-spacing: .06em; transition: color .2s; }
 .flegal a:hover { color: var(--teal-light); }
-@media (max-width: 1080px) {
-  .nav-menu { display: none; }
-  .nav-burger { display: flex; }
+@media (max-width: 1080px) { .nav-menu { display: none; } .nav-burger { display: flex; } }
+@media (max-width: 900px) {
+  .flag-grid { grid-template-columns: 1fr; }
+  .disc-grid { grid-template-columns: 1fr 1fr; }
+  .cross-pair { grid-template-columns: 1fr; }
+  .fgrid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .cs-cta-inner { flex-direction: column; align-items: flex-start; }
 }
-@media (max-width: 900px) { .fgrid { grid-template-columns: 1fr 1fr; gap: 36px; } }
-@media (max-width: 600px) { .fgrid { grid-template-columns: 1fr; gap: 32px; } }
-@media (prefers-reduced-motion: reduce) { .cs-status .dot { animation: none; } }
+@media (max-width: 600px) {
+  .disc-grid { grid-template-columns: 1fr; }
+  .fgrid { grid-template-columns: 1fr; gap: 32px; }
+}
 </style>
 </head>
 <body>
@@ -239,21 +282,230 @@ a { color: inherit; text-decoration: none; }
   </nav>
 </header>
 <main id="main">
+
+<!-- HERO -->
 <section class="cs-hero" aria-labelledby="cs-h1">
   <div class="cs-inner">
     <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Case Studies</span></div>
-    <h1 id="cs-h1">The proof is being <em>written up.</em></h1>
-    <div class="cs-status"><span class="dot" aria-hidden="true"></span>In preparation</div>
-    <p class="cs-sub">Detailed case studies of the AI visibility and brand authority work behind Aingworth are on their way, documented properly rather than rushed. Until they land, the thinking that drives the results is already here to explore.</p>
-    <div class="cs-links">
-      <a href="/frameworks/" class="cs-link primary">Explore the Frameworks
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="/diagnostic/" class="cs-link ghost">Run the Free Diagnostic</a>
-      <a href="/articles/" class="cs-link ghost">Read the Articles</a>
-    </div>
-    <p class="cs-note">Working with Aingworth and want your results documented as a case study? <a href="/contact/">Start a conversation.</a></p>
+    <h1 id="cs-h1">The work, and <em>the numbers it moved.</em></h1>
+    <p class="cs-sub">Real results across search, paid social and conversion, from one consultant who reads them as a single system rather than three separate jobs. Where results were team-delivered, that is said plainly. Understated and accurate builds more than overclaiming, which is rather the whole point.</p>
   </div>
 </section>
+
+<!-- CROSS-DISCIPLINE PROOF -->
+<section class="cross-sec" aria-labelledby="cross-h">
+  <div class="cross-inner">
+    <div class="cross-block">
+      <p class="cross-lbl">The integrator proof</p>
+      <h2 class="cross-h2" id="cross-h">The clearest evidence is a <em>single brand</em>, lifted across the whole system at once.</h2>
+      <div class="cross-body">
+        <p>Most consultants do one of these things. The difference here is that search, social and conversion are read together, so a fix in one compounds the others instead of competing with them. Two clients show it most directly: the same hand shaped the ad, the page it led to, and the search visibility underneath both.</p>
+      </div>
+      <div class="cross-pair">
+        <div class="cross-card">
+          <div class="cross-card-name">Environ Skin Care</div>
+          <div class="cross-card-sector">Beauty and wellness, global</div>
+          <div class="cross-metrics">
+            <div class="cross-metric"><div class="cm-num">894%</div><div class="cm-lbl">Facebook growth</div></div>
+            <div class="cross-metric"><div class="cm-num">117%</div><div class="cm-lbl">Instagram growth</div></div>
+            <div class="cross-metric"><div class="cm-num">+8%</div><div class="cm-lbl">Landing conversion</div></div>
+          </div>
+        </div>
+        <div class="cross-card">
+          <div class="cross-card-name">Inecto</div>
+          <div class="cross-card-sector">Beauty, haircare</div>
+          <div class="cross-metrics">
+            <div class="cross-metric"><div class="cm-num">85%</div><div class="cm-lbl">Organic traffic</div></div>
+            <div class="cross-metric"><div class="cm-num">47%</div><div class="cm-lbl">Social traffic</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLAGSHIP -->
+<section class="flag-sec" aria-labelledby="flag-h">
+  <div class="flag-inner">
+    <div class="flag-head">
+      <h2 class="sec-h2" id="flag-h">Three disciplines, three results.</h2>
+      <p>One flagship story from each side of the system. The full challenge, the work, and the through-line that makes it repeatable.</p>
+    </div>
+    <div class="flag-grid">
+
+      <article class="flag-card">
+        <div class="flag-disc">Search</div>
+        <div class="flag-metric">+63%</div>
+        <p class="flag-metric-lbl">more total clicks in six months, alongside 28.55% more impressions</p>
+        <h3 class="flag-name">Diploma MSc</h3>
+        <p class="flag-sector">Education, online medical</p>
+        <p class="flag-body">University-awarded postgraduate routes for clinicians, where the blocker was not architecture but programme-level legibility. Keywords were clustered by programme, value propositions sharpened page by page, structured data added for Course and Organization, internal linking and FAQs strengthened, and the key enquiry points instrumented with event tracking.</p>
+        <p class="flag-through">Programme-level entity coverage plus clear UX paths raise both discovery and enquiry intent.</p>
+      </article>
+
+      <article class="flag-card">
+        <div class="flag-disc">Social</div>
+        <div class="flag-metric">&euro;125k</div>
+        <p class="flag-metric-lbl">pipeline generated, with roughly 67% higher MQL rate year over year</p>
+        <h3 class="flag-name">Silverfin</h3>
+        <p class="flag-sector">B2B SaaS, accounting</p>
+        <p class="flag-body">Mid-market and enterprise buyers across the UK, Flanders and the Netherlands, with long sales cycles where volume means nothing. Multi-funnel LinkedIn campaigns using Accelerate and native lead forms, tightly segmented by ICP, with document ads and creative testing, all aligned to Salesforce so quality could be measured downstream.</p>
+        <p class="flag-through">A tight ICP and document ads lift the value of every qualified lead, not just the count.</p>
+      </article>
+
+      <article class="flag-card">
+        <div class="flag-disc">Conversion</div>
+        <div class="flag-metric">+32%</div>
+        <p class="flag-metric-lbl">conversion uplift on course enquiries in three to five months</p>
+        <h3 class="flag-name">A national tertiary education provider</h3>
+        <p class="flag-sector">Education, lead generation</p>
+        <p class="flag-body">Enquiry generation with seasonality and multi-campus routing. The form layout was simplified, banners and messaging tested, and the UX around the enquiry journey rebuilt so the right visitor reached the next step with less friction.</p>
+        <p class="flag-through">Progressive disclosure in forms lifts completion. Fewer fields, in the right order, convert more.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- DISCIPLINE GRID -->
+<section class="disc-sec" aria-labelledby="disc-h">
+  <div class="disc-inner">
+    <h2 class="sr-only" id="disc-h">More results by discipline</h2>
+
+    <div class="disc-block">
+      <div class="disc-head">
+        <h3 class="disc-name">Search</h3>
+        <p class="disc-frame">Being found starts with being legible, to people and to machines. These are brands made discoverable by fixing the structure underneath them, not by shouting louder.</p>
+      </div>
+      <div class="disc-grid">
+        <div class="csg-card">
+          <div class="csg-metric">+27.8%</div>
+          <div class="csg-metric-lbl">Course registrations</div>
+          <div class="csg-name">Learna Ltd</div>
+          <div class="csg-sector">Education, online medical</div>
+          <p class="csg-note">Unified architecture across the full awareness-to-enrolment journey, entity-led schema, and a rebuilt GA, GTM and CRM tracking layer.</p>
+        </div>
+        <div class="csg-card">
+          <div class="csg-metric">+94%</div>
+          <div class="csg-metric-lbl">Listing conversions</div>
+          <div class="csg-name">A two-sided event marketplace</div>
+          <div class="csg-sector">Marketplace, events</div>
+          <p class="csg-note">Duplicate content differentiated by category, Core Web Vitals fixed, and intent-specific blocks built. Also 51% more non-brand clicks.</p>
+        </div>
+        <div class="csg-card">
+          <div class="csg-metric">+22.4%</div>
+          <div class="csg-metric-lbl">Organic clicks, YoY</div>
+          <div class="csg-name">reBuy</div>
+          <div class="csg-sector">eCommerce, recommerce</div>
+          <p class="csg-note">Competitor gap analysis, expanded product and media content, and tighter structured data to grow share against Backmarket and Refurbed.</p>
+        </div>
+        <div class="csg-card">
+          <div class="csg-metric">+85%</div>
+          <div class="csg-metric-lbl">Organic traffic</div>
+          <div class="csg-name">Inecto</div>
+          <div class="csg-sector">Beauty, haircare</div>
+          <p class="csg-note">Technical audit, benefit-first content and competition landing pages, reshaped around search intent. Also lifted across social and conversion.</p>
+        </div>
+        <div class="csg-card">
+          <div class="csg-metric">+71%</div>
+          <div class="csg-metric-lbl">Organic traffic, 12 months</div>
+          <div class="csg-name">A boutique safari lodge</div>
+          <div class="csg-sector">Hospitality and travel</div>
+          <p class="csg-note">A migration planned and executed cleanly, with redirects, technical fixes and local intent mapping in a seasonal niche.</p>
+        </div>
+        <div class="csg-card">
+          <div class="csg-metric">up to 50%</div>
+          <div class="csg-metric-lbl">Organic growth across regions</div>
+          <div class="csg-name">A global access-control manufacturer</div>
+          <div class="csg-sector">B2B, security hardware</div>
+          <p class="csg-note">Region-specific technical SEO and information architecture, schema, and authority signals developed across markets. Around 40% higher visibility.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="disc-block">
+      <div class="disc-head">
+        <h3 class="disc-name">Social</h3>
+        <p class="disc-frame">Reach means nothing if it does not bring the right people. These are audiences grown with intent, where engagement turned into pipeline and recognition.</p>
+      </div>
+      <div class="disc-grid">
+        <div class="csg-card">
+          <div class="csg-metric">894%</div>
+          <div class="csg-metric-lbl">Facebook growth</div>
+          <div class="csg-name">Environ Skin Care</div>
+          <div class="csg-sector">Beauty and wellness, global</div>
+          <p class="csg-note">Market-specific content and ad sequencing across Facebook and Instagram, led by education-first creative rather than discounting. Multi-million monthly reach.</p>
+        </div>
+        <div class="csg-card">
+          <div class="csg-metric">Assegai</div>
+          <div class="csg-metric-lbl">Award winner</div>
+          <div class="csg-name">Bloom Health</div>
+          <div class="csg-sector">Health insurance, fintech</div>
+          <p class="csg-note">A Bronze Assegai for Social Media and Leader recognition in Search Marketing, with cost per lead beating industry norms. Third-party proof you can point to.</p>
+        </div>
+        <div class="csg-card">
+          <div class="csg-metric">+67%</div>
+          <div class="csg-metric-lbl">MQL rate, YoY</div>
+          <div class="csg-name">Silverfin</div>
+          <div class="csg-sector">B2B SaaS, accounting</div>
+          <p class="csg-note">ICP-segmented LinkedIn campaigns aligned to Salesforce, generating roughly &euro;125,000 in pipeline. See the flagship story above.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="disc-block">
+      <div class="disc-head">
+        <h3 class="disc-name">Conversion</h3>
+        <p class="disc-frame">Traffic that does not convert is just cost. These are journeys rebuilt so the right visitor takes the next step.</p>
+      </div>
+      <div class="disc-grid">
+        <div class="csg-card">
+          <div class="csg-metric">+8%</div>
+          <div class="csg-metric-lbl">Landing conversion</div>
+          <div class="csg-name">Environ Skin Care</div>
+          <div class="csg-sector">Beauty and wellness</div>
+          <p class="csg-note">Forms and CTAs tested, landing-page messaging matched to the paid creative that drove the click, and UX friction removed.</p>
+        </div>
+        <div class="csg-card">
+          <div class="csg-metric">+32%</div>
+          <div class="csg-metric-lbl">Enquiry conversion</div>
+          <div class="csg-name">A national tertiary education provider</div>
+          <div class="csg-sector">Education, lead generation</div>
+          <p class="csg-note">Form layout simplified and the enquiry UX rebuilt. See the flagship story above.</p>
+        </div>
+        <div class="csg-card">
+          <div class="csg-metric">Significant</div>
+          <div class="csg-metric-lbl">Qualified-lead uplift</div>
+          <div class="csg-name">A luxury travel brand</div>
+          <div class="csg-sector">Luxury travel, confidential</div>
+          <p class="csg-note">A/B tested landing experiences and resequenced form fields, instrumented to the variant level. A statistically significant uplift in qualified submissions. Details held under NDA.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="honesty">
+  <p>A note on the numbers. Several of these engagements were delivered within teams, and the figures reflect that shared effort rather than solo work. They are reported as they were measured, at the time they were measured. Where a client cannot be named, the sector is given instead, and the result still carries.</p>
+</div>
+
+<!-- CTA -->
+<section class="cs-cta" aria-labelledby="cs-cta-h">
+  <div class="cs-cta-inner">
+    <div class="cs-cta-text">
+      <h2 id="cs-cta-h">Your brand could be the next number.</h2>
+      <p>Start with a free read of where you stand, or tell me what you are trying to move and we will work out where the real block is.</p>
+    </div>
+    <div class="cs-cta-btns">
+      <a href="/diagnostic/" class="cs-cta-primary">Run the free diagnostic
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="/contact/" class="cs-cta-ghost">Start a conversation</a>
+    </div>
+  </div>
+</section>
+
 </main>
 <footer class="footer" role="contentinfo">
   <div class="footer-inner">
@@ -303,17 +555,17 @@ a { color: inherit; text-decoration: none; }
   var trig = document.querySelector('.nav-droptrig');
   var drop = document.getElementById('insights-drop');
   if (trig && drop) {
-    function close() { drop.classList.remove('open'); trig.setAttribute('aria-expanded', 'false'); }
+    function closeDrop() { drop.classList.remove('open'); trig.setAttribute('aria-expanded', 'false'); }
     trig.addEventListener('click', function (e) {
       e.stopPropagation();
       var open = drop.classList.toggle('open');
       trig.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
     document.addEventListener('click', function (e) {
-      if (!drop.contains(e.target) && e.target !== trig) close();
+      if (!drop.contains(e.target) && e.target !== trig) closeDrop();
     });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && drop.classList.contains('open')) { close(); trig.focus(); }
+      if (e.key === 'Escape' && drop.classList.contains('open')) { closeDrop(); trig.focus(); }
     });
   }
   var burger = document.querySelector('.nav-burger');
