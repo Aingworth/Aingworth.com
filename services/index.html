@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Visibility Audits &amp; Brand Authority Consulting | Aingworth</title>
-<meta name="description" content="AI visibility audits, brand authority consulting, workshops and keynotes with Lucy Aingworth. Built on the Recognition Triangle, the diagnostic model, and the Authority Method, the five-stage process.">
+<meta name="description" content="AI visibility audits, authority strategy and build, and ongoing recognition management for founders and professional-services firms. Every engagement runs on the Recognition Triangle and the Authority Method. Founded by Lucy Aingworth.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://aingworth.com/services/">
 <link rel="icon" href="/images/Aingworth_Main_favicon.png" type="image/png">
@@ -35,14 +35,28 @@
       "@type": "Service",
       "name": "AI Visibility Audit",
       "provider": { "@id": "https://aingworth.com/#organization" },
-      "description": "A structured GEO audit service reviewing all three conditions of the Recognition Triangle: Clarity, Credibility, and Earned Authority.",
+      "description": "A structured audit of how AI systems see your brand across all three conditions of the Recognition Triangle: Clarity, Credibility, and Earned Authority.",
       "offers": { "@type": "Offer", "price": "1500", "priceCurrency": "USD" }
     },
     {
       "@type": "Service",
-      "name": "Authority Strategy Consulting",
+      "name": "Authority Strategy",
       "provider": { "@id": "https://aingworth.com/#organization" },
-      "description": "Brand authority consulting on a monthly retainer, building the structural authority signals AI models use to decide who to cite.",
+      "description": "A one-time strategic plan that turns the audit into a prioritised roadmap for building recognition, using the Authority Method.",
+      "offers": { "@type": "Offer", "price": "3500", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "Service",
+      "name": "Authority Build",
+      "provider": { "@id": "https://aingworth.com/#organization" },
+      "description": "Done-for-you implementation of the plan: the structural authority signals, entity and citation work that make a brand recognisable to people and AI.",
+      "offers": { "@type": "Offer", "price": "7500", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "Service",
+      "name": "Recognition Management",
+      "provider": { "@id": "https://aingworth.com/#organization" },
+      "description": "An ongoing monthly retainer that tracks how AI names you, keeps your authority signals current, and compounds recognition over time.",
       "offers": { "@type": "Offer", "price": "2500", "priceCurrency": "USD" }
     },
     {
@@ -56,7 +70,7 @@
       "@type": "Service",
       "name": "One-to-One Coaching",
       "provider": { "@id": "https://aingworth.com/#organization" },
-      "description": "Virtual coaching sessions covering positioning, AI visibility, and growth leadership.",
+      "description": "Virtual coaching for founders and leaders on positioning, recognition in AI search, and growth leadership.",
       "offers": { "@type": "Offer", "price": "450", "priceCurrency": "USD" }
     },
     {
@@ -208,12 +222,14 @@ a { color: inherit; text-decoration: none; }
 .cur-btn { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; padding: 6px 14px; border: 1px solid var(--border-dark); background: none; color: rgba(226,226,226,.45); border-radius: 2px; cursor: pointer; transition: all .2s; }
 .cur-btn.active { border-color: var(--teal-light); color: var(--teal-light); background: rgba(107,191,176,.07); }
 .cur-note { font-family: var(--mono); font-size: 10px; color: rgba(226,226,226,.3); letter-spacing: .1em; text-transform: uppercase; }
-/* MATCHER */
-.match-sec { background: var(--charcoal); padding: 90px var(--px); position: relative; overflow: hidden; }
-.match-sec::before { content: ''; position: absolute; top: -120px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(74,158,142,.05) 0%, transparent 65%); pointer-events: none; }
+/* MATCHER (green standout band; quiz panel stays dark) */
+.match-sec { background: #E8E8E8; padding: 90px var(--px); position: relative; overflow: hidden; }
 .match-head { max-width: 640px; margin: 0 auto 40px; text-align: center; position: relative; z-index: 1; }
 .match-head .sec-eye { justify-content: center; }
-.match-head p { font-size: 15px; color: var(--muted-dark); line-height: 1.7; }
+.match-head .sec-rule { background: var(--teal-light); }
+.match-head .sec-lbl { color: var(--teal); }
+.match-head .sec-h2 { color: var(--charcoal); }
+.match-head p { font-size: 15px; color: rgba(26,26,26,.78); line-height: 1.7; }
 .match-panel { max-width: 720px; margin: 0 auto; background: var(--charcoal-mid); border: 1px solid var(--border-dark); border-radius: 3px; position: relative; z-index: 1; overflow: hidden; }
 .match-top { display: flex; align-items: center; justify-content: space-between; padding: 16px 26px; border-bottom: 1px solid var(--border-dark); }
 .match-top span { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: rgba(226,226,226,.4); }
@@ -319,6 +335,15 @@ a { color: inherit; text-decoration: none; }
 .flegal { display: flex; gap: 20px; }
 .flegal a { font-family: var(--mono); font-size: 11px; color: rgba(226,226,226,.25); letter-spacing: .06em; transition: color .2s; }
 .flegal a:hover { color: var(--teal-light); }
+/* Ask AI about Aingworth (footer device) */
+.askai { border-top: 1px solid var(--border-dark); padding-top: 24px; margin-bottom: 32px; display: flex; align-items: center; gap: 14px 26px; flex-wrap: wrap; }
+.askai-h { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: rgba(226,226,226,.4); margin: 0; }
+.askai-row { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+.askai-row a { display: inline-flex; align-items: center; opacity: .8; transition: opacity .2s, transform .2s; }
+.askai-row a:hover { opacity: 1; transform: translateY(-1px); }
+.askai-row img { height: 22px; width: auto; display: block; }
+.askai-dot { color: rgba(226,226,226,.2); }
+.fsignoff { font-family: var(--serif, 'Cormorant Garamond', Georgia, serif); font-style: italic; font-size: 18px; color: rgba(226,226,226,.5); }
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .svc-hero { padding: 120px var(--px) 56px; }
@@ -357,7 +382,16 @@ a { color: inherit; text-decoration: none; }
       <li><a href="/services/" aria-current="page">Services</a></li>
       <li><a href="/her-worth/">HER-Worth</a></li>
       <li><a href="/book/">The Book</a></li>
-      <li><a href="/diagnostic/">Diagnostic</a></li>
+      <li class="nav-has-drop">
+        <button type="button" class="nav-droptrig" aria-expanded="false" aria-haspopup="true" aria-controls="tools-drop">Tools
+          <svg class="nav-caret" width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-drop" id="tools-drop" role="menu">
+          <a href="/diagnostic/" role="menuitem"><span class="nd-t">Diagnostic</span><span class="nd-d">Fifteen questions. Five minutes. The pattern you are in now.</span></a>
+          <a href="/recognition-check/" role="menuitem"><span class="nd-t">Recognition Check</span><span class="nd-d">Run one buyer question across the models. See how often AI names you.</span></a>
+          <a href="/recognition-snapshot/" role="menuitem"><span class="nd-t">Recognition Snapshot</span><span class="nd-d">A fast, first look at what AI says about you today.</span></a>
+        </div>
+      </li>
       <li class="nav-has-drop">
         <button type="button" class="nav-droptrig" aria-expanded="false" aria-haspopup="true" aria-controls="insights-drop">Insights
           <svg class="nav-caret" width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -365,10 +399,21 @@ a { color: inherit; text-decoration: none; }
         <div class="nav-drop" id="insights-drop" role="menu">
           <a href="/articles/" role="menuitem"><span class="nd-t">Articles</span><span class="nd-d">Practical thinking on AI search and authority</span></a>
           <a href="/frameworks/" role="menuitem"><span class="nd-t">Frameworks</span><span class="nd-d">The named ideas behind Become the Answer</span></a>
-          <a href="/case-studies/" role="menuitem"><span class="nd-t">Case Studies</span><span class="nd-d">Authority work, in practice</span></a>
+          <a href="/case-studies/" role="menuitem"><span class="nd-t">Case Studies</span><span class="nd-d">The method, in practice, named</span></a>
+          <a href="/glossary/" role="menuitem"><span class="nd-t">Glossary</span><span class="nd-d">Clean definitions of the Recognition vocabulary</span></a>
+          <a href="/playbooks/" role="menuitem"><span class="nd-t">Playbooks</span><span class="nd-d">How to build recognition, step by step</span></a>
+          <a href="/research/" role="menuitem"><span class="nd-t">Research</span><span class="nd-d">Original studies, dated, with method shown</span></a>
         </div>
       </li>
-      <li><a href="/about/">About</a></li>
+      <li class="nav-has-drop">
+        <button type="button" class="nav-droptrig" aria-expanded="false" aria-haspopup="true" aria-controls="about-drop">About
+          <svg class="nav-caret" width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-drop" id="about-drop" role="menu">
+          <a href="/about/" role="menuitem"><span class="nd-t">About</span><span class="nd-d">Lucy Aingworth, and why Aingworth exists</span></a>
+          <a href="/approach/" role="menuitem"><span class="nd-t">Our Approach</span><span class="nd-d">The thesis and the Authority Method</span></a>
+        </div>
+      </li>
       <li><a href="/south-africa/">South Africa</a></li>
       <li class="ncta"><a href="/contact/">Let's Talk</a></li>
     </ul>
@@ -380,14 +425,26 @@ a { color: inherit; text-decoration: none; }
     <a href="/services/" aria-current="page">Services</a>
     <a href="/her-worth/">HER-Worth</a>
     <a href="/book/">The Book</a>
-    <a href="/diagnostic/">Diagnostic</a>
+    <div class="drawer-group">
+      <p class="drawer-group-h">Tools</p>
+      <a href="/diagnostic/" class="drawer-sub">Diagnostic</a>
+      <a href="/recognition-check/" class="drawer-sub">Recognition Check</a>
+      <a href="/recognition-snapshot/" class="drawer-sub">Recognition Snapshot</a>
+    </div>
     <div class="drawer-group">
       <p class="drawer-group-h">Insights</p>
       <a href="/articles/" class="drawer-sub">Articles</a>
       <a href="/frameworks/" class="drawer-sub">Frameworks</a>
       <a href="/case-studies/" class="drawer-sub">Case Studies</a>
+      <a href="/glossary/" class="drawer-sub">Glossary</a>
+      <a href="/playbooks/" class="drawer-sub">Playbooks</a>
+      <a href="/research/" class="drawer-sub">Research</a>
     </div>
-    <a href="/about/">About</a>
+    <div class="drawer-group">
+      <p class="drawer-group-h">About</p>
+      <a href="/about/" class="drawer-sub">About</a>
+      <a href="/approach/" class="drawer-sub">Our Approach</a>
+    </div>
     <a href="/south-africa/">South Africa</a>
     <a href="/contact/" class="drawer-cta">Let's Talk</a>
   </nav>
@@ -405,15 +462,23 @@ a { color: inherit; text-decoration: none; }
         <span class="hline"><span>for the</span></span>
         <span class="hline"><span><em>recognition era.</em></span></span>
       </h1>
-      <p class="svc-hero-sub">AI visibility audits and brand authority consulting for founders and CMOs. Every engagement uses the Recognition Triangle to diagnose where recognition is failing, and the Authority Method to build it back. No generic packages. No spray-and-pray tactics. Work that holds up as the search landscape keeps shifting.</p>
+      <p class="svc-hero-sub">AI visibility audits, strategy, build, and ongoing management for founders and professional-services firms. Every engagement uses the Recognition Triangle to find where recognition is failing, and the Authority Method to build it back. No generic packages. Work that holds up as the search landscape keeps shifting.</p>
     </div>
     <nav class="rate-card" aria-label="Services and starting rates">
       <a class="rate-row" href="#audit">
         <span class="rate-name">AI Visibility Audit</span>
         <span class="rate-right"><span class="rate-price">From <span data-usd="$1,500" data-gbp="&pound;1,200" data-eur="&euro;1,400" data-zar="R25,000">$1,500</span></span><span class="rate-arr" aria-hidden="true"></span></span>
       </a>
+      <a class="rate-row" href="#strategy">
+        <span class="rate-name">Authority Strategy</span>
+        <span class="rate-right"><span class="rate-price">From <span data-usd="$3,500" data-gbp="&pound;2,750" data-eur="&euro;3,250" data-zar="R40,000">$3,500</span></span><span class="rate-arr" aria-hidden="true"></span></span>
+      </a>
+      <a class="rate-row" href="#build">
+        <span class="rate-name">Authority Build</span>
+        <span class="rate-right"><span class="rate-price">From <span data-usd="$7,500" data-gbp="&pound;6,000" data-eur="&euro;7,000" data-zar="R70,000">$7,500</span></span><span class="rate-arr" aria-hidden="true"></span></span>
+      </a>
       <a class="rate-row" href="#consulting">
-        <span class="rate-name">Authority Strategy Consulting</span>
+        <span class="rate-name">Recognition Management</span>
         <span class="rate-right"><span class="rate-price">From <span data-usd="$2,500/mo" data-gbp="&pound;2,000/mo" data-eur="&euro;2,350/mo" data-zar="R30,000/mo">$2,500/mo</span></span><span class="rate-arr" aria-hidden="true"></span></span>
       </a>
       <a class="rate-row" href="#workshop">
@@ -477,64 +542,86 @@ a { color: inherit; text-decoration: none; }
   <div class="svc-inner">
     <div class="svc-head anim">
       <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Services</span></div>
-      <h2 class="sec-h2" id="svcgrid-h">Five ways to work together.</h2>
-      <p class="sec-body">All work runs on two things. The <a href="/frameworks/#recognition-triangle">Recognition Triangle</a> is the model that diagnoses which of the three conditions is failing. The <a href="/frameworks/#authority-method">Authority Method</a> is the five-stage process that builds it back. Each service can stand alone or connect into a broader strategy depending on where you are and what you need.</p>
+      <h2 class="sec-h2" id="svcgrid-h">Ways to work together.</h2>
+      <p class="sec-body">Every engagement runs on two things. The <a href="/frameworks/#recognition-triangle">Recognition Triangle</a> finds which of the three conditions is failing. The <a href="/frameworks/#authority-method">Authority Method</a> is the five-stage process that builds it back. The first four form a ladder: audit where you stand, plan the fix, build it, then manage it over time. Each can stand alone or connect into a broader engagement.</p>
     </div>
     <div class="svc-grid">
       <article class="svc-card anim" id="audit">
         <span class="svc-num" aria-hidden="true">01</span>
         <p class="svc-tag">AI Visibility Audit</p>
         <h3 class="svc-title">Know exactly where you stand in AI search.</h3>
-        <p class="svc-body">A structured GEO audit reviewing all three conditions of the Recognition Triangle. You get a clear picture of what is working, what is leaking, and where the highest-impact fixes are.</p>
+        <p class="svc-body">A structured audit of how AI systems see your brand across all three conditions of the Recognition Triangle. You get a clear read on where AI already places you, what is working, what is leaking, and the highest-impact fixes. It is the front door to the strategy and build below.</p>
         <p class="svc-price-lbl">Starting from</p>
         <p class="svc-price" data-usd="$1,500" data-gbp="&pound;1,200" data-eur="&euro;1,400" data-zar="R25,000">$1,500</p>
         <p class="svc-price-unit">One-time audit</p>
         <p class="svc-meta">One-time &middot; Remote &middot; 5 to 10 business days</p>
         <a href="/contact/" class="svc-link">Enquire <span class="arr"></span></a>
       </article>
-      <article class="svc-card anim d1" id="consulting">
+      <article class="svc-card anim d1" id="strategy">
         <span class="svc-num" aria-hidden="true">02</span>
-        <p class="svc-tag">Authority Strategy Consulting</p>
-        <h3 class="svc-title">Ongoing strategy for brands building durable authority.</h3>
-        <p class="svc-body">Monthly retainer work for founders and CMOs who need a long-term partner. We build the structural authority signals that AI models actually use to decide who to cite.</p>
+        <p class="svc-tag">Authority Strategy</p>
+        <h3 class="svc-title">Turn the audit into a plan.</h3>
+        <p class="svc-body">A one-time strategic engagement that turns the audit into a prioritised roadmap: which authority signals to build, in what order, and how they connect. You leave with a plan your team, or ours, can execute.</p>
+        <p class="svc-price-lbl">Starting from</p>
+        <p class="svc-price" data-usd="$3,500" data-gbp="&pound;2,750" data-eur="&euro;3,250" data-zar="R40,000">$3,500</p>
+        <p class="svc-price-unit">One-time plan</p>
+        <p class="svc-meta">One-time &middot; Remote &middot; Delivered as a roadmap</p>
+        <a href="/contact/" class="svc-link">Enquire <span class="arr"></span></a>
+      </article>
+      <article class="svc-card anim d2" id="build">
+        <span class="svc-num" aria-hidden="true">03</span>
+        <p class="svc-tag">Authority Build</p>
+        <h3 class="svc-title">Done-for-you. The authority, built.</h3>
+        <p class="svc-body">Hands-on implementation of the plan. We build and place the structural authority signals, from entity and schema to the earned references people and machines trust, so recognition has something real to stand on.</p>
+        <p class="svc-price-lbl">Starting from</p>
+        <p class="svc-price" data-usd="$7,500" data-gbp="&pound;6,000" data-eur="&euro;7,000" data-zar="R70,000">$7,500</p>
+        <p class="svc-price-unit">Project-based</p>
+        <p class="svc-meta">Project &middot; Remote &middot; Scoped to the plan</p>
+        <a href="/contact/" class="svc-link">Enquire <span class="arr"></span></a>
+      </article>
+      <article class="svc-card anim" id="consulting">
+        <span class="svc-num" aria-hidden="true">04</span>
+        <p class="svc-tag">Recognition Management</p>
+        <h3 class="svc-title">Recognition, tracked and compounded.</h3>
+        <p class="svc-body">A monthly retainer for founders and CMOs who want a long-term partner. We track how AI names you, keep your authority signals current, publish the evidence, and compound recognition month over month.</p>
         <p class="svc-price-lbl">Starting from</p>
         <p class="svc-price" data-usd="$2,500" data-gbp="&pound;2,000" data-eur="&euro;2,350" data-zar="R30,000">$2,500</p>
         <p class="svc-price-unit">Per month</p>
         <p class="svc-meta">Monthly retainer &middot; Virtual &middot; Minimum 3 months</p>
         <a href="/contact/" class="svc-link">Enquire <span class="arr"></span></a>
       </article>
-      <article class="svc-card anim d2" id="workshop">
-        <span class="svc-num" aria-hidden="true">03</span>
+      <article class="svc-card anim d1" id="workshop">
+        <span class="svc-num" aria-hidden="true">05</span>
         <p class="svc-tag">Brand Clarity Workshop</p>
         <h3 class="svc-title">Get your team aligned on what you stand for.</h3>
-        <p class="svc-body">A structured, facilitated group session applying the Recognition Triangle to your brand's positioning and messaging. Produces a working document your team can act on immediately.</p>
+        <p class="svc-body">A facilitated session that applies the Recognition Triangle to your positioning and messaging, so your team agrees on what you actually stand for. Produces a working document you can act on immediately.</p>
         <p class="svc-price-lbl">Starting from</p>
         <p class="svc-price" data-usd="$3,500" data-gbp="&pound;2,750" data-eur="&euro;3,250" data-zar="R40,000">$3,500</p>
         <p class="svc-price-unit">Per workshop</p>
         <p class="svc-meta">In-person &middot; Half or full day &middot; 4 to 30 people</p>
         <a href="/contact/" class="svc-link">Enquire <span class="arr"></span></a>
       </article>
-      <article class="svc-card anim" id="coaching">
-        <span class="svc-num" aria-hidden="true">04</span>
+      <article class="svc-card anim d2" id="coaching">
+        <span class="svc-num" aria-hidden="true">06</span>
         <p class="svc-tag">One-to-One Coaching</p>
         <h3 class="svc-title">Clarity, direction, and a real thinking partner.</h3>
-        <p class="svc-body">Virtual sessions for founders, executives, and marketing leaders who need space to think clearly and make better decisions. Covers positioning, AI visibility, growth leadership, and more.</p>
+        <p class="svc-body">Virtual sessions for founders, executives, and marketing leaders who need space to think clearly and decide better. Positioning, recognition in AI search, and growth leadership, with a real thinking partner.</p>
         <p class="svc-price-lbl">Starting from</p>
         <p class="svc-price" data-usd="$450" data-gbp="&pound;350" data-eur="&euro;425" data-zar="R4,500">$450</p>
         <p class="svc-price-unit">Per session</p>
         <p class="svc-meta">Virtual &middot; 90-minute sessions &middot; Packages available</p>
         <a href="/contact/" class="svc-link">Enquire <span class="arr"></span></a>
       </article>
-      <article class="svc-card svc-card-hw anim d1" id="herworth">
-        <span class="svc-num" aria-hidden="true">05</span>
+      <article class="svc-card svc-card-hw anim" id="herworth">
+        <span class="svc-num" aria-hidden="true">07</span>
         <p class="svc-tag">HER-Worth</p>
         <h3 class="svc-title">For women building on their own terms.</h3>
         <p class="svc-body">Consulting and coaching for women founders and executives. Same rigour as every other engagement. A different conversation. See the HER-Worth page for full programme details.</p>
         <p class="svc-meta" style="border-top:none;padding-top:0">Multiple participation options available</p>
         <a href="/her-worth/" class="svc-link">Start HER-Worth <span class="arr"></span></a>
       </article>
-      <article class="svc-card anim d2">
-        <span class="svc-num" aria-hidden="true">06</span>
+      <article class="svc-card anim d1">
+        <span class="svc-num" aria-hidden="true">08</span>
         <p class="svc-tag">Speaking and Keynotes</p>
         <h3 class="svc-title">Keynotes and workshops on AI search and brand authority.</h3>
         <p class="svc-body">For marketing teams, leadership groups, and conferences. Keynotes from 30 minutes. Full-day facilitated workshops for corporate teams. In-person and virtual.</p>
@@ -542,7 +629,7 @@ a { color: inherit; text-decoration: none; }
         <p class="svc-price" data-usd="$2,000" data-gbp="&pound;1,600" data-eur="&euro;1,850" data-zar="R20,000">$2,000</p>
         <p class="svc-price-unit">Per engagement</p>
         <p class="svc-meta">Keynotes and virtual &middot; 30 minutes to full day</p>
-        <a href="#speaking" class="svc-link">Book Lucy <span class="arr"></span></a>
+        <a href="#speaking" class="svc-link">Book a session <span class="arr"></span></a>
       </article>
     </div>
   </div>
@@ -554,7 +641,7 @@ a { color: inherit; text-decoration: none; }
       <h2 class="sec-h2 sec-h2-light" id="speak-h">Bring the recognition economy into your event or team.</h2>
       <p class="sec-body">Lucy is an AI keynote speaker based in South Africa, available in-person and virtually worldwide. She speaks on AI search visibility, brand authority, the recognition economy, and the human side of growth leadership. Sessions range from 30-minute keynotes to full-day facilitated workshops.</p>
       <a href="/contact/" class="cta-primary">
-        Book Lucy to Speak
+        Book a keynote
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
@@ -607,7 +694,7 @@ a { color: inherit; text-decoration: none; }
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <a href="/contact/" class="cta-banner-ghost">
-        Or contact Lucy directly
+        Or contact us directly
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
@@ -629,7 +716,7 @@ a { color: inherit; text-decoration: none; }
           <a href="https://www.threads.net/@lucy_aingworth" class="fsoc" aria-label="Threads" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.2 21.5c-2.9 0-5.1-1-6.6-2.9C4.3 16.9 3.6 14.7 3.6 12s.7-4.9 2-6.6C7.1 3.5 9.3 2.5 12.2 2.5c2.9 0 5.1 1 6.6 2.9.7.9 1.2 2 1.5 3.2l-2 .5c-.2-.9-.6-1.6-1-2.2-1-1.3-2.6-2-4.6-2-2 0-3.6.7-4.6 2-1 1.3-1.5 3-1.5 5.1s.5 3.8 1.5 5.1c1 1.3 2.6 2 4.6 2 1.8 0 3.1-.5 4-1.5.6-.7.9-1.5 1-2.4-.5.3-1.1.5-1.8.6-2.3.3-4.2-.6-4.4-2.4-.2-1.5 1-2.7 2.9-2.9 1-.1 1.9 0 2.7.3 0-.4-.1-.8-.3-1.1-.3-.5-.9-.8-1.7-.8-1 0-1.7.4-2.1 1.1l-1.8-1c.8-1.3 2.1-2 3.9-2 1.5 0 2.7.5 3.5 1.5.7.9 1 2.1 1 3.7v.4c1.2.9 1.9 2.2 1.9 3.9 0 2.9-2.2 5.2-6.7 5.2zm1.5-8.3c-.7 0-1.4.2-1.4.9 0 .5.6.8 1.3.7.9-.1 1.6-.5 2-1.2-.6-.3-1.2-.4-1.9-.4z"/></svg></a>
           <a href="https://bsky.app/profile/lucyaingworth.bsky.social" class="fsoc" aria-label="Bluesky" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 10.8C10.9 8.6 7.9 4.6 5.1 2.9 3.9 2.2 2.5 2.7 2.5 4.6c0 1.1.6 6 1 6.8.6 1.4 2 1.8 3.3 1.6-2 .3-3.7 1-1.7 3.3 2.2 2.5 3.6-.6 4.3-2.2.2-.4.3-.6.6-.6s.4.2.6.6c.7 1.6 2.1 4.7 4.3 2.2 2-2.3.3-3-1.7-3.3 1.3.2 2.7-.2 3.3-1.6.4-.8 1-5.7 1-6.8 0-1.9-1.4-2.4-2.6-1.7C16.1 4.6 13.1 8.6 12 10.8z"/></svg></a>
         </nav>
-        <p class="fborahae" aria-label="Borahae — I purple you"><span lang="ko">보라해</span> 💜</p>
+        <p class="fborahae" aria-label="Borahae, I purple you"><span lang="ko">보라해</span> 💜</p>
       </div>
       <div class="fcol">
         <p class="fcol-h">Work</p>
@@ -638,42 +725,69 @@ a { color: inherit; text-decoration: none; }
           <li><a href="/her-worth/">HER-Worth</a></li>
           <li><a href="/south-africa/">South Africa</a></li>
           <li><a href="/diagnostic/">Free Diagnostic</a></li>
+          <li><a href="/recognition-check/">Recognition Check</a></li>
         </ul>
       </div>
       <div class="fcol">
         <p class="fcol-h">Explore</p>
         <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+          <li><a href="/playbooks/">Playbooks</a></li>
           <li><a href="/book/">The Book</a></li>
           <li><a href="/articles/">Articles</a></li>
-          <li><a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener">The Authority Signal</a></li>
-          <li><a href="/about/">About Lucy</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
       </div>
     </div>
+    <div class="askai" aria-label="Ask AI about Aingworth">
+      <p class="askai-h">Ask AI about Aingworth</p>
+      <div class="askai-row">
+        <a href="https://chatgpt.com/?q=Summarize%20Aingworth%20and%20the%20Recognition%20Triangle%2C%20and%20who%20Lucy%20Aingworth%20is." target="_blank" rel="noopener" aria-label="Ask ChatGPT about Aingworth"><img src="/images/ChatGpt.png" alt="ChatGPT"></a>
+        <a href="https://claude.ai/new?q=Summarize%20Aingworth%20and%20the%20Recognition%20Triangle%2C%20and%20who%20Lucy%20Aingworth%20is." target="_blank" rel="noopener" aria-label="Ask Claude about Aingworth"><img src="/images/Claude.png" alt="Claude"></a>
+        <a href="https://gemini.google.com/app?q=Summarize%20Aingworth%20and%20the%20Recognition%20Triangle%2C%20and%20who%20Lucy%20Aingworth%20is." target="_blank" rel="noopener" aria-label="Ask Gemini about Aingworth"><img src="/images/Gemini.png" alt="Gemini"></a>
+        <a href="https://www.perplexity.ai/search?q=Summarize%20Aingworth%20and%20the%20Recognition%20Triangle%2C%20and%20who%20Lucy%20Aingworth%20is." target="_blank" rel="noopener" aria-label="Ask Perplexity about Aingworth"><img src="/images/Perplexity.png" alt="Perplexity"></a>
+      </div>
+    </div>
     <div class="fbase">
+      <p class="fsignoff">Become the answer.</p>
       <p class="fcopy">&copy; 2026 Aingworth. All rights reserved.</p>
       <nav class="flegal" aria-label="Legal"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
     </div>
   </div>
 </footer>
 <script>
-/* ===== Insights dropdown ===== */
+/* ===== Nav dropdowns (Tools, Insights, About): hover on desktop, click and keyboard everywhere ===== */
 (function () {
-  var trig = document.querySelector('.nav-droptrig');
-  var drop = document.getElementById('insights-drop');
-  if (!trig || !drop) return;
-  function closeDrop() { drop.classList.remove('open'); trig.setAttribute('aria-expanded', 'false'); }
-  trig.addEventListener('click', function (e) {
-    e.stopPropagation();
-    var open = drop.classList.toggle('open');
-    trig.setAttribute('aria-expanded', open ? 'true' : 'false');
+  var groups = Array.prototype.slice.call(document.querySelectorAll('.nav-has-drop'));
+  if (!groups.length) return;
+  var items = groups.map(function (g) {
+    return { trig: g.querySelector('.nav-droptrig'), drop: g.querySelector('.nav-drop') };
+  }).filter(function (it) { return it.trig && it.drop; });
+  function closeAll(except) {
+    items.forEach(function (it) {
+      if (it === except) return;
+      it.drop.classList.remove('open');
+      it.trig.setAttribute('aria-expanded', 'false');
+    });
+  }
+  items.forEach(function (it) {
+    it.trig.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = it.drop.classList.toggle('open');
+      it.trig.setAttribute('aria-expanded', open ? 'true' : 'false');
+      closeAll(it);
+    });
   });
   document.addEventListener('click', function (e) {
-    if (!drop.contains(e.target) && e.target !== trig) closeDrop();
+    var inside = items.some(function (it) { return it.drop.contains(e.target) || it.trig === e.target || it.trig.contains(e.target); });
+    if (!inside) closeAll(null);
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && drop.classList.contains('open')) { closeDrop(); trig.focus(); }
+    if (e.key !== 'Escape') return;
+    items.forEach(function (it) {
+      if (it.drop.classList.contains('open')) { it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded', 'false'); it.trig.focus(); }
+    });
   });
 })();
 /* ===== Nav drawer ===== */
@@ -735,12 +849,12 @@ window.__cur = 'usd';
   var SERVICES = {
     audit:      { name: 'AI Visibility Audit', usd: '$1,500 one-time', gbp: '£1,200 one-time', eur: '€1,400 one-time', zar: 'R25,000 one-time', href: '#audit',
                   why: 'You need a clear picture before committing to a direction. The audit maps your Recognition Triangle and shows where the highest-impact fixes are.' },
-    consulting: { name: 'Authority Strategy Consulting', usd: '$2,500 per month', gbp: '£2,000 per month', eur: '€2,350 per month', zar: 'R30,000 per month', href: '#consulting',
-                  why: 'You are building for the long term and need a strategic partner. The retainer builds the structural authority signals AI models actually cite.' },
+    consulting: { name: 'Recognition Management', usd: '$2,500 per month', gbp: '£2,000 per month', eur: '€2,350 per month', zar: 'R30,000 per month', href: '#consulting',
+                  why: 'You are building for the long term and need a strategic partner. The retainer tracks how AI names you and keeps the authority signals it reads current, month after month.' },
     workshop:   { name: 'Brand Clarity Workshop', usd: '$3,500 per workshop', gbp: '£2,750 per workshop', eur: '€3,250 per workshop', zar: 'R40,000 per workshop', href: '#workshop',
                   why: 'Your team needs to align on what you stand for. One facilitated session produces a working positioning document you can act on immediately.' },
     coaching:   { name: 'One-to-One Coaching', usd: '$450 per session', gbp: '£350 per session', eur: '€425 per session', zar: 'R4,500 per session', href: '#coaching',
-                  why: 'You need space to think clearly and a real thinking partner. Virtual sessions covering positioning, AI visibility and growth leadership.' },
+                  why: 'You need space to think clearly and a real thinking partner. Virtual sessions covering positioning, recognition in AI search, and growth leadership.' },
     speaking:   { name: 'Speaking and Keynotes', usd: 'From $2,000 per engagement', gbp: 'From £1,600 per engagement', eur: 'From €1,850 per engagement', zar: 'From R20,000 per engagement', href: '#speaking',
                   why: 'Your team or event needs to understand the shift to the recognition economy. From 30-minute keynotes to full-day applied workshops.' },
     herworth:   { name: 'HER-Worth', usd: 'Multiple participation options', gbp: 'Multiple participation options', eur: 'Multiple participation options', zar: 'Multiple participation options', href: '/her-worth/',
@@ -850,7 +964,7 @@ window.__cur = 'usd';
       '<p class="match-result-price" data-usd="' + S.usd + '" data-gbp="' + S.gbp + '" data-eur="' + S.eur + '" data-zar="' + S.zar + '">' + S[cur] + '</p>' +
       '<div class="match-result-ctas">' +
       '<a href="' + S.href + '" class="cta-primary">See the service</a>' +
-      '<a href="/contact/" class="match-back" style="opacity:1">Or talk to Lucy &rarr;</a>' +
+      '<a href="/contact/" class="match-back" style="opacity:1">Or talk to us &rarr;</a>' +
       '</div>' +
       '<div class="match-form-wrap"><p>Want this as a personalised proposal? Enter your email and it comes straight to your inbox.</p>' +
       '<form class="match-form" action="https://formspree.io/f/mnjevrjl" method="POST">' +
