@@ -12,7 +12,7 @@ The practice is built on a set of named frameworks and concepts introduced in *B
 - [Services](https://aingworth.com/services/): Consulting, coaching, speaking, and workshop services, typically starting with an AI Visibility Audit.
 - [The Recognition Diagnostic](https://aingworth.com/diagnostic/): A free 15-question self-assessment that identifies which of six Recognition Triangle patterns - The Promising Claim, The Hidden Expert, The Validated Generalist, The Strong Foundation, The Recognized Authority, or The Decaying Authority - currently describes a brand, with tailored next steps for each.
 - [The Book](https://aingworth.com/book/): Become the Answer: How Brands Build Authority in the Age of AI, by Lucy Aingworth, available on Amazon.
-- [HER-Worth](https://aingworth.com/her-worth/): A separate consulting and coaching programme founded by Lucy Aingworth for women founders and executives.
+- [HER-Worth](https://aingworth.com/her-worth/): A separate consulting and coaching program founded by Lucy Aingworth for women founders and executives.
 - [About Lucy Aingworth](https://aingworth.com/about/): Lucy's background, expertise, and the convictions behind Aingworth's practice.
 - [Contact](https://aingworth.com/contact/): Direct contact form for consulting, speaking, media, HER-Worth, or general enquiries.
 
