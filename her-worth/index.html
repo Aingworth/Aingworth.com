@@ -71,6 +71,7 @@
   --mid-grey:       #888880;
   --lav:            #c4a7e4;
   --lav-deep:       #9a77c4;
+  --lav-soft:       #ece5f7;
   --border-dark:    rgba(196,167,228,0.12);
   --border-light:   rgba(28,15,19,0.1);
   --muted-dark:     rgba(226,226,226,0.6);
@@ -240,28 +241,43 @@ a { color: inherit; text-decoration: none; }
 .strat-title { font-family: var(--serif); font-size: 21px; font-weight: 500; color: var(--charcoal); line-height: 1.25; margin-bottom: 10px; }
 .strat-body { font-size: 14px; line-height: 1.68; color: var(--muted-light); }
 
-/* PROGRAM */
-.prog-sec { background: var(--charcoal); padding: 90px var(--px); }
+/* PROGRAM (soft lilac band, dark accordion cards) */
+.prog-sec { background: var(--lav-soft); padding: 90px var(--px); }
 .prog-inner { max-width: var(--max-w); margin: 0 auto; }
-.prog-head { max-width: 700px; margin-bottom: 44px; }
-.prog-head p { color: var(--muted-dark); font-size: 16px; line-height: 1.75; }
-.prog-list { display: flex; flex-direction: column; gap: 2px; }
-.prog-card { background: var(--charcoal-mid); display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; padding: 44px 40px; position: relative; overflow: hidden; transition: background .3s var(--ease); }
-.prog-card::before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 2px; background: var(--lav); transform: scaleY(0); transform-origin: top; transition: transform .4s var(--ease); }
-.prog-card:hover { background: var(--charcoal-light); }
-.prog-card:hover::before { transform: scaleY(1); }
-.prog-tag { font-family: var(--mono); font-size: 10px; color: var(--lav); letter-spacing: .16em; text-transform: uppercase; margin-bottom: 16px; }
-.prog-title { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 32px); font-weight: 500; color: var(--seasalt); line-height: 1.18; margin-bottom: 14px; }
-.prog-body { font-size: 15px; line-height: 1.72; color: var(--muted-dark); margin-bottom: 22px; }
+.prog-head { max-width: 100%; margin-bottom: 40px; }
+.prog-head p { color: var(--muted-light); font-size: 16px; line-height: 1.75; margin-top: 4px; }
+.prog-list { display: flex; flex-direction: column; gap: 14px; }
+
+/* accordion card */
+.prog-card { background: var(--charcoal-mid); border-radius: 6px; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(90,60,120,.10); transition: box-shadow .3s var(--ease); }
+.prog-card[open] { box-shadow: 0 18px 46px rgba(90,60,120,.20); }
+.prog-card::before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 2px; background: var(--lav); transform: scaleX(1) scaleY(0); transform-origin: top; transition: transform .4s var(--ease); }
+.prog-card[open]::before { transform: scaleY(1); }
+.prog-sum { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; padding: 26px 32px; transition: background .25s var(--ease); }
+.prog-sum::-webkit-details-marker { display: none; }
+.prog-sum:hover { background: var(--charcoal-light); }
+.prog-sum:focus-visible { outline: 2px solid var(--lav); outline-offset: -3px; }
+.prog-tag { font-family: var(--mono); font-size: 10px; color: var(--lav); letter-spacing: .16em; text-transform: uppercase; margin-bottom: 9px; }
+.prog-title { font-family: var(--serif); font-size: clamp(20px, 2.05vw, 27px); font-weight: 500; color: var(--seasalt); line-height: 1.22; }
+.prog-sum-r { display: flex; align-items: center; gap: 22px; }
+.prog-price-wrap { text-align: right; }
+.prog-price-lbl { font-family: var(--mono); font-size: 9px; color: rgba(226,226,226,.4); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 5px; }
+.prog-price { font-family: var(--serif); font-size: 30px; font-weight: 500; color: var(--seasalt); line-height: 1; }
+.prog-price-unit { font-family: var(--mono); font-size: 10px; color: var(--lav); letter-spacing: .08em; text-transform: uppercase; margin-top: 5px; }
+.prog-chev { flex-shrink: 0; width: 32px; height: 32px; border: 1px solid rgba(196,167,228,.35); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--lav); transition: transform .35s var(--ease), background .2s, border-color .2s; }
+.prog-card[open] .prog-chev { transform: rotate(180deg); background: rgba(196,167,228,.12); border-color: var(--lav); }
+.prog-panel { padding: 0 32px 30px; }
+.prog-panel-inner { border-top: 1px solid var(--border-dark); padding-top: 24px; display: grid; grid-template-columns: 1.85fr 1fr; gap: 48px; }
+.prog-body { font-size: 15px; line-height: 1.72; color: var(--muted-dark); margin-bottom: 20px; }
 .prog-meta { font-family: var(--mono); font-size: 10px; color: rgba(226,226,226,.4); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 24px; }
-.prog-side { border-left: 1px solid var(--border-dark); padding-left: 36px; display: flex; flex-direction: column; }
-.prog-price-lbl { font-family: var(--mono); font-size: 9px; color: rgba(226,226,226,.4); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 4px; }
-.prog-price { font-family: var(--serif); font-size: 38px; font-weight: 500; color: var(--seasalt); line-height: 1; }
-.prog-price-unit { font-family: var(--mono); font-size: 10px; color: var(--lav); letter-spacing: .08em; text-transform: uppercase; margin-top: 4px; margin-bottom: 20px; }
-.prog-feats { list-style: none; margin-bottom: 8px; }
-.prog-feats li { font-size: 13.5px; color: var(--muted-dark); padding: 7px 0 7px 20px; position: relative; line-height: 1.5; border-bottom: 1px solid rgba(196,167,228,.07); }
-.prog-feats li:last-child { border-bottom: none; }
-.prog-feats li::before { content: ''; position: absolute; left: 0; top: 14px; width: 8px; height: 1px; background: var(--lav); }
+.prog-feats-h { font-family: var(--mono); font-size: 9px; color: rgba(226,226,226,.4); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 14px; }
+.prog-feats { list-style: none; }
+.prog-feats li { font-size: 13.5px; color: var(--muted-dark); padding: 6px 0 6px 20px; position: relative; line-height: 1.55; }
+.prog-feats li::before { content: ''; position: absolute; left: 3px; top: 12px; width: 6px; height: 6px; border-radius: 50%; background: var(--lav); }
+@media (prefers-reduced-motion: no-preference) {
+  .prog-panel-inner { animation: progReveal .45s var(--ease); }
+}
+@keyframes progReveal { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
 
 /* FRAMEWORK */
 .fw-sec { background: var(--seasalt); padding: 90px var(--px); }
@@ -331,8 +347,7 @@ a { color: inherit; text-decoration: none; }
   .def-inner { grid-template-columns: 1fr; gap: 28px; }
   .why-inner { grid-template-columns: 1fr; gap: 40px; }
   .strat-grid { grid-template-columns: 1fr; }
-  .prog-card { grid-template-columns: 1fr; gap: 28px; padding: 32px 26px; }
-  .prog-side { border-left: none; padding-left: 0; border-top: 1px solid var(--border-dark); padding-top: 24px; }
+  .prog-panel-inner { grid-template-columns: 1fr; gap: 24px; }
   .fw-inner { grid-template-columns: 1fr; gap: 40px; }
   .fw-row { grid-template-columns: 1fr; gap: 6px; }
   .fw-stage { height: 340px; }
@@ -348,6 +363,10 @@ a { color: inherit; text-decoration: none; }
   .wait-form { flex-direction: column; }
   .wait-input { border-right: 1px solid rgba(196,167,228,.25); border-radius: 2px 2px 0 0; }
   .wait-submit { border-radius: 0 0 2px 2px; }
+  .prog-sum { grid-template-columns: 1fr; gap: 18px; padding: 22px 22px; }
+  .prog-sum-r { justify-content: space-between; }
+  .prog-price-wrap { text-align: left; }
+  .prog-panel { padding: 0 22px 26px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-eyebrow, .hw-hero-sub, .hw-hero-ctas, .fit-panel { animation: none; opacity: 1; }
@@ -551,7 +570,7 @@ a { color: inherit; text-decoration: none; }
       <p>The recognition economy is not gender-neutral. Women-led businesses and women executives face a compounding problem: the signals that AI systems use to determine authority have historically been easier to build for those who were already in the room. Thought leadership platforms, media coverage, speaking stages, and citation networks all carry structural bias that pre-dates the AI era.</p>
       <p>That bias does not disappear when the search engine becomes an AI. In some ways it amplifies. AI models learn from the authority signals that already exist: the news that decides which experts get quoted, the reference sources that record who counts as notable, the citation trails that mark who is worth pointing to. If those signals underrepresent women's expertise, the model underrepresents women's expertise in its answers.</p>
       <p>HER-Worth exists because the solution to a structural problem is a structural one. <strong>Not a mindset fix. Not a confidence workshop. Not a list of social media tips.</strong> A real, systematic approach to building the kind of authority that AI systems can find, interpret, and cite.</p>
-      <p>The same framework. Applied with full awareness of the additional context that women in business are navigating every single day.</p>
+      <p>The same framework, applied with full awareness of the context women in business are navigating every day. That is the work HER-Worth was built to do.</p>
     </div>
   </div>
 </section>
@@ -600,75 +619,121 @@ a { color: inherit; text-decoration: none; }
 <section class="prog-sec" id="program" aria-labelledby="prog-h">
   <div class="prog-inner">
     <div class="prog-head anim">
-      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">The Program</span></div>
-      <h2 class="sec-h2 sec-h2-light" id="prog-h">Three ways to work together.</h2>
-      <p>The HER-Worth program offers business coaching for women founders and women executive coaching, built in South Africa and delivered worldwide. Each offer can stand alone or connect into a broader engagement. Use the currency toggle above to view prices in USD, GBP, EUR or ZAR.</p>
+      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl sec-lbl-dark">The Program</span></div>
+      <h2 class="sec-h2" id="prog-h">Three ways to <em>work together.</em></h2>
+      <p>HER-Worth is business coaching for women founders and executive coaching for women leaders, built in South Africa and delivered worldwide. Each offer can stand alone or connect into a broader engagement. Open any option to see what is included, and use the currency toggle above to view prices in USD, GBP, EUR or ZAR.</p>
     </div>
     <div class="prog-list">
-      <article class="prog-card anim">
-        <div>
-          <p class="prog-tag">01 / Authority Consulting</p>
-          <h3 class="prog-title">Strategic consulting for women building authority in AI search.</h3>
-          <p class="prog-body">One-to-one strategy work applying the Recognition Triangle to your brand. We audit where you stand, map the gaps between your expertise and your visibility, and build a structured plan for closing them. Specifically designed for women founders and executives building authority in a system that was not built with you in mind. This is AI visibility for women leaders who have the expertise but not yet the recognition.</p>
-          <p class="prog-meta">Monthly retainer &middot; Virtual &middot; Minimum 3 months</p>
-          <a href="/contact/" class="cta-lav">Start a Conversation</a>
+
+      <details class="prog-card anim" open>
+        <summary class="prog-sum">
+          <div class="prog-sum-main">
+            <p class="prog-tag">01 / Authority Consulting</p>
+            <h3 class="prog-title">Strategic consulting for women building authority in AI search.</h3>
+          </div>
+          <div class="prog-sum-r">
+            <div class="prog-price-wrap">
+              <p class="prog-price-lbl">Starting from</p>
+              <p class="prog-price" data-usd="$1,750" data-gbp="&pound;1,400" data-eur="&euro;1,650" data-zar="R18,000">$1,750</p>
+              <p class="prog-price-unit">Per month</p>
+            </div>
+            <span class="prog-chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </summary>
+        <div class="prog-panel">
+          <div class="prog-panel-inner">
+            <div>
+              <p class="prog-body">One-to-one strategy work applying the Recognition Triangle to your brand. We audit where you stand, map the gaps between your expertise and your visibility, and build a structured plan for closing them. Designed for women founders and executives building authority in a system that was not built with you in mind. This is AI visibility for women leaders who have the expertise but not yet the recognition.</p>
+              <p class="prog-meta">Monthly retainer &middot; Virtual &middot; Minimum 3 months</p>
+              <a href="/contact/" class="cta-lav">Start a Conversation</a>
+            </div>
+            <div>
+              <p class="prog-feats-h">What is included</p>
+              <ul class="prog-feats">
+                <li>Recognition Triangle audit</li>
+                <li>Monthly strategy sessions</li>
+                <li>AI visibility roadmap</li>
+                <li>Authority signal monitoring</li>
+                <li>Email support between sessions</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="prog-side">
-          <p class="prog-price-lbl">Starting from</p>
-          <p class="prog-price" data-usd="$1,750" data-gbp="&pound;1,400" data-eur="&euro;1,650" data-zar="R18,000">$1,750</p>
-          <p class="prog-price-unit">Per month</p>
-          <ul class="prog-feats">
-            <li>Recognition Triangle audit</li>
-            <li>Monthly strategy sessions</li>
-            <li>AI visibility roadmap</li>
-            <li>Authority signal monitoring</li>
-            <li>Email support between sessions</li>
-          </ul>
+      </details>
+
+      <details class="prog-card anim">
+        <summary class="prog-sum">
+          <div class="prog-sum-main">
+            <p class="prog-tag">02 / One-to-One Coaching</p>
+            <h3 class="prog-title">Clarity, direction, and a thinking partner who gets it.</h3>
+          </div>
+          <div class="prog-sum-r">
+            <div class="prog-price-wrap">
+              <p class="prog-price-lbl">Starting from</p>
+              <p class="prog-price" data-usd="$250" data-gbp="&pound;200" data-eur="&euro;230" data-zar="R2,500">$250</p>
+              <p class="prog-price-unit">Per session</p>
+            </div>
+            <span class="prog-chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </summary>
+        <div class="prog-panel">
+          <div class="prog-panel-inner">
+            <div>
+              <p class="prog-body">Virtual coaching sessions for women founders and executives who need space to think clearly, make better decisions, and build confidence that is grounded in their actual expertise rather than performance. Sessions cover positioning, brand authority, AI visibility strategy, growth leadership, and the personal side of building a business in a system that still underestimates you.</p>
+              <p class="prog-meta">Virtual &middot; 90-minute sessions &middot; Schedule at your pace</p>
+              <a href="/contact/" class="cta-lav">Book a Session</a>
+            </div>
+            <div>
+              <p class="prog-feats-h">What is included</p>
+              <ul class="prog-feats">
+                <li>Brand clarity and positioning</li>
+                <li>AI visibility and authority strategy</li>
+                <li>Growth decision-making</li>
+                <li>Leadership under pressure</li>
+                <li>Executive packages available</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </article>
-      <article class="prog-card anim">
-        <div>
-          <p class="prog-tag">02 / One-to-One Coaching</p>
-          <h3 class="prog-title">Clarity, direction, and a thinking partner who gets it.</h3>
-          <p class="prog-body">Virtual coaching sessions for women founders and executives who need space to think clearly, make better decisions, and build confidence that is grounded in their actual expertise rather than performance. Sessions cover positioning, brand authority, AI visibility strategy, growth leadership, and the personal side of building a business in a system that still underestimates you.</p>
-          <p class="prog-meta">Virtual &middot; 90-minute sessions &middot; Schedule at your pace</p>
-          <a href="/contact/" class="cta-lav">Book a Session</a>
+      </details>
+
+      <details class="prog-card anim">
+        <summary class="prog-sum">
+          <div class="prog-sum-main">
+            <p class="prog-tag">03 / Group Program</p>
+            <h3 class="prog-title">A cohort of women building authority together.</h3>
+          </div>
+          <div class="prog-sum-r">
+            <div class="prog-price-wrap">
+              <!-- COHORT PRICING (ready for launch): USD $2,500 | GBP £1,950 | EUR €2,350 | ZAR R30,000 per seat -->
+              <p class="prog-price-lbl">Pricing</p>
+              <p class="prog-price" style="font-size:19px;line-height:1.25">To be confirmed</p>
+              <p class="prog-price-unit">With the first cohort</p>
+            </div>
+            <span class="prog-chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </div>
+        </summary>
+        <div class="prog-panel">
+          <div class="prog-panel-inner">
+            <div>
+              <p class="prog-body">A structured group program applying the Recognition Triangle and the Authority Method to a cohort of women founders and executives, a growing community of women in AI consulting and leadership. Peer accountability, shared learning, and facilitated strategy sessions, designed to produce real outputs, not just insights. The format and cadence are being designed now based on what the first cohort actually needs.</p>
+              <p class="prog-meta">Small cohort &middot; Future offer &middot; Waitlist open</p>
+              <a href="#waitlist" class="cta-ghost">Join the Waitlist</a>
+            </div>
+            <div>
+              <p class="prog-feats-h">What is included</p>
+              <ul class="prog-feats">
+                <li>Recognition Triangle applied as a group</li>
+                <li>Facilitated strategy sessions</li>
+                <li>Peer accountability and support</li>
+                <li>Real outputs, not just insights</li>
+                <li>Shaped by the first cohort</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="prog-side">
-          <p class="prog-price-lbl">Starting from</p>
-          <p class="prog-price" data-usd="$250" data-gbp="&pound;200" data-eur="&euro;230" data-zar="R2,500">$250</p>
-          <p class="prog-price-unit">Per session</p>
-          <ul class="prog-feats">
-            <li>Brand clarity and positioning</li>
-            <li>AI visibility and authority strategy</li>
-            <li>Growth decision-making</li>
-            <li>Leadership under pressure</li>
-            <li>Executive packages available</li>
-          </ul>
-        </div>
-      </article>
-      <article class="prog-card anim">
-        <div>
-          <p class="prog-tag">03 / Group Program</p>
-          <h3 class="prog-title">A cohort of women building authority together.</h3>
-          <p class="prog-body">A structured group program applying the Recognition Triangle and the Authority Method to a cohort of women founders and executives, a growing community of women in AI consulting and leadership. Peer accountability, shared learning, and facilitated strategy sessions, designed to produce real outputs, not just insights. The format and cadence are being designed now based on what the first cohort actually needs.</p>
-          <p class="prog-meta">Small cohort &middot; Future offer &middot; Waitlist open</p>
-          <a href="#waitlist" class="cta-ghost">Join the Waitlist</a>
-        </div>
-        <div class="prog-side">
-          <!-- COHORT PRICING (ready for launch): USD $2,500 | GBP £1,950 | EUR €2,350 | ZAR R30,000 per seat -->
-          <p class="prog-price-lbl">Pricing</p>
-          <p class="prog-price" style="font-size:26px;line-height:1.2">To be confirmed</p>
-          <p class="prog-price-unit">With the first cohort</p>
-          <ul class="prog-feats">
-            <li>Recognition Triangle applied as a group</li>
-            <li>Facilitated strategy sessions</li>
-            <li>Peer accountability and support</li>
-            <li>Real outputs, not just insights</li>
-            <li>Shaped by the first cohort</li>
-          </ul>
-        </div>
-      </article>
+      </details>
+
     </div>
   </div>
 </section>
@@ -724,7 +789,7 @@ a { color: inherit; text-decoration: none; }
   <div class="hw-banner-inner">
     <div class="anim">
       <h2 id="hw-ban-h">Ready to stop being the best-kept secret?</h2>
-      <p>Every engagement starts with an honest conversation. Tell Lucy where you are. She will tell you what she sees and what it will take.</p>
+      <p>Every engagement starts with an honest conversation. Tell us where you are. We will tell you what we see, and what it will take.</p>
     </div>
     <div class="hw-banner-btns anim d1">
       <a href="/contact/" class="hw-banner-primary">
