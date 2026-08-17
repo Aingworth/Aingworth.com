@@ -163,18 +163,69 @@ a.lang-chip:hover{background:rgba(107,191,176,.12);border-color:var(--teal-light
 .btn-ghost-dark{display:inline-flex;align-items:center;gap:10px;color:var(--teal-light);font-size:13px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;transition:gap .2s;}
 .btn-ghost-dark:hover{gap:16px;}
 /* THE REALITY */
-.problem{background:var(--seasalt);padding:88px var(--px);border-bottom:1px solid var(--border-light);}
-.problem-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start;}
-.problem h2{font-family:var(--serif);font-size:clamp(28px,3vw,44px);font-weight:500;line-height:1.12;color:var(--charcoal);letter-spacing:-.01em;margin-bottom:18px;}
-.problem h2 em{font-style:italic;color:var(--teal);}
-.problem-body p{font-size:16px;line-height:1.78;color:var(--muted-light);}
-.problem-body p+p{margin-top:16px;}
-.problem-body .punch{font-weight:500;color:var(--charcoal);}
-.stat-stack{display:flex;flex-direction:column;gap:2px;}
-.stat{background:#fff;border:1px solid var(--border-light);padding:24px 28px;}
-.stat-num{font-family:var(--serif);font-size:40px;font-weight:500;color:var(--teal);line-height:1;margin-bottom:8px;}
-.stat-txt{font-size:14px;line-height:1.65;color:var(--muted-light);}
-.stat-src{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.06em;margin-top:8px;display:block;}
+.problem{background:var(--seasalt);padding:88px var(--px) 96px;border-bottom:1px solid var(--border-light);}
+.tr-wrap{max-width:var(--max-w);margin:0 auto;}
+.tr-h{font-family:var(--serif);font-size:clamp(32px,3.6vw,50px);font-weight:500;line-height:1.14;color:var(--charcoal);letter-spacing:-.01em;max-width:22ch;}
+.tr-h em{font-style:italic;color:var(--teal);display:block;margin-top:4px;}
+.tr-cols{display:flex;flex-wrap:wrap;gap:clamp(32px,4vw,56px);margin-top:clamp(36px,4vw,52px);align-items:flex-start;}
+.tr-narrative{flex:1 1 360px;min-width:min(100%,320px);}
+.tr-move{display:flex;align-items:baseline;gap:16px;}
+.tr-move+.tr-move{margin-top:26px;}
+.tr-move .n{font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.1em;flex-shrink:0;}
+.tr-move p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tr-lead{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(19px,1.9vw,22px);color:var(--charcoal);margin-top:12px;}
+.tr-coda{font-size:14.5px;line-height:1.7;color:var(--mid-grey);margin-top:12px;}
+.tr-demo{flex:1 1 380px;min-width:min(100%,320px);position:sticky;top:120px;}
+.tr-demo-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;flex-wrap:wrap;}
+.tr-demo-head .lbl{font-family:var(--mono);font-size:11px;color:var(--mid-grey);text-transform:uppercase;letter-spacing:.1em;}
+.tr-seg{display:inline-flex;border:1px solid var(--border-light);border-radius:2px;overflow:hidden;background:#fff;}
+.tr-seg button{appearance:none;border:0;cursor:pointer;font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:9px 14px;line-height:1.2;background:transparent;color:var(--charcoal);transition:background .2s var(--ease),color .2s var(--ease);}
+.tr-seg button[aria-selected="true"]{background:var(--teal);color:var(--seasalt);}
+.tr-window{border:1px solid var(--border-light);border-radius:3px;background:#fff;box-shadow:0 14px 30px rgba(26,26,26,.06);overflow:hidden;}
+.tr-window-bar{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--border-light);background:var(--seasalt);}
+.tr-window-bar .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;}
+.tr-window-bar .name{font-weight:500;font-size:14px;color:var(--charcoal);}
+.tr-window-bar .sub{font-family:var(--mono);font-size:11px;color:var(--mid-grey);}
+.tr-thread{padding:18px 16px;min-height:290px;display:flex;flex-direction:column;gap:14px;}
+.tr-thread[hidden]{display:none;}
+.tr-bubble{max-width:88%;border-radius:3px;padding:11px 14px;font-size:14px;line-height:1.55;color:var(--muted-light);}
+.tr-bubble.user{align-self:flex-end;max-width:82%;background:rgba(74,158,142,.08);border:1px solid rgba(74,158,142,.25);color:var(--charcoal);}
+.tr-bubble.bot{align-self:flex-start;background:var(--seasalt);border:1px solid var(--border-light);}
+.tr-divider{display:flex;align-items:center;gap:10px;margin-top:2px;}
+.tr-divider .line{flex:1;height:1px;background:var(--border-light);}
+.tr-divider .txt{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mid-grey);white-space:nowrap;}
+.tr-aside{font-family:var(--serif);font-style:italic;font-size:14.5px;line-height:1.6;color:var(--muted-light);}
+.tr-tally{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;border-top:1px dashed var(--border-light);}
+.tr-tally .lbl{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--mid-grey);}
+.tr-tally .val{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--mid-grey);}
+.tr-tally .val.big{color:var(--teal);font-size:22px;}
+.tr-wf-head{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);}
+.tr-wf-head .dot{width:6px;height:6px;border-radius:50%;background:var(--teal);}
+.tr-wf-title{font-weight:500;color:var(--charcoal);margin:8px 0;font-size:14.5px;}
+.tr-steps{display:flex;flex-direction:column;gap:9px;}
+.tr-steps .step{display:flex;gap:9px;font-size:14px;color:var(--muted-light);}
+.tr-steps .step .tick{color:var(--teal);font-weight:600;flex-shrink:0;}
+.tr-stats{margin-top:clamp(48px,6vw,80px);}
+.tr-stats-head{display:flex;align-items:baseline;gap:12px;margin-bottom:0;flex-wrap:wrap;}
+.tr-stats-head .lbl{font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.14em;text-transform:uppercase;}
+.tr-stats-head .hint{font-family:var(--mono);font-size:11px;color:var(--mid-grey);letter-spacing:.04em;}
+.tr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border-light);border:1px solid var(--border-light);margin-top:22px;}
+.tr-stat{position:relative;overflow:hidden;text-align:left;background:#fff;border:0;padding:28px 26px 26px;cursor:pointer;font-family:inherit;color:var(--charcoal);transition:background .25s var(--ease);}
+.tr-stat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease);}
+.tr-stat:hover{background:rgba(74,158,142,.05);}
+.tr-stat:hover::before,.tr-stat[aria-expanded="true"]::before{transform:scaleX(1);}
+.tr-stat-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
+.tr-num{font-family:var(--serif);font-weight:500;color:var(--teal);line-height:1;font-size:clamp(34px,3.6vw,42px);}
+.tr-plus{display:inline-flex;flex-shrink:0;color:var(--teal);transition:transform .25s var(--ease);}
+.tr-stat[aria-expanded="true"] .tr-plus{transform:rotate(45deg);}
+.tr-stat-label{font-weight:500;font-size:14.5px;color:var(--charcoal);margin-top:10px;}
+.tr-detail{max-height:0;opacity:0;overflow:hidden;margin-top:0;transition:max-height .45s var(--ease),opacity .4s var(--ease),margin-top .45s var(--ease);}
+.tr-stat[aria-expanded="true"] .tr-detail{max-height:260px;opacity:1;margin-top:12px;}
+.tr-detail p{font-size:14px;line-height:1.6;color:var(--muted-light);}
+.tr-detail .src{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.06em;margin-top:8px;display:block;}
+@media (max-width:700px){.tr-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:460px){.tr-grid{grid-template-columns:1fr;}}
+@media (max-width:900px){.tr-demo{position:static;}}
 /* WHAT YOU'LL LEARN */
 .learn{background:var(--charcoal);padding:96px var(--px);}
 .learn-inner{max-width:var(--max-w);margin:0 auto;}
@@ -235,9 +286,10 @@ a.lang-chip:hover{background:rgba(107,191,176,.12);border-color:var(--teal-light
 /* CTA */
 .cta{background:var(--teal-light);padding:84px var(--px);}
 .cta-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap;}
+.cta-text{max-width:600px;flex:1 1 420px;}
 .cta h2{font-family:var(--serif);font-size:clamp(28px,3vw,44px);font-weight:500;color:var(--charcoal);line-height:1.12;margin-bottom:10px;}
 .cta p{font-size:16px;color:rgba(26,26,26,.65);max-width:520px;line-height:1.65;}
-.cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--charcoal);color:var(--seasalt);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:16px 30px;border-radius:2px;transition:all .2s var(--ease);}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--charcoal);color:var(--seasalt);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:16px 30px;border-radius:2px;transition:all .2s var(--ease);flex-shrink:0;}
 .cta-btn:hover{background:var(--charcoal-light);transform:translateY(-1px);}
 /* FOOTER (matches homepage) */
 .footer{background:var(--charcoal);padding:72px var(--px) 36px;border-top:1px solid var(--border-dark);}
@@ -388,40 +440,164 @@ a.lang-chip:hover{background:rgba(107,191,176,.12);border-color:var(--teal-light
 </section>
 
 <section class="problem" aria-labelledby="problem-h">
-  <div class="problem-inner">
-    <div class="problem-body">
-      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">The Reality</span></div>
-      <h2 id="problem-h">Opening ChatGPT isn't using it. <em>And the difference is costing you hours every week.</em></h2>
-      <p>Business owners are opening ChatGPT every day. They ask it to rewrite an email. They ask it to write a social media caption. They ask it a question the same way they would Google. Then they close it and go back to doing everything manually.</p>
-      <p>The problem isn't access anymore. It's that nobody has shown them how to make it part of the way their business actually works.</p>
-      <p class="punch">That's where I come in.</p>
-      <p>I don't teach people how to "use ChatGPT." I teach businesses how to use Large Language Models like ChatGPT, Claude, Gemini, Perplexity and Kimi to reduce admin, improve workflows, build better systems and save hours every single week.</p>
-      <p>Whether you're a business owner working on your own or leading a team of fifty, the principles are exactly the same.</p>
+  <div class="tr-wrap">
+
+    <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">The Reality</span></div>
+    <h2 id="problem-h" class="tr-h">Opening ChatGPT isn't using it.<em>And the difference is costing you hours every week.</em></h2>
+
+    <div class="tr-cols">
+      <div class="tr-narrative">
+        <div class="tr-move">
+          <span class="n">01</span>
+          <p>Business owners are opening ChatGPT every day. They ask it to rewrite an email. They ask it to write a social media caption. They ask it a question the same way they would Google. Then they close it and go back to doing everything manually.</p>
+        </div>
+        <div class="tr-move">
+          <span class="n">02</span>
+          <div>
+            <p>The problem isn't access anymore. It's that nobody has shown them how to make it part of the way their business actually works.</p>
+            <p class="tr-lead">That's where I come in.</p>
+          </div>
+        </div>
+        <div class="tr-move">
+          <span class="n">03</span>
+          <div>
+            <p>I don't teach people how to "use ChatGPT." I teach businesses how to use Large Language Models like ChatGPT, Claude, Gemini, Perplexity and Kimi to reduce admin, improve workflows, build better systems and save hours every single week.</p>
+            <p class="tr-coda">Whether you're a business owner working on your own or leading a team of fifty, the principles are exactly the same.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tr-demo">
+        <div class="tr-demo-head">
+          <span class="lbl">See the Difference</span>
+          <div class="tr-seg" role="tablist">
+            <button type="button" role="tab" data-mode="shallow" aria-selected="true">How most people use it</button>
+            <button type="button" role="tab" data-mode="deep" aria-selected="false">How I teach it</button>
+          </div>
+        </div>
+
+        <div class="tr-window">
+          <div class="tr-window-bar">
+            <span class="dot"></span>
+            <span class="name">Assistant</span>
+            <span class="sub" data-tr-sub>a one-off request</span>
+          </div>
+
+          <div class="tr-thread" data-tr-thread="shallow">
+            <div class="tr-bubble user">Write me a caption for this photo.</div>
+            <div class="tr-bubble bot">Here's a caption you could use: "Big things are brewing this week, stay tuned."</div>
+            <div class="tr-divider"><span class="line"></span><span class="txt">you close the tab</span><span class="line"></span></div>
+            <p class="tr-aside">Tomorrow you open it and type the whole thing out again. And the day after that.</p>
+            <div class="tr-tally">
+              <span class="lbl">Saved this week</span>
+              <span class="val">a few minutes</span>
+            </div>
+          </div>
+
+          <div class="tr-thread" data-tr-thread="deep" hidden>
+            <div class="tr-wf-head"><span class="dot"></span>Saved workflow &middot; Weekly content</div>
+            <div class="tr-bubble bot" style="max-width:100%;">
+              <div class="tr-wf-title">Ran your weekly content system:</div>
+              <div class="tr-steps">
+                <div class="step"><span class="tick">&#10003;</span><span>Pulled this week's 6 photos from the shared folder</span></div>
+                <div class="step"><span class="tick">&#10003;</span><span>Drafted 6 captions in your brand voice</span></div>
+                <div class="step"><span class="tick">&#10003;</span><span>Queued them to your scheduler for approval</span></div>
+              </div>
+            </div>
+            <p class="tr-aside">Set up once. It runs every Monday, whether you open the tab or not.</p>
+            <div class="tr-tally">
+              <span class="lbl">Saved this week</span>
+              <span class="val big">6+ hours</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="stat-stack">
-      <div class="stat">
-        <p class="stat-num">70%</p>
-        <p class="stat-txt">Seven in ten South African adults have already used an AI chatbot, up 25 points since 2023 and ahead of many developed markets. Access is not the problem.</p>
-        <span class="stat-src">Google x Ipsos, Our Life with AI, 2026</span>
+
+    <div class="tr-stats">
+      <div class="tr-stats-head">
+        <span class="lbl">By the Numbers</span>
+        <span class="hint">Tap a figure for the source</span>
       </div>
-      <div class="stat">
-        <p class="stat-num">63%</p>
-        <p class="stat-txt">63% of South Africans say they want to use AI more but lack the confidence or skills to do it effectively. That gap is exactly what this program closes.</p>
-        <span class="stat-src">Google x Ipsos, Our Life with AI, 2026</span>
-      </div>
-      <div class="stat">
-        <p class="stat-num">2 in 3</p>
-        <p class="stat-txt">More than two thirds of South African small businesses already use AI daily or are actively experimenting. Almost all of that usage stays shallow: the odd email, the odd caption.</p>
-        <span class="stat-src">News24 x Lula Small Business Survey, Jan 2026</span>
-      </div>
-      <div class="stat">
-        <p class="stat-num">22%</p>
-        <p class="stat-txt">Only 22% of South African organisations offer any structured AI training. Everyone else is figuring it out alone, in stolen minutes between real work.</p>
-        <span class="stat-src">Deloitte Africa, 2025</span>
+      <div class="tr-grid">
+
+        <button type="button" class="tr-stat" aria-expanded="false">
+          <div class="tr-stat-top">
+            <div class="tr-num">70%</div>
+            <span class="tr-plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          </div>
+          <div class="tr-stat-label">have already used an AI chatbot</div>
+          <div class="tr-detail">
+            <p>Seven in ten South African adults have already used an AI chatbot, up 25 points since 2023 and ahead of many developed markets. Access is not the problem.</p>
+            <span class="src">Google x Ipsos, Our Life with AI, 2026</span>
+          </div>
+        </button>
+
+        <button type="button" class="tr-stat" aria-expanded="false">
+          <div class="tr-stat-top">
+            <div class="tr-num">63%</div>
+            <span class="tr-plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          </div>
+          <div class="tr-stat-label">want to use it, but lack the skills</div>
+          <div class="tr-detail">
+            <p>63% of South Africans say they want to use AI more but lack the confidence or skills to do it effectively. That gap is exactly what this program closes.</p>
+            <span class="src">Google x Ipsos, Our Life with AI, 2026</span>
+          </div>
+        </button>
+
+        <button type="button" class="tr-stat" aria-expanded="false">
+          <div class="tr-stat-top">
+            <div class="tr-num">2 in 3</div>
+            <span class="tr-plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          </div>
+          <div class="tr-stat-label">SMEs already use AI, but only just</div>
+          <div class="tr-detail">
+            <p>More than two thirds of South African small businesses already use AI daily or are actively experimenting. Almost all of that usage stays shallow: the odd email, the odd caption.</p>
+            <span class="src">News24 x Lula Small Business Survey, Jan 2026</span>
+          </div>
+        </button>
+
+        <button type="button" class="tr-stat" aria-expanded="false">
+          <div class="tr-stat-top">
+            <div class="tr-num">22%</div>
+            <span class="tr-plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+          </div>
+          <div class="tr-stat-label">get any structured training</div>
+          <div class="tr-detail">
+            <p>Only 22% of South African organizations offer any structured AI training. Everyone else is figuring it out alone, in stolen minutes between real work.</p>
+            <span class="src">Deloitte Africa, 2025</span>
+          </div>
+        </button>
+
       </div>
     </div>
+
   </div>
 </section>
+
+<script>
+(function(){
+  var root = document.querySelector('.problem');
+  if(!root) return;
+  var subs = { shallow: 'a one-off request', deep: 'part of your business' };
+  root.querySelectorAll('.tr-seg button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var mode = btn.dataset.mode;
+      root.querySelectorAll('.tr-seg button').forEach(function(b){ b.setAttribute('aria-selected', String(b===btn)); });
+      root.querySelectorAll('[data-tr-thread]').forEach(function(t){ t.hidden = t.getAttribute('data-tr-thread') !== mode; });
+      var sub = root.querySelector('[data-tr-sub]');
+      if(sub) sub.textContent = subs[mode];
+    });
+  });
+  root.querySelectorAll('.tr-stat').forEach(function(card){
+    card.addEventListener('click', function(){
+      var open = card.getAttribute('aria-expanded') === 'true';
+      root.querySelectorAll('.tr-stat').forEach(function(c){ c.setAttribute('aria-expanded','false'); });
+      card.setAttribute('aria-expanded', String(!open));
+    });
+  });
+})();
+</script>
 
 <section class="learn" id="learn" aria-labelledby="learn-h">
   <div class="learn-inner">
@@ -549,7 +725,7 @@ a.lang-chip:hover{background:rgba(107,191,176,.12);border-color:var(--teal-light
 
 <section class="cta" aria-labelledby="cta-h">
   <div class="cta-inner">
-    <div>
+    <div class="cta-text">
       <h2 id="cta-h">If you run a business in South Africa, this is for you.</h2>
       <p>Whether you run the business solo or lead a team, this gets AI working the way you actually work. A shop, a practice, a farm, a workshop, a service business, a side business becoming something bigger. Start the conversation and we'll build it together.</p>
     </div>
