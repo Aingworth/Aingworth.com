@@ -272,7 +272,7 @@ a { color:inherit; text-decoration:none; }
 /* CHAPTERS */
 .chapters-sec { background:var(--platinum); padding:100px var(--px); border-top:1px solid var(--border-light); }
 .chapters-inner { max-width:var(--max-w); margin:0 auto; }
-.chapters-head { max-width:560px; margin-bottom:56px; }
+.chapters-head { max-width:760px; margin-bottom:56px; }
 .chapters-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border-light); border:1px solid var(--border-light); }
 .chapter-item { background:var(--seasalt); padding:24px 26px; display:grid; grid-template-columns:36px 1fr; gap:14px; align-items:start; transition:background .2s; }
 .chapter-item:hover { background:#fff; }
@@ -295,7 +295,8 @@ a { color:inherit; text-decoration:none; }
 /* GLOSSARY */
 .glossary-sec { background:var(--seasalt); padding:100px var(--px); border-top:1px solid var(--border-light); }
 .glossary-inner { max-width:var(--max-w); margin:0 auto; }
-.glossary-head { max-width:560px; margin-bottom:56px; }
+.glossary-head { max-width:none; margin-bottom:56px; }
+#glossary-h { white-space:nowrap; }
 .glossary-cols { display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--border-light); border:1px solid var(--border-light); }
 .accordion-item { background:#fff; border-bottom:1px solid var(--border-light); }
 .accordion-item:last-child { border-bottom:none; }
@@ -316,8 +317,8 @@ a { color:inherit; text-decoration:none; }
 .get-inner { max-width:var(--max-w); margin:0 auto; display:grid; grid-template-columns:1fr 400px; gap:80px; align-items:center; }
 .get-content h2 { font-family:var(--serif); font-size:clamp(36px,4vw,60px); font-weight:500; color:var(--charcoal); line-height:1.08; margin-bottom:20px; }
 .get-content h2 em { font-style:italic; }
-.get-content p { font-size:17px; line-height:1.72; color:rgba(26,26,26,.65); margin-bottom:32px; max-width:480px; }
-.get-cta-row { display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+.get-content p { font-size:17px; line-height:1.72; color:rgba(26,26,26,.65); margin-bottom:32px; max-width:620px; }
+.get-cta-row { display:flex; flex-direction:column; align-items:flex-start; gap:14px; }
 .cta-dark { display:inline-flex; align-items:center; gap:10px; background:var(--charcoal); color:var(--seasalt); font-size:13px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; padding:16px 28px; border-radius:2px; transition:all .2s; }
 .cta-dark:hover { background:var(--charcoal-light); transform:translateY(-1px); }
 .cta-outline-dark { display:inline-flex; align-items:center; gap:10px; border:1px solid rgba(26,26,26,.3); color:var(--charcoal); font-size:13px; font-weight:500; letter-spacing:.07em; text-transform:uppercase; padding:15px 28px; border-radius:2px; transition:all .2s; }
@@ -379,6 +380,7 @@ a { color:inherit; text-decoration:none; }
   .fw-grid { grid-template-columns:1fr; }
   .chapters-grid { grid-template-columns:1fr 1fr; }
   .glossary-cols { grid-template-columns:1fr; }
+  #glossary-h { white-space:normal; }
   .get-inner { grid-template-columns:1fr; gap:48px; }
   .related-grid { grid-template-columns:1fr; }
   .fgrid { grid-template-columns:1fr 1fr; gap:32px; }
@@ -515,8 +517,7 @@ a { color:inherit; text-decoration:none; }
         <span class="hero-eyebrow-label">The Book</span>
       </div>
       <h1 id="book-h">
-        <span class="hline"><span>Become</span></span>
-        <span class="hline"><span>the <em>Answer.</em></span></span>
+        <span class="hline"><span>Become the <em>Answer.</em></span></span>
       </h1>
       <p class="hero-subtitle">How Brands Build Authority in the Age of AI</p>
       <div class="hero-body">
@@ -624,7 +625,7 @@ a { color:inherit; text-decoration:none; }
   <div class="chapters-inner">
     <div class="chapters-head anim">
       <div class="sec-eye"><div class="sec-rule" style="background:var(--teal)"></div><span class="sec-lbl" style="color:var(--teal)">Contents</span></div>
-      <h2 class="sec-h2" id="chapters-h">Fourteen chapters.<br>One complete argument.</h2>
+      <h2 class="sec-h2" id="chapters-h">Fourteen chapters. <em style="font-style:italic; color:var(--teal);">One complete argument.</em></h2>
     </div>
     <div class="chapters-grid" role="list">
       <div class="chapter-item anim" role="listitem">
@@ -711,8 +712,8 @@ a { color:inherit; text-decoration:none; }
   <div class="glossary-inner">
     <div class="glossary-head anim">
       <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Key Terms</span></div>
-      <h2 class="sec-h2" id="glossary-h">The framework has<br>its own vocabulary.</h2>
-      <p class="sec-body" style="max-width:480px; margin-top:4px;">These terms carry specific meaning within <em>Become the Answer</em>. Where they appear, they refer to the framework concepts, not their general everyday sense. Click any term to expand.</p>
+      <h2 class="sec-h2" id="glossary-h">The framework has its own vocabulary.</h2>
+      <p class="sec-body" style="max-width:640px; margin-top:4px;">These terms carry specific meaning within <em>Become the Answer</em>. Where they appear, they refer to the framework concepts, not their general everyday sense. Click any term to expand.</p>
     </div>
     <div class="glossary-cols anim d1">
         <div class="accordion-item">
