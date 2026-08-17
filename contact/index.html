@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact - Aingworth</title>
-<meta name="description" content="Get in touch with Lucy Aingworth. Consulting enquiries, speaking bookings, media requests, or anything else. Every message is read personally.">
+<meta name="description" content="Get in touch with Aingworth. Consulting inquiries, speaking bookings, media requests, or anything else. Every message is read personally.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://aingworth.com/contact/">
 <link rel="icon" href="/images/Aingworth_Main_favicon.png" type="image/png">
 <meta property="og:title" content="Contact - Aingworth">
-<meta property="og:description" content="Start a conversation with Lucy Aingworth. Consulting, speaking, media, or general enquiries.">
+<meta property="og:description" content="Start a conversation with Aingworth. Consulting, speaking, media, or general inquiries.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://aingworth.com/contact/">
 <meta property="og:site_name" content="Aingworth">
@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@lucy_aingworth">
 <meta name="twitter:title" content="Contact - Aingworth">
-<meta name="twitter:description" content="Start a conversation with Lucy Aingworth. Consulting, speaking, media, or general enquiries.">
+<meta name="twitter:description" content="Start a conversation with Aingworth. Consulting, speaking, media, or general inquiries.">
 <meta name="twitter:image" content="https://aingworth.com/images/Aingworth_Main_Logo_White_bigger.png">
 <script type="application/ld+json">
 {
@@ -26,13 +26,13 @@
   "@type": "ContactPage",
   "name": "Contact Aingworth",
   "url": "https://aingworth.com/contact",
-  "description": "Contact page for Lucy Aingworth, founder of Aingworth and HER-Worth.",
+  "description": "Contact page for Aingworth, founded by Lucy Aingworth.",
   "mainEntity": {
     "@type": "Person",
     "@id": "https://aingworth.com/#lucy",
     "name": "Lucy Aingworth",
     "alternateName": "Lisinda Lucy",
-    "jobTitle": "Brand Authority and AI Visibility Consultant",
+    "jobTitle": "Founder and Author",
     "email": "info@aingworth.com",
     "telephone": "+27780722185",
     "url": "https://aingworth.com/about/",
@@ -233,8 +233,8 @@ a { color:inherit; text-decoration:none; }
 .form-head h2 { font-family:var(--serif); font-size:clamp(28px,3vw,42px); font-weight:500; line-height:1.1; color:var(--charcoal); letter-spacing:-.01em; margin-bottom:12px; }
 .form-head p { font-size:15px; line-height:1.72; color:var(--muted-light); }
 
-/* Enquiry type selector */
-.enquiry-types {
+/* Inquiry type selector */
+.inquiry-types {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
@@ -256,7 +256,7 @@ a { color:inherit; text-decoration:none; }
 .eq-btn:hover { border-color: rgba(74,158,142,.3); color: var(--teal); }
 .eq-btn.active { background: var(--teal-light); border-color: var(--teal-light); color: var(--charcoal); font-weight: 500; }
 
-/* Selected enquiry type indicator */
+/* Selected inquiry type indicator */
 .eq-selected {
   font-family: var(--mono);
   font-size: 11px;
@@ -646,23 +646,23 @@ a { color:inherit; text-decoration:none; }
       <div class="form-head">
         <div class="form-head-eye"><div class="fhe-rule"></div><span class="fhe-lbl">Send a Message</span></div>
         <h2>What are you working on?</h2>
-        <p>Use the form below or reach out directly. Either way, Lucy reads and responds to every message herself.</p>
+        <p>Use the form below or reach out directly. Either way, Aingworth's founder reads and responds to every message personally.</p>
       </div>
 
-      <!-- Enquiry type buttons -->
-      <div class="enquiry-types" role="group" aria-label="Select enquiry type">
-        <button class="eq-btn active" data-key="consulting" onclick="setType(this, 'Consulting Enquiry')" aria-pressed="true">Consulting</button>
-        <button class="eq-btn" data-key="speaking" onclick="setType(this, 'Speaking Enquiry')" aria-pressed="false">Speaking</button>
-        <button class="eq-btn" data-key="her-worth" onclick="setType(this, 'HER-Worth Enquiry')" aria-pressed="false">HER-Worth</button>
-        <button class="eq-btn" data-key="south-africa" onclick="setType(this, 'South Africa Enquiry')" aria-pressed="false">South Africa</button>
+      <!-- Inquiry type buttons -->
+      <div class="inquiry-types" role="group" aria-label="Select inquiry type">
+        <button class="eq-btn active" data-key="consulting" onclick="setType(this, 'Consulting Inquiry')" aria-pressed="true">Consulting</button>
+        <button class="eq-btn" data-key="speaking" onclick="setType(this, 'Speaking Inquiry')" aria-pressed="false">Speaking</button>
+        <button class="eq-btn" data-key="her-worth" onclick="setType(this, 'HER-Worth Inquiry')" aria-pressed="false">HER-Worth</button>
+        <button class="eq-btn" data-key="south-africa" onclick="setType(this, 'South Africa Inquiry')" aria-pressed="false">South Africa</button>
         <button class="eq-btn" data-key="media" onclick="setType(this, 'Media or Press')" aria-pressed="false">Media</button>
         <button class="eq-btn" data-key="feedback" onclick="setType(this, 'Experience or Feedback')" aria-pressed="false">Experience or Feedback</button>
-        <button class="eq-btn" data-key="general" onclick="setType(this, 'General Enquiry')" aria-pressed="false">General</button>
+        <button class="eq-btn" data-key="general" onclick="setType(this, 'General Inquiry')" aria-pressed="false">General</button>
       </div>
 
-      <!-- Selected enquiry type, shown to the user and submitted with the form -->
+      <!-- Selected inquiry type, shown to the user and submitted with the form -->
       <div class="eq-selected" id="eq-selected">
-        <span>Enquiry type selected:</span> <strong id="eq-selected-text">Consulting Enquiry</strong>
+        <span>Inquiry type selected:</span> <strong id="eq-selected-text">Consulting Inquiry</strong>
       </div>
 
       <form
@@ -672,8 +672,8 @@ a { color:inherit; text-decoration:none; }
         method="POST"
         aria-label="Contact form"
       >
-        <input type="hidden" name="_subject" id="form-subject" value="Consulting Enquiry via aingworth.com">
-        <input type="hidden" name="enquiry_type" id="form-type" value="Consulting Enquiry">
+        <input type="hidden" name="_subject" id="form-subject" value="Consulting Inquiry via aingworth.com">
+        <input type="hidden" name="inquiry_type" id="form-type" value="Consulting Inquiry">
         <input type="hidden" name="source" value="contact-page">
 
         <div class="field-row">
@@ -712,7 +712,7 @@ a { color:inherit; text-decoration:none; }
 
         <div class="field-group">
           <label class="field-label" for="f-message">What would you like to discuss? <span aria-hidden="true">*</span></label>
-          <textarea id="f-message" name="message" class="field-textarea" placeholder="Tell me what you are working on, what is not working, or what you want to build. The more honest you are here, the more useful the first conversation will be." required></textarea>
+          <textarea id="f-message" name="message" class="field-textarea" placeholder="Tell us what you are working on, what is not working, or what you want to build. The more honest you are here, the more useful the first conversation will be." required></textarea>
         </div>
 
         <div class="field-group">
@@ -745,7 +745,7 @@ a { color:inherit; text-decoration:none; }
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 11l5 5 9-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="fs-title">Message received.</div>
-        <p class="fs-text">Lucy will read this personally and get back to you within one business day. If your message is urgent, you can also reach her directly at <a href="mailto:info@aingworth.com" style="color:var(--teal); text-decoration:underline;">info@aingworth.com</a>.</p>
+        <p class="fs-text">Aingworth's founder will read this personally and get back to you within one business day. If your message is urgent, you can also reach her directly at <a href="mailto:info@aingworth.com" style="color:var(--teal); text-decoration:underline;">info@aingworth.com</a>.</p>
       </div>
     </div>
 
@@ -756,7 +756,7 @@ a { color:inherit; text-decoration:none; }
       <div class="book-card">
         <div class="bc-label">Book a call</div>
         <h2 class="bc-title">Rather talk than write?</h2>
-        <p class="bc-sub">Thirty minutes with Lucy. Tell her where you are and what is not working, and you will leave with a clear read on what to do next. No pitch, no obligation.</p>
+        <p class="bc-sub">Thirty minutes with Aingworth's founder. Tell her where you are and what is not working, and you will leave with a clear read on what to do next. No pitch, no obligation.</p>
         <a href="https://cal.com/info-36zfhx/30min" class="bc-btn" target="_blank" rel="noopener nofollow">Book 30 minutes
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -785,16 +785,6 @@ a { color:inherit; text-decoration:none; }
             <div class="dc-text">
               <span class="dc-name">+27 78 072 2185</span>
               <span class="dc-detail">Mobile - international</span>
-            </div>
-          </a>
-
-          <a href="https://www.linkedin.com/in/lisinda-lucy/" target="_blank" rel="noopener" class="dc-item" aria-label="Connect on LinkedIn">
-            <div class="dc-icon" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2h3v11H2zm1.5-2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM6 5h2.5v1.5S9 5 11 5c2.5 0 3 1.5 3 4v4h-3V9.5c0-1 0-2-1.5-2S8 8.5 8 9.5V13H6z"/></svg>
-            </div>
-            <div class="dc-text">
-              <span class="dc-name">LinkedIn</span>
-              <span class="dc-detail">linkedin.com/in/lisinda-lucy</span>
             </div>
           </a>
 
@@ -859,8 +849,8 @@ a { color:inherit; text-decoration:none; }
 
       <!-- HER-Worth note -->
       <div class="hw-contact-card">
-        <div class="hw-contact-label">HER-Worth enquiries</div>
-        <p>For enquiries specifically about the HER-Worth consulting and coaching program, visit the <a href="/her-worth/">HER-Worth page</a> or select HER-Worth in the form above. Both routes go directly to Lucy.</p>
+        <div class="hw-contact-label">HER-Worth inquiries</div>
+        <p>For inquiries specifically about the HER-Worth consulting and coaching program, visit the <a href="/her-worth/">HER-Worth page</a> or select HER-Worth in the form above. Both routes go directly to Lucy.</p>
       </div>
 
     </div>
@@ -872,16 +862,16 @@ a { color:inherit; text-decoration:none; }
   <div class="faq-inner">
     <div class="faq-head anim">
       <div class="faq-head-eye"><div class="fhe-rule-dark"></div><span class="fhe-lbl-dark">Before You Write</span></div>
-      <h2 id="faq-h">Questions Lucy gets asked most often.</h2>
+      <h2 id="faq-h">Questions we get asked most often.</h2>
     </div>
     <div class="faq-grid">
       <div class="faq-item anim" role="article">
         <div class="faq-q">Do you work with clients outside South Africa?</div>
-        <p class="faq-a">Yes. Most consulting and coaching work happens virtually, so location is not a constraint. Lucy has worked with clients across the USA, UK, Europe, Australia, and Asia. All one-to-one work is conducted in English.</p>
+        <p class="faq-a">Yes. Most consulting and coaching work happens virtually, so location is not a constraint. Aingworth has worked with clients across the USA, UK, Europe, Australia, and Asia. All one-to-one work is conducted in English.</p>
       </div>
       <div class="faq-item anim d1" role="article">
         <div class="faq-q">What is the typical starting point for a new consulting engagement?</div>
-        <p class="faq-a">Most engagements start with an AI Visibility Audit. It gives you and Lucy a shared, honest picture of where your brand currently stands before any strategy is built. From there the scope is defined collaboratively. See the <a href="https://aingworth.com/services/">services page</a> for starting rates.</p>
+        <p class="faq-a">Most engagements start with the Recognition Snapshot. It gives you and Aingworth a shared, honest picture of where your brand currently stands before any strategy is built. From there the scope is defined collaboratively. See the <a href="https://aingworth.com/services/">services page</a> for starting rates.</p>
       </div>
       <div class="faq-item anim" role="article">
         <div class="faq-q">How far in advance do you need to book a speaking engagement?</div>
@@ -893,11 +883,11 @@ a { color:inherit; text-decoration:none; }
       </div>
       <div class="faq-item anim" role="article">
         <div class="faq-q">I want to get the book. Where can I buy it?</div>
-        <p class="faq-a">Become the Answer is available on Amazon in most major markets - USA, UK, Germany, Australia, and Canada. South Africa is not yet directly available but you can order via Amazon US or UK with international delivery. See the <a href="https://aingworth.com/book/">book page</a> for all links.</p>
+        <p class="faq-a"><em>Become the Answer</em> by Lucy Aingworth (2026) is available on Amazon in most major markets - USA, UK, Germany, Australia, and Canada. South Africa is not yet directly available but you can order via Amazon US or UK with international delivery. See the <a href="https://aingworth.com/book/">book page</a> for all links.</p>
       </div>
       <div class="faq-item anim d1" role="article">
         <div class="faq-q">What is the best way to stay in touch without committing to anything?</div>
-        <p class="faq-a">Subscribe to The Authority Signal, the LinkedIn newsletter covering AI search visibility, brand authority, and the recognition economy. Published weekly. No sales content. <a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener">Subscribe here.</a></p>
+        <p class="faq-a">Subscribe to The Authority Signal, the LinkedIn newsletter covering AI search, brand authority, and the recognition economy. Published weekly. No sales content. <a href="https://www.linkedin.com/newsletters/the-authority-signal-7447696996154593280/" target="_blank" rel="noopener">Subscribe here.</a></p>
       </div>
     </div>
   </div>
@@ -910,7 +900,7 @@ a { color:inherit; text-decoration:none; }
     <div class="fgrid">
       <div>
         <img src="/images/Aingworth_Main_Logo2.png.png" alt="Aingworth" style="width:56px;height:auto;display:block;filter:brightness(100) contrast(2);margin-bottom:18px;">
-        <p class="fdesc">Brand authority and AI visibility consulting for founders and professional-services firms who need to be found for the right reasons.</p>
+        <p class="fdesc">Brand authority infrastructure and AI recognition consulting for founders and professional-services firms who need to be found for the right reasons.</p>
         <a href="mailto:info@aingworth.com" class="fmail">info@aingworth.com</a>
         <nav class="fsocials" aria-label="Social media">
           <a href="https://www.linkedin.com/in/lisinda-lucy/" class="fsoc" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z"/></svg></a>
@@ -962,7 +952,7 @@ a { color:inherit; text-decoration:none; }
 </footer>
 
 <script>
-// Enquiry type selector
+// Inquiry type selector
 function setType(btn, type) {
   document.querySelectorAll('.eq-btn').forEach(function(b) {
     b.classList.remove('active');
@@ -975,7 +965,7 @@ function setType(btn, type) {
   document.getElementById('eq-selected-text').textContent = type;
 }
 
-/* Preselect the enquiry type from ?type= in the URL, so a CTA on another page
+/* Preselect the inquiry type from ?type= in the URL, so a CTA on another page
    arrives here with the right option already chosen. Unknown or missing values
    fall through to the Consulting default. */
 (function () {
