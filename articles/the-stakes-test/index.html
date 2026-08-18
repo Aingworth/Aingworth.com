@@ -619,6 +619,13 @@ a{color:inherit;text-decoration:none;}
     });
   });
 })();
+
+(function(){
+  var b=document.querySelector('.nav-burger'),d=document.getElementById('ndrawer');
+  if(!b||!d)return;
+  b.addEventListener('click',function(){var o=d.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');document.body.style.overflow=o?'hidden':'';});
+  d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){d.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.style.overflow='';});});
+})();
 </script>
 </body>
 </html>
