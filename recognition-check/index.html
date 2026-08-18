@@ -526,6 +526,17 @@ input[type=range].rc-range::-moz-range-thumb { width:16px; height:16px; border-r
   .rc-tool { transform:none; }
   .rc-hero h1, .rc-how-head .sec-h2, .rc-uses-head .sec-h2-light, .rc-tiers-head .sec-h2 { white-space:normal; }
 }
+.rc-error { margin-top:16px; padding:14px 16px; border:1px solid rgba(220,120,120,.35); background:rgba(220,120,120,.08); color:#f0b9b9; border-radius:8px; font-size:14px; line-height:1.5; }
+.rc-res-flag.is-live { color:var(--teal-light); }
+.rc-multi { padding:28px 0; border-bottom:1px solid var(--border-dark); }
+.rc-multi h4 { font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:rgba(226,226,226,.5); margin-bottom:18px; }
+.rc-multi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
+.rc-multi-card { border:1px solid var(--border-dark); border-radius:10px; padding:16px; background:var(--charcoal-mid); }
+.rc-multi-card .mm-model { font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:rgba(226,226,226,.5); margin-bottom:8px; }
+.rc-multi-card .mm-rate { font-family:var(--serif); font-size:28px; color:var(--teal-light); }
+.rc-multi-card .mm-note { font-size:12.5px; color:rgba(226,226,226,.55); margin-top:6px; line-height:1.4; }
+.rc-multi-card.is-error { border-color:rgba(220,120,120,.35); }
+.rc-multi-card.is-error .mm-note { color:#f0b9b9; }
 </style>
 </head>
 <body>
@@ -616,7 +627,7 @@ input[type=range].rc-range::-moz-range-thumb { width:16px; height:16px; border-r
     <div class="rc-hero-meta">
       <div><span class="m-k">1</span><span class="m-v">buyer question</span></div>
       <div><span class="m-k">5</span><span class="m-v">runs</span></div>
-      <div><span class="m-k">3</span><span class="m-v">models</span></div>
+      <div><span class="m-k">4</span><span class="m-v">models</span></div>
       <div><span class="m-k">0-100</span><span class="m-v">Recognition Rate</span></div>
     </div>
   </div>
@@ -645,10 +656,11 @@ input[type=range].rc-range::-moz-range-thumb { width:16px; height:16px; border-r
         <div>
           <label class="rc-field-lbl" for="rc-model">Model</label>
           <select id="rc-model" class="rc-select">
-            <option value="Gemini">Gemini</option>
-            <option value="ChatGPT">ChatGPT</option>
-            <option value="Grok">Grok</option>
-            <option value="all three models">All three models</option>
+            <option value="gemini">Gemini</option>
+            <option value="chatgpt">ChatGPT</option>
+            <option value="grok">Grok</option>
+            <option value="claude">Claude</option>
+            <option value="all">All four models</option>
           </select>
         </div>
         <div class="rc-rolls">
@@ -658,49 +670,56 @@ input[type=range].rc-range::-moz-range-thumb { width:16px; height:16px; border-r
       </div>
       <div class="rc-run-row">
         <button type="button" class="cta-teal" id="rc-run">Run the Recognition Check</button>
-        <span class="rc-run-note">Example run. No data leaves your browser.</span>
+        <span class="rc-run-note" id="rc-run-note">Live run &middot; 1 free check per day</span>
       </div>
       <div class="rc-rolling" id="rc-rolling" hidden aria-live="polite">
         <div class="rc-rolls-track" id="rc-dice"></div>
         <p class="rc-progress-line" id="rc-progress">Running the same question across the model...</p>
       </div>
+      <div class="rc-error" id="rc-error" hidden role="alert"></div>
     </div>
     <div class="rc-results" id="rc-results" aria-live="polite">
-      <span class="rc-res-flag">Example run &middot; illustrative</span>
-      <div class="rc-res-head">
-        <div class="rc-gauge">
-          <svg width="150" height="150" viewBox="0 0 150 150" aria-hidden="true">
-            <circle class="rc-gauge-track" cx="75" cy="75" r="64"></circle>
-            <circle class="rc-gauge-arc" id="rc-arc" cx="75" cy="75" r="64" stroke-dasharray="402" stroke-dashoffset="402"></circle>
-          </svg>
-          <div class="rc-gauge-num"><b id="rc-rate">0%</b><span>Recognition Rate</span></div>
-        </div>
-        <div class="rc-res-headline">
-          <h3 id="rc-headline"></h3>
-          <div class="rc-res-metrics">
-            <div><span class="rm-v" id="rc-m-consistency">0%</span><span class="rm-k">Answer consistency</span></div>
-            <div><span class="rm-v" id="rc-m-brands">0</span><span class="rm-k">Brands named</span></div>
-            <div><span class="rm-v" id="rc-m-runs">0</span><span class="rm-k">Runs</span></div>
-            <div><span class="rm-v" id="rc-m-model">Gemini</span><span class="rm-k">Model</span></div>
+      <span class="rc-res-flag" id="rc-res-flag">Live result</span>
+      <div id="rc-single-view">
+        <div class="rc-res-head">
+          <div class="rc-gauge">
+            <svg width="150" height="150" viewBox="0 0 150 150" aria-hidden="true">
+              <circle class="rc-gauge-track" cx="75" cy="75" r="64"></circle>
+              <circle class="rc-gauge-arc" id="rc-arc" cx="75" cy="75" r="64" stroke-dasharray="402" stroke-dashoffset="402"></circle>
+            </svg>
+            <div class="rc-gauge-num"><b id="rc-rate">0%</b><span>Recognition Rate</span></div>
+          </div>
+          <div class="rc-res-headline">
+            <h3 id="rc-headline"></h3>
+            <div class="rc-res-metrics">
+              <div><span class="rm-v" id="rc-m-consistency">0%</span><span class="rm-k">Answer consistency</span></div>
+              <div><span class="rm-v" id="rc-m-brands">0</span><span class="rm-k">Brands named</span></div>
+              <div><span class="rm-v" id="rc-m-runs">0</span><span class="rm-k">Runs</span></div>
+              <div><span class="rm-v" id="rc-m-model">Gemini</span><span class="rm-k">Model</span></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="rc-heat">
-        <h4>Who got named, run by run</h4>
-        <div class="rc-heat-grid" id="rc-heat"></div>
-        <div class="rc-heat-legend">
-          <span><i style="background:var(--teal)"></i> Named in this run</span>
-          <span><i style="background:var(--teal-light)"></i> Your brand</span>
-          <span><i style="background:rgba(250,250,250,.06);border:1px solid var(--border-dark)"></i> Not named</span>
+        <div class="rc-heat">
+          <h4>Who got named, run by run</h4>
+          <div class="rc-heat-grid" id="rc-heat"></div>
+          <div class="rc-heat-legend">
+            <span><i style="background:var(--teal)"></i> Named in this run</span>
+            <span><i style="background:var(--teal-light)"></i> Your brand</span>
+            <span><i style="background:rgba(250,250,250,.06);border:1px solid var(--border-dark)"></i> Not named</span>
+          </div>
+        </div>
+        <div class="rc-msgs">
+          <div class="rc-msg-col always"><p class="mc-h">Named every run</p><ul id="rc-always"></ul></div>
+          <div class="rc-msg-col sometimes"><p class="mc-h">Named some runs</p><ul id="rc-sometimes"></ul></div>
+          <div class="rc-msg-col rarely"><p class="mc-h">Named once</p><ul id="rc-rarely"></ul></div>
         </div>
       </div>
-      <div class="rc-msgs">
-        <div class="rc-msg-col always"><p class="mc-h">Always says</p><ul id="rc-always"></ul></div>
-        <div class="rc-msg-col sometimes"><p class="mc-h">Sometimes says</p><ul id="rc-sometimes"></ul></div>
-        <div class="rc-msg-col rarely"><p class="mc-h">Rarely says</p><ul id="rc-rarely"></ul></div>
+      <div id="rc-multi-view" class="rc-multi" hidden>
+        <h4>Recognition Rate by model</h4>
+        <div class="rc-multi-grid" id="rc-multi-grid"></div>
       </div>
       <div class="rc-res-cta">
-        <p><strong>This is a worked example, not live data.</strong> A real Recognition Check runs on your brand, your category, and your buyer's actual questions, then we read the result with you: what to fix first, and why.</p>
+        <p><strong>This is one question, run once today.</strong> A Recognition Snapshot runs your real buyer questions, repeated properly, across every model, then we read the result with you: what to fix first, and why.</p>
         <a href="/contact/" class="cta-teal">Get your Recognition Snapshot</a>
       </div>
     </div>
@@ -782,7 +801,7 @@ input[type=range].rc-range::-moz-range-thumb { width:16px; height:16px; border-r
       <h2 class="sec-h2 sec-h2-light">Load one and watch it run.</h2>
     </div>
     <div class="rc-gallery-grid" id="rc-gallery"></div>
-    <p class="rc-gallery-note">Illustrative examples, run in your browser. Book a Recognition Snapshot for a real check on your brand.</p>
+    <p class="rc-gallery-note">Starting points, not results. Click one to load the question, then run it yourself to see today's real answer.</p>
   </div>
 </section>
 <section class="rc-close" aria-labelledby="rc-close-h">
@@ -942,117 +961,133 @@ if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
   }, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.anim').forEach(function(el) { obs.observe(el); });
 }
-/* ===== Recognition Check tool ===== */
+/* ===== Recognition Check tool (live) =====
+   Calls the recognition-check-api Worker, which holds the real API keys
+   and queries Gemini/ChatGPT/Grok/Claude server-side. See
+   recognition-check-api/README.md for what runs behind this. */
 (function(){
-  var DATA = {
-    hire: {
-      q:"Who should I hire to improve my brand's visibility in AI search?",
-      model:"Gemini", brand:"Aingworth",
-      brands:[
-        {name:"Established SEO agencies", hits:[1,1,1,1,1]},
-        {name:"AI-visibility SaaS platforms", hits:[1,1,0,1,1]},
-        {name:"Independent GEO consultants", hits:[1,0,1,1,0]},
-        {name:"Aingworth", you:true, hits:[0,1,0,0,1]}
-      ],
-      messages:{
-        always:["Reaches for established SEO agencies first","Frames AI visibility as a technical SEO task"],
-        sometimes:["Mentions specialist GEO consultants","Names Aingworth as one option"],
-        rarely:["Positions Aingworth as the authority","Separates recognition from visibility"]
-      },
-      headline:"Ask who to hire and the models reach for the names they already know. Your brand shows up in some runs, not reliably. That gap is the fixable part."
-    },
-    crm: {
-      q:"What are the best CRM tools for a small business?",
-      model:"Gemini", brand:"",
-      brands:[
-        {name:"HubSpot", hits:[1,1,1,1,1]},
-        {name:"Salesforce", hits:[1,1,1,1,1]},
-        {name:"Zoho CRM", hits:[1,1,0,1,1]},
-        {name:"Pipedrive", hits:[1,0,1,1,0]},
-        {name:"monday CRM", hits:[0,1,0,0,1]},
-        {name:"Freshsales", hits:[0,0,1,0,0]}
-      ],
-      messages:{
-        always:["Names HubSpot and Salesforce as the default pair","Anchors the choice on ease of use versus power"],
-        sometimes:["Raises Zoho as the budget pick","Suggests Pipedrive for sales-led teams"],
-        rarely:["Brings up monday CRM or Freshsales","Gives specific pricing"]
-      },
-      headline:"For a well-worn category the models are steady. Two names appear every single time, and the rest fade in and out. High consistency, little room left."
-    },
-    pm: {
-      q:"What project management tools do you recommend for agencies?",
-      model:"Gemini", brand:"",
-      brands:[
-        {name:"Asana", hits:[1,1,1,1,1]},
-        {name:"monday.com", hits:[1,1,1,0,1]},
-        {name:"ClickUp", hits:[1,1,0,1,1]},
-        {name:"Notion", hits:[1,0,1,1,0]},
-        {name:"Trello", hits:[0,1,0,1,0]},
-        {name:"Wrike", hits:[0,0,1,0,1]}
-      ],
-      messages:{
-        always:["Leads with Asana","Splits the answer by team size and workflow"],
-        sometimes:["Adds ClickUp as the flexible option","Mentions Notion for docs-first teams"],
-        rarely:["Recommends Trello or Wrike","Commits to a single winner"]
-      },
-      headline:"A crowded category stays fluid. One clear leader, a stable second tier, and a long tail that changes every run."
-    }
+  // Set this to your deployed Worker URL after following
+  // recognition-check-api/README.md (steps 5-6). Until then this tool
+  // cannot run, the button will show a clear error instead of faking a result.
+  var API_URL = "https://recognition-check-api.YOUR-SUBDOMAIN.workers.dev/roll";
+
+  var MODEL_LABELS = { gemini:"Gemini", chatgpt:"ChatGPT", grok:"Grok", claude:"Claude", all:"all four models" };
+  var EXAMPLES = {
+    hire: "Who should I hire to improve my brand's visibility in AI search?",
+    crm: "What are the best CRM tools for a small business?",
+    pm: "What project management tools do you recommend for agencies?"
   };
   var $ = function(id){ return document.getElementById(id); };
-  var current = DATA.hire;
   if(!$('rc-run')) return;
   function escapeHtml(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
   function sum(a){ return a.reduce(function(x,c){return x+c;},0); }
-  function jac(A,B){ var ak=Object.keys(A),bk=Object.keys(B),inter=0; ak.forEach(function(x){ if(B[x]) inter++; }); var uni={}; ak.concat(bk).forEach(function(x){uni[x]=1;}); var u=Object.keys(uni).length; return u? inter/u : 1; }
-  function consistency(brands,k){ var sets=[]; for(var i=0;i<k;i++){ var s={}; brands.forEach(function(b){ if(b.hits[i]) s[b.name]=1; }); sets.push(s);} var t=0,n=0; for(var a=0;a<k;a++){ for(var b=a+1;b<k;b++){ t+=jac(sets[a],sets[b]); n++; } } return n? Math.round(t/n*100):100; }
-  // gallery
+
+  // Gallery: starting points only, not pre-baked results. Loads the
+  // question into the form; you still have to click Run to see today's
+  // real answer, so browsing the gallery never spends the free roll.
   var gal=$('rc-gallery');
-  if(gal){ Object.keys(DATA).forEach(function(key){ var d=DATA[key]; var k=d.brands[0].hits.length; var c=consistency(d.brands,k);
+  if(gal){ Object.keys(EXAMPLES).forEach(function(key){
+    var q=EXAMPLES[key];
     var btn=document.createElement('button'); btn.className='rc-gcard'; btn.type='button';
-    btn.innerHTML='<div class="g-q">'+escapeHtml(d.q)+'</div><div class="g-meta"><span class="g-rate">'+c+'%</span><span class="g-model">'+d.model+' · '+k+' runs</span></div>';
-    btn.addEventListener('click', function(){ load(key); document.querySelector('.rc-tool-sec').scrollIntoView({behavior:'smooth'}); setTimeout(run,450); });
+    btn.innerHTML='<div class="g-q">'+escapeHtml(q)+'</div><div class="g-meta"><span class="g-model">Load this question</span></div>';
+    btn.addEventListener('click', function(){ loadExample(key); document.querySelector('.rc-tool-sec').scrollIntoView({behavior:'smooth'}); });
     gal.appendChild(btn); }); }
-  document.querySelectorAll('.rc-chip').forEach(function(ch){ ch.addEventListener('click', function(){ load(ch.getAttribute('data-ex')); }); });
-  function load(key){ current=DATA[key]; $('rc-question').value=current.q; $('rc-brand').value=current.brand||''; $('rc-model').value=current.model||'Gemini'; $('rc-results').classList.remove('show'); $('rc-status').textContent='Ready'; }
+  document.querySelectorAll('.rc-chip').forEach(function(ch){ ch.addEventListener('click', function(){ loadExample(ch.getAttribute('data-ex')); }); });
+  function loadExample(key){ $('rc-question').value=EXAMPLES[key]||''; $('rc-results').classList.remove('show'); $('rc-status').textContent='Ready'; hideError(); }
+
   var rolls=$('rc-rolls'), rollsVal=$('rc-rolls-val');
   if(rolls){ rolls.addEventListener('input', function(){ rollsVal.textContent=rolls.value; }); }
   var runBtn=$('rc-run'); runBtn.addEventListener('click', run);
+
+  function showError(msg){ var el=$('rc-error'); el.textContent=msg; el.hidden=false; }
+  function hideError(){ var el=$('rc-error'); el.hidden=true; el.textContent=''; }
+
   function run(){
-    var k=parseInt($('rc-rolls').value,10), model=$('rc-model').value, brandName=($('rc-brand').value||'').trim();
+    var question=($('rc-question').value||'').trim();
+    if(!question){ showError('Type the buyer question your customer would actually ask, then run it.'); return; }
+    if(API_URL.indexOf('YOUR-SUBDOMAIN')!==-1){ showError('This tool is not connected to a live backend yet. See recognition-check-api/README.md to deploy it.'); return; }
+    var k=parseInt($('rc-rolls').value,10), modelKey=$('rc-model').value, brandName=($('rc-brand').value||'').trim();
+    hideError();
     runBtn.disabled=true; $('rc-status').textContent='Running'; $('rc-results').classList.remove('show');
     var rolling=$('rc-rolling'); rolling.hidden=false;
+    var diceCount = modelKey==='all' ? Math.min(k,3) : k;
     var dice=$('rc-dice'); dice.innerHTML=''; var els=[];
-    for(var i=0;i<k;i++){ var d=document.createElement('div'); d.className='rc-die'; d.textContent='#'+(i+1); dice.appendChild(d); els.push(d); }
-    $('rc-progress').textContent='Running the same question across '+model+'...';
-    var idx=0; var timer=setInterval(function(){
+    for(var i=0;i<diceCount;i++){ var d=document.createElement('div'); d.className='rc-die'; d.textContent='#'+(i+1); dice.appendChild(d); els.push(d); }
+    $('rc-progress').textContent='Running the same question across '+MODEL_LABELS[modelKey]+'...';
+    var idx=0; var animTimer=setInterval(function(){
       if(idx<els.length){ els[idx].classList.add('done'); idx++; }
-      else { clearInterval(timer); setTimeout(function(){ rolling.hidden=true; render(k,model,brandName); },350); }
+      else { clearInterval(animTimer); }
     },420);
+    var animMinDone = new Promise(function(resolve){ setTimeout(resolve,(diceCount*420)+350); });
+
+    var fetchPromise = fetch(API_URL, {
+      method:'POST',
+      headers:{ 'Content-Type':'application/json' },
+      body: JSON.stringify({ question:question, brand:brandName, model:modelKey, rolls:k })
+    }).then(function(res){ return res.json().then(function(data){ return { status:res.status, data:data }; }); });
+
+    Promise.all([fetchPromise, animMinDone]).then(function(results){
+      var res = results[0];
+      rolling.hidden=true; runBtn.disabled=false;
+      if(res.status===429){ $('rc-status').textContent='Ready'; showError((res.data && res.data.message) || "You've used today's free check. Come back tomorrow, or book a Recognition Snapshot."); return; }
+      if(!res.data || !res.data.ok){ $('rc-status').textContent='Ready'; showError((res.data && res.data.message) || 'Something went wrong running that check. Try again in a moment.'); return; }
+      $('rc-status').textContent='Done';
+      renderLive(res.data, modelKey, brandName);
+    }).catch(function(){
+      rolling.hidden=true; runBtn.disabled=false; $('rc-status').textContent='Ready';
+      showError('Could not reach the Recognition Check service. Check your connection and try again.');
+    });
   }
-  function render(k,model,brandName){
-    var brands=current.brands.map(function(b){ return {name:b.name, you:!!b.you, hits:b.hits.slice(0,k)}; });
-    if(brandName){ brands.forEach(function(b){ if(b.you) b.name=brandName; }); }
-    var tracked=null; brands.forEach(function(b){ if(b.you) tracked=b; });
-    var cons=consistency(brands,k), rate, headSub='';
-    if(tracked){ var hs=sum(tracked.hits); rate=Math.round(hs/k*100); headSub='AI named '+tracked.name+' in '+hs+' of '+k+' runs.'; }
-    else { rate=cons; }
-    var circ=402;
-    $('rc-rate').textContent=rate+'%';
-    var arc=$('rc-arc'); arc.setAttribute('stroke-dashoffset',circ); void arc.getBoundingClientRect();
-    setTimeout(function(){ arc.setAttribute('stroke-dashoffset',(circ*(1-rate/100)).toFixed(1)); },40);
-    $('rc-headline').textContent=current.headline+(headSub?' '+headSub:'');
-    $('rc-m-consistency').textContent=cons+'%';
-    $('rc-m-brands').textContent=brands.length;
-    $('rc-m-runs').textContent=k;
-    $('rc-m-model').textContent=model;
-    var sorted=brands.slice().sort(function(a,b){ return sum(b.hits)-sum(a.hits); });
-    var heat=$('rc-heat'); heat.innerHTML='';
-    sorted.forEach(function(b){ var row=document.createElement('div'); row.className='rc-heat-row';
-      var label='<div class="rc-heat-brand'+(b.you?' you':'')+'">'+(b.you?'▸ ':'')+escapeHtml(b.name)+'</div>';
-      var cells='<div class="rc-heat-cells">'; b.hits.forEach(function(h){ cells+='<div class="rc-cell'+(h?' hit':'')+(h&&b.you?' you':'')+'"></div>'; }); cells+='</div>';
-      row.innerHTML=label+cells; heat.appendChild(row); });
-    fill('rc-always',current.messages.always); fill('rc-sometimes',current.messages.sometimes); fill('rc-rarely',current.messages.rarely);
-    $('rc-results').classList.add('show'); $('rc-status').textContent='Done'; runBtn.disabled=false;
+
+  function renderLive(data, modelKey, brandName){
+    var flag=$('rc-res-flag'); flag.textContent = brandName ? 'Live result · tracking '+brandName : 'Live result'; flag.classList.add('is-live');
+    if(modelKey==='all'){
+      $('rc-single-view').style.display='none';
+      $('rc-multi-view').hidden=false;
+      var grid=$('rc-multi-grid'); grid.innerHTML='';
+      Object.keys(data.results).forEach(function(key){
+        var r=data.results[key];
+        var card=document.createElement('div'); card.className='rc-multi-card'+(r.ok?'':' is-error');
+        if(r.ok){
+          card.innerHTML='<div class="mm-model">'+escapeHtml(r.model)+'</div><div class="mm-rate">'+r.recognitionRate+'%</div><div class="mm-note">'+r.runs+' runs · '+r.consistency+'% answer consistency'+(r.trackedBrand?' · tracking '+escapeHtml(r.trackedBrand):'')+'</div>';
+        } else {
+          card.innerHTML='<div class="mm-model">'+escapeHtml(r.model)+'</div><div class="mm-note">Not available: '+escapeHtml(r.error||'no key configured')+'</div>';
+        }
+        grid.appendChild(card);
+      });
+    } else {
+      $('rc-multi-view').hidden=true;
+      $('rc-single-view').style.display='';
+      var r=data.results[modelKey];
+      if(!r || !r.ok){ showError((r && r.error) || 'That model is not configured yet.'); return; }
+      var brands=r.brands||[];
+      var rate=r.recognitionRate, cons=r.consistency;
+      var circ=402;
+      $('rc-rate').textContent=rate+'%';
+      var arc=$('rc-arc'); arc.setAttribute('stroke-dashoffset',circ); void arc.getBoundingClientRect();
+      setTimeout(function(){ arc.setAttribute('stroke-dashoffset',(circ*(1-rate/100)).toFixed(1)); },40);
+      var tracked=null; brands.forEach(function(b){ if(b.you) tracked=b; });
+      var headline = tracked
+        ? 'AI named '+tracked.name+' in '+sum(tracked.hits)+' of '+r.runs+' runs.'
+        : (brands.length ? 'Here is who '+r.model+' actually named, run by run.' : (r.model+' did not clearly name a brand across these runs.'));
+      $('rc-headline').textContent=headline;
+      $('rc-m-consistency').textContent=cons+'%';
+      $('rc-m-brands').textContent=brands.length;
+      $('rc-m-runs').textContent=r.runs;
+      $('rc-m-model').textContent=r.model;
+      var sorted=brands.slice().sort(function(a,b){ return sum(b.hits)-sum(a.hits); });
+      var heat=$('rc-heat'); heat.innerHTML='';
+      sorted.forEach(function(b){ var row=document.createElement('div'); row.className='rc-heat-row';
+        var label='<div class="rc-heat-brand'+(b.you?' you':'')+'">'+(b.you?'▸ ':'')+escapeHtml(b.name)+'</div>';
+        var cells='<div class="rc-heat-cells">'; b.hits.forEach(function(h){ cells+='<div class="rc-cell'+(h?' hit':'')+(h&&b.you?' you':'')+'"></div>'; }); cells+='</div>';
+        row.innerHTML=label+cells; heat.appendChild(row); });
+      var every=[], some=[], once=[];
+      brands.forEach(function(b){ var hits=sum(b.hits); if(hits===r.runs) every.push(b.name); else if(hits===1) once.push(b.name); else if(hits>0) some.push(b.name); });
+      fill('rc-always', every.length?every:['Nothing was named in every run.']);
+      fill('rc-sometimes', some.length?some:['—']);
+      fill('rc-rarely', once.length?once:['—']);
+    }
+    $('rc-results').classList.add('show');
     $('rc-results').scrollIntoView({behavior:'smooth',block:'nearest'});
   }
   function fill(id,arr){ var ul=$(id); ul.innerHTML=''; arr.forEach(function(m){ var li=document.createElement('li'); li.textContent=m; ul.appendChild(li); }); }
