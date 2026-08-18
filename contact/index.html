@@ -652,6 +652,7 @@ a { color:inherit; text-decoration:none; }
       <!-- Inquiry type buttons -->
       <div class="inquiry-types" role="group" aria-label="Select inquiry type">
         <button class="eq-btn active" data-key="consulting" onclick="setType(this, 'Consulting Inquiry')" aria-pressed="true">Consulting</button>
+        <button class="eq-btn" data-key="recognition-snapshot" onclick="setType(this, 'Recognition Snapshot Inquiry')" aria-pressed="false">Recognition Snapshot</button>
         <button class="eq-btn" data-key="speaking" onclick="setType(this, 'Speaking Inquiry')" aria-pressed="false">Speaking</button>
         <button class="eq-btn" data-key="her-worth" onclick="setType(this, 'HER-Worth Inquiry')" aria-pressed="false">HER-Worth</button>
         <button class="eq-btn" data-key="south-africa" onclick="setType(this, 'South Africa Inquiry')" aria-pressed="false">South Africa</button>
@@ -966,8 +967,26 @@ function setType(btn, type) {
 }
 
 /* Preselect the inquiry type from ?type= in the URL, so a CTA on another page
-   arrives here with the right option already chosen. Unknown or missing values
-   fall through to the Consulting default. */
+   (e.g. /recognition-snapshot/) arrives here with the right option already
+   chosen. Unknown or missing values fall through to the Consulting default. */
+(function () {
+  var TYPE_MAP = {
+    'consulting': 'Consulting Inquiry',
+    'recognition-snapshot': 'Recognition Snapshot Inquiry',
+    'speaking': 'Speaking Inquiry',
+    'her-worth': 'HER-Worth Inquiry',
+    'south-africa': 'South Africa Inquiry',
+    'media': 'Media or Press',
+    'feedback': 'Experience or Feedback',
+    'general': 'General Inquiry'
+  };
+  var key = new URLSearchParams(window.location.search).get('type');
+  if (!key || !TYPE_MAP[key]) return;
+  var btn = document.querySelector('.eq-btn[data-key="' + key + '"]');
+  if (btn) setType(btn, TYPE_MAP[key]);
+})();
+
+/* Nav dropdown open/close behaviour (Tools, etc). */
 (function () {
   var groups = Array.prototype.slice.call(document.querySelectorAll('.nav-has-drop'));
   if (!groups.length) return;
