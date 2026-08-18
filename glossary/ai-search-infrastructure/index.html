@@ -270,6 +270,7 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 </style>
 
 <style>
+/* ---- breadcrumb + hero shared by category and term pages ---- */
 .cbread{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid-grey);margin-bottom:20px;}
 .cbread a{color:var(--mid-grey);text-decoration:none;transition:color .2s;}
 .cbread a:hover{color:var(--teal-light);}
@@ -283,25 +284,70 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .csibs-lbl{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.12em;text-transform:uppercase;margin-right:4px;align-self:center;}
 .gl-chip-link{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:rgba(250,250,250,.65);background:var(--charcoal-mid);border:1px solid var(--border-dark);padding:9px 15px;border-radius:20px;text-decoration:none;transition:all .2s;}
 .gl-chip-link:hover{border-color:var(--teal-light);color:var(--teal-light);}
+
+/* ---- Start Here ---- */
 .cstart{background:var(--seasalt);padding:60px var(--px) 8px;}
 .cstart-inner{max-width:var(--max-w);margin:0 auto;}
 .cstart-h{font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);font-weight:500;color:var(--charcoal);margin:8px 0 6px;}
 .cstart-lead{font-size:15px;line-height:1.7;color:var(--muted-light);margin-bottom:24px;}
 .cstart-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.cstart-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-left:3px solid var(--teal-light);border-radius:4px;padding:20px 22px;text-decoration:none;transition:box-shadow .2s,border-color .2s,transform .2s;}
+.cstart-card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-left:3px solid var(--teal-light);border-radius:4px;padding:20px 22px;text-decoration:none;transition:box-shadow .2s,transform .2s;}
 .cstart-card:hover{box-shadow:0 4px 22px rgba(26,26,26,.07);transform:translateY(-2px);}
 .cstart-n{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);margin-bottom:9px;}
 .cstart-name{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--charcoal);line-height:1.2;margin-bottom:7px;}
 .cstart-one{font-size:14px;line-height:1.62;color:var(--muted-light);flex:1;}
-.cstart-go{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);}
+.cstart-go{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);transition:gap .2s;}
 .cstart-card:hover .cstart-go{gap:11px;}
+
+/* ---- term card grid (three across) ---- */
 .call{background:var(--seasalt);padding:52px var(--px) 8px;}
 .call-inner{max-width:var(--max-w);margin:0 auto;}
-.call-h{font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);font-weight:500;color:var(--charcoal);margin:8px 0 22px;}
-.cback{background:var(--seasalt);padding:44px var(--px) 76px;text-align:center;}
-.cback a{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);text-decoration:none;border:1px solid rgba(74,158,142,.35);padding:13px 24px;border-radius:2px;transition:all .2s;}
-.cback a:hover{background:rgba(74,158,142,.08);border-color:var(--teal);}
-@media (max-width:820px){.cstart-grid{grid-template-columns:1fr;}}
+.call-h{font-family:var(--serif);font-size:clamp(26px,2.6vw,36px);font-weight:500;color:var(--charcoal);margin:8px 0 24px;}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.tcard{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-radius:4px;padding:22px 46px 20px 24px;text-decoration:none;transition:border-color .2s,box-shadow .2s,transform .2s;}
+.tcard:hover{border-color:rgba(74,158,142,.45);box-shadow:0 4px 22px rgba(26,26,26,.07);transform:translateY(-2px);}
+.tcard-name{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--teal);line-height:1.22;margin:0 0 8px;transition:color .2s;}
+.tcard:hover .tcard-name{color:var(--charcoal);}
+.tcard-one{font-size:14px;line-height:1.65;color:var(--muted-light);margin:0;flex:1;}
+.tcard-tag{align-self:flex-start;margin-top:14px;font-family:var(--mono);font-size:9px;letter-spacing:.07em;text-transform:uppercase;padding:5px 10px;border-radius:20px;white-space:nowrap;}
+.tcard-arr{position:absolute;top:22px;right:20px;color:var(--teal);transition:transform .25s var(--ease);}
+.tcard:hover .tcard-arr{transform:translateX(4px);}
+.tcard[hidden]{display:none;}
+
+/* ---- back to glossary button ---- */
+.cback{background:var(--seasalt);padding:44px var(--px) 60px;text-align:center;}
+.cback-btn{display:inline-flex;align-items:center;gap:12px;background:var(--charcoal);color:var(--teal-light);font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;padding:18px 34px;border-radius:2px;border:1px solid var(--charcoal);transition:all .2s var(--ease);}
+.cback-btn:hover{background:var(--charcoal-light);border-color:var(--teal-light);transform:translateY(-1px);}
+.cback-btn svg{transition:transform .2s var(--ease);}
+.cback-btn:hover svg{transform:translateX(-4px);}
+
+/* ---- term page ---- */
+.tp-chip{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-light);background:rgba(107,191,176,.1);border:1px solid rgba(107,191,176,.28);padding:8px 15px;border-radius:20px;text-decoration:none;margin-bottom:20px;transition:background .2s;}
+.tp-chip:hover{background:rgba(107,191,176,.2);}
+.tp-lead{font-family:var(--serif);font-size:clamp(20px,2vw,26px);font-weight:400;font-style:italic;line-height:1.45;color:var(--teal-light);max-width:800px;margin-top:20px;}
+.tp-tagrow{margin-top:22px;}
+.tp-tagrow .term-tag{display:inline-block;}
+.tp-body{background:var(--seasalt);padding:66px var(--px) 8px;}
+.tp-inner{max-width:var(--article-w);margin:0 auto;}
+.tp-h2{font-family:var(--serif);font-size:clamp(23px,2.2vw,30px);font-weight:500;color:var(--charcoal);margin:0 0 14px;}
+.tp-sec{margin-bottom:44px;}
+.tp-sec p{font-size:16.5px;line-height:1.8;color:var(--charcoal);margin:0 0 14px;}
+.tp-sec p:last-child{margin-bottom:0;}
+.tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
+.tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
+.tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
+.tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
+.tp-fw{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);text-decoration:none;border:1px solid rgba(74,158,142,.35);padding:13px 20px;border-radius:2px;transition:all .2s;}
+.tp-fw:hover{background:rgba(74,158,142,.08);border-color:var(--teal);}
+.tp-rel{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.tp-relcard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-radius:4px;padding:18px 20px;text-decoration:none;transition:border-color .2s,transform .2s;}
+.tp-relcard:hover{border-color:rgba(74,158,142,.45);transform:translateY(-2px);}
+.tp-relname{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--teal);line-height:1.25;margin-bottom:5px;}
+.tp-relone{font-size:13.5px;line-height:1.6;color:var(--muted-light);}
+.tp-nav{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;background:var(--seasalt);padding:36px var(--px) 60px;}
+@media (max-width:980px){.tgrid{grid-template-columns:repeat(2,1fr);}.cstart-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:660px){.tgrid,.cstart-grid,.tp-rel{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -420,200 +466,112 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <h2 class="cstart-h" id="c-start-h">New to the infrastructure?</h2>
     <p class="cstart-lead">Begin with these foundational concepts:</p>
     <div class="cstart-grid">
-        <a class="cstart-card" href="#llm">
+        <a class="cstart-card" href="/glossary/ai-search-infrastructure/llm/">
           <span class="cstart-n">Start 01</span>
           <span class="cstart-name">Large Language Model (LLM)</span>
           <span class="cstart-one">A model trained on large amounts of text to understand and generate language.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
-        <a class="cstart-card" href="#generative-ai">
+        <a class="cstart-card" href="/glossary/ai-search-infrastructure/generative-ai/">
           <span class="cstart-n">Start 02</span>
           <span class="cstart-name">Generative AI</span>
           <span class="cstart-one">AI that creates new content rather than only retrieving it.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
-        <a class="cstart-card" href="#embeddings">
+        <a class="cstart-card" href="/glossary/ai-search-infrastructure/embeddings/">
           <span class="cstart-n">Start 03</span>
           <span class="cstart-name">Embeddings</span>
           <span class="cstart-one">Numerical representations that place similar meanings close together.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
     </div>
   </div>
 </section>
 
-<section class="call gl-terms" aria-labelledby="c-all-h">
-  <div class="gl-terms-inner">
-    <div class="gl-cat" id="cat-ai-search-infrastructure" data-cat="ai-search-infrastructure">
-      <h2 class="call-h" id="c-all-h">All AI & Search Infrastructure terms (10)</h2>
-      <details class="term" id="llm" data-cat="ai-search-infrastructure" data-name="large language model (llm)">
-        <summary class="term-sum">
-          <h3 class="term-name">Large Language Model (LLM)</h3>
-          <span class="term-one">A model trained on large amounts of text to understand and generate language.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">A Large Language Model, or LLM, is an AI model trained on large amounts of text to understand and generate language. ChatGPT, Claude, and Gemini are all built on large language models.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Knowing that these systems predict language rather than look up facts explains both why they are fluent and why they need grounding to be reliable about a brand.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#generative-ai">Generative AI</a><a href="/glossary/retrieval-evidence-consensus/#grounding">Grounding</a><a href="#ai-hallucination">AI Hallucination</a></div>
-      </details>
-      <details class="term" id="generative-ai" data-cat="ai-search-infrastructure" data-name="generative ai">
-        <summary class="term-sum">
-          <h3 class="term-name">Generative AI</h3>
-          <span class="term-one">AI that creates new content rather than only retrieving it.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Generative AI refers to AI systems that create new content, such as text, images, or code, rather than only classifying or retrieving existing content.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Generation is what makes the answer layer possible, and it is also why an unclear brand ends up with a plausible-sounding description rather than a blank.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#llm">Large Language Model (LLM)</a><a href="/glossary/recognition-authority/#brand-hallucination">Brand Hallucination</a><a href="/glossary/search-seo-generative-optimization/#geo">Generative Engine Optimization (GEO)</a></div>
-      </details>
-      <details class="term" id="nlp" data-cat="ai-search-infrastructure" data-name="natural language processing (nlp)">
-        <summary class="term-sum">
-          <h3 class="term-name">Natural Language Processing (NLP)</h3>
-          <span class="term-one">The field concerned with machines understanding human language.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Natural Language Processing, or NLP, is the field of AI concerned with how machines understand, interpret, and generate human language.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is the older discipline underneath today's systems, and it is where entity recognition and semantic understanding come from.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/search-seo-generative-optimization/#entity-recognition">Entity Recognition</a><a href="/glossary/search-seo-generative-optimization/#semantic-search">Semantic Search</a><a href="#machine-learning">Machine Learning</a></div>
-      </details>
-      <details class="term" id="machine-learning" data-cat="ai-search-infrastructure" data-name="machine learning">
-        <summary class="term-sum">
-          <h3 class="term-name">Machine Learning</h3>
-          <span class="term-one">Building systems that learn patterns from data rather than rules.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Machine learning is a method of building AI systems where a model learns patterns from data, rather than following rules written explicitly by a person.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Because these systems learn from data rather than rules, there is no algorithm to reverse engineer. What a brand can influence is the evidence the systems learn and retrieve from.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#llm">Large Language Model (LLM)</a><a href="#nlp">Natural Language Processing (NLP)</a><a href="#generative-ai">Generative AI</a></div>
-      </details>
-      <details class="term" id="embeddings" data-cat="ai-search-infrastructure" data-name="embeddings">
-        <summary class="term-sum">
-          <h3 class="term-name">Embeddings</h3>
-          <span class="term-one">Numerical representations that place similar meanings close together.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Embeddings are numerical representations of words, phrases, or concepts that place similar meanings close together in mathematical space, allowing AI systems to compare meaning rather than exact wording.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>They are the mechanism behind meaning-based matching, which is why clearly defined language beats repeated keywords.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#vector-search">Vector Search</a><a href="/glossary/search-seo-generative-optimization/#semantic-search">Semantic Search</a><a href="#token">Token</a></div>
-      </details>
-      <details class="term" id="vector-search" data-cat="ai-search-infrastructure" data-name="vector search">
-        <summary class="term-sum">
-          <h3 class="term-name">Vector Search</h3>
-          <span class="term-one">Finding results by similarity in meaning rather than exact words.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Vector search is a search method that finds results by comparing embeddings for similarity in meaning, rather than matching exact keywords.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is how retrieval systems find relevant material even when the source never used the buyer's exact wording.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#embeddings">Embeddings</a><a href="/glossary/retrieval-evidence-consensus/#retrieval">Retrieval</a><a href="/glossary/search-seo-generative-optimization/#semantic-search">Semantic Search</a></div>
-      </details>
-      <details class="term" id="context-window" data-cat="ai-search-infrastructure" data-name="context window">
-        <summary class="term-sum">
-          <h3 class="term-name">Context Window</h3>
-          <span class="term-one">How much text a model can hold in view at once.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">A context window is the amount of text an AI model can consider at one time when generating a response.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is finite, so systems work from selected extracts rather than whole websites. Content that states its point plainly and early travels better.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#token">Token</a><a href="#llm">Large Language Model (LLM)</a><a href="/glossary/retrieval-evidence-consensus/#retrieval">Retrieval</a></div>
-      </details>
-      <details class="term" id="token" data-cat="ai-search-infrastructure" data-name="token">
-        <summary class="term-sum">
-          <h3 class="term-name">Token</h3>
-          <span class="term-one">The basic unit of text a model processes.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">A token is a unit of text, often a word or part of a word, that an AI language model processes as its basic building block.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is the unit behind context limits and pricing, and useful to know whenever anyone claims a system has read an entire website.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#context-window">Context Window</a><a href="#llm">Large Language Model (LLM)</a><a href="#embeddings">Embeddings</a></div>
-      </details>
-      <details class="term" id="entity" data-cat="ai-search-infrastructure" data-name="entity">
-        <summary class="term-sum">
-          <h3 class="term-name">Entity</h3>
-          <span class="term-one">A distinct, identifiable thing a system can recognize and connect.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">An entity is a distinct, identifiable thing, such as a person, brand, organization, or place, that a search or AI system can recognize, define, and connect to other entities.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Brands are entities. Everything about recognition depends on a system first being able to treat a brand as one specific, identifiable thing.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/search-seo-generative-optimization/#entity-recognition">Entity Recognition</a><a href="/glossary/search-seo-generative-optimization/#knowledge-graph">Knowledge Graph</a><a href="/glossary/retrieval-evidence-consensus/#entity-consistency">Entity Consistency</a></div>
-      </details>
-      <details class="term" id="ai-hallucination" data-cat="ai-search-infrastructure" data-name="ai hallucination">
-        <summary class="term-sum">
-          <h3 class="term-name">AI Hallucination</h3>
-          <span class="term-one">Inaccurate or fabricated output presented as fact.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">An AI hallucination is inaccurate or fabricated output produced by an AI system and presented as though it were fact.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is the general technical failure. Brand Hallucination is the specific commercial version, and the difference matters when explaining what a brand can actually do about it.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/recognition-authority/#brand-hallucination">Brand Hallucination</a><a href="/glossary/retrieval-evidence-consensus/#grounding">Grounding</a><a href="#llm">Large Language Model (LLM)</a></div>
-      </details>
+<section class="call" aria-labelledby="c-all-h">
+  <div class="call-inner">
+    <h2 class="call-h" id="c-all-h">All AI & Search Infrastructure terms (10)</h2>
+    <div class="tgrid">
+        <a class="tcard" href="/glossary/ai-search-infrastructure/llm/" data-name="large language model (llm)">
+          <h3 class="tcard-name">Large Language Model (LLM)</h3>
+          <p class="tcard-one">A model trained on large amounts of text to understand and generate language.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-search-infrastructure/generative-ai/" data-name="generative ai">
+          <h3 class="tcard-name">Generative AI</h3>
+          <p class="tcard-one">AI that creates new content rather than only retrieving it.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-search-infrastructure/nlp/" data-name="natural language processing (nlp)">
+          <h3 class="tcard-name">Natural Language Processing (NLP)</h3>
+          <p class="tcard-one">The field concerned with machines understanding human language.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-search-infrastructure/machine-learning/" data-name="machine learning">
+          <h3 class="tcard-name">Machine Learning</h3>
+          <p class="tcard-one">Building systems that learn patterns from data rather than rules.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-search-infrastructure/embeddings/" data-name="embeddings">
+          <h3 class="tcard-name">Embeddings</h3>
+          <p class="tcard-one">Numerical representations that place similar meanings close together.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-search-infrastructure/vector-search/" data-name="vector search">
+          <h3 class="tcard-name">Vector Search</h3>
+          <p class="tcard-one">Finding results by similarity in meaning rather than exact words.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-search-infrastructure/context-window/" data-name="context window">
+          <h3 class="tcard-name">Context Window</h3>
+          <p class="tcard-one">How much text a model can hold in view at once.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-search-infrastructure/token/" data-name="token">
+          <h3 class="tcard-name">Token</h3>
+          <p class="tcard-one">The basic unit of text a model processes.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-search-infrastructure/entity/" data-name="entity">
+          <h3 class="tcard-name">Entity</h3>
+          <p class="tcard-one">A distinct, identifiable thing a system can recognize and connect.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-search-infrastructure/ai-hallucination/" data-name="ai hallucination">
+          <h3 class="tcard-name">AI Hallucination</h3>
+          <p class="tcard-one">Inaccurate or fabricated output presented as fact.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
     </div>
     <p class="gl-empty" id="glEmpty">No terms match your search. Try a different word, or clear the box above.</p>
   </div>
 </section>
 
-<section class="fw-cta" aria-labelledby="c-cta-h">
+<section class="cback" aria-label="Back to the full glossary">
+  <a href="/glossary/" class="cback-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Back to Full Glossary</a>
+</section>
+
+<section class="fw-cta" aria-labelledby="cta-h">
   <div class="fw-cta-inner">
     <div>
-      <h2 id="c-cta-h">Ready to see where your brand stands?</h2>
+      <h2 id="cta-h">Ready to see where your brand stands?</h2>
       <p>Start with the free diagnostic to see which condition of the Recognition Triangle is leaking, or read the frameworks these terms belong to.</p>
     </div>
     <div class="fw-cta-btns">
-      <a href="/diagnostic/" class="fw-cta-primary">Run the Free Diagnostic
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="/frameworks/" class="fw-cta-ghost">Read the Frameworks
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/diagnostic/" class="fw-cta-primary">Run the Free Diagnostic <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/frameworks/" class="fw-cta-ghost">Read the Frameworks <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
-</section>
-
-<section class="cback" aria-label="Back to the full glossary">
-  <a href="/glossary/">
-    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Back to Full Glossary
-  </a>
 </section>
 
 </main>
@@ -752,8 +710,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
  "hasDefinedTerm": [
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/#llm",
-   "url": "https://aingworth.com/glossary/ai-search-infrastructure/#llm",
+   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/llm/#term",
+   "url": "https://aingworth.com/glossary/ai-search-infrastructure/llm/",
    "name": "Large Language Model (LLM)",
    "termCode": "llm",
    "description": "A Large Language Model, or LLM, is an AI model trained on large amounts of text to understand and generate language. ChatGPT, Claude, and Gemini are all built on large language models.",
@@ -763,8 +721,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/#generative-ai",
-   "url": "https://aingworth.com/glossary/ai-search-infrastructure/#generative-ai",
+   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/generative-ai/#term",
+   "url": "https://aingworth.com/glossary/ai-search-infrastructure/generative-ai/",
    "name": "Generative AI",
    "termCode": "generative-ai",
    "description": "Generative AI refers to AI systems that create new content, such as text, images, or code, rather than only classifying or retrieving existing content.",
@@ -774,8 +732,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/#nlp",
-   "url": "https://aingworth.com/glossary/ai-search-infrastructure/#nlp",
+   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/nlp/#term",
+   "url": "https://aingworth.com/glossary/ai-search-infrastructure/nlp/",
    "name": "Natural Language Processing (NLP)",
    "termCode": "nlp",
    "description": "Natural Language Processing, or NLP, is the field of AI concerned with how machines understand, interpret, and generate human language.",
@@ -785,8 +743,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/#machine-learning",
-   "url": "https://aingworth.com/glossary/ai-search-infrastructure/#machine-learning",
+   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/machine-learning/#term",
+   "url": "https://aingworth.com/glossary/ai-search-infrastructure/machine-learning/",
    "name": "Machine Learning",
    "termCode": "machine-learning",
    "description": "Machine learning is a method of building AI systems where a model learns patterns from data, rather than following rules written explicitly by a person.",
@@ -796,8 +754,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/#embeddings",
-   "url": "https://aingworth.com/glossary/ai-search-infrastructure/#embeddings",
+   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/embeddings/#term",
+   "url": "https://aingworth.com/glossary/ai-search-infrastructure/embeddings/",
    "name": "Embeddings",
    "termCode": "embeddings",
    "description": "Embeddings are numerical representations of words, phrases, or concepts that place similar meanings close together in mathematical space, allowing AI systems to compare meaning rather than exact wording.",
@@ -807,8 +765,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/#vector-search",
-   "url": "https://aingworth.com/glossary/ai-search-infrastructure/#vector-search",
+   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/vector-search/#term",
+   "url": "https://aingworth.com/glossary/ai-search-infrastructure/vector-search/",
    "name": "Vector Search",
    "termCode": "vector-search",
    "description": "Vector search is a search method that finds results by comparing embeddings for similarity in meaning, rather than matching exact keywords.",
@@ -818,8 +776,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/#context-window",
-   "url": "https://aingworth.com/glossary/ai-search-infrastructure/#context-window",
+   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/context-window/#term",
+   "url": "https://aingworth.com/glossary/ai-search-infrastructure/context-window/",
    "name": "Context Window",
    "termCode": "context-window",
    "description": "A context window is the amount of text an AI model can consider at one time when generating a response.",
@@ -829,8 +787,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/#token",
-   "url": "https://aingworth.com/glossary/ai-search-infrastructure/#token",
+   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/token/#term",
+   "url": "https://aingworth.com/glossary/ai-search-infrastructure/token/",
    "name": "Token",
    "termCode": "token",
    "description": "A token is a unit of text, often a word or part of a word, that an AI language model processes as its basic building block.",
@@ -840,8 +798,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/#entity",
-   "url": "https://aingworth.com/glossary/ai-search-infrastructure/#entity",
+   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/entity/#term",
+   "url": "https://aingworth.com/glossary/ai-search-infrastructure/entity/",
    "name": "Entity",
    "termCode": "entity",
    "description": "An entity is a distinct, identifiable thing, such as a person, brand, organization, or place, that a search or AI system can recognize, define, and connect to other entities.",
@@ -851,8 +809,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/#ai-hallucination",
-   "url": "https://aingworth.com/glossary/ai-search-infrastructure/#ai-hallucination",
+   "@id": "https://aingworth.com/glossary/ai-search-infrastructure/ai-hallucination/#term",
+   "url": "https://aingworth.com/glossary/ai-search-infrastructure/ai-hallucination/",
    "name": "AI Hallucination",
    "termCode": "ai-hallucination",
    "description": "An AI hallucination is inaccurate or fabricated output produced by an AI system and presented as though it were fact.",
@@ -868,15 +826,10 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 (function () {
   var groups = Array.prototype.slice.call(document.querySelectorAll('.nav-has-drop'));
   if (!groups.length) return;
-  var items = groups.map(function (g) {
-    return { trig: g.querySelector('.nav-droptrig'), drop: g.querySelector('.nav-drop') };
-  }).filter(function (it) { return it.trig && it.drop; });
+  var items = groups.map(function (g) { return { trig: g.querySelector('.nav-droptrig'), drop: g.querySelector('.nav-drop') }; })
+                    .filter(function (it) { return it.trig && it.drop; });
   function closeAll(except) {
-    items.forEach(function (it) {
-      if (it === except) return;
-      it.drop.classList.remove('open');
-      it.trig.setAttribute('aria-expanded', 'false');
-    });
+    items.forEach(function (it) { if (it === except) return; it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded','false'); });
   }
   items.forEach(function (it) {
     it.trig.addEventListener('click', function (e) {
@@ -892,9 +845,7 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   });
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
-    items.forEach(function (it) {
-      if (it.drop.classList.contains('open')) { it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded', 'false'); it.trig.focus(); }
-    });
+    items.forEach(function (it) { if (it.drop.classList.contains('open')) { it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded','false'); it.trig.focus(); } });
   });
 })();
 (function(){
@@ -904,18 +855,19 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){d.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.style.overflow='';});});
 })();
 (function () {
-  var terms = Array.prototype.slice.call(document.querySelectorAll('details.term'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.tcard'));
   var search = document.getElementById('glSearch');
   var count = document.getElementById('glCount');
   var empty = document.getElementById('glEmpty');
-  var total = terms.length;
+  if (!search) return;
+  var total = cards.length;
   function apply() {
     var q = (search.value || '').trim().toLowerCase();
     var visible = 0;
-    terms.forEach(function (term) {
-      var hay = (term.getAttribute('data-name') || '') + ' ' + term.textContent.toLowerCase();
+    cards.forEach(function (c) {
+      var hay = (c.getAttribute('data-name') || '') + ' ' + c.textContent.toLowerCase();
       var show = !q || hay.indexOf(q) !== -1;
-      term.hidden = !show;
+      c.hidden = !show;
       if (show) visible++;
     });
     count.textContent = (visible === total) ? (total + ' terms') : (visible + ' of ' + total + ' terms');
@@ -923,25 +875,6 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   }
   search.addEventListener('input', apply);
   apply();
-  function openTarget(hash) {
-    if (!hash || hash.length < 2) return;
-    var el = document.getElementById(hash.slice(1));
-    if (!el) return;
-    if (el.tagName === 'DETAILS') { el.open = true; }
-    if (el.hidden) { el.hidden = false; }
-    window.requestAnimationFrame(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
-  }
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
-    if (!a) return;
-    var hash = a.getAttribute('href');
-    if (!hash || hash === '#') return;
-    if (!document.getElementById(hash.slice(1))) return;
-    e.preventDefault();
-    history.replaceState(null, '', hash);
-    openTarget(hash);
-  });
-  if (window.location.hash) { window.setTimeout(function () { openTarget(window.location.hash); }, 60); }
 })();
 </script>
 </body>

@@ -270,6 +270,7 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 </style>
 
 <style>
+/* ---- breadcrumb + hero shared by category and term pages ---- */
 .cbread{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid-grey);margin-bottom:20px;}
 .cbread a{color:var(--mid-grey);text-decoration:none;transition:color .2s;}
 .cbread a:hover{color:var(--teal-light);}
@@ -283,25 +284,70 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .csibs-lbl{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.12em;text-transform:uppercase;margin-right:4px;align-self:center;}
 .gl-chip-link{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:rgba(250,250,250,.65);background:var(--charcoal-mid);border:1px solid var(--border-dark);padding:9px 15px;border-radius:20px;text-decoration:none;transition:all .2s;}
 .gl-chip-link:hover{border-color:var(--teal-light);color:var(--teal-light);}
+
+/* ---- Start Here ---- */
 .cstart{background:var(--seasalt);padding:60px var(--px) 8px;}
 .cstart-inner{max-width:var(--max-w);margin:0 auto;}
 .cstart-h{font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);font-weight:500;color:var(--charcoal);margin:8px 0 6px;}
 .cstart-lead{font-size:15px;line-height:1.7;color:var(--muted-light);margin-bottom:24px;}
 .cstart-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.cstart-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-left:3px solid var(--teal-light);border-radius:4px;padding:20px 22px;text-decoration:none;transition:box-shadow .2s,border-color .2s,transform .2s;}
+.cstart-card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-left:3px solid var(--teal-light);border-radius:4px;padding:20px 22px;text-decoration:none;transition:box-shadow .2s,transform .2s;}
 .cstart-card:hover{box-shadow:0 4px 22px rgba(26,26,26,.07);transform:translateY(-2px);}
 .cstart-n{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);margin-bottom:9px;}
 .cstart-name{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--charcoal);line-height:1.2;margin-bottom:7px;}
 .cstart-one{font-size:14px;line-height:1.62;color:var(--muted-light);flex:1;}
-.cstart-go{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);}
+.cstart-go{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);transition:gap .2s;}
 .cstart-card:hover .cstart-go{gap:11px;}
+
+/* ---- term card grid (three across) ---- */
 .call{background:var(--seasalt);padding:52px var(--px) 8px;}
 .call-inner{max-width:var(--max-w);margin:0 auto;}
-.call-h{font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);font-weight:500;color:var(--charcoal);margin:8px 0 22px;}
-.cback{background:var(--seasalt);padding:44px var(--px) 76px;text-align:center;}
-.cback a{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);text-decoration:none;border:1px solid rgba(74,158,142,.35);padding:13px 24px;border-radius:2px;transition:all .2s;}
-.cback a:hover{background:rgba(74,158,142,.08);border-color:var(--teal);}
-@media (max-width:820px){.cstart-grid{grid-template-columns:1fr;}}
+.call-h{font-family:var(--serif);font-size:clamp(26px,2.6vw,36px);font-weight:500;color:var(--charcoal);margin:8px 0 24px;}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.tcard{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-radius:4px;padding:22px 46px 20px 24px;text-decoration:none;transition:border-color .2s,box-shadow .2s,transform .2s;}
+.tcard:hover{border-color:rgba(74,158,142,.45);box-shadow:0 4px 22px rgba(26,26,26,.07);transform:translateY(-2px);}
+.tcard-name{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--teal);line-height:1.22;margin:0 0 8px;transition:color .2s;}
+.tcard:hover .tcard-name{color:var(--charcoal);}
+.tcard-one{font-size:14px;line-height:1.65;color:var(--muted-light);margin:0;flex:1;}
+.tcard-tag{align-self:flex-start;margin-top:14px;font-family:var(--mono);font-size:9px;letter-spacing:.07em;text-transform:uppercase;padding:5px 10px;border-radius:20px;white-space:nowrap;}
+.tcard-arr{position:absolute;top:22px;right:20px;color:var(--teal);transition:transform .25s var(--ease);}
+.tcard:hover .tcard-arr{transform:translateX(4px);}
+.tcard[hidden]{display:none;}
+
+/* ---- back to glossary button ---- */
+.cback{background:var(--seasalt);padding:44px var(--px) 60px;text-align:center;}
+.cback-btn{display:inline-flex;align-items:center;gap:12px;background:var(--charcoal);color:var(--teal-light);font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;padding:18px 34px;border-radius:2px;border:1px solid var(--charcoal);transition:all .2s var(--ease);}
+.cback-btn:hover{background:var(--charcoal-light);border-color:var(--teal-light);transform:translateY(-1px);}
+.cback-btn svg{transition:transform .2s var(--ease);}
+.cback-btn:hover svg{transform:translateX(-4px);}
+
+/* ---- term page ---- */
+.tp-chip{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-light);background:rgba(107,191,176,.1);border:1px solid rgba(107,191,176,.28);padding:8px 15px;border-radius:20px;text-decoration:none;margin-bottom:20px;transition:background .2s;}
+.tp-chip:hover{background:rgba(107,191,176,.2);}
+.tp-lead{font-family:var(--serif);font-size:clamp(20px,2vw,26px);font-weight:400;font-style:italic;line-height:1.45;color:var(--teal-light);max-width:800px;margin-top:20px;}
+.tp-tagrow{margin-top:22px;}
+.tp-tagrow .term-tag{display:inline-block;}
+.tp-body{background:var(--seasalt);padding:66px var(--px) 8px;}
+.tp-inner{max-width:var(--article-w);margin:0 auto;}
+.tp-h2{font-family:var(--serif);font-size:clamp(23px,2.2vw,30px);font-weight:500;color:var(--charcoal);margin:0 0 14px;}
+.tp-sec{margin-bottom:44px;}
+.tp-sec p{font-size:16.5px;line-height:1.8;color:var(--charcoal);margin:0 0 14px;}
+.tp-sec p:last-child{margin-bottom:0;}
+.tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
+.tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
+.tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
+.tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
+.tp-fw{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);text-decoration:none;border:1px solid rgba(74,158,142,.35);padding:13px 20px;border-radius:2px;transition:all .2s;}
+.tp-fw:hover{background:rgba(74,158,142,.08);border-color:var(--teal);}
+.tp-rel{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.tp-relcard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-radius:4px;padding:18px 20px;text-decoration:none;transition:border-color .2s,transform .2s;}
+.tp-relcard:hover{border-color:rgba(74,158,142,.45);transform:translateY(-2px);}
+.tp-relname{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--teal);line-height:1.25;margin-bottom:5px;}
+.tp-relone{font-size:13.5px;line-height:1.6;color:var(--muted-light);}
+.tp-nav{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;background:var(--seasalt);padding:36px var(--px) 60px;}
+@media (max-width:980px){.tgrid{grid-template-columns:repeat(2,1fr);}.cstart-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:660px){.tgrid,.cstart-grid,.tp-rel{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -420,412 +466,196 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <h2 class="cstart-h" id="c-start-h">New to core concepts?</h2>
     <p class="cstart-lead">Begin with these foundational concepts:</p>
     <div class="cstart-grid">
-        <a class="cstart-card" href="#recognition">
+        <a class="cstart-card" href="/glossary/recognition-authority/recognition/">
           <span class="cstart-n">Start 01</span>
           <span class="cstart-name">Recognition</span>
           <span class="cstart-one">Being correctly understood and recalled by the people and systems that shape discovery.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
-        <a class="cstart-card" href="#recognition-triangle">
+        <a class="cstart-card" href="/glossary/recognition-authority/recognition-triangle/">
           <span class="cstart-n">Start 02</span>
           <span class="cstart-name">Recognition Triangle</span>
           <span class="cstart-one">The three conditions of recognition: Clarity, Credibility, and Earned Authority.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
-        <a class="cstart-card" href="#earned-authority">
+        <a class="cstart-card" href="/glossary/recognition-authority/earned-authority/">
           <span class="cstart-n">Start 03</span>
           <span class="cstart-name">Earned Authority</span>
           <span class="cstart-one">What others say about a brand when it is not in the room.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
     </div>
   </div>
 </section>
 
-<section class="call gl-terms" aria-labelledby="c-all-h">
-  <div class="gl-terms-inner">
-    <div class="gl-cat" id="cat-recognition-authority" data-cat="recognition-authority">
-      <h2 class="call-h" id="c-all-h">All Recognition & Authority terms (24)</h2>
-      <details class="term" id="recognition" data-cat="recognition-authority" data-name="recognition">
-        <summary class="term-sum">
-          <h3 class="term-name">Recognition</h3>
-          <span class="term-one">Being correctly understood and recalled by the people and systems that shape discovery.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Recognition is the ability of a brand to be correctly understood, trusted, and recalled by the people and AI systems that shape discovery and decisions. It is the outcome Aingworth builds toward: not being seen, but being understood well enough to be named.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Visibility asks whether a brand appears. Recognition asks whether it is understood correctly enough to be chosen. A brand can be highly visible and still be misrepresented, miscategorized, or skipped at the moment it matters most.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#recognition-economy">Recognition Economy</a><a href="#recognition-triangle">Recognition Triangle</a><a href="#brand-authority-infrastructure">Brand Authority Infrastructure</a><a href="/glossary/ai-mediated-discovery/#ai-visibility">AI Visibility</a></div>
-      </details>
-      <details class="term" id="recognition-economy" data-cat="recognition-authority" data-name="recognition economy">
-        <summary class="term-sum">
-          <h3 class="term-name">Recognition Economy</h3>
-          <span class="term-one">The shift from competing to be seen to competing to be recognized and retrieved.</span>
-          <span class="term-tag term-tag-framework">Aingworth Framework</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">The Recognition Economy is the shift from the attention economy, where brands compete to be seen, to one where they compete to be recognized and retrieved by AI systems.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>The attention economy rewarded whoever shouted loudest. The Recognition Economy rewards whoever the systems can define, verify, and cite. Attention was rented. Recognition is owned, and it compounds.</p>
-        </div>
-        <a class="term-link" href="/frameworks/#recognition-economy">Read the full framework
-          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#recognition">Recognition</a><a href="#machine-gatekeeper">Machine Gatekeeper</a><a href="/glossary/ai-mediated-discovery/#ai-mediated-discovery">AI-Mediated Discovery</a></div>
-      </details>
-      <details class="term" id="recognition-triangle" data-cat="recognition-authority" data-name="recognition triangle">
-        <summary class="term-sum">
-          <h3 class="term-name">Recognition Triangle</h3>
-          <span class="term-one">The three conditions of recognition: Clarity, Credibility, and Earned Authority.</span>
-          <span class="term-tag term-tag-framework">Aingworth Framework</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">The Recognition Triangle is the framework defining the three conditions AI systems use to recognize, cite, and recommend a brand: Clarity, Credibility, and Earned Authority. Recognition forms only where all three hold, and weakens the moment one does not.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It turns a vague worry about AI into three diagnosable conditions. Most brands are strong on one or two corners and quietly weak on the third, and the weak corner is where recognition leaks.</p>
-        </div>
-        <a class="term-link" href="/frameworks/#recognition-triangle">Read the full framework
-          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#clarity">Clarity</a><a href="#credibility">Credibility</a><a href="#earned-authority">Earned Authority</a><a href="#recognition-diagnostic">Recognition Diagnostic</a></div>
-      </details>
-      <details class="term" id="clarity" data-cat="recognition-authority" data-name="clarity">
-        <summary class="term-sum">
-          <h3 class="term-name">Clarity</h3>
-          <span class="term-one">The unambiguous definition of who a brand is, what it does, and who it serves.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Clarity is what a brand actually stands for: the unambiguous definition of who it is, what it does, and who it serves. If a machine cannot define a brand, it cannot retrieve it.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Clarity is the cheapest corner of the Triangle to fix and the most commonly neglected. A brand that describes itself differently in five places has given every system permission to pick whichever description it likes.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#recognition-triangle">Recognition Triangle</a><a href="#credibility">Credibility</a><a href="/glossary/retrieval-evidence-consensus/#signal-consistency">Signal Consistency</a></div>
-      </details>
-      <details class="term" id="credibility" data-cat="recognition-authority" data-name="credibility">
-        <summary class="term-sum">
-          <h3 class="term-name">Credibility</h3>
-          <span class="term-one">The proof and track record that let a brand's claims be verified.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Credibility is what can be verified: the proof, track record, and validation that let people and AI systems trust the claims a brand makes about itself.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Claims without proof are just assertions, and assertions are the easiest thing for a system to discount. Credibility is what converts a stated position into something checkable.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#recognition-triangle">Recognition Triangle</a><a href="#clarity">Clarity</a><a href="#earned-authority">Earned Authority</a><a href="/glossary/content-authority-strategy/#third-party-evidence">Third-Party Evidence</a></div>
-      </details>
-      <details class="term" id="earned-authority" data-cat="recognition-authority" data-name="earned authority">
-        <summary class="term-sum">
-          <h3 class="term-name">Earned Authority</h3>
-          <span class="term-one">What others say about a brand when it is not in the room.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Earned Authority is what others say about a brand when it is not in the room: the citations, references, and recognition that cannot be bought and cannot be faked.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is the hardest condition to build and the one that separates a brand claiming expertise from one the field actually confirms. It is also the corner most brands score lowest on.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#structural-authority">Structural Authority</a><a href="#expert-authority">Expert Authority</a><a href="#community-authority">Community Authority</a><a href="/glossary/retrieval-evidence-consensus/#corroboration">Corroboration</a></div>
-      </details>
-      <details class="term" id="structural-authority" data-cat="recognition-authority" data-name="structural authority">
-        <summary class="term-sum">
-          <h3 class="term-name">Structural Authority</h3>
-          <span class="term-one">The Earned Authority layer built from knowledge graphs, databases, and structured records.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Structural Authority is the Earned Authority layer built from structural sources: Wikipedia, industry databases, knowledge graphs, and schema markup.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Structural sources are the ones machines check first and trust most, because they are standardized and hard to fake. A brand missing from them is invisible at the layer where identity gets resolved.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#earned-authority">Earned Authority</a><a href="/glossary/search-seo-generative-optimization/#knowledge-graph">Knowledge Graph</a><a href="/glossary/search-seo-generative-optimization/#schema-markup">Schema Markup</a></div>
-      </details>
-      <details class="term" id="expert-authority" data-cat="recognition-authority" data-name="expert authority">
-        <summary class="term-sum">
-          <h3 class="term-name">Expert Authority</h3>
-          <span class="term-one">The Earned Authority layer built from analysts, academics, and industry publications.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Expert Authority is the Earned Authority layer built from expert sources: analyst reports, academic citations, and industry publications.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Expert sources carry disproportionate weight because they are selective. One credible analyst reference can do more for recognition than a large volume of self-published content.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#earned-authority">Earned Authority</a><a href="/glossary/content-authority-strategy/#third-party-evidence">Third-Party Evidence</a><a href="/glossary/content-authority-strategy/#digital-pr">Digital PR</a></div>
-      </details>
-      <details class="term" id="community-authority" data-cat="recognition-authority" data-name="community authority">
-        <summary class="term-sum">
-          <h3 class="term-name">Community Authority</h3>
-          <span class="term-one">The Earned Authority layer built from forums, reviews, and practitioner discussion.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Community Authority is the Earned Authority layer built from community sources: forums, reviews, and social or practitioner discussion. When structural, expert, and community authority are all present and aligned, Earned Authority is recognized.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Community sources are where unfiltered opinion lives, and AI systems draw on them heavily. A brand respected by analysts but absent from practitioner conversation has an incomplete authority profile.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#earned-authority">Earned Authority</a><a href="/glossary/content-authority-strategy/#trust-signals">Trust Signals</a><a href="/glossary/retrieval-evidence-consensus/#source-diversity">Source Diversity</a></div>
-      </details>
-      <details class="term" id="brand-authority-infrastructure" data-cat="recognition-authority" data-name="brand authority infrastructure">
-        <summary class="term-sum">
-          <h3 class="term-name">Brand Authority Infrastructure</h3>
-          <span class="term-one">The structured system of evidence and signals that makes a brand credible wherever it is evaluated.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Brand Authority Infrastructure is the structured system of evidence, expertise, identity, relationships, and digital signals that makes a brand understandable and credible everywhere people and machines evaluate it. It is the category Aingworth builds: not a single tactic, but the infrastructure underneath recognition.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Tactics decay when platforms change. Infrastructure does not. Framing the work as infrastructure is what separates a durable position from a campaign that has to be re-run every time an interface updates.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#foundational-signal-confirmation-assets">Foundational, Signal &amp; Confirmation Assets</a><a href="#authority-method">Authority Method</a><a href="#recognition">Recognition</a></div>
-      </details>
-      <details class="term" id="authority-method" data-cat="recognition-authority" data-name="authority method">
-        <summary class="term-sum">
-          <h3 class="term-name">Authority Method</h3>
-          <span class="term-one">The five-stage process: Diagnose, Define, Build, Distribute, Refine.</span>
-          <span class="term-tag term-tag-framework">Aingworth Framework</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">The Authority Method is the five-stage process for building brand authority that AI systems cite: Diagnose, Define, Build, Distribute, Refine.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>The Recognition Triangle describes the conditions. The Authority Method is how they get met. It is a cycle rather than a checklist, because authority decays if the loop stops.</p>
-        </div>
-        <a class="term-link" href="/frameworks/#authority-method">Read the full framework
-          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#recognition-triangle">Recognition Triangle</a><a href="#authority-debt">Authority Debt</a><a href="#brand-authority-infrastructure">Brand Authority Infrastructure</a></div>
-      </details>
-      <details class="term" id="authority-debt" data-cat="recognition-authority" data-name="authority debt">
-        <summary class="term-sum">
-          <h3 class="term-name">Authority Debt</h3>
-          <span class="term-one">The accumulated cost of chasing visibility metrics instead of building authority signals.</span>
-          <span class="term-tag term-tag-framework">Aingworth Framework</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Authority Debt is the accumulated cost of years spent optimizing for visibility metrics, such as clicks and rankings, instead of building verifiable authority signals.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>The debt is invisible until the system changes. Brands with strong traffic and weak authority found themselves absent from AI answers, and the gap took deliberate work to close.</p>
-        </div>
-        <a class="term-link" href="/frameworks/#authority-debt">Read the full framework
-          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#authority-method">Authority Method</a><a href="#authority-decay">Authority Decay</a><a href="#recognition-gap">Recognition Gap</a></div>
-      </details>
-      <details class="term" id="authority-decay" data-cat="recognition-authority" data-name="authority decay">
-        <summary class="term-sum">
-          <h3 class="term-name">Authority Decay</h3>
-          <span class="term-one">The gradual weakening of authority as evidence ages and references disappear.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Authority Decay is the gradual weakening of a brand's authority as evidence goes out of date, references disappear, or competing sources become more current and credible. Authority is not built once. It is maintained.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is the reason authority needs ongoing attention. A brand that stops publishing evidence does not hold its position, it slowly loses it to whoever is still publishing.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#authority-debt">Authority Debt</a><a href="/glossary/retrieval-evidence-consensus/#citation-decay">Citation Decay</a><a href="/glossary/measurement-ai-visibility/#authority-measurement">Authority Measurement</a></div>
-      </details>
-      <details class="term" id="recognition-gap" data-cat="recognition-authority" data-name="recognition gap">
-        <summary class="term-sum">
-          <h3 class="term-name">Recognition Gap</h3>
-          <span class="term-one">The distance between how well a brand understands its value and how well others do.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">The Recognition Gap is the difference between how clearly a brand understands and communicates its own value and how clearly that value is understood by the people and systems that influence discovery.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Most brands do not have a visibility problem. They have a gap between what they know and what the public record shows. Naming the gap is the starting point of the Recognition Diagnostic.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#recognition-diagnostic">Recognition Diagnostic</a><a href="#recognition">Recognition</a><a href="#authority-debt">Authority Debt</a></div>
-      </details>
-      <details class="term" id="authority-signal" data-cat="recognition-authority" data-name="authority signal">
-        <summary class="term-sum">
-          <h3 class="term-name">Authority Signal</h3>
-          <span class="term-one">A piece of evidence that establishes a brand's expertise or standing.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">An authority signal is a piece of evidence, first-party, third-party, editorial, or institutional, that helps establish a brand's expertise, credibility, or standing within its category.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Signals are what a system actually works with. Expertise that has never been documented, referenced, or published produces no signal at all, however real it is.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#recognition-signal">Recognition Signal</a><a href="/glossary/content-authority-strategy/#trust-signals">Trust Signals</a><a href="#earned-authority">Earned Authority</a></div>
-      </details>
-      <details class="term" id="recognition-signal" data-cat="recognition-authority" data-name="recognition signal">
-        <summary class="term-sum">
-          <h3 class="term-name">Recognition Signal</h3>
-          <span class="term-one">Information that helps a system correctly identify and recall a brand.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">A recognition signal is a piece of information that helps a system correctly identify, understand, and recall a brand and what it is known for. Recognition signals and authority signals work together: one helps a system know who a brand is, the other helps it trust what the brand claims.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Identity comes before trust. A system that cannot reliably tell one brand from another has nothing to attach credibility to in the first place.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#authority-signal">Authority Signal</a><a href="/glossary/content-authority-strategy/#entity-signals">Entity Signals</a><a href="/glossary/retrieval-evidence-consensus/#entity-consistency">Entity Consistency</a></div>
-      </details>
-      <details class="term" id="brand-representation" data-cat="recognition-authority" data-name="brand representation">
-        <summary class="term-sum">
-          <h3 class="term-name">Brand Representation</h3>
-          <span class="term-one">How a brand is described and understood across the sources that influence discovery.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Brand Representation is how a brand is described, categorized, and understood across the sources and systems that influence discovery, whether or not that description matches how the brand describes itself.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It gives a plain way to talk about the difference between what a brand says and what the record says, without treating AI systems as if they hold opinions.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#composite-picture">Composite Picture</a><a href="#brand-hallucination">Brand Hallucination</a><a href="/glossary/measurement-ai-visibility/#recognition-measurement">Recognition Measurement</a></div>
-      </details>
-      <details class="term" id="composite-picture" data-cat="recognition-authority" data-name="composite picture">
-        <summary class="term-sum">
-          <h3 class="term-name">Composite Picture</h3>
-          <span class="term-one">The aggregate impression AI systems assemble from every signal across the web.</span>
-          <span class="term-tag term-tag-framework">Aingworth Framework</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">The Composite Picture is the aggregate impression AI systems assemble about a brand from every signal across the web, accurate or not.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>No single page decides how a system sees a brand. This is why optimizing the website alone is never enough, and why consistency across every fragment matters more than perfecting any one of them.</p>
-        </div>
-        <a class="term-link" href="/frameworks/#composite-picture">Read the full framework
-          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/retrieval-evidence-consensus/#signal-consistency">Signal Consistency</a><a href="#brand-representation">Brand Representation</a><a href="/glossary/retrieval-evidence-consensus/#source-diversity">Source Diversity</a></div>
-      </details>
-      <details class="term" id="machine-gatekeeper" data-cat="recognition-authority" data-name="machine gatekeeper">
-        <summary class="term-sum">
-          <h3 class="term-name">Machine Gatekeeper</h3>
-          <span class="term-one">The layer of AI systems now deciding who gets cited, recommended, and trusted.</span>
-          <span class="term-tag term-tag-framework">Aingworth Framework</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">The Machine Gatekeeper is the layer of AI systems that now sits between a brand and its audience, deciding who gets cited, recommended, and trusted.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Buyers no longer scan ten links. They ask a system and take its answer. That system cannot be charmed or lobbied, only made able to understand you.</p>
-        </div>
-        <a class="term-link" href="/frameworks/#machine-gatekeeper">Read the full framework
-          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#recognition-economy">Recognition Economy</a><a href="/glossary/ai-mediated-discovery/#ai-mediated-discovery">AI-Mediated Discovery</a><a href="/glossary/retrieval-evidence-consensus/#source-selection">Source Selection</a></div>
-      </details>
-      <details class="term" id="brand-hallucination" data-cat="recognition-authority" data-name="brand hallucination">
-        <summary class="term-sum">
-          <h3 class="term-name">Brand Hallucination</h3>
-          <span class="term-one">When an AI system confidently describes a brand inaccurately.</span>
-          <span class="term-tag term-tag-framework">Aingworth Framework</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Brand Hallucination is when an AI system confidently describes a brand inaccurately because the brand has not given it clear, consistent, verifiable signals to draw on.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>AI systems do not say they do not know. They fill gaps with plausible inference, and prospects meet the invention before they ever meet the brand.</p>
-        </div>
-        <a class="term-link" href="/frameworks/#brand-hallucination">Read the full framework
-          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/ai-search-infrastructure/#ai-hallucination">AI Hallucination</a><a href="#composite-picture">Composite Picture</a><a href="#brand-representation">Brand Representation</a></div>
-      </details>
-      <details class="term" id="recognition-diagnostic" data-cat="recognition-authority" data-name="recognition diagnostic">
-        <summary class="term-sum">
-          <h3 class="term-name">Recognition Diagnostic</h3>
-          <span class="term-one">Aingworth's free fifteen-question assessment across the three conditions.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">The Recognition Diagnostic is Aingworth's free fifteen-question self-assessment across Clarity, Credibility, and Earned Authority. It places a brand into one of six Recognition Patterns and shows which condition of the Recognition Triangle is leaking.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It turns an abstract framework into a specific answer about one brand: which corner is weak, and what that means for how AI systems currently see it.</p>
-        </div>
-        <a class="term-link" href="/diagnostic/">Run the free diagnostic
-          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#recognition-patterns">Recognition Patterns</a><a href="#recognition-triangle">Recognition Triangle</a><a href="#recognition-gap">Recognition Gap</a></div>
-      </details>
-      <details class="term" id="recognition-patterns" data-cat="recognition-authority" data-name="recognition patterns">
-        <summary class="term-sum">
-          <h3 class="term-name">Recognition Patterns</h3>
-          <span class="term-one">The six diagnostic outcomes, from Promising Claim to Recognized Authority.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">The Recognition Patterns are the six outcomes of the Recognition Diagnostic: Promising Claim, Hidden Expert, Validated Generalist, Strong Foundation, Recognized Authority, and Decaying Authority. Each describes a different balance of strength and weakness across the three conditions of the Recognition Triangle.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Patterns are more useful than scores. Knowing a brand is a Hidden Expert says exactly what to do next in a way a number never could.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#recognition-diagnostic">Recognition Diagnostic</a><a href="#recognition-triangle">Recognition Triangle</a><a href="#authority-decay">Authority Decay</a></div>
-      </details>
-      <details class="term" id="foundational-signal-confirmation-assets" data-cat="recognition-authority" data-name="foundational, signal &amp; confirmation assets">
-        <summary class="term-sum">
-          <h3 class="term-name">Foundational, Signal &amp; Confirmation Assets</h3>
-          <span class="term-one">Aingworth's taxonomy for what a brand actually needs to build.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Foundational, Signal, and Confirmation Assets are Aingworth's taxonomy for what a brand actually needs to build. Foundational Assets establish the base facts of who a brand is. Signal Assets demonstrate expertise and relevance. Confirmation Assets give AI systems a clean, verifiable record to check claims against, including structured formats such as the Open Knowledge Format.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It replaces the word content with something more precise. Each asset type does a different job, and a brand that only produces one type will always be missing part of the picture.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#brand-authority-infrastructure">Brand Authority Infrastructure</a><a href="/glossary/search-seo-generative-optimization/#structured-data">Structured Data</a><a href="/glossary/content-authority-strategy/#first-party-content">First-Party Content</a></div>
-      </details>
-      <details class="term" id="consensus-over-rankings" data-cat="recognition-authority" data-name="consensus over rankings">
-        <summary class="term-sum">
-          <h3 class="term-name">Consensus Over Rankings</h3>
-          <span class="term-one">Being confirmed by many independent sources beats ranking first on one.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Consensus Over Rankings is Aingworth's central thesis: that being confirmed by independent, converging sources matters more than ranking first on any single one.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>AI systems do not return one ranked list. They form an understanding from many sources, so the job is to be the consistent answer across all of them rather than the top result on one.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/retrieval-evidence-consensus/#consensus">Consensus</a><a href="/glossary/retrieval-evidence-consensus/#corroboration">Corroboration</a><a href="/glossary/retrieval-evidence-consensus/#model-consensus">Model Consensus</a></div>
-      </details>
+<section class="call" aria-labelledby="c-all-h">
+  <div class="call-inner">
+    <h2 class="call-h" id="c-all-h">All Recognition & Authority terms (24)</h2>
+    <div class="tgrid">
+        <a class="tcard" href="/glossary/recognition-authority/recognition/" data-name="recognition">
+          <h3 class="tcard-name">Recognition</h3>
+          <p class="tcard-one">Being correctly understood and recalled by the people and systems that shape discovery.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/recognition-economy/" data-name="recognition economy">
+          <h3 class="tcard-name">Recognition Economy</h3>
+          <p class="tcard-one">The shift from competing to be seen to competing to be recognized and retrieved.</p>
+          <span class="tcard-tag term-tag term-tag-framework">Aingworth Framework</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/recognition-triangle/" data-name="recognition triangle">
+          <h3 class="tcard-name">Recognition Triangle</h3>
+          <p class="tcard-one">The three conditions of recognition: Clarity, Credibility, and Earned Authority.</p>
+          <span class="tcard-tag term-tag term-tag-framework">Aingworth Framework</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/clarity/" data-name="clarity">
+          <h3 class="tcard-name">Clarity</h3>
+          <p class="tcard-one">The unambiguous definition of who a brand is, what it does, and who it serves.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/credibility/" data-name="credibility">
+          <h3 class="tcard-name">Credibility</h3>
+          <p class="tcard-one">The proof and track record that let a brand's claims be verified.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/earned-authority/" data-name="earned authority">
+          <h3 class="tcard-name">Earned Authority</h3>
+          <p class="tcard-one">What others say about a brand when it is not in the room.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/structural-authority/" data-name="structural authority">
+          <h3 class="tcard-name">Structural Authority</h3>
+          <p class="tcard-one">The Earned Authority layer built from knowledge graphs, databases, and structured records.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/expert-authority/" data-name="expert authority">
+          <h3 class="tcard-name">Expert Authority</h3>
+          <p class="tcard-one">The Earned Authority layer built from analysts, academics, and industry publications.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/community-authority/" data-name="community authority">
+          <h3 class="tcard-name">Community Authority</h3>
+          <p class="tcard-one">The Earned Authority layer built from forums, reviews, and practitioner discussion.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/brand-authority-infrastructure/" data-name="brand authority infrastructure">
+          <h3 class="tcard-name">Brand Authority Infrastructure</h3>
+          <p class="tcard-one">The structured system of evidence and signals that makes a brand credible wherever it is evaluated.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/authority-method/" data-name="authority method">
+          <h3 class="tcard-name">Authority Method</h3>
+          <p class="tcard-one">The five-stage process: Diagnose, Define, Build, Distribute, Refine.</p>
+          <span class="tcard-tag term-tag term-tag-framework">Aingworth Framework</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/authority-debt/" data-name="authority debt">
+          <h3 class="tcard-name">Authority Debt</h3>
+          <p class="tcard-one">The accumulated cost of chasing visibility metrics instead of building authority signals.</p>
+          <span class="tcard-tag term-tag term-tag-framework">Aingworth Framework</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/authority-decay/" data-name="authority decay">
+          <h3 class="tcard-name">Authority Decay</h3>
+          <p class="tcard-one">The gradual weakening of authority as evidence ages and references disappear.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/recognition-gap/" data-name="recognition gap">
+          <h3 class="tcard-name">Recognition Gap</h3>
+          <p class="tcard-one">The distance between how well a brand understands its value and how well others do.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/authority-signal/" data-name="authority signal">
+          <h3 class="tcard-name">Authority Signal</h3>
+          <p class="tcard-one">A piece of evidence that establishes a brand's expertise or standing.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/recognition-signal/" data-name="recognition signal">
+          <h3 class="tcard-name">Recognition Signal</h3>
+          <p class="tcard-one">Information that helps a system correctly identify and recall a brand.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/brand-representation/" data-name="brand representation">
+          <h3 class="tcard-name">Brand Representation</h3>
+          <p class="tcard-one">How a brand is described and understood across the sources that influence discovery.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/composite-picture/" data-name="composite picture">
+          <h3 class="tcard-name">Composite Picture</h3>
+          <p class="tcard-one">The aggregate impression AI systems assemble from every signal across the web.</p>
+          <span class="tcard-tag term-tag term-tag-framework">Aingworth Framework</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/machine-gatekeeper/" data-name="machine gatekeeper">
+          <h3 class="tcard-name">Machine Gatekeeper</h3>
+          <p class="tcard-one">The layer of AI systems now deciding who gets cited, recommended, and trusted.</p>
+          <span class="tcard-tag term-tag term-tag-framework">Aingworth Framework</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/brand-hallucination/" data-name="brand hallucination">
+          <h3 class="tcard-name">Brand Hallucination</h3>
+          <p class="tcard-one">When an AI system confidently describes a brand inaccurately.</p>
+          <span class="tcard-tag term-tag term-tag-framework">Aingworth Framework</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/recognition-diagnostic/" data-name="recognition diagnostic">
+          <h3 class="tcard-name">Recognition Diagnostic</h3>
+          <p class="tcard-one">Aingworth's free fifteen-question assessment across the three conditions.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/recognition-patterns/" data-name="recognition patterns">
+          <h3 class="tcard-name">Recognition Patterns</h3>
+          <p class="tcard-one">The six diagnostic outcomes, from Promising Claim to Recognized Authority.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/foundational-signal-confirmation-assets/" data-name="foundational, signal &amp; confirmation assets">
+          <h3 class="tcard-name">Foundational, Signal &amp; Confirmation Assets</h3>
+          <p class="tcard-one">Aingworth's taxonomy for what a brand actually needs to build.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/recognition-authority/consensus-over-rankings/" data-name="consensus over rankings">
+          <h3 class="tcard-name">Consensus Over Rankings</h3>
+          <p class="tcard-one">Being confirmed by many independent sources beats ranking first on one.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
     </div>
     <p class="gl-empty" id="glEmpty">No terms match your search. Try a different word, or clear the box above.</p>
   </div>
 </section>
 
-<section class="fw-cta" aria-labelledby="c-cta-h">
+<section class="cback" aria-label="Back to the full glossary">
+  <a href="/glossary/" class="cback-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Back to Full Glossary</a>
+</section>
+
+<section class="fw-cta" aria-labelledby="cta-h">
   <div class="fw-cta-inner">
     <div>
-      <h2 id="c-cta-h">Ready to see where your brand stands?</h2>
+      <h2 id="cta-h">Ready to see where your brand stands?</h2>
       <p>Start with the free diagnostic to see which condition of the Recognition Triangle is leaking, or read the frameworks these terms belong to.</p>
     </div>
     <div class="fw-cta-btns">
-      <a href="/diagnostic/" class="fw-cta-primary">Run the Free Diagnostic
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="/frameworks/" class="fw-cta-ghost">Read the Frameworks
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/diagnostic/" class="fw-cta-primary">Run the Free Diagnostic <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/frameworks/" class="fw-cta-ghost">Read the Frameworks <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
-</section>
-
-<section class="cback" aria-label="Back to the full glossary">
-  <a href="/glossary/">
-    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Back to Full Glossary
-  </a>
 </section>
 
 </main>
@@ -964,8 +794,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
  "hasDefinedTerm": [
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#recognition",
-   "url": "https://aingworth.com/glossary/recognition-authority/#recognition",
+   "@id": "https://aingworth.com/glossary/recognition-authority/recognition/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/recognition/",
    "name": "Recognition",
    "termCode": "recognition",
    "description": "Recognition is the ability of a brand to be correctly understood, trusted, and recalled by the people and AI systems that shape discovery and decisions. It is the outcome Aingworth builds toward: not being seen, but being understood well enough to be named.",
@@ -975,8 +805,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#recognition-economy",
-   "url": "https://aingworth.com/glossary/recognition-authority/#recognition-economy",
+   "@id": "https://aingworth.com/glossary/recognition-authority/recognition-economy/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/recognition-economy/",
    "name": "Recognition Economy",
    "termCode": "recognition-economy",
    "description": "The Recognition Economy is the shift from the attention economy, where brands compete to be seen, to one where they compete to be recognized and retrieved by AI systems.",
@@ -986,8 +816,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#recognition-triangle",
-   "url": "https://aingworth.com/glossary/recognition-authority/#recognition-triangle",
+   "@id": "https://aingworth.com/glossary/recognition-authority/recognition-triangle/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/recognition-triangle/",
    "name": "Recognition Triangle",
    "termCode": "recognition-triangle",
    "description": "The Recognition Triangle is the framework defining the three conditions AI systems use to recognize, cite, and recommend a brand: Clarity, Credibility, and Earned Authority. Recognition forms only where all three hold, and weakens the moment one does not.",
@@ -997,8 +827,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#clarity",
-   "url": "https://aingworth.com/glossary/recognition-authority/#clarity",
+   "@id": "https://aingworth.com/glossary/recognition-authority/clarity/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/clarity/",
    "name": "Clarity",
    "termCode": "clarity",
    "description": "Clarity is what a brand actually stands for: the unambiguous definition of who it is, what it does, and who it serves. If a machine cannot define a brand, it cannot retrieve it.",
@@ -1008,8 +838,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#credibility",
-   "url": "https://aingworth.com/glossary/recognition-authority/#credibility",
+   "@id": "https://aingworth.com/glossary/recognition-authority/credibility/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/credibility/",
    "name": "Credibility",
    "termCode": "credibility",
    "description": "Credibility is what can be verified: the proof, track record, and validation that let people and AI systems trust the claims a brand makes about itself.",
@@ -1019,8 +849,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#earned-authority",
-   "url": "https://aingworth.com/glossary/recognition-authority/#earned-authority",
+   "@id": "https://aingworth.com/glossary/recognition-authority/earned-authority/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/earned-authority/",
    "name": "Earned Authority",
    "termCode": "earned-authority",
    "description": "Earned Authority is what others say about a brand when it is not in the room: the citations, references, and recognition that cannot be bought and cannot be faked.",
@@ -1030,8 +860,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#structural-authority",
-   "url": "https://aingworth.com/glossary/recognition-authority/#structural-authority",
+   "@id": "https://aingworth.com/glossary/recognition-authority/structural-authority/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/structural-authority/",
    "name": "Structural Authority",
    "termCode": "structural-authority",
    "description": "Structural Authority is the Earned Authority layer built from structural sources: Wikipedia, industry databases, knowledge graphs, and schema markup.",
@@ -1041,8 +871,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#expert-authority",
-   "url": "https://aingworth.com/glossary/recognition-authority/#expert-authority",
+   "@id": "https://aingworth.com/glossary/recognition-authority/expert-authority/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/expert-authority/",
    "name": "Expert Authority",
    "termCode": "expert-authority",
    "description": "Expert Authority is the Earned Authority layer built from expert sources: analyst reports, academic citations, and industry publications.",
@@ -1052,8 +882,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#community-authority",
-   "url": "https://aingworth.com/glossary/recognition-authority/#community-authority",
+   "@id": "https://aingworth.com/glossary/recognition-authority/community-authority/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/community-authority/",
    "name": "Community Authority",
    "termCode": "community-authority",
    "description": "Community Authority is the Earned Authority layer built from community sources: forums, reviews, and social or practitioner discussion. When structural, expert, and community authority are all present and aligned, Earned Authority is recognized.",
@@ -1063,8 +893,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#brand-authority-infrastructure",
-   "url": "https://aingworth.com/glossary/recognition-authority/#brand-authority-infrastructure",
+   "@id": "https://aingworth.com/glossary/recognition-authority/brand-authority-infrastructure/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/brand-authority-infrastructure/",
    "name": "Brand Authority Infrastructure",
    "termCode": "brand-authority-infrastructure",
    "description": "Brand Authority Infrastructure is the structured system of evidence, expertise, identity, relationships, and digital signals that makes a brand understandable and credible everywhere people and machines evaluate it. It is the category Aingworth builds: not a single tactic, but the infrastructure underneath recognition.",
@@ -1074,8 +904,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#authority-method",
-   "url": "https://aingworth.com/glossary/recognition-authority/#authority-method",
+   "@id": "https://aingworth.com/glossary/recognition-authority/authority-method/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/authority-method/",
    "name": "Authority Method",
    "termCode": "authority-method",
    "description": "The Authority Method is the five-stage process for building brand authority that AI systems cite: Diagnose, Define, Build, Distribute, Refine.",
@@ -1085,8 +915,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#authority-debt",
-   "url": "https://aingworth.com/glossary/recognition-authority/#authority-debt",
+   "@id": "https://aingworth.com/glossary/recognition-authority/authority-debt/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/authority-debt/",
    "name": "Authority Debt",
    "termCode": "authority-debt",
    "description": "Authority Debt is the accumulated cost of years spent optimizing for visibility metrics, such as clicks and rankings, instead of building verifiable authority signals.",
@@ -1096,8 +926,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#authority-decay",
-   "url": "https://aingworth.com/glossary/recognition-authority/#authority-decay",
+   "@id": "https://aingworth.com/glossary/recognition-authority/authority-decay/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/authority-decay/",
    "name": "Authority Decay",
    "termCode": "authority-decay",
    "description": "Authority Decay is the gradual weakening of a brand's authority as evidence goes out of date, references disappear, or competing sources become more current and credible. Authority is not built once. It is maintained.",
@@ -1107,8 +937,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#recognition-gap",
-   "url": "https://aingworth.com/glossary/recognition-authority/#recognition-gap",
+   "@id": "https://aingworth.com/glossary/recognition-authority/recognition-gap/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/recognition-gap/",
    "name": "Recognition Gap",
    "termCode": "recognition-gap",
    "description": "The Recognition Gap is the difference between how clearly a brand understands and communicates its own value and how clearly that value is understood by the people and systems that influence discovery.",
@@ -1118,8 +948,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#authority-signal",
-   "url": "https://aingworth.com/glossary/recognition-authority/#authority-signal",
+   "@id": "https://aingworth.com/glossary/recognition-authority/authority-signal/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/authority-signal/",
    "name": "Authority Signal",
    "termCode": "authority-signal",
    "description": "An authority signal is a piece of evidence, first-party, third-party, editorial, or institutional, that helps establish a brand's expertise, credibility, or standing within its category.",
@@ -1129,8 +959,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#recognition-signal",
-   "url": "https://aingworth.com/glossary/recognition-authority/#recognition-signal",
+   "@id": "https://aingworth.com/glossary/recognition-authority/recognition-signal/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/recognition-signal/",
    "name": "Recognition Signal",
    "termCode": "recognition-signal",
    "description": "A recognition signal is a piece of information that helps a system correctly identify, understand, and recall a brand and what it is known for. Recognition signals and authority signals work together: one helps a system know who a brand is, the other helps it trust what the brand claims.",
@@ -1140,8 +970,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#brand-representation",
-   "url": "https://aingworth.com/glossary/recognition-authority/#brand-representation",
+   "@id": "https://aingworth.com/glossary/recognition-authority/brand-representation/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/brand-representation/",
    "name": "Brand Representation",
    "termCode": "brand-representation",
    "description": "Brand Representation is how a brand is described, categorized, and understood across the sources and systems that influence discovery, whether or not that description matches how the brand describes itself.",
@@ -1151,8 +981,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#composite-picture",
-   "url": "https://aingworth.com/glossary/recognition-authority/#composite-picture",
+   "@id": "https://aingworth.com/glossary/recognition-authority/composite-picture/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/composite-picture/",
    "name": "Composite Picture",
    "termCode": "composite-picture",
    "description": "The Composite Picture is the aggregate impression AI systems assemble about a brand from every signal across the web, accurate or not.",
@@ -1162,8 +992,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#machine-gatekeeper",
-   "url": "https://aingworth.com/glossary/recognition-authority/#machine-gatekeeper",
+   "@id": "https://aingworth.com/glossary/recognition-authority/machine-gatekeeper/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/machine-gatekeeper/",
    "name": "Machine Gatekeeper",
    "termCode": "machine-gatekeeper",
    "description": "The Machine Gatekeeper is the layer of AI systems that now sits between a brand and its audience, deciding who gets cited, recommended, and trusted.",
@@ -1173,8 +1003,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#brand-hallucination",
-   "url": "https://aingworth.com/glossary/recognition-authority/#brand-hallucination",
+   "@id": "https://aingworth.com/glossary/recognition-authority/brand-hallucination/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/brand-hallucination/",
    "name": "Brand Hallucination",
    "termCode": "brand-hallucination",
    "description": "Brand Hallucination is when an AI system confidently describes a brand inaccurately because the brand has not given it clear, consistent, verifiable signals to draw on.",
@@ -1184,8 +1014,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#recognition-diagnostic",
-   "url": "https://aingworth.com/glossary/recognition-authority/#recognition-diagnostic",
+   "@id": "https://aingworth.com/glossary/recognition-authority/recognition-diagnostic/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/recognition-diagnostic/",
    "name": "Recognition Diagnostic",
    "termCode": "recognition-diagnostic",
    "description": "The Recognition Diagnostic is Aingworth's free fifteen-question self-assessment across Clarity, Credibility, and Earned Authority. It places a brand into one of six Recognition Patterns and shows which condition of the Recognition Triangle is leaking.",
@@ -1195,8 +1025,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#recognition-patterns",
-   "url": "https://aingworth.com/glossary/recognition-authority/#recognition-patterns",
+   "@id": "https://aingworth.com/glossary/recognition-authority/recognition-patterns/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/recognition-patterns/",
    "name": "Recognition Patterns",
    "termCode": "recognition-patterns",
    "description": "The Recognition Patterns are the six outcomes of the Recognition Diagnostic: Promising Claim, Hidden Expert, Validated Generalist, Strong Foundation, Recognized Authority, and Decaying Authority. Each describes a different balance of strength and weakness across the three conditions of the Recognition Triangle.",
@@ -1206,8 +1036,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#foundational-signal-confirmation-assets",
-   "url": "https://aingworth.com/glossary/recognition-authority/#foundational-signal-confirmation-assets",
+   "@id": "https://aingworth.com/glossary/recognition-authority/foundational-signal-confirmation-assets/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/foundational-signal-confirmation-assets/",
    "name": "Foundational, Signal & Confirmation Assets",
    "termCode": "foundational-signal-confirmation-assets",
    "description": "Foundational, Signal, and Confirmation Assets are Aingworth's taxonomy for what a brand actually needs to build. Foundational Assets establish the base facts of who a brand is. Signal Assets demonstrate expertise and relevance. Confirmation Assets give AI systems a clean, verifiable record to check claims against, including structured formats such as the Open Knowledge Format.",
@@ -1217,8 +1047,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/recognition-authority/#consensus-over-rankings",
-   "url": "https://aingworth.com/glossary/recognition-authority/#consensus-over-rankings",
+   "@id": "https://aingworth.com/glossary/recognition-authority/consensus-over-rankings/#term",
+   "url": "https://aingworth.com/glossary/recognition-authority/consensus-over-rankings/",
    "name": "Consensus Over Rankings",
    "termCode": "consensus-over-rankings",
    "description": "Consensus Over Rankings is Aingworth's central thesis: that being confirmed by independent, converging sources matters more than ranking first on any single one.",
@@ -1234,15 +1064,10 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 (function () {
   var groups = Array.prototype.slice.call(document.querySelectorAll('.nav-has-drop'));
   if (!groups.length) return;
-  var items = groups.map(function (g) {
-    return { trig: g.querySelector('.nav-droptrig'), drop: g.querySelector('.nav-drop') };
-  }).filter(function (it) { return it.trig && it.drop; });
+  var items = groups.map(function (g) { return { trig: g.querySelector('.nav-droptrig'), drop: g.querySelector('.nav-drop') }; })
+                    .filter(function (it) { return it.trig && it.drop; });
   function closeAll(except) {
-    items.forEach(function (it) {
-      if (it === except) return;
-      it.drop.classList.remove('open');
-      it.trig.setAttribute('aria-expanded', 'false');
-    });
+    items.forEach(function (it) { if (it === except) return; it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded','false'); });
   }
   items.forEach(function (it) {
     it.trig.addEventListener('click', function (e) {
@@ -1258,9 +1083,7 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   });
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
-    items.forEach(function (it) {
-      if (it.drop.classList.contains('open')) { it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded', 'false'); it.trig.focus(); }
-    });
+    items.forEach(function (it) { if (it.drop.classList.contains('open')) { it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded','false'); it.trig.focus(); } });
   });
 })();
 (function(){
@@ -1270,18 +1093,19 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){d.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.style.overflow='';});});
 })();
 (function () {
-  var terms = Array.prototype.slice.call(document.querySelectorAll('details.term'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.tcard'));
   var search = document.getElementById('glSearch');
   var count = document.getElementById('glCount');
   var empty = document.getElementById('glEmpty');
-  var total = terms.length;
+  if (!search) return;
+  var total = cards.length;
   function apply() {
     var q = (search.value || '').trim().toLowerCase();
     var visible = 0;
-    terms.forEach(function (term) {
-      var hay = (term.getAttribute('data-name') || '') + ' ' + term.textContent.toLowerCase();
+    cards.forEach(function (c) {
+      var hay = (c.getAttribute('data-name') || '') + ' ' + c.textContent.toLowerCase();
       var show = !q || hay.indexOf(q) !== -1;
-      term.hidden = !show;
+      c.hidden = !show;
       if (show) visible++;
     });
     count.textContent = (visible === total) ? (total + ' terms') : (visible + ' of ' + total + ' terms');
@@ -1289,25 +1113,6 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   }
   search.addEventListener('input', apply);
   apply();
-  function openTarget(hash) {
-    if (!hash || hash.length < 2) return;
-    var el = document.getElementById(hash.slice(1));
-    if (!el) return;
-    if (el.tagName === 'DETAILS') { el.open = true; }
-    if (el.hidden) { el.hidden = false; }
-    window.requestAnimationFrame(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
-  }
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
-    if (!a) return;
-    var hash = a.getAttribute('href');
-    if (!hash || hash === '#') return;
-    if (!document.getElementById(hash.slice(1))) return;
-    e.preventDefault();
-    history.replaceState(null, '', hash);
-    openTarget(hash);
-  });
-  if (window.location.hash) { window.setTimeout(function () { openTarget(window.location.hash); }, 60); }
 })();
 </script>
 </body>

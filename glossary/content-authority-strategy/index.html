@@ -270,6 +270,7 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 </style>
 
 <style>
+/* ---- breadcrumb + hero shared by category and term pages ---- */
 .cbread{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid-grey);margin-bottom:20px;}
 .cbread a{color:var(--mid-grey);text-decoration:none;transition:color .2s;}
 .cbread a:hover{color:var(--teal-light);}
@@ -283,25 +284,70 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .csibs-lbl{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.12em;text-transform:uppercase;margin-right:4px;align-self:center;}
 .gl-chip-link{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:rgba(250,250,250,.65);background:var(--charcoal-mid);border:1px solid var(--border-dark);padding:9px 15px;border-radius:20px;text-decoration:none;transition:all .2s;}
 .gl-chip-link:hover{border-color:var(--teal-light);color:var(--teal-light);}
+
+/* ---- Start Here ---- */
 .cstart{background:var(--seasalt);padding:60px var(--px) 8px;}
 .cstart-inner{max-width:var(--max-w);margin:0 auto;}
 .cstart-h{font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);font-weight:500;color:var(--charcoal);margin:8px 0 6px;}
 .cstart-lead{font-size:15px;line-height:1.7;color:var(--muted-light);margin-bottom:24px;}
 .cstart-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.cstart-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-left:3px solid var(--teal-light);border-radius:4px;padding:20px 22px;text-decoration:none;transition:box-shadow .2s,border-color .2s,transform .2s;}
+.cstart-card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-left:3px solid var(--teal-light);border-radius:4px;padding:20px 22px;text-decoration:none;transition:box-shadow .2s,transform .2s;}
 .cstart-card:hover{box-shadow:0 4px 22px rgba(26,26,26,.07);transform:translateY(-2px);}
 .cstart-n{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);margin-bottom:9px;}
 .cstart-name{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--charcoal);line-height:1.2;margin-bottom:7px;}
 .cstart-one{font-size:14px;line-height:1.62;color:var(--muted-light);flex:1;}
-.cstart-go{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);}
+.cstart-go{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);transition:gap .2s;}
 .cstart-card:hover .cstart-go{gap:11px;}
+
+/* ---- term card grid (three across) ---- */
 .call{background:var(--seasalt);padding:52px var(--px) 8px;}
 .call-inner{max-width:var(--max-w);margin:0 auto;}
-.call-h{font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);font-weight:500;color:var(--charcoal);margin:8px 0 22px;}
-.cback{background:var(--seasalt);padding:44px var(--px) 76px;text-align:center;}
-.cback a{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);text-decoration:none;border:1px solid rgba(74,158,142,.35);padding:13px 24px;border-radius:2px;transition:all .2s;}
-.cback a:hover{background:rgba(74,158,142,.08);border-color:var(--teal);}
-@media (max-width:820px){.cstart-grid{grid-template-columns:1fr;}}
+.call-h{font-family:var(--serif);font-size:clamp(26px,2.6vw,36px);font-weight:500;color:var(--charcoal);margin:8px 0 24px;}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.tcard{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-radius:4px;padding:22px 46px 20px 24px;text-decoration:none;transition:border-color .2s,box-shadow .2s,transform .2s;}
+.tcard:hover{border-color:rgba(74,158,142,.45);box-shadow:0 4px 22px rgba(26,26,26,.07);transform:translateY(-2px);}
+.tcard-name{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--teal);line-height:1.22;margin:0 0 8px;transition:color .2s;}
+.tcard:hover .tcard-name{color:var(--charcoal);}
+.tcard-one{font-size:14px;line-height:1.65;color:var(--muted-light);margin:0;flex:1;}
+.tcard-tag{align-self:flex-start;margin-top:14px;font-family:var(--mono);font-size:9px;letter-spacing:.07em;text-transform:uppercase;padding:5px 10px;border-radius:20px;white-space:nowrap;}
+.tcard-arr{position:absolute;top:22px;right:20px;color:var(--teal);transition:transform .25s var(--ease);}
+.tcard:hover .tcard-arr{transform:translateX(4px);}
+.tcard[hidden]{display:none;}
+
+/* ---- back to glossary button ---- */
+.cback{background:var(--seasalt);padding:44px var(--px) 60px;text-align:center;}
+.cback-btn{display:inline-flex;align-items:center;gap:12px;background:var(--charcoal);color:var(--teal-light);font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;padding:18px 34px;border-radius:2px;border:1px solid var(--charcoal);transition:all .2s var(--ease);}
+.cback-btn:hover{background:var(--charcoal-light);border-color:var(--teal-light);transform:translateY(-1px);}
+.cback-btn svg{transition:transform .2s var(--ease);}
+.cback-btn:hover svg{transform:translateX(-4px);}
+
+/* ---- term page ---- */
+.tp-chip{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-light);background:rgba(107,191,176,.1);border:1px solid rgba(107,191,176,.28);padding:8px 15px;border-radius:20px;text-decoration:none;margin-bottom:20px;transition:background .2s;}
+.tp-chip:hover{background:rgba(107,191,176,.2);}
+.tp-lead{font-family:var(--serif);font-size:clamp(20px,2vw,26px);font-weight:400;font-style:italic;line-height:1.45;color:var(--teal-light);max-width:800px;margin-top:20px;}
+.tp-tagrow{margin-top:22px;}
+.tp-tagrow .term-tag{display:inline-block;}
+.tp-body{background:var(--seasalt);padding:66px var(--px) 8px;}
+.tp-inner{max-width:var(--article-w);margin:0 auto;}
+.tp-h2{font-family:var(--serif);font-size:clamp(23px,2.2vw,30px);font-weight:500;color:var(--charcoal);margin:0 0 14px;}
+.tp-sec{margin-bottom:44px;}
+.tp-sec p{font-size:16.5px;line-height:1.8;color:var(--charcoal);margin:0 0 14px;}
+.tp-sec p:last-child{margin-bottom:0;}
+.tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
+.tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
+.tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
+.tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
+.tp-fw{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);text-decoration:none;border:1px solid rgba(74,158,142,.35);padding:13px 20px;border-radius:2px;transition:all .2s;}
+.tp-fw:hover{background:rgba(74,158,142,.08);border-color:var(--teal);}
+.tp-rel{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.tp-relcard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-radius:4px;padding:18px 20px;text-decoration:none;transition:border-color .2s,transform .2s;}
+.tp-relcard:hover{border-color:rgba(74,158,142,.45);transform:translateY(-2px);}
+.tp-relname{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--teal);line-height:1.25;margin-bottom:5px;}
+.tp-relone{font-size:13.5px;line-height:1.6;color:var(--muted-light);}
+.tp-nav{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;background:var(--seasalt);padding:36px var(--px) 60px;}
+@media (max-width:980px){.tgrid{grid-template-columns:repeat(2,1fr);}.cstart-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:660px){.tgrid,.cstart-grid,.tp-rel{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -420,200 +466,112 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <h2 class="cstart-h" id="c-start-h">New to authority strategy?</h2>
     <p class="cstart-lead">Begin with these foundational concepts:</p>
     <div class="cstart-grid">
-        <a class="cstart-card" href="#topical-authority">
+        <a class="cstart-card" href="/glossary/content-authority-strategy/topical-authority/">
           <span class="cstart-n">Start 01</span>
           <span class="cstart-name">Topical Authority</span>
           <span class="cstart-one">Demonstrated depth across a subject rather than a single page.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
-        <a class="cstart-card" href="#first-party-content">
+        <a class="cstart-card" href="/glossary/content-authority-strategy/first-party-content/">
           <span class="cstart-n">Start 02</span>
           <span class="cstart-name">First-Party Content</span>
           <span class="cstart-one">What a brand publishes about itself, on channels it controls.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
-        <a class="cstart-card" href="#third-party-evidence">
+        <a class="cstart-card" href="/glossary/content-authority-strategy/third-party-evidence/">
           <span class="cstart-n">Start 03</span>
           <span class="cstart-name">Third-Party Evidence</span>
           <span class="cstart-one">Evidence about a brand from sources it does not control.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
     </div>
   </div>
 </section>
 
-<section class="call gl-terms" aria-labelledby="c-all-h">
-  <div class="gl-terms-inner">
-    <div class="gl-cat" id="cat-content-authority-strategy" data-cat="content-authority-strategy">
-      <h2 class="call-h" id="c-all-h">All Content & Authority Strategy terms (10)</h2>
-      <details class="term" id="topical-authority" data-cat="content-authority-strategy" data-name="topical authority">
-        <summary class="term-sum">
-          <h3 class="term-name">Topical Authority</h3>
-          <span class="term-one">Demonstrated depth across a subject rather than a single page.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Topical authority is the degree to which a brand's body of content and evidence demonstrates depth of knowledge across a specific subject, rather than a single page or post.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Because systems research across many related searches, depth across a topic does more than one strong page. It is the content-side answer to query fan-out.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/retrieval-evidence-consensus/#query-fan-out">Query Fan-Out</a><a href="#content-clusters">Content Clusters</a><a href="/glossary/recognition-authority/#earned-authority">Earned Authority</a></div>
-      </details>
-      <details class="term" id="content-architecture" data-cat="content-authority-strategy" data-name="content architecture">
-        <summary class="term-sum">
-          <h3 class="term-name">Content Architecture</h3>
-          <span class="term-one">How content is structured and connected so it can be navigated.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Content architecture is how a brand's content is structured and connected, including its hierarchy, categories, and internal links, so both people and machines can navigate and understand it.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Structure tells a system what a brand is organized around. Unstructured publishing produces volume without a clear subject.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#content-clusters">Content Clusters</a><a href="#internal-linking">Internal Linking</a><a href="#topical-authority">Topical Authority</a></div>
-      </details>
-      <details class="term" id="content-clusters" data-cat="content-authority-strategy" data-name="content clusters">
-        <summary class="term-sum">
-          <h3 class="term-name">Content Clusters</h3>
-          <span class="term-one">Groups of linked content organized around a core topic.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Content clusters are groups of related content organized around a core topic, typically linked together, to demonstrate depth and help search and AI systems understand how the pieces relate.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Clusters make depth legible. They show a system that a set of pages belongs together rather than leaving it to infer the connection.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#content-architecture">Content Architecture</a><a href="#internal-linking">Internal Linking</a><a href="#topical-authority">Topical Authority</a></div>
-      </details>
-      <details class="term" id="content-depth" data-cat="content-authority-strategy" data-name="content depth">
-        <summary class="term-sum">
-          <h3 class="term-name">Content Depth</h3>
-          <span class="term-one">How thoroughly a piece of content actually covers its subject.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Content depth is how thoroughly a piece of content covers its subject, including the detail, evidence, and nuance behind a claim, rather than a surface-level summary.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Thin definitions get passed over in favor of sources that actually explain something. Depth is what makes a page worth citing rather than merely indexing.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#topical-authority">Topical Authority</a><a href="#content-architecture">Content Architecture</a><a href="/glossary/search-seo-generative-optimization/#eeat">E-E-A-T</a></div>
-      </details>
-      <details class="term" id="internal-linking" data-cat="content-authority-strategy" data-name="internal linking">
-        <summary class="term-sum">
-          <h3 class="term-name">Internal Linking</h3>
-          <span class="term-one">Linking between a site's own pages to show how they relate.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Internal linking is the practice of linking between pages on the same website to show search engines and AI systems how content relates and where authority concentrates.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is the cheapest way to make a body of work read as one connected argument rather than a pile of separate posts.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#content-clusters">Content Clusters</a><a href="#content-architecture">Content Architecture</a><a href="#topical-authority">Topical Authority</a></div>
-      </details>
-      <details class="term" id="first-party-content" data-cat="content-authority-strategy" data-name="first-party content">
-        <summary class="term-sum">
-          <h3 class="term-name">First-Party Content</h3>
-          <span class="term-one">What a brand publishes about itself, on channels it controls.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">First-party content is content a brand publishes about itself, on channels it controls. It is a necessary starting point, but on its own it is a claim, not corroboration.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is fully controllable, which is exactly why it carries less weight. A brand with only first-party content has asserted a great deal and confirmed none of it.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#third-party-evidence">Third-Party Evidence</a><a href="/glossary/retrieval-evidence-consensus/#corroboration">Corroboration</a><a href="/glossary/recognition-authority/#foundational-signal-confirmation-assets">Foundational, Signal &amp; Confirmation Assets</a></div>
-      </details>
-      <details class="term" id="third-party-evidence" data-cat="content-authority-strategy" data-name="third-party evidence">
-        <summary class="term-sum">
-          <h3 class="term-name">Third-Party Evidence</h3>
-          <span class="term-one">Evidence about a brand from sources it does not control.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Third-party evidence is evidence about a brand that comes from independent sources the brand does not control, such as press coverage, reviews, citations, or references. It is what turns a first-party claim into something a system, or a person, can verify.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>This is where Earned Authority is actually built. It is slower and harder than publishing, which is precisely what makes it worth something.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#first-party-content">First-Party Content</a><a href="/glossary/retrieval-evidence-consensus/#corroboration">Corroboration</a><a href="/glossary/recognition-authority/#expert-authority">Expert Authority</a></div>
-      </details>
-      <details class="term" id="digital-pr" data-cat="content-authority-strategy" data-name="digital pr">
-        <summary class="term-sum">
-          <h3 class="term-name">Digital PR</h3>
-          <span class="term-one">Earning coverage and mentions from independent publications.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Digital PR is the practice of earning coverage, links, and mentions from independent publications and sources, historically for search visibility, and increasingly as a way to build the third-party evidence AI systems draw on.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>The discipline has not changed much, but the reason for it has. Coverage is now evidence a system can corroborate against, not just a link.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#third-party-evidence">Third-Party Evidence</a><a href="/glossary/recognition-authority/#expert-authority">Expert Authority</a><a href="/glossary/measurement-ai-visibility/#brand-mention">Brand Mention</a></div>
-      </details>
-      <details class="term" id="trust-signals" data-cat="content-authority-strategy" data-name="trust signals">
-        <summary class="term-sum">
-          <h3 class="term-name">Trust Signals</h3>
-          <span class="term-one">The cues that help people and systems judge reliability.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Trust signals are the cues, such as reviews, credentials, references, and consistent information, that help people and systems judge whether a brand can be relied on.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>They are the everyday, checkable evidence of Credibility, and usually the easiest place to find gaps that are quick to close.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/recognition-authority/#credibility">Credibility</a><a href="/glossary/recognition-authority/#authority-signal">Authority Signal</a><a href="/glossary/recognition-authority/#community-authority">Community Authority</a></div>
-      </details>
-      <details class="term" id="entity-signals" data-cat="content-authority-strategy" data-name="entity signals">
-        <summary class="term-sum">
-          <h3 class="term-name">Entity Signals</h3>
-          <span class="term-one">The information that helps a system identify a brand correctly.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Entity signals are the pieces of information, such as consistent naming, structured data, and third-party references, that help a system correctly identify and disambiguate a brand as a distinct entity.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>They are the practical work behind recognition signals: making sure every reference to a brand can be resolved to the same organization.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/recognition-authority/#recognition-signal">Recognition Signal</a><a href="/glossary/retrieval-evidence-consensus/#entity-consistency">Entity Consistency</a><a href="/glossary/search-seo-generative-optimization/#schema-markup">Schema Markup</a></div>
-      </details>
+<section class="call" aria-labelledby="c-all-h">
+  <div class="call-inner">
+    <h2 class="call-h" id="c-all-h">All Content & Authority Strategy terms (10)</h2>
+    <div class="tgrid">
+        <a class="tcard" href="/glossary/content-authority-strategy/topical-authority/" data-name="topical authority">
+          <h3 class="tcard-name">Topical Authority</h3>
+          <p class="tcard-one">Demonstrated depth across a subject rather than a single page.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/content-authority-strategy/content-architecture/" data-name="content architecture">
+          <h3 class="tcard-name">Content Architecture</h3>
+          <p class="tcard-one">How content is structured and connected so it can be navigated.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/content-authority-strategy/content-clusters/" data-name="content clusters">
+          <h3 class="tcard-name">Content Clusters</h3>
+          <p class="tcard-one">Groups of linked content organized around a core topic.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/content-authority-strategy/content-depth/" data-name="content depth">
+          <h3 class="tcard-name">Content Depth</h3>
+          <p class="tcard-one">How thoroughly a piece of content actually covers its subject.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/content-authority-strategy/internal-linking/" data-name="internal linking">
+          <h3 class="tcard-name">Internal Linking</h3>
+          <p class="tcard-one">Linking between a site's own pages to show how they relate.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/content-authority-strategy/first-party-content/" data-name="first-party content">
+          <h3 class="tcard-name">First-Party Content</h3>
+          <p class="tcard-one">What a brand publishes about itself, on channels it controls.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/content-authority-strategy/third-party-evidence/" data-name="third-party evidence">
+          <h3 class="tcard-name">Third-Party Evidence</h3>
+          <p class="tcard-one">Evidence about a brand from sources it does not control.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/content-authority-strategy/digital-pr/" data-name="digital pr">
+          <h3 class="tcard-name">Digital PR</h3>
+          <p class="tcard-one">Earning coverage and mentions from independent publications.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/content-authority-strategy/trust-signals/" data-name="trust signals">
+          <h3 class="tcard-name">Trust Signals</h3>
+          <p class="tcard-one">The cues that help people and systems judge reliability.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/content-authority-strategy/entity-signals/" data-name="entity signals">
+          <h3 class="tcard-name">Entity Signals</h3>
+          <p class="tcard-one">The information that helps a system identify a brand correctly.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
     </div>
     <p class="gl-empty" id="glEmpty">No terms match your search. Try a different word, or clear the box above.</p>
   </div>
 </section>
 
-<section class="fw-cta" aria-labelledby="c-cta-h">
+<section class="cback" aria-label="Back to the full glossary">
+  <a href="/glossary/" class="cback-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Back to Full Glossary</a>
+</section>
+
+<section class="fw-cta" aria-labelledby="cta-h">
   <div class="fw-cta-inner">
     <div>
-      <h2 id="c-cta-h">Ready to see where your brand stands?</h2>
+      <h2 id="cta-h">Ready to see where your brand stands?</h2>
       <p>Start with the free diagnostic to see which condition of the Recognition Triangle is leaking, or read the frameworks these terms belong to.</p>
     </div>
     <div class="fw-cta-btns">
-      <a href="/diagnostic/" class="fw-cta-primary">Run the Free Diagnostic
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="/frameworks/" class="fw-cta-ghost">Read the Frameworks
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/diagnostic/" class="fw-cta-primary">Run the Free Diagnostic <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/frameworks/" class="fw-cta-ghost">Read the Frameworks <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
-</section>
-
-<section class="cback" aria-label="Back to the full glossary">
-  <a href="/glossary/">
-    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Back to Full Glossary
-  </a>
 </section>
 
 </main>
@@ -752,8 +710,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
  "hasDefinedTerm": [
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/content-authority-strategy/#topical-authority",
-   "url": "https://aingworth.com/glossary/content-authority-strategy/#topical-authority",
+   "@id": "https://aingworth.com/glossary/content-authority-strategy/topical-authority/#term",
+   "url": "https://aingworth.com/glossary/content-authority-strategy/topical-authority/",
    "name": "Topical Authority",
    "termCode": "topical-authority",
    "description": "Topical authority is the degree to which a brand's body of content and evidence demonstrates depth of knowledge across a specific subject, rather than a single page or post.",
@@ -763,8 +721,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/content-authority-strategy/#content-architecture",
-   "url": "https://aingworth.com/glossary/content-authority-strategy/#content-architecture",
+   "@id": "https://aingworth.com/glossary/content-authority-strategy/content-architecture/#term",
+   "url": "https://aingworth.com/glossary/content-authority-strategy/content-architecture/",
    "name": "Content Architecture",
    "termCode": "content-architecture",
    "description": "Content architecture is how a brand's content is structured and connected, including its hierarchy, categories, and internal links, so both people and machines can navigate and understand it.",
@@ -774,8 +732,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/content-authority-strategy/#content-clusters",
-   "url": "https://aingworth.com/glossary/content-authority-strategy/#content-clusters",
+   "@id": "https://aingworth.com/glossary/content-authority-strategy/content-clusters/#term",
+   "url": "https://aingworth.com/glossary/content-authority-strategy/content-clusters/",
    "name": "Content Clusters",
    "termCode": "content-clusters",
    "description": "Content clusters are groups of related content organized around a core topic, typically linked together, to demonstrate depth and help search and AI systems understand how the pieces relate.",
@@ -785,8 +743,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/content-authority-strategy/#content-depth",
-   "url": "https://aingworth.com/glossary/content-authority-strategy/#content-depth",
+   "@id": "https://aingworth.com/glossary/content-authority-strategy/content-depth/#term",
+   "url": "https://aingworth.com/glossary/content-authority-strategy/content-depth/",
    "name": "Content Depth",
    "termCode": "content-depth",
    "description": "Content depth is how thoroughly a piece of content covers its subject, including the detail, evidence, and nuance behind a claim, rather than a surface-level summary.",
@@ -796,8 +754,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/content-authority-strategy/#internal-linking",
-   "url": "https://aingworth.com/glossary/content-authority-strategy/#internal-linking",
+   "@id": "https://aingworth.com/glossary/content-authority-strategy/internal-linking/#term",
+   "url": "https://aingworth.com/glossary/content-authority-strategy/internal-linking/",
    "name": "Internal Linking",
    "termCode": "internal-linking",
    "description": "Internal linking is the practice of linking between pages on the same website to show search engines and AI systems how content relates and where authority concentrates.",
@@ -807,8 +765,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/content-authority-strategy/#first-party-content",
-   "url": "https://aingworth.com/glossary/content-authority-strategy/#first-party-content",
+   "@id": "https://aingworth.com/glossary/content-authority-strategy/first-party-content/#term",
+   "url": "https://aingworth.com/glossary/content-authority-strategy/first-party-content/",
    "name": "First-Party Content",
    "termCode": "first-party-content",
    "description": "First-party content is content a brand publishes about itself, on channels it controls. It is a necessary starting point, but on its own it is a claim, not corroboration.",
@@ -818,8 +776,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/content-authority-strategy/#third-party-evidence",
-   "url": "https://aingworth.com/glossary/content-authority-strategy/#third-party-evidence",
+   "@id": "https://aingworth.com/glossary/content-authority-strategy/third-party-evidence/#term",
+   "url": "https://aingworth.com/glossary/content-authority-strategy/third-party-evidence/",
    "name": "Third-Party Evidence",
    "termCode": "third-party-evidence",
    "description": "Third-party evidence is evidence about a brand that comes from independent sources the brand does not control, such as press coverage, reviews, citations, or references. It is what turns a first-party claim into something a system, or a person, can verify.",
@@ -829,8 +787,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/content-authority-strategy/#digital-pr",
-   "url": "https://aingworth.com/glossary/content-authority-strategy/#digital-pr",
+   "@id": "https://aingworth.com/glossary/content-authority-strategy/digital-pr/#term",
+   "url": "https://aingworth.com/glossary/content-authority-strategy/digital-pr/",
    "name": "Digital PR",
    "termCode": "digital-pr",
    "description": "Digital PR is the practice of earning coverage, links, and mentions from independent publications and sources, historically for search visibility, and increasingly as a way to build the third-party evidence AI systems draw on.",
@@ -840,8 +798,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/content-authority-strategy/#trust-signals",
-   "url": "https://aingworth.com/glossary/content-authority-strategy/#trust-signals",
+   "@id": "https://aingworth.com/glossary/content-authority-strategy/trust-signals/#term",
+   "url": "https://aingworth.com/glossary/content-authority-strategy/trust-signals/",
    "name": "Trust Signals",
    "termCode": "trust-signals",
    "description": "Trust signals are the cues, such as reviews, credentials, references, and consistent information, that help people and systems judge whether a brand can be relied on.",
@@ -851,8 +809,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/content-authority-strategy/#entity-signals",
-   "url": "https://aingworth.com/glossary/content-authority-strategy/#entity-signals",
+   "@id": "https://aingworth.com/glossary/content-authority-strategy/entity-signals/#term",
+   "url": "https://aingworth.com/glossary/content-authority-strategy/entity-signals/",
    "name": "Entity Signals",
    "termCode": "entity-signals",
    "description": "Entity signals are the pieces of information, such as consistent naming, structured data, and third-party references, that help a system correctly identify and disambiguate a brand as a distinct entity.",
@@ -868,15 +826,10 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 (function () {
   var groups = Array.prototype.slice.call(document.querySelectorAll('.nav-has-drop'));
   if (!groups.length) return;
-  var items = groups.map(function (g) {
-    return { trig: g.querySelector('.nav-droptrig'), drop: g.querySelector('.nav-drop') };
-  }).filter(function (it) { return it.trig && it.drop; });
+  var items = groups.map(function (g) { return { trig: g.querySelector('.nav-droptrig'), drop: g.querySelector('.nav-drop') }; })
+                    .filter(function (it) { return it.trig && it.drop; });
   function closeAll(except) {
-    items.forEach(function (it) {
-      if (it === except) return;
-      it.drop.classList.remove('open');
-      it.trig.setAttribute('aria-expanded', 'false');
-    });
+    items.forEach(function (it) { if (it === except) return; it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded','false'); });
   }
   items.forEach(function (it) {
     it.trig.addEventListener('click', function (e) {
@@ -892,9 +845,7 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   });
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
-    items.forEach(function (it) {
-      if (it.drop.classList.contains('open')) { it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded', 'false'); it.trig.focus(); }
-    });
+    items.forEach(function (it) { if (it.drop.classList.contains('open')) { it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded','false'); it.trig.focus(); } });
   });
 })();
 (function(){
@@ -904,18 +855,19 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){d.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.style.overflow='';});});
 })();
 (function () {
-  var terms = Array.prototype.slice.call(document.querySelectorAll('details.term'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.tcard'));
   var search = document.getElementById('glSearch');
   var count = document.getElementById('glCount');
   var empty = document.getElementById('glEmpty');
-  var total = terms.length;
+  if (!search) return;
+  var total = cards.length;
   function apply() {
     var q = (search.value || '').trim().toLowerCase();
     var visible = 0;
-    terms.forEach(function (term) {
-      var hay = (term.getAttribute('data-name') || '') + ' ' + term.textContent.toLowerCase();
+    cards.forEach(function (c) {
+      var hay = (c.getAttribute('data-name') || '') + ' ' + c.textContent.toLowerCase();
       var show = !q || hay.indexOf(q) !== -1;
-      term.hidden = !show;
+      c.hidden = !show;
       if (show) visible++;
     });
     count.textContent = (visible === total) ? (total + ' terms') : (visible + ' of ' + total + ' terms');
@@ -923,25 +875,6 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   }
   search.addEventListener('input', apply);
   apply();
-  function openTarget(hash) {
-    if (!hash || hash.length < 2) return;
-    var el = document.getElementById(hash.slice(1));
-    if (!el) return;
-    if (el.tagName === 'DETAILS') { el.open = true; }
-    if (el.hidden) { el.hidden = false; }
-    window.requestAnimationFrame(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
-  }
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
-    if (!a) return;
-    var hash = a.getAttribute('href');
-    if (!hash || hash === '#') return;
-    if (!document.getElementById(hash.slice(1))) return;
-    e.preventDefault();
-    history.replaceState(null, '', hash);
-    openTarget(hash);
-  });
-  if (window.location.hash) { window.setTimeout(function () { openTarget(window.location.hash); }, 60); }
 })();
 </script>
 </body>

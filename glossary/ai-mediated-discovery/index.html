@@ -270,6 +270,7 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 </style>
 
 <style>
+/* ---- breadcrumb + hero shared by category and term pages ---- */
 .cbread{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid-grey);margin-bottom:20px;}
 .cbread a{color:var(--mid-grey);text-decoration:none;transition:color .2s;}
 .cbread a:hover{color:var(--teal-light);}
@@ -283,25 +284,70 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .csibs-lbl{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.12em;text-transform:uppercase;margin-right:4px;align-self:center;}
 .gl-chip-link{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:rgba(250,250,250,.65);background:var(--charcoal-mid);border:1px solid var(--border-dark);padding:9px 15px;border-radius:20px;text-decoration:none;transition:all .2s;}
 .gl-chip-link:hover{border-color:var(--teal-light);color:var(--teal-light);}
+
+/* ---- Start Here ---- */
 .cstart{background:var(--seasalt);padding:60px var(--px) 8px;}
 .cstart-inner{max-width:var(--max-w);margin:0 auto;}
 .cstart-h{font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);font-weight:500;color:var(--charcoal);margin:8px 0 6px;}
 .cstart-lead{font-size:15px;line-height:1.7;color:var(--muted-light);margin-bottom:24px;}
 .cstart-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.cstart-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-left:3px solid var(--teal-light);border-radius:4px;padding:20px 22px;text-decoration:none;transition:box-shadow .2s,border-color .2s,transform .2s;}
+.cstart-card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-left:3px solid var(--teal-light);border-radius:4px;padding:20px 22px;text-decoration:none;transition:box-shadow .2s,transform .2s;}
 .cstart-card:hover{box-shadow:0 4px 22px rgba(26,26,26,.07);transform:translateY(-2px);}
 .cstart-n{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);margin-bottom:9px;}
 .cstart-name{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--charcoal);line-height:1.2;margin-bottom:7px;}
 .cstart-one{font-size:14px;line-height:1.62;color:var(--muted-light);flex:1;}
-.cstart-go{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);}
+.cstart-go{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);transition:gap .2s;}
 .cstart-card:hover .cstart-go{gap:11px;}
+
+/* ---- term card grid (three across) ---- */
 .call{background:var(--seasalt);padding:52px var(--px) 8px;}
 .call-inner{max-width:var(--max-w);margin:0 auto;}
-.call-h{font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);font-weight:500;color:var(--charcoal);margin:8px 0 22px;}
-.cback{background:var(--seasalt);padding:44px var(--px) 76px;text-align:center;}
-.cback a{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);text-decoration:none;border:1px solid rgba(74,158,142,.35);padding:13px 24px;border-radius:2px;transition:all .2s;}
-.cback a:hover{background:rgba(74,158,142,.08);border-color:var(--teal);}
-@media (max-width:820px){.cstart-grid{grid-template-columns:1fr;}}
+.call-h{font-family:var(--serif);font-size:clamp(26px,2.6vw,36px);font-weight:500;color:var(--charcoal);margin:8px 0 24px;}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.tcard{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-radius:4px;padding:22px 46px 20px 24px;text-decoration:none;transition:border-color .2s,box-shadow .2s,transform .2s;}
+.tcard:hover{border-color:rgba(74,158,142,.45);box-shadow:0 4px 22px rgba(26,26,26,.07);transform:translateY(-2px);}
+.tcard-name{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--teal);line-height:1.22;margin:0 0 8px;transition:color .2s;}
+.tcard:hover .tcard-name{color:var(--charcoal);}
+.tcard-one{font-size:14px;line-height:1.65;color:var(--muted-light);margin:0;flex:1;}
+.tcard-tag{align-self:flex-start;margin-top:14px;font-family:var(--mono);font-size:9px;letter-spacing:.07em;text-transform:uppercase;padding:5px 10px;border-radius:20px;white-space:nowrap;}
+.tcard-arr{position:absolute;top:22px;right:20px;color:var(--teal);transition:transform .25s var(--ease);}
+.tcard:hover .tcard-arr{transform:translateX(4px);}
+.tcard[hidden]{display:none;}
+
+/* ---- back to glossary button ---- */
+.cback{background:var(--seasalt);padding:44px var(--px) 60px;text-align:center;}
+.cback-btn{display:inline-flex;align-items:center;gap:12px;background:var(--charcoal);color:var(--teal-light);font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;padding:18px 34px;border-radius:2px;border:1px solid var(--charcoal);transition:all .2s var(--ease);}
+.cback-btn:hover{background:var(--charcoal-light);border-color:var(--teal-light);transform:translateY(-1px);}
+.cback-btn svg{transition:transform .2s var(--ease);}
+.cback-btn:hover svg{transform:translateX(-4px);}
+
+/* ---- term page ---- */
+.tp-chip{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-light);background:rgba(107,191,176,.1);border:1px solid rgba(107,191,176,.28);padding:8px 15px;border-radius:20px;text-decoration:none;margin-bottom:20px;transition:background .2s;}
+.tp-chip:hover{background:rgba(107,191,176,.2);}
+.tp-lead{font-family:var(--serif);font-size:clamp(20px,2vw,26px);font-weight:400;font-style:italic;line-height:1.45;color:var(--teal-light);max-width:800px;margin-top:20px;}
+.tp-tagrow{margin-top:22px;}
+.tp-tagrow .term-tag{display:inline-block;}
+.tp-body{background:var(--seasalt);padding:66px var(--px) 8px;}
+.tp-inner{max-width:var(--article-w);margin:0 auto;}
+.tp-h2{font-family:var(--serif);font-size:clamp(23px,2.2vw,30px);font-weight:500;color:var(--charcoal);margin:0 0 14px;}
+.tp-sec{margin-bottom:44px;}
+.tp-sec p{font-size:16.5px;line-height:1.8;color:var(--charcoal);margin:0 0 14px;}
+.tp-sec p:last-child{margin-bottom:0;}
+.tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
+.tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
+.tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
+.tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
+.tp-fw{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);text-decoration:none;border:1px solid rgba(74,158,142,.35);padding:13px 20px;border-radius:2px;transition:all .2s;}
+.tp-fw:hover{background:rgba(74,158,142,.08);border-color:var(--teal);}
+.tp-rel{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.tp-relcard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-radius:4px;padding:18px 20px;text-decoration:none;transition:border-color .2s,transform .2s;}
+.tp-relcard:hover{border-color:rgba(74,158,142,.45);transform:translateY(-2px);}
+.tp-relname{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--teal);line-height:1.25;margin-bottom:5px;}
+.tp-relone{font-size:13.5px;line-height:1.6;color:var(--muted-light);}
+.tp-nav{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;background:var(--seasalt);padding:36px var(--px) 60px;}
+@media (max-width:980px){.tgrid{grid-template-columns:repeat(2,1fr);}.cstart-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:660px){.tgrid,.cstart-grid,.tp-rel{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -420,228 +466,124 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <h2 class="cstart-h" id="c-start-h">New to AI-mediated discovery?</h2>
     <p class="cstart-lead">Begin with these foundational concepts:</p>
     <div class="cstart-grid">
-        <a class="cstart-card" href="#ai-mediated-discovery">
+        <a class="cstart-card" href="/glossary/ai-mediated-discovery/ai-mediated-discovery/">
           <span class="cstart-n">Start 01</span>
           <span class="cstart-name">AI-Mediated Discovery</span>
           <span class="cstart-one">Discovery that happens through AI systems interpreting information on a person's behalf.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
-        <a class="cstart-card" href="#ai-visibility">
+        <a class="cstart-card" href="/glossary/ai-mediated-discovery/ai-visibility/">
           <span class="cstart-n">Start 02</span>
           <span class="cstart-name">AI Visibility</span>
           <span class="cstart-one">How often and where a brand appears in AI-generated answers.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
-        <a class="cstart-card" href="#ai-recommendation">
+        <a class="cstart-card" href="/glossary/ai-mediated-discovery/ai-recommendation/">
           <span class="cstart-n">Start 03</span>
           <span class="cstart-name">AI Recommendation</span>
           <span class="cstart-one">When an AI system puts a brand forward as an option worth considering.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
     </div>
   </div>
 </section>
 
-<section class="call gl-terms" aria-labelledby="c-all-h">
-  <div class="gl-terms-inner">
-    <div class="gl-cat" id="cat-ai-mediated-discovery" data-cat="ai-mediated-discovery">
-      <h2 class="call-h" id="c-all-h">All AI-Mediated Discovery terms (12)</h2>
-      <details class="term" id="ai-mediated-discovery" data-cat="ai-mediated-discovery" data-name="ai-mediated discovery">
-        <summary class="term-sum">
-          <h3 class="term-name">AI-Mediated Discovery</h3>
-          <span class="term-one">Discovery that happens through AI systems interpreting information on a person's behalf.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">AI-Mediated Discovery is the process through which people find, evaluate, compare, and decide on brands through AI systems that interpret information and generate a response on their behalf, rather than through a list of links they browse themselves.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Naming the shift matters more than naming any single platform. Interfaces will keep changing. The underlying change, that something now interprets on the buyer's behalf, is what a strategy has to answer to.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/recognition-authority/#machine-gatekeeper">Machine Gatekeeper</a><a href="#ai-search">AI Search</a><a href="#ai-visibility">AI Visibility</a></div>
-      </details>
-      <details class="term" id="ai-search" data-cat="ai-mediated-discovery" data-name="ai search">
-        <summary class="term-sum">
-          <h3 class="term-name">AI Search</h3>
-          <span class="term-one">Search experiences that generate an answer rather than a list of links.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">AI search describes search experiences, such as Google AI Overviews, AI Mode, ChatGPT search, or Perplexity, that generate a synthesized answer instead of, or alongside, a list of links.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is the most common label people use for the change, which makes it useful shorthand. It describes the interface rather than the underlying shift, so it is a starting point rather than a strategy.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#ai-mediated-discovery">AI-Mediated Discovery</a><a href="#answer-engine">Answer Engine</a><a href="#ai-overviews">AI Overviews</a></div>
-      </details>
-      <details class="term" id="ai-visibility" data-cat="ai-mediated-discovery" data-name="ai visibility">
-        <summary class="term-sum">
-          <h3 class="term-name">AI Visibility</h3>
-          <span class="term-one">How often and where a brand appears in AI-generated answers.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">AI visibility describes how often and where a brand appears within AI-generated responses to relevant questions. It is a useful, observable outcome, but visibility alone does not show whether an AI system understands, trusts, or recommends a brand correctly.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Visibility is necessary but not sufficient. A brand can appear frequently in AI answers and still be described incorrectly, which is why Aingworth treats it as one signal of recognition rather than the goal.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/recognition-authority/#recognition">Recognition</a><a href="/glossary/measurement-ai-visibility/#ai-visibility-measurement">AI Visibility Measurement</a><a href="#ai-recommendation">AI Recommendation</a></div>
-      </details>
-      <details class="term" id="ai-recommendation" data-cat="ai-mediated-discovery" data-name="ai recommendation">
-        <summary class="term-sum">
-          <h3 class="term-name">AI Recommendation</h3>
-          <span class="term-one">When an AI system puts a brand forward as an option worth considering.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">An AI recommendation happens when an AI system identifies a brand, product, or source as relevant to what someone needs and includes it among the options it presents. A brand can be visible without being recommended.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Mention and recommendation are different commercial events. Being named in passing and being put forward as the answer produce very different outcomes, and only one of them wins work.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#ai-visibility">AI Visibility</a><a href="/glossary/recognition-authority/#recognition">Recognition</a><a href="#agentic-discovery">Agentic Discovery</a></div>
-      </details>
-      <details class="term" id="ai-referral" data-cat="ai-mediated-discovery" data-name="ai referral">
-        <summary class="term-sum">
-          <h3 class="term-name">AI Referral</h3>
-          <span class="term-one">When an AI answer points someone onward to a brand's site or resource.</span>
-          <span class="term-tag term-tag-concept">Aingworth Concept</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">An AI referral happens when an AI-generated response points a user to a brand's website or another source as a next step. AI systems increasingly include citations and links alongside their answers.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It gives a way to talk about traffic from AI systems without falling back into treating clicks as the only thing that counts.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/measurement-ai-visibility/#ai-referral-traffic">AI Referral Traffic</a><a href="/glossary/retrieval-evidence-consensus/#citation">Citation</a><a href="#zero-click-search">Zero-Click Search</a></div>
-      </details>
-      <details class="term" id="answer-engine" data-cat="ai-mediated-discovery" data-name="answer engine">
-        <summary class="term-sum">
-          <h3 class="term-name">Answer Engine</h3>
-          <span class="term-one">A system built to return a direct answer rather than a ranked list.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">An answer engine is a search or AI system built to return a direct answer to a question rather than a ranked list of pages for the user to evaluate themselves.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Ranked lists let a buyer compare. Answers do not. When the interface returns one response, being absent from it is closer to not existing than to ranking low.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#ai-search">AI Search</a><a href="/glossary/search-seo-generative-optimization/#aeo">Answer Engine Optimization (AEO)</a><a href="#zero-click-search">Zero-Click Search</a></div>
-      </details>
-      <details class="term" id="conversational-search" data-cat="ai-mediated-discovery" data-name="conversational search">
-        <summary class="term-sum">
-          <h3 class="term-name">Conversational Search</h3>
-          <span class="term-one">Search as a back-and-forth, where later questions build on earlier ones.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Conversational search is a search interaction that takes the form of a back-and-forth conversation, where later questions build on earlier ones, rather than a single, isolated query.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It means a brand is rarely evaluated on one query. It is evaluated across a thread, which rewards consistency across a topic rather than optimization of a single page.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#ai-search">AI Search</a><a href="/glossary/retrieval-evidence-consensus/#query-fan-out">Query Fan-Out</a><a href="#ai-mode">AI Mode</a></div>
-      </details>
-      <details class="term" id="zero-click-search" data-cat="ai-mediated-discovery" data-name="zero-click search">
-        <summary class="term-sum">
-          <h3 class="term-name">Zero-Click Search</h3>
-          <span class="term-one">When the answer is delivered without the user visiting the source.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">A zero-click search happens when a user gets the information they need directly within a search or AI interface, without visiting the source website. As discovery becomes more answer-led, being accurately represented can matter beyond the click itself.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>If a brand only measures clicks, most of its influence on an AI-mediated decision is invisible to it. Being described accurately in an answer nobody clicks through from still shapes what happens next.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#ai-referral">AI Referral</a><a href="#ai-visibility">AI Visibility</a><a href="#answer-engine">Answer Engine</a></div>
-      </details>
-      <details class="term" id="agentic-discovery" data-cat="ai-mediated-discovery" data-name="agentic discovery">
-        <summary class="term-sum">
-          <h3 class="term-name">Agentic Discovery</h3>
-          <span class="term-one">AI agents that evaluate and act on options on a person's behalf.</span>
-          <span class="term-tag term-tag-emerging">Emerging</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Agentic Discovery is the process by which autonomous or semi-autonomous AI systems identify, evaluate, compare, and potentially act on information, products, or brands on a user's behalf. It extends the question from whether AI mentions a brand to whether an AI agent chooses it.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It moves the commercial question from mention to selection. An agent that shortlists on a buyer's behalf is making a purchase decision, not a visibility one.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#ai-recommendation">AI Recommendation</a><a href="/glossary/recognition-authority/#machine-gatekeeper">Machine Gatekeeper</a><a href="#ai-mediated-discovery">AI-Mediated Discovery</a></div>
-      </details>
-      <details class="term" id="answer-eligibility" data-cat="ai-mediated-discovery" data-name="answer eligibility">
-        <summary class="term-sum">
-          <h3 class="term-name">Answer Eligibility</h3>
-          <span class="term-one">Whether a source is even in the running to be used in an answer.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Answer eligibility describes whether a source contains information that is relevant, accessible, and clear enough to be considered for inclusion in an AI-generated answer. A brand cannot be recognized if it cannot first be retrieved.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is the floor beneath everything else. Authority work has no effect on a page a system cannot reach, read, or make sense of.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/retrieval-evidence-consensus/#retrievability">Retrievability</a><a href="/glossary/retrieval-evidence-consensus/#retrieval">Retrieval</a><a href="/glossary/search-seo-generative-optimization/#seo">Search Engine Optimization (SEO)</a></div>
-      </details>
-      <details class="term" id="ai-overviews" data-cat="ai-mediated-discovery" data-name="ai overviews">
-        <summary class="term-sum">
-          <h3 class="term-name">AI Overviews</h3>
-          <span class="term-one">Google's AI-generated summaries above traditional search results.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">AI Overviews are Google's AI-generated summaries that appear above traditional search results for some queries, drawing on and citing a range of web sources.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is where most people first met AI-mediated discovery, and it sits on top of the same index as ordinary search, which is why search fundamentals still matter.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#ai-search">AI Search</a><a href="#ai-mode">AI Mode</a><a href="/glossary/retrieval-evidence-consensus/#citation">Citation</a></div>
-      </details>
-      <details class="term" id="ai-mode" data-cat="ai-mediated-discovery" data-name="ai mode">
-        <summary class="term-sum">
-          <h3 class="term-name">AI Mode</h3>
-          <span class="term-one">Google's conversational search experience, built on query fan-out.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">AI Mode is Google's conversational AI search experience, which uses query fan-out to research a question across multiple searches before generating a response.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Because it researches across many underlying searches, a brand needs presence across a topic rather than a single well-optimized page.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/retrieval-evidence-consensus/#query-fan-out">Query Fan-Out</a><a href="#conversational-search">Conversational Search</a><a href="#ai-overviews">AI Overviews</a></div>
-      </details>
+<section class="call" aria-labelledby="c-all-h">
+  <div class="call-inner">
+    <h2 class="call-h" id="c-all-h">All AI-Mediated Discovery terms (12)</h2>
+    <div class="tgrid">
+        <a class="tcard" href="/glossary/ai-mediated-discovery/ai-mediated-discovery/" data-name="ai-mediated discovery">
+          <h3 class="tcard-name">AI-Mediated Discovery</h3>
+          <p class="tcard-one">Discovery that happens through AI systems interpreting information on a person's behalf.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-mediated-discovery/ai-search/" data-name="ai search">
+          <h3 class="tcard-name">AI Search</h3>
+          <p class="tcard-one">Search experiences that generate an answer rather than a list of links.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-mediated-discovery/ai-visibility/" data-name="ai visibility">
+          <h3 class="tcard-name">AI Visibility</h3>
+          <p class="tcard-one">How often and where a brand appears in AI-generated answers.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-mediated-discovery/ai-recommendation/" data-name="ai recommendation">
+          <h3 class="tcard-name">AI Recommendation</h3>
+          <p class="tcard-one">When an AI system puts a brand forward as an option worth considering.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-mediated-discovery/ai-referral/" data-name="ai referral">
+          <h3 class="tcard-name">AI Referral</h3>
+          <p class="tcard-one">When an AI answer points someone onward to a brand's site or resource.</p>
+          <span class="tcard-tag term-tag term-tag-concept">Aingworth Concept</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-mediated-discovery/answer-engine/" data-name="answer engine">
+          <h3 class="tcard-name">Answer Engine</h3>
+          <p class="tcard-one">A system built to return a direct answer rather than a ranked list.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-mediated-discovery/conversational-search/" data-name="conversational search">
+          <h3 class="tcard-name">Conversational Search</h3>
+          <p class="tcard-one">Search as a back-and-forth, where later questions build on earlier ones.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-mediated-discovery/zero-click-search/" data-name="zero-click search">
+          <h3 class="tcard-name">Zero-Click Search</h3>
+          <p class="tcard-one">When the answer is delivered without the user visiting the source.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-mediated-discovery/agentic-discovery/" data-name="agentic discovery">
+          <h3 class="tcard-name">Agentic Discovery</h3>
+          <p class="tcard-one">AI agents that evaluate and act on options on a person's behalf.</p>
+          <span class="tcard-tag term-tag term-tag-emerging">Emerging</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-mediated-discovery/answer-eligibility/" data-name="answer eligibility">
+          <h3 class="tcard-name">Answer Eligibility</h3>
+          <p class="tcard-one">Whether a source is even in the running to be used in an answer.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-mediated-discovery/ai-overviews/" data-name="ai overviews">
+          <h3 class="tcard-name">AI Overviews</h3>
+          <p class="tcard-one">Google's AI-generated summaries above traditional search results.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/ai-mediated-discovery/ai-mode/" data-name="ai mode">
+          <h3 class="tcard-name">AI Mode</h3>
+          <p class="tcard-one">Google's conversational search experience, built on query fan-out.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
     </div>
     <p class="gl-empty" id="glEmpty">No terms match your search. Try a different word, or clear the box above.</p>
   </div>
 </section>
 
-<section class="fw-cta" aria-labelledby="c-cta-h">
+<section class="cback" aria-label="Back to the full glossary">
+  <a href="/glossary/" class="cback-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Back to Full Glossary</a>
+</section>
+
+<section class="fw-cta" aria-labelledby="cta-h">
   <div class="fw-cta-inner">
     <div>
-      <h2 id="c-cta-h">Ready to see where your brand stands?</h2>
+      <h2 id="cta-h">Ready to see where your brand stands?</h2>
       <p>Start with the free diagnostic to see which condition of the Recognition Triangle is leaking, or read the frameworks these terms belong to.</p>
     </div>
     <div class="fw-cta-btns">
-      <a href="/diagnostic/" class="fw-cta-primary">Run the Free Diagnostic
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="/frameworks/" class="fw-cta-ghost">Read the Frameworks
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/diagnostic/" class="fw-cta-primary">Run the Free Diagnostic <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/frameworks/" class="fw-cta-ghost">Read the Frameworks <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
-</section>
-
-<section class="cback" aria-label="Back to the full glossary">
-  <a href="/glossary/">
-    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Back to Full Glossary
-  </a>
 </section>
 
 </main>
@@ -780,8 +722,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
  "hasDefinedTerm": [
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-mediated-discovery",
-   "url": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-mediated-discovery",
+   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/ai-mediated-discovery/#term",
+   "url": "https://aingworth.com/glossary/ai-mediated-discovery/ai-mediated-discovery/",
    "name": "AI-Mediated Discovery",
    "termCode": "ai-mediated-discovery",
    "description": "AI-Mediated Discovery is the process through which people find, evaluate, compare, and decide on brands through AI systems that interpret information and generate a response on their behalf, rather than through a list of links they browse themselves.",
@@ -791,8 +733,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-search",
-   "url": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-search",
+   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/ai-search/#term",
+   "url": "https://aingworth.com/glossary/ai-mediated-discovery/ai-search/",
    "name": "AI Search",
    "termCode": "ai-search",
    "description": "AI search describes search experiences, such as Google AI Overviews, AI Mode, ChatGPT search, or Perplexity, that generate a synthesized answer instead of, or alongside, a list of links.",
@@ -802,8 +744,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-visibility",
-   "url": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-visibility",
+   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/ai-visibility/#term",
+   "url": "https://aingworth.com/glossary/ai-mediated-discovery/ai-visibility/",
    "name": "AI Visibility",
    "termCode": "ai-visibility",
    "description": "AI visibility describes how often and where a brand appears within AI-generated responses to relevant questions. It is a useful, observable outcome, but visibility alone does not show whether an AI system understands, trusts, or recommends a brand correctly.",
@@ -813,8 +755,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-recommendation",
-   "url": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-recommendation",
+   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/ai-recommendation/#term",
+   "url": "https://aingworth.com/glossary/ai-mediated-discovery/ai-recommendation/",
    "name": "AI Recommendation",
    "termCode": "ai-recommendation",
    "description": "An AI recommendation happens when an AI system identifies a brand, product, or source as relevant to what someone needs and includes it among the options it presents. A brand can be visible without being recommended.",
@@ -824,8 +766,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-referral",
-   "url": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-referral",
+   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/ai-referral/#term",
+   "url": "https://aingworth.com/glossary/ai-mediated-discovery/ai-referral/",
    "name": "AI Referral",
    "termCode": "ai-referral",
    "description": "An AI referral happens when an AI-generated response points a user to a brand's website or another source as a next step. AI systems increasingly include citations and links alongside their answers.",
@@ -835,8 +777,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/#answer-engine",
-   "url": "https://aingworth.com/glossary/ai-mediated-discovery/#answer-engine",
+   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/answer-engine/#term",
+   "url": "https://aingworth.com/glossary/ai-mediated-discovery/answer-engine/",
    "name": "Answer Engine",
    "termCode": "answer-engine",
    "description": "An answer engine is a search or AI system built to return a direct answer to a question rather than a ranked list of pages for the user to evaluate themselves.",
@@ -846,8 +788,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/#conversational-search",
-   "url": "https://aingworth.com/glossary/ai-mediated-discovery/#conversational-search",
+   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/conversational-search/#term",
+   "url": "https://aingworth.com/glossary/ai-mediated-discovery/conversational-search/",
    "name": "Conversational Search",
    "termCode": "conversational-search",
    "description": "Conversational search is a search interaction that takes the form of a back-and-forth conversation, where later questions build on earlier ones, rather than a single, isolated query.",
@@ -857,8 +799,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/#zero-click-search",
-   "url": "https://aingworth.com/glossary/ai-mediated-discovery/#zero-click-search",
+   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/zero-click-search/#term",
+   "url": "https://aingworth.com/glossary/ai-mediated-discovery/zero-click-search/",
    "name": "Zero-Click Search",
    "termCode": "zero-click-search",
    "description": "A zero-click search happens when a user gets the information they need directly within a search or AI interface, without visiting the source website. As discovery becomes more answer-led, being accurately represented can matter beyond the click itself.",
@@ -868,8 +810,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/#agentic-discovery",
-   "url": "https://aingworth.com/glossary/ai-mediated-discovery/#agentic-discovery",
+   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/agentic-discovery/#term",
+   "url": "https://aingworth.com/glossary/ai-mediated-discovery/agentic-discovery/",
    "name": "Agentic Discovery",
    "termCode": "agentic-discovery",
    "description": "Agentic Discovery is the process by which autonomous or semi-autonomous AI systems identify, evaluate, compare, and potentially act on information, products, or brands on a user's behalf. It extends the question from whether AI mentions a brand to whether an AI agent chooses it.",
@@ -879,8 +821,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/#answer-eligibility",
-   "url": "https://aingworth.com/glossary/ai-mediated-discovery/#answer-eligibility",
+   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/answer-eligibility/#term",
+   "url": "https://aingworth.com/glossary/ai-mediated-discovery/answer-eligibility/",
    "name": "Answer Eligibility",
    "termCode": "answer-eligibility",
    "description": "Answer eligibility describes whether a source contains information that is relevant, accessible, and clear enough to be considered for inclusion in an AI-generated answer. A brand cannot be recognized if it cannot first be retrieved.",
@@ -890,8 +832,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-overviews",
-   "url": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-overviews",
+   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/ai-overviews/#term",
+   "url": "https://aingworth.com/glossary/ai-mediated-discovery/ai-overviews/",
    "name": "AI Overviews",
    "termCode": "ai-overviews",
    "description": "AI Overviews are Google's AI-generated summaries that appear above traditional search results for some queries, drawing on and citing a range of web sources.",
@@ -901,8 +843,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-mode",
-   "url": "https://aingworth.com/glossary/ai-mediated-discovery/#ai-mode",
+   "@id": "https://aingworth.com/glossary/ai-mediated-discovery/ai-mode/#term",
+   "url": "https://aingworth.com/glossary/ai-mediated-discovery/ai-mode/",
    "name": "AI Mode",
    "termCode": "ai-mode",
    "description": "AI Mode is Google's conversational AI search experience, which uses query fan-out to research a question across multiple searches before generating a response.",
@@ -918,15 +860,10 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 (function () {
   var groups = Array.prototype.slice.call(document.querySelectorAll('.nav-has-drop'));
   if (!groups.length) return;
-  var items = groups.map(function (g) {
-    return { trig: g.querySelector('.nav-droptrig'), drop: g.querySelector('.nav-drop') };
-  }).filter(function (it) { return it.trig && it.drop; });
+  var items = groups.map(function (g) { return { trig: g.querySelector('.nav-droptrig'), drop: g.querySelector('.nav-drop') }; })
+                    .filter(function (it) { return it.trig && it.drop; });
   function closeAll(except) {
-    items.forEach(function (it) {
-      if (it === except) return;
-      it.drop.classList.remove('open');
-      it.trig.setAttribute('aria-expanded', 'false');
-    });
+    items.forEach(function (it) { if (it === except) return; it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded','false'); });
   }
   items.forEach(function (it) {
     it.trig.addEventListener('click', function (e) {
@@ -942,9 +879,7 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   });
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
-    items.forEach(function (it) {
-      if (it.drop.classList.contains('open')) { it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded', 'false'); it.trig.focus(); }
-    });
+    items.forEach(function (it) { if (it.drop.classList.contains('open')) { it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded','false'); it.trig.focus(); } });
   });
 })();
 (function(){
@@ -954,18 +889,19 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){d.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.style.overflow='';});});
 })();
 (function () {
-  var terms = Array.prototype.slice.call(document.querySelectorAll('details.term'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.tcard'));
   var search = document.getElementById('glSearch');
   var count = document.getElementById('glCount');
   var empty = document.getElementById('glEmpty');
-  var total = terms.length;
+  if (!search) return;
+  var total = cards.length;
   function apply() {
     var q = (search.value || '').trim().toLowerCase();
     var visible = 0;
-    terms.forEach(function (term) {
-      var hay = (term.getAttribute('data-name') || '') + ' ' + term.textContent.toLowerCase();
+    cards.forEach(function (c) {
+      var hay = (c.getAttribute('data-name') || '') + ' ' + c.textContent.toLowerCase();
       var show = !q || hay.indexOf(q) !== -1;
-      term.hidden = !show;
+      c.hidden = !show;
       if (show) visible++;
     });
     count.textContent = (visible === total) ? (total + ' terms') : (visible + ' of ' + total + ' terms');
@@ -973,25 +909,6 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   }
   search.addEventListener('input', apply);
   apply();
-  function openTarget(hash) {
-    if (!hash || hash.length < 2) return;
-    var el = document.getElementById(hash.slice(1));
-    if (!el) return;
-    if (el.tagName === 'DETAILS') { el.open = true; }
-    if (el.hidden) { el.hidden = false; }
-    window.requestAnimationFrame(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
-  }
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
-    if (!a) return;
-    var hash = a.getAttribute('href');
-    if (!hash || hash === '#') return;
-    if (!document.getElementById(hash.slice(1))) return;
-    e.preventDefault();
-    history.replaceState(null, '', hash);
-    openTarget(hash);
-  });
-  if (window.location.hash) { window.setTimeout(function () { openTarget(window.location.hash); }, 60); }
 })();
 </script>
 </body>

@@ -270,6 +270,7 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 </style>
 
 <style>
+/* ---- breadcrumb + hero shared by category and term pages ---- */
 .cbread{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid-grey);margin-bottom:20px;}
 .cbread a{color:var(--mid-grey);text-decoration:none;transition:color .2s;}
 .cbread a:hover{color:var(--teal-light);}
@@ -283,25 +284,70 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .csibs-lbl{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.12em;text-transform:uppercase;margin-right:4px;align-self:center;}
 .gl-chip-link{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:rgba(250,250,250,.65);background:var(--charcoal-mid);border:1px solid var(--border-dark);padding:9px 15px;border-radius:20px;text-decoration:none;transition:all .2s;}
 .gl-chip-link:hover{border-color:var(--teal-light);color:var(--teal-light);}
+
+/* ---- Start Here ---- */
 .cstart{background:var(--seasalt);padding:60px var(--px) 8px;}
 .cstart-inner{max-width:var(--max-w);margin:0 auto;}
 .cstart-h{font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);font-weight:500;color:var(--charcoal);margin:8px 0 6px;}
 .cstart-lead{font-size:15px;line-height:1.7;color:var(--muted-light);margin-bottom:24px;}
 .cstart-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-.cstart-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-left:3px solid var(--teal-light);border-radius:4px;padding:20px 22px;text-decoration:none;transition:box-shadow .2s,border-color .2s,transform .2s;}
+.cstart-card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-left:3px solid var(--teal-light);border-radius:4px;padding:20px 22px;text-decoration:none;transition:box-shadow .2s,transform .2s;}
 .cstart-card:hover{box-shadow:0 4px 22px rgba(26,26,26,.07);transform:translateY(-2px);}
 .cstart-n{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);margin-bottom:9px;}
 .cstart-name{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--charcoal);line-height:1.2;margin-bottom:7px;}
 .cstart-one{font-size:14px;line-height:1.62;color:var(--muted-light);flex:1;}
-.cstart-go{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);}
+.cstart-go{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);transition:gap .2s;}
 .cstart-card:hover .cstart-go{gap:11px;}
+
+/* ---- term card grid (three across) ---- */
 .call{background:var(--seasalt);padding:52px var(--px) 8px;}
 .call-inner{max-width:var(--max-w);margin:0 auto;}
-.call-h{font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);font-weight:500;color:var(--charcoal);margin:8px 0 22px;}
-.cback{background:var(--seasalt);padding:44px var(--px) 76px;text-align:center;}
-.cback a{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);text-decoration:none;border:1px solid rgba(74,158,142,.35);padding:13px 24px;border-radius:2px;transition:all .2s;}
-.cback a:hover{background:rgba(74,158,142,.08);border-color:var(--teal);}
-@media (max-width:820px){.cstart-grid{grid-template-columns:1fr;}}
+.call-h{font-family:var(--serif);font-size:clamp(26px,2.6vw,36px);font-weight:500;color:var(--charcoal);margin:8px 0 24px;}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.tcard{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-radius:4px;padding:22px 46px 20px 24px;text-decoration:none;transition:border-color .2s,box-shadow .2s,transform .2s;}
+.tcard:hover{border-color:rgba(74,158,142,.45);box-shadow:0 4px 22px rgba(26,26,26,.07);transform:translateY(-2px);}
+.tcard-name{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--teal);line-height:1.22;margin:0 0 8px;transition:color .2s;}
+.tcard:hover .tcard-name{color:var(--charcoal);}
+.tcard-one{font-size:14px;line-height:1.65;color:var(--muted-light);margin:0;flex:1;}
+.tcard-tag{align-self:flex-start;margin-top:14px;font-family:var(--mono);font-size:9px;letter-spacing:.07em;text-transform:uppercase;padding:5px 10px;border-radius:20px;white-space:nowrap;}
+.tcard-arr{position:absolute;top:22px;right:20px;color:var(--teal);transition:transform .25s var(--ease);}
+.tcard:hover .tcard-arr{transform:translateX(4px);}
+.tcard[hidden]{display:none;}
+
+/* ---- back to glossary button ---- */
+.cback{background:var(--seasalt);padding:44px var(--px) 60px;text-align:center;}
+.cback-btn{display:inline-flex;align-items:center;gap:12px;background:var(--charcoal);color:var(--teal-light);font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;padding:18px 34px;border-radius:2px;border:1px solid var(--charcoal);transition:all .2s var(--ease);}
+.cback-btn:hover{background:var(--charcoal-light);border-color:var(--teal-light);transform:translateY(-1px);}
+.cback-btn svg{transition:transform .2s var(--ease);}
+.cback-btn:hover svg{transform:translateX(-4px);}
+
+/* ---- term page ---- */
+.tp-chip{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-light);background:rgba(107,191,176,.1);border:1px solid rgba(107,191,176,.28);padding:8px 15px;border-radius:20px;text-decoration:none;margin-bottom:20px;transition:background .2s;}
+.tp-chip:hover{background:rgba(107,191,176,.2);}
+.tp-lead{font-family:var(--serif);font-size:clamp(20px,2vw,26px);font-weight:400;font-style:italic;line-height:1.45;color:var(--teal-light);max-width:800px;margin-top:20px;}
+.tp-tagrow{margin-top:22px;}
+.tp-tagrow .term-tag{display:inline-block;}
+.tp-body{background:var(--seasalt);padding:66px var(--px) 8px;}
+.tp-inner{max-width:var(--article-w);margin:0 auto;}
+.tp-h2{font-family:var(--serif);font-size:clamp(23px,2.2vw,30px);font-weight:500;color:var(--charcoal);margin:0 0 14px;}
+.tp-sec{margin-bottom:44px;}
+.tp-sec p{font-size:16.5px;line-height:1.8;color:var(--charcoal);margin:0 0 14px;}
+.tp-sec p:last-child{margin-bottom:0;}
+.tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
+.tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
+.tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
+.tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
+.tp-fw{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);text-decoration:none;border:1px solid rgba(74,158,142,.35);padding:13px 20px;border-radius:2px;transition:all .2s;}
+.tp-fw:hover{background:rgba(74,158,142,.08);border-color:var(--teal);}
+.tp-rel{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.tp-relcard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border-light);border-radius:4px;padding:18px 20px;text-decoration:none;transition:border-color .2s,transform .2s;}
+.tp-relcard:hover{border-color:rgba(74,158,142,.45);transform:translateY(-2px);}
+.tp-relname{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--teal);line-height:1.25;margin-bottom:5px;}
+.tp-relone{font-size:13.5px;line-height:1.6;color:var(--muted-light);}
+.tp-nav{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;background:var(--seasalt);padding:36px var(--px) 60px;}
+@media (max-width:980px){.tgrid{grid-template-columns:repeat(2,1fr);}.cstart-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:660px){.tgrid,.cstart-grid,.tp-rel{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -420,214 +466,118 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <h2 class="cstart-h" id="c-start-h">New to the disciplines?</h2>
     <p class="cstart-lead">Begin with these foundational concepts:</p>
     <div class="cstart-grid">
-        <a class="cstart-card" href="#seo">
+        <a class="cstart-card" href="/glossary/search-seo-generative-optimization/seo/">
           <span class="cstart-n">Start 01</span>
           <span class="cstart-name">Search Engine Optimization (SEO)</span>
           <span class="cstart-one">Improving a site so search engines can index, understand, and rank it.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
-        <a class="cstart-card" href="#geo">
+        <a class="cstart-card" href="/glossary/search-seo-generative-optimization/geo/">
           <span class="cstart-n">Start 02</span>
           <span class="cstart-name">Generative Engine Optimization (GEO)</span>
           <span class="cstart-one">Optimizing content for representation in generative AI environments.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
-        <a class="cstart-card" href="#aeo">
+        <a class="cstart-card" href="/glossary/search-seo-generative-optimization/aeo/">
           <span class="cstart-n">Start 03</span>
           <span class="cstart-name">Answer Engine Optimization (AEO)</span>
           <span class="cstart-one">Structuring content so answer engines can extract and use it.</span>
-          <span class="cstart-go">Read the definition
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="cstart-go">Read the full explanation <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
     </div>
   </div>
 </section>
 
-<section class="call gl-terms" aria-labelledby="c-all-h">
-  <div class="gl-terms-inner">
-    <div class="gl-cat" id="cat-search-seo-generative-optimization" data-cat="search-seo-generative-optimization">
-      <h2 class="call-h" id="c-all-h">All Search, SEO & Generative Optimization terms (11)</h2>
-      <details class="term" id="seo" data-cat="search-seo-generative-optimization" data-name="search engine optimization (seo)">
-        <summary class="term-sum">
-          <h3 class="term-name">Search Engine Optimization (SEO)</h3>
-          <span class="term-one">Improving a site so search engines can index, understand, and rank it.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Search Engine Optimization, or SEO, is the practice of improving a website so that traditional search engines can index, understand, and rank it. It remains the technical foundation that generative and answer engines build on.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>AI features sit on top of the same index as ordinary search. A page that cannot be crawled or understood is not eligible for either, which is why the fundamentals have not gone away.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/retrieval-evidence-consensus/#retrievability">Retrievability</a><a href="/glossary/ai-mediated-discovery/#answer-eligibility">Answer Eligibility</a><a href="#geo">Generative Engine Optimization (GEO)</a></div>
-      </details>
-      <details class="term" id="geo" data-cat="search-seo-generative-optimization" data-name="generative engine optimization (geo)">
-        <summary class="term-sum">
-          <h3 class="term-name">Generative Engine Optimization (GEO)</h3>
-          <span class="term-one">Optimizing content for representation in generative AI environments.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Generative Engine Optimization, or GEO, refers to practices intended to improve how a brand is represented within generative AI and answer-engine environments. GEO can be a useful tactical discipline, but sustainable recognition depends on the authority infrastructure behind the content, not only on optimizing it for an AI interface.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>GEO describes a set of tactics, not a position. Treating it as the whole strategy leaves a brand optimizing content for an interface while the authority underneath it stays thin.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#seo">Search Engine Optimization (SEO)</a><a href="#aeo">Answer Engine Optimization (AEO)</a><a href="/glossary/recognition-authority/#brand-authority-infrastructure">Brand Authority Infrastructure</a></div>
-      </details>
-      <details class="term" id="aeo" data-cat="search-seo-generative-optimization" data-name="answer engine optimization (aeo)">
-        <summary class="term-sum">
-          <h3 class="term-name">Answer Engine Optimization (AEO)</h3>
-          <span class="term-one">Structuring content so answer engines can extract and use it.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Answer Engine Optimization, or AEO, refers to structuring content so that answer engines can understand, extract, and use it when responding to a question. It is a useful tactical discipline within a broader recognition strategy, not a replacement for one.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Making content extractable is genuinely useful work. It just determines how easily a system can use a source, not whether it trusts it enough to want to.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/ai-mediated-discovery/#answer-engine">Answer Engine</a><a href="#geo">Generative Engine Optimization (GEO)</a><a href="#structured-data">Structured Data</a></div>
-      </details>
-      <details class="term" id="semantic-search" data-cat="search-seo-generative-optimization" data-name="semantic search">
-        <summary class="term-sum">
-          <h3 class="term-name">Semantic Search</h3>
-          <span class="term-one">Search that interprets meaning rather than matching keywords.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Semantic search is a search approach that interprets the meaning and intent behind a query, rather than matching keywords alone.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is why keyword density stopped working. Systems now match on meaning, which rewards clear, well-defined language over repetition.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/ai-search-infrastructure/#embeddings">Embeddings</a><a href="#semantic-optimization">Semantic Optimization</a><a href="/glossary/ai-search-infrastructure/#vector-search">Vector Search</a></div>
-      </details>
-      <details class="term" id="semantic-optimization" data-cat="search-seo-generative-optimization" data-name="semantic optimization">
-        <summary class="term-sum">
-          <h3 class="term-name">Semantic Optimization</h3>
-          <span class="term-one">Structuring content so its meaning, not just its keywords, is clear.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Semantic optimization is the practice of structuring content so its meaning, not just its keywords, is clear to search and AI systems, including the entities, relationships, and context involved.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is the practical response to semantic search: be explicit about what you mean, who you are talking about, and how the ideas relate.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#semantic-search">Semantic Search</a><a href="#entity-recognition">Entity Recognition</a><a href="#structured-data">Structured Data</a></div>
-      </details>
-      <details class="term" id="entity-recognition" data-cat="search-seo-generative-optimization" data-name="entity recognition">
-        <summary class="term-sum">
-          <h3 class="term-name">Entity Recognition</h3>
-          <span class="term-one">Identifying and classifying real-world things within text.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Entity recognition is the process by which a system identifies and classifies real-world things, such as a person, brand, or place, within text or data.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Before a system can attach any authority to a brand, it has to reliably pick that brand out of text and tell it apart from similarly named ones.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/ai-search-infrastructure/#entity">Entity</a><a href="/glossary/retrieval-evidence-consensus/#entity-consistency">Entity Consistency</a><a href="#knowledge-graph">Knowledge Graph</a></div>
-      </details>
-      <details class="term" id="entity-authority" data-cat="search-seo-generative-optimization" data-name="entity authority">
-        <summary class="term-sum">
-          <h3 class="term-name">Entity Authority</h3>
-          <span class="term-one">The strength and consistency of the signals tied to an entity.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Entity authority describes the strength and consistency of the signals connecting an entity to its identity, expertise, relationships, and reputation across the digital ecosystem. Strong entity signals help systems distinguish who a brand is and what it is known for.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is the technical vocabulary closest to Earned Authority, and a useful bridge when talking to search teams who think in entities rather than in brand terms.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/recognition-authority/#earned-authority">Earned Authority</a><a href="/glossary/content-authority-strategy/#entity-signals">Entity Signals</a><a href="#knowledge-graph">Knowledge Graph</a></div>
-      </details>
-      <details class="term" id="knowledge-graph" data-cat="search-seo-generative-optimization" data-name="knowledge graph">
-        <summary class="term-sum">
-          <h3 class="term-name">Knowledge Graph</h3>
-          <span class="term-one">A structured map of entities and how they relate.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">A knowledge graph is a structured database of entities and the relationships between them, used by search and AI systems to understand how people, brands, and concepts connect.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Presence in a knowledge graph is one of the strongest forms of structural authority, because it is where a system stores what it considers settled about an entity.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/recognition-authority/#structural-authority">Structural Authority</a><a href="/glossary/ai-search-infrastructure/#entity">Entity</a><a href="#entity-recognition">Entity Recognition</a></div>
-      </details>
-      <details class="term" id="structured-data" data-cat="search-seo-generative-optimization" data-name="structured data">
-        <summary class="term-sum">
-          <h3 class="term-name">Structured Data</h3>
-          <span class="term-one">Information formatted so machines can read it directly.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Structured data is information organized in a standardized format so machines can read and interpret it directly, rather than inferring it from unstructured text.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It removes guesswork. Anything a brand leaves unstructured, a system has to infer, and inference is where misrepresentation starts.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#schema-markup">Schema Markup</a><a href="/glossary/recognition-authority/#foundational-signal-confirmation-assets">Foundational, Signal &amp; Confirmation Assets</a><a href="#aeo">Answer Engine Optimization (AEO)</a></div>
-      </details>
-      <details class="term" id="schema-markup" data-cat="search-seo-generative-optimization" data-name="schema markup">
-        <summary class="term-sum">
-          <h3 class="term-name">Schema Markup</h3>
-          <span class="term-one">A structured data vocabulary added to a page to disambiguate it.</span>
-          <span class="term-tag term-tag-technical">Technical Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">Schema markup is a specific vocabulary of structured data, typically added to a webpage, that helps search engines and AI systems understand what the page is about and disambiguate its entities.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>Schema is infrastructure, not a citation trick. It helps systems tell one entity from another, which is a prerequisite for recognition rather than a shortcut to it.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="#structured-data">Structured Data</a><a href="/glossary/recognition-authority/#structural-authority">Structural Authority</a><a href="#entity-recognition">Entity Recognition</a></div>
-      </details>
-      <details class="term" id="eeat" data-cat="search-seo-generative-optimization" data-name="e-e-a-t">
-        <summary class="term-sum">
-          <h3 class="term-name">E-E-A-T</h3>
-          <span class="term-one">Google's Experience, Expertise, Authoritativeness, and Trustworthiness framework.</span>
-          <span class="term-tag term-tag-industry">Industry Term</span>
-          <svg class="term-chev" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="term-def">E-E-A-T is Google's framework for evaluating content quality: Experience, Expertise, Authoritativeness, and Trustworthiness. It is established search guidance, and it connects directly to the broader authority signals AI systems draw on, though Aingworth does not treat it as a separate, AI-specific standard.</p>
-        <div class="term-why">
-          <p class="term-why-h">Why this matters</p>
-          <p>It is Google's own published guidance, which makes it useful and checkable. It is worth naming accurately rather than restating as an AI framework it was never written as.</p>
-        </div>
-        <div class="term-related"><span class="term-related-lbl">Related</span><a href="/glossary/content-authority-strategy/#trust-signals">Trust Signals</a><a href="/glossary/recognition-authority/#authority-signal">Authority Signal</a><a href="/glossary/content-authority-strategy/#topical-authority">Topical Authority</a></div>
-      </details>
+<section class="call" aria-labelledby="c-all-h">
+  <div class="call-inner">
+    <h2 class="call-h" id="c-all-h">All Search, SEO & Generative Optimization terms (11)</h2>
+    <div class="tgrid">
+        <a class="tcard" href="/glossary/search-seo-generative-optimization/seo/" data-name="search engine optimization (seo)">
+          <h3 class="tcard-name">Search Engine Optimization (SEO)</h3>
+          <p class="tcard-one">Improving a site so search engines can index, understand, and rank it.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/search-seo-generative-optimization/geo/" data-name="generative engine optimization (geo)">
+          <h3 class="tcard-name">Generative Engine Optimization (GEO)</h3>
+          <p class="tcard-one">Optimizing content for representation in generative AI environments.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/search-seo-generative-optimization/aeo/" data-name="answer engine optimization (aeo)">
+          <h3 class="tcard-name">Answer Engine Optimization (AEO)</h3>
+          <p class="tcard-one">Structuring content so answer engines can extract and use it.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/search-seo-generative-optimization/semantic-search/" data-name="semantic search">
+          <h3 class="tcard-name">Semantic Search</h3>
+          <p class="tcard-one">Search that interprets meaning rather than matching keywords.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/search-seo-generative-optimization/semantic-optimization/" data-name="semantic optimization">
+          <h3 class="tcard-name">Semantic Optimization</h3>
+          <p class="tcard-one">Structuring content so its meaning, not just its keywords, is clear.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/search-seo-generative-optimization/entity-recognition/" data-name="entity recognition">
+          <h3 class="tcard-name">Entity Recognition</h3>
+          <p class="tcard-one">Identifying and classifying real-world things within text.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/search-seo-generative-optimization/entity-authority/" data-name="entity authority">
+          <h3 class="tcard-name">Entity Authority</h3>
+          <p class="tcard-one">The strength and consistency of the signals tied to an entity.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/search-seo-generative-optimization/knowledge-graph/" data-name="knowledge graph">
+          <h3 class="tcard-name">Knowledge Graph</h3>
+          <p class="tcard-one">A structured map of entities and how they relate.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/search-seo-generative-optimization/structured-data/" data-name="structured data">
+          <h3 class="tcard-name">Structured Data</h3>
+          <p class="tcard-one">Information formatted so machines can read it directly.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/search-seo-generative-optimization/schema-markup/" data-name="schema markup">
+          <h3 class="tcard-name">Schema Markup</h3>
+          <p class="tcard-one">A structured data vocabulary added to a page to disambiguate it.</p>
+          <span class="tcard-tag term-tag term-tag-technical">Technical Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a class="tcard" href="/glossary/search-seo-generative-optimization/eeat/" data-name="e-e-a-t">
+          <h3 class="tcard-name">E-E-A-T</h3>
+          <p class="tcard-one">Google's Experience, Expertise, Authoritativeness, and Trustworthiness framework.</p>
+          <span class="tcard-tag term-tag term-tag-industry">Industry Term</span>
+          <span class="tcard-arr"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
     </div>
     <p class="gl-empty" id="glEmpty">No terms match your search. Try a different word, or clear the box above.</p>
   </div>
 </section>
 
-<section class="fw-cta" aria-labelledby="c-cta-h">
+<section class="cback" aria-label="Back to the full glossary">
+  <a href="/glossary/" class="cback-btn"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Back to Full Glossary</a>
+</section>
+
+<section class="fw-cta" aria-labelledby="cta-h">
   <div class="fw-cta-inner">
     <div>
-      <h2 id="c-cta-h">Ready to see where your brand stands?</h2>
+      <h2 id="cta-h">Ready to see where your brand stands?</h2>
       <p>Start with the free diagnostic to see which condition of the Recognition Triangle is leaking, or read the frameworks these terms belong to.</p>
     </div>
     <div class="fw-cta-btns">
-      <a href="/diagnostic/" class="fw-cta-primary">Run the Free Diagnostic
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="/frameworks/" class="fw-cta-ghost">Read the Frameworks
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/diagnostic/" class="fw-cta-primary">Run the Free Diagnostic <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/frameworks/" class="fw-cta-ghost">Read the Frameworks <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
-</section>
-
-<section class="cback" aria-label="Back to the full glossary">
-  <a href="/glossary/">
-    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Back to Full Glossary
-  </a>
 </section>
 
 </main>
@@ -766,8 +716,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
  "hasDefinedTerm": [
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/#seo",
-   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/#seo",
+   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/seo/#term",
+   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/seo/",
    "name": "Search Engine Optimization (SEO)",
    "termCode": "seo",
    "description": "Search Engine Optimization, or SEO, is the practice of improving a website so that traditional search engines can index, understand, and rank it. It remains the technical foundation that generative and answer engines build on.",
@@ -777,8 +727,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/#geo",
-   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/#geo",
+   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/geo/#term",
+   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/geo/",
    "name": "Generative Engine Optimization (GEO)",
    "termCode": "geo",
    "description": "Generative Engine Optimization, or GEO, refers to practices intended to improve how a brand is represented within generative AI and answer-engine environments. GEO can be a useful tactical discipline, but sustainable recognition depends on the authority infrastructure behind the content, not only on optimizing it for an AI interface.",
@@ -788,8 +738,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/#aeo",
-   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/#aeo",
+   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/aeo/#term",
+   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/aeo/",
    "name": "Answer Engine Optimization (AEO)",
    "termCode": "aeo",
    "description": "Answer Engine Optimization, or AEO, refers to structuring content so that answer engines can understand, extract, and use it when responding to a question. It is a useful tactical discipline within a broader recognition strategy, not a replacement for one.",
@@ -799,8 +749,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/#semantic-search",
-   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/#semantic-search",
+   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/semantic-search/#term",
+   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/semantic-search/",
    "name": "Semantic Search",
    "termCode": "semantic-search",
    "description": "Semantic search is a search approach that interprets the meaning and intent behind a query, rather than matching keywords alone.",
@@ -810,8 +760,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/#semantic-optimization",
-   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/#semantic-optimization",
+   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/semantic-optimization/#term",
+   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/semantic-optimization/",
    "name": "Semantic Optimization",
    "termCode": "semantic-optimization",
    "description": "Semantic optimization is the practice of structuring content so its meaning, not just its keywords, is clear to search and AI systems, including the entities, relationships, and context involved.",
@@ -821,8 +771,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/#entity-recognition",
-   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/#entity-recognition",
+   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/entity-recognition/#term",
+   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/entity-recognition/",
    "name": "Entity Recognition",
    "termCode": "entity-recognition",
    "description": "Entity recognition is the process by which a system identifies and classifies real-world things, such as a person, brand, or place, within text or data.",
@@ -832,8 +782,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/#entity-authority",
-   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/#entity-authority",
+   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/entity-authority/#term",
+   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/entity-authority/",
    "name": "Entity Authority",
    "termCode": "entity-authority",
    "description": "Entity authority describes the strength and consistency of the signals connecting an entity to its identity, expertise, relationships, and reputation across the digital ecosystem. Strong entity signals help systems distinguish who a brand is and what it is known for.",
@@ -843,8 +793,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/#knowledge-graph",
-   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/#knowledge-graph",
+   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/knowledge-graph/#term",
+   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/knowledge-graph/",
    "name": "Knowledge Graph",
    "termCode": "knowledge-graph",
    "description": "A knowledge graph is a structured database of entities and the relationships between them, used by search and AI systems to understand how people, brands, and concepts connect.",
@@ -854,8 +804,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/#structured-data",
-   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/#structured-data",
+   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/structured-data/#term",
+   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/structured-data/",
    "name": "Structured Data",
    "termCode": "structured-data",
    "description": "Structured data is information organized in a standardized format so machines can read and interpret it directly, rather than inferring it from unstructured text.",
@@ -865,8 +815,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/#schema-markup",
-   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/#schema-markup",
+   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/schema-markup/#term",
+   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/schema-markup/",
    "name": "Schema Markup",
    "termCode": "schema-markup",
    "description": "Schema markup is a specific vocabulary of structured data, typically added to a webpage, that helps search engines and AI systems understand what the page is about and disambiguate its entities.",
@@ -876,8 +826,8 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   },
   {
    "@type": "DefinedTerm",
-   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/#eeat",
-   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/#eeat",
+   "@id": "https://aingworth.com/glossary/search-seo-generative-optimization/eeat/#term",
+   "url": "https://aingworth.com/glossary/search-seo-generative-optimization/eeat/",
    "name": "E-E-A-T",
    "termCode": "eeat",
    "description": "E-E-A-T is Google's framework for evaluating content quality: Experience, Expertise, Authoritativeness, and Trustworthiness. It is established search guidance, and it connects directly to the broader authority signals AI systems draw on, though Aingworth does not treat it as a separate, AI-specific standard.",
@@ -893,15 +843,10 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 (function () {
   var groups = Array.prototype.slice.call(document.querySelectorAll('.nav-has-drop'));
   if (!groups.length) return;
-  var items = groups.map(function (g) {
-    return { trig: g.querySelector('.nav-droptrig'), drop: g.querySelector('.nav-drop') };
-  }).filter(function (it) { return it.trig && it.drop; });
+  var items = groups.map(function (g) { return { trig: g.querySelector('.nav-droptrig'), drop: g.querySelector('.nav-drop') }; })
+                    .filter(function (it) { return it.trig && it.drop; });
   function closeAll(except) {
-    items.forEach(function (it) {
-      if (it === except) return;
-      it.drop.classList.remove('open');
-      it.trig.setAttribute('aria-expanded', 'false');
-    });
+    items.forEach(function (it) { if (it === except) return; it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded','false'); });
   }
   items.forEach(function (it) {
     it.trig.addEventListener('click', function (e) {
@@ -917,9 +862,7 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   });
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
-    items.forEach(function (it) {
-      if (it.drop.classList.contains('open')) { it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded', 'false'); it.trig.focus(); }
-    });
+    items.forEach(function (it) { if (it.drop.classList.contains('open')) { it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded','false'); it.trig.focus(); } });
   });
 })();
 (function(){
@@ -929,18 +872,19 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){d.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.style.overflow='';});});
 })();
 (function () {
-  var terms = Array.prototype.slice.call(document.querySelectorAll('details.term'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.tcard'));
   var search = document.getElementById('glSearch');
   var count = document.getElementById('glCount');
   var empty = document.getElementById('glEmpty');
-  var total = terms.length;
+  if (!search) return;
+  var total = cards.length;
   function apply() {
     var q = (search.value || '').trim().toLowerCase();
     var visible = 0;
-    terms.forEach(function (term) {
-      var hay = (term.getAttribute('data-name') || '') + ' ' + term.textContent.toLowerCase();
+    cards.forEach(function (c) {
+      var hay = (c.getAttribute('data-name') || '') + ' ' + c.textContent.toLowerCase();
       var show = !q || hay.indexOf(q) !== -1;
-      term.hidden = !show;
+      c.hidden = !show;
       if (show) visible++;
     });
     count.textContent = (visible === total) ? (total + ' terms') : (visible + ' of ' + total + ' terms');
@@ -948,25 +892,6 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
   }
   search.addEventListener('input', apply);
   apply();
-  function openTarget(hash) {
-    if (!hash || hash.length < 2) return;
-    var el = document.getElementById(hash.slice(1));
-    if (!el) return;
-    if (el.tagName === 'DETAILS') { el.open = true; }
-    if (el.hidden) { el.hidden = false; }
-    window.requestAnimationFrame(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
-  }
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
-    if (!a) return;
-    var hash = a.getAttribute('href');
-    if (!hash || hash === '#') return;
-    if (!document.getElementById(hash.slice(1))) return;
-    e.preventDefault();
-    history.replaceState(null, '', hash);
-    openTarget(hash);
-  });
-  if (window.location.hash) { window.setTimeout(function () { openTarget(window.location.hash); }, 60); }
 })();
 </script>
 </body>
