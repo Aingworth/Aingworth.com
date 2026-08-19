@@ -5,6 +5,9 @@ Allow: /
 Disallow: /mimic-article.html
 Disallow: /insights.post.html
 
+# Contact form query-string variants (duplicates of /contact/)
+Disallow: /contact/?
+
 # AI crawlers - explicitly allowed
 # Aingworth's positioning depends on being recognized and cited by AI
 # systems, so these are opened up rather than blocked.
