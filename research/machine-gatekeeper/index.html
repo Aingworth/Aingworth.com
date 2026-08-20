@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Start cookieyes banner -->
+<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/a984d92a880113dafa69c15f315ddddb/script.js"></script>
+<!-- End cookieyes banner -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How the Machine Gatekeeper Decides | Aingworth Research</title>
+<meta name="description" content="What actually determines whether an AI system cites you: a 129,000-domain study on citation factors, Google's own statement on AI optimization, and why blocking AI crawlers is self-sabotage.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aingworth.com/research/machine-gatekeeper/">
+<link rel="icon" href="/images/Aingworth_Main_favicon.png" type="image/png">
+<meta property="og:title" content="How the Machine Gatekeeper Decides | Aingworth Research">
+<meta property="og:description" content="What actually determines whether an AI system cites you: a 129,000-domain study on citation factors, Google's own statement on AI optimization, and why blocking AI crawlers is self-sabotage.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://aingworth.com/research/machine-gatekeeper/">
+<meta property="og:site_name" content="Aingworth">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://aingworth.com/images/Aingworth_Main_Logo_White_bigger.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@lucy_aingworth">
+<meta name="twitter:title" content="How the Machine Gatekeeper Decides | Aingworth Research">
+<meta name="twitter:description" content="What actually determines whether an AI system cites you: a 129,000-domain study on citation factors, Google's own statement on AI optimization, and why blocking AI crawlers is self-sabotage.">
+<meta name="twitter:image" content="https://aingworth.com/images/Aingworth_Main_Logo_White_bigger.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://aingworth.com/research/machine-gatekeeper/#article",
+  "headline": "How the Machine Gatekeeper Decides",
+  "description": "The evidence behind the Machine Gatekeeper framework: what signals correlate with AI citation, what Google itself says about AI optimization, and why blocking AI crawlers costs recognition.",
+  "url": "https://aingworth.com/research/machine-gatekeeper/",
+  "datePublished": "2026-08-20",
+  "dateModified": "2026-08-20",
+  "isPartOf": { "@id": "https://aingworth.com/research/#page" },
+  "about": { "@id": "https://aingworth.com/frameworks/#machine-gatekeeper" },
+  "publisher": { "@type": "Organization", "@id": "https://aingworth.com/#organization", "name": "Aingworth" },
+  "author": { "@type": "Person", "@id": "https://aingworth.com/#lucy", "name": "Lucy Aingworth" },
+  "citation": [
+    { "@type": "Report", "name": "What Drives AI Citations? Data from 129,000 Domains", "datePublished": "2025-11-26", "publisher": {"@type":"Organization","name":"SE Ranking"} },
+    { "@type": "WebPage", "name": "AI features and your website (AI optimization guide)", "datePublished": "2026", "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide", "publisher": {"@type":"Organization","name":"Google"} },
+    { "@type": "Report", "name": "The 2025 Cloudflare Radar Year in Review", "datePublished": "2025-12", "url": "https://blog.cloudflare.com/radar-2025-year-in-review/", "publisher": {"@type":"Organization","name":"Cloudflare"} }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aingworth.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Research", "item": "https://aingworth.com/research/" },
+    { "@type": "ListItem", "position": 3, "name": "Machine Gatekeeper", "item": "https://aingworth.com/research/machine-gatekeeper/" }
+  ]
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5K6TKZTK1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C5K6TKZTK1');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --charcoal:#1a1a1a;--charcoal-mid:#242424;--charcoal-light:#2e2e2e;
+  --teal:#4a9e8e;--teal-light:#6bbfb0;--seasalt:#FAFAFA;--mid-grey:#888880;
+  --lavender:#c4a7e4;--border-dark:rgba(183,206,206,0.1);--border-light:rgba(28,15,19,0.1);
+  --muted-light:rgba(26,26,26,0.72);--muted-dark:rgba(226,226,226,0.6);
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--mono:'DM Mono',monospace;
+  --max-w:1160px;--article-w:760px;--px:clamp(20px,4vw,56px);--ease:cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);font-size:16px;background:var(--seasalt);color:var(--charcoal);-webkit-font-smoothing:antialiased;line-height:1.75;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+.skip{position:absolute;top:-52px;left:24px;background:var(--teal-light);color:var(--charcoal);padding:10px 18px;font-size:13px;font-weight:500;z-index:999;transition:top .2s;}
+.skip:focus{top:8px;}
+:focus-visible{outline:2px solid var(--teal-light);outline-offset:3px;}
+::selection{background:var(--teal-light);color:var(--charcoal);}
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--px);background:rgba(26,26,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-dark);}
+.nav-logo{display:flex;align-items:center;height:68px;}
+.nav-logo img{width:200px;height:auto;filter:brightness(100) contrast(2);}
+.nav-menu{display:flex;align-items:center;gap:2px;list-style:none;}
+.nav-menu a{display:block;padding:7px 12px;color:rgba(250,250,250,.6);font-size:13px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:color .2s;}
+.nav-menu a:hover,.nav-menu a[aria-current="page"]{color:var(--teal-light);}
+.nav-menu .ncta a{background:var(--teal-light);color:var(--charcoal);padding:8px 20px;font-weight:500;border-radius:2px;}
+.nav-menu .ncta a:hover{background:var(--teal);color:var(--seasalt);}
+.nav-menu a{padding:7px 10px;}
+.nav-has-drop{position:relative;}
+.nav-droptrig{display:flex;align-items:center;gap:6px;padding:7px 10px;background:none;border:none;cursor:pointer;color:rgba(250,250,250,.6);font-family:var(--sans);font-size:13px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
+.nav-droptrig:hover,.nav-has-drop:hover .nav-droptrig,.nav-droptrig[aria-expanded="true"],.nav-droptrig[data-active="true"]{color:var(--teal-light);}
+.nav-caret{transition:transform .25s var(--ease);}
+.nav-has-drop:hover .nav-caret,.nav-droptrig[aria-expanded="true"] .nav-caret{transform:rotate(180deg);}
+.nav-drop{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-6px);min-width:264px;background:var(--charcoal-mid);border:1px solid var(--border-dark);border-radius:4px;padding:8px;box-shadow:0 20px 48px rgba(0,0,0,.4);opacity:0;visibility:hidden;transition:opacity .2s var(--ease),transform .2s var(--ease);z-index:210;}
+.nav-drop::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;}
+.nav-has-drop:hover .nav-drop,.nav-drop.open,.nav-has-drop:focus-within .nav-drop{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+.nav-drop a{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:3px;text-transform:none;letter-spacing:0;transition:background .18s;}
+.nav-drop a:hover{background:rgba(107,191,176,.09);}
+.nav-drop .nd-t{font-size:14px;font-weight:500;color:var(--seasalt);letter-spacing:.01em;transition:color .2s;}
+.nav-drop a:hover .nd-t,.nav-drop a[aria-current="page"] .nd-t{color:var(--teal-light);}
+.nav-drop .nd-d{font-size:12px;color:var(--mid-grey);line-height:1.4;}
+.nav-burger{display:none;flex-direction:column;gap:5px;padding:8px;background:none;border:none;cursor:pointer;}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--seasalt);transition:all .3s var(--ease);transform-origin:center;}
+.nav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.nav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.nav-drawer{display:none;position:fixed;top:68px;left:0;right:0;bottom:0;background:var(--charcoal);padding:28px var(--px);z-index:199;flex-direction:column;}
+.nav-drawer.open{display:flex;}
+.nav-drawer a{display:block;padding:16px 0;color:rgba(250,250,250,.65);font-size:18px;text-decoration:none;border-bottom:1px solid var(--border-dark);}
+.nav-drawer a:hover{color:var(--teal-light);}
+.nav-drawer{overflow-y:auto;}
+.drawer-group{border-bottom:1px solid var(--border-dark);padding:8px 0 12px;}
+.drawer-group-h{font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;padding:12px 0 6px;}
+.nav-drawer a.drawer-sub{font-size:16px;padding:12px 0 12px 18px;border-bottom:none;color:rgba(250,250,250,.55);}
+.nav-drawer a.drawer-sub:hover{color:var(--teal-light);}
+.drawer-cta{margin-top:24px;padding:16px 28px;background:var(--teal-light);color:var(--charcoal) !important;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;text-align:center;border-bottom:none !important;border-radius:2px;}
+.sec-eye{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.sec-rule{width:26px;height:1px;background:var(--teal-light);flex-shrink:0;}
+.sec-lbl{font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.14em;text-transform:uppercase;}
+.footer{background:var(--charcoal);padding:72px var(--px) 36px;border-top:1px solid var(--border-dark);}
+.footer-inner{max-width:var(--max-w);margin:0 auto;}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.fbrand img{height:40px;width:auto;filter:brightness(100) contrast(2);}
+.fdesc{font-size:14px;line-height:1.7;color:var(--mid-grey);margin:18px 0 24px;max-width:300px;}
+.fmail{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--teal-light);text-decoration:none;transition:color .2s;}
+.fmail:hover{color:var(--teal);}
+.fmail{margin-bottom:20px;}
+.fsocials{display:flex;gap:14px;flex-wrap:wrap;}
+.fsoc{display:flex;align-items:center;justify-content:center;color:var(--mid-grey);transition:color .2s;}
+.fsoc:hover{color:var(--teal-light);}
+.fsoc svg{width:18px;height:18px;}
+.fborahae{margin-top:18px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--lavender,#c4a7e4);transition:color .2s;}
+.fborahae:hover{color:var(--teal-light);}
+.fcol-h{font-family:var(--mono);font-size:10px;color:rgba(226,226,226,.3);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fcol ul li a{font-size:14px;color:var(--mid-grey);text-decoration:none;transition:color .2s;}
+.fcol ul li a:hover{color:var(--teal-light);}
+.fbase{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid var(--border-dark);flex-wrap:wrap;gap:16px;}
+.fcopy{font-family:var(--mono);font-size:11px;color:rgba(226,226,226,.25);letter-spacing:.06em;}
+.flegal{display:flex;gap:20px;}
+.flegal a{font-family:var(--mono);font-size:11px;color:rgba(226,226,226,.25);letter-spacing:.06em;text-decoration:none;transition:color .2s;}
+.flegal a:hover{color:var(--teal-light);}
+.askai { border-top: 1px solid var(--border-dark); padding-top: 24px; margin-bottom: 32px; display: flex; align-items: center; gap: 14px 26px; flex-wrap: wrap; }
+.askai-h { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: rgba(226,226,226,.4); margin: 0; }
+.askai-row { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+.askai-row a { display: inline-flex; align-items: center; opacity: .8; transition: opacity .2s, transform .2s; }
+.askai-row a:hover { opacity: 1; transform: translateY(-1px); }
+.askai-row img { height: 22px; width: auto; display: block; }
+.askai-dot { color: rgba(226,226,226,.2); }
+.fsignoff { font-family: var(--serif); font-style: italic; font-size: 18px; color: rgba(226,226,226,.5); }
+@media (max-width:900px){.fgrid{grid-template-columns:1fr 1fr;gap:36px;}}
+@media (max-width:1080px){.nav-menu{display:none;}.nav-burger{display:flex;}}
+@media (max-width:600px){.fgrid{grid-template-columns:1fr;gap:32px;}}
+</style>
+<style>
+.fw-h2{font-family:var(--serif);font-size:clamp(28px,2.8vw,42px);font-weight:500;line-height:1.12;color:var(--seasalt);letter-spacing:-.01em;margin-bottom:14px;}
+.faq-item{border:1px solid var(--border-light);border-radius:3px;margin-bottom:10px;background:#fff;}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;font-family:var(--sans);font-size:16px;font-weight:500;color:var(--charcoal);background:none;border:none;padding:18px 22px;cursor:pointer;list-style:none;}
+.faq-q::-webkit-details-marker{display:none;}
+.faq-q svg{flex-shrink:0;transition:transform .25s var(--ease);color:var(--teal);}
+.faq-item[open] .faq-q svg{transform:rotate(45deg);}
+.faq-a{padding:0 22px 20px;font-size:15px;line-height:1.72;color:var(--muted-light);}
+.fw-cta{background:var(--teal-light);padding:80px var(--px);}
+.fw-cta-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap;}
+.fw-cta h2{font-family:var(--serif);font-size:clamp(28px,3vw,44px);font-weight:500;color:var(--charcoal);line-height:1.12;margin-bottom:10px;}
+.fw-cta p{font-size:16px;color:rgba(26,26,26,.65);max-width:480px;line-height:1.65;}
+.fw-cta-btns{display:flex;gap:14px;align-items:center;flex-wrap:nowrap;}
+.fw-cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--charcoal);color:var(--seasalt);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:16px 30px;border-radius:2px;text-decoration:none;transition:all .2s var(--ease);white-space:nowrap;}
+.fw-cta-primary:hover{background:var(--charcoal-light);transform:translateY(-1px);}
+.fw-cta-ghost{display:inline-flex;align-items:center;gap:10px;color:var(--charcoal);font-size:13px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;transition:gap .2s;white-space:nowrap;}
+.fw-cta-ghost:hover{gap:16px;}
+@media (max-width:560px){.fw-cta-btns{flex-wrap:wrap;}}
+</style>
+<style>
+/* Page-specific: breadcrumb hero, evidence bar-charts, quote block, checklist table */
+.mg-hero{background:radial-gradient(1100px 700px at 76% 24%, rgba(107,191,176,0.07), transparent 65%),var(--charcoal);padding:128px var(--px) 60px;}
+.mg-hero-inner{max-width:var(--max-w);margin:0 auto;}
+.mg-bread{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid-grey);margin-bottom:22px;}
+.mg-bread a{color:var(--mid-grey);text-decoration:none;transition:color .2s;}
+.mg-bread a:hover{color:var(--teal-light);}
+.mg-bread span[aria-current]{color:var(--teal-light);}
+.mg-bread .sep{opacity:.4;}
+.mg-hero h1{font-family:var(--serif);font-size:clamp(36px,4.6vw,60px);font-weight:500;line-height:1.08;color:var(--seasalt);letter-spacing:-.01em;max-width:820px;}
+.mg-hero h1 em{font-style:italic;color:var(--teal-light);}
+.mg-hero-sub{font-size:17px;line-height:1.78;color:var(--muted-dark);max-width:680px;margin-top:20px;}
+.mg-verified{display:inline-flex;align-items:center;gap:9px;margin-top:24px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-light);background:rgba(107,191,176,.08);border:1px solid rgba(107,191,176,.25);padding:8px 15px;border-radius:20px;}
+.mg-capsule{margin-top:28px;max-width:820px;background:rgba(107,191,176,.07);border:1px solid rgba(107,191,176,.22);border-left:3px solid var(--teal-light);border-radius:3px;padding:22px 26px;}
+.mg-capsule-lbl{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px;}
+.mg-capsule p:last-child{font-size:15px;line-height:1.72;color:rgba(250,250,250,.85);margin:0;}
+
+.mg-sec{background:var(--seasalt);padding:80px var(--px);border-bottom:1px solid var(--border-light);}
+.mg-sec-dark{background:var(--charcoal);border-bottom:none;}
+.mg-sec-inner{max-width:var(--max-w);margin:0 auto;}
+.mg-sec-head{max-width:760px;margin-bottom:36px;}
+.mg-sec-head p{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
+.mg-sec-dark .mg-sec-head p{color:var(--muted-dark);}
+.mg-src{margin-top:18px;font-size:13px;color:var(--mid-grey);}
+.mg-src a{color:var(--teal);text-decoration:underline;text-underline-offset:2px;}
+.mg-sec-dark .mg-src a{color:var(--teal-light);}
+
+/* Bar chart */
+.mg-chart{max-width:820px;}
+.mg-bar-row{margin-bottom:26px;}
+.mg-bar-label{display:flex;justify-content:space-between;align-items:baseline;font-size:14.5px;color:var(--charcoal);margin-bottom:8px;}
+.mg-bar-label b{font-weight:500;}
+.mg-bar-track{display:flex;flex-direction:column;gap:6px;}
+.mg-bar{display:flex;align-items:center;gap:10px;}
+.mg-bar-tag{font-family:var(--mono);font-size:10.5px;color:var(--mid-grey);width:78px;flex-shrink:0;text-transform:uppercase;letter-spacing:.04em;}
+.mg-bar-fill-wrap{flex:1;background:var(--border-light);border-radius:2px;height:26px;overflow:hidden;}
+.mg-bar-fill{height:100%;border-radius:2px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font-family:var(--mono);font-size:11.5px;color:var(--charcoal);font-weight:500;transition:width 1s var(--ease);}
+.mg-bar-fill.low{background:rgba(200,110,110,.35);color:var(--charcoal);}
+.mg-bar-fill.high{background:var(--teal-light);}
+
+/* Quote block */
+.mg-quote{max-width:760px;background:var(--charcoal-mid);border-radius:5px;padding:36px 40px;position:relative;}
+.mg-quote-mark{font-family:var(--serif);font-size:64px;color:var(--teal-light);opacity:.35;line-height:.4;margin-bottom:10px;}
+.mg-quote p{font-family:var(--serif);font-size:clamp(19px,2vw,25px);font-style:italic;line-height:1.5;color:var(--seasalt);}
+.mg-quote-src{margin-top:18px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-light);}
+.mg-quote-src a{color:var(--teal-light);}
+
+/* Checklist table */
+.mg-table{max-width:820px;border:1px solid var(--border-light);border-radius:4px;overflow:hidden;background:#fff;}
+.mg-trow{display:grid;grid-template-columns:1.3fr 1fr 1.6fr;gap:16px;padding:16px 22px;border-bottom:1px solid var(--border-light);align-items:center;}
+.mg-trow:last-child{border-bottom:none;}
+.mg-trow.head{background:var(--charcoal);}
+.mg-trow.head span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(226,226,226,.5);}
+.mg-trow span.bot{font-family:var(--mono);font-size:13.5px;color:var(--charcoal);}
+.mg-trow span.who{font-size:13.5px;color:var(--muted-light);}
+.mg-trow span.rec{font-size:13px;color:var(--teal);font-weight:500;}
+
+/* Two-up stat cards for GSC section */
+.mg-2up{display:grid;grid-template-columns:1fr 1fr;gap:2px;max-width:820px;}
+.mg-2card{background:var(--charcoal-mid);padding:26px 28px;}
+.mg-2card-h{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;}
+.mg-2card p{font-size:14.5px;line-height:1.68;color:var(--muted-dark);}
+
+.mg-cross{background:var(--seasalt);padding:64px var(--px) 80px;text-align:center;}
+.mg-cross-inner{max-width:600px;margin:0 auto;}
+.mg-cross a{display:inline-flex;align-items:center;gap:10px;color:var(--teal);font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(74,158,142,.35);padding:14px 22px;border-radius:2px;transition:all .2s;}
+.mg-cross a:hover{background:rgba(74,158,142,.08);}
+
+.rs-methodnote{background:var(--seasalt);padding:0 var(--px) 88px;}
+.rs-methodnote-inner{max-width:var(--article-w);margin:0 auto;border-top:1px solid var(--border-light);padding-top:36px;}
+.rs-methodnote h2{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--charcoal);margin-bottom:12px;}
+.rs-methodnote p{font-size:14px;line-height:1.75;color:var(--muted-light);margin-bottom:10px;}
+.src-link{color:var(--teal);text-decoration:underline;text-underline-offset:2px;}
+
+@media (max-width:760px){.mg-2up{grid-template-columns:1fr;}.mg-trow{grid-template-columns:1fr;gap:4px;}.mg-trow.head{display:none;}.mg-trow span.who::before{content:'Where: ';color:var(--mid-grey);}.mg-trow span.rec::before{content:'Do this: ';color:var(--mid-grey);}}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+
+<nav class="nav" aria-label="Primary navigation">
+    <a href="/" class="nav-logo" aria-label="Aingworth home">
+      <img src="/images/Aingworth_Main_Logo_White_bigger.png" alt="Aingworth" style="width:200px;height:auto;display:block;filter:brightness(100) contrast(2);">
+    </a>
+    <ul class="nav-menu" role="list">
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/her-worth/">HER-Worth</a></li>
+      <li><a href="/book/">The Book</a></li>
+      <li class="nav-has-drop">
+        <button type="button" class="nav-droptrig" aria-expanded="false" aria-haspopup="true" aria-controls="tools-drop">Tools
+          <svg class="nav-caret" width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-drop" id="tools-drop" role="menu">
+          <a href="/diagnostic/" role="menuitem"><span class="nd-t">Diagnostic</span><span class="nd-d">Fifteen questions. Five minutes. The pattern you are in now.</span></a>
+          <a href="/recognition-check/" role="menuitem"><span class="nd-t">Recognition Check</span><span class="nd-d">Run one buyer question across the models. See how often AI names you.</span></a>
+          <a href="/recognition-snapshot/" role="menuitem"><span class="nd-t">Recognition Snapshot</span><span class="nd-d">A fast, first look at what AI says about you today.</span></a>
+        </div>
+      </li>
+      <li class="nav-has-drop">
+        <button type="button" class="nav-droptrig" aria-expanded="false" aria-haspopup="true" aria-controls="insights-drop">Insights
+          <svg class="nav-caret" width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-drop" id="insights-drop" role="menu">
+          <a href="/articles/" role="menuitem"><span class="nd-t">Articles</span><span class="nd-d">Practical thinking on AI search and authority</span></a>
+          <a href="/frameworks/" role="menuitem"><span class="nd-t">Frameworks</span><span class="nd-d">The named ideas behind Become the Answer</span></a>
+          <a href="/case-studies/" role="menuitem"><span class="nd-t">Case Studies</span><span class="nd-d">The method, in practice, named</span></a>
+          <a href="/glossary/" role="menuitem"><span class="nd-t">Glossary</span><span class="nd-d">Clean definitions of the Recognition vocabulary</span></a>
+          <a href="/playbooks/" role="menuitem"><span class="nd-t">Playbooks</span><span class="nd-d">How to build recognition, step by step</span></a>
+          <a href="/research/" aria-current="page" role="menuitem"><span class="nd-t">Research</span><span class="nd-d">Original studies, dated, with method shown</span></a>
+        </div>
+      </li>
+      <li class="nav-has-drop">
+        <button type="button" class="nav-droptrig" aria-expanded="false" aria-haspopup="true" aria-controls="about-drop">About
+          <svg class="nav-caret" width="9" height="9" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav-drop" id="about-drop" role="menu">
+          <a href="/about/" role="menuitem"><span class="nd-t">About</span><span class="nd-d">Lucy Aingworth, and why Aingworth exists</span></a>
+          <a href="/approach/" role="menuitem"><span class="nd-t">Our Approach</span><span class="nd-d">The thesis and the Authority Method</span></a>
+        </div>
+      </li>
+      <li><a href="/south-africa/">South Africa</a></li>
+      <li class="ncta"><a href="/contact/">Let's Talk</a></li>
+    </ul>
+    <button class="nav-burger" aria-expanded="false" aria-controls="ndrawer" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+<nav id="ndrawer" class="nav-drawer" aria-label="Mobile navigation">
+    <a href="/services/">Services</a>
+    <a href="/her-worth/">HER-Worth</a>
+    <a href="/book/">The Book</a>
+    <div class="drawer-group">
+      <p class="drawer-group-h">Tools</p>
+      <a href="/diagnostic/" class="drawer-sub">Diagnostic</a>
+      <a href="/recognition-check/" class="drawer-sub">Recognition Check</a>
+      <a href="/recognition-snapshot/" class="drawer-sub">Recognition Snapshot</a>
+    </div>
+    <div class="drawer-group">
+      <p class="drawer-group-h">Insights</p>
+      <a href="/articles/" class="drawer-sub">Articles</a>
+      <a href="/frameworks/" class="drawer-sub">Frameworks</a>
+      <a href="/case-studies/" class="drawer-sub">Case Studies</a>
+      <a href="/glossary/" class="drawer-sub">Glossary</a>
+      <a href="/playbooks/" class="drawer-sub">Playbooks</a>
+      <a href="/research/" aria-current="page" class="drawer-sub">Research</a>
+    </div>
+    <div class="drawer-group">
+      <p class="drawer-group-h">About</p>
+      <a href="/about/" class="drawer-sub">About</a>
+      <a href="/approach/" class="drawer-sub">Our Approach</a>
+    </div>
+    <a href="/south-africa/">South Africa</a>
+    <a href="/contact/" class="drawer-cta">Let's Talk</a>
+  </nav>
+
+<main id="main">
+
+<section class="mg-hero" aria-labelledby="mg-h1">
+  <div class="mg-hero-inner">
+    <nav class="mg-bread" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="sep" aria-hidden="true">/</span><a href="/research/">Research</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">Machine Gatekeeper</span>
+    </nav>
+    <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Research &middot; Machine Gatekeeper</span></div>
+    <h1 id="mg-h1">How the gatekeeper actually <em>decides.</em></h1>
+    <p class="mg-hero-sub">The Machine Gatekeeper framework says AI systems now sit between a brand and its audience, deciding who gets named. This page is the evidence for the mechanism: what a 129,000-domain study found actually correlates with getting cited, what Google itself says about optimizing for it, and why a large share of sites accidentally lock the gatekeeper out entirely.</p>
+    <span class="mg-verified">Last verified 20 August 2026</span>
+    <div class="mg-capsule">
+      <p class="mg-capsule-lbl">In one paragraph</p>
+      <p>Independent research on 129,000 domains found citation frequency tracks closely with referring domains, domain trust, content freshness, and depth, ordinary authority signals, not hidden AI tricks. Google's own documentation says the same thing in its own words: there is no separate optimization layer for AI features, the core search quality systems are what generative answers draw on. And Cloudflare's own 2025 traffic data shows AI crawlers are growing fast while robots.txt files disallow them more than any other bot category, meaning a meaningful share of sites are shutting the gatekeeper out without realizing it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mg-sec" aria-labelledby="mg-signals-h">
+  <div class="mg-sec-inner">
+    <div class="mg-sec-head">
+      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">What The Gatekeeper Weighs</span></div>
+      <h2 class="fw-h2" id="mg-signals-h" style="color:var(--charcoal)">Ordinary authority signals, not tricks.</h2>
+      <p>SE Ranking analyzed 216,524 pages across 129,000 domains and 20 industry niches to see what actually separated frequently-cited sites from rarely-cited ones in ChatGPT. Four factors showed the clearest gap between the weakest and strongest tier, shown here as average citations per page.</p>
+    </div>
+    <div class="mg-chart">
+      <div class="mg-bar-row">
+        <div class="mg-bar-label"><span>Domain Trust score</span><b>1.6 vs 8.4 avg. citations</b></div>
+        <div class="mg-bar-track">
+          <div class="mg-bar"><span class="mg-bar-tag">Below 43</span><div class="mg-bar-fill-wrap"><div class="mg-bar-fill low" style="width:19%">1.6</div></div></div>
+          <div class="mg-bar"><span class="mg-bar-tag">97&ndash;100</span><div class="mg-bar-fill-wrap"><div class="mg-bar-fill high" style="width:100%">8.4</div></div></div>
+        </div>
+      </div>
+      <div class="mg-bar-row">
+        <div class="mg-bar-label"><span>Referring domains</span><b>1.7 vs 8.4 avg. citations</b></div>
+        <div class="mg-bar-track">
+          <div class="mg-bar"><span class="mg-bar-tag">Up to 2,500</span><div class="mg-bar-fill-wrap"><div class="mg-bar-fill low" style="width:20%">1.7</div></div></div>
+          <div class="mg-bar"><span class="mg-bar-tag">350,000+</span><div class="mg-bar-fill-wrap"><div class="mg-bar-fill high" style="width:100%">8.4</div></div></div>
+        </div>
+      </div>
+      <div class="mg-bar-row">
+        <div class="mg-bar-label"><span>Content freshness</span><b>3.6 vs 6.0 avg. citations</b></div>
+        <div class="mg-bar-track">
+          <div class="mg-bar"><span class="mg-bar-tag">Outdated</span><div class="mg-bar-fill-wrap"><div class="mg-bar-fill low" style="width:43%">3.6</div></div></div>
+          <div class="mg-bar"><span class="mg-bar-tag">&lt; 3 months</span><div class="mg-bar-fill-wrap"><div class="mg-bar-fill high" style="width:71%">6.0</div></div></div>
+        </div>
+      </div>
+      <div class="mg-bar-row">
+        <div class="mg-bar-label"><span>Content depth</span><b>3.2 vs 5.1 avg. citations</b></div>
+        <div class="mg-bar-track">
+          <div class="mg-bar"><span class="mg-bar-tag">&lt; 800 words</span><div class="mg-bar-fill-wrap"><div class="mg-bar-fill low" style="width:38%">3.2</div></div></div>
+          <div class="mg-bar"><span class="mg-bar-tag">2,900+ words</span><div class="mg-bar-fill-wrap"><div class="mg-bar-fill high" style="width:61%">5.1</div></div></div>
+        </div>
+      </div>
+    </div>
+    <p class="mg-src">Domain Trust and referring domains showed the strongest relationship of anything tested, both proxies for Earned Authority: what independent sites already link to and vouch for. Page speed also correlated (pages loading in under 0.4 seconds averaged 6.7 citations), a Clarity-adjacent signal, the gatekeeper can only weigh what it can render quickly. Source: <a href="https://www.searchenginejournal.com/new-data-top-factors-influencing-chatgpt-citations/561954/" target="_blank" rel="noopener">SE Ranking, 129,000 domains, published 26 November 2025</a>.</p>
+  </div>
+</section>
+
+<section class="mg-sec mg-sec-dark" aria-labelledby="mg-google-h">
+  <div class="mg-sec-inner">
+    <div class="mg-sec-head">
+      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">In Google's Own Words</span></div>
+      <h2 class="fw-h2" id="mg-google-h">There is no separate game to learn.</h2>
+      <p>Every AI-visibility vendor sells a version of "AI optimization" as something distinct from SEO. Google's own developer documentation says otherwise, directly.</p>
+    </div>
+    <div class="mg-quote">
+      <p class="mg-quote-mark">&ldquo;</p>
+      <p>The best practices for SEO continue to be relevant because our generative AI features on Google Search are rooted in our core Search ranking and quality systems.</p>
+      <p class="mg-quote-src">Google, AI features and your website, developers.google.com &middot; <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener">Read the source</a></p>
+    </div>
+    <p class="mg-src" style="color:var(--muted-dark)">This is consistent with the SE Ranking data above: the strongest citation signals, Domain Trust and referring domains, are exactly the same signals traditional SEO and PR have always tracked. The gatekeeper is not running a hidden second scoring system. It is applying the same quality bar it always has, to a different output format.</p>
+  </div>
+</section>
+
+<section class="mg-sec" aria-labelledby="mg-gsc-h">
+  <div class="mg-sec-inner">
+    <div class="mg-sec-head">
+      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">What Stays Hidden, Even From Google</span></div>
+      <h2 class="fw-h2" id="mg-gsc-h" style="color:var(--charcoal)">You can see that you were shown. Not why.</h2>
+      <p>In June 2026, Google added a Generative AI tab to Search Console, the first official window into AI Overviews and AI Mode performance. What it shows, and deliberately withholds, says a lot about how opaque the gatekeeper's logic still is, even to the people building it.</p>
+    </div>
+    <div class="mg-2up">
+      <div class="mg-2card">
+        <p class="mg-2card-h">What it shows</p>
+        <p>Impressions: every time a URL from your domain is rendered inside an AI-generated answer block, filterable by URL, region, device, and date range.</p>
+      </div>
+      <div class="mg-2card">
+        <p class="mg-2card-h">What it withholds</p>
+        <p>Click-through data, the actual prompts or queries that triggered the citation, and position within the answer. Google cites user privacy and interface volatility as the reasons.</p>
+      </div>
+    </div>
+    <p class="mg-src">In short: you can now confirm the gatekeeper noticed you. You still cannot see which question earned that notice, or why one page was chosen over another. Source: <a href="https://www.pragma-code.de/en/blog-search-console-generative-ai-performance" target="_blank" rel="noopener">Google Search Console Generative AI reporting, launched June 2026</a>.</p>
+  </div>
+</section>
+
+<section class="mg-sec mg-sec-dark" aria-labelledby="mg-crawl-h">
+  <div class="mg-sec-inner">
+    <div class="mg-sec-head">
+      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">The Self-Inflicted Wound</span></div>
+      <h2 class="fw-h2" id="mg-crawl-h">The gatekeeper cannot recognize what it cannot reach.</h2>
+      <p>Cloudflare's own network data shows AI crawlers growing fast, and, at the same time, robots.txt files disallowing them more often than any other category of bot. Two facts sitting side by side: the traffic that matters most right now is also the traffic most commonly blocked, frequently by accident.</p>
+    </div>
+    <div class="mg-2up">
+      <div class="mg-2card">
+        <p class="mg-2card-h">Growing fast</p>
+        <p>ChatGPT-User request volume peaked as much as 16x higher than where it started the year; PerplexityBot traffic finished the year roughly 3.5x higher; ClaudeBot crawling volume nearly doubled at its peak.</p>
+      </div>
+      <div class="mg-2card">
+        <p class="mg-2card-h">Blocked most often</p>
+        <p>Cloudflare's own review of 2025 traffic states plainly that AI crawlers were "the most frequently fully disallowed user agents found in robots.txt files" of any bot category it tracks.</p>
+      </div>
+    </div>
+    <p class="mg-src" style="color:var(--muted-dark)">Source: <a href="https://blog.cloudflare.com/radar-2025-year-in-review/" target="_blank" rel="noopener">The 2025 Cloudflare Radar Year in Review</a>, published December 2025.</p>
+    <div class="mg-table" style="margin-top:32px;background:var(--charcoal-mid);border-color:var(--border-dark)">
+      <div class="mg-trow head"><span>Crawler</span><span>Belongs to</span><span>Recommendation</span></div>
+      <div class="mg-trow" style="border-color:var(--border-dark)"><span class="bot" style="color:var(--seasalt)">GPTBot / OAI-SearchBot</span><span class="who" style="color:var(--muted-dark)">OpenAI</span><span class="rec">Allow, don't disallow</span></div>
+      <div class="mg-trow" style="border-color:var(--border-dark)"><span class="bot" style="color:var(--seasalt)">ClaudeBot</span><span class="who" style="color:var(--muted-dark)">Anthropic</span><span class="rec">Allow, don't disallow</span></div>
+      <div class="mg-trow" style="border-color:var(--border-dark)"><span class="bot" style="color:var(--seasalt)">PerplexityBot</span><span class="who" style="color:var(--muted-dark)">Perplexity</span><span class="rec">Allow, don't disallow</span></div>
+      <div class="mg-trow" style="border-color:var(--border-dark)"><span class="bot" style="color:var(--seasalt)">Google-Extended</span><span class="who" style="color:var(--muted-dark)">Google</span><span class="rec">Allow, don't disallow</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="mg-cross" aria-label="Related evidence">
+  <div class="mg-cross-inner">
+    <p style="font-size:15px;line-height:1.7;color:var(--muted-light);margin-bottom:20px">This page covers the selection mechanism specifically. For the wider evidence base behind the Recognition Triangle, including who gets cited and how concentrated that citation share actually is, see the main research hub.</p>
+    <a href="/research/">Back to the research hub
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+</section>
+
+<section class="fw-faq" style="background:var(--seasalt);padding:0 var(--px) 96px" aria-labelledby="mg-faq-h">
+  <div style="max-width:760px;margin:0 auto">
+    <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Common Questions</span></div>
+    <h2 class="fw-h2" id="mg-faq-h" style="color:var(--charcoal);margin-bottom:22px">Questions people ask about this page.</h2>
+    <details class="faq-item">
+      <summary class="faq-q">Is there really no separate way to optimize for AI answers?<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary>
+      <div class="faq-a">Per Google's own documentation, no. AI features on Google Search draw on the same core ranking and quality systems as regular search. That does not mean nothing changes; it means the fundamentals, authority, clarity, trust, freshness, stay the fundamentals, rather than being replaced by a new hackable layer.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Does this mean schema markup and llms.txt don't matter?<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary>
+      <div class="faq-a">Schema and llms.txt help machines disambiguate who you are once they have already decided to look at you. They are infrastructure, not the reason you get selected in the first place. The signals shown on this page, authority, freshness, depth, are what appear to influence selection itself.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">How would I know if my own site is blocking AI crawlers?<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary>
+      <div class="faq-a">Check your robots.txt file for Disallow rules naming GPTBot, ClaudeBot, PerplexityBot, Google-Extended, or OAI-SearchBot. Many site builders and security plugins add these rules by default, which is exactly why Cloudflare found AI crawlers blocked more often than any other bot category, frequently without the site owner choosing it deliberately.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Is this page part of the same research as the main hub?<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary>
+      <div class="faq-a">Yes, this is one of several framework-specific evidence pages under /research/, each going deeper on one condition of the Recognition Triangle. This one covers the Machine Gatekeeper specifically, the mechanism of selection. The main hub covers the wider evidence base across Clarity, Credibility, and Earned Authority.</div>
+    </details>
+  </div>
+</section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is there really no separate way to optimize for AI answers?", "acceptedAnswer": {"@type": "Answer", "text": "Per Google's own documentation, no. AI features on Google Search draw on the same core ranking and quality systems as regular search. The fundamentals, authority, clarity, trust, freshness, stay the fundamentals, rather than being replaced by a new hackable layer."}}, {"@type": "Question", "name": "Does this mean schema markup and llms.txt don't matter?", "acceptedAnswer": {"@type": "Answer", "text": "Schema and llms.txt help machines disambiguate who you are once they have already decided to look at you. They are infrastructure, not the reason you get selected in the first place."}}, {"@type": "Question", "name": "How would I know if my own site is blocking AI crawlers?", "acceptedAnswer": {"@type": "Answer", "text": "Check your robots.txt file for Disallow rules naming GPTBot, ClaudeBot, PerplexityBot, Google-Extended, or OAI-SearchBot. Many site builders and security plugins add these rules by default."}}, {"@type": "Question", "name": "Is this page part of the same research as the main hub?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, this is one of several framework-specific evidence pages under /research/, each going deeper on one condition of the Recognition Triangle."}}]}</script>
+
+<section class="rs-methodnote" aria-labelledby="mg-method-h">
+  <div class="rs-methodnote-inner">
+    <h2 id="mg-method-h">A note on verification</h2>
+    <p>All figures on this page are checked against the primary source: SE Ranking's own published analysis, Google's own developer documentation, and Cloudflare's own official blog. Where only a secondary write-up could be reached for supporting detail, that is noted in the text. If a figure here has been superseded or misquoted, tell us at <a class="src-link" href="mailto:info@aingworth.com">info@aingworth.com</a> and we will correct it.</p>
+  </div>
+</section>
+
+<section class="fw-cta" aria-labelledby="mg-cta-h">
+  <div class="fw-cta-inner">
+    <div>
+      <h2 id="mg-cta-h">See what the gatekeeper says about you today.</h2>
+      <p>Run the free diagnostic to find which condition of the Triangle is leaking, or run the Recognition Check to see how often AI actually names you.</p>
+    </div>
+    <div class="fw-cta-btns">
+      <a href="/diagnostic/" class="fw-cta-primary">Run the Free Diagnostic
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/recognition-check/" class="fw-cta-ghost">Run the Recognition Check
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="fgrid">
+      <div>
+        <img src="/images/Aingworth_Main_Logo2.png.png" alt="Aingworth" style="width:56px;height:auto;display:block;filter:brightness(100) contrast(2);margin-bottom:18px;">
+        <p class="fdesc">Brand authority and AI visibility consulting for founders and professional-services firms who need to be found for the right reasons.</p>
+        <a href="mailto:info@aingworth.com" class="fmail">info@aingworth.com</a>
+        <nav class="fsocials" aria-label="Social media">
+          <a href="https://www.linkedin.com/in/lisinda-lucy/" class="fsoc" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z"/></svg></a>
+          <a href="https://www.instagram.com/lucy_aingworth/" class="fsoc" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.tiktok.com/@aingworth" class="fsoc" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.3 2.1 1.6 3.7 3.8 3.9v2.4c-1.3.1-2.6-.3-3.8-1v6.3c0 3.4-2.6 5.9-5.9 5.4-2.6-.4-4.4-2.7-4.2-5.4.2-2.6 2.5-4.6 5.1-4.4.3 0 .6.1.9.1v2.5c-.3-.1-.6-.2-1-.2-1.3 0-2.4 1.1-2.4 2.4s1.1 2.4 2.4 2.4 2.4-1.1 2.4-2.4V3z"/></svg></a>
+          <a href="https://x.com/lucy_aingworth" class="fsoc" aria-label="X" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.2 2.5h3.3l-7.2 8.2 8.5 11.3h-6.7l-5.2-6.9-6 6.9H1.6l7.7-8.8L1 2.5h6.8l4.7 6.3zm-1.2 17.8h1.8L7.1 4.3H5.2z"/></svg></a>
+          <a href="https://www.threads.net/@lucy_aingworth" class="fsoc" aria-label="Threads" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.2 21.5c-2.9 0-5.1-1-6.6-2.9C4.3 16.9 3.6 14.7 3.6 12s.7-4.9 2-6.6C7.1 3.5 9.3 2.5 12.2 2.5c2.9 0 5.1 1 6.6 2.9.7.9 1.2 2 1.5 3.2l-2 .5c-.2-.9-.6-1.6-1-2.2-1-1.3-2.6-2-4.6-2-2 0-3.6.7-4.6 2-1 1.3-1.5 3-1.5 5.1s.5 3.8 1.5 5.1c1 1.3 2.6 2 4.6 2 1.8 0 3.1-.5 4-1.5.6-.7.9-1.5 1-2.4-.5.3-1.1.5-1.8.6-2.3.3-4.2-.6-4.4-2.4-.2-1.5 1-2.7 2.9-2.9 1-.1 1.9 0 2.7.3 0-.4-.1-.8-.3-1.1-.3-.5-.9-.8-1.7-.8-1 0-1.7.4-2.1 1.1l-1.8-1c.8-1.3 2.1-2 3.9-2 1.5 0 2.7.5 3.5 1.5.7.9 1 2.1 1 3.7v.4c1.2.9 1.9 2.2 1.9 3.9 0 2.9-2.2 5.2-6.7 5.2zm1.5-8.3c-.7 0-1.4.2-1.4.9 0 .5.6.8 1.3.7.9-.1 1.6-.5 2-1.2-.6-.3-1.2-.4-1.9-.4z"/></svg></a>
+          <a href="https://bsky.app/profile/lucyaingworth.bsky.social" class="fsoc" aria-label="Bluesky" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 10.8C10.9 8.6 7.9 4.6 5.1 2.9 3.9 2.2 2.5 2.7 2.5 4.6c0 1.1.6 6 1 6.8.6 1.4 2 1.8 3.3 1.6-2 .3-3.7 1-1.7 3.3 2.2 2.5 3.6-.6 4.3-2.2.2-.4.3-.6.6-.6s.4.2.6.6c.7 1.6 2.1 4.7 4.3 2.2 2-2.3.3-3-1.7-3.3 1.3.2 2.7-.2 3.3-1.6.4-.8 1-5.7 1-6.8 0-1.9-1.4-2.4-2.6-1.7C16.1 4.6 13.1 8.6 12 10.8z"/></svg></a>
+        </nav>
+        <p class="fborahae" aria-label="Borahae, I purple you"><span lang="ko">보라해</span> 💜</p>
+      </div>
+      <div class="fcol">
+        <p class="fcol-h">Work</p>
+        <ul>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/her-worth/">HER-Worth</a></li>
+          <li><a href="/south-africa/">South Africa</a></li>
+          <li><a href="/diagnostic/">Free Diagnostic</a></li>
+          <li><a href="/recognition-check/">Recognition Check</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <p class="fcol-h">Explore</p>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+          <li><a href="/playbooks/">Playbooks</a></li>
+          <li><a href="/book/">The Book</a></li>
+          <li><a href="/articles/">Articles</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="askai" aria-label="Ask AI about Aingworth">
+      <p class="askai-h">Ask AI about Aingworth</p>
+      <div class="askai-row">
+        <a href="https://chatgpt.com/?q=Summarize%20Aingworth%20and%20the%20Recognition%20Triangle%2C%20and%20who%20Lucy%20Aingworth%20is." target="_blank" rel="noopener" aria-label="Ask ChatGPT about Aingworth"><img src="/images/ChatGpt.png" alt="ChatGPT"></a>
+        <a href="https://claude.ai/new?q=Summarize%20Aingworth%20and%20the%20Recognition%20Triangle%2C%20and%20who%20Lucy%20Aingworth%20is." target="_blank" rel="noopener" aria-label="Ask Claude about Aingworth"><img src="/images/Claude.png" alt="Claude"></a>
+        <a href="https://gemini.google.com/app?q=Summarize%20Aingworth%20and%20the%20Recognition%20Triangle%2C%20and%20who%20Lucy%20Aingworth%20is." target="_blank" rel="noopener" aria-label="Ask Gemini about Aingworth"><img src="/images/Gemini.png" alt="Gemini"></a>
+        <a href="https://www.perplexity.ai/search?q=Summarize%20Aingworth%20and%20the%20Recognition%20Triangle%2C%20and%20who%20Lucy%20Aingworth%20is." target="_blank" rel="noopener" aria-label="Ask Perplexity about Aingworth"><img src="/images/Perplexity.png" alt="Perplexity"></a>
+      </div>
+    </div>
+    <div class="fbase">
+      <p class="fsignoff">Become the answer.</p>
+      <p class="fcopy">&copy; 2026 Aingworth. All rights reserved.</p>
+      <nav class="flegal" aria-label="Legal"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var groups = Array.prototype.slice.call(document.querySelectorAll('.nav-has-drop'));
+  if (!groups.length) return;
+  var items = groups.map(function (g) {
+    return { trig: g.querySelector('.nav-droptrig'), drop: g.querySelector('.nav-drop') };
+  }).filter(function (it) { return it.trig && it.drop; });
+  function closeAll(except) {
+    items.forEach(function (it) {
+      if (it === except) return;
+      it.drop.classList.remove('open');
+      it.trig.setAttribute('aria-expanded', 'false');
+    });
+  }
+  items.forEach(function (it) {
+    it.trig.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = it.drop.classList.toggle('open');
+      it.trig.setAttribute('aria-expanded', open ? 'true' : 'false');
+      closeAll(it);
+    });
+  });
+  document.addEventListener('click', function (e) {
+    var inside = items.some(function (it) { return it.drop.contains(e.target) || it.trig === e.target || it.trig.contains(e.target); });
+    if (!inside) closeAll(null);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    items.forEach(function (it) {
+      if (it.drop.classList.contains('open')) { it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded', 'false'); it.trig.focus(); }
+    });
+  });
+})();
+(function(){
+  var b=document.querySelector('.nav-burger'),d=document.getElementById('ndrawer');
+  if(!b||!d)return;
+  b.addEventListener('click',function(){var o=d.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');document.body.style.overflow=o?'hidden':'';});
+  d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){d.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.style.overflow='';});});
+})();
+</script>
+</body>
+</html>

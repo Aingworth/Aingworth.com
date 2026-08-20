@@ -246,6 +246,19 @@ img{max-width:100%;display:block;}
 .rs-methodnote-inner{max-width:var(--article-w);margin:0 auto;border-top:1px solid var(--border-light);padding-top:36px;}
 .rs-methodnote h2{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--charcoal);margin-bottom:12px;}
 .rs-methodnote p{font-size:14px;line-height:1.75;color:var(--muted-light);margin-bottom:10px;}
+.rs-deep{background:var(--seasalt);padding:96px var(--px);border-top:1px solid var(--border-light);}
+.rs-deep-inner{max-width:var(--max-w);margin:0 auto;}
+.rs-deep-head{max-width:760px;margin-bottom:44px;}
+.rs-deep-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:2px;background:var(--border-light);}
+.rs-deep-card{background:#fff;padding:34px 32px;text-decoration:none;display:flex;flex-direction:column;transition:background .25s var(--ease);position:relative;overflow:hidden;}
+.rs-deep-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease);}
+.rs-deep-card:hover{background:var(--seasalt);}
+.rs-deep-card:hover::before{transform:scaleX(1);}
+.rs-deep-tag{font-family:var(--mono);font-size:10px;color:var(--teal);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;}
+.rs-deep-title{font-family:var(--serif);font-size:clamp(20px,1.8vw,25px);font-weight:500;color:var(--charcoal);line-height:1.2;margin-bottom:12px;}
+.rs-deep-desc{font-size:14.5px;line-height:1.68;color:var(--muted-light);flex:1;margin-bottom:18px;}
+.rs-deep-cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--charcoal);font-weight:500;transition:gap .2s;}
+.rs-deep-card:hover .rs-deep-cta{gap:12px;}
 @media (max-width:900px){.rs-stats{grid-template-columns:1fr;}.rs-grid3{grid-template-columns:1fr;}}
 </style>
 </head>
@@ -432,6 +445,25 @@ img{max-width:100%;display:block;}
         </ul>
       </article>
 
+    </div>
+  </div>
+</section>
+
+<section class="rs-deep" aria-labelledby="rs-deep-h">
+  <div class="rs-deep-inner">
+    <div class="rs-deep-head">
+      <div class="sec-eye"><div class="sec-rule"></div><span class="sec-lbl">Deep Dives</span></div>
+      <h2 class="fw-h2" id="rs-deep-h" style="color:var(--charcoal)">One framework at a time, in full.</h2>
+      <p style="font-size:16px;line-height:1.75;color:var(--muted-light);max-width:680px">Each page below takes a single Aingworth framework and shows the independent data behind it in full, charts included, not just a link out. We are building these one at a time, starting with the mechanism that decides who gets shortlisted before a single word is ever written back.</p>
+    </div>
+    <div class="rs-deep-grid">
+      <a class="rs-deep-card" href="/research/machine-gatekeeper/">
+        <p class="rs-deep-tag">Framework 01 &middot; Live</p>
+        <h3 class="rs-deep-title">The Machine Gatekeeper</h3>
+        <p class="rs-deep-desc">What actually correlates with getting cited across 129,000 domains, Google's own words on optimizing for AI, and why most AI crawlers get blocked before they ever reach the page.</p>
+        <span class="rs-deep-cta">Read the evidence
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
     </div>
   </div>
 </section>
