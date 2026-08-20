@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>Authority measurement is the practice of tracking the strength and consistency of the evidence, citations, and third-party signals that make up a brand's Earned Authority over time.</p>
+      <p>What gets tracked is the body of evidence itself: third-party citations, the completeness of structured data, and how consistently independent sources &mdash; not the brand's own site &mdash; corroborate the same facts about the brand. It is a check on the record a model would find if it went looking, not on any single answer.</p>
+      <p>It moves on a different clock than visibility measurement. Visibility numbers can shift week to week as models update; authority accumulates from a body of evidence built over months, so tracking it needs a quarterly view or longer, read against a stable baseline rather than the last run.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>Authority moves slowly, so it needs a longer measurement horizon than visibility. Tracking it is how Authority Decay gets caught before it shows up in answers.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>An authority measurement check might compare, quarter over quarter, how many independent sources &mdash; not Aingworth's own site &mdash; name Lucy Aingworth as the book's author, and whether that count is holding, growing, or thinning. One quiet quarter is normal; a decline sustained across two or three is the signal worth investigating.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

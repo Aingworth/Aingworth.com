@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>A token is a unit of text, often a word or part of a word, that an AI language model processes as its basic building block.</p>
+      <p>A token is not quite the same as a word. Common short words are often a single token; longer or less common words can be split into two or three token pieces. As a rough rule of thumb, a token is close to four characters of English text, so a page of a few hundred words might run to several hundred tokens.</p>
+      <p>This is the unit both the context window and typical API pricing are measured in. It also explains a common overclaim: a system that says it has "read your whole site" is bounded by how many tokens it can actually hold or was fed at once, so a very large site is more often summarised, sampled, or retrieved from selectively than read in full.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>It is the unit behind context limits and pricing, and useful to know whenever anyone claims a system has read an entire website.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>A short sentence describing what a company does might run to seven or eight tokens, not seven or eight words, once uncommon words get split into smaller pieces. Multiply that across a whole page and it becomes clear why context windows, measured in tokens, run out faster than a word count would suggest.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

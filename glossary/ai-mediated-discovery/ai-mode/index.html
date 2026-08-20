@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>AI Mode is Google's conversational AI search experience, which uses query fan-out to research a question across multiple searches before generating a response.</p>
+      <p>Query fan-out is the mechanism worth understanding: instead of matching a single search to a single set of results, AI Mode breaks a question into several related sub-searches, runs them, and synthesises the combined findings into one response. A brand can be pulled into that response through any one of those sub-searches, not just the exact query a person typed.</p>
+      <p>That changes what "ranking for a keyword" is worth. A page optimised for one precise phrase may never get hit if the fan-out takes a slightly different angle on the topic; a body of content that covers a topic from several angles has more chances to be pulled into the synthesis.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>Because it researches across many underlying searches, a brand needs presence across a topic rather than a single well-optimized page.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>Someone asks AI Mode to compare business bank accounts for freelancers. Behind that single question, the system might run separate searches on fees, opening requirements, and app reviews, then combine what it finds. A brand mentioned in just one of those underlying searches can still surface in the final answer.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

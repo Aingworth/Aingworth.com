@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>A citation is a reference to a brand, source, or piece of information that an AI system or search engine uses, and often surfaces, when constructing an answer.</p>
+      <p>It is the most directly observable unit in this layer of the glossary: unlike consensus or corroboration, which describe patterns across many sources, a citation is a single, countable event, visible either as an inline reference or a link in a specific answer, that can be checked and logged.</p>
+      <p>This is what makes citation share measurable in the first place. Because a citation is a discrete, visible event rather than an inferred pattern, it can be counted directly across a set of runs, which is the basic unit citation share, answer share, and related measures are all built from.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>Citations are the most visible evidence that a system considered a source credible enough to lean on, which makes them the closest observable proxy for recognition.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>An AI answer that includes the line "according to [source]" with a link is showing its work: that visible reference is a citation. Counting how often a brand's name appears in that specific, visible role, rather than just anywhere in an answer, is what citation share actually measures.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

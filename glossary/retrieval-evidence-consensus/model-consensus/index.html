@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>Model consensus is the degree to which different AI systems, such as ChatGPT, Claude, Gemini, and Perplexity, arrive at similar understandings of a brand, its expertise, and its relevance.</p>
+      <p>It is measured by comparing outputs across systems for the same query: the same category description, the same named strengths, the same competitors mentioned alongside a brand. High model consensus means those answers converge. Low model consensus means each system has formed a different, sometimes contradictory, picture from the sources it retrieved.</p>
+      <p>Model consensus differs from Consensus in scope. Consensus describes agreement among independent sources, human and machine. Model consensus narrows that to agreement among the AI systems themselves, which matters because each system trains on different data, retrieves from different sources, and updates on its own schedule.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>Agreement across independent models is a stronger signal than performance in any one of them, and it is far less vulnerable to a single platform changing how it works.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>A brand asks ChatGPT, Claude, and Perplexity to describe its specialism. Two return a consistent answer; one, trained on older data, describes a service the brand phased out two years ago. That gap is model consensus breaking down, not a single wrong answer.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

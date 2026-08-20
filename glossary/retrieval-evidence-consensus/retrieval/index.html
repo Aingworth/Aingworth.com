@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>Retrieval is the process an AI system uses to find relevant information from available sources before generating a response.</p>
+      <p>Retrieval typically works by matching a query against an index of content, using a mix of keyword matching, semantic similarity through Embeddings, and source-quality signals to select which documents to pull forward for the system to reason over. What is not retrieved cannot influence the answer, no matter how accurate or well-written it is.</p>
+      <p>This makes retrieval a gate rather than a ranking. A brand does not need to be ranked first to be recognized; it needs to clear the retrieval step at all. Everything Aingworth measures downstream, Citation Share, Answer Share, presumes retrieval already happened.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>It is the step where a brand is either in the running or not. Everything downstream, citation, description, recommendation, only happens to sources that were retrieved.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>An AI system answering "who offers same-day alteration services in Leeds" retrieves a shortlist of local business pages before generating a recommendation. A business with no page describing that specific service is never part of the shortlist, regardless of its reputation.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

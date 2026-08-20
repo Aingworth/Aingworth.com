@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>A context window is the amount of text an AI model can consider at one time when generating a response.</p>
+      <p>It is measured in tokens, and it is finite, ranging from a few thousand to several hundred thousand tokens depending on the model. Everything the model can "see" when generating a given answer, the question, any retrieved documents, prior conversation turns, has to fit inside that budget together.</p>
+      <p>Because the window is limited, a system answering from a website is almost never reading the whole site at once. It is more often working from a handful of retrieved pages or extracts chosen as most relevant, which is why a page's most important claim needs to be stated plainly, early, and in a self-contained way, rather than requiring the reader to piece it together from context spread across a long page.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>It is finite, so systems work from selected extracts rather than whole websites. Content that states its point plainly and early travels better.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>A model with a 128,000-token context window can hold roughly a long book's worth of text at once, but a large site with hundreds of pages still will not fit. In practice, the system retrieves and feeds it a handful of the most relevant extracts, so a claim buried deep in a long document with no self-contained summary may never make it into the window at all.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

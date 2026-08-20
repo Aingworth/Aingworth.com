@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>Information provenance is the traceable origin and history of a piece of information: where a claim came from, and what sources support it.</p>
+      <p>It is a chain, not a single point: a statistic's provenance includes not just who first published it, but who has cited it since, whether later citations trace back accurately to the original, and whether the claim has drifted or been distorted as it spread from source to source.</p>
+      <p>A claim with clear, traceable provenance is more resilient specifically because a system, or a sceptical reader, can verify it by following the chain back to its origin. A claim with no traceable origin, repeated widely but sourced nowhere, is easier to discount and more likely to be quietly dropped when a system is choosing what to cite confidently.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>Claims that can be traced to an origin survive scrutiny. Claims that circulate without a source are the ones that get dropped or distorted.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>A statistic that traces cleanly back to a named, dated original study, with each subsequent citation crediting that study accurately, has strong information provenance. The same number, repeated for years with the original source lost and no one quite sure where it first came from, is far easier for a careful system, or a careful reader, to discount.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

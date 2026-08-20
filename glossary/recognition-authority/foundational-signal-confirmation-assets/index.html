@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>Foundational, Signal, and Confirmation Assets are Aingworth's taxonomy for what a brand actually needs to build. Foundational Assets establish the base facts of who a brand is. Signal Assets demonstrate expertise and relevance. Confirmation Assets give AI systems a clean, verifiable record to check claims against, including structured formats such as the Open Knowledge Format.</p>
+      <p>The three types map roughly onto the three conditions of the Recognition Triangle: Foundational Assets, an accurate About page, consistent entity data, largely serve Clarity; Signal Assets, research, expert commentary, case studies, largely serve Credibility; Confirmation Assets, structured data, verifiable records, help a system check both against something concrete.</p>
+      <p>Naming them as three distinct types, rather than lumping everything under the vague word "content," is deliberate. A brand that publishes a large volume of one type, blog posts demonstrating expertise, for instance, while neglecting the others can still leave a system without the base facts, Foundational, or the checkable structure, Confirmation, it needs.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>It replaces the word content with something more precise. Each asset type does a different job, and a brand that only produces one type will always be missing part of the picture.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>A brand publishing thoughtful articles about its field is building Signal Assets. If its About page is thin and its schema markup is missing, it is neglecting Foundational and Confirmation Assets, leaving a system able to see the brand's expertise but unable to reliably confirm who the brand actually is.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

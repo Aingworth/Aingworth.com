@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>Answer eligibility describes whether a source contains information that is relevant, accessible, and clear enough to be considered for inclusion in an AI-generated answer. A brand cannot be recognized if it cannot first be retrieved.</p>
+      <p>It is a gate, not a score. A page either clears the bar of being crawlable, parseable, and clearly about the topic in question, or it does not, and a page that fails on any of those counts is out of consideration before questions of authority, trust, or reputation ever come into play.</p>
+      <p>The checks are mostly technical and structural, not persuasive: is the page blocked by robots.txt, does it load without requiring interaction a crawler cannot perform, is the key claim stated in plain, extractable text rather than buried in an image or behind a login. None of it makes a system prefer a brand; it only determines whether the brand is in the running at all.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>It is the floor beneath everything else. Authority work has no effect on a page a system cannot reach, read, or make sense of.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>A page with the exact answer to a common buyer question, written clearly, gets no benefit from that if the page is blocked by robots.txt or the information only renders after a click a crawler will not make. It fails answer eligibility before its content quality is ever assessed.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

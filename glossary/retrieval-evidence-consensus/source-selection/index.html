@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>Source selection is how a search or AI system decides which of the available sources are relevant and trustworthy enough to use when constructing an answer.</p>
+      <p>Selection criteria vary by system but commonly weigh topical relevance, apparent authority or expertise, recency, and how well a source's structure lets the system extract a clean answer. A source can be accurate and still be passed over if a competing source states the same fact more clearly or is judged more authoritative on the topic.</p>
+      <p>Source selection is the decision point that sits after Retrieval and before Citation: a system may retrieve dozens of candidate sources but select only a handful to actually cite or draw from in the final answer.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>It reframes the strategic question from how to rank to why a system would choose this source over another, which is a far more useful thing to work on.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>Three sources all correctly state a product's return policy. A system selects the one from the brand's own help center over a forum post and a comparison site, because it reads as the more authoritative, directly relevant source for that specific fact.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

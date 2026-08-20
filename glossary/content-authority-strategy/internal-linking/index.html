@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>Internal linking is the practice of linking between pages on the same website to show search engines and AI systems how content relates and where authority concentrates.</p>
+      <p>A link from one page to another is a signal about relationship, not just navigation: it tells a crawling system that the two pages are related, and, depending on which pages link to which, it indicates which pages the site itself treats as central versus supporting.</p>
+      <p>Done well, internal linking turns a set of individually published pages into a connected structure a system can traverse: a glossary term linking to the framework it belongs to, which links to the related terms, which link back, builds a legible map rather than a scatter of disconnected pages that each have to be discovered and understood on their own.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>It is the cheapest way to make a body of work read as one connected argument rather than a pile of separate posts.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>A glossary term page that links to its parent category, its related terms, and the framework page it supports gives a crawling system a clear map of how that concept fits into the larger body of work. The same page with no internal links would need to be understood in complete isolation.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

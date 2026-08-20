@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>An AI referral happens when an AI-generated response points a user to a brand's website or another source as a next step. AI systems increasingly include citations and links alongside their answers.</p>
+      <p>It is the single event; AI Referral Traffic, a related term in the Measurement &amp; AI Visibility layer, is the aggregate measure of how many of those events happen and what they add up to in analytics. One is the moment, the other is the pattern.</p>
+      <p>Not every AI answer includes a referral. Some systems cite sources inline with links; others summarise without linking at all, especially in voice or in-app contexts. A brand can be the clear source of an answer and still receive no referral from it, which is part of why referral counts alone understate AI-mediated influence.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>It gives a way to talk about traffic from AI systems without falling back into treating clicks as the only thing that counts.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>An AI system answers a question and includes a line such as "according to [brand]'s pricing page," with a link. If the person clicks it, that single click is an AI referral. If the system had summarised the same information without the link, the influence would be identical but the referral would not exist.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

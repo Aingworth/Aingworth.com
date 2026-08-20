@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>Schema markup is a specific vocabulary of structured data, typically added to a webpage, that helps search engines and AI systems understand what the page is about and disambiguate its entities.</p>
+      <p>Schema markup uses a shared vocabulary, most commonly schema.org, to label page content in code: marking a paragraph as a product description, a name as an organization, a date as a founding date. Systems can read these labels directly instead of guessing at meaning from surrounding text.</p>
+      <p>Its main value is disambiguation, not persuasion. Schema does not make a claim more credible; it makes an already-true claim easier for a system to parse correctly and attach to the right entity, which reduces the chance of misattribution.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>Schema is infrastructure, not a citation trick. It helps systems tell one entity from another, which is a prerequisite for recognition rather than a shortcut to it.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>A page uses Organization schema to explicitly mark a company's legal name, founding year, and headquarters location, so a system extracting that page does not have to infer those facts from prose.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>A Large Language Model, or LLM, is an AI model trained on large amounts of text to understand and generate language. ChatGPT, Claude, and Gemini are all built on large language models.</p>
+      <p>The core mechanism is prediction: an LLM is trained to predict the next piece of text given everything before it, over and over, across enormous volumes of text. Trained at large enough scale, that simple prediction task produces a model that can hold a conversation, answer questions, and summarise documents, without a built-in database of verified facts to consult.</p>
+      <p>That is why grounding matters, connecting the model to current, verifiable information through retrieval or search, rather than relying only on what it learned during training. Ungrounded, an LLM answers from patterns in old training data; grounded, it can check itself against something closer to a source.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>Knowing that these systems predict language rather than look up facts explains both why they are fluent and why they need grounding to be reliable about a brand.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>Ask an LLM a question about a recent event with no grounding, and it may answer fluently from outdated training data, or decline, or guess. Ask the same question through a system that grounds it with live search results first, and the answer draws on current sources instead of the model's memory alone.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

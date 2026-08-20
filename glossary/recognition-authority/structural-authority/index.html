@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>Structural Authority is the Earned Authority layer built from structural sources: Wikipedia, industry databases, knowledge graphs, and schema markup.</p>
+      <p>It sits alongside Expert Authority and Community Authority as one of the three layers of Earned Authority, and it is distinguished by format: these sources are standardised, structured, and often maintained under editorial or technical rules a brand cannot simply edit to its own advantage, which is exactly what makes them hard to fake.</p>
+      <p>Because these sources are frequently the first place a system checks to disambiguate an entity, a knowledge graph or a well-maintained database entry can carry outsized weight relative to how much effort it took to establish, compared with, say, an equivalent volume of first-party content.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>Structural sources are the ones machines check first and trust most, because they are standardized and hard to fake. A brand missing from them is invisible at the layer where identity gets resolved.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>A brand with an accurate, well-maintained Wikipedia entry and consistent Organization schema across its site has structural authority a system can check quickly and trust, precisely because those formats are standardised and not something the brand can quietly inflate the way it could its own marketing copy.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>Citation share is the proportion of AI-generated answers on a given topic that cite a particular brand, relative to its competitors.</p>
+      <p>It is measured by running a fixed set of buyer questions through AI systems &mdash; ChatGPT, Perplexity, Google's AI Overviews, and others &mdash; multiple times each, then checking two things for every answer: did the system name a source at all, and if so, whose. Not every AI answer cites anyone; citation share only counts the answers where a source was named, and asks how often that source was you rather than a competitor.</p>
+      <p>This is what separates citation share from a simple mention count. A brand can be *mentioned* in an answer without being the source the system points to, and it can be discussed at length without ever being cited. Citation share is narrower and more useful for that reason &mdash; it measures whether a system treats a brand as evidence, not just as a topic.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>It is a comparative measure, which makes it more useful than a raw count. Being cited less often than a competitor is the finding, not the number itself.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>Say you run the same buyer question through five AI systems, ten times each &mdash; fifty answers in total on that one topic. If your site is named as the source in six of them, your citation share for that question is 6 &divide; 50, or 12%. Run it again next quarter with the same method and the number becomes a trend, not a one-off snapshot.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

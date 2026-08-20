@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>Machine learning is a method of building AI systems where a model learns patterns from data, rather than following rules written explicitly by a person.</p>
+      <p>Compare it to a rules-based system: a rules-based spam filter is a list of if-this-then-that instructions a person wrote by hand. A machine-learning spam filter is shown thousands of examples of spam and legitimate mail and works out the distinguishing patterns itself, without a person specifying the rules in advance.</p>
+      <p>The large language models behind AI search are built this way, on enormous amounts of text. That is why there is no fixed formula to satisfy, the way there was with older, more rules-based ranking factors, a brand cannot reverse-engineer a checklist, because the model did not learn from one.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>Because these systems learn from data rather than rules, there is no algorithm to reverse engineer. What a brand can influence is the evidence the systems learn and retrieve from.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>No one wrote a rule saying "if a brand's own site describes something one way and three independent sources describe it another way, favour the independent sources." A machine-learning model develops that kind of pattern from exposure to enormous amounts of text where independent corroboration has, in aggregate, correlated with accuracy.</p>
+      </div>
     </div>
 
     <div class="tp-sec">

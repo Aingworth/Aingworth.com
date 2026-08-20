@@ -335,6 +335,9 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
 .tp-sec p:last-child{margin-bottom:0;}
 .tp-why{background:rgba(107,191,176,.08);border-left:3px solid var(--teal-light);border-radius:0 3px 3px 0;padding:22px 26px;}
 .tp-why p{font-size:16px;line-height:1.78;color:var(--muted-light);}
+.tp-example{margin-top:16px;background:rgba(26,26,26,.035);border:1px solid var(--border-light);border-radius:4px;padding:20px 24px;}
+.tp-example-lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid-grey);margin:0 0 8px;}
+.tp-example p{font-style:italic;font-size:15px;line-height:1.72;color:var(--muted-light);margin:0;}
 .tp-ctx{font-size:15.5px;line-height:1.78;color:var(--muted-light);}
 .tp-sec a:not(.tp-fw):not(.tp-relcard){color:var(--teal);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s;}
 .tp-sec a:not(.tp-fw):not(.tp-relcard):hover{color:var(--charcoal);}
@@ -448,11 +451,17 @@ details.term > .term-related{margin:16px 22px 0;padding:14px 0 20px;border-top:1
     <div class="tp-sec">
       <h2 class="tp-h2">Full explanation</h2>
       <p>Brand Hallucination is when an AI system confidently describes a brand inaccurately because the brand has not given it clear, consistent, verifiable signals to draw on.</p>
+      <p>It is the specific, commercial version of the general technical failure called an AI Hallucination: the same underlying mechanism, a model filling a gap with a plausible-sounding guess rather than admitting uncertainty, but applied to a brand's name, history, offering, or standing, where the error has a direct commercial cost.</p>
+      <p>It is most likely exactly where a brand's own evidence is thinnest: a founding date nobody published, a product line that changed with no update anywhere findable, a name similar to another company's. The gaps a brand leaves in its own record are the gaps a system is most likely to fill with an invented, confident-sounding answer.</p>
     </div>
 
     <div class="tp-sec">
       <h2 class="tp-h2">Why this matters</h2>
       <div class="tp-why"><p>AI systems do not say they do not know. They fill gaps with plausible inference, and prospects meet the invention before they ever meet the brand.</p></div>
+      <div class="tp-example">
+        <p class="tp-example-lbl">Example</p>
+        <p>Asked what a small consultancy specialises in, a system with almost nothing accurate to draw on might confidently describe a service the firm does not actually offer, extrapolated from its name and category rather than from any real information. A prospect hearing that description meets the invention before they ever speak to the firm.</p>
+      </div>
     </div>
 
       <div class="tp-sec">
