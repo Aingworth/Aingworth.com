@@ -5,6 +5,15 @@
 <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/a984d92a880113dafa69c15f315ddddb/script.js"></script>
 <!-- End cookieyes banner -->
 <meta charset="UTF-8">
+<script>
+(function () {
+  var redirects = { '/3]': '/', '/3%5D': '/', '/3%5d': '/' };
+  var path = window.location.pathname;
+  if (Object.prototype.hasOwnProperty.call(redirects, path)) {
+    window.location.replace('https://aingworth.com' + redirects[path]);
+  }
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Page Not Found - Aingworth</title>
 <meta name="description" content="The page you are looking for does not exist. Find your way back to Aingworth.">
