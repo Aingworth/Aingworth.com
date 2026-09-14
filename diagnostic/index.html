@@ -923,7 +923,8 @@ var state = {
   patternKey: null,
   cpct: 0,
   kpct: 0,
-  apct: 0
+  apct: 0,
+  advanceTimer: null // pending auto-advance timeout id, see selectOpt()
 };
 
 /* ============================================================
@@ -1088,8 +1089,26 @@ function selectOpt(qIdx, optIdx) {
   state.answers[q.id] = optIdx;
   // Update score for this dimension
   recalcScores();
-  // Re-render to update selection
+  // Re-render to show the selection highlighted
   renderQuestion(qIdx);
+
+  // Auto-advance to the next question shortly after selecting, so people
+  // don't need a separate Continue click for every question. The short
+  // delay lets the selected state render and register before the screen
+  // moves on. Cancel any previously pending auto-advance first, so a
+  // fast re-select (changing your mind) or a double-click doesn't stack
+  // up two advances and skip a question.
+  if (state.advanceTimer) {
+    clearTimeout(state.advanceTimer);
+  }
+  state.advanceTimer = setTimeout(function() {
+    state.advanceTimer = null;
+    // Only advance if this is still the question being answered - guards
+    // against a stray timer firing after Back/Continue already moved on.
+    if (state.current === qIdx) {
+      goNext();
+    }
+  }, 450);
 }
 
 function recalcScores() {
@@ -1102,6 +1121,10 @@ function recalcScores() {
 }
 
 function goNext() {
+  if (state.advanceTimer) {
+    clearTimeout(state.advanceTimer);
+    state.advanceTimer = null;
+  }
   if (state.current < QUESTIONS.length - 1) {
     state.current++;
     renderQuestion(state.current);
@@ -1111,6 +1134,10 @@ function goNext() {
 }
 
 function goBack() {
+  if (state.advanceTimer) {
+    clearTimeout(state.advanceTimer);
+    state.advanceTimer = null;
+  }
   if (state.current > 0) {
     state.current--;
     renderQuestion(state.current);
@@ -1398,6 +1425,9 @@ function startQuiz() {
 }
 
 function restartQuiz() {
+  if (state.advanceTimer) {
+    clearTimeout(state.advanceTimer);
+  }
   state = {
     current: 0,
     answers: {},
@@ -1406,7 +1436,8 @@ function restartQuiz() {
     patternKey: null,
     cpct: 0,
     kpct: 0,
-    apct: 0
+    apct: 0,
+    advanceTimer: null
   };
   document.getElementById('results-screen').classList.remove('active');
   document.getElementById('results-mount').innerHTML = '';
