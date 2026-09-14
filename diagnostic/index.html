@@ -1057,12 +1057,12 @@ function renderQuestion(idx) {
       '</span></button>';
   }).join('');
 
-  var backBtn = idx > 0
-    ? '<button class="btn-back" onclick="goBack()" aria-label="Go to previous question">← Back</button>'
-    : '<span></span>';
-
-  var nextLabel = 'Continue';
-  var nextDisabled = !answered ? 'disabled' : '';
+  // No Continue button - selecting an option auto-advances (see selectOpt()).
+  // Back is the only manual nav control, and only shown once there's a
+  // previous question to return to.
+  var navHtml = idx > 0
+    ? '<div class="q-nav"><button class="btn-back" onclick="goBack()" aria-label="Go to previous question">← Back</button></div>'
+    : '';
 
   var html = '<div class="q-card" id="current-q">' +
     '<div class="q-dim-label ' + dl.cls + '">' + dl.label + '</div>' +
@@ -1070,13 +1070,7 @@ function renderQuestion(idx) {
     '<div class="q-text">' + q.text + '</div>' +
     '<p class="q-hint">' + q.hint + '</p>' +
     '<div class="opts" role="group" aria-label="Answer options">' + optsHtml + '</div>' +
-    '<div class="q-nav">' +
-      backBtn +
-      '<button class="btn-next" id="next-btn" ' + nextDisabled + ' onclick="goNext()">' +
-        nextLabel +
-        '<svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-      '</button>' +
-    '</div>' +
+    navHtml +
     '</div>';
 
   document.getElementById('q-mount').innerHTML = html;
@@ -1089,8 +1083,16 @@ function selectOpt(qIdx, optIdx) {
   state.answers[q.id] = optIdx;
   // Update score for this dimension
   recalcScores();
-  // Re-render to show the selection highlighted
-  renderQuestion(qIdx);
+  // Just toggle the "sel" class on the option buttons already in the DOM.
+  // Deliberately NOT calling renderQuestion() here - that rebuilds the
+  // whole card, which retriggers its fade-in/slide-up entrance animation
+  // and the scroll-into-view call. Doing that on every click, and then
+  // again a moment later when the next question renders, was causing the
+  // visible double-jump/"bounce" right before advancing.
+  var optButtons = document.querySelectorAll('#q-mount .opts .opt');
+  optButtons.forEach(function(btn, i) {
+    btn.classList.toggle('sel', i === optIdx);
+  });
 
   // Auto-advance to the next question shortly after selecting, so people
   // don't need a separate Continue click for every question. The short
