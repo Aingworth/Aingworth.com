@@ -374,6 +374,7 @@ a { color:inherit; text-decoration:none; }
 .rdb-label { font-family:var(--mono); font-size:10px; color:var(--teal-light); letter-spacing:.14em; text-transform:uppercase; margin-bottom:14px; }
 .rdb-text { font-size:16px; line-height:1.78; color:var(--muted-dark); }
 .rdb-text p + p { margin-top:14px; }
+.rdb-early-note { font-style:italic; font-size:14px; color:var(--mid-grey); border-left:2px solid rgba(107,191,176,.3); padding-left:14px; margin-bottom:16px; }
 
 /* All six patterns block (sits between "What this means" and "Where to invest first") */
 .result-patterns-block {
@@ -980,8 +981,13 @@ function determinePattern(c, k, a) {
   if (cp >= 60 && kp >= 60 && ap >= 60) {
     key = 'recognized_authority';
   }
-  // Strong Foundation: clarity + credibility strong, authority weak
-  else if (cp >= 55 && kp >= 55 && ap < 45) {
+  // Strong Foundation: clarity + credibility strong, authority weak.
+  // Threshold is ap < 60, not ap < 45: anything with authority at 60+
+  // alongside cp/kp at 55+ is already caught by Recognized Authority
+  // above, so this only needs to exclude that overlap - not leave a gap
+  // between 45 and 60 where a genuinely solid brand (e.g. 67/67/53) fell
+  // through every named branch and landed in the tiebreak instead.
+  else if (cp >= 55 && kp >= 55 && ap < 60) {
     key = 'strong_foundation';
   }
   // Promising Claim: clarity strong, credibility + authority weak
@@ -996,15 +1002,30 @@ function determinePattern(c, k, a) {
   else if (ap >= 45 && cp < 50 && kp < 50) {
     key = 'validated_generalist';
   }
-  // Tiebreak: whichever dimension is relatively strongest decides the pattern
-  else if (cp >= kp && cp >= ap) {
-    key = 'promising_claim';
-  }
-  else if (kp >= cp && kp >= ap) {
-    key = 'hidden_expert';
-  }
+  // Tiebreak: none of the named thresholds above fit, so rank by which
+  // corner is WEAKEST rather than which looked strongest. Every pattern is
+  // defined by what's missing, and every "where to invest first" points at
+  // the weakest corner - ranking by relative strength instead could label
+  // a brand with genuinely solid credibility as "weak credibility" just
+  // because clarity happened to be a point or two higher.
   else {
-    key = 'strong_foundation';
+    var minVal = Math.min(cp, kp, ap);
+    var cpWeak = cp === minVal;
+    var kpWeak = kp === minVal;
+    var apWeak = ap === minVal;
+
+    if (cpWeak && kpWeak) {
+      // Clarity and credibility are tied for weakest (or both sit below
+      // authority) - a two-way gap, which is what Validated Generalist
+      // is for: invest in clarity and credibility together.
+      key = 'validated_generalist';
+    } else if (apWeak) {
+      key = 'strong_foundation'; // authority is the single weak corner
+    } else if (cpWeak) {
+      key = 'hidden_expert';     // clarity is the single weak corner
+    } else {
+      key = 'promising_claim';   // credibility is the single weak corner
+    }
   }
 
   // Safety net - always return a key that exists in PATTERNS
@@ -1291,7 +1312,17 @@ function showResults() {
       '</div>';
   }).join('');
 
-  var descHtml = pattern.description.map(function(p) { return '<p>' + p + '</p>'; }).join('');
+  // When all three dimensions are under 45%, none of the named patterns'
+  // "strong" thresholds are met and the result comes from the tiebreak
+  // with nothing genuinely strong to point at. A flat qualifier line above
+  // the description keeps that honest, rather than letting the pattern's
+  // own copy (which is written assuming at least one real strength) read
+  // as if a strength has already been established.
+  var isEarlyStage = cpct < 45 && kpct < 45 && apct < 45;
+  var earlyStageNote = isEarlyStage
+    ? '<p class="rdb-early-note">All three dimensions are early stage. The pattern below shows where to start, not a strength you have already built.</p>'
+    : '';
+  var descHtml = earlyStageNote + pattern.description.map(function(p) { return '<p>' + p + '</p>'; }).join('');
 
   var leadName = escapeHtml(state.lead.name || '');
   var leadEmail = escapeHtml(state.lead.email || '');
