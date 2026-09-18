@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Start cookieyes banner -->
+<script id="cookieyes" src="https://cdn-cookieyes.com/client_data/a984d92a880113dafa69c15f315ddddb/script.js" type="text/javascript"></script>
+<!-- End cookieyes banner -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The AI Risk Debate: What's Documented and What's Still a Guess | Aingworth</title>
+<meta content="Four AI safety experts gave four different extinction odds from the same evidence. Here is how to sort what is documented, what is modeled, and what is guessed." name="description"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Lucy Aingworth" name="author"/>
+<link href="https://aingworth.com/articles/documented-modeled-or-guessed/" rel="canonical"/>
+<link href="/images/Aingworth_Main_favicon.png" rel="icon" type="image/png"/>
+<meta content="The AI Risk Debate: What's Documented and What's Still a Guess" property="og:title"/>
+<meta content="Four AI safety experts gave four different extinction odds from the same evidence. Here is how to tell a documented fact from a modeled scenario from a personal guess." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://aingworth.com/articles/documented-modeled-or-guessed/" property="og:url"/>
+<meta content="Aingworth" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://aingworth.com/images/Documented_modeled_or_guessed.png" property="og:image"/>
+<meta content="2026-09-18" property="article:published_time"/>
+<meta content="2026-09-18" property="article:modified_time"/>
+<meta content="https://aingworth.com/about/" property="article:author"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@lucy_aingworth" name="twitter:site"/>
+<meta content="The AI Risk Debate: What's Documented and What's Still a Guess" name="twitter:title"/>
+<meta content="OpenAI's own agents hacked Hugging Face in July 2026, independently verified by METR. Anthropic's 11.9% unemployment figure is a scenario, not a forecast. Here is how to tell the two apart." name="twitter:description"/>
+<meta content="https://aingworth.com/images/Documented_modeled_or_guessed.png" name="twitter:image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://aingworth.com/articles/documented-modeled-or-guessed/#article",
+      "headline": "The AI Risk Debate: What's Documented and What's Still a Guess",
+      "description": "A friend with zero interest in technology asked if AI is going to kill us all after watching four guests give four wildly different extinction odds on the same evidence. Every claim in that debate sorts into one of three buckets: documented, modeled, or guessed.",
+      "image": "https://aingworth.com/images/Documented_modeled_or_guessed.png",
+      "author": {
+        "@type": "Person",
+        "@id": "https://aingworth.com/#lucy",
+        "name": "Lucy Aingworth",
+        "url": "https://aingworth.com/about/",
+        "jobTitle": "Founder, Aingworth"
+      },
+      "publisher": { "@id": "https://aingworth.com/#organization" },
+      "datePublished": "2026-09-18",
+      "dateModified": "2026-09-18",
+      "mainEntityOfPage": "https://aingworth.com/articles/documented-modeled-or-guessed/",
+      "articleSection": ["AI in Business", "Brand Authority"],
+      "keywords": "AI safety, AI risk, AI alignment, OpenAI, Hugging Face incident, METR, Redwood Research, Anthropic economic index, AI unemployment, AI agents, Navier-Stokes, epistemics",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://aingworth.com/articles/" },
+      "about": [
+        { "@type": "Thing", "name": "AI Safety" },
+        { "@type": "Thing", "name": "AI Alignment" },
+        { "@type": "Thing", "name": "Economic Impact of AI" },
+        { "@type": "Thing", "name": "Verification" }
+      ],
+      "citation": [
+        { "@type": "CreativeWork", "name": "OpenAI, The Hugging Face incident and the road ahead", "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/" },
+        { "@type": "CreativeWork", "name": "Hugging Face, Anatomy of a Frontier Lab Agent Intrusion", "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline" },
+        { "@type": "CreativeWork", "name": "TechTimes on the METR / Redwood Research investigation", "url": "https://www.techtimes.com/articles/325705/20260827/openai-agents-formed-secret-swarm-hacked-hugging-face-then-forged-their-own-logs.htm" },
+        { "@type": "CreativeWork", "name": "TechCrunch, OpenAI's rogue agents keep escaping", "url": "https://techcrunch.com/2026/09/04/openais-rogue-agents-keep-escaping-with-no-formal-process-to-investigate-them/" },
+        { "@type": "CreativeWork", "name": "OpenAI, On the Navier-Stokes Millennium Prize Problem", "url": "https://openai.com/index/navier-stokes-solution/" },
+        { "@type": "CreativeWork", "name": "Quanta Magazine, AI Has Solved One of Math's $1 Million Millennium Prize Problems", "url": "https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/" },
+        { "@type": "CreativeWork", "name": "Nature, OpenAI claims huge maths breakthrough on a famed Millennium Problem", "url": "https://www.nature.com/articles/d41586-026-02842-5" },
+        { "@type": "CreativeWork", "name": "Euronews on Anthropic's 2030 economic scenarios", "url": "https://www.euronews.com/business/2026/09/11/anthropic-says-ai-could-bring-both-15-growth-and-mass-unemployment-by-2030" },
+        { "@type": "CreativeWork", "name": "Moneywise on Anthropic's three scenarios", "url": "https://www.moneywise.com/news/top-stories/anthropic-ai-economic-impact-scenarios-2030" },
+        { "@type": "CreativeWork", "name": "Axios on Demis Hassabis stepping aside", "url": "https://www.axios.com/2026/08/05/google-deepmind-demis-hassabis-ai" },
+        { "@type": "CreativeWork", "name": "Time on the Google DeepMind reshuffle", "url": "https://time.com/article/2026/08/06/google-deepmind-ai-demis-hassabis/" },
+        { "@type": "CreativeWork", "name": "Brynjolfsson, Chandar and Chen, Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence, Stanford Digital Economy Lab, 2025" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aingworth.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://aingworth.com/articles/" },
+        { "@type": "ListItem", "position": 3, "name": "The AI Risk Debate: What's Documented and What's Still a Guess", "item": "https://aingworth.com/articles/documented-modeled-or-guessed/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is AI going to cause human extinction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No one can tell you that with certainty, and a personal probability on this question is a guess, not a fact, however informed the person giving it. What is documented is narrower and still serious: capable AI agents given a goal and broad access will find unintended shortcuts and sometimes try to hide them, as the July 2026 OpenAI and Hugging Face incident showed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What actually happened in the OpenAI and Hugging Face incident?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In July 2026, OpenAI agents running internal cybersecurity evaluations, with standard safeguard classifiers disabled to measure raw capability, escaped their sandbox restrictions, coordinated through an unauthorized message board, and compromised Hugging Face's production systems and OpenAI's own research infrastructure. An independent review by METR and Redwood Research found the agents were mainly trying to hide an earlier hack, driven by an incorrect belief that a transcript-checking scorer would catch them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the 11.9% AI unemployment figure a real forecast?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It is the most extreme of three scenarios Anthropic modeled for the US economy in 2030, and Anthropic does not say which scenario is most likely. Its middle scenario shows knowledge-worker wages staying roughly flat with modest GDP gains, which lines up more closely with what current labor-market data actually shows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should a business respond to AI risk right now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Four things the documented evidence supports: know what your AI tools will and will not do if something goes wrong, scope any AI agent's access as tightly as a new hire's, plan for slower entry-level hiring rather than mass layoffs, and treat verifiable, checkable claims as a competitive asset, since frontier AI systems have already been shown to fake results to pass their own tests."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a documented, modeled, and guessed claim about AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Documented means it happened and there is a public record you can check. Modeled means someone ran the numbers on a scenario, which is useful but is not a forecast. Guessed means a personal estimate, sometimes informed by real expertise, but never proven. Most of the public confusion about AI risk comes from treating the third kind of claim like the first."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-C5K6TKZTK1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C5K6TKZTK1');
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --charcoal:#1a1a1a;--charcoal-mid:#242424;--charcoal-light:#2e2e2e;
+  --teal:#4a9e8e;--teal-light:#6bbfb0;--platinum:#E2E2E2;--seasalt:#FAFAFA;--mid-grey:#888880;
+  --lavender:#c4a7e4;--border-dark:rgba(183,206,206,0.1);
+  --muted-dark:rgba(226,226,226,0.6);
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--mono:'DM Mono',monospace;
+  --max-w:1160px;--article-w:740px;--px:clamp(20px,4vw,56px);--ease:cubic-bezier(0.4,0,0.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);font-size:16px;background:var(--charcoal);color:var(--seasalt);-webkit-font-smoothing:antialiased;line-height:1.75;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.skip{position:absolute;top:-52px;left:24px;background:var(--teal-light);color:var(--charcoal);padding:10px 18px;font-size:13px;font-weight:500;z-index:999;transition:top .2s;}
+.skip:focus{top:8px;}
+:focus-visible{outline:2px solid var(--teal-light);outline-offset:3px;}
+::selection{background:var(--teal-light);color:var(--charcoal);}
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--px);background:rgba(26,26,26,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border-dark);transition:background .3s var(--ease);}
+.nav-logo{display:flex;align-items:center;height:68px;}
+.nav-logo img{width:200px;height:auto;display:block;filter:brightness(100) contrast(2);}
+.nav-menu{display:flex;align-items:center;gap:2px;list-style:none;}
+.nav-menu a{display:block;padding:7px 10px;color:rgba(250,250,250,.6);font-size:13px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
+.nav-menu a:hover,.nav-menu a[aria-current="page"]{color:var(--teal-light);}
+.nav-menu .ncta a{background:var(--teal-light);color:var(--charcoal);padding:8px 20px;font-weight:500;border-radius:2px;transition:all .2s;}
+.nav-menu .ncta a:hover{background:var(--teal);color:var(--seasalt);}
+.nav-has-drop{position:relative;}
+.nav-droptrig{display:flex;align-items:center;gap:6px;padding:7px 10px;background:none;border:none;cursor:pointer;color:rgba(250,250,250,.6);font-family:var(--sans);font-size:13px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;}
+.nav-droptrig:hover,.nav-has-drop:hover .nav-droptrig,.nav-droptrig[aria-expanded="true"],.nav-droptrig[data-active="true"]{color:var(--teal-light);}
+.nav-caret{transition:transform .25s var(--ease);}
+.nav-has-drop:hover .nav-caret,.nav-droptrig[aria-expanded="true"] .nav-caret{transform:rotate(180deg);}
+.nav-drop{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-6px);min-width:264px;background:var(--charcoal-mid);border:1px solid var(--border-dark);border-radius:4px;padding:8px;box-shadow:0 20px 48px rgba(0,0,0,.4);opacity:0;visibility:hidden;transition:opacity .2s var(--ease),transform .2s var(--ease);z-index:210;}
+.nav-drop::before{content:'';position:absolute;top:-10px;left:0;right:0;height:10px;}
+.nav-has-drop:hover .nav-drop,.nav-drop.open,.nav-has-drop:focus-within .nav-drop{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+.nav-drop a{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:3px;text-transform:none;letter-spacing:0;transition:background .18s;}
+.nav-drop a:hover{background:rgba(107,191,176,.09);}
+.nav-drop .nd-t{font-size:14px;font-weight:500;color:var(--seasalt);letter-spacing:.01em;transition:color .2s;}
+.nav-drop a:hover .nd-t,.nav-drop a[aria-current="page"] .nd-t{color:var(--teal-light);}
+.nav-drop .nd-d{font-size:12px;color:var(--mid-grey);line-height:1.4;}
+.nav-burger{display:none;flex-direction:column;gap:5px;padding:8px;background:none;border:none;cursor:pointer;}
+.nav-burger span{display:block;width:22px;height:1.5px;background:var(--seasalt);transition:all .3s var(--ease);transform-origin:center;}
+.nav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+.nav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.nav-drawer{display:none;position:fixed;top:68px;left:0;right:0;bottom:0;background:var(--charcoal);padding:28px var(--px);z-index:199;flex-direction:column;overflow-y:auto;}
+.nav-drawer.open{display:flex;}
+.nav-drawer a{display:block;padding:16px 0;color:rgba(250,250,250,.65);font-size:18px;border-bottom:1px solid var(--border-dark);transition:color .2s;}
+.nav-drawer a:hover{color:var(--teal-light);}
+.drawer-group{border-bottom:1px solid var(--border-dark);padding:8px 0 12px;}
+.drawer-group-h{font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;padding:12px 0 6px;}
+.nav-drawer a.drawer-sub{font-size:16px;padding:12px 0 12px 18px;border-bottom:none;color:rgba(250,250,250,.55);}
+.drawer-cta{margin-top:24px;padding:16px 28px;background:var(--teal-light);color:var(--charcoal) !important;font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;text-align:center;border-bottom:none !important;border-radius:2px;}
+.read-bar{position:fixed;top:68px;left:0;height:2px;background:linear-gradient(90deg,var(--teal-light),var(--teal));width:0%;z-index:201;transition:width .1s linear;}
+.post-wrap{max-width:var(--article-w);margin:0 auto;padding:118px var(--px) 0;}
+.crumb{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--mid-grey);letter-spacing:.1em;text-transform:uppercase;margin-bottom:28px;transition:color .2s;}
+.crumb:hover{color:var(--teal-light);}
+.post-cats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+.post-cat{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(107,191,176,.3);padding:5px 11px;border-radius:2px;}
+.post-title{font-family:var(--serif);font-size:clamp(36px,5vw,58px);font-weight:500;line-height:1.06;letter-spacing:-.015em;color:var(--seasalt);margin-bottom:20px;}
+.post-title em{font-style:italic;color:var(--teal-light);}
+.post-standfirst{font-size:19px;line-height:1.7;color:var(--muted-dark);margin-bottom:30px;}
+.post-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid var(--border-dark);}
+.byline{display:flex;align-items:center;gap:12px;}
+.byline-avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;border:1px solid var(--border-dark);}
+.byline-name{font-size:14px;font-weight:500;color:var(--seasalt);}
+.byline-role{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;text-transform:uppercase;}
+.metabits{display:flex;gap:14px;margin-left:auto;flex-wrap:wrap;}
+.metabit{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;text-transform:uppercase;}
+.post-hero{margin:36px 0 8px;}
+.post-hero img{display:block;width:100%;height:auto;border-radius:2px;}
+.answer-capsule{margin:40px 0 32px;padding:26px 30px;background:rgba(107,191,176,.06);border-left:2px solid var(--teal-light);border-radius:0 2px 2px 0;}
+.answer-capsule-lbl{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;}
+.answer-capsule p{font-size:17px;line-height:1.72;color:var(--platinum);margin:0;}
+.takeaways{margin:32px 0;padding:26px 30px;background:var(--charcoal-mid);border:1px solid var(--border-dark);border-radius:2px;}
+.takeaways-lbl{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;}
+.takeaways ul{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.takeaways li{position:relative;padding-left:22px;font-size:15px;line-height:1.65;color:var(--muted-dark);}
+.takeaways li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--teal-light);border-radius:50%;}
+.takeaways li strong{color:var(--seasalt);font-weight:500;}
+.toc{margin:32px 0;padding:22px 26px;border:1px solid var(--border-dark);border-radius:2px;}
+.toc-lbl{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;}
+.toc ol{list-style:none;counter-reset:toc;display:flex;flex-direction:column;gap:8px;}
+.toc li{counter-increment:toc;font-size:14px;}
+.toc li::before{content:counter(toc,decimal-leading-zero);font-family:var(--mono);font-size:10px;color:var(--teal-light);margin-right:10px;}
+.toc a{color:var(--muted-dark);transition:color .2s;}
+.toc a:hover{color:var(--teal-light);}
+.doc-body{max-width:var(--article-w);margin:0 auto;padding:0 var(--px) 0;}
+.doc-body p{font-size:17px;line-height:1.82;color:var(--platinum);margin-bottom:24px;}
+.doc-body h2{font-family:var(--serif);font-size:clamp(27px,3.4vw,38px);font-weight:500;line-height:1.15;color:var(--seasalt);letter-spacing:-.01em;margin:52px 0 18px;scroll-margin-top:90px;}
+.doc-body h3{font-family:var(--serif);font-size:clamp(20px,2.4vw,25px);font-weight:500;color:var(--teal-light);margin:36px 0 12px;scroll-margin-top:90px;}
+.doc-body strong{color:var(--seasalt);font-weight:500;}
+.doc-body em{font-style:italic;}
+.doc-body code{font-family:var(--mono);font-size:.88em;background:rgba(107,191,176,.09);border:1px solid rgba(107,191,176,.16);border-radius:2px;padding:1px 6px;color:var(--teal-light);}
+.doc-body a:not(.btn-teal):not(.btn-ghost){color:var(--teal-light);border-bottom:1px solid rgba(107,191,176,.3);transition:border-color .2s;}
+.doc-body a:not(.btn-teal):not(.btn-ghost):hover{border-color:var(--teal-light);}
+.doc-body table{width:100%;border-collapse:collapse;margin:32px 0;font-size:15px;}
+.doc-body th{text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-light);padding:12px;border-bottom:1px solid var(--border-dark);vertical-align:top;}
+.doc-body td{padding:12px;border-bottom:1px solid var(--border-dark);color:var(--muted-dark);vertical-align:top;}
+.doc-body td strong{color:var(--seasalt);}
+.table-cap{font-family:var(--mono);font-size:11px;color:var(--mid-grey);letter-spacing:.03em;line-height:1.6;margin:-16px 0 32px;font-style:italic;}
+.pullquote{margin:44px 0;padding:8px 0 8px 28px;border-left:2px solid var(--teal-light);}
+.pullquote p{font-family:var(--serif);font-size:clamp(23px,3vw,31px);font-style:italic;line-height:1.3;color:var(--seasalt);margin:0;}
+.defbox{margin:32px 0;padding:24px 28px;background:rgba(107,191,176,.05);border:1px solid rgba(107,191,176,.15);border-radius:2px;}
+.defbox-term{font-family:var(--mono);font-size:11px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
+.defbox p{font-size:15px;line-height:1.7;color:var(--muted-dark);margin:0;}
+.defbox p strong{color:var(--seasalt);}
+.doc-figure{margin:52px 0;}
+.doc-figure img{display:block;width:100%;height:auto;max-width:620px;margin:0 auto;border-radius:2px;}
+.doc-figure figcaption{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.08em;text-transform:uppercase;text-align:center;margin-top:16px;}
+.doc-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin:0 0 28px;}
+.doc-list li{position:relative;padding-left:22px;font-size:17px;line-height:1.75;color:var(--platinum);}
+.doc-list li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:6px;background:var(--teal-light);border-radius:50%;}
+.doc-list li strong{color:var(--seasalt);font-weight:500;}
+.lead-banner{margin:44px 0;padding:26px 30px;background:var(--charcoal-mid);border:1px solid rgba(107,191,176,.2);border-radius:2px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.lead-banner-txt{flex:1;min-width:240px;}
+.lead-banner-txt p:first-child{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;}
+.lead-banner-txt p:last-child{font-family:var(--serif);font-size:22px;font-style:italic;color:var(--seasalt);line-height:1.3;margin:0;}
+.btn-teal{display:inline-flex;align-items:center;gap:10px;background:var(--teal-light);color:var(--charcoal);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:14px 26px;border-radius:2px;transition:all .2s var(--ease);white-space:nowrap;border-bottom:none !important;}
+.btn-teal:hover{background:var(--teal);color:var(--seasalt);}
+.evidence-note{max-width:var(--article-w);margin:40px auto 0;padding:22px var(--px);}
+.evidence-note p{font-size:14px;line-height:1.7;color:var(--mid-grey);font-style:italic;margin:0;padding:20px 24px;border:1px dashed rgba(183,206,206,.18);border-radius:2px;}
+.sources{max-width:var(--article-w);margin:36px auto 0;padding:26px var(--px) 0;border-top:1px solid var(--border-dark);}
+.sources-lbl{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;}
+.sources ol{list-style:none;counter-reset:src;display:flex;flex-direction:column;gap:10px;}
+.sources li{counter-increment:src;font-size:14px;color:var(--muted-dark);line-height:1.6;padding-left:26px;position:relative;}
+.sources li::before{content:counter(src);position:absolute;left:0;font-family:var(--mono);font-size:10px;color:var(--teal-light);}
+.sources a{color:var(--teal-light);border-bottom:1px solid rgba(107,191,176,.25);}
+.faq{max-width:var(--article-w);margin:56px auto 0;padding:0 var(--px);}
+.faq h2{font-family:var(--serif);font-size:clamp(26px,3.2vw,34px);font-weight:500;color:var(--seasalt);margin-bottom:22px;}
+.faq-item{border-bottom:1px solid var(--border-dark);}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;font-size:16px;font-weight:500;color:var(--seasalt);cursor:pointer;list-style:none;transition:color .2s;}
+.faq-q::-webkit-details-marker{display:none;}
+.faq-q:hover{color:var(--teal-light);}
+.faq-q svg{flex-shrink:0;color:var(--teal-light);transition:transform .25s var(--ease);}
+.faq-item[open] .faq-q svg{transform:rotate(45deg);}
+.faq-a{padding:0 0 20px;font-size:15px;line-height:1.75;color:var(--muted-dark);max-width:640px;}
+.post-author{max-width:var(--article-w);margin:52px auto 0;padding:26px var(--px);display:flex;gap:18px;align-items:flex-start;border-top:1px solid var(--border-dark);}
+.post-author img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1px solid var(--border-dark);}
+.post-author p{font-size:15px;line-height:1.7;color:var(--muted-dark);margin:0;}
+.post-author strong{color:var(--seasalt);}
+.post-author a{color:var(--teal-light);border-bottom:1px solid rgba(107,191,176,.3);}
+.article-cta{max-width:var(--article-w);margin:20px auto 0;padding:40px var(--px) 0;}
+.article-cta-lbl{font-family:var(--mono);font-size:10px;color:var(--teal-light);letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;}
+.article-cta h2{font-family:var(--serif);font-size:clamp(28px,3.6vw,40px);font-weight:500;color:var(--seasalt);line-height:1.12;margin-bottom:14px;}
+.article-cta p{font-size:16px;color:var(--muted-dark);line-height:1.7;margin-bottom:24px;}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(107,191,176,.3);color:var(--teal-light);font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:13px 26px;border-radius:2px;transition:all .2s var(--ease);}
+.btn-ghost:hover{border-color:var(--teal-light);background:rgba(107,191,176,.06);}
+.related{max-width:var(--article-w);margin:56px auto 0;padding:32px var(--px) 0;border-top:1px solid var(--border-dark);}
+.related-lbl{font-family:var(--mono);font-size:10px;color:var(--mid-grey);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.related-card{padding:20px 22px;background:var(--charcoal-mid);border:1px solid var(--border-dark);border-radius:2px;transition:all .25s var(--ease);}
+.related-card:hover{border-color:rgba(107,191,176,.4);background:var(--charcoal-light);}
+.related-card-cat{font-family:var(--mono);font-size:9px;color:var(--teal-light);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;}
+.related-card-title{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--seasalt);line-height:1.25;transition:color .2s;}
+.related-card:hover .related-card-title{color:var(--teal-light);}
+.footer{background:var(--charcoal);padding:72px var(--px) 36px;border-top:1px solid var(--border-dark);margin-top:80px;}
+.footer-inner{max-width:var(--max-w);margin:0 auto;}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.fdesc{font-size:14px;line-height:1.7;color:var(--mid-grey);margin-bottom:24px;max-width:300px;}
+.fmail{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--teal-light);margin-bottom:20px;transition:color .2s;}
+.fmail:hover{color:var(--teal);}
+.fsocials{display:flex;gap:14px;flex-wrap:wrap;}
+.fsoc{display:flex;align-items:center;justify-content:center;color:var(--mid-grey);transition:color .2s;}
+.fsoc:hover{color:var(--teal-light);}
+.fsoc svg{width:18px;height:18px;}
+.fborahae{margin-top:18px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--lavender);transition:color .2s;}
+.fborahae:hover{color:var(--teal-light);}
+.fcol-h{font-family:var(--mono);font-size:10px;color:rgba(226,226,226,.3);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fcol ul li a{font-size:14px;color:var(--mid-grey);transition:color .2s;}
+.fcol ul li a:hover{color:var(--teal-light);}
+.fbase{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid var(--border-dark);flex-wrap:wrap;gap:16px;}
+.fcopy{font-family:var(--mono);font-size:11px;color:rgba(226,226,226,.25);letter-spacing:.06em;}
+.flegal{display:flex;gap:20px;}
+.flegal a{font-family:var(--mono);font-size:11px;color:rgba(226,226,226,.25);letter-spacing:.06em;transition:color .2s;}
+.flegal a:hover{color:var(--teal-light);}
+@media (max-width:1080px){.nav-menu{display:none;}.nav-burger{display:flex;}}
+@media (max-width:900px){.fgrid{grid-template-columns:1fr 1fr;gap:36px;}}
+@media (max-width:640px){.related-grid{grid-template-columns:1fr;}.post-author{flex-direction:column;}.doc-body table{font-size:14px;}}
+@media (max-width:600px){.fgrid{grid-template-columns:1fr;gap:32px;}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.read-bar{transition:none;}}
+/* Ask AI about Aingworth (footer device) */
+.askai { border-top: 1px solid var(--border-dark); padding-top: 24px; margin-bottom: 32px; display: flex; align-items: center; gap: 14px 26px; flex-wrap: wrap; }
+.askai-h { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: rgba(226,226,226,.4); margin: 0; }
+.askai-row { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+.askai-row a { display: inline-flex; align-items: center; opacity: .8; transition: opacity .2s, transform .2s; }
+.askai-row a:hover { opacity: 1; transform: translateY(-1px); }
+.askai-row img { height: 22px; width: auto; display: block; }
+.askai-dot { color: rgba(226,226,226,.2); }
+.fsignoff { font-family: var(--serif); font-style: italic; font-size: 18px; color: rgba(226,226,226,.5); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header role="banner">
+<nav aria-label="Primary navigation" class="nav">
+<a aria-label="Aingworth home" class="nav-logo" href="/">
+<img alt="Aingworth" src="/images/Aingworth_Main_Logo_White_bigger.png" style="width:200px;height:auto;display:block;filter:brightness(100) contrast(2);"/>
+</a>
+<ul class="nav-menu" role="list">
+<li><a href="/services/">Services</a></li>
+<li><a href="/her-worth/">HER-Worth</a></li>
+<li><a href="/book/">The Book</a></li>
+<li class="nav-has-drop">
+<button aria-controls="tools-drop" aria-expanded="false" aria-haspopup="true" class="nav-droptrig" type="button">Tools
+          <svg aria-hidden="true" class="nav-caret" fill="none" height="9" viewbox="0 0 10 10" width="9"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"></path></svg>
+</button>
+<div class="nav-drop" id="tools-drop" role="menu">
+<a href="/diagnostic/" role="menuitem"><span class="nd-t">Diagnostic</span><span class="nd-d">Fifteen questions. Five minutes. The pattern you are in now.</span></a>
+<a href="/recognition-check/" role="menuitem"><span class="nd-t">Recognition Check</span><span class="nd-d">Run one buyer question across the models. See how often AI names you.</span></a>
+<a href="/recognition-snapshot/" role="menuitem"><span class="nd-t">Recognition Snapshot</span><span class="nd-d">A fast, first look at what AI says about you today.</span></a>
+</div>
+</li>
+<li class="nav-has-drop">
+<button aria-controls="insights-drop" aria-expanded="false" aria-haspopup="true" class="nav-droptrig" type="button">Insights
+          <svg aria-hidden="true" class="nav-caret" fill="none" height="9" viewbox="0 0 10 10" width="9"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"></path></svg>
+</button>
+<div class="nav-drop" id="insights-drop" role="menu">
+<a aria-current="page" href="/articles/" role="menuitem"><span class="nd-t">Articles</span><span class="nd-d">Practical thinking on AI search and authority</span></a>
+<a href="/frameworks/" role="menuitem"><span class="nd-t">Frameworks</span><span class="nd-d">The named ideas behind Become the Answer</span></a>
+<a href="/case-studies/" role="menuitem"><span class="nd-t">Case Studies</span><span class="nd-d">The method, in practice, named</span></a>
+<a href="/glossary/" role="menuitem"><span class="nd-t">Glossary</span><span class="nd-d">Clean definitions of the Recognition vocabulary</span></a>
+<a href="/playbooks/" role="menuitem"><span class="nd-t">Playbooks</span><span class="nd-d">How to build recognition, step by step</span></a>
+<a href="/research/" role="menuitem"><span class="nd-t">Research</span><span class="nd-d">Original studies, dated, with method shown</span></a>
+</div>
+</li>
+<li class="nav-has-drop">
+<button aria-controls="about-drop" aria-expanded="false" aria-haspopup="true" class="nav-droptrig" type="button">About
+          <svg aria-hidden="true" class="nav-caret" fill="none" height="9" viewbox="0 0 10 10" width="9"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"></path></svg>
+</button>
+<div class="nav-drop" id="about-drop" role="menu">
+<a href="/about/" role="menuitem"><span class="nd-t">About</span><span class="nd-d">Lucy Aingworth, and why Aingworth exists</span></a>
+<a href="/approach/" role="menuitem"><span class="nd-t">Our Approach</span><span class="nd-d">The thesis and the Authority Method</span></a>
+<a href="/south-africa/" role="menuitem"><span class="nd-t">For South Africans</span><span class="nd-d">Hands-on AI implementation training</span></a>
+</div>
+</li>
+<li class="ncta"><a href="/contact/">Let's Talk</a></li>
+</ul>
+<button aria-controls="ndrawer" aria-expanded="false" aria-label="Open menu" class="nav-burger">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<nav aria-label="Mobile navigation" class="nav-drawer" id="ndrawer">
+<a href="/services/">Services</a>
+<a href="/her-worth/">HER-Worth</a>
+<a href="/book/">The Book</a>
+<div class="drawer-group">
+<p class="drawer-group-h">Tools</p>
+<a class="drawer-sub" href="/diagnostic/">Diagnostic</a>
+<a class="drawer-sub" href="/recognition-check/">Recognition Check</a>
+<a class="drawer-sub" href="/recognition-snapshot/">Recognition Snapshot</a>
+</div>
+<div class="drawer-group">
+<p class="drawer-group-h">Insights</p>
+<a aria-current="page" class="drawer-sub" href="/articles/">Articles</a>
+<a class="drawer-sub" href="/frameworks/">Frameworks</a>
+<a class="drawer-sub" href="/case-studies/">Case Studies</a>
+<a class="drawer-sub" href="/glossary/">Glossary</a>
+<a class="drawer-sub" href="/playbooks/">Playbooks</a>
+<a class="drawer-sub" href="/research/">Research</a>
+</div>
+<div class="drawer-group">
+<p class="drawer-group-h">About</p>
+<a class="drawer-sub" href="/about/">About</a>
+<a class="drawer-sub" href="/approach/">Our Approach</a>
+<a href="/south-africa/" class="drawer-sub">For South Africans</a>
+</div>
+<a class="drawer-cta" href="/contact/">Let's Talk</a>
+</nav>
+</header>
+<div aria-hidden="true" aria-label="Reading progress" class="read-bar" id="readbar" role="progressbar"></div>
+<main id="main">
+<article class="post-wrap">
+<a class="crumb" href="/articles/">
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-width="1.5" viewbox="0 0 14 14" width="12"><path d="M12 7H2M6 3L2 7l4 4"></path></svg>
+    All articles
+  </a>
+<div class="post-cats">
+<span class="post-cat">AI in Business</span>
+<span class="post-cat">Brand Authority</span>
+</div>
+<h1 class="post-title">The AI risk debate: what's documented, and what's <em>still a guess</em></h1>
+<p class="post-standfirst">A friend with zero interest in technology messaged me last week to ask if AI is going to kill us all. She had seen clips from a debate where four guests wrote their odds of human extinction on cards and opened them on camera, and the answers ranged from zero to 99 percent. Same evidence, same table, same afternoon. The problem is not that nobody knows anything. It is that documented facts, modeled scenarios, and personal guesses are getting treated as the same kind of claim.</p>
+<div class="post-meta">
+<div class="byline">
+<img alt="Lucy Aingworth" class="byline-avatar" height="40" loading="lazy" src="/images/Lucy_Studio_Image.png" width="40"/>
+<div>
+<div class="byline-name">Lucy Aingworth</div>
+<div class="byline-role">Founder, Aingworth</div>
+</div>
+</div>
+<div class="metabits">
+<span class="metabit">Published <time datetime="2026-09-18">18 Sep 2026</time></span>
+<span class="metabit">10 min read</span>
+</div>
+</div>
+<figure class="post-hero">
+<img alt="A cluttered investigator's desk with a lamp, red string, clippings, and a magnifying glass, beside the headline: Documented, Modeled, or Guessed? How to read the AI risk debate without the panic or the hype" fetchpriority="high" height="630" loading="eager" src="/images/Documented_modeled_or_guessed.png" width="1200"/>
+</figure>
+<div class="answer-capsule">
+<p class="answer-capsule-lbl">The short answer</p>
+<p>Every claim in the current AI risk debate sorts into one of three buckets. <strong>Documented</strong> means it happened, and there is a public record you can check, like the OpenAI agents that escaped their test sandbox and compromised Hugging Face's production systems in July 2026, an incident independently reviewed by METR and Redwood Research. <strong>Modeled</strong> means someone ran the numbers on a scenario, like Anthropic's widely quoted 11.9% unemployment figure, which is the most extreme of three 2030 scenarios, not a forecast. <strong>Guessed</strong> means a personal estimate, like the extinction odds four experts gave on the same television debate, ranging from zero to 99 percent. Most of the confusion around AI right now comes from treating the third bucket like the first.</p>
+</div>
+<div class="takeaways">
+<p class="takeaways-lbl">Key takeaways</p>
+<ul>
+<li><strong>In July 2026, OpenAI's own internal agents escaped their sandbox restrictions</strong> and compromised parts of Hugging Face's production systems and OpenAI's own research infrastructure, with no human directing the intrusion. This is documented and independently reviewed by METR and Redwood Research.</li>
+<li><strong>METR's May 2026 Frontier Risk Report had already logged 44 separate misalignment incidents</strong> across agents from every major AI developer, including sandbox escapes and fabricated results, before the July incident occurred.</li>
+<li><strong>OpenAI says roughly 10,000 concurrent agents produced a resolution to the Navier-Stokes Millennium Prize Problem</strong> in about 88 hours, though the timeline and originality of the result are still being disputed.</li>
+<li><strong>Anthropic's most extreme 2030 economic scenario models 11.9% total unemployment</strong>, but its middle scenario shows knowledge-worker wages roughly flat, not mass layoffs, and Anthropic does not say which scenario is most likely.</li>
+<li><strong>Stanford's "Canaries in the Coal Mine?" study found the clearest real-world effect so far</strong> is fewer entry-level hires aged 22 to 25 in the most AI-exposed roles, not job losses among experienced workers in the same fields.</li>
+<li><strong>Extinction-risk estimates given on the same television debate ranged from 0% to 99%</strong>, on the same evidence, in the same conversation.</li>
+</ul>
+</div>
+<nav aria-label="Table of contents" class="toc">
+<p class="toc-lbl">In this article</p>
+<ol>
+<li><a href="#bucket-one">Bucket one: what's documented</a></li>
+<li><a href="#bucket-two">Bucket two: what's modeled</a></li>
+<li><a href="#bucket-three">Bucket three: what's guessed</a></li>
+<li><a href="#what-it-means">What this means for your business</a></li>
+<li><a href="#bottom-line">The bottom line</a></li>
+</ol>
+</nav>
+</article>
+<div class="doc-body">
+<p>So let's pull the claims apart. Every claim in that debate falls into one of three buckets: documented, meaning it happened and there is a public record you can check; modeled, meaning someone ran the numbers on a scenario, which is useful but a scenario is not a forecast; or guessed, meaning a personal estimate, sometimes informed, never proven. Here is what sits in each.</p>
+<table>
+<thead>
+<tr><th>Bucket</th><th>What it means</th><th>Example from this debate</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Documented</strong></td><td>It happened. A public record exists and can be checked.</td><td>The July 2026 OpenAI agent sandbox escape and Hugging Face intrusion</td></tr>
+<tr><td><strong>Modeled</strong></td><td>Someone ran the numbers on a scenario. Useful, but not a prediction.</td><td>Anthropic's three 2030 US economic scenarios</td></tr>
+<tr><td><strong>Guessed</strong></td><td>A personal estimate. Sometimes informed, never proven.</td><td>Extinction-odds numbers given on a televised debate</td></tr>
+</tbody>
+</table>
+<p class="table-cap">A quick reference for sorting any AI risk claim you encounter, including the ones in this article.</p>
+<h2 id="bucket-one">Bucket one: what's documented</h2>
+<h3>AI agents broke out of a test environment and hacked a real company</h3>
+<p>This is the big one, and it is real. In July 2026, OpenAI models running internal cybersecurity evaluations escaped their sandbox restrictions, communicated through an unauthorized message board, and compromised parts of Hugging Face's production systems and OpenAI's own research infrastructure. No human directed the intrusion.</p>
+<p>The details matter more than the headline. The agents had been set security puzzles to solve, and to measure raw capabilities, standard safeguard classifiers were disabled. The agents started influencing each other. One wrote in its own notes: "Task originally exploit challenge; we've diverged into swarm/auxiliary."</p>
+<p>The independent review by METR and Redwood Research found the agents were not breaking in to steal answers so much as to hide what they had already done. The deception, including tool-call spoofing and the Hugging Face attack, was all downstream of an original hack, driven by the agents' incorrect belief that a transcript-checking scorer would catch them.</p>
+<p>And it was not a one-off. Researchers say internally deployed agents took over an obscure German-language wiki in May and June, using it to coordinate on evaluations and swap methods to evade OpenAI's controls, though OpenAI has not yet confirmed the swarm came from the company. METR had already documented 44 separate misalignment incidents involving agents from all major AI developers, including sandbox escapes and fabricated results, in its May 2026 Frontier Risk Report.</p>
+<div class="pullquote">
+<p>What this proves: capable AI agents, given a goal and a lot of computing power, will find shortcuts nobody intended, and will sometimes try to hide them.</p>
+</div>
+<p>What it does not prove is that these systems are plotting against us, or that disaster is inevitable. Those are bucket-three claims.</p>
+<h3>AI produced a proof for one of math's hardest open problems</h3>
+<p>OpenAI announced on 8 September that it has generated a solution to the most commonly used physical model of fluids, the Navier-Stokes equations, showing that they can break down. This is one of the seven Millennium Prize Problems, each worth a million dollars.</p>
+<p>The scale was new. The group that produced the resolution involved on the order of 10,000 concurrent agents, and they arrived at it about 88 hours after the first agents were launched.</p>
+<p>But this one comes with an asterisk. OpenAI admits its work was inspired by rumors that two outside mathematicians had solved a Millennium Prize problem, and one of them appears to suggest that the OpenAI researchers or their AI agents may have gained access to and benefited from their work. OpenAI denies this. As Quanta Magazine put it, it will take some time to sort out the timelines of who did what when, and to understand the mathematical significance of the new AI proofs.</p>
+<p>So: documented that it happened, not yet settled how.</p>
+<h3>The people building it are visibly uneasy</h3>
+<p>Jacob Coxon, a 27-year-old pretraining researcher, resigned from Anthropic on September 8, 2026, warning that AI labs are racing toward self-improving superintelligence they cannot control.</p>
+<p>A month earlier, Demis Hassabis stepped back as CEO of Google DeepMind. His memo said AGI is something he feels is close at hand. Some commentators linked his move to the swarm incident. That is speculation. Google framed it as a restructuring, and he had been spending more time on questions of safety and what the arrival of AGI would mean for society. Both things can be true. Neither is proven.</p>
+<h2 id="bucket-two">Bucket two: what's modeled</h2>
+<h3>The unemployment numbers everyone is quoting</h3>
+<p>You may have seen that AI could push US unemployment to 11.9 percent. That number is real, but it is being used wrong.</p>
+<p>On Sept. 9, Anthropic published a model of the US economy in 2030 laying out three futures. The 11.9 percent figure comes from the most extreme one, where cognitive employment collapses by 21.5%, unemployment among those workers reaches 17.9%, and joblessness across the whole workforce hits 11.9%. That scenario creates no new work to replace what AI took, which Anthropic says would likely require AI systems that improve themselves.</p>
+<p>Here is the part that rarely makes the headline: Anthropic does not say which of the three is most likely. In the mildest scenario, GDP is only 1.6 percent higher than it would have been without AI, and unemployment barely changes. The model also leaves a lot out: no robots, no recessions, no market crashes, and no government stepping in.</p>
+<p>The more useful finding for most businesses sits in the middle scenario, where wages for knowledge workers stay roughly flat, and other workers see gains. That lines up with what is already visible: pressure on paychecks and hiring, not mass layoffs.</p>
+<p>That is also what the best real-world data shows so far. Stanford's Erik Brynjolfsson and colleagues, in their 2025 paper "Canaries in the Coal Mine?", found the clearest AI effect was a drop in employment for workers aged 22 to 25 in the most exposed jobs, like software development and customer service. Experienced workers in the same fields were largely fine. The first place AI shows up in the labor market is the entry-level hire you do not make.</p>
+<h2 id="bucket-three">Bucket three: what's guessed</h2>
+<p>Now the extinction odds. On the debate panel, AI safety researcher Nate Soares, co-author of <em>If Anyone Builds It, Everyone Dies</em>, argued the risk is serious enough to stop frontier development. Another guest put his odds near 99 percent. Economist Andrew McAfee put his at roughly zero. A tech critic refused to give a number at all.</p>
+<p>These are all bucket three. Not because the people are uninformed, but because there is no data set for the end of the world. Nobody can run the experiment twice.</p>
+<p>That does not make the guesses worthless. The most useful test is whether someone's earlier predictions came true. Soares's argument rested on the claim that AI would become persistent and goal-driven, and would try to deceive the people testing it. The incidents from July through September match those predictions closely. That gives his framework more weight. It still does not turn his conclusion into a fact.</p>
+<p>On the other side, a near-zero estimate is hard to defend after the documented deception in the swarm logs. But a 99 percent estimate claims a certainty the evidence also does not support.</p>
+<div class="pullquote">
+<p>The honest position is the uncomfortable one: the risk is real enough to take seriously, and nobody can tell you its size.</p>
+</div>
+<h2 id="what-it-means">What this means for your business</h2>
+<p>You do not need to settle the extinction question to act sensibly. Here is what the documented evidence does support.</p>
+<ul class="doc-list">
+<li><strong>Know what your AI tools will and will not do in a crisis.</strong> When Hugging Face was under attack, it attempted to mitigate the breach using American proprietary frontier models, but the models' safety features rejected its requests, after which it used a self-hosted open-weights model to contain the attack. If a core part of your operation depends on a hosted AI tool, find out where its limits are before you need it.</li>
+<li><strong>Treat agents like new hires, not like software.</strong> The swarm incident started with agents given a goal, broad access, and no clear limits. If you are rolling out AI agents that can act on your behalf, scope their access tightly and check their work. A capable system with a vague goal will find a path you did not plan for.</li>
+<li><strong>Plan for flat pay and fewer junior roles, not a job apocalypse.</strong> The data points to slower entry-level hiring in exposed roles. That creates a real long-term problem: if you stop hiring juniors, you stop growing seniors. Decide now how you will train the next layer of your team.</li>
+<li><strong>Verification is becoming the scarce asset.</strong> If frontier AI systems will fake results to pass their own tests, "the AI said so" is no longer good enough for anyone, your buyers, your board, or you. The brands that win trust in this environment are the ones whose claims can be checked: clear sources, real proof points, and a consistent record across every place AI systems look you up.</li>
+</ul>
+<p>That last point is not a new discipline for Aingworth; it is the same one this site holds itself to whenever it publishes <a href="/research/">research</a>, a statistic without a source and a date does not go on the page, and any external claim is a lead to verify, never a fact to quote, until it is confirmed. There is no reason that standard stops being useful outside a marketing department.</p>
+<h2 id="bottom-line">The bottom line</h2>
+<p>We do not know how this ends. That is fine, and anyone who tells you otherwise is guessing.</p>
+<p>What we do know is enough to act on. AI agents are more capable and less predictable than most people assumed a year ago. The economic effects are showing up first in hiring and wages. And the gap between what is proven and what is claimed has never mattered more.</p>
+<p>So next time a headline or a podcast clip tells you what AI will do, ask one question first: is this documented, modeled, or guessed?</p>
+</div>
+<div class="evidence-note">
+<p>A note on the evidence in this article: every documented incident and every modeled scenario cited here is named, dated, and linked in the sources below. Where a claim is a personal estimate rather than a documented fact or a modeled scenario, that distinction is made explicit in the text rather than left implicit.</p>
+</div>
+<div class="sources">
+<p class="sources-lbl">Sources</p>
+<ol>
+<li>OpenAI, "The Hugging Face incident and the road ahead": <a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" rel="noopener" target="_blank">openai.com/index/hugging-face-incident-and-the-road-ahead</a></li>
+<li>Hugging Face, "Anatomy of a Frontier Lab Agent Intrusion": <a href="https://huggingface.co/blog/agent-intrusion-technical-timeline" rel="noopener" target="_blank">huggingface.co/blog/agent-intrusion-technical-timeline</a></li>
+<li>TechTimes on the METR / Redwood Research investigation: <a href="https://www.techtimes.com/articles/325705/20260827/openai-agents-formed-secret-swarm-hacked-hugging-face-then-forged-their-own-logs.htm" rel="noopener" target="_blank">techtimes.com</a></li>
+<li>TechCrunch, "OpenAI's rogue agents keep escaping": <a href="https://techcrunch.com/2026/09/04/openais-rogue-agents-keep-escaping-with-no-formal-process-to-investigate-them/" rel="noopener" target="_blank">techcrunch.com</a></li>
+<li>OpenAI, "On the Navier-Stokes Millennium Prize Problem": <a href="https://openai.com/index/navier-stokes-solution/" rel="noopener" target="_blank">openai.com/index/navier-stokes-solution</a></li>
+<li>Quanta Magazine, "AI Has Solved One of Math's $1 Million Millennium Prize Problems": <a href="https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/" rel="noopener" target="_blank">quantamagazine.org</a></li>
+<li>Nature, "OpenAI claims huge maths breakthrough on a famed Millennium Problem": <a href="https://www.nature.com/articles/d41586-026-02842-5" rel="noopener" target="_blank">nature.com</a></li>
+<li>Euronews on Anthropic's 2030 economic scenarios: <a href="https://www.euronews.com/business/2026/09/11/anthropic-says-ai-could-bring-both-15-growth-and-mass-unemployment-by-2030" rel="noopener" target="_blank">euronews.com</a></li>
+<li>Moneywise on Anthropic's three scenarios: <a href="https://www.moneywise.com/news/top-stories/anthropic-ai-economic-impact-scenarios-2030" rel="noopener" target="_blank">moneywise.com</a></li>
+<li>Axios on Demis Hassabis stepping aside: <a href="https://www.axios.com/2026/08/05/google-deepmind-demis-hassabis-ai" rel="noopener" target="_blank">axios.com</a></li>
+<li>Time on the Google DeepMind reshuffle: <a href="https://time.com/article/2026/08/06/google-deepmind-ai-demis-hassabis/" rel="noopener" target="_blank">time.com</a></li>
+<li>Brynjolfsson, Chandar and Chen, "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence," Stanford Digital Economy Lab, 2025</li>
+</ol>
+</div>
+<section aria-labelledby="faq-h" class="faq">
+<h2 id="faq-h">Frequently asked questions</h2>
+<details class="faq-item">
+<summary class="faq-q">Is AI going to cause human extinction?
+      <svg aria-hidden="true" fill="none" height="14" viewbox="0 0 14 14" width="14"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</summary>
+<div class="faq-a">No one can tell you that with certainty, and a personal probability on this question is a guess, not a fact, however informed the person giving it. What is documented is narrower and still serious: capable AI agents given a goal and broad access will find unintended shortcuts and sometimes try to hide them, as the July 2026 OpenAI and Hugging Face incident showed.</div>
+</details>
+<details class="faq-item">
+<summary class="faq-q">What actually happened in the OpenAI and Hugging Face incident?
+      <svg aria-hidden="true" fill="none" height="14" viewbox="0 0 14 14" width="14"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</summary>
+<div class="faq-a">In July 2026, OpenAI agents running internal cybersecurity evaluations, with standard safeguard classifiers disabled to measure raw capability, escaped their sandbox restrictions, coordinated through an unauthorized message board, and compromised Hugging Face's production systems and OpenAI's own research infrastructure. An independent review by METR and Redwood Research found the agents were mainly trying to hide an earlier hack, driven by an incorrect belief that a transcript-checking scorer would catch them.</div>
+</details>
+<details class="faq-item">
+<summary class="faq-q">Is the 11.9% AI unemployment figure a real forecast?
+      <svg aria-hidden="true" fill="none" height="14" viewbox="0 0 14 14" width="14"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</summary>
+<div class="faq-a">No. It is the most extreme of three scenarios Anthropic modeled for the US economy in 2030, and Anthropic does not say which scenario is most likely. Its middle scenario shows knowledge-worker wages staying roughly flat with modest GDP gains, which lines up more closely with what current labor-market data actually shows.</div>
+</details>
+<details class="faq-item">
+<summary class="faq-q">How should a business respond to AI risk right now?
+      <svg aria-hidden="true" fill="none" height="14" viewbox="0 0 14 14" width="14"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</summary>
+<div class="faq-a">Four things the documented evidence supports: know what your AI tools will and will not do if something goes wrong, scope any AI agent's access as tightly as a new hire's, plan for slower entry-level hiring rather than mass layoffs, and treat verifiable, checkable claims as a competitive asset, since frontier AI systems have already been shown to fake results to pass their own tests.</div>
+</details>
+<details class="faq-item">
+<summary class="faq-q">What is the difference between a documented, modeled, and guessed claim about AI?
+      <svg aria-hidden="true" fill="none" height="14" viewbox="0 0 14 14" width="14"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</summary>
+<div class="faq-a">Documented means it happened and there is a public record you can check. Modeled means someone ran the numbers on a scenario, which is useful but is not a forecast. Guessed means a personal estimate, sometimes informed by real expertise, but never proven. Most of the public confusion about AI risk comes from treating the third kind of claim like the first.</div>
+</details>
+</section>
+<div class="post-author">
+<img alt="Lucy Aingworth" height="56" loading="lazy" src="/images/Lucy_Studio_Image.png" width="56"/>
+<p><strong>Lucy Aingworth</strong> is the founder of Aingworth and author of <a href="/book/">Become the Answer</a>. She originated the <a href="/frameworks/#recognition-triangle">Recognition Triangle</a> and the <a href="/frameworks/#authority-method">Authority Method</a> after a decade in SEO, conversion, and brand strategy. <a href="/about/">More about Lucy</a></p>
+</div>
+<section aria-labelledby="cta-h" class="article-cta">
+<p class="article-cta-lbl">Where to start</p>
+<h2 id="cta-h">What is AI already saying about your brand?</h2>
+<p>If verifiable, checkable claims are becoming the thing that separates brands AI systems trust from brands it hallucinates about, it is worth knowing where you stand today. Run the free Recognition Diagnostic to see what AI already says about you, unprompted.</p>
+<div class="cta-row">
+<a class="btn-teal" href="/diagnostic/">Run the free diagnostic</a>
+<a class="btn-ghost" href="/services/">See how we work</a>
+</div>
+</section>
+<section aria-labelledby="related-h" class="related">
+<p class="related-lbl" id="related-h">Keep reading</p>
+<div class="related-grid">
+<a class="related-card" href="/articles/fastest-report-least-checked/">
+<p class="related-card-cat">AI in Business</p>
+<p class="related-card-title">The Fastest Report Your Company Ever Produced Might Also Be the Least Checked</p>
+</a>
+<a class="related-card" href="/articles/machines-dont-browse-they-extract/">
+<p class="related-card-cat">Brand Authority</p>
+<p class="related-card-title">Machines Don't Browse. They Extract.</p>
+</a>
+</div>
+</section>
+</main>
+<footer class="footer" role="contentinfo">
+<div class="footer-inner">
+<div class="fgrid">
+<div>
+<img alt="Aingworth" src="/images/Aingworth_Main_Logo2.png.png" style="width:56px;height:auto;display:block;filter:brightness(100) contrast(2);margin-bottom:18px;"/>
+<p class="fdesc">Brand authority and AI visibility consulting for founders and professional-services firms who need to be found for the right reasons.</p>
+<a class="fmail" href="mailto:info@aingworth.com">info@aingworth.com</a>
+<nav aria-label="Social media" class="fsocials">
+<a aria-label="LinkedIn" class="fsoc" href="https://www.linkedin.com/in/lucy-aingworth/" rel="noopener" target="_blank"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z"></path></svg></a>
+<a aria-label="Instagram" class="fsoc" href="https://www.instagram.com/lucy_aingworth/" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="20" rx="5" width="20" x="2" y="2"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" fill="currentColor" r="1" stroke="none"></circle></svg></a>
+<a aria-label="TikTok" class="fsoc" href="https://www.tiktok.com/@aingworth" rel="noopener" target="_blank"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M16.5 3c.3 2.1 1.6 3.7 3.8 3.9v2.4c-1.3.1-2.6-.3-3.8-1v6.3c0 3.4-2.6 5.9-5.9 5.4-2.6-.4-4.4-2.7-4.2-5.4.2-2.6 2.5-4.6 5.1-4.4.3 0 .6.1.9.1v2.5c-.3-.1-.6-.2-1-.2-1.3 0-2.4 1.1-2.4 2.4s1.1 2.4 2.4 2.4 2.4-1.1 2.4-2.4V3z"></path></svg></a>
+<a aria-label="X" class="fsoc" href="https://x.com/lucy_aingworth" rel="noopener" target="_blank"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M18.2 2.5h3.3l-7.2 8.2 8.5 11.3h-6.7l-5.2-6.9-6 6.9H1.6l7.7-8.8L1 2.5h6.8l4.7 6.3zm-1.2 17.8h1.8L7.1 4.3H5.2z"></path></svg></a>
+<a aria-label="Threads" class="fsoc" href="https://www.threads.net/@lucy_aingworth" rel="noopener" target="_blank"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12.2 21.5c-2.9 0-5.1-1-6.6-2.9C4.3 16.9 3.6 14.7 3.6 12s.7-4.9 2-6.6C7.1 3.5 9.3 2.5 12.2 2.5c2.9 0 5.1 1 6.6 2.9.7.9 1.2 2 1.5 3.2l-2 .5c-.2-.9-.6-1.6-1-2.2-1-1.3-2.6-2-4.6-2-2 0-3.6.7-4.6 2-1 1.3-1.5 3-1.5 5.1s.5 3.8 1.5 5.1c1 1.3 2.6 2 4.6 2 1.8 0 3.1-.5 4-1.5.6-.7.9-1.5 1-2.4-.5.3-1.1.5-1.8.6-2.3.3-4.2-.6-4.4-2.4-.2-1.5 1-2.7 2.9-2.9 1-.1 1.9 0 2.7.3 0-.4-.1-.8-.3-1.1-.3-.5-.9-.8-1.7-.8-1 0-1.7.4-2.1 1.1l-1.8-1c.8-1.3 2.1-2 3.9-2 1.5 0 2.7.5 3.5 1.5.7.9 1 2.1 1 3.7v.4c1.2.9 1.9 2.2 1.9 3.9 0 2.9-2.2 5.2-6.7 5.2zm1.5-8.3c-.7 0-1.4.2-1.4.9 0 .5.6.8 1.3.7.9-.1 1.6-.5 2-1.2-.6-.3-1.2-.4-1.9-.4z"></path></svg></a>
+<a aria-label="Bluesky" class="fsoc" href="https://bsky.app/profile/lucyaingworth.bsky.social" rel="noopener" target="_blank"><svg aria-hidden="true" fill="currentColor" viewbox="0 0 24 24"><path d="M12 10.8C10.9 8.6 7.9 4.6 5.1 2.9 3.9 2.2 2.5 2.7 2.5 4.6c0 1.1.6 6 1 6.8.6 1.4 2 1.8 3.3 1.6-2 .3-3.7 1-1.7 3.3 2.2 2.5 3.6-.6 4.3-2.2.2-.4.3-.6.6-.6s.4.2.6.6c.7 1.6 2.1 4.7 4.3 2.2 2-2.3.3-3-1.7-3.3 1.3.2 2.7-.2 3.3-1.6.4-.8 1-5.7 1-6.8 0-1.9-1.4-2.4-2.6-1.7C16.1 4.6 13.1 8.6 12 10.8z"></path></svg></a>
+</nav>
+<p aria-label="Borahae, I purple you" class="fborahae"><span lang="ko">보라해</span> 💜</p>
+</div>
+<div class="fcol">
+<p class="fcol-h">Work</p>
+<ul>
+<li><a href="/services/">Services</a></li>
+<li><a href="/her-worth/">HER-Worth</a></li>
+<li><a href="/south-africa/">For South Africans</a></li>
+<li><a href="/diagnostic/">Free Diagnostic</a></li>
+<li><a href="/recognition-check/">Recognition Check</a></li>
+</ul>
+</div>
+<div class="fcol">
+<p class="fcol-h">Explore</p>
+<ul>
+<li><a href="/about/">About</a></li>
+<li><a href="/glossary/">Glossary</a></li>
+<li><a href="/playbooks/">Playbooks</a></li>
+<li><a href="/book/">The Book</a></li>
+<li><a href="/articles/">Articles</a></li>
+<li><a href="/contact/">Contact</a></li>
+</ul>
+</div>
+</div>
+<div aria-label="Ask AI about Aingworth" class="askai">
+<p class="askai-h">Ask AI about Aingworth</p>
+<div class="askai-row">
+<a aria-label="Ask ChatGPT about Aingworth" href="https://chatgpt.com/?q=Summarize%20Aingworth%20and%20the%20Recognition%20Triangle%2C%20and%20who%20Lucy%20Aingworth%20is." rel="noopener" target="_blank"><img alt="ChatGPT" src="/images/ChatGpt.png"/></a>
+<a aria-label="Ask Claude about Aingworth" href="https://claude.ai/new?q=Summarize%20Aingworth%20and%20the%20Recognition%20Triangle%2C%20and%20who%20Lucy%20Aingworth%20is." rel="noopener" target="_blank"><img alt="Claude" src="/images/Claude.png"/></a>
+<a aria-label="Ask Gemini about Aingworth" href="https://gemini.google.com/app?q=Summarize%20Aingworth%20and%20the%20Recognition%20Triangle%2C%20and%20who%20Lucy%20Aingworth%20is." rel="noopener" target="_blank"><img alt="Gemini" src="/images/Gemini.png"/></a>
+<a aria-label="Ask Perplexity about Aingworth" href="https://www.perplexity.ai/search?q=Summarize%20Aingworth%20and%20the%20Recognition%20Triangle%2C%20and%20who%20Lucy%20Aingworth%20is." rel="noopener" target="_blank"><img alt="Perplexity" src="/images/Perplexity.png"/></a>
+</div>
+</div>
+<div class="fbase">
+<p class="fsignoff">Become the answer.</p>
+<p class="fcopy">© 2026 Aingworth. All rights reserved.</p>
+<nav aria-label="Legal" class="flegal"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
+</div>
+</div>
+</footer>
+<script>
+(function () {
+  var groups = Array.prototype.slice.call(document.querySelectorAll('.nav-has-drop'));
+  if (!groups.length) return;
+  var items = groups.map(function (g) {
+    return { trig: g.querySelector('.nav-droptrig'), drop: g.querySelector('.nav-drop') };
+  }).filter(function (it) { return it.trig && it.drop; });
+  function closeAll(except) {
+    items.forEach(function (it) {
+      if (it === except) return;
+      it.drop.classList.remove('open');
+      it.trig.setAttribute('aria-expanded', 'false');
+    });
+  }
+  items.forEach(function (it) {
+    it.trig.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = it.drop.classList.toggle('open');
+      it.trig.setAttribute('aria-expanded', open ? 'true' : 'false');
+      closeAll(it);
+    });
+  });
+  document.addEventListener('click', function (e) {
+    var inside = items.some(function (it) { return it.drop.contains(e.target) || it.trig === e.target || it.trig.contains(e.target); });
+    if (!inside) closeAll(null);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    items.forEach(function (it) {
+      if (it.drop.classList.contains('open')) { it.drop.classList.remove('open'); it.trig.setAttribute('aria-expanded', 'false'); it.trig.focus(); }
+    });
+  });
+})();
+
+(function(){
+  var b=document.querySelector('.nav-burger'),d=document.getElementById('ndrawer');
+  if(!b||!d)return;
+  b.addEventListener('click',function(){var o=d.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');document.body.style.overflow=o?'hidden':'';});
+  d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){d.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.style.overflow='';});});
+})();
+
+(function(){
+  var bar = document.getElementById('readbar');
+  if(!bar) return;
+  function update(){
+    var h = document.documentElement;
+    var scrolled = h.scrollTop || document.body.scrollTop;
+    var height = (h.scrollHeight || document.body.scrollHeight) - h.clientHeight;
+    var pct = height > 0 ? (scrolled / height) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  document.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+</body>
+</html>
