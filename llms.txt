@@ -25,6 +25,39 @@ The practice is built on a set of named frameworks and concepts introduced in *B
 - [HER-Worth](https://aingworth.com/her-worth/): A separate consulting and coaching program founded by Lucy Aingworth for women founders and executives.
 - [About Lucy Aingworth](https://aingworth.com/about/): Lucy's background, expertise, and the convictions behind Aingworth's practice.
 - [Contact](https://aingworth.com/contact/): Direct contact form for consulting, speaking, media, HER-Worth, or general enquiries.
+- [Recognition Check](https://aingworth.com/recognition-check/): The Recognition Check runs one buyer question across the AI models several times and measures how consistently they name you. See your Recognition Rate, and what AI always, sometimes, and rarely says.
+- [Recognition Snapshot](https://aingworth.com/recognition-snapshot/): The Recognition Snapshot is Aingworth's paid audit: a structured, one-time read of how AI systems see your brand today across Clarity, Credibility, and Earned Authority. Formerly called the AI Visibility Audit. $1,500, five to ten business days.
+- [Case Studies](https://aingworth.com/case-studies/): Real results across SEO, paid social and conversion, from one consultant reading them as a single system. Named client work by Lucy Aingworth of Aingworth.
+- [Practical AI Training for South African Businesses](https://aingworth.com/south-africa/): Practical AI training and implementation for South African businesses, in English or Afrikaans. One program, from R8,500 per month, built around how your business actually works.
+- [Praktiese KI (AI)-opleiding vir Suid-Afrikaanse Besighede](https://aingworth.com/suid-afrika/): Praktiese KI (AI)-opleiding en -implementering vir Suid-Afrikaanse besighede, in Afrikaans of Engels. Een program, vanaf R8,500 per maand, gebou rondom hoe jou besigheid werklik werk.
+
+## Articles
+
+- [Articles on AI Visibility & Brand Authority](https://aingworth.com/articles/): Articles on AI search visibility, generative engine optimization, and brand authority from Lucy Aingworth. Practical thinking, evidence first.
+  - [The AI Risk Debate: What's Documented and What's Still a Guess](https://aingworth.com/articles/documented-modeled-or-guessed/): Four AI safety experts gave four different extinction odds from the same evidence. Here is how to sort what is documented, what is modeled, and what is guessed.
+  - [Machines Don't Browse. They Extract.](https://aingworth.com/articles/machines-dont-browse-they-extract/): AI systems don't browse your site, they extract fragments and reassemble them. Content architecture decides what gets pulled out and cited.
+  - [AI-Generated Reports Are Getting Faster. Verification Is Not Keeping Up.](https://aingworth.com/articles/fastest-report-least-checked/): New 2026 survey data shows employees feeding client and financial data into public AI tools at scale, while executives catch AI-generated errors only after they reach the board. What changes, and what does not.
+  - [The Stakes Test: Why Credibility Decides High-Value Deals](https://aingworth.com/articles/the-stakes-test/): The more a decision costs to get wrong, the harder the buyer leans on proof over claims. Founders and executives sit at the high-stakes end, and so does the way AI treats them.
+  - [You Are Using AI in the Wrong Place](https://aingworth.com/articles/using-ai-in-the-wrong-place/): Most AI spend misses because the constraint was never the visible, repetitive work. For most founders and executives the real block is recognition. No automation reaches it.
+  - [Being Cited Is Not Being Chosen](https://aingworth.com/articles/being-cited-is-not-being-chosen/): Almost half of consumers now ask AI to find a local business, but only 18 percent act on the answer without checking it elsewhere. The verification step, not the citation, is where the decision is made.
+  - [AI Visibility Is a Range, Not a Number](https://aingworth.com/articles/your-ai-visibility-score-is-a-fiction/): Personalized AI answers make position a per-user variable. A single AI visibility score describes one person's experience as though it described everyone's. What to report instead.
+  - [When the Gatekeeper Starts Acting](https://aingworth.com/articles/when-the-gatekeeper-starts-acting/): Agentic AI completes tasks end to end, narrowing the field at a step no human reads. Being uncited is no longer the only way to lose, and the new failure mode leaves no trace.
+  - [The Technical Work That Pays](https://aingworth.com/articles/the-technical-work-that-pays/): A four hundred item technical audit is a way of looking thorough. Three questions decide whether a machine can comprehend your business at all, and most of the checklist answers none of them.
+  - [There Is No Algorithm to Chase](https://aingworth.com/articles/there-is-no-algorithm-to-chase/): Core updates now roll continuously and without announcement. When the target moves silently, reactive optimization stops being a strategy and becomes a superstition.
+  - [Every Brand Has an AI Biography](https://aingworth.com/articles/every-brand-has-an-ai-biography/): Your AI biography is the story machines tell about your business when you are not in the room. How it is built, how it goes wrong, and how to change it.
+  - [The GEO Gold Rush: Why Most AI Visibility Advice Is Wrong](https://aingworth.com/articles/the-geo-gold-rush/): Most AI visibility advice is built on assumption, not evidence. What the research actually shows about llms.txt, schema, content volume, and what really drives AI citations.
+
+## Research
+
+- [The Research Behind Become the Answer](https://aingworth.com/research/): Independent research behind the Recognition Triangle: what actually moves AI citations, who gets cited and how often, and how many people now ask AI instead of searching. Every figure sourced and dated.
+  - [How the Machine Gatekeeper Decides](https://aingworth.com/research/machine-gatekeeper/): What actually determines whether an AI system cites you: a 129,000-domain study on citation factors, Google's own statement on AI optimization, and why blocking AI crawlers is self-sabotage.
+  - [The Evidence Behind Earned Authority](https://aingworth.com/research/earned-authority/): What actually earns AI citations: a 680-million-citation index showing fifty domains decide most of what AI says about brands, why Reddit outranks every news outlet, and why WSJ, NYT, and Bloomberg don't make the top twenty.
+  - [The Evidence Behind the Recognition Economy](https://aingworth.com/research/recognition-economy/): Evidence that the shift from being seen to being recognized is real and still moving: AI chatbot adoption data, a citation landscape splitting across four engines, and how Google itself is rebuilding search around named answers.
+
+## Playbooks
+
+- [Playbooks: How to Build Recognition, Step by Step](https://aingworth.com/playbooks/): Doable, step-by-step guides for building AI recognition yourself: reading your own Recognition Triangle, closing an Earned Authority gap, and writing pages a machine can cite. From Aingworth, the company behind Become the Answer.
+  - [How to Read Your Own Recognition Triangle](https://aingworth.com/playbooks/read-your-own-recognition-triangle/): A twenty-minute, doable-yourself process for checking your Clarity, Credibility, and Earned Authority before you book anything. A playbook from Aingworth.
 
 ## Optional
 
